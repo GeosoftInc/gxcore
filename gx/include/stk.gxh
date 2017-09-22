@@ -1,0 +1,821 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The STK class is used for plotting a single data profile in
+// an MVIEW. The MSTK class (see MSTK.GXH) is used to plot
+// multiple STK objects to a single map.
+// 
+// Use AddSTK_MSTK fuction to create a STK object before
+// using functions in this file
+// 
+// SEE MSTK FILE FOR DETAILED DESCRIPTIONS OF ALL FUNCTION PARAMETERS.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef STK_GXH_DEFINED
+#define STK_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	STK_AXIS
+//
+// STK Axis defines
+//
+// STK_AXIS_X   X Axis
+// STK_AXIS_Y   Y Axis
+//
+//===========================================================================================================
+
+#define STK_AXIS_X    0
+#define STK_AXIS_Y    1
+
+
+//===========================================================================================================
+//
+// Define	STK_FLAG
+//
+// Stack flags
+//
+// STK_FLAG_PROFILE
+// STK_FLAG_FID
+// STK_FLAG_SYMBOL
+// STK_FLAG_XBAR
+// STK_FLAG_XLABEL
+// STK_FLAG_XTITLE
+// STK_FLAG_YBAR
+// STK_FLAG_YLABEL
+// STK_FLAG_YTITLE
+// STK_FLAG_GRID1
+// STK_FLAG_GRID2
+//
+//===========================================================================================================
+
+#define STK_FLAG_PROFILE    0
+#define STK_FLAG_FID        1
+#define STK_FLAG_SYMBOL     2
+#define STK_FLAG_XBAR       3
+#define STK_FLAG_XLABEL     4
+#define STK_FLAG_XTITLE     5
+#define STK_FLAG_YBAR       6
+#define STK_FLAG_YLABEL     7
+#define STK_FLAG_YTITLE     8
+#define STK_FLAG_GRID1      9
+#define STK_FLAG_GRID2      10
+
+
+//===========================================================================================================
+//
+// Define	STK_GRID
+//
+// Stack Grid define
+//
+// STK_GRID_PRIMARY     Primary Grid
+// STK_GRID_SECONDARY   Secondary Grid
+//
+//===========================================================================================================
+
+#define STK_GRID_PRIMARY      0
+#define STK_GRID_SECONDARY    1
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetTransParms_STK   Get transformation parameters in STK object
+//
+// Returns             Nothing
+//
+// Notes               See above full description of each parameters
+//                     VV's for X channel transformation can be NULL if the
+//                     transformation is log or loglinear. The same for Y channel.
+//                     
+//                     See MSTK for detailed description of all function parameters
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+GetTransParms_STK (
+                   STK,       // STK handle
+                   var int,   // Type of transformation for horizontal axis
+                   var real,  // Minimum value to apply logarithmic
+                   VV,        // Comma separated parameters defining linear compress data range
+                   VV,        // Comma separated parameters defining scaling factors for
+                   var int,   // Type of scaling for vertical axis
+                   var real,  // Minimum value to apply logarithmic
+                   VV,        // Comma separated parameters defining linear compress data range
+                   VV         // Comma separated parameters defining scaling factors for
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetAxisFormat_STK   Get axis number display format.
+//
+// Returns              The current format - <define>DB_CHAN_FORMAT</define>
+//
+// Notes                By default, DB_CHAN_FORMAT_NORMAL
+//
+// Available            5.1.5
+//
+
+[_licensed] int
+iGetAxisFormat_STK (
+                    STK,  // STK handle
+                    int   // <define>STK_AXIS</define>
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetAxisParms_STK   Get parameters in STK object relating drawing X/Y axis
+//
+// Returns             Nothing
+//
+// Notes               See MSTK for detailed description of all function parameters
+//                     ? mark in the note represent either X and Y
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+IGetAxisParms_STK (
+                   STK,         // STK handle
+                   var int,     // ?BARDRAW: Bottom and/or Top, or Left and/or Right
+                   var real,    // Bottom Y/Left X location
+                   var real,    // Top Y/Right X location
+                   var real,    // ?BARLINETHICK  - Line thickness in mm. Default is 0.05
+                   var string,  // ?BARCOLOR      - Line color string in RGB model. Default is black
+                   int,         // Color string length
+                   var real,    // ?BARTICKINTEERVAL
+                   var real,    // Major tick size in mm for bottom/left axis bar.
+                   var real,    // Major tick size in mm for top/right axis bar.
+                   var int,     // ?BARMINORTICK  - Number of minor ticks. (0) none, (-1) automatic
+                   int          // <define>STK_AXIS</define>
+                   );
+
+#define GetAxisParms_STK(A, B, C, D, E, F, G, H, I, J, K) IGetAxisParms_STK(A, B, C, D, E, F, sizeof(F), G, H, I, J, K)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetFidParms_STK   Get parameters in STK object relating drawing fid ticks
+//
+// Returns            Nothing
+//
+// Notes              See MSTK for detailed description of all function parameters
+//
+// Available          5.0.0
+//
+
+[_licensed] void
+IGetFidParms_STK (
+                  STK,         // STK handle
+                  var real,    // Y location in data unit to draw Fid ticks. Default is the bottom of the stack
+                  var real,    // Fid tick size in mm. Default is 2.0mm
+                  var real,    // Fid interval to draw ticks. Nice number is calculated by default
+                  var string,  // Font to use to label fids. Default is use 'default' font set in Montaj
+                  int,         // Font name string size
+                  var real,    // Text size in mm to label fids. Default is 5mm
+                  var string,  // Text color string in RGB model. Default is black
+                  int          // Text color string size
+                  );
+
+#define GetFidParms_STK(A, B, C, D, E, F, G) IGetFidParms_STK(A, B, C, D, E, sizeof(E), F, G, sizeof(G))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetFlag_STK   Get flag indicating part of STK object is to be drawn or not
+//
+// Returns        FALSE (0) if part of the object is not to be drawn
+//                TRUE  (1) if part of the object is drawn
+//
+// Available      6.0.1
+//
+
+[_licensed] int
+iGetFlag_STK (
+              STK,  // STK,
+              int   // <define>STK_FLAG</define>
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetGenParms_STK   Get general parameters in STK object
+//
+// Returns            Nothing
+//
+// Notes              See MSTK for detailed description of all function parameters
+//
+// Available          5.0.0
+//
+
+[_licensed] void
+IGetGenParms_STK (
+                  STK,         // STK handle
+                  var string,  // X channel name, REQUIRED
+                  int,         // X channel name string length
+                  var string,  // Y channel name, REQUIRED
+                  int,         // Y channel name string length
+                  var string,  // Group name
+                  int,         // Group name string length
+                  var real,    // X scale (map scale, units/metre), REQUIRED
+                  var real,    // Y scale (plot scale, units/mm), REQUIRED
+                  var real,    // Minimum X value (data unit) to draw
+                  var real,    // Maximum X value (data unit) to draw
+                  var real,    // Minimum Y value (data unit) to draw
+                  var real,    // Minimum horizontal location in mm of the stack on the map
+                  var real,    // Minimum vertical location in mm on the map
+                  var real     // Profile height in mm on the map, must be > 0.0
+                  );
+
+#define GetGenParms_STK(A, B, C, D, E, F, G, H, I, J, K, L) IGetGenParms_STK(A, B, sizeof(B), C, sizeof(C), D, sizeof(D), E, F, G, H, I, J, K, L)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetGridParms_STK   Get background grid parameters in STK object
+//
+// Returns             Nothing
+//
+// Notes               See MSTK for detailed description of all function parameters
+//                     ? mark in the note represent either X and Y
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+IGetGridParms_STK (
+                   STK,         // STK handle
+                   var int,     // Type of grid to draw:
+                   var real,    // Minimum X in ground unit to draw grid
+                   var real,    // Maximum X in ground unit to draw grid
+                   var real,    // Minimum Y in ground unit to draw grid
+                   var real,    // Maximum Y in ground unit to draw grid
+                   var real,    // Line thickness in mm. Default is 0.01mm
+                   var real,    // Cross size or separation between dots in mm.
+                   var real,    // Separation between vertical grid lines.
+                   var real,    // Separation between horizontal grid lines.
+                   var string,  // Grid line color string in RGB model. Default is black
+                   int,         // Color string length
+                   int          // <define>STK_GRID</define>
+                   );
+
+#define GetGridParms_STK(A, B, C, D, E, F, G, H, I, J, K, L) IGetGridParms_STK(A, B, C, D, E, F, G, H, I, J, K, sizeof(K), L)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetLabelParms_STK   Get parameters in STK object relating X/Y axis labels
+//
+// Returns              Nothing
+//
+// Notes                See MSTK for detailed description of all function parameters
+//                      ? mark in the note represent either X and Y
+//                      Sets the label format to GSF_NORMAL. To override this,
+//                      use the SetAxisFormat_STK function AFTER calling this.
+//
+// Available            5.0.0
+//
+
+[_licensed] void
+IGetLabelParms_STK (
+                    STK,         // STK handle
+                    var int,     // Which axes to draw: Bottom/Top or Left/Right axes
+                    var real,    // Bottom or Left axis label location
+                    var int,     // Bottom or Left labels orientation.
+                    var real,    // Top or Right axis label location
+                    var int,     // Top or Right axis label orientation
+                    var real,    // Label interval. Default is to use related axis tick interval
+                    var string,  // Font to use to label. Default is use 'default' font set in Montaj
+                    int,         // Font name string size
+                    var real,    // Text size in mm to draw profile labels. Default is 5mm
+                    var string,  // Text color string in RGB model. Default is black
+                    int,         // Color string size
+                    var int,     // ?LABELBOUND    - Edge bound.  0 - No
+                    int          // <define>STK_AXIS</define>
+                    );
+
+#define GetLabelParms_STK(A, B, C, D, E, F, G, H, I, J, K, L) IGetLabelParms_STK(A, B, C, D, E, F, G, H, sizeof(H), I, J, sizeof(J), K, L)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetProfile_STK   Get profile parameters in STK object
+//
+// Returns           Nothing
+//
+// Notes             See MSTK for detailed description of all function parameters
+//
+// Available         5.0.0
+//
+
+[_licensed] void
+IGetProfile_STK (
+                 STK,         // STK handle
+                 var int,     // Profile line type.    1 - solid (default)
+                 var real,    // Patterned line pitch in mm. Default is 10 mm
+                 var real,    // Line thickness in mm. Default is 0.05mm
+                 var string,  // Color string in RGB model. Default is black
+                 int,         // Color string length
+                 var int,     // Wrap option
+                 var int,     // Clip option
+                 var int,     // Plot smoothed polyline.
+                 VV,          // Only use for VA channels. NULL is acceptable which means all profiles in the VA are plotted. VV type of INT (integer)
+                 var string,  // Characters string to label profiles
+                 int,         // Label string length
+                 var int,     // Reference location to draw label.
+                 var string,  // Font to use to draw profile labels. Default is use 'default' font set in Montaj
+                 int,         // Font name string length
+                 var real,    // Text size in mm to draw profile labels. Default is 5mm
+                 var string,  // Text color string in RGB model. Default is black
+                 int,         // Color string length
+                 var int      // Include VA column numbers as part of the profile label 0 - no, 1 - yes
+                 );
+
+#define GetProfile_STK(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) IGetProfile_STK(A, B, C, D, E, sizeof(E), F, G, H, I, J, sizeof(J), K, L, sizeof(L), M, N, sizeof(N), O)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetProfileEx_STK   Get profile parameters in STK object (added Break on dummy option)
+//
+// Returns             Nothing
+//
+// Notes               See MSTK for detailed description of all function parameters
+//
+// Available           5.0.3
+//
+
+[_licensed] void
+IGetProfileEx_STK (
+                   STK,         // STK handle
+                   var int,     // Profile line type.    1 - solid (default)
+                   var real,    // Patterned line pitch in mm. Default is 10 mm
+                   var real,    // Line thickness in mm. Default is 0.05mm
+                   var string,  // Color string in RGB model. Default is black
+                   int,         // Color string length
+                   var int,     // Break on dummy option
+                   var int,     // Wrap option
+                   var int,     // Clip option
+                   var int,     // Plot smoothed polyline.
+                   VV,          // Only use for VA channels. NULL is acceptable which means all profiles in the VA are plotted. VV type of INT (integer)
+                   var string,  // Characters string to label profiles
+                   int,         // Label string length
+                   var int,     // Reference location to draw label.
+                   var string,  // Font to use to draw profile labels. Default is use 'default' font set in Montaj
+                   int,         // Font name string length
+                   var real,    // Text size in mm to draw profile labels. Default is 5mm
+                   var string,  // Text color string in RGB model. Default is black
+                   int,         // Color string length
+                   var int      // Include VA column numbers as part of the profile label 0 - no, 1 - yes
+                   );
+
+#define GetProfileEx_STK(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P) IGetProfileEx_STK(A, B, C, D, E, sizeof(E), F, G, H, I, J, K, sizeof(K), L, M, sizeof(M), N, O, sizeof(O), P)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetSymbParms_STK   Get parameters in STK object relating drawing symbols
+//
+// Returns             Nothing
+//
+// Notes               See MSTK for detailed description of all function parameters
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+IGetSymbParms_STK (
+                   STK,         // STK handle
+                   var string,  // Font to use to draw symbols. Default is use 'symbols.gfn' font
+                   int,         // Symbol font name string size
+                   var real,    // Symbol size in mm. Default is 5mm
+                   var string,  // Edge color string in RGB model. Default is black
+                   int,         // Line color string size
+                   var string,  // Fill color string in RGB model. Default is black
+                   int,         // Fill color string size
+                   var int,     // Wrap option
+                   var int,     // Clip option
+                   var real,    // Y location to draw symbols. Default is to use the data from Y channel
+                   var int,     // Number of levels to draw symbols
+                   VV,          // Y values to define data ranges for each symbol types Type of REAL
+                   VV,          // Symbol numbers (given in the symbol font) to draw, default is 20 TYPE of INT
+                   var int,     // Draw symbols ID (1) or not (0)
+                   var string,  // Font to use to draw symbol ID (A,B,C...). Default is use 'default'
+                   int,         // Text font name string size
+                   var real,    // Text size in mm to draw profile labels. Default is 5mm
+                   var string,  // Text color string in RGB model. Default is black
+                   int          // Text color string size
+                   );
+
+#define GetSymbParms_STK(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O) IGetSymbParms_STK(A, B, sizeof(B), C, D, sizeof(D), E, sizeof(E), F, G, H, I, J, K, L, M, sizeof(M), N, O, sizeof(O))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetTitleParms_STK   Get parameters in STK object relating X/Y axis titles
+//
+// Returns              Nothing
+//
+// Notes                See MSTK for detailed description of all function parameters
+//                      ? mark in the note represent either X and Y
+//
+// Available            5.0.0
+//
+
+[_licensed] void
+IGetTitleParms_STK (
+                    STK,         // STK handle
+                    var string,  // Title for bottom X axis/left Y axis. Default is no title.
+                    int,         // Title string length
+                    var string,  // Title for top X axis/right Y axis. Default is no title.
+                    int,         // Title string length
+                    var int,     // Bottom/Left axis title orientation.
+                    var real,    // X location to draw bottom/left axis title
+                    var real,    // Y location to draw bottom/left axis title
+                    var int,     // Top/Right axis title orientation.
+                    var real,    // X location to draw top/right axis title
+                    var real,    // Y location to draw top/right axis title
+                    var string,  // Font to draw titles. Default is use 'default' font set in Montaj
+                    int,         // Font name string length
+                    var real,    // Text size in mm to draw titles. Default is 5mm
+                    var string,  // Text color string in RGB model. Default is black
+                    int,         // Color string length
+                    int          // <define>STK_AXIS</define>
+                    );
+
+#define GetTitleParms_STK(A, B, C, D, E, F, G, H, I, J, K, L, M) IGetTitleParms_STK(A, B, sizeof(B), C, sizeof(C), D, E, F, G, H, I, J, sizeof(J), K, L, sizeof(L), M)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ISetFlag_STK   Set flag indicating part of STK object is to be drawn or not
+//
+// Returns        Nothing
+//
+// Available      5.0.0
+//
+
+[_licensed] void
+ISetFlag_STK (
+              STK,  // STK,
+              int,  // Flag to set (0 or 1)
+              int   // <define>STK_FLAG</define>
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetArrayColors_STK   Set colours for individual channels in a VA, via an ITR
+//
+// Returns              Nothing
+//
+// Notes                The ITR is consulted by taking the channel index and dividing
+//                      by the number of channels; hence the ITR maximum values should
+//                      be in the range: 0 > values >= 1.0.
+//
+// Available            5.0.1
+//
+
+[_licensed] void
+SetArrayColors_STK (
+                    STK,  // STK,
+                    ITR   // ITR object for colours
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetAxisFormat_STK   Set axis number display format.
+//
+// Returns             Nothing
+//
+// Notes               By default, DB_CHAN_FORMAT_NORMAL is used to display the values,
+//                     or for values > 1.e7, DB_CHAN_FORMAT_EXP.
+//
+// Available           5.1.5
+//
+
+[_licensed] void
+SetAxisFormat_STK (
+                   STK,  // STK handle
+                   int,  // <define>DB_CHAN_FORMAT</define>
+                   int   // <define>STK_AXIS</define>
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetAxisParms_STK   Set parameters in STK object relating drawing X/Y axis
+//
+// Returns            Nothing
+//
+// Notes              See MSTK for detailed description of all function parameters
+//                    ? mark in the note represent either X and Y
+//
+// Available          5.0.0
+//
+
+[_licensed] void
+SetAxisParms_STK (
+                  STK,     // STK handle
+                  int,     // ?BARDRAW
+                  real,    // Bottom Y/Left X location
+                  real,    // Top Y/Right X location
+                  real,    // ?BARLINETHICK  - Line thickness in mm. Default is 0.05
+                  string,  // ?BARCOLOR      - Line color string in RGB model. Default is black
+                  real,    // ?BARTICKINTEERVAL
+                  real,    // Major tick size in mm for bottom/left axis bar.
+                  real,    // Major tick size in mm for top/right axis bar.
+                  int,     // ?BARMINORTICK  - Number of minor ticks. (0) none, (-1) automatic
+                  int      // <define>STK_AXIS</define>
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetFidParms_STK   Set parameters in STK object relating drawing fid ticks
+//
+// Returns           Nothing
+//
+// Notes             See MSTK for detailed description of all function parameters
+//
+// Available         5.0.0
+//
+
+[_licensed] void
+SetFidParms_STK (
+                 STK,     // STK handle
+                 real,    // Y location in data unit to draw Fid ticks. Default is the bottom of the stack
+                 real,    // Fid tick size in mm. Default is 2.0mm
+                 real,    // Fid interval to draw ticks. Nice number is calculated by default
+                 string,  // Font to use to label fids. Default is use 'default' font set in Montaj
+                 real,    // Text size in mm to label fids. Default is 5mm
+                 string   // Text color string in RGB model. Default is black
+                 );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetGenParms_STK   Set general parameters in STK object
+//
+// Returns           Nothing
+//
+// Notes             See MSTK for detailed description of all function parameters
+//
+// Available         5.0.0
+//
+
+[_licensed] void
+SetGenParms_STK (
+                 STK,     // STK handle
+                 string,  // X channel name, REQUIRED
+                 string,  // Y channel name, REQUIRED
+                 string,  // Group name
+                 real,    // X scale (map scale, units/metre), REQUIRED
+                 real,    // Y scale (plot scale, units/mm), REQUIRED
+                 real,    // Minimum X value (data unit) to draw
+                 real,    // Maximum X value (data unit) to draw
+                 real,    // Minimum Y value (data unit) to draw
+                 real,    // Minimum horizontal location in mm of the stack on the map
+                 real,    // Minimum vertical location in mm on the map
+                 real     // Profile height in mm on the map, must be > 0.0
+                 );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetGridParms_STK   Set background grid parameters in STK object
+//
+// Returns            Nothing
+//
+// Notes              See MSTK for detailed description of all function parameters
+//                    ? mark in the note represent either X and Y
+//
+// Available          5.0.0
+//
+
+[_licensed] void
+SetGridParms_STK (
+                  STK,     // STK handle
+                  int,     // Type of grid to draw:
+                  real,    // Minimum X in ground unit to draw grid
+                  real,    // Maximum X in ground unit to draw grid
+                  real,    // Minimum Y in ground unit to draw grid
+                  real,    // Maximum Y in ground unit to draw grid
+                  real,    // Line thickness in mm. Default is 0.01mm
+                  real,    // Cross size or separation between dots in mm.
+                  real,    // Separation between vertical grid lines.
+                  real,    // Separation between horizontal grid lines.
+                  string,  // Grid line color string in RGB model. Default is black
+                  int      // <define>STK_GRID</define>
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetLabelParms_STK   Set parameters in STK object relating X/Y axis labels
+//
+// Returns             Nothing
+//
+// Notes               See MSTK for detailed description of all function parameters
+//                     ? mark in the note represent either X and Y
+//                     Sets the label format to GSF_NORMAL. To override this,
+//                     use the SetAxisFormat_STK function AFTER calling this.
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+SetLabelParms_STK (
+                   STK,     // STK handle
+                   int,     // Bottom/Top or Left/Right axes
+                   real,    // Bottom or Left axis label location
+                   int,     // Bottom or Left labels orientation.
+                   real,    // Top or Right axis label location
+                   int,     // Top or Right axis label orientation
+                   real,    // Label interval. Default is to use related axis tick interval
+                   string,  // Font to use to label. Default is use 'default' font set in Montaj
+                   real,    // Text size in mm to draw profile labels. Default is 5mm
+                   string,  // Text color string in RGB model. Default is black
+                   int,     // ?LABELBOUND    - Edge bound.  0 - No
+                   int      // <define>STK_AXIS</define>
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetLineParm_STK   Set line parameter (of Y Chan) in STK object
+//
+// Returns           Nothing
+//
+// Notes             See MSTK for detailed description of all function parameters
+//
+// Available         5.0.0
+//
+
+[_licensed] void
+SetLineParm_STK (
+                 STK,  // STK handle
+                 int   // Line symb
+                 );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetProfile_STK   Set profile parameters in STK object
+//
+// Returns          Nothing
+//
+// Notes            See MSTK for detailed description of all function parameters
+//
+// Available        5.0.0
+//
+
+[_licensed] void
+SetProfile_STK (
+                STK,     // STK handle
+                int,     // Profile line type.    1 - solid (default)
+                real,    // Patterned line pitch in mm. Default is 10 mm
+                real,    // Line thickness in mm. Default is 0.05mm
+                string,  // Color string in RGB model. Default is black
+                int,     // Wrap option
+                int,     // Clip option
+                int,     // Plot smoothed polyline.
+                VV,      // Integers starting from 0 indicating windows in VA channel to draw VV type of INT (integer)
+                string,  // Characters string to label profiles
+                int,     // Reference location to draw label.
+                string,  // Font to use to draw profile labels. Default is use 'default' font set in Montaj
+                real,    // Text size in mm to draw profile labels. Default is 5mm
+                string,  // Text color string in RGB model. Default is black
+                int      // Include VA column numbers as part of the profile label 0 - no, 1 - yes
+                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetProfileEx_STK   Set profile parameters in STK object (added Break on dummy option)
+//
+// Returns            Nothing
+//
+// Notes              See MSTK for detailed description of all function parameters
+//
+// Available          5.0.3
+//
+
+[_licensed] void
+SetProfileEx_STK (
+                  STK,     // STK handle
+                  int,     // Profile line type.    1 - solid (default)
+                  real,    // Patterned line pitch in mm. Default is 10 mm
+                  real,    // Line thickness in mm. Default is 0.05mm
+                  string,  // Color string in RGB model. Default is black
+                  int,     // Break on dummy option
+                  int,     // Wrap option
+                  int,     // Clip option
+                  int,     // Plot smoothed polyline.
+                  VV,      // Integers starting from 0 indicating windows in VA channel to draw VV type of INT (integer)
+                  string,  // Characters string to label profiles
+                  int,     // Reference location to draw label.
+                  string,  // Font to use to draw profile labels. Default is use 'default' font set in Montaj
+                  real,    // Text size in mm to draw profile labels. Default is 5mm
+                  string,  // Text color string in RGB model. Default is black
+                  int      // Include VA column numbers as part of the profile label 0 - no, 1 - yes
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetSymbParms_STK   Set parameters in STK object relating drawing symbols
+//
+// Returns            Nothing
+//
+// Notes              See MSTK for detailed description of all function parameters
+//
+// Available          5.0.0
+//
+
+[_licensed] void
+SetSymbParms_STK (
+                  STK,     // STK handle
+                  string,  // Font to use to draw symbols. Default is use 'symbols.gfn' font
+                  real,    // Symbol size in mm. Default is 5mm
+                  string,  // Edge color string in RGB model. Default is black
+                  string,  // Fill color string in RGB model. Default is black
+                  int,     // Wrap option
+                  int,     // Clip option
+                  real,    // Y location to draw symbols. Default is to use the data from Y channel
+                  int,     // Number of symbols levels
+                  VV,      // Y values to define data ranges for each symbol types Type of REAL
+                  VV,      // Symbol numbers (given in the symbol font) to draw Type of INT
+                  int,     // Draw symbols ID (1) or not (0)
+                  string,  // Font to use to draw symbol ID (A,B,C...). Default is use 'default'
+                  real,    // Text size in mm to draw profile labels. Default is 5mm
+                  string   // Text color string in RGB model. Default is black
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetTitleParms_STK   Set parameters in STK object relating X/Y axis titles
+//
+// Returns             Nothing
+//
+// Notes               See MSTK for detailed description of all function parameters
+//                     ? mark in the note represent either X and Y
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+SetTitleParms_STK (
+                   STK,     // STK handle
+                   string,  // Title for bottom X axis/left Y axis. Default is no title.
+                   string,  // Title for top X axis/right Y axis. Default is no title.
+                   int,     // Bottom/Left axis title orientation.
+                   real,    // X location to draw bottom/left axis title
+                   real,    // Y location to draw bottom/left axis title
+                   int,     // Top/Right axis title orientation.
+                   real,    // X location to draw top/right axis title
+                   real,    // Y location to draw top/right axis title
+                   string,  // Font to draw titles. Default is use 'default' font set in Montaj
+                   real,    // Text size in mm to draw titles. Default is 5mm
+                   string,  // Text color string in RGB model. Default is black
+                   int      // <define>STK_AXIS</define>
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetTransParms_STK   Set transformation parameters in STK object
+//
+// Returns             Nothing
+//
+// Notes               See above full description of each parameters
+//                     VV's for X channel transformation can be NULL if the
+//                     transformation is log or loglinear. The same for Y channel.
+//                     See MSTK for detailed description of all function parameters
+//
+// Available           5.0.0
+//
+
+[_licensed] void
+SetTransParms_STK (
+                   STK,   // STK handle
+                   int,   // Type of transformation for horizontal axis
+                   real,  // Minimum value to apply logarithmic
+                   int,   // future use
+                   int,   // future use
+                   int,   // Type of scaling for vertical axis
+                   real,  // Minimum value to apply logarithmic
+                   int,   // future use
+                   int    // future use
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetVAIndexStart_STK   Start array profile index labels at 0 or 1.
+//
+// Returns               Nothing
+//
+// Notes                 By default, the index labels for array channel profiles
+//                       begin at 0. Use this function to start them at either 0
+//                       or 1.
+//
+// Available             6.0.1
+//
+
+[_licensed] void
+SetVAIndexStart_STK (
+                     STK,  // STK handle
+                     int   // Starting index (0 or 1)
+                     );
+
+
+
+
+
+#endif
+

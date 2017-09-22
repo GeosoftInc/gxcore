@@ -1,0 +1,56 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// Message class methods.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef LMSG_GXH_DEFINED
+#define LMSG_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// GotoPoint_LMSG   Sends a move cursor message
+//
+// Returns          Nothing
+//
+// Available        5.0.7
+//
+
+[_licensed] void
+GotoPoint_LMSG (
+                real,  // X location
+                real,  // Y location
+                real,  // Z location
+                IPJ    // IPJ (if (IPJ)0, default coordinate system)
+                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ViewArea_LMSG   Sends a view area message
+//
+// Returns         Nothing
+//
+// Available       5.0.7
+//
+
+[_licensed] void
+ViewArea_LMSG (
+               real,  // X0 location
+               real,  // Y0 location
+               real,  // X1 location
+               real,  // Y1 location
+               IPJ    // IPJ (if (IPJ)0, default coordinate system)
+               );
+
+
+
+
+
+#endif
+

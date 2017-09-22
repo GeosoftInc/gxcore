@@ -1,0 +1,200 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 2-D Fast Fourier Transforms
+// These methods now work with an IMG object, instead of creating
+// their own FFT2 object.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef FFT2_GXH_DEFINED
+#define FFT2_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	FFT2_PG
+//
+// Pager Direction
+//
+// FFT2_PG_FORWARD
+// FFT2_PG_INVERSE
+//
+//===========================================================================================================
+
+#define FFT2_PG_FORWARD    0
+#define FFT2_PG_INVERSE    1
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Fft2In_FFT2   FFT2 transform
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_extended] void
+Fft2In_FFT2 (
+             IMG,     // Input image
+             string,  // Output Transform file name string
+             string   // Output Power Spectrum file name string
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// FilterPG_FFT2   Apply 2D FFT filters to data in pager
+//
+// Returns         Nothing
+//
+// Available       5.0.0
+//
+
+[_extended] void
+FilterPG_FFT2 (
+               PG,      // pager obj
+               string,  // sConFil - FFT filter control file
+               TR,      // TR obj
+               real,    // rDx - X increment
+               real,    // rDy - Y increment
+               real     // rRot- Rotation degree
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Flt_FFT2   FFT2 filter
+//
+// Returns    Nothing
+//
+// Available  5.0.0
+//
+
+[_extended] void
+Flt_FFT2 (
+          IMG,     // Input image (Transform grid)
+          string,  // Output file (Transform grid)
+          string   // Control file
+          );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// FltInv_FFT2   FFT2 filter and inverse
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_extended] void
+FltInv_FFT2 (
+             IMG,     // Input image (Transform grid)
+             string,  // Output file
+             string   // Control file
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// PowSpc_FFT2   FFT2 transform power spectrum
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_extended] void
+PowSpc_FFT2 (
+             IMG,     // Input image (Transform grid)
+             string   // Output Power Spectrum file name string
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// RadSpc_FFT2   FFT2 transform Radially averaged power spectrum
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_extended] void
+RadSpc_FFT2 (
+             IMG,     // Input image (Transform grid)
+             string   // Output Radial Spectrum file name string
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// RadSpc1_FFT2   FFT2 transform Radially averaged power spectrum for one IMG
+//
+// Returns        Nothing
+//
+// Available      7.2.0
+//
+
+[_public] void
+RadSpc1_FFT2 (
+              IMG,  // Input image (Transform grid)
+              VV    // Output Radial Spectrum VV
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// RadSpc2_FFT2   FFT2 transform Radially averaged power spectrum for two IMGs
+//
+// Returns        Nothing
+//
+// Available      7.2.0
+//
+
+[_public] void
+RadSpc2_FFT2 (
+              IMG,  // Input image1 (Transform grid1 - G)
+              IMG,  // Input image2 (Transform grid2 - H)
+              VV,   // Output Radial Spectrum VV
+              VV,   // Output Radial Spectrum Standard deviation VVst	(Null: no calc)
+              int   // lOpt - 1: <Re(GH*/HH*)> VV;  0: <Re(GH*)> VV
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// TdXdY_FFT2   FFT2 filter (calculate T from the derivatives Tx and Ty)
+//
+// Returns      Nothing
+//
+// Available    5.0.1
+//
+
+[_extended] void
+TdXdY_FFT2 (
+            IMG,     // Input dX image (Transform grid)
+            IMG,     // Input dY image (Transform grid)
+            string,  // Output T file name
+            int      // 0 - no invers, 1 - invers FFT applied
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// TransPG_FFT2   Apply 2D FFT transform to data in pager
+//
+// Returns        Nothing
+//
+// Available      5.0.0
+//
+
+[_extended] void
+TransPG_FFT2 (
+              PG,   // pager obj
+              int   // <define>FFT2_PG</define>
+              );
+
+
+
+
+
+#endif
+

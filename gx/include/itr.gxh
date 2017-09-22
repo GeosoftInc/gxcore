@@ -1,0 +1,711 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 
+// The ITR class provides access to ITR files. An ITR file maps
+// ranges of values to specific colours. The ITR object is typically
+// used in conjunction with MVIEW objects (see MVIEW and MVU).
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
+// Notes
+//
+// 
+// Histogram ranges and colour zone ranges
+// 
+// Histogram bins are defined with inclusive minima and exclusive maxima;
+// for instance if Min = 0 and Inc = 1, then the second bin would include
+// all values z such that  0 <= z < 1 (the first bin has all values < 0).
+// 
+// Colour zones used in displaying grids (ITR, ZON etc...) are the
+// opposite, with exclusive minima and inclusive maxima.
+// For instance, if a zone is defined from 0 to 1, then it would
+// contain all values of z such that 0 < z <= 1.
+// 
+// These definitions mean that it is impossible to perfectly assign
+// ITR colours to individual bars of a histogram. The best work-around
+// when the data values are integers is to define the colour zones using
+// 0.5 values between the integers. A general work-around is to make the
+// number of histogram bins much larger than the number of colour zones.
+// 
+// The <define>ITR_NULL</define> is used to hold a NULL handle to an ITR class.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef ITR_GXH_DEFINED
+#define ITR_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	ITR_COLOR_MODEL
+//
+// ITR Color Model defines
+//
+// ITR_COLOR_MODEL_HSV
+// ITR_COLOR_MODEL_RGB
+// ITR_COLOR_MODEL_CMY
+//
+//===========================================================================================================
+
+#define ITR_COLOR_MODEL_HSV    1
+#define ITR_COLOR_MODEL_RGB    2
+#define ITR_COLOR_MODEL_CMY    3
+
+
+//===========================================================================================================
+//
+// Define	ITR_NULL
+//
+// Null ITR Object
+//
+// ITR_NULL
+//
+//===========================================================================================================
+
+#define ITR_NULL    ((ITR)0)
+
+
+//===========================================================================================================
+//
+// Define	ITR_POWER
+//
+// Power Zoning defines
+//
+// ITR_POWER_10    Power of 10
+// ITR_POWER_EXP   Exponential
+//
+//===========================================================================================================
+
+#define ITR_POWER_10     0
+#define ITR_POWER_EXP    1
+
+
+//===========================================================================================================
+//
+// Define	ITR_ZONE
+//
+// Zoning Methods
+//
+// ITR_ZONE_DEFAULT
+// ITR_ZONE_LINEAR
+// ITR_ZONE_NORMAL
+// ITR_ZONE_EQUALAREA
+// ITR_ZONE_SHADE
+// ITR_ZONE_LOGLINEAR
+//
+//===========================================================================================================
+
+#define ITR_ZONE_DEFAULT      0
+#define ITR_ZONE_LINEAR       1
+#define ITR_ZONE_NORMAL       2
+#define ITR_ZONE_EQUALAREA    3
+#define ITR_ZONE_SHADE        4
+#define ITR_ZONE_LOGLINEAR    5
+
+
+//===========================================================================================================
+//
+// Define	ITR_ZONE_MODEL
+//
+// ITR Zone Model defines
+//
+// ITR_ZONE_MODEL_NOZONE   The ITR has no numeric zones defined (e.g. from a TBL file)
+// ITR_ZONE_MODEL_NONE     There is no specific zone model defined.
+// ITR_ZONE_MODEL_LINEAR   The ITR is set up with a linear transform.
+// ITR_ZONE_MODEL_NORMAL   The ITR is set up with a normal distribution transform.
+// ITR_ZONE_MODEL_EQUAL    The ITR is set up with an equal area transform.
+// ITR_MODEL_LOGLIN        The ITR is set up with a log-linear transform.
+//
+//===========================================================================================================
+
+#define ITR_ZONE_MODEL_NOZONE    -1
+#define ITR_ZONE_MODEL_NONE      0
+#define ITR_ZONE_MODEL_LINEAR    1
+#define ITR_ZONE_MODEL_NORMAL    2
+#define ITR_ZONE_MODEL_EQUAL     3
+#define ITR_MODEL_LOGLIN         4
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ChangeBrightness_ITR   Change the brightness.
+//
+// Returns                Nothing
+//
+// Notes                  
+//                        0.0 brightness does nothing.
+//                        -1.0 to 0.0 makes colours darker, -1.0 is black
+//                        0.0 to 1.0 makes colours lighter, 1.0 is white
+//                        
+//
+// Available              5.0.0
+//
+
+[_public] void
+ChangeBrightness_ITR (
+                      ITR,   // ITR object
+                      real   // -1.0 - black; 0.0 no change; 1.0 white
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ColorVV_ITR   Get color transform of a VV.
+//
+// Returns       Nothing
+//
+// Notes         
+//               If the input value is a dummy, then the output colour
+//               is 0 (no colour).
+//               
+//
+// Available     5.1.6
+//
+
+[_public] void
+ColorVV_ITR (
+             ITR,  // ITR
+             VV,   // Input VV of values (none-string)
+             VV    // Output VV of colours (type INT)
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Copy_ITR   Copies ITRs
+//
+// Returns    Nothing
+//
+// Available  5.0.0
+//
+
+[_public] void
+Copy_ITR (
+          ITR,  // ITR Destination
+          ITR   // ITR Source
+          );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_ITR   Create an ITR Object
+//
+// Returns      ITR Object
+//
+// Available    5.0.0
+//
+
+[_public] ITR
+Create_ITR (
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateFile_ITR   Create an ITR Object from an itr, tbl, zon, lut file.
+//
+// Returns          ITR Object
+//
+// Available        5.0.0
+//
+
+[_public] ITR
+CreateFile_ITR (
+                string   // file name, type determined from extension
+                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateIMG_ITR   Create an ITR for an image.
+//
+// Returns         ITR Object
+//
+// Notes           
+//                 The ITR_ZONE_DEFAULT model will ask the IMG to provide
+//                 a model if it can.
+//                 
+//                 If a shaded relief model is selected, a shaded image
+//                 will be created and a shaded image file will be created with
+//                 the same name as the original grid but with the suffux "_s"
+//                 added to the name part of the grid.
+//                 
+//
+// Available       5.1.0
+//
+
+[_public] ITR
+CreateIMG_ITR (
+               IMG,
+               string,  // colour table name, NULL for default
+               int,     // <define>ITR_ZONE</define>
+               real     // colour contour interval or rDUMMY
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateMap_ITR   Create ITR from Map with Agg Group name.
+//
+// Returns         ITR Object
+//
+// Available       5.0.0
+//
+
+[_public] ITR
+CreateMap_ITR (
+               MAP,     // MAP on which to place the view
+               string   // Agg Group name
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateS_ITR   Create an ITR Object from a BF
+//
+// Returns       ITR Object
+//
+// Available     5.0.0
+//
+
+[_public] ITR
+CreateS_ITR (
+             BF   // BF to serialize from
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_ITR   Destroy the ITR handle.
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_public] void
+Destroy_ITR (
+             ITR   // ITR Handle
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// EqualArea_ITR   Calculate an equal area transform.
+//
+// Returns         Nothing
+//
+// Available       5.1.2
+//
+
+[_public] void
+EqualArea_ITR (
+               ITR,   // ITR object
+               ST,    // Stat object with a histogram
+               real   // colour contour interval or dummy for none
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetDataLimits_ITR   Get ITR max/min data limits.
+//
+// Returns             Nothing
+//
+// Notes               
+//                     In some ITRs, especially those defined and
+//                     embedded inside grid (IMG) objects, the
+//                     actual data minimum and maximum values are
+//                     stored. This function retrieves those values.
+//                     This is NOT true of all ITR objects, and in
+//                     those cases dummy values will be returned.
+//                     
+//
+// Available           6.0.0
+//
+
+[_public] void
+GetDataLimits_ITR (
+                   ITR,       // ITR
+                   var real,  // Data minimum value (or rDUMMY if not set)
+                   var real   // Data maximum value (or rDUMMY if not set)
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetREG_ITR   Get the ITR's REG
+//
+// Returns      REG object
+//
+// Available    5.0.0
+//
+
+[_public] REG
+GetREG_ITR (
+            ITR   // ITR object
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetZoneColor_ITR   Get the colour in a zone of the ITR
+//
+// Returns            Nothing
+//
+// Notes              Valid indices are 0 to N-1, where N is the size of the ITR.
+//
+// Available          5.0.0
+//
+
+[_public] void
+GetZoneColor_ITR (
+                  ITR,      // ITR Object
+                  int,      // Number of the zone to set.
+                  var int   // <define>MVIEW_COLOR</define>
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iColorValue_ITR   Transform single data value to color
+//
+// Returns           <define>MVIEW_COLOR</define>
+//
+// Available         5.1.0
+//
+
+[_public] int
+iColorValue_ITR (
+                 ITR,   // ITR
+                 real   // Data value
+                 );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetSize_ITR   Get the number of zones in an ITR
+//
+// Returns        The number of zones.
+//
+// Available      5.0.0
+//
+
+[_public] int
+iGetSize_ITR (
+              ITR   // The ITR Object
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetZoneModelType_ITR   Get the ITR zone model (e.g. Linear, LogLin, Equal Area).
+//
+// Returns                 <define>ITR_ZONE_MODEL</define>
+//
+// Notes                   
+//                         This function may be used to determine if a colour
+//                         transform is included in an ITR.
+//                         
+//
+// Available               6.4.0
+//
+
+[_public] int
+iGetZoneModelType_ITR (
+                       ITR   // ITR object
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Linear_ITR   Calculate a linear transform.
+//
+// Returns      Nothing
+//
+// Available    5.0.0
+//
+
+[_public] void
+Linear_ITR (
+            ITR,   // ITR object
+            real,  // minimum
+            real,  // maximum
+            real   // colour contour interval or dummy for none
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// LoadA_ITR   Load to an ASCII file, ZON, TBL or ER-Mapper LUT
+//
+// Returns     Nothing
+//
+// Available   5.1.6
+//
+
+[_public] void
+LoadA_ITR (
+           ITR,     // ITR
+           string   // file name
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// LogLinear_ITR   Calculate a log transform.
+//
+// Returns         Nothing
+//
+// Notes           The function name is a misnomer. This is a pure log transform.
+//
+// Available       5.0.0
+//
+
+[_public] void
+LogLinear_ITR (
+               ITR,   // ITR object
+               real,  // minimum ( > 0)
+               real,  // maximum ( > minimum)
+               real   // colour contour interval or dummy for none
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Normal_ITR   Calculate a normal distribution transform.
+//
+// Returns      Nothing
+//
+// Available    5.1.2
+//
+
+[_public] void
+Normal_ITR (
+            ITR,   // ITR object
+            real,  // Standard deviation
+            real,  // mean
+            real,  // expansion, normally 1.0
+            real   // colour contour interval or dummy for none
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// PowerZone_ITR   Modified ITR zone values to 10 (or e) raized to the power of the values
+//
+// Returns         Nothing
+//
+// Available       5.0.0
+//
+
+[_public] void
+PowerZone_ITR (
+               ITR,  // ITR object
+               int   // <define>ITR_POWER</define>
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// rGetBrightness_ITR   Get the brightness setting of the ITR
+//
+// Returns              The brightness setting of the ITR
+//
+// Notes                
+//                      Brightness can range from -1.0 (black) to 1.0 (white).
+//                      This brightness control is relative to the normal colour
+//                      when the ITR is created.
+//                      
+//
+// See also             ChangeBrightness_ITR, rGetBrightness_AGG, ChangeBrightness_AGG
+//
+// Available            5.0.0
+//
+
+[_public] real
+rGetBrightness_ITR (
+                    ITR   // ITR object
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// rGetZoneValue_ITR   Get the value in a zone of the ITR
+//
+// Returns             The value of the specified zone.
+//
+// Notes               Valid indices are 0 to N-2, where N is the size of the ITR.
+//
+// Available           5.0.0
+//
+
+[_public] real
+rGetZoneValue_ITR (
+                   ITR,  // ITR Object
+                   int   // Number of the zone to set.
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SaveA_ITR   Save to an ASCII file, ZON, TBL or ER-Mapper LUT
+//
+// Returns     Nothing
+//
+// Available   5.1.2
+//
+
+[_public] void
+SaveA_ITR (
+           ITR,     // ITR
+           string   // file name
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SaveFile_ITR   Save to any type (based on the extension of the input file name).
+//
+// Returns        Nothing
+//
+// Available      8.2
+//
+
+[_public] void
+SaveFile_ITR (
+              ITR,     // ITR
+              string   // file name
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Serial_ITR   Serialize an ITR to a BF
+//
+// Returns      Nothing
+//
+// Available    5.0.0
+//
+
+[_public] void
+Serial_ITR (
+            ITR,  // ITR object to serialize
+            BF    // BF to serialize to
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetAggMap_ITR   Set ITR to an Agg in map
+//
+// Returns         Nothing
+//
+// Notes           See the CreateMap_ITR function
+//
+// Available       5.0.0
+//
+
+[_public] void
+SetAggMap_ITR (
+               MAP,     // MAP on which to place the view
+               string,  // Agg group name
+               ITR      // ITR object to set
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetBrightContrast_ITR   Set the brightness of the ITR colours
+//
+// Returns                 Nothing
+//
+// Notes                   
+//                         Brightness settings:
+//                         0.0   - black
+//                         0.5   - normal (no change)
+//                         1.0   - white
+//                         
+//                         Contrast
+//                         0.0   - flat
+//                         1.0   - full contrast (normal)
+//                         
+//
+// Available               5.0.0
+//
+
+[_public] void
+SetBrightContrast_ITR (
+                       ITR,   // ITR object
+                       real,  // 0.0 - black; 0.5 normal; 1.0 white
+                       real   // 0.0 - flat; 1.0 normal
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetColorModel_ITR   Set the color model of an ITR.
+//
+// Returns             Nothing
+//
+// Available           5.0.2
+//
+
+[_public] void
+SetColorModel_ITR (
+                   ITR,  // ITR Object
+                   int   // <define>ITR_COLOR_MODEL</define>
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetDataLimits_ITR   Set ITR max/min data limits.
+//
+// Returns             Nothing
+//
+// Available           6.3.0
+//
+
+[_public] void
+SetDataLimits_ITR (
+                   ITR,   // ITR
+                   real,  // Data minimum value
+                   real   // Data maximum value
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetSize_ITR   Set the number of zones in an ITR
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_public] void
+SetSize_ITR (
+             ITR,  // ITR Object
+             int   // Number of zones to set ITR to.
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetZoneColor_ITR   Set the colour in a zone of the ITR
+//
+// Returns            Nothing
+//
+// Notes              Valid indices are 0 to N-1, where N is the size of the ITR.
+//
+// Available          5.0.0
+//
+
+[_public] void
+SetZoneColor_ITR (
+                  ITR,  // ITR Object
+                  int,  // Number of the zone to set.
+                  int   // <define>MVIEW_COLOR</define>
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetZoneValue_ITR   Set the value in a zone of the ITR
+//
+// Returns            Nothing
+//
+// Notes              Valid indices are 0 to N-2, where N is the size of the ITR.
+//
+// Available          5.0.0
+//
+
+[_public] void
+SetZoneValue_ITR (
+                  ITR,   // ITR Object
+                  int,   // Number of the zone to set.
+                  real   // The value to set
+                  );
+
+
+
+
+
+#endif
+

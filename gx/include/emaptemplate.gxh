@@ -1,0 +1,818 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The EMAPTEMPLATE class provides access to a map template as displayed within
+// Oasis montaj, but does not change data within the template itself.
+// It performs functions such as setting the currently displayed area,
+// or drawing "tracking" lines or boxes on the template (which are not
+// part of the template itself).
+//
+//-----------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
+// Notes
+//
+// To obtain access to the map template itself, it is recommended practice
+// to begin with an EMAPTEMPLATE object, and use the Lock function to
+// lock the underlying template to prevent external changes. The returned
+// MAPTEMPLATE object may then be safely used to make changes to the template itself.
+// 
+// VIRTUAL EMAPTEMPLATE SUPPORT
+// 
+// These methods are only available when running in an external application.
+// They allow the GX to open a map template and then create a Virtual EMAPTEMPLATE from that
+// map template. The GX can then call MakeCurrent and set the current EMAPTEMPLATE so
+// that code that follows sees this map template as the current MAPTEMPLATE.
+// 
+// Supported methods on Virtual EMAPTEMPLATEs are:
+// 
+// Current_EMAPTEMPLATE
+// CurrentNoActivate_EMAPTEMPLATE
+// MakeCurrent_EMAPTEMPLATE
+// iHaveCurrent_EMAPTEMPLATE
+// CurrentIfExists_EMAPTEMPLATE
+// 
+// Lock_EMAPTEMPLATE
+// UnLock_EMAPTEMPLATE
+// 
+// IGetName_EMAPTEMPLATE
+// 
+// iLoaded_EMAPTEMPLATE
+// Load_EMAPTEMPLATE
+// LoadNoActivate_EMAPTEMPLATE
+// UnLoadVerify_EMAPTEMPLATE
+// UnLoad_EMAPTEMPLATE
+// 
+// CreateVirtual_EMAPTEMPLATE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef EMAPTEMPLATE_GXH_DEFINED
+#define EMAPTEMPLATE_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	EMAPTEMPLATE_PATH
+//
+// Four forms
+//
+// EMAPTEMPLATE_PATH_FULL       d:\directory\file.gdb
+// EMAPTEMPLATE_PATH_DIR        \directory\file.gdb
+// EMAPTEMPLATE_PATH_NAME_EXT   file.gdb
+// EMAPTEMPLATE_PATH_NAME       file
+//
+//===========================================================================================================
+
+#define EMAPTEMPLATE_PATH_FULL        0
+#define EMAPTEMPLATE_PATH_DIR         1
+#define EMAPTEMPLATE_PATH_NAME_EXT    2
+#define EMAPTEMPLATE_PATH_NAME        3
+
+
+//===========================================================================================================
+//
+// Define	EMAPTEMPLATE_TRACK
+//
+// Tracking Options
+//
+// EMAPTEMPLATE_TRACK_ERASE   Erase Object after you return?
+// EMAPTEMPLATE_TRACK_RMENU   Allow use of right-menu
+// EMAPTEMPLATE_TRACK_CYCLE   If user holds down left-mouse, will return many times
+//
+//===========================================================================================================
+
+#define EMAPTEMPLATE_TRACK_ERASE    1
+#define EMAPTEMPLATE_TRACK_RMENU    2
+#define EMAPTEMPLATE_TRACK_CYCLE    4
+
+
+//===========================================================================================================
+//
+// Define	EMAPTEMPLATE_WINDOW_POSITION
+//
+// Window Positioning Options
+//
+// EMAPTEMPLATE_WINDOW_POSITION_DOCKED
+// EMAPTEMPLATE_WINDOW_POSITION_FLOATING
+//
+//===========================================================================================================
+
+#define EMAPTEMPLATE_WINDOW_POSITION_DOCKED      0
+#define EMAPTEMPLATE_WINDOW_POSITION_FLOATING    1
+
+
+//===========================================================================================================
+//
+// Define	EMAPTEMPLATE_WINDOW_STATE
+//
+// Window State Options
+//
+// EMAPTEMPLATE_WINDOW_RESTORE
+// EMAPTEMPLATE_WINDOW_MINIMIZE
+// EMAPTEMPLATE_WINDOW_MAXIMIZE
+//
+//===========================================================================================================
+
+#define EMAPTEMPLATE_WINDOW_RESTORE     0
+#define EMAPTEMPLATE_WINDOW_MINIMIZE    1
+#define EMAPTEMPLATE_WINDOW_MAXIMIZE    2
+
+
+//===========================================================================================================
+// Group Drag-and-drop methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// iDragDropEnabled_EMAPTEMPLATE   Is drag-and-drop enabled for the map?
+//
+// Returns                         <define>GEO_BOOL</define>
+//
+// Available                       5.0.0
+//
+
+[_public_app] int
+iDragDropEnabled_EMAPTEMPLATE (
+                               EMAPTEMPLATE   // EMAPTEMPLATE object
+                               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetDragDropEnabled_EMAPTEMPLATE   Set whether drag-and-drop is enabled for the map.
+//
+// Returns                           Nothing
+//
+// Available                         5.0.0
+//
+
+[_public_app] void
+SetDragDropEnabled_EMAPTEMPLATE (
+                                 EMAPTEMPLATE,  // EMAPTEMPLATE object
+                                 int            // Enables/disables drag-and-drop <define>GEO_BOOL</define>
+                                 );
+
+
+
+
+//===========================================================================================================
+// Group General
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// Current_EMAPTEMPLATE   This method returns the Current Edited map template.
+//
+// Returns                EMAPTEMPLATE Object
+//
+// Available              5.0.0
+//
+
+[_public_app] EMAPTEMPLATE
+Current_EMAPTEMPLATE (
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CurrentNoActivate_EMAPTEMPLATE   This method returns the Current Edited map template.
+//
+// Returns                          EMAPTEMPLATE Object
+//
+// Notes                            
+//                                  This function acts just like Current_EMAPTEMPLATE except that the document is not activated (brought to foreground) and no
+//                                  guarantee is given about which document is currently active.
+//                                  
+//
+// Available                        9.0.0
+//
+
+[_public_app] EMAPTEMPLATE
+CurrentNoActivate_EMAPTEMPLATE (
+                                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CurrentIfExists_EMAPTEMPLATE   This method returns the Current Edited map.
+//
+// Returns                        EMAPTEMPLATE Object to current edited map. If there is no current map,
+//                                the user is not prompted for a map, and 0 is returned.
+//
+// Available                      5.0.0
+//
+
+[_public_app] EMAPTEMPLATE
+CurrentIfExists_EMAPTEMPLATE (
+                              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_EMAPTEMPLATE   Destroy EMAPTEMPLATE handle.
+//
+// Returns                Nothing
+//
+// Notes                  This does not unload the map, it simply deletes the gx resource handle
+//
+// Available              5.0.0
+//
+
+[_public_app] void
+Destroy_EMAPTEMPLATE (
+                      EMAPTEMPLATE   // EMAPTEMPLATE to destroy
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetMapTemplatesLST_EMAPTEMPLATE   Load the file names of open maps into a LST.
+//
+// Returns                            The number of documents loaded into the LST.
+//                                    The LST is cleared first.
+//
+// Available                          5.0.0
+//
+
+[_public_app] int
+iGetMapTemplatesLST_EMAPTEMPLATE (
+                                  LST,  // LST to load
+                                  int   // <define>EMAPTEMPLATE_PATH</define>
+                                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetName_EMAPTEMPLATE   Get the name of the map object of this EMAPTEMPLATE.
+//
+// Returns                 Nothing
+//
+// Available               5.0.0
+//
+
+[_public_app] void
+IGetName_EMAPTEMPLATE (
+                       EMAPTEMPLATE,  // EMAPTEMPLATE
+                       var string,    // Name returned
+                       int            // Size of the String
+                       );
+
+#define GetName_EMAPTEMPLATE(A, B) IGetName_EMAPTEMPLATE(A, B, sizeof(B))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iHaveCurrent_EMAPTEMPLATE   This method returns whether a current map is loaded
+//
+// Returns                     0 - no current map.
+//                             1 - current map
+//
+// Available                   5.0.0
+//
+
+[_public_app] int
+iHaveCurrent_EMAPTEMPLATE (
+                           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iIGetSpecifiedMapName_EMAPTEMPLATE   Find a loaded map that has a setting in its reg.
+//
+// Returns                              0 - Ok
+//                                      1 - No Map Found
+//
+// Available                            5.0.0
+//
+
+[_public_app] int
+iIGetSpecifiedMapName_EMAPTEMPLATE (
+                                    string,      // REG field name
+                                    string,      // REG field value to find
+                                    var string,  // buffer for map name
+                                    int          // Buffer size
+                                    );
+
+#define iGetSpecifiedMapName_EMAPTEMPLATE(A, B, C) iIGetSpecifiedMapName_EMAPTEMPLATE(A, B, C, sizeof(C))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iIsLocked_EMAPTEMPLATE   Is this MapTemplate locked
+//
+// Returns                  <define>GEO_BOOL</define>
+//
+// Available                5.0.0
+//
+
+[_public_app] int
+iIsLocked_EMAPTEMPLATE (
+                        EMAPTEMPLATE   // EMAPTEMPLATE object
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iLoaded_EMAPTEMPLATE   Returns 1 if a map is loaded .
+//
+// Returns                1 if map is loaded, 0 otherwise.
+//
+// Available              5.0.0
+//
+
+[_public_app] int
+iLoaded_EMAPTEMPLATE (
+                      string   // map name
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetWindowPosition_EMAPTEMPLATE   Get the map window's position and dock state
+//
+// Returns                          Nothing
+//
+// Available                        9.0.0
+//
+
+[_public_app] void
+GetWindowPosition_EMAPTEMPLATE (
+                                EMAPTEMPLATE,  // EMAPTEMPLATE
+                                var int,       // Window left position
+                                var int,       // Window top position
+                                var int,       // Window right position
+                                var int,       // Window bottom position
+                                var int,       // Window state <define>EMAPTEMPLATE_WINDOW_STATE</define>
+                                var int        // Docked or floating <define>EMAPTEMPLATE_WINDOW_POSITION</define>
+                                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetWindowPosition_EMAPTEMPLATE   Get the map window's position and dock state
+//
+// Returns                          Nothing
+//
+// Available                        9.0.0
+//
+
+[_public_app] void
+SetWindowPosition_EMAPTEMPLATE (
+                                EMAPTEMPLATE,  // EMAPTEMPLATE
+                                int,           // Window left position
+                                int,           // Window top position
+                                int,           // Window right position
+                                int,           // Window bottom position
+                                int,           // Window state <define>EMAPTEMPLATE_WINDOW_STATE</define>
+                                int            // Docked or floating <define>EMAPTEMPLATE_WINDOW_POSITION</define>
+                                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iReadOnly_EMAPTEMPLATE   Checks if a map is currently opened in a read-only mode.
+//
+// Returns                  <define>GEO_BOOL</define>
+//
+// Available                5.0.0
+//
+
+[_public_app] int
+iReadOnly_EMAPTEMPLATE (
+                        EMAPTEMPLATE   // EMAPTEMPLATE
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Load_EMAPTEMPLATE   Loads maps into the editor.
+//
+// Returns             EMAPTEMPLATE Object to edited map.
+//
+// Notes               The last map in the list will be the current map.
+//                     
+//                     Maps may already be loaded.
+//                     
+//                     Only the first file in the list may have a directory path.
+//                     All other files in the list are assumed to be in the same
+//                     directory as the first file.
+//
+// Available           5.0.0
+//
+
+[_public_app] EMAPTEMPLATE
+Load_EMAPTEMPLATE (
+                   string   // list of maps (';' or '|' delimited) to load.
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// LoadNoActivate_EMAPTEMPLATE   Loads documents into the workspace
+//
+// Returns                       
+//                               Handle to current edited document, which will be the last
+//                               database in the list if multiple files were provided.
+//                               
+//
+// Notes                         
+//                               This function acts just like Load_EMAPTEMPLATE except that the document(s) is not activated (brought to foreground) and no
+//                               guarantee is given about which document is currently active.
+//                               
+//
+// Available                     5.0.0
+//
+
+[_public_app] EMAPTEMPLATE
+LoadNoActivate_EMAPTEMPLATE (
+                             string   // list of documents (';' or '|' delimited) to load.
+                             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Lock_EMAPTEMPLATE   This method locks the Edited map.
+//
+// Returns             MAPTEMPLATE Object to map associated with edited map.
+//
+// Available           5.0.0
+//
+
+[_public_app] MAPTEMPLATE
+Lock_EMAPTEMPLATE (
+                   EMAPTEMPLATE   // EMAPTEMPLATE object
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// MakeCurrent_EMAPTEMPLATE   Makes this EMAPTEMPLATE object the current active object to the user.
+//
+// Returns                    Nothing
+//
+// Available                  5.0.0
+//
+
+[_public_app] void
+MakeCurrent_EMAPTEMPLATE (
+                          EMAPTEMPLATE   // EMAPTEMPLATE to make active
+                          );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoad_EMAPTEMPLATE   Unloads a map template.
+//
+// Returns               Nothing
+//
+// Notes                 If the map template is not loaded, nothing happens.
+//                       Same as UnLoadVerify_EMAPTEMPLATE with FALSE to prompt save.
+//
+// Available             5.0.0
+//
+
+[_public_app] void
+UnLoad_EMAPTEMPLATE (
+                     string   // Name of the map to unload
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoadAll_EMAPTEMPLATE   Unloads all opened maps
+//
+// Returns                  Nothing
+//
+// Available                5.0.0
+//
+
+[_public_app] void
+UnLoadAll_EMAPTEMPLATE (
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoadVerify_EMAPTEMPLATE   Unloads an edited map, optional prompt to save.
+//
+// Returns                     Nothing
+//
+// Notes                       If the map is not loaded, nothing happens.
+//                             If "FALSE", map is saved without a prompt.
+//
+// Available                   5.0.0
+//
+
+[_public_app] void
+UnLoadVerify_EMAPTEMPLATE (
+                           string,  // Name of map to unload
+                           int      // prompt <define>GEO_BOOL</define>
+                           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLock_EMAPTEMPLATE   This method unlocks the Edited map.
+//
+// Returns               Nothing
+//
+// Available             5.0.0
+//
+
+[_public_app] void
+UnLock_EMAPTEMPLATE (
+                     EMAPTEMPLATE   // EMAPTEMPLATE object
+                     );
+
+
+
+
+//===========================================================================================================
+// Group Input
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetBox_EMAPTEMPLATE   Returns the coordinates of a user selected box.
+//
+// Returns                0 if point returned.
+//                        1 if user cancelled.
+//
+// Notes                  The coordinates are returned in the current template units
+//                        (See GetUnits and SetUnits in MAPTEMPLATE)
+//
+// Available              5.0.0
+//
+
+[_public_app] int
+iGetBox_EMAPTEMPLATE (
+                      EMAPTEMPLATE,  // EMAPTEMPLATE object
+                      string,        // user prompt string
+                      var real,      // X minimum in current view user units.
+                      var real,      // Y
+                      var real,      // X maximum
+                      var real       // Y
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetLine_EMAPTEMPLATE   Returns the end points of a line.
+//
+// Returns                 0 if line returned.
+//                         1 if user cancelled.
+//
+// Notes                   The coordinates are returned in the current template units
+//                         (See GetUnits and SetUnits in MAPTEMPLATE)
+//
+// Available               5.0.0
+//
+
+[_public_app] int
+iGetLine_EMAPTEMPLATE (
+                       EMAPTEMPLATE,  // EMAPTEMPLATE object
+                       string,        // user prompt string
+                       var real,      // X1 in view user units
+                       var real,      // Y1
+                       var real,      // X2
+                       var real       // Y2
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetPoint_EMAPTEMPLATE   Returns the coordinates of a user selected point.
+//
+// Returns                  0 if point returned.
+//                          1 if user cancelled.
+//
+// Notes                    The coordinates are returned in the current template units
+//                          (See GetUnits and SetUnits in MAPTEMPLATE)
+//
+// Available                5.0.0
+//
+
+[_public_app] int
+iGetPoint_EMAPTEMPLATE (
+                        EMAPTEMPLATE,  // EMAPTEMPLATE object
+                        string,        // user prompt string
+                        var real,      // X coordinate in current view user units.
+                        var real       // Y
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetRect_EMAPTEMPLATE   Returns the coordinates of a user selected box starting at a corner.
+//
+// Returns                 0 if point returned.
+//                         1 if user cancelled.
+//
+// Notes                   The coordinates are returned in the current template units
+//                         (See GetUnits and SetUnits in MAPTEMPLATE)
+//
+// Available               5.0.0
+//
+
+[_public_app] int
+iGetRect_EMAPTEMPLATE (
+                       EMAPTEMPLATE,  // EMAPTEMPLATE object
+                       string,        // user prompt string
+                       var real,      // X minimum in current view user units.   (defines corner)
+                       var real,      // Y
+                       var real,      // X maximum
+                       var real       // Y
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iTrackPoint_EMAPTEMPLATE   Get point without prompt or cursor change with tracking
+//
+// Returns                    0 if point returned.
+//                            1 if user cancelled.
+//
+// Available                  5.0.0
+//
+
+[_public_app] int
+iTrackPoint_EMAPTEMPLATE (
+                          EMAPTEMPLATE,  // EMAPTEMPLATE object
+                          int,           // <define>EMAPTEMPLATE_TRACK</define>
+                          var real,      // X coordinate in current view user units.
+                          var real       // Y
+                          );
+
+
+
+
+//===========================================================================================================
+// Group Selection Methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetItemSelection_EMAPTEMPLATE   Gets info about the current selected item
+//
+// Returns                          <define>GEO_BOOL</define> Is item a view?
+//
+// Notes                            If nothing is selected the string will be empty and the function will return GS_FALSE;
+//
+// Available                        5.0.0
+//
+
+[_licensed_app] int
+iGetItemSelection_EMAPTEMPLATE (
+                                EMAPTEMPLATE,  // EMAPTEMPLATE object
+                                var string,    // returned item name
+                                int            // size of item name
+                                );
+
+#define _iGetItemSelection_EMAPTEMPLATE(A, B) iGetItemSelection_EMAPTEMPLATE(A, B, sizeof(B))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetItemSelection_EMAPTEMPLATE   Sets the current selected item
+//
+// Returns                         Nothing
+//
+// Notes                           An empty string will unselect everything.
+//
+// Available                       5.0.0
+//
+
+[_licensed_app] void
+SetItemSelection_EMAPTEMPLATE (
+                               EMAPTEMPLATE,  // EMAPTEMPLATE object
+                               string         // item name
+                               );
+
+
+
+
+//===========================================================================================================
+// Group View Window
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// GetDisplayArea_EMAPTEMPLATE   Get the area you are currently looking at.
+//
+// Returns                       Nothing
+//
+// Notes                         The coordinates are based on the current template units
+//                               (See GetUnits and SetUnits in MAPTEMPLATE)
+//
+// Available                     5.0.0
+//
+
+[_public_app] void
+GetDisplayArea_EMAPTEMPLATE (
+                             EMAPTEMPLATE,  // EMAPTEMPLATE object
+                             var real,      // X Min returned
+                             var real,      // Y Min returned
+                             var real,      // X Max returned
+                             var real       // Y Max returned
+                             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetTemplateLayoutProps_EMAPTEMPLATE   Get the base layout view properties.
+//
+// Returns                               Nothing
+//
+// Notes                                 This affects the display units and other related properties for the base
+//                                       view of a map.
+//
+// Available                             5.0.0
+//
+
+[_public_app] void
+GetTemplateLayoutProps_EMAPTEMPLATE (
+                                     EMAPTEMPLATE,  // EMAPTEMPLATE object
+                                     var int,       // <define>GEO_BOOL</define> Snap to grid
+                                     var real,      // Snapping distance (always in mm)
+                                     var int,       // View Grid
+                                     var int,       // View Rulers
+                                     var int,       // <define>LAYOUT_VIEW_UNITS</define> View Units
+                                     var int,       // Grid Red Component (0-255)
+                                     var int,       // Grid Green Component (0-255)
+                                     var int        // Grid Blue Component (0-255)
+                                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetWindowState_EMAPTEMPLATE   Retrieve the current state of the map window
+//
+// Returns                        <define>EMAPTEMPLATE_WINDOW_STATE</define>
+//
+// Available                      5.0.0
+//
+
+[_public_app] int
+iGetWindowState_EMAPTEMPLATE (
+                              EMAPTEMPLATE   // EMAPTEMPLATE
+                              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetDisplayArea_EMAPTEMPLATE   Set the area you wish to see.
+//
+// Returns                       Nothing
+//
+// Notes                         The coordinates are based on the current template units
+//                               (See GetUnits and SetUnits in MAPTEMPLATE)
+//
+// Available                     5.0.0
+//
+
+[_public_app] void
+SetDisplayArea_EMAPTEMPLATE (
+                             EMAPTEMPLATE,  // EMAPTEMPLATE object
+                             real,          // X Min
+                             real,          // Y Min
+                             real,          // X Max
+                             real           // Y Max
+                             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetTemplateLayoutProps_EMAPTEMPLATE   Set the base layout view properties.
+//
+// Returns                               Nothing
+//
+// Notes                                 This affects the display units and other related properties for the base
+//                                       view of a map.
+//
+// Available                             5.0.0
+//
+
+[_public_app] void
+SetTemplateLayoutProps_EMAPTEMPLATE (
+                                     EMAPTEMPLATE,  // EMAPTEMPLATE object
+                                     int,           // <define>GEO_BOOL</define> Snap to grid
+                                     real,          // Snapping distance (always in mm)
+                                     int,           // View Grid
+                                     int,           // View Rulers
+                                     int,           // <define>LAYOUT_VIEW_UNITS</define> View Units
+                                     int,           // Grid Red Component (0-255)
+                                     int,           // Grid Green Component (0-255)
+                                     int            // Grid Blue Component (0-255)
+                                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetWindowState_EMAPTEMPLATE   Changes the state of the map window
+//
+// Returns                       Nothing
+//
+// Available                     5.0.0
+//
+
+[_public_app] void
+SetWindowState_EMAPTEMPLATE (
+                             EMAPTEMPLATE,  // EMAPTEMPLATE
+                             int            // <define>EMAPTEMPLATE_WINDOW_STATE</define>
+                             );
+
+
+
+
+//===========================================================================================================
+// Group Virtual
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateVirtual_EMAPTEMPLATE   Makes this EMAPTEMPLATE object the current active object to the user.
+//
+// Returns                      EMAPTEMPLATE Object
+//
+// Available                    5.0.0
+//
+
+[_public_app] EMAPTEMPLATE
+CreateVirtual_EMAPTEMPLATE (
+                            string   // Name of map to create a virtual EMAMTEMPLATE from
+                            );
+
+
+
+
+
+#endif
+

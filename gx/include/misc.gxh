@@ -1,0 +1,80 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// Not a class. A catch-all for miscellaneous geophysical
+// methods, primarily file conversions.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef MISC_GXH_DEFINED
+#define MISC_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// ConvertCG3toRAW_MISC   Convert a CG3 dump to RAW format.
+//
+// Returns                Nothing
+//
+// Available              7.3.0
+//
+
+[_licensed] void
+ConvertCG3toRAW_MISC (
+                      string,  // name of the CG3 file
+                      string,  // name of the RAW file
+                      int      // TideCorr Option: 1 - use geosoft, 0 - use CG3/CG5
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ConvertCG5toRAW_MISC   Convert a CG5 dump to RAW format.
+//
+// Returns                Nothing
+//
+// Available              7.3.0
+//
+
+[_licensed] void
+ConvertCG5toRAW_MISC (
+                      string,  // name of the CG5 file
+                      string,  // name of the RAW file
+                      int      // TideCorr Option: 1 - use geosoft, 0 - use CG3/CG5
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Ukoa2Tbl_MISC   Convert a UKOA file to a location TBL file.
+//
+// Returns         Nothing
+//
+// Notes           The TBL file will contain the following fields:
+//                 
+//                 = Line:string16
+//                 = Station:long
+//                 = Latitude:double
+//                 = Longitude:double
+//                 = X:double
+//                 = Y:double
+//                 = Elevation:double
+//
+// Available       5.0.0
+//
+
+[_licensed] void
+Ukoa2Tbl_MISC (
+               string,  // name of the UKOA file
+               string,  // line name alias table
+               string   // name of the output table
+               );
+
+
+
+
+
+#endif
+

@@ -1,0 +1,84 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The FLT class allows the application of user-defined convolution filters to data in an OASIS database
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef FLT_GXH_DEFINED
+#define FLT_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_FLT   create a filter from a comma/space delimited string.
+//
+// Returns      FLT Object
+//
+// Notes        Terminates process if filter not found.
+//              Sample Fraser Filter string:
+//              
+//              "-1,-1,1,1"
+//
+// Available    5.0.0
+//
+
+[_licensed] FILTER
+Create_FLT (
+            string   // Filter string
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_FLT   This method destroys a filter handle
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_public] void
+Destroy_FLT (
+             FILTER   // FILTER object to destroy
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Load_FLT   Load and return handle to a convolution filter.
+//
+// Returns    FLT Object
+//
+// Notes      Terminates process if filter not found.
+//            A filter file is an ASCII file that contains filter
+//            coefficients, which are simply mumbers.  There can be
+//            one coefficient to a line.  Blank lines and comment lines
+//            are skipped.  Comment lines beginn with a forward slash
+//            character in column 1.  Following is an example Fraser
+//            Filter file:
+//            
+//            /----------------------
+//            / Fraser Filter
+//            /----------------------
+//            -1
+//            -1
+//            1
+//            1
+//
+// Available  5.0.0
+//
+
+[_licensed] FILTER
+Load_FLT (
+          string   // Name of the filter File
+          );
+
+
+
+
+
+#endif
+

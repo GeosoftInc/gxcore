@@ -1,0 +1,681 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 
+// Pager methods for large 2-D arrays
+// This class handles very-large 2-D arrays in which efficient
+// access is required along both rows and columns.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
+// Notes
+//
+// 
+// Typically a grid is accessed using the IMG class, and a PG
+// is obtained from the IMG using the GetPG_IMG function.
+// Following operations on the PG, it can be written back to
+// the IMG using SetPG_IMG.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef PG_GXH_DEFINED
+#define PG_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	PG_3D_DIR
+//
+// 3D Pager direction
+//
+// PG_3D_DIR_XYZ
+// PG_3D_DIR_YXZ
+// PG_3D_DIR_XZY
+// PG_3D_DIR_YZX
+// PG_3D_DIR_ZXY
+// PG_3D_DIR_ZYX
+//
+//===========================================================================================================
+
+#define PG_3D_DIR_XYZ    0
+#define PG_3D_DIR_YXZ    1
+#define PG_3D_DIR_XZY    2
+#define PG_3D_DIR_YZX    3
+#define PG_3D_DIR_ZXY    4
+#define PG_3D_DIR_ZYX    5
+
+
+//===========================================================================================================
+//
+// Define	PG_BF_CONV
+//
+// Pager binary conversions
+//
+// PG_BF_CONV_NONE   The Data is in Raw form
+// PG_BF_CONV_SWAP   The data needs to be byte swapped
+//
+//===========================================================================================================
+
+#define PG_BF_CONV_NONE    0
+#define PG_BF_CONV_SWAP    1
+
+
+
+
+//===========================================================================================================
+// Group 2D Methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// Copy_PG   Copy the data from one pager to another.
+//
+// Returns   Nothing
+//
+// Available 5.0.0
+//
+
+[_licensed] void
+Copy_PG (
+         PG,  // Destination PG object
+         PG   // Source PG object
+         );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CopySubset_PG   Copy a subset of data from one pager to another.
+//
+// Returns         Nothing
+//
+// Notes           2D Only
+//
+// Available       5.0.0
+//
+
+[_licensed] void
+CopySubset_PG (
+               PG,   // Destination PG object
+               PG,   // Source PG object
+               int,  // Y (row) Origin on destination
+               int,  // X (col) Origin on destination
+               int,  // Y (row) Origin on source
+               int,  // X (col) Origin on source
+               int,  // Number of Y (rows) to copy
+               int   // Number of X (columns) to copy
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_PG   Creates a Pager object
+//
+// Returns     PG Object
+//
+// Available   5.0.0
+//
+
+[_licensed] PG
+Create_PG (
+           int,  // # elements in y (# of row)
+           int,  // # elements in x (# of column)
+           int   // <define>GS_TYPES</define>
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateS_PG   Create a 2D PG from serialized source.
+//
+// Returns      PG Object
+//
+// Notes        For 3D pagers, use CreateBF_PG.
+//
+// Available    5.0.0
+//
+
+[_licensed] PG
+CreateS_PG (
+            BF   // BF
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_PG   This method destroys a table resource.
+//
+// Returns      Nothing
+//
+// Available    5.0.0
+//
+
+[_public] void
+Destroy_PG (
+            PG   // Pager Object to Destroy
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Dummy_PG   Sets the Entire pager to dummy.
+//
+// Returns    Nothing
+//
+// Available  5.0.0
+//
+
+[_licensed] void
+Dummy_PG (
+          PG   // PG object
+          );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iEType_PG   Gets the type of pager.
+//
+// Returns     <define>GS_TYPES</define>
+//
+// Available   5.0.0
+//
+
+[_licensed] int
+iEType_PG (
+           PG   // source PG
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iNCols_PG   Gets the # of columns in pager.
+//
+// Returns     # of columns.
+//
+// Available   5.0.0
+//
+
+[_licensed] int
+iNCols_PG (
+           PG   // source PG
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iNRows_PG   Gets the # of rows in pager.
+//
+// Returns     # of rows.
+//
+// Available   5.0.0
+//
+
+[_licensed] int
+iNRows_PG (
+           PG   // source PG
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iNSlices_PG   Gets the # of slices (z) in pager.
+//
+// Returns       # of rows.
+//
+// Available     6.2.0
+//
+
+[_licensed] int
+iNSlices_PG (
+             PG   // source PG
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Range_PG   Computes the range of the entire pager.
+//
+// Returns    Nothing
+//
+// Available  5.0.0
+//
+
+[_licensed] void
+Range_PG (
+          PG,        // Pager to Range
+          var real,  // Minimum Data (Dummy if no range)
+          var real   // Maximum Data (Dummy if no range)
+          );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// rGet_PG   Read a single value from a 2D PG
+//
+// Returns   Nothing
+//
+// Notes     
+//           This is a low-performance method.
+//           
+//
+// Available 8.3.0
+//
+
+[_licensed] real
+rGet_PG (
+         PG,   // hPG - PG handle
+         int,  // iBx - element # in x (column #)
+         int   // iBy - element # in y (row #)
+         );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadCol_PG   Read a set of elements in X (column) from pager into vv
+//
+// Returns      Nothing
+//
+// Available    5.0.0
+//
+
+[_licensed] void
+ReadCol_PG (
+            PG,   // hPG - PG handle
+            int,  // iBx - element # in x (column #)
+            int,  // iBy - begining element # in y to read (0 is the first)
+            int,  // iNy - # elements to read (0 for whole vector)
+            VV    // hVV - VV handle
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadRow_PG   Read a set of elements in Y (row) from pager into vv
+//
+// Returns      Nothing
+//
+// Available    5.0.0
+//
+
+[_licensed] void
+ReadRow_PG (
+            PG,   // hPG - PG handle
+            int,  // iBy - element # in y (row #)
+            int,  // iBx - begining element # in x to read (0 is the first)
+            int,  // iNx - # elements to read (0 for whole vector)
+            VV    // hVV - VV handle
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReAllocate_PG   Changes the size of Pager
+//
+// Returns         Nothing
+//
+// Available       5.0.0
+//
+
+[_licensed] void
+ReAllocate_PG (
+               PG,   // PG object
+               int,  // Number of Y (rows) to reallocate
+               int   // Number of X (columns) to reallocate
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Serial_PG   Serialize a 2D PG to a BF.
+//
+// Returns     Nothing
+//
+// Notes       For 3D pagers, use WriteBF_PG.
+//
+// Available   5.0.0
+//
+
+[_licensed] void
+Serial_PG (
+           PG,  // PG
+           BF   // BF
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Statistics_PG   Compute the statistics of a pager object.
+//
+// Returns         Nothing
+//
+// Available       6.3.1
+//
+
+[_licensed] void
+Statistics_PG (
+               PG,  // hPG - PG handle
+               ST   // hST - statistics object
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteCol_PG   Write a set of elements in X (column) from vv into pager
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_licensed] void
+WriteCol_PG (
+             PG,   // hPG - PG handle
+             int,  // iBx - element # in x (column #)
+             int,  // iBy - begining element # in y to write (0 is the first)
+             int,  // iNy - # elements to write (0 for whole vector)
+             VV    // hVV - VV handle
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteRow_PG   Write a set of elements in Y (row) from vv into pager
+//
+// Returns       Nothing
+//
+// Available     5.0.0
+//
+
+[_licensed] void
+WriteRow_PG (
+             PG,   // hPG - PG handle
+             int,  // iBy - element # in y (row #)
+             int,  // iBx - begining element # in x to write (0 is the first)
+             int,  // iNx - # elements to write (0 for whole vector)
+             VV    // hVV - VV handle
+             );
+
+
+
+
+//===========================================================================================================
+// Group 3D Methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// CopySubset3D_PG   Copy a subset of data from one pager to another.
+//
+// Returns           Nothing
+//
+// Notes             2D Only
+//
+// Available         8.0.0
+//
+
+[_licensed] void
+CopySubset3D_PG (
+                 PG,   // Destination PG object
+                 PG,   // Source PG object
+                 int,  // Z (slice) Origin on destination
+                 int,  // Y (row) Origin on destination
+                 int,  // X (col) Origin on destination
+                 int,  // Z (slice) Origin on source
+                 int,  // Y (row) Origin on source
+                 int,  // X (col) Origin on source
+                 int,  // Number of Z (slice) to copy
+                 int,  // Number of Y (rows) to copy
+                 int   // Number of X (columns) to copy
+                 );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create3D_PG   Creates a Pager object
+//
+// Returns       PG Object
+//
+// Available     6.2.0
+//
+
+[_licensed] PG
+Create3D_PG (
+             int,  // # elements in z (# of slices)
+             int,  // # elements in y (# of row)
+             int,  // # elements in x (# of column)
+             int   // <define>GS_TYPES</define>
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadCol3D_PG   Read a set of elements in X (column) from pager into vv
+//
+// Returns        Nothing
+//
+// Available      6.2.0
+//
+
+[_licensed] void
+ReadCol3D_PG (
+              PG,   // hPG - PG handle
+              int,  // iBz - element # in z (slice #)
+              int,  // iBx - element # in x (column #)
+              int,  // iBy - begining element # in y to read (0 is the first)
+              int,  // iNy - # elements to read (0 for whole vector)
+              VV    // hVV - VV handle
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadRow3D_PG   Read a set of elements in Y (row) from pager into vv
+//
+// Returns        Nothing
+//
+// Available      6.2.0
+//
+
+[_licensed] void
+ReadRow3D_PG (
+              PG,   // hPG - PG handle
+              int,  // iBz - element # in z (slice #)
+              int,  // iBy - element # in y (row #)
+              int,  // iBx - begining element # in x to read (0 is the first)
+              int,  // iNx - # elements to read (0 for whole vector)
+              VV    // hVV - VV handle
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadTrace3D_PG   Read a set of elements in Z (trace) from pager into vv
+//
+// Returns          Nothing
+//
+// Available        6.3.0
+//
+
+[_licensed] void
+ReadTrace3D_PG (
+                PG,   // hPG - PG handle
+                int,  // iBx - element # in x (column #)
+                int,  // iBy - element # in y (row #)
+                int,  // iBy - begining element # in z to read (0 is the first)
+                int,  // iNy - # elements to read (0 for whole vector)
+                VV    // hVV - VV handle
+                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReAllocate3D_PG   Changes the size of 3D Pager
+//
+// Returns           Nothing
+//
+// Available         6.2.0
+//
+
+[_licensed] void
+ReAllocate3D_PG (
+                 PG,   // PG object
+                 int,  // Number of Z (slices) to reallocate
+                 int,  // Number of Y (rows) to reallocate
+                 int   // Number of X (columns) to reallocate
+                 );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteCol3D_PG   Write a set of elements in X (column) from vv into pager
+//
+// Returns         Nothing
+//
+// Available       6.2.0
+//
+
+[_licensed] void
+WriteCol3D_PG (
+               PG,   // hPG - PG handle
+               int,  // iBz - element # in z (slice #)
+               int,  // iBx - element # in x (column #)
+               int,  // iBy - begining element # in y to write (0 is the first)
+               int,  // iNy - # elements to write (0 for whole vector)
+               VV    // hVV - VV handle
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteRow3D_PG   Write a set of elements in Y (row) from vv into pager
+//
+// Returns         Nothing
+//
+// Available       6.2.0
+//
+
+[_licensed] void
+WriteRow3D_PG (
+               PG,   // hPG - PG handle
+               int,  // iBz - element # in z (slice #)
+               int,  // iBy - element # in y (row #)
+               int,  // iBx - begining element # in x to write (0 is the first)
+               int,  // iNx - # elements to write (0 for whole vector)
+               VV    // hVV - VV handle
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteTrace3D_PG   Write a set of elements in Z (trace) from pager into vv
+//
+// Returns           Nothing
+//
+// Available         6.3.0
+//
+
+[_licensed] void
+WriteTrace3D_PG (
+                 PG,   // hPG - PG handle
+                 int,  // iBx - element # in x (column #)
+                 int,  // iBy - element # in y (row #)
+                 int,  // iBy - begining element # in z to read (0 is the first)
+                 int,  // iNy - # elements to read (0 for whole vector)
+                 VV    // hVV - VV handle
+                 );
+
+
+
+
+//===========================================================================================================
+// Group Utility Methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadBF_PG   Read the contents of a 2D or 3D pager to from a BF.
+//
+// Returns     Nothing
+//
+// Available   6.2.0
+//
+
+[_licensed] void
+ReadBF_PG (
+           PG,   // PG handle
+           BF,   // BF to read from
+           int,  // <define>PG_3D_DIR</define>
+           int,  // <define>PG_BF_CONV</define>
+           int,  // Reverse X
+           int,  // Reverse Y
+           int   // Reverse Z
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadRA_PG   Read the contents of a 2D or 3D pager to from an RA.
+//
+// Returns     Nothing
+//
+// Notes       Each line must hold only 1 value
+//
+// Available   6.2.0
+//
+
+[_licensed] void
+ReadRA_PG (
+           PG,      // PG handle
+           RA,      // RA to read from
+           int,     // <define>PG_3D_DIR</define>
+           int,     // Reverse X
+           int,     // Reverse Y
+           int,     // Reverse Z
+           string   // Dummy
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteBF_PG   Write the contents of a 2D or 3D pager to a BF.
+//
+// Returns      Nothing
+//
+// Available    6.2.0
+//
+
+[_licensed] void
+WriteBF_PG (
+            PG,   // PG handle
+            BF,   // BF to write to
+            int,  // <define>PG_3D_DIR</define>
+            int,  // <define>PG_BF_CONV</define>
+            int,  // Reverse X
+            int,  // Reverse Y
+            int   // Reverse Z
+            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteBFEx_PG   Write the contents of a 2D or 3D pager to a BF.
+//
+// Returns        Nothing
+//
+// Available      9.2.3
+//
+
+[_licensed] void
+WriteBFEx_PG (
+              PG,    // PG handle
+              BF,    // BF to write to
+              int,   // <define>PG_3D_DIR</define>
+              int,   // <define>PG_BF_CONV</define>
+              int,   // Reverse X
+              int,   // Reverse Y
+              int,   // Reverse Z
+              real   // Dummy value
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteWA_PG   Write the contents of a 2D or 3D pager to a WA
+//
+// Returns      Nothing
+//
+// Notes        Each line will hold only 1 value
+//
+// Available    6.2.0
+//
+
+[_licensed] void
+WriteWA_PG (
+            PG,      // PG handle
+            WA,      // WA to write to
+            int,     // <define>PG_3D_DIR</define>
+            int,     // Reverse X
+            int,     // Reverse Y
+            int,     // Reverse Z
+            string   // Dummy
+            );
+
+
+
+
+
+#endif
+

@@ -1,0 +1,148 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// This library is not a class. It contains various utilities
+// used in the Target extension for ArcGIS.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef ARCDH_GXH_DEFINED
+#define ARCDH_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// CloseProject_ARCDH   Closes the current DH project in the Target extension
+//
+// Returns              Nothing
+//
+// Available            8.0.0
+//
+
+[_extended] void
+CloseProject_ARCDH (
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetProject_ARCDH   Sets the current DH project in the Target extension
+//
+// Returns            Nothing
+//
+// Available          8.0.0
+//
+
+[_extended] void
+SetProject_ARCDH (
+                  string,  // Path String
+                  string   // Project Name
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetStringFileGDB_ARCDH   Sets the current Geostring File Geodatabase in the Target extension
+//
+// Returns                  Nothing
+//
+// Available                8.0.0
+//
+
+[_extended] void
+SetStringFileGDB_ARCDH (
+                        string   // File Geodatabase
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// StopEditingStringFileGDB_ARCDH   Stops editing session for current string fGDB
+//
+// Returns                          Nothing
+//
+// Available                        8.0.1
+//
+
+[_extended] void
+StopEditingStringFileGDB_ARCDH (
+                                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iHasStringFileGDBEdits_ARCDH   Is a Geostring File Geodatabase loaded and contain edits?
+//
+// Returns                        Nothing
+//
+// Available                      8.0.1
+//
+
+[_extended] int
+iHasStringFileGDBEdits_ARCDH (
+                              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGeostringsExtensionAvailable_ARCDH   Verifies if the geostrings extension in TfA is available. Return 1 if true, 0 otherwise
+//
+// Returns                               Nothing
+//
+// Available                             8.0.1
+//
+
+[_extended] int
+iGeostringsExtensionAvailable_ARCDH (
+                                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetCurrentStringFileGDB_ARCDH   Gets the current Geostring File Geodatabase.
+//
+// Returns                         Nothing
+//
+// Available                       8.0.1
+//
+
+[_extended] void
+GetCurrentStringFileGDB_ARCDH (
+                               var string,  // name returned
+                               int          // string size
+                               );
+
+#define _GetCurrentStringFileGDB_ARCDH(A) GetCurrentStringFileGDB_ARCDH(A, sizeof(A))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iIsValidFGDBFileName_ARCDH   Is this a valid FGDB filename?
+//
+// Returns                      Nothing
+//
+// Available                    8.0.1
+//
+
+[_extended] int
+iIsValidFGDBFileName_ARCDH (
+                            string   // FGDB filename
+                            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iIsValidFeatureClassName_ARCDH   Is this a valid featureclass name?
+//
+// Returns                          Nothing
+//
+// Available                        8.0.1
+//
+
+[_extended] int
+iIsValidFeatureClassName_ARCDH (
+                                string   // featureclass name
+                                );
+
+
+
+
+
+#endif
+

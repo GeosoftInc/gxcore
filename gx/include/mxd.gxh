@@ -1,0 +1,67 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 
+// A MXD wraps and provides manipulation and usage for
+// the content of an ArcGIS MXD file.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef MXD_GXH_DEFINED
+#define MXD_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateMetadata_MXD   Create metadata for this brand new MXD (we are the creator)
+//
+// Returns              Nothing
+//
+// Available            7.0.0
+//
+
+[_licensed] void
+CreateMetadata_MXD (
+                    string   // MXD file name
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ConvertToMap_MXD   Create Geosoft map from ArcGIS MXD
+//
+// Returns            Nothing
+//
+// Available          9.0.0
+//
+
+[_licensed] void
+ConvertToMap_MXD (
+                  string,  // ArcGIS MXD file name
+                  string   // Geosoft map file name
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Sync_MXD   Syncronize any Metadata for this MXD
+//
+// Returns    Nothing
+//
+// Available  7.0.0
+//
+
+[_licensed] void
+Sync_MXD (
+          string   // MXD file name
+          );
+
+
+
+
+
+#endif
+

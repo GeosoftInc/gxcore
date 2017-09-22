@@ -1,0 +1,74 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// This is not a class. These are methods that work on
+// data stored in VA objects
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef VAU_GXH_DEFINED
+#define VAU_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	VAU_PRUNE
+//
+// Prune Options
+//
+// VAU_PRUNE_DUMMY
+// VAU_PRUNE_VALID
+//
+//===========================================================================================================
+
+#define VAU_PRUNE_DUMMY    0
+#define VAU_PRUNE_VALID    1
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Prune_VAU   Prune values from a VA based on reference VA
+//
+// Returns     Nothing
+//
+// Notes       Pruning will shorten the VA by removing values
+//             that are either dummy or non-dummy in the reference
+//             VA
+//
+// Available   5.0.0
+//
+
+[_licensed] void
+Prune_VAU (
+           VA,   // VA to prune
+           VV,   // Reference VV
+           int   // <define>VAU_PRUNE</define>
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// TotalVector_VAU   Calculate total vector for X,Y and Z components
+//
+// Returns           Nothing
+//
+// Available         5.0.0
+//
+
+[_licensed] void
+TotalVector_VAU (
+                 VA,  // X Component object
+                 VA,  // Y Component object
+                 VA,  // Z Component object
+                 VA   // Returned total vector VA object
+                 );
+
+
+
+
+
+#endif
+

@@ -1,0 +1,527 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The EDOC class provides access to a generic documents views as loaded within
+// Oasis montaj.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef EDOC_GXH_DEFINED
+#define EDOC_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	EDOC_PATH
+//
+// Four forms
+//
+// EDOC_PATH_FULL       d:\directory\file.gdb
+// EDOC_PATH_DIR        \directory\file.gdb
+// EDOC_PATH_NAME_EXT   file.gdb
+// EDOC_PATH_NAME       file
+//
+//===========================================================================================================
+
+#define EDOC_PATH_FULL        0
+#define EDOC_PATH_DIR         1
+#define EDOC_PATH_NAME_EXT    2
+#define EDOC_PATH_NAME        3
+
+
+//===========================================================================================================
+//
+// Define	EDOC_TYPE
+//
+// Avaialable generic document types
+//
+// EDOC_TYPE_GMS3D             GMSYS 3D Model
+// EDOC_TYPE_VOXEL             Voxel
+// EDOC_TYPE_VOXEL_INVERSION   Voxel Inversion
+// EDOC_TYPE_GMS2D             GMSYS 2D Model
+//
+//===========================================================================================================
+
+#define EDOC_TYPE_GMS3D              0
+#define EDOC_TYPE_VOXEL              1
+#define EDOC_TYPE_VOXEL_INVERSION    2
+#define EDOC_TYPE_GMS2D              3
+
+
+//===========================================================================================================
+//
+// Define	EDOC_UNLOAD
+//
+// What type of prompt
+//
+// EDOC_UNLOAD_NO_PROMPT
+// EDOC_UNLOAD_PROMPT
+//
+//===========================================================================================================
+
+#define EDOC_UNLOAD_NO_PROMPT    0
+#define EDOC_UNLOAD_PROMPT       1
+
+
+//===========================================================================================================
+//
+// Define	EDOC_WINDOW_POSITION
+//
+// Window Positioning Options
+//
+// EDOC_WINDOW_POSITION_DOCKED
+// EDOC_WINDOW_POSITION_FLOATING
+//
+//===========================================================================================================
+
+#define EDOC_WINDOW_POSITION_DOCKED      0
+#define EDOC_WINDOW_POSITION_FLOATING    1
+
+
+//===========================================================================================================
+//
+// Define	EDOC_WINDOW_STATE
+//
+// Window State Options
+//
+// EDOC_WINDOW_RESTORE
+// EDOC_WINDOW_MINIMIZE
+// EDOC_WINDOW_MAXIMIZE
+//
+//===========================================================================================================
+
+#define EDOC_WINDOW_RESTORE     0
+#define EDOC_WINDOW_MINIMIZE    1
+#define EDOC_WINDOW_MAXIMIZE    2
+
+
+//===========================================================================================================
+//
+// Define	GMS3D_MODELTYPE
+//
+// Avaialable model types
+//
+// GMS3D_MODELTYPE_DEPTH   Depth Model
+// GMS3D_MODELTYPE_TIME    Time Model
+//
+//===========================================================================================================
+
+#define GMS3D_MODELTYPE_DEPTH    0
+#define GMS3D_MODELTYPE_TIME     1
+
+
+//===========================================================================================================
+//
+// Define	GMS2D_MODELTYPE
+//
+// Avaialable model types
+//
+// GMS2D_MODELTYPE_DEPTH   Depth Model
+// GMS2D_MODELTYPE_TIME    Time Model
+//
+//===========================================================================================================
+
+#define GMS2D_MODELTYPE_DEPTH    0
+#define GMS2D_MODELTYPE_TIME     1
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Current_EDOC   This method returns the Current Edited Document.
+//
+// Returns        EDOC Object
+//
+// Available      5.0.0
+//
+
+[_public_app] EDOC
+Current_EDOC (
+              int   // <define>EDOC_TYPE</define>
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CurrentNoActivate_EDOC   This method returns the Current Edited Document.
+//
+// Returns                  EDOC Object
+//
+// Notes                    This function acts just like Current_EDOC except that the document is not activated (brought to foreground) and no
+//                          guarantee is given about which document is currently active.
+//
+// Available                9.0.0
+//
+
+[_public_app] EDOC
+CurrentNoActivate_EDOC (
+                        int   // <define>EDOC_TYPE</define>
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CurrentIfExists_EDOC   This method returns the Current Edited Document.
+//
+// Returns                EDOC Object to current edited document. If there is no current document,
+//                        the user is not prompted for a document, and 0 is returned.
+//
+// Available              5.0.0
+//
+
+[_public_app] EDOC
+CurrentIfExists_EDOC (
+                      int   // <define>EDOC_TYPE</define>
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_EDOC   Destroy EDOC handle.
+//
+// Returns        Nothing
+//
+// Notes          This does not unload the document; it simply deletes the gx resource handle
+//
+// Available      5.0.0
+//
+
+[_public_app] void
+Destroy_EDOC (
+              EDOC   // EDOC to destroy
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetDocumentsLST_EDOC   Load the file names of open documents into a LST.
+//
+// Returns                 The number of documents loaded into the LST.
+//                         The LST is cleared first.
+//
+// Available               5.0.0
+//
+
+[_public_app] int
+iGetDocumentsLST_EDOC (
+                       LST,  // LST to load
+                       int,  // <define>EDOC_PATH</define>
+                       int   // <define>EDOC_TYPE</define>
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetName_EDOC   Get the name of the document object of this EDOC.
+//
+// Returns         Nothing
+//
+// Available       5.0.0
+//
+
+[_public_app] void
+IGetName_EDOC (
+               EDOC,        // EDOC
+               var string,  // Name returned
+               int          // Size of the String
+               );
+
+#define GetName_EDOC(A, B) IGetName_EDOC(A, B, sizeof(B))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGetWindowState_EDOC   Retrieve the current state of the document window
+//
+// Returns                <define>EDOC_WINDOW_STATE</define>
+//
+// Available              5.0.0
+//
+
+[_public_app] int
+iGetWindowState_EDOC (
+                      EDOC   // EDOC
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iHaveCurrent_EDOC   Returns true if a document is loaded
+//
+// Returns             <define>GEO_BOOL</define>
+//
+// Available           5.0.0
+//
+
+[_public_app] int
+iHaveCurrent_EDOC (
+                   int   // <define>EDOC_TYPE</define>
+                   );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iLoaded_EDOC   Returns 1 if a document is loaded .
+//
+// Returns        1 if document is loaded, 0 otherwise.
+//
+// Available      5.0.0
+//
+
+[_public_app] int
+iLoaded_EDOC (
+              string,  // document name
+              int      // <define>EDOC_TYPE</define>
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetWindowPosition_EDOC   Get the map window's position and dock state
+//
+// Returns                  Nothing
+//
+// Available                9.0.0
+//
+
+[_public_app] void
+GetWindowPosition_EDOC (
+                        EDOC,     // EDOC
+                        var int,  // Window left position
+                        var int,  // Window top position
+                        var int,  // Window right position
+                        var int,  // Window bottom position
+                        var int,  // Window state <define>EDOC_WINDOW_STATE</define>
+                        var int   // Docked or floating <define>EDOC_WINDOW_POSITION</define>
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetWindowPosition_EDOC   Get the map window's position and dock state
+//
+// Returns                  Nothing
+//
+// Available                9.0.0
+//
+
+[_public_app] void
+SetWindowPosition_EDOC (
+                        EDOC,  // EDOC
+                        int,   // Window left position
+                        int,   // Window top position
+                        int,   // Window right position
+                        int,   // Window bottom position
+                        int,   // Window state <define>EDOC_WINDOW_STATE</define>
+                        int    // Docked or floating <define>EDOC_WINDOW_POSITION</define>
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iReadOnly_EDOC   Checks if a document is currently opened in a read-only mode.
+//
+// Returns          <define>GEO_BOOL</define>
+//
+// Available        5.0.0
+//
+
+[_public_app] int
+iReadOnly_EDOC (
+                EDOC   // EDOC
+                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Load_EDOC   Loads a list of documents into the workspace
+//
+// Returns     Handle to current edited document, which will be the last
+//             document in the list.
+//
+// Notes       The last listed document will become the current document.
+//             
+//             Only the first file in the list may have a directory path.
+//             All other files in the list are assumed to be in the same
+//             directory as the first file.
+//
+// Available   5.0.0
+//
+
+[_public_app] EDOC
+Load_EDOC (
+           string,  // list of documents (';' or '|' delimited) to load.
+           int      // <define>EDOC_TYPE</define>
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// LoadNoActivate_EDOC   Loads a list of documents into the workspace
+//
+// Returns               Handle to current edited document, which will be the last
+//                       document in the list.
+//
+// Notes                 This function acts just like Load_EDOC except that the document(s) is not activated (brought to foreground) and no
+//                       guarantee is given about which document is currently active.
+//
+// Available             9.0.0
+//
+
+[_public_app] EDOC
+LoadNoActivate_EDOC (
+                     string,  // list of documents (';' or '|' delimited) to load.
+                     int      // <define>EDOC_TYPE</define>
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// MakeCurrent_EDOC   Makes this EDOC object the current active object to the user.
+//
+// Returns            Nothing
+//
+// Available          5.0.0
+//
+
+[_public_app] void
+MakeCurrent_EDOC (
+                  EDOC   // EDOC to make active
+                  );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetWindowState_EDOC   Changes the state of the document window
+//
+// Returns               Nothing
+//
+// Available             5.0.0
+//
+
+[_public_app] void
+SetWindowState_EDOC (
+                     EDOC,  // EDOC
+                     int    // <define>EDOC_WINDOW_STATE</define>
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Sync_EDOC   Syncronize the Metadata of a document that is not currently open
+//
+// Returns     Nothing
+//
+// Available   5.0.0
+//
+
+[_public_app] void
+Sync_EDOC (
+           string,  // Document file name
+           int      // <define>EDOC_TYPE</define>
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SyncOpen_EDOC   Syncronize the Metadata of a document
+//
+// Returns         Nothing
+//
+// Available       5.0.0
+//
+
+[_public_app] void
+SyncOpen_EDOC (
+               EDOC   // EDOC
+               );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoad_EDOC   Unloads an edited document.
+//
+// Returns       Nothing
+//
+// Notes         If the document is not loaded, nothing happens.
+//               Same as UnLoadVerify_EDOC with FALSE to prompt save.
+//
+// Available     5.0.0
+//
+
+[_public_app] void
+UnLoad_EDOC (
+             string,  // Name of document to unload
+             int      // <define>EDOC_TYPE</define>
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoadAll_EDOC   Unloads all opened documents
+//
+// Returns          Nothing
+//
+// Available        5.0.0
+//
+
+[_public_app] void
+UnLoadAll_EDOC (
+                int   // <define>EDOC_TYPE</define>
+                );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoadDiscard_EDOC   Unloads a document in the workspace, discards changes.
+//
+// Returns              Nothing
+//
+// Notes                If the document is not loaded, nothing happens.
+//
+// Available            5.0.0
+//
+
+[_public_app] void
+UnLoadDiscard_EDOC (
+                    string,  // Name of document to unload
+                    int      // <define>EDOC_TYPE</define>
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UnLoadVerify_EDOC   Unloads an edited document, optional prompt to save.
+//
+// Returns             Nothing
+//
+// Notes               If the document is not loaded, nothing happens.
+//                     The user can be prompted to save before unloading.
+//                     If EDOC_UNLOAD_NO_PROMPT, data is always saved.
+//
+// Available           5.0.0
+//
+
+[_public_app] void
+UnLoadVerify_EDOC (
+                   string,  // Name of document to unload
+                   int,     // <define>EDOC_UNLOAD</define>
+                   int      // <define>EDOC_TYPE</define>
+                   );
+
+
+
+
+//===========================================================================================================
+// Group GMSYS 3D Models
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateNewGMS3D_EDOC   Creates a new GMSYS 3D Model into the workspace, flags as new.
+//
+// Returns               Handle to the newly created edited model.
+//
+// Notes                 See Load_EDOC. This is used for brand new documents, it also sets
+//                       an internal flag such that if on closing the user chooses
+//                       not to save changes, the document is deleted thus keeping the
+//                       project folders clean.
+//
+// Available             5.0.0
+//
+
+[_extended_app] EDOC
+CreateNewGMS3D_EDOC (
+                     string,  // Document to load.
+                     int,     // X Size
+                     int,     // Y Size
+                     int      // <define>GMS3D_MODELTYPE</define>
+                     );
+
+
+
+
+
+#endif
+

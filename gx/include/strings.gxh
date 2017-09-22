@@ -1,0 +1,36 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The STRINGS class is used for displaying digitization tools for interpretations
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef STRINGS_GXH_DEFINED
+#define STRINGS_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// LaunchDigitizationUI_STRINGS   Launch Digitization modeless window
+//
+// Returns                        Nothing
+//
+// Available                      7.5.0
+//
+
+[_public] void
+LaunchDigitizationUI_STRINGS (
+                              string,  // string file
+                              string   // definition guid
+                              );
+
+
+
+
+
+#endif
+

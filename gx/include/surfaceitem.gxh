@@ -1,0 +1,393 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 
+// The SURFACEITEM allows you to create, read and alter Geosurface files (*.geosoft_surface).
+// A Geosurface file can contain one or more surface items (see SURFACE class). A surface item can
+// contains one or more triangular polyhedral meshes.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef SURFACEITEM_GXH_DEFINED
+#define SURFACEITEM_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	SURFACERENDER_MODE
+//
+// Open Modes
+//
+// SURFACERENDER_SMOOTH
+// SURFACERENDER_FILL
+// SURFACERENDER_EDGES
+//
+//===========================================================================================================
+
+#define SURFACERENDER_SMOOTH    0
+#define SURFACERENDER_FILL      1
+#define SURFACERENDER_EDGES     2
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_SURFACEITEM   Create a SURFACEITEM
+//
+// Returns              SURFACEITEM Object
+//
+// See also             SetProperties_SURFACEITEM and SetDefaultRenderProperties_SURFACEITEM
+//
+// Available            8.4.0
+//
+
+[_public] SURFACEITEM
+Create_SURFACEITEM (
+                    string,  // Type
+                    string   // Name
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_SURFACEITEM   Destroy the SURFACEITEM Object.
+//
+// Returns               Nothing
+//
+// Available             8.4.0
+//
+
+[_public] void
+Destroy_SURFACEITEM (
+                     SURFACEITEM   // SURFACEITEM Object
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetGUID_SURFACEITEM   Gets the GUID of the surface item.
+//
+// Returns               Nothing
+//
+// Notes                 The value returned by this call will not be valid for newly created items until after a call to AddSurfaceItem_SURFACE.
+//
+// Available             8.4.0
+//
+
+[_public] void
+GetGUID_SURFACEITEM (
+                     SURFACEITEM,  // SURFACEITEM Object
+                     var string,   // GUID
+                     int           // Size of GUID buffer.
+                     );
+
+#define _GetGUID_SURFACEITEM(A, B) GetGUID_SURFACEITEM(A, B, sizeof(B))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetProperties_SURFACEITEM   Sets the properties of the surface item.
+//
+// Returns                     Nothing
+//
+// See also                    GenerateGUID_SYS
+//
+// Available                   8.4.0
+//
+
+[_public] void
+SetProperties_SURFACEITEM (
+                           SURFACEITEM,  // SURFACEITEM Object
+                           string,       // Type
+                           string,       // Name
+                           string,       // SourceGuid
+                           string,       // SourceName
+                           real,         // SourceMeasure
+                           string,       // SecondarySourceGuid
+                           string,       // SecondarySourceName
+                           real          // SecondarySourceMeasure
+                           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetPropertiesEx_SURFACEITEM   Sets the properties of the surface item (includes new properties introduced in 8.5).
+//
+// Returns                       Nothing
+//
+// See also                      GenerateGUID_SYS
+//
+// Available                     8.5.0
+//
+
+[_public] void
+SetPropertiesEx_SURFACEITEM (
+                             SURFACEITEM,  // SURFACEITEM Object
+                             string,       // Type
+                             string,       // Name
+                             string,       // SourceGuid
+                             string,       // SourceName
+                             real,         // SourceMeasure
+                             string,       // SecondarySourceGuid
+                             string,       // SecondarySourceName
+                             int,          // SecondarySourceOption
+                             real,         // SecondarySourceMeasure
+                             real          // SecondarySourceMeasure2
+                             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetProperties_SURFACEITEM   Gets the properties of the surface item.
+//
+// Returns                     Nothing
+//
+// Available                   8.4.0
+//
+
+[_public] void
+GetProperties_SURFACEITEM (
+                           SURFACEITEM,  // SURFACEITEM Object
+                           var string,   // Type
+                           int,          // Size of Type buffer.
+                           var string,   // Name
+                           int,          // Size of Name buffer.
+                           var string,   // SourceGuid
+                           int,          // Size of SourceGuid buffer.
+                           var string,   // SourceName
+                           int,          // Size of SourceName buffer.
+                           var real,     // SourceMeasure
+                           var string,   // SecondarySourceGuid
+                           int,          // Size of SecondarySourceGuid buffer.
+                           var string,   // SecondarySourceName
+                           int,          // Size of SecondarySourceName buffer.
+                           var real      // SecondarySourceMeasure
+                           );
+
+#define _GetProperties_SURFACEITEM(A, B, C, D, E, F, G, H, I) GetProperties_SURFACEITEM(A, B, sizeof(B), C, sizeof(C), D, sizeof(D), E, sizeof(E), F, G, sizeof(G), H, sizeof(H), I)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetPropertiesEx_SURFACEITEM   Gets the properties of the surface item  (includes new properties introduced in 8.5).
+//
+// Returns                       Nothing
+//
+// Available                     8.5.0
+//
+
+[_public] void
+GetPropertiesEx_SURFACEITEM (
+                             SURFACEITEM,  // SURFACEITEM Object
+                             var string,   // Type
+                             int,          // Size of Type buffer.
+                             var string,   // Name
+                             int,          // Size of Name buffer.
+                             var string,   // SourceGuid
+                             int,          // Size of SourceGuid buffer.
+                             var string,   // SourceName
+                             int,          // Size of SourceName buffer.
+                             var real,     // SourceMeasure
+                             var string,   // SecondarySourceGuid
+                             int,          // Size of SecondarySourceGuid buffer.
+                             var string,   // SecondarySourceName
+                             int,          // Size of SecondarySourceName buffer.
+                             var int,      // SecondarySourceOption
+                             var real,     // SecondarySourceMeasure
+                             var real      // SecondarySourceMeasure2
+                             );
+
+#define _GetPropertiesEx_SURFACEITEM(A, B, C, D, E, F, G, H, I, J, K) GetPropertiesEx_SURFACEITEM(A, B, sizeof(B), C, sizeof(C), D, sizeof(D), E, sizeof(E), F, G, sizeof(G), H, sizeof(H), I, J, K)
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetDefaultRenderProperties_SURFACEITEM   Sets default render properties of the surface item.
+//
+// Returns                                  Nothing
+//
+// See also                                 iColor_MVIEW
+//
+// Available                                8.4.0
+//
+
+[_public] void
+SetDefaultRenderProperties_SURFACEITEM (
+                                        SURFACEITEM,  // SURFACEITEM Object
+                                        int,          // Color
+                                        real,         // Transparency
+                                        int           // <define>SURFACERENDER_MODE</define>
+                                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetDefaultRenderProperties_SURFACEITEM   Gets default render properties of the surface item.
+//
+// Returns                                  Nothing
+//
+// See also                                 iColor_MVIEW
+//
+// Available                                8.4.0
+//
+
+[_public] void
+GetDefaultRenderProperties_SURFACEITEM (
+                                        SURFACEITEM,  // SURFACEITEM Object
+                                        var int,      // Color
+                                        var real,     // Transparency
+                                        var int       // <define>SURFACERENDER_MODE</define>
+                                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iNumComponents_SURFACEITEM   Get the number of components in the surface item.
+//
+// Returns                      Number of components in the surface item.
+//
+// Available                    8.4.0
+//
+
+[_public] int
+iNumComponents_SURFACEITEM (
+                            SURFACEITEM   // SURFACEITEM Object
+                            );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iAddMesh_SURFACEITEM   Adds a triangular polyhedral mesh component to the surface item.
+//
+// Returns                The index of the component added.
+//
+// Available              8.4.0
+//
+
+[_public] int
+iAddMesh_SURFACEITEM (
+                      SURFACEITEM,  // SURFACEITEM Object
+                      VV,           // Vertices X location
+                      VV,           // Vertices Y location
+                      VV,           // Vertices Z location
+                      VV,           // Triangles 1st Vertex
+                      VV,           // Triangles 2nd Vertex
+                      VV            // Triangles 3rd Vertex
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetMesh_SURFACEITEM   Gets a triangular polyhedral mesh of a component in the surface item.
+//
+// Returns               Nothing
+//
+// Available             8.4.0
+//
+
+[_public] void
+GetMesh_SURFACEITEM (
+                     SURFACEITEM,  // SURFACEITEM Object
+                     int,          // Index of the component
+                     VV,           // Vertices X
+                     VV,           // Vertices Y
+                     VV,           // Vertices Z
+                     VV,           // Triangles 1st Vertex
+                     VV,           // Triangles 2nd Vertex
+                     VV            // Triangles 3rd Vertex
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetExtents_SURFACEITEM   Get the spatial range of the the surface item.
+//
+// Returns                  Nothing
+//
+// Available                8.5.0
+//
+
+[_public] void
+GetExtents_SURFACEITEM (
+                        SURFACEITEM,  // SURFACEITEM object
+                        var real,     // Minimum valid data in X.
+                        var real,     // Minimum valid data in Y.
+                        var real,     // Minimum valid data in Z.
+                        var real,     // Maximum valid data in X.
+                        var real,     // Maximum valid data in Y.
+                        var real      // Maximum valid data in Z.
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetMeshInfo_SURFACEITEM   Gets information about a triangular polyhedral mesh component in the surface item.
+//
+// Returns                   Nothing
+//
+// Available                 8.4.0
+//
+
+[_public] void
+GetMeshInfo_SURFACEITEM (
+                         SURFACEITEM,  // SURFACEITEM Object
+                         int,          // Index of the component
+                         var int,      // <define>GEO_BOOL</define> indicating if mesh is closed
+                         var int,      // number of inner components
+                         var real,     // Area
+                         var real,     // Volume
+                         var real      // Volume confidence interval
+                         );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetInfo_SURFACEITEM   Gets information about the surface item.
+//
+// Returns               Nothing
+//
+// Available             8.5.0
+//
+
+[_public] void
+GetInfo_SURFACEITEM (
+                     SURFACEITEM,  // SURFACEITEM Object
+                     var int,      // <define>GEO_BOOL</define> indicating if all meshes in item is closed
+                     var real,     // Area
+                     var real,     // Volume
+                     var real      // Volume confidence interval
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetGeometryInfo_SURFACEITEM   Get the total number of vertices and triangles of all mesh components in item.
+//
+// Returns                       Nothing
+//
+// Available                     8.5.0
+//
+
+[_public] void
+GetGeometryInfo_SURFACEITEM (
+                             SURFACEITEM,  // SURFACEITEM Object
+                             var int,      // Total number of vertices
+                             var int       // Total number of triangles
+                             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ComputeExtendedInfo_SURFACEITEM   Compute more information (including validation) about of all mesh components in the surface item.
+//
+// Returns                           Nothing
+//
+// Available                         8.5.0
+//
+
+[_public] void
+ComputeExtendedInfo_SURFACEITEM (
+                                 SURFACEITEM,  // SURFACEITEM Object
+                                 var int,      // Number of inner components (recomputed)
+                                 var int,      // Total number of valid vertices
+                                 var int,      // Total number of valid edges
+                                 var int,      // Total number of valid triangles
+                                 var int,      // Number of inconsistent triangles
+                                 var int,      // Number of invalid triangles
+                                 var int       // Number of self intersections
+                                 );
+
+
+
+
+
+#endif
+

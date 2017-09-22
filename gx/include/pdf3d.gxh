@@ -1,0 +1,74 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The PDF3D class provides the ability to create 3D PDFs.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef PDF3D_GXH_DEFINED
+#define PDF3D_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// Render_PDF3D   Render a voxel, voxsurf and/or gensurf to pdf
+//
+// Returns        Nothing
+//
+// Available      6.4.2
+//
+
+[_public] void
+Render_PDF3D (
+              MVIEW,   // MVIEW handle
+              string,  // filename
+              int,     // resolution
+              int      // noclipping
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// RenderToPage_PDF3D   Render a voxel, voxsurf and/or gensurf to a specified page on a pdf
+//
+// Returns              Nothing
+//
+// Available            7.1.0
+//
+
+[_public] void
+RenderToPage_PDF3D (
+                    MVIEW,   // MVIEW handle
+                    string,  // filename
+                    int,     // page number
+                    int,     // resolution
+                    int      // noclipping
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Export2D_PDF3D   Export a 2D map to a PDF file.
+//
+// Returns          Nothing
+//
+// Available        8.5.0
+//
+
+[_public] void
+Export2D_PDF3D (
+                string,  // Input map file
+                string,  // Output PDF file
+                int,     // Create layers in PDF
+                int,     // Geospatial PDF
+                int      // Open PDF after export
+                );
+
+
+
+
+
+#endif
+

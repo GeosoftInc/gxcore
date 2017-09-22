@@ -1,0 +1,82 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// The IEXP class is similar to the EXP class, but is used
+// to apply math expressions to grids (IMG objects).
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef IEXP_GXH_DEFINED
+#define IEXP_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// AddGrid_IEXP   This method adds an image to the IEXP object with a
+//                variable name.
+//
+// Returns        Nothing
+//
+// Available      5.0.0
+//
+
+[_licensed] void
+AddGrid_IEXP (
+              IEXP,    // IEXP object
+              IMG,     // Image to add
+              string   // Variable name
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_IEXP   This method creates an IEXP object.
+//
+// Returns       IEXP Object
+//
+// Available     5.0.0
+//
+
+[_licensed] IEXP
+Create_IEXP (
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_IEXP   This method destroys a IEXP object.
+//
+// Returns        Nothing
+//
+// Available      5.0.0
+//
+
+[_public] void
+Destroy_IEXP (
+              IEXP   // Destroy a IEXP object
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// DoFormula_IEXP   This method runs a formula on the grids.
+//
+// Returns          Nothing
+//
+// Available        5.0.0
+//
+
+[_licensed] void
+DoFormula_IEXP (
+                IEXP,    // IEXP object
+                string,  // Formula
+                int      // Max. Buff size
+                );
+
+
+
+
+
+#endif
+

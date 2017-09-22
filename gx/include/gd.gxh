@@ -1,0 +1,69 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// This class provides access to Geosoft grid files using an old interface.
+// Only the SampleGD_DU function uses this class.  Use the IMG class
+// instead.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef GD_GXH_DEFINED
+#define GD_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	GD_STATUS
+//
+// Grid open mode
+//
+// GD_STATUS_READONLY
+// GD_STATUS_NEW
+// GD_STATUS_OLD
+//
+//===========================================================================================================
+
+#define GD_STATUS_READONLY    0
+#define GD_STATUS_NEW         1
+#define GD_STATUS_OLD         2
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_GD   This method creates a GD object.
+//
+// Returns     Handle to the GD object
+//
+// Available   5.0.0
+//
+
+[_public] GD
+Create_GD (
+           string,  // Name of the Grid File
+           int      // <define>GD_STATUS</define>
+           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_GD   This method destroys a GD object.
+//
+// Returns      Nothing
+//
+// Available    5.0.0
+//
+
+[_public] void
+Destroy_GD (
+            GD   // Destroy a grid object
+            );
+
+
+
+
+
+#endif
+

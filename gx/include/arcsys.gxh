@@ -1,0 +1,79 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// This library is not a class. It contains various general
+// system utilities used by the Geosoft extensions for ArcGIS.
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef ARCSYS_GXH_DEFINED
+#define ARCSYS_GXH_DEFINED
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetBrowseLoc_ARCSYS   Get the current catalog browser location in ArcGIS
+//
+// Returns                Nothing
+//
+// Notes                  Gets the "local" directory (current catalog browser location in ArcGIS if map has not been saved,
+//                        otherwise MxD path). We cannot mess with the CWD in ArcGIS because there MxD settings for
+//                        relative/absolute paths depends on it.
+//
+// Available              8.0.0
+//
+
+[_public] void
+IGetBrowseLoc_ARCSYS (
+                      var string,  // Path String
+                      int          // Size of path string
+                      );
+
+#define GetBrowseLoc_ARCSYS(A) IGetBrowseLoc_ARCSYS(A, sizeof(A))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// IGetCurrentDoc_ARCSYS   Get the current Mx Document file name
+//
+// Returns                 Nothing
+//
+// Notes                   If the current document is not yet saved, this will return an empty string.
+//
+// Available               8.0.0
+//
+
+[_public] void
+IGetCurrentDoc_ARCSYS (
+                       var string,  // Path String
+                       int          // Size of path string
+                       );
+
+#define GetCurrentDoc_ARCSYS(A) IGetCurrentDoc_ARCSYS(A, sizeof(A))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// SetBrowseLoc_ARCSYS   Set the current catalog browser location in ArcGIS
+//
+// Returns               Nothing
+//
+// Notes                 Will also set the current working directory (CWD) if the MxD has not been saved.
+//                       We cannot mess with the CWD in ArcGIS because their MxD settings for relative/absolute paths depends on it.
+//
+// Available             8.0.0
+//
+
+[_public] void
+SetBrowseLoc_ARCSYS (
+                     string   // Path String
+                     );
+
+
+
+
+
+#endif
+

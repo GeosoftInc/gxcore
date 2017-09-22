@@ -1,0 +1,221 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 
+// A MAPTEMPLATE wraps and provides manipulation and usage for the XML content in map template files.
+// See the annotated schema file maptemplate.xsd in the <GEOSOFT>\maptemplate folder and the accompanying
+// documentation in that folder for documentation on the file format.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef MAPTEMPLATE_GXH_DEFINED
+#define MAPTEMPLATE_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	MAPTEMPLATE_OPEN
+//
+// Open Modes
+//
+// MAPTEMPLATE_WRITENEW   Create new empty map template (will overwrite existing files)
+// MAPTEMPLATE_EXIST      Create from existing template on disk
+//
+//===========================================================================================================
+
+#define MAPTEMPLATE_WRITENEW    0
+#define MAPTEMPLATE_EXIST       1
+
+
+//===========================================================================================================
+// Group Content Manipulation Methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// GetTmpCopy_MAPTEMPLATE   Get a temporary XML file for manipulation of the map template.
+//
+// Returns                  Nothing
+//
+// Notes                    
+//                          After manipulating contents the object may be updated by a call to
+//                          the UpdateFromTmpCopy method.
+//                          
+//
+// Available                6.3.0
+//
+
+[_licensed] void
+GetTmpCopy_MAPTEMPLATE (
+                        MAPTEMPLATE,  // MAPTEMPLATE
+                        var string,   // returned temporary map template file name
+                        int           // size of file name string
+                        );
+
+#define _GetTmpCopy_MAPTEMPLATE(A, B) GetTmpCopy_MAPTEMPLATE(A, B, sizeof(B))
+
+
+//-----------------------------------------------------------------------------------------------------------
+// UpdateFromTmpCopy_MAPTEMPLATE   Update the object contents from a temporary XML file that may have bee manipulated externally.
+//
+// Returns                         Nothing
+//
+// Notes                           
+//                                 This method will not modify the original contents of the file until a call to the
+//                                 the Commit method is made or the object is destroyed. A call to the Discard method
+//                                 will restore the contents to that of the original file. The temporary file is not deleted
+//                                 and should be to not leak file resources.
+//                                 
+//
+// Available                       6.3.0
+//
+
+[_licensed] void
+UpdateFromTmpCopy_MAPTEMPLATE (
+                               MAPTEMPLATE,  // MAPTEMPLATE
+                               string        // Temporary map template file name
+                               );
+
+
+
+
+//===========================================================================================================
+// Group File Methods
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// Commit_MAPTEMPLATE   Commit any changes to the map template to disk
+//
+// Returns              Nothing
+//
+// Available            6.3.0
+//
+
+[_licensed] void
+Commit_MAPTEMPLATE (
+                    MAPTEMPLATE   // MAPTEMPLATE
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_MAPTEMPLATE   Create a MAPTEMPLATE from an existing file.
+//
+// Returns              MAPTEMPLATE Object
+//
+// Notes                
+//                      The base template name should be the file name part of a geosoft_maptemplate
+//                      file in the <geosoft>\maptemplate or <geosoftuser>\maptemplate folders. A base file
+//                      in the user folder will override any in the Geosoft install dir.
+//                      
+//
+// Available            6.3.0
+//
+
+[_public] MAPTEMPLATE
+Create_MAPTEMPLATE (
+                    string,  // Map Template file name
+                    string,  // Map Template base template to create from
+                    int      // <define>MAPTEMPLATE_OPEN</define>
+                    );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_MAPTEMPLATE   Destroy the MAPTEMPLATE handle.
+//
+// Returns               Nothing
+//
+// Notes                 All changes to the MAPTEMPLATE will be committed if it is not read-only.
+//
+// Available             6.3.0
+//
+
+[_public] void
+Destroy_MAPTEMPLATE (
+                     MAPTEMPLATE   // MAPTEMPLATE Handle
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Discard_MAPTEMPLATE   Discard all changes made to the map template and reload from disk.
+//
+// Returns               Nothing
+//
+// Available             6.3.0
+//
+
+[_licensed] void
+Discard_MAPTEMPLATE (
+                     MAPTEMPLATE   // MAPTEMPLATE
+                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// GetFileName_MAPTEMPLATE   Get the file name of the map template.
+//
+// Returns                   Nothing
+//
+// Available                 6.3.0
+//
+
+[_licensed] void
+GetFileName_MAPTEMPLATE (
+                         MAPTEMPLATE,  // MAPTEMPLATE
+                         var string,   // returned map template file name
+                         int           // size of file name string
+                         );
+
+#define _GetFileName_MAPTEMPLATE(A, B) GetFileName_MAPTEMPLATE(A, B, sizeof(B))
+
+
+
+
+//===========================================================================================================
+// Group Map Making
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// CreateMap_MAPTEMPLATE   Create a map from the map template
+//
+// Returns                 Nothing
+//
+// Available               6.3.0
+//
+
+[_licensed] void
+CreateMap_MAPTEMPLATE (
+                       MAPTEMPLATE,  // MAPTEMPLATE Handle
+                       string,       // New map file name (if it exists it will be overwritten)
+                       string        // Group name to use for settings
+                       );
+
+
+
+
+//===========================================================================================================
+// Group Render/Preview
+//===========================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// Refresh_MAPTEMPLATE   Refresh the map template with any newly saved items
+//
+// Returns               Nothing
+//
+// Available             7.0.0
+//
+
+[_licensed] void
+Refresh_MAPTEMPLATE (
+                     MAPTEMPLATE   // MAPTEMPLATE Handle
+                     );
+
+
+
+
+
+#endif
+

@@ -1,0 +1,128 @@
+//===========================================================================================================
+//
+// Class	
+//
+//-----------------------------------------------------------------------------------------------------------
+// Description
+//
+// 
+// VOX evaluator class. Used to sample values from
+// the voxel.
+// 
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+#ifndef VOXE_GXH_DEFINED
+#define VOXE_GXH_DEFINED
+
+//===========================================================================================================
+//
+// Define	VOXE_EVAL
+//
+// Voxel Evaluation modes
+//
+// VOXE_EVAL_NEAR     Nearest value
+// VOXE_EVAL_INTERP   Linear Interpolation
+// VOXE_EVAL_BEST     Best Interpolation
+//
+//===========================================================================================================
+
+#define VOXE_EVAL_NEAR      0
+#define VOXE_EVAL_INTERP    1
+#define VOXE_EVAL_BEST      2
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Create_VOXE   Create a handle to an VOXE object
+//
+// Returns       VOXE handle, terminates if creation fails
+//
+// Available     6.3.0
+//
+
+[_licensed] VOXE
+Create_VOXE (
+             VOX   // VOX Object
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Destroy_VOXE   Destroy a VOXE.
+//
+// Returns        Nothing
+//
+// Available      6.3.0
+//
+
+[_public] void
+Destroy_VOXE (
+              VOXE   // VOXE to destroy.
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Profile_VOXE   Extract a profile of data along points provided.
+//
+// Returns        Nothing
+//
+// Available      6.3.0
+//
+
+[_licensed] void
+Profile_VOXE (
+              VOXE,  // VOXE object
+              VV,    // X VV (must be double)
+              VV,    // Y VV (must be double)
+              VV,    // Z VV (must be double)
+              VV,    // D VV (must be double)
+              int    // <define>VOXE_EVAL</define>
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// rValue_VOXE   Get a value at a specific point
+//
+// Returns       Value at the point or DUMMY if not valid
+//
+// Available     6.3.0
+//
+
+[_licensed] real
+rValue_VOXE (
+             VOXE,  // VOXE object
+             real,  // X Location
+             real,  // Y Location
+             real,  // Z Location
+             int    // <define>VOXE_EVAL</define>
+             );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// Vector_VOXE   Extract a profile of data along a vector
+//
+// Returns       Nothing
+//
+// Available     6.3.0
+//
+
+[_licensed] void
+Vector_VOXE (
+             VOXE,  // VOXE object
+             real,  // X Origin
+             real,  // Y Origin
+             real,  // Z Origin
+             real,  // X Delta
+             real,  // Y Delta
+             real,  // Z Delta
+             VV,    // Data VV (must be double)
+             int    // <define>VOXE_EVAL</define>
+             );
+
+
+
+
+
+#endif
+
