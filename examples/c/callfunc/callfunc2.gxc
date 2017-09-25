@@ -1,0 +1,32 @@
+NAME = "Test2: Test the callfunc DLL"
+VERSION = "1"
+DESCRIPTION = "Does nothing"
+
+#include "all.gxh"
+#include "callfunc.gxh"
+
+int iSum;
+{
+   // --- Test Code ---   
+
+   SetString_SYS("SUM","A","3");
+   SetString_SYS("SUM","B","9");
+   iSum = iSumAandB_CALLFUNC();
+   if (iSum !=  12)
+      Abort_SYS("there is an error in iSumAandB_CALLFUNC");
+   else   
+      DisplayMessage_SYS("test2","Everything OK");
+      
+   // --- Test Error Code ---   
+      
+   SetString_SYS("SUM","B","");  // Remove setting
+   iSum = iSumAandB_CALLFUNC();
+   if (iSum !=  12)
+      DisplayMessage_SYS("test2","Error occured as planned.");
+   else   
+      DisplayMessage_SYS("test2","Error code did not work");
+      
+   // --- Test APP function ---
+   
+   ShowMessage_CALLFUNC();
+}

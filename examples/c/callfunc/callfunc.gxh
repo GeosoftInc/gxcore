@@ -1,0 +1,58 @@
+// --- these lines prevent this file from being included twice ---
+
+#ifndef CALLFUNC_DEFINED
+#define CALLFUNC_DEFINED
+
+
+
+// --- CALLFUNC 1 ---
+
+//----------------------------------------------------------
+// iSum_CALLFUNC    Return the sum of two numbers
+
+[callfunc] // --- this is the name of the DLL (callfunc.dll) ---
+int iSum_CALLFUNC( int,      // first number
+                   int );    // second number
+
+//----------------------------------------------------------
+// Sum_CALLFUNC     Sum two numbers
+
+[callfunc] // --- this is the name of the DLL ---
+void Sum_CALLFUNC( int,     // first number
+                   int,     // second number
+               var int);    // returned result of first+second.
+                            // The "var" attribute identifies the argument
+                            // as a variable that will be changed by the
+                            // called function.  The compiler will not let
+                            // you pass a constant to a "var" argument.
+
+
+//----------------------------------------------------------
+// ChanBase_CALLFUNC   Add a base value to a named channel.
+
+[callfunc]               // name of the DLL
+void ChanBase_CALLFUNC( 
+                       DB,      // database
+                       string,  // channel name (must exist)
+                       real);   // base value to add
+
+
+
+
+
+// --- CALLFUNC 2 ---
+
+//----------------------------------------------------------
+// iSumAandB_CALLFUNC     Sum two numbers using geosoft code.
+
+[callfunc] // --- this is the name of the DLL ---
+int iSumAandB_CALLFUNC();       // Numbers set in geosoft
+
+
+//----------------------------------------------------------
+// ShowMessage_CALLFUNC   Call DisplayMessage APP Function
+
+[callfunc] // --- this is the name of the DLL ---
+void ShowMessage_CALLFUNC();       // Numbers set in geosoft
+
+#endif

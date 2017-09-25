@@ -1,0 +1,51 @@
+NAME = "Test1: Test the callfunc DLL"
+VERSION = "1"
+DESCRIPTION = "Does nothing"
+
+#include "all.gxh"
+#include "callfunc.gxh"
+
+int iVal1,iVal2,iSum;
+
+EDB eDB;
+DB  hDB;
+
+{
+   iVal1 = 1;
+   iVal2 = 2;
+
+   // --- test iSum_CALLFUNC ---
+   
+   if (iSum_CALLFUNC(iVal1,iVal2) !=  3)
+      Abort_SYS("there is an error in iSum_CALLFUNC");
+
+
+   // --- test Sum_CALLFUNC ---
+   
+   iSum = iDUMMY;	// initialized to prevent compiler warning
+   Sum_CALLFUNC(iVal1,iVal2,iSum);
+   if (iSum !=  3)
+      Abort_SYS("there is an error in Sum_CALLFUNC");
+      
+      
+   // --- test ChanBase_CALLFUNC - needs a current database with "Test" channel ---
+   
+   if (iHaveCurrent_EDB()) {
+   
+      eDB = Current_EDB();
+      hDB = Lock_EDB(eDB);
+      
+      // --- add 100 to the "Test" channel ---
+      
+      ChanBase_CALLFUNC(hDB,"Test",100.0);
+      
+      UnLock_EDB(eDB);
+   
+   }
+   
+   
+   // --- if we got here, everything is OK ---
+      
+   DisplayMessage_SYS("test","Everything OK");
+   
+}
