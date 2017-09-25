@@ -546,6 +546,10 @@
 #define FILE_FILTER_P190                       121
 #define FILE_FILTER_UBC_OBS_DAT                122
 #define FILE_FILTER_UBC_LOC                    123
+#define FILE_FILTER_UBC_MOD                    124
+#define FILE_FILTER_UBC_DEN                    125
+#define FILE_FILTER_UBC_SUS                    126
+#define FILE_FILTER_GOCAD_VOXET                127
 #define FILE_FORM_OPEN    0
 #define FILE_FORM_SAVE    1
 #define GS_DIRECTORY_NONE                 0

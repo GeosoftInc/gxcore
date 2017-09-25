@@ -226,6 +226,10 @@
 // FILE_FILTER_P190                      UKOOA data exchange file  *.p190  LOCAL
 // FILE_FILTER_UBC_OBS_DAT               UBC observation files *.dat		LOCAL
 // FILE_FILTER_UBC_LOC                   UBC location files *.loc		LOCAL
+// FILE_FILTER_UBC_MOD                   UBC model files *.mod		LOCAL
+// FILE_FILTER_UBC_DEN                   UBC density model files *.den		LOCAL
+// FILE_FILTER_UBC_SUS                   UBC susceptibility model files *.sus		LOCAL
+// FILE_FILTER_GOCAD_VOXET               GOCAD voxet files *.vo		LOCAL
 //
 //===========================================================================================================
 
@@ -352,6 +356,10 @@
 #define FILE_FILTER_P190                       121
 #define FILE_FILTER_UBC_OBS_DAT                122
 #define FILE_FILTER_UBC_LOC                    123
+#define FILE_FILTER_UBC_MOD                    124
+#define FILE_FILTER_UBC_DEN                    125
+#define FILE_FILTER_UBC_SUS                    126
+#define FILE_FILTER_GOCAD_VOXET                127
 
 
 //===========================================================================================================

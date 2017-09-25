@@ -938,7 +938,11 @@ namespace geosoft
                 FILE_FILTER_VAR = 120,
                 FILE_FILTER_P190 = 121,
                 FILE_FILTER_UBC_OBS_DAT = 122,
-                FILE_FILTER_UBC_LOC = 123
+                FILE_FILTER_UBC_LOC = 123,
+                FILE_FILTER_UBC_MOD = 124,
+                FILE_FILTER_UBC_DEN = 125,
+                FILE_FILTER_UBC_SUS = 126,
+                FILE_FILTER_GOCAD_VOXET = 127
             };
 
             enum FILE_FORM
@@ -31924,7 +31928,7 @@ namespace geosoft
                     iSetData_VV(gx_->pGeo, reinterpret_cast<const long*>(&handle_), start, (long)elements, contig_np_array.get_data(), gs_type);
                     gx_->throw_on_error();
 #else
-                    iSetData_VV(gx_->pGeo, reinterpret_cast<const long*>(&handle_), start, data.size(), data.data(), gs_cpp_type<T>::type());
+                    iSetData_VV(gx_->pGeo, reinterpret_cast<const long*>(&handle_), start, static_cast<long>(data.size()), data.data(), gs_cpp_type<T>::type());
                     gx_->throw_on_error();
 #endif
 
