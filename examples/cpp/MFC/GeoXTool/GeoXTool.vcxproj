@@ -11,20 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FCF17F29-0118-4CFC-9AB6-DFFA4419B074}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{B3BE3960-272E-4A0B-B788-836811C3E6D3}</ProjectGuid>
+    <RootNamespace>GeoXTool</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
     <PlatformToolset>$(VCPlatformToolset)</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>$(VCPlatformToolset)</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -51,78 +54,111 @@
     <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
     <ClCompile>
+      <UseFullPaths>true</UseFullPaths>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;C_MICROSOFT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <WarningLevel>Level3</WarningLevel>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
     <Link>
-      <AdditionalDependencies>geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>geogx_u.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
     <ClCompile>
+      <UseFullPaths>true</UseFullPaths>
+      <AdditionalOptions>/Oy- %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;C_MICROSOFT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <WarningLevel>Level3</WarningLevel>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
     <Link>
-      <AdditionalDependencies>geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>geogx_u.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="callfunc.c" />
+    <None Include="res\GeoXTool.rc2" />
+    <CustomBuild Include="rungeoxtool.gxc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+    </CustomBuild>
+    <CustomBuild Include="sendgenmessage.gxc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="callfunc.gxh" />
-    <CustomBuild Include="callfunc1.gxc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
-    </CustomBuild>
-    <CustomBuild Include="callfunc2.gxc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
-    </CustomBuild>
+    <ClCompile Include="mycontrol.cpp" />
+    <ClCompile Include="MyGeoXTool.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mycontrol.h" />
+    <ClInclude Include="MyGeoXTool.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GeoXTool.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

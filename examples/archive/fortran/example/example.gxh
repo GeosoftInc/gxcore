@@ -1,0 +1,28 @@
+//=========================================================================
+//
+// example.gxh - Prototype for wrappers for EXAMPLE "F2C" Fortran subroutines
+//
+// 
+//=========================================================================
+
+#ifndef EXAMPLE_GXH_DEFINED
+#define EXAMPLE_GXH_DEFINED
+
+
+//---------------------------------------------------------------------------
+// YOUR_Example -  Multiply a grid by a factor and create new grid.
+//
+// Returns      Nothing
+//
+// Notes    
+
+#define YOUR_Example(A,B,C) IYOUR_Example(A,sizeof(A),B,sizeof(B),C)
+
+[example] void
+IYOUR_Example(string,   // input file
+              int,      // buff length
+              string,   // output file
+              int,      // buff length
+              real);    // multiplicative factor
+
+#endif

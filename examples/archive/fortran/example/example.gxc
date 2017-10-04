@@ -1,0 +1,99 @@
+//===========================================================================
+NAME          = "FORTRAN Code GX EXAMPLE"
+VERSION       = "v1.00  Copyright Geosoft Inc. 1999"
+DESCRIPTION   = "
+
+      EXAMPLE.IN   Input grid
+             .OUT  Output grid
+
+"
+
+//===========================================================================
+
+RESOURCE = "example.gr"
+#include "example.grh"
+
+//===========================================================================
+
+#include <all.gxh>
+#include "example.gxh"
+
+//===========================================================================
+//                             GLOBAL VARIABLES
+//===========================================================================
+
+DGW        Diag;              // Dialogue handle
+
+real rFactor;
+string(GS_MAX_PATH)  sIn; 
+string(GS_MAX_PATH)  sOut;
+
+//===========================================================================
+//                                    CODE
+//===========================================================================
+
+{
+
+   if (iInteractive_SYS()) {
+
+
+      // --- Create the Dialogue ---
+
+      Diag = Create_DGW("EXAMPLE");
+
+   
+      // --- Set any Defaults from INI ---
+
+      SetInfoSYS_DGW(Diag,_EXAMPLE_0,DGW_FILEPATH,"EXAMPLE","IN");     
+      SetInfoSYS_DGW(Diag,_EXAMPLE_1,DGW_FILEPATH,"EXAMPLE","OUT");     
+      SetInfoSYS_DGW(Diag,_EXAMPLE_2,DGW_TEXT,"EXAMPLE","FACTOR");     
+
+
+      // --- Run the Dialogue ---
+
+      if (iRunDialogue_DGW(Diag) != 0)
+         Cancel_SYS();   
+
+
+      // --- Get the Strings and replace in INI ---
+
+      GetInfoSYS_DGW(Diag,_EXAMPLE_0,DGW_FILEPATH,"EXAMPLE","IN");     
+      GetInfoSYS_DGW(Diag,_EXAMPLE_1,DGW_FILEPATH,"EXAMPLE","OUT");
+      GetInfoSYS_DGW(Diag,_EXAMPLE_2,DGW_TEXT,"EXAMPLE","FACTOR");     
+
+
+      // --- Destroy the Dialogue ---
+
+      Destroy_DGW(Diag);
+
+   }
+
+
+   // --- Get Parameters ---
+
+   GetString_SYS("EXAMPLE","IN",sIn);
+   GetString_SYS("EXAMPLE","OUT",sOut);
+   rFactor = rGetReal_SYS("EXAMPLE","FACTOR");
+
+
+   // --- Check for null input and output file name strings ---
+
+   if(!iStrlen_STR(sIn))
+      Abort_SYS("Input grid not specified");   
+      
+   if(!iStrlen_STR(sOut))
+      Abort_SYS("Output grid not specified"); 
+
+   if(rFactor == rDUMMY)         
+      Abort_SYS("Multiplicative factor not specified.");
+   
+
+   Progress_SYS(1);
+
+   ProgName_SYS("Create multiplied grid...",1); 
+    
+   YOUR_Example(sIn, sOut, rFactor);
+   
+   Progress_SYS(0);
+
+}

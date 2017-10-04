@@ -1,0 +1,13 @@
+//-----------------------------------------------------------------------------
+
+RESOURCE,FORM,EXAMPLE,"Multiply a grid by a factor",-1
+FEDIT,,,20,"Input Grid File",R,OLD,,,*.grd
+FEDIT,,,20,"Output Grid File",R,NEW,,,*.grd
+EDIT,,,20,"Multiplicative Factor",R,REAL,1.0
+
+EBUT,&OK,0
+EBUT,&Cancel,1,CANCEL
+HBUT,&Help,help
+
+RESOURCE,HELP,help,"example.rtf"
+
