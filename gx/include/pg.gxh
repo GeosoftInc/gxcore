@@ -636,7 +636,7 @@ WriteBF_PG (
 //
 // Returns        Nothing
 //
-// Available      9.2.3
+// Available      9.3
 //
 
 [_licensed] void

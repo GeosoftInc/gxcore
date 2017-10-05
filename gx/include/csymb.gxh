@@ -180,6 +180,21 @@ Destroy_CSYMB (
 
 
 //-----------------------------------------------------------------------------------------------------------
+// GetITR_CSYMB   Get the ITR of the CSYMB
+//
+// Returns        Nothing
+//
+// Available      9.3.0
+//
+
+[_public] void
+GetITR_CSYMB (
+              CSYMB,  // CSYMB object
+              ITR     // ITR object
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
 // SetFont_CSYMB   Set the symbol font name.
 //
 // Returns         Nothing

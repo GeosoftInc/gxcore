@@ -84,6 +84,7 @@ typedef DXFI;
 typedef EDB;         
 typedef EDOC;         
 typedef EGRP;
+typedef E3DV;
 typedef EMAP;
 typedef EMAPTEMPLATE;        
 typedef EXP;         

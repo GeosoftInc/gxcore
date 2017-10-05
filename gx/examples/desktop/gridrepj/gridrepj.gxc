@@ -552,7 +552,9 @@ real rNCell;
 			{
 				// --- inherit the projection ---
    
-				CreateProjected_IMG(hOldIMG,hNewIPJ);
+				GetInfo_IMG(hNewIMG, rXd,rYd,rX0,rY0,rRot);
+
+				ReprojectSectionGrid_IPJ(hOldIPJ, hNewIPJ, rX0, rY0, rXd, rYd, rRot);
       
 				ProgName_SYS(sNewGrid,1);
 				Progress_SYS(1);

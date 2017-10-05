@@ -956,6 +956,20 @@ iIs3DView_EMAP (
 
 
 //-----------------------------------------------------------------------------------------------------------
+// GetE3DV_EMAP   Get an E3DV from the EMAP
+//
+// Returns        E3DV object
+//
+// Available      9.3.0
+//
+
+[_public_app] E3DV
+GetE3DV_EMAP (
+              EMAP   // EMAP object
+              );
+
+
+//-----------------------------------------------------------------------------------------------------------
 // iIsLocked_EMAP   Is this Map locked
 //
 // Returns          <define>GEO_BOOL</define>

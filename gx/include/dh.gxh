@@ -1507,25 +1507,27 @@ iModify3dGUI_DH (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iEditSymbolCodesGUI_DH   Edit a symbol color/pattern CSV file
+// iEditClassificationTableFileGUI_DH   Edit a symbol color/pattern CSV file
 //
-// Returns                  0 - Ok
-//                          -1 - User Cancelled
+// Returns                              0 - Ok
+//                                      -1 - User Cancelled
 //
-// Available                9.3.0
+// Available                            9.3.0
 //
 
 [_extended] int
-iEditSymbolCodesGUI_DH (
-                        DH,          // DH Handle
-                        string,      // Channel
-                        var string,  // CSV filename (in/out can be blank)
-                        int,         // CSV filename string size
-                        int          // 0 - Colors and patterns
-//                                   -1 - Colors only
-                        );
+iEditClassificationTableFileGUI_DH (
+                                    DH,          // DH Handle
+                                    string,      // Channel
+                                    var string,  // CSV filename (in/out can be blank)
+                                    int,         // CSV filename string size
+                                    int,         // 0 - Collar Symbols
+//                                               -1 - Rock Patterns
+                                    int          // 0 - Symbols/patterns (2D)
+//                                               -1 - Colors only (3D)
+                                    );
 
-#define _iEditSymbolCodesGUI_DH(A, B, C, D) iEditSymbolCodesGUI_DH(A, B, C, sizeof(C), D)
+#define _iEditClassificationTableFileGUI_DH(A, B, C, D, E) iEditClassificationTableFileGUI_DH(A, B, C, sizeof(C), D, E)
 
 
 //-----------------------------------------------------------------------------------------------------------

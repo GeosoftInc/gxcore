@@ -3545,6 +3545,8 @@ namespace geosoft
             typedef std::shared_ptr<GXDU> GXDUPtr;
             class GXDXFI;
             typedef std::shared_ptr<GXDXFI> GXDXFIPtr;
+            class GXE3DV;
+            typedef std::shared_ptr<GXE3DV> GXE3DVPtr;
             class GXEDB;
             typedef std::shared_ptr<GXEDB> GXEDBPtr;
             class GXEDOC;
@@ -3775,6 +3777,7 @@ namespace geosoft
                 friend class GXDOCU;
                 friend class GXDU;
                 friend class GXDXFI;
+                friend class GXE3DV;
                 friend class GXEDB;
                 friend class GXEDOC;
                 friend class GXEMAP;
@@ -5499,6 +5502,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                 }
 
+                void get_itr(GXITRPtr param1)
+                {
+                    GetITR_CSYMB(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+
                 void set_font(const gx_string_type& param1, int32_t param2, MVIEW_FONT_WEIGHT param3, int32_t param4)
                 {
                     SetFont_CSYMB(
@@ -6342,12 +6352,12 @@ namespace geosoft
                     return ret;
                 }
 
-                int32_t edit_symbol_codes_gui(const gx_string_type& param1, gx_string_type& param2, int32_t param3)
+                int32_t edit_classification_table_file_gui(const gx_string_type& param1, gx_string_type& param2, int32_t param3, int32_t param4)
                 {
                     int32_t paramSize3 = STR_FILE * STRING_CHAR_SIZE;
                     param2.resize(STR_FILE);
-                    int32_t ret = iEditSymbolCodesGUI_DH(
-                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ), reinterpret_cast<const long*>(&param3));
+                    int32_t ret = iEditClassificationTableFileGUI_DH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4));
                     gx_->throw_on_error();
                     param2.resize(gx_string_len(param2.c_str()));
                     return ret;
@@ -8559,6 +8569,54 @@ namespace geosoft
 
 
             };
+            class GXE3DV
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GXE3DV(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GXE3DVPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GXE3DV>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                GXMVIEWPtr get_data_view()
+                {
+                    int32_t ret = GetDataView_E3DV(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMVIEW>(ret);
+                }
+
+                GXMVIEWPtr get_base_view()
+                {
+                    int32_t ret = GetBaseView_E3DV(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMVIEW>(ret);
+                }
+
+
+            };
             class GXEDB
             {
             private:
@@ -9886,6 +9944,14 @@ namespace geosoft
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                     return ret;
+                }
+
+                GXE3DVPtr get_e_3dv()
+                {
+                    int32_t ret = App_GetE3DV_EMAP(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXE3DV>(ret);
                 }
 
                 bool is_locked()
@@ -31928,7 +31994,7 @@ namespace geosoft
                     iSetData_VV(gx_->pGeo, reinterpret_cast<const long*>(&handle_), start, (long)elements, contig_np_array.get_data(), gs_type);
                     gx_->throw_on_error();
 #else
-                    iSetData_VV(gx_->pGeo, reinterpret_cast<const long*>(&handle_), start, static_cast<long>(data.size()), data.data(), gs_cpp_type<T>::type());
+                    iSetData_VV(gx_->pGeo, reinterpret_cast<const long*>(&handle_), start, data.size(), data.data(), gs_cpp_type<T>::type());
                     gx_->throw_on_error();
 #endif
 

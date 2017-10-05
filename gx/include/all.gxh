@@ -27,6 +27,7 @@
 #include <edb.gxh>
 #include <edoc.gxh>
 #include <emap.gxh>
+#include <e3dv.gxh>
 #include <emaptemplate.gxh>
 #include <dmpply.gxh>
 #include <du.gxh>

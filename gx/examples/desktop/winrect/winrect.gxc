@@ -44,6 +44,7 @@ VV          VVx,VVy;
 EMAP        EMap;
 MAP         Map;
 IPJ         hIPJ;
+IPJ         hUserIPJ;
 MVIEW       View;
 
 
@@ -56,6 +57,7 @@ MVIEW       View;
    // --- create an empty IPJ ---
    
    hIPJ = Create_IPJ();
+   hUserIPJ = Create_IPJ();
    
 
    // --- Are we running interactively ? ---
@@ -148,7 +150,9 @@ MVIEW       View;
             Map = Lock_EMAP(EMap);
             View = Create_MVIEW(Map,"*Data",MVIEW_READ);
             hIPJ = Create_IPJ();
+            hUserIPJ = Create_IPJ();
             GetIPJ_MVIEW(View,hIPJ);
+            GetUserIPJ_MVIEW(View, hUserIPJ);
             Destroy_MVIEW(View);
             UnLock_EMAP(EMap);
 
@@ -291,9 +295,11 @@ MVIEW       View;
 
    // --- change the IPJ if we have one ---
    
-   if (iSourceType_IPJ(hIPJ) != IPJ_TYPE_NONE)
-      ChangeIPJ_PLY(Poly,hIPJ);
-      
+   if (iSourceType_IPJ(hIPJ) != IPJ_TYPE_NONE && iOrient == IPJ_ORIENT_SECTION)
+      ChangeIPJ_PLY(Poly, hIPJ);
+   else if (iSourceType_IPJ(hUserIPJ) != IPJ_TYPE_NONE)
+      ChangeIPJ_PLY(Poly, hUserIPJ);
+
       
    // --- add the polygon and save ---
          
@@ -301,6 +307,7 @@ MVIEW       View;
 	SaveTable_PLY(Poly,sMask);
 
    Destroy_IPJ(hIPJ);
+   Destroy_IPJ(hUserIPJ);
    Destroy_SYS(VVx);
    Destroy_SYS(VVy);
    Destroy_SYS(Poly);

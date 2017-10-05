@@ -3824,6 +3824,24 @@ Std_SpatialAccuracy_DSEL(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_HANDLE_PTR,
                          GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- GetDataView_E3DV[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetDataView_E3DV(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetDataView_E3DV(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetBaseView_E3DV[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetBaseView_E3DV(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetBaseView_E3DV(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+
 /*---------------- GetInfo_EXT[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL

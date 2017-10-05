@@ -2193,6 +2193,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Destroy_CSYMB(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR);
 
+/*---------------- GetITR_CSYMB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetITR_CSYMB(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetITR_CSYMB(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+
 /*---------------- SetFont_CSYMB[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -3488,22 +3499,24 @@ Std_iModify3dGUI_DH(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_STR_PTR,
                     GX_VAR   GX_LONG_PTR);
 
-/*---------------- iEditSymbolCodesGUI_DH[_extended] ----------------*/
+/*---------------- iEditClassificationTableFileGUI_DH[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-iEditSymbolCodesGUI_DH(GX_VAR   GX_OBJECT_PTR,
-                       GX_CONST GX_HANDLE_PTR,
-                       GX_CONST GX_STR_PTR,
-                       GX_VAR   GX_STR_PTR,
-                       GX_CONST GX_LONG_PTR,
-                       GX_CONST GX_LONG_PTR);
+iEditClassificationTableFileGUI_DH(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_VAR   GX_STR_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_iEditSymbolCodesGUI_DH(GX_VAR   GX_OBJECT_PTR,
-                           GX_CONST GX_HANDLE_PTR,
-                           GX_CONST GX_STR_PTR,
-                           GX_VAR   GX_STR_PTR,
-                           GX_CONST GX_LONG_PTR,
-                           GX_CONST GX_LONG_PTR);
+Std_iEditClassificationTableFileGUI_DH(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR);
 
 /*---------------- iModifyCrookedSectionHolesGUI_DH[_extended] ----------------*/
 
@@ -9964,6 +9977,15 @@ App_iIs3DView_EMAP(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_iIs3DView_EMAP(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetE3DV_EMAP[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+App_GetE3DV_EMAP(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_App_GetE3DV_EMAP(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR);
 
 /*---------------- iIsLocked_EMAP[_public_app] ----------------*/
 
