@@ -281,7 +281,7 @@ CopyMapToView_MAP (
 // Available    6.0.0
 //
 
-[_licensed] void
+[_public] void
 CRCMap_MAP (
             MAP,      // MAP object
             var int,  // CRC returned

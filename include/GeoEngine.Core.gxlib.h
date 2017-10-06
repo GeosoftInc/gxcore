@@ -1486,7 +1486,7 @@ Std_PutChanVV_DB(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_LONG_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
-/*---------------- PutVaChanVV_DB[_licensed] ----------------*/
+/*---------------- PutVaChanVV_DB[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PutVaChanVV_DB(GX_VAR   GX_OBJECT_PTR,
@@ -5117,7 +5117,7 @@ Std_iSetDefITR_IMG(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iUserPreferenceToPlotAsColourShadedGrid_IMG[_licensed] ----------------*/
+/*---------------- iUserPreferenceToPlotAsColourShadedGrid_IMG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iUserPreferenceToPlotAsColourShadedGrid_IMG(GX_VAR   GX_OBJECT_PTR);
@@ -5206,7 +5206,7 @@ Std_ReadY_IMG(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_LONG_PTR,
               GX_CONST GX_HANDLE_PTR);
 
-/*---------------- RefreshGI_IMG[_licensed] ----------------*/
+/*---------------- RefreshGI_IMG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 RefreshGI_IMG(GX_VAR   GX_OBJECT_PTR,
@@ -5364,7 +5364,7 @@ Std_SetTR_IMG(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_HANDLE_PTR,
               GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Sync_IMG[_licensed] ----------------*/
+/*---------------- Sync_IMG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Sync_IMG(GX_VAR   GX_OBJECT_PTR,
@@ -5463,7 +5463,7 @@ Std_AggToGeoColor_IMU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_HANDLE_PTR,
                       GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- CRC_IMU[_licensed] ----------------*/
+/*---------------- CRC_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRC_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -5474,7 +5474,7 @@ Std_CRC_IMU(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_HANDLE_PTR,
             GX_CONST GX_LONG_PTR);
 
-/*---------------- CRCGrid_IMU[_licensed] ----------------*/
+/*---------------- CRCGrid_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCGrid_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -5485,7 +5485,7 @@ Std_CRCGrid_IMU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_STR_PTR,
                 GX_CONST GX_LONG_PTR);
 
-/*---------------- CRCGridInexact_IMU[_licensed] ----------------*/
+/*---------------- CRCGridInexact_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCGridInexact_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -5500,7 +5500,7 @@ Std_CRCGridInexact_IMU(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_LONG_PTR,
                        GX_CONST GX_LONG_PTR);
 
-/*---------------- CRCInexact_IMU[_licensed] ----------------*/
+/*---------------- CRCInexact_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCInexact_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -5764,7 +5764,7 @@ Std_GridFilt_IMU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_STR_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
-/*---------------- GridHead_IMU[_licensed] ----------------*/
+/*---------------- GridHead_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GridHead_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -6161,7 +6161,7 @@ Std_GridTrnd_IMU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_LONG_PTR);
 
-/*---------------- GridTrns_IMU[_licensed] ----------------*/
+/*---------------- GridTrns_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GridTrns_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -6202,7 +6202,7 @@ Std_GridVol_IMU(GX_VAR   GX_OBJECT_PTR,
                 GX_VAR   GX_DOUBLE_PTR,
                 GX_VAR   GX_DOUBLE_PTR);
 
-/*---------------- GridWind_IMU[_licensed] ----------------*/
+/*---------------- GridWind_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GridWind_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -6235,7 +6235,7 @@ Std_GridWind_IMU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_LONG_PTR,
                  GX_CONST GX_STR_PTR);
 
-/*---------------- GridWind2_IMU[_licensed] ----------------*/
+/*---------------- GridWind2_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GridWind2_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -6279,7 +6279,7 @@ Std_GridXYZ_IMU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_LONG_PTR,
                 GX_CONST GX_LONG_PTR);
 
-/*---------------- iGridType_IMU[_licensed] ----------------*/
+/*---------------- iGridType_IMU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iGridType_IMU(GX_VAR   GX_OBJECT_PTR,
@@ -9371,7 +9371,7 @@ Std_CopyMapToView_MAP(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_STR_PTR,
                       GX_CONST GX_STR_PTR);
 
-/*---------------- CRCMap_MAP[_licensed] ----------------*/
+/*---------------- CRCMap_MAP[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCMap_MAP(GX_VAR   GX_OBJECT_PTR,
@@ -11561,7 +11561,7 @@ Std_Box3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- CRCView_MVIEW[_licensed] ----------------*/
+/*---------------- CRCView_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCView_MVIEW(GX_VAR   GX_OBJECT_PTR,
@@ -11574,7 +11574,7 @@ Std_CRCView_MVIEW(GX_VAR   GX_OBJECT_PTR,
                   GX_VAR   GX_LONG_PTR,
                   GX_CONST GX_STR_PTR);
 
-/*---------------- CRCViewGroup_MVIEW[_licensed] ----------------*/
+/*---------------- CRCViewGroup_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCViewGroup_MVIEW(GX_VAR   GX_OBJECT_PTR,
@@ -15715,7 +15715,7 @@ Std_ImportGOCADSurface_MVU(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_STR_PTR,
                            GX_CONST GX_LONG_PTR);
 
-/*---------------- LoadPlot_MVU[_licensed] ----------------*/
+/*---------------- LoadPlot_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 LoadPlot_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15726,7 +15726,7 @@ Std_LoadPlot_MVU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_STR_PTR);
 
-/*---------------- MapFromPLT_MVU[_licensed] ----------------*/
+/*---------------- MapFromPLT_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 MapFromPLT_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15745,7 +15745,7 @@ Std_MapFromPLT_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_DOUBLE_PTR,
                    GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- MapMDF_MVU[_licensed] ----------------*/
+/*---------------- MapMDF_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 MapMDF_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15758,7 +15758,7 @@ Std_MapMDF_MVU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_STR_PTR,
                GX_CONST GX_STR_PTR);
 
-/*---------------- Mapset_MVU[_licensed] ----------------*/
+/*---------------- Mapset_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Mapset_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15799,7 +15799,7 @@ Std_Mapset_MVU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_DOUBLE_PTR,
                GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- Mapset2_MVU[_licensed] ----------------*/
+/*---------------- Mapset2_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Mapset2_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15842,7 +15842,7 @@ Std_Mapset2_MVU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- MDF_MVU[_licensed] ----------------*/
+/*---------------- MDF_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 MDF_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16482,7 +16482,7 @@ Std_WriteRowMem_PG(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_OBJECT_PTR);
 
-/*---------------- Copy_PG[_licensed] ----------------*/
+/*---------------- Copy_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Copy_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16493,7 +16493,7 @@ Std_Copy_PG(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_HANDLE_PTR,
             GX_CONST GX_HANDLE_PTR);
 
-/*---------------- CopySubset_PG[_licensed] ----------------*/
+/*---------------- CopySubset_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CopySubset_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16516,7 +16516,7 @@ Std_CopySubset_PG(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
 
-/*---------------- Create_PG[_licensed] ----------------*/
+/*---------------- Create_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
 Create_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16529,7 +16529,7 @@ Std_Create_PG(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_LONG_PTR,
               GX_CONST GX_LONG_PTR);
 
-/*---------------- CreateS_PG[_licensed] ----------------*/
+/*---------------- CreateS_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
 CreateS_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16547,7 +16547,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Destroy_PG(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Dummy_PG[_licensed] ----------------*/
+/*---------------- Dummy_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Dummy_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16556,7 +16556,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Dummy_PG(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iEType_PG[_licensed] ----------------*/
+/*---------------- iEType_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iEType_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16565,7 +16565,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iEType_PG(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iNCols_PG[_licensed] ----------------*/
+/*---------------- iNCols_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iNCols_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16574,7 +16574,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iNCols_PG(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iNRows_PG[_licensed] ----------------*/
+/*---------------- iNRows_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iNRows_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16583,7 +16583,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iNRows_PG(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iNSlices_PG[_licensed] ----------------*/
+/*---------------- iNSlices_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iNSlices_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16592,7 +16592,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iNSlices_PG(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Range_PG[_licensed] ----------------*/
+/*---------------- Range_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Range_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16605,7 +16605,7 @@ Std_Range_PG(GX_VAR   GX_OBJECT_PTR,
              GX_VAR   GX_DOUBLE_PTR,
              GX_VAR   GX_DOUBLE_PTR);
 
-/*---------------- rGet_PG[_licensed] ----------------*/
+/*---------------- rGet_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
 rGet_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16618,7 +16618,7 @@ Std_rGet_PG(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_LONG_PTR,
             GX_CONST GX_LONG_PTR);
 
-/*---------------- ReadCol_PG[_licensed] ----------------*/
+/*---------------- ReadCol_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReadCol_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16635,7 +16635,7 @@ Std_ReadCol_PG(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_LONG_PTR,
                GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ReadRow_PG[_licensed] ----------------*/
+/*---------------- ReadRow_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReadRow_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16652,7 +16652,7 @@ Std_ReadRow_PG(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_LONG_PTR,
                GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ReAllocate_PG[_licensed] ----------------*/
+/*---------------- ReAllocate_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReAllocate_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16665,7 +16665,7 @@ Std_ReAllocate_PG(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
 
-/*---------------- Serial_PG[_licensed] ----------------*/
+/*---------------- Serial_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Serial_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16687,7 +16687,7 @@ Std_Statistics_PG(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_HANDLE_PTR);
 
-/*---------------- WriteCol_PG[_licensed] ----------------*/
+/*---------------- WriteCol_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 WriteCol_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16704,7 +16704,7 @@ Std_WriteCol_PG(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_LONG_PTR,
                 GX_CONST GX_HANDLE_PTR);
 
-/*---------------- WriteRow_PG[_licensed] ----------------*/
+/*---------------- WriteRow_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 WriteRow_PG(GX_VAR   GX_OBJECT_PTR,
@@ -16980,7 +16980,7 @@ Std_WriteBFEx_PG(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_LONG_PTR,
                  GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- WriteWA_PG[_licensed] ----------------*/
+/*---------------- WriteWA_PG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 WriteWA_PG(GX_VAR   GX_OBJECT_PTR,
@@ -23649,7 +23649,7 @@ Std_iCanAppendTo_VOX(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_STR_PTR);
 
-/*---------------- IGetCellSizeStrings_VOX[_licensed] ----------------*/
+/*---------------- IGetCellSizeStrings_VOX[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 IGetCellSizeStrings_VOX(GX_VAR   GX_OBJECT_PTR,
@@ -23694,7 +23694,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iIsVectorVoxel_VOX(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iSetCellSizeStrings_VOX[_licensed] ----------------*/
+/*---------------- iSetCellSizeStrings_VOX[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iSetCellSizeStrings_VOX(GX_VAR   GX_OBJECT_PTR,
@@ -24050,7 +24050,7 @@ Std_SetMETA_VOX(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR,
                 GX_CONST GX_HANDLE_PTR);
 
-/*---------------- SetOrigin_VOX[_licensed] ----------------*/
+/*---------------- SetOrigin_VOX[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 SetOrigin_VOX(GX_VAR   GX_OBJECT_PTR,
@@ -24707,7 +24707,7 @@ Std_SetShellControls_VOXD(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_DOUBLE_PTR,
                           GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- Create_VOXE[_licensed] ----------------*/
+/*---------------- Create_VOXE[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
 Create_VOXE(GX_VAR   GX_OBJECT_PTR,
@@ -24725,7 +24725,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Destroy_VOXE(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Profile_VOXE[_licensed] ----------------*/
+/*---------------- Profile_VOXE[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Profile_VOXE(GX_VAR   GX_OBJECT_PTR,
@@ -24744,7 +24744,7 @@ Std_Profile_VOXE(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_LONG_PTR);
 
-/*---------------- rValue_VOXE[_licensed] ----------------*/
+/*---------------- rValue_VOXE[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
 rValue_VOXE(GX_VAR   GX_OBJECT_PTR,
@@ -24761,7 +24761,7 @@ Std_rValue_VOXE(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_LONG_PTR);
 
-/*---------------- Vector_VOXE[_licensed] ----------------*/
+/*---------------- Vector_VOXE[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Vector_VOXE(GX_VAR   GX_OBJECT_PTR,
@@ -25068,7 +25068,7 @@ Std_CopyVVtoVM_VV(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_HANDLE_PTR);
 
-/*---------------- CRC_VV[_licensed] ----------------*/
+/*---------------- CRC_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRC_VV(GX_VAR   GX_OBJECT_PTR,
@@ -25079,7 +25079,7 @@ Std_CRC_VV(GX_VAR   GX_OBJECT_PTR,
            GX_CONST GX_HANDLE_PTR,
            GX_CONST GX_LONG_PTR);
 
-/*---------------- CRCInexact_VV[_licensed] ----------------*/
+/*---------------- CRCInexact_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CRCInexact_VV(GX_VAR   GX_OBJECT_PTR,
@@ -25300,7 +25300,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iLength_VV(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR);
 
-/*---------------- IndexInsert_VV[_licensed] ----------------*/
+/*---------------- IndexInsert_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 IndexInsert_VV(GX_VAR   GX_OBJECT_PTR,
@@ -25324,7 +25324,7 @@ Std_IndexOrder_VV(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_HANDLE_PTR);
 
-/*---------------- InitIndex_VV[_licensed] ----------------*/
+/*---------------- InitIndex_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 InitIndex_VV(GX_VAR   GX_OBJECT_PTR,
@@ -25521,7 +25521,7 @@ Std_RangeDouble_VV(GX_VAR   GX_OBJECT_PTR,
                    GX_VAR   GX_DOUBLE_PTR,
                    GX_VAR   GX_DOUBLE_PTR);
 
-/*---------------- ReFid_VV[_licensed] ----------------*/
+/*---------------- ReFid_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReFid_VV(GX_VAR   GX_OBJECT_PTR,
@@ -25536,7 +25536,7 @@ Std_ReFid_VV(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_DOUBLE_PTR,
              GX_CONST GX_LONG_PTR);
 
-/*---------------- ReFidVV_VV[_licensed] ----------------*/
+/*---------------- ReFidVV_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReFidVV_VV(GX_VAR   GX_OBJECT_PTR,
@@ -25547,7 +25547,7 @@ Std_ReFidVV_VV(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ReSample_VV[_licensed] ----------------*/
+/*---------------- ReSample_VV[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReSample_VV(GX_VAR   GX_OBJECT_PTR,

@@ -1044,7 +1044,7 @@ CopyLine_DU (
 // Available           5.0.0
 //
 
-[_licensed] void
+[_public] void
 CopyLineAcross_DU (
                    DB,       // Input Database
                    DB_SYMB,  // Input Line  [DB_LOCK_READONLY]
@@ -1068,7 +1068,7 @@ CopyLineAcross_DU (
 // Available               5.0.0
 //
 
-[_licensed] void
+[_public] void
 CopyLineChanAcross_DU (
                        DB,       // Input Database
                        DB_SYMB,  // Input Line   [DB_LOCK_READONLY]
@@ -1095,7 +1095,7 @@ CopyLineChanAcross_DU (
 // Available           5.0.8
 //
 
-[_licensed] void
+[_public] void
 CopyLineMasked_DU (
                    DB,       // Database Object
                    DB_SYMB,  // Input  Line Symbol [DB_LOCK_READONLY]
@@ -1234,7 +1234,7 @@ Distline_DU (
 // Available         5.0.0
 //
 
-[_licensed] void
+[_public] void
 DupChanLocks_DU (
                  DB,  // Input Database handle
                  DB   // Output Database handle.
@@ -1249,7 +1249,7 @@ DupChanLocks_DU (
 // Available     5.0.0
 //
 
-[_licensed] void
+[_public] void
 DupChans_DU (
              DB,  // Input Database handle
              DB   // Output Database handle.
@@ -1303,7 +1303,7 @@ EditDuplicates_DU (
 // Available   5.0.0
 //
 
-[_licensed] void
+[_public] void
 Export_DU (
            DB,      // Database
            int,     // <define>DU_EXPORT</define>
@@ -1329,7 +1329,7 @@ Export_DU (
 // Available    5.1.6
 //
 
-[_licensed] void
+[_public] void
 Export2_DU (
             DB,      // Database
             int,     // <define>DU_EXPORT</define>
@@ -1356,7 +1356,7 @@ Export2_DU (
 // Available        5.0.0
 //
 
-[_licensed] void
+[_public] void
 ExportAMIRA_DU (
                 DB,      // Database
                 WA,      // AMIRA data file handle
@@ -1392,7 +1392,7 @@ ExportAMIRA_DU (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 ExportAseg_DU (
                DB,      // Database
                string,  // Current line
@@ -1425,7 +1425,7 @@ ExportAseg_DU (
 // Available           5.0.1
 //
 
-[_licensed] void
+[_public] void
 ExportAsegProj_DU (
                    DB,      // Database
                    string,  // Current line
@@ -1528,7 +1528,7 @@ ExportDatabaseCRC_DU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 ExportGBN_DU (
               DB,      // Database
               VV,      // List of channels to export
@@ -1551,7 +1551,7 @@ ExportGBN_DU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 ExportMDB_DU (
               DB,      // Database
               string,  // Current line
@@ -1628,7 +1628,7 @@ GetExistingFeatureClassesInGeodatabase_DU (
 // Available      6.1.0
 //
 
-[_licensed] void
+[_public] void
 ExportSHP_DU (
               DB,      // Database
               string,  // Current line
@@ -1668,7 +1668,7 @@ ExportSHP_DU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 ExportXYZ_DU (
               DB,      // Database
               string,  // export data file name
@@ -1686,7 +1686,7 @@ ExportXYZ_DU (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 ExportXYZ2_DU (
                DB,  // Database
                WA,  // export data file WA handle
@@ -2174,7 +2174,7 @@ ImportAllDAO_DU (
 // Available        5.0.0
 //
 
-[_licensed] void
+[_public] void
 ImportAMIRA_DU (
                 DB,  // Database
                 RA,  // AMIRA data file handle
@@ -2190,7 +2190,7 @@ ImportAMIRA_DU (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 ImportAseg_DU (
                DB,      // Database
                string,  // template file name
@@ -2211,7 +2211,7 @@ ImportAseg_DU (
 // Available           5.0.1
 //
 
-[_licensed] void
+[_public] void
 ImportAsegProj_DU (
                    DB,      // Database
                    string,  // template file name
@@ -2472,7 +2472,7 @@ ImportODDF_DU (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 ImportPico_DU (
                DB,      // Database
                string,  // template file name
@@ -2880,7 +2880,7 @@ LoadLTB_DU (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 MakeFid_DU (
             DB,       // database object
             DB_SYMB,  // line Symbol
@@ -3042,7 +3042,7 @@ NLFilt_DU (
 // Available   5.0.0
 //
 
-[_licensed] void
+[_public] void
 Normal_DU (
            DB,       // Database handle
            DB_SYMB,  // Base Channel for normalization.  [DB_LOCK_READONLY]
@@ -3253,7 +3253,7 @@ QCSurveyPlan_DU (
 // Available       5.0.0
 //
 
-[_licensed] real
+[_public] real
 rDirection_DU (
                DB,       // Database Object
                DB_SYMB,  // Line Symbol
@@ -3284,7 +3284,7 @@ rDirection_DU (
 // Available  5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReFid_DU (
           DB,       // Database Object
           DB_SYMB,  // Line Symbol
@@ -3313,7 +3313,7 @@ ReFid_DU (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReFidAllCh_DU (
                DB,       // Database Object
                DB_SYMB,  // Line Symbol
@@ -3337,7 +3337,7 @@ ReFidAllCh_DU (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReFidCh_DU (
             DB,       // Database Object
             DB_SYMB,  // Line Symbol
@@ -3460,7 +3460,7 @@ ScanADO_DU (
 // Available     5.0.0
 //
 
-[_licensed] void
+[_public] void
 ScanAseg_DU (
              string,  // header file name
              string,  // data file name
@@ -3479,7 +3479,7 @@ ScanAseg_DU (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 ScanDAO_DU (
             string,  // Database file name
             string,  // Database Type
@@ -3937,7 +3937,7 @@ VoxelSection_DU (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 WriteWA_DU (
             DB,       // database
             DB_SYMB,  // line symbol

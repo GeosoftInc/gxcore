@@ -346,7 +346,7 @@ AggToGeoColor_IMU (
 // Available 5.0.0
 //
 
-[_licensed] CRC
+[_public] CRC
 CRC_IMU (
          IMG,  // input image
          CRC   // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
@@ -361,7 +361,7 @@ CRC_IMU (
 // Available     5.0.0
 //
 
-[_licensed] CRC
+[_public] CRC
 CRCGrid_IMU (
              string,  // grid
              CRC      // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
@@ -385,7 +385,7 @@ CRCGrid_IMU (
 // Available            5.0.0
 //
 
-[_licensed] CRC
+[_public] CRC
 CRCGridInexact_IMU (
                     string,  // grid
                     CRC,     // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
@@ -411,7 +411,7 @@ CRCGridInexact_IMU (
 // Available        5.0.0
 //
 
-[_licensed] CRC
+[_public] CRC
 CRCInexact_IMU (
                 IMG,  // input image
                 CRC,  // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
@@ -743,7 +743,7 @@ GridFilt_IMU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 GridHead_IMU (
               string,  // Name of the grid whose header is to be modified.
               real,    // Element separation
@@ -1264,7 +1264,7 @@ GridTrnd_IMU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 GridTrns_IMU (
               string,  // Name of the grid to transpose
               int      // Transpose condition value <define>IMU_TRANS</define>
@@ -1329,7 +1329,7 @@ GridVol_IMU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 GridWind_IMU (
               IMG,     // Image of input grid
               string,  // Name of output grid file
@@ -1363,7 +1363,7 @@ GridWind_IMU (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 GridWind2_IMU (
                IMG,     // Image of input grid
                string,  // Name of output grid file
@@ -1410,7 +1410,7 @@ GridXYZ_IMU (
 // Available       5.0.0
 //
 
-[_licensed] int
+[_public] int
 iGridType_IMU (
                string   // Name of the Grid
                );

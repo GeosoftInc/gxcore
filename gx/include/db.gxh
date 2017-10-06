@@ -1275,7 +1275,7 @@ PutChanVV_DB (
 // Available        5.1.1
 //
 
-[_licensed] void
+[_public] void
 PutVaChanVV_DB (
                 DB,       // Database
                 DB_SYMB,  // Line

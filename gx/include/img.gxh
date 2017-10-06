@@ -783,7 +783,7 @@ iSetDefITR_IMG (
 // Available                                     7.3.0
 //
 
-[_licensed] int
+[_public] int
 iUserPreferenceToPlotAsColourShadedGrid_IMG (
                                              );
 
@@ -907,7 +907,7 @@ ReadY_IMG (
 // Available       7.0.0
 //
 
-[_licensed] void
+[_public] void
 RefreshGI_IMG (
                string   // grid name
                );
@@ -1120,7 +1120,7 @@ SetTR_IMG (
 // Available  7.0.0
 //
 
-[_licensed] void
+[_public] void
 Sync_IMG (
           string   // grid name
           );

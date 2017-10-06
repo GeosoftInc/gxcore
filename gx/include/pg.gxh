@@ -81,7 +81,7 @@
 // Available 5.0.0
 //
 
-[_licensed] void
+[_public] void
 Copy_PG (
          PG,  // Destination PG object
          PG   // Source PG object
@@ -98,7 +98,7 @@ Copy_PG (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 CopySubset_PG (
                PG,   // Destination PG object
                PG,   // Source PG object
@@ -119,7 +119,7 @@ CopySubset_PG (
 // Available   5.0.0
 //
 
-[_licensed] PG
+[_public] PG
 Create_PG (
            int,  // # elements in y (# of row)
            int,  // # elements in x (# of column)
@@ -137,7 +137,7 @@ Create_PG (
 // Available    5.0.0
 //
 
-[_licensed] PG
+[_public] PG
 CreateS_PG (
             BF   // BF
             );
@@ -165,7 +165,7 @@ Destroy_PG (
 // Available  5.0.0
 //
 
-[_licensed] void
+[_public] void
 Dummy_PG (
           PG   // PG object
           );
@@ -179,7 +179,7 @@ Dummy_PG (
 // Available   5.0.0
 //
 
-[_licensed] int
+[_public] int
 iEType_PG (
            PG   // source PG
            );
@@ -193,7 +193,7 @@ iEType_PG (
 // Available   5.0.0
 //
 
-[_licensed] int
+[_public] int
 iNCols_PG (
            PG   // source PG
            );
@@ -207,7 +207,7 @@ iNCols_PG (
 // Available   5.0.0
 //
 
-[_licensed] int
+[_public] int
 iNRows_PG (
            PG   // source PG
            );
@@ -221,7 +221,7 @@ iNRows_PG (
 // Available     6.2.0
 //
 
-[_licensed] int
+[_public] int
 iNSlices_PG (
              PG   // source PG
              );
@@ -235,7 +235,7 @@ iNSlices_PG (
 // Available  5.0.0
 //
 
-[_licensed] void
+[_public] void
 Range_PG (
           PG,        // Pager to Range
           var real,  // Minimum Data (Dummy if no range)
@@ -255,7 +255,7 @@ Range_PG (
 // Available 8.3.0
 //
 
-[_licensed] real
+[_public] real
 rGet_PG (
          PG,   // hPG - PG handle
          int,  // iBx - element # in x (column #)
@@ -271,7 +271,7 @@ rGet_PG (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReadCol_PG (
             PG,   // hPG - PG handle
             int,  // iBx - element # in x (column #)
@@ -289,7 +289,7 @@ ReadCol_PG (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReadRow_PG (
             PG,   // hPG - PG handle
             int,  // iBy - element # in y (row #)
@@ -307,7 +307,7 @@ ReadRow_PG (
 // Available       5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReAllocate_PG (
                PG,   // PG object
                int,  // Number of Y (rows) to reallocate
@@ -325,7 +325,7 @@ ReAllocate_PG (
 // Available   5.0.0
 //
 
-[_licensed] void
+[_public] void
 Serial_PG (
            PG,  // PG
            BF   // BF
@@ -355,7 +355,7 @@ Statistics_PG (
 // Available     5.0.0
 //
 
-[_licensed] void
+[_public] void
 WriteCol_PG (
              PG,   // hPG - PG handle
              int,  // iBx - element # in x (column #)
@@ -373,7 +373,7 @@ WriteCol_PG (
 // Available     5.0.0
 //
 
-[_licensed] void
+[_public] void
 WriteRow_PG (
              PG,   // hPG - PG handle
              int,  // iBy - element # in y (row #)
@@ -662,7 +662,7 @@ WriteBFEx_PG (
 // Available    6.2.0
 //
 
-[_licensed] void
+[_public] void
 WriteWA_PG (
             PG,      // PG handle
             WA,      // WA to write to

@@ -42,7 +42,7 @@
 // Available     6.3.0
 //
 
-[_licensed] VOXE
+[_public] VOXE
 Create_VOXE (
              VOX   // VOX Object
              );
@@ -70,7 +70,7 @@ Destroy_VOXE (
 // Available      6.3.0
 //
 
-[_licensed] void
+[_public] void
 Profile_VOXE (
               VOXE,  // VOXE object
               VV,    // X VV (must be double)
@@ -89,7 +89,7 @@ Profile_VOXE (
 // Available     6.3.0
 //
 
-[_licensed] real
+[_public] real
 rValue_VOXE (
              VOXE,  // VOXE object
              real,  // X Location
@@ -107,7 +107,7 @@ rValue_VOXE (
 // Available     6.3.0
 //
 
-[_licensed] void
+[_public] void
 Vector_VOXE (
              VOXE,  // VOXE object
              real,  // X Origin

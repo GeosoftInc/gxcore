@@ -1412,7 +1412,7 @@ ImportGOCADSurface_MVU (
 // Available      5.0.0
 //
 
-[_licensed] void
+[_public] void
 LoadPlot_MVU (
               MAP,     // Map handle
               string   // plot file name
@@ -1435,7 +1435,7 @@ LoadPlot_MVU (
 // Available        5.0.0
 //
 
-[_licensed] void
+[_public] void
 MapFromPLT_MVU (
                 MAP,     // MAP Handle
                 string,  // Name to use for the base map view
@@ -1454,7 +1454,7 @@ MapFromPLT_MVU (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 MapMDF_MVU (
             MAP,     // MAP Handle
             string,  // MDF file name
@@ -1470,7 +1470,7 @@ MapMDF_MVU (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 Mapset_MVU (
             MAP,     // MAP Handle
             string,  // Name to use for the base map view
@@ -1500,7 +1500,7 @@ Mapset_MVU (
 // Available     8.3.0
 //
 
-[_licensed] void
+[_public] void
 Mapset2_MVU (
              MAP,     // MAP Handle
              string,  // Name to use for the base map view
@@ -1531,7 +1531,7 @@ Mapset2_MVU (
 // Available 5.0.0
 //
 
-[_licensed] void
+[_public] void
 MDF_MVU (
          MAP,     // MAP Handle
          string,  // MDF file name

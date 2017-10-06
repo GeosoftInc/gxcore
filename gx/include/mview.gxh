@@ -652,7 +652,7 @@ Box3D_MVIEW (
 // Available       6.0.0
 //
 
-[_licensed] void
+[_public] void
 CRCView_MVIEW (
                MVIEW,    // MAP object
                var int,  // CRC returned
@@ -668,7 +668,7 @@ CRCView_MVIEW (
 // Available            6.0.0
 //
 
-[_licensed] void
+[_public] void
 CRCViewGroup_MVIEW (
                     MVIEW,    // MAP object
                     string,   // Name of Group

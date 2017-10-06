@@ -5520,7 +5520,7 @@ Std_CopyLine_DU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_LONG_PTR,
                 GX_CONST GX_LONG_PTR);
 
-/*---------------- CopyLineAcross_DU[_licensed] ----------------*/
+/*---------------- CopyLineAcross_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CopyLineAcross_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5535,7 +5535,7 @@ Std_CopyLineAcross_DU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_HANDLE_PTR,
                       GX_CONST GX_LONG_PTR);
 
-/*---------------- CopyLineChanAcross_DU[_licensed] ----------------*/
+/*---------------- CopyLineChanAcross_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CopyLineChanAcross_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5552,7 +5552,7 @@ Std_CopyLineChanAcross_DU(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_HANDLE_PTR,
                           GX_CONST GX_LONG_PTR);
 
-/*---------------- CopyLineMasked_DU[_licensed] ----------------*/
+/*---------------- CopyLineMasked_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CopyLineMasked_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5671,7 +5671,7 @@ Std_Distline_DU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_LONG_PTR,
                 GX_VAR   GX_DOUBLE_PTR);
 
-/*---------------- DupChanLocks_DU[_licensed] ----------------*/
+/*---------------- DupChanLocks_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 DupChanLocks_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5682,7 +5682,7 @@ Std_DupChanLocks_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR,
                     GX_CONST GX_HANDLE_PTR);
 
-/*---------------- DupChans_DU[_licensed] ----------------*/
+/*---------------- DupChans_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 DupChans_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5714,7 +5714,7 @@ Std_EditDuplicates_DU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_LONG_PTR,
                       GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- Export_DU[_licensed] ----------------*/
+/*---------------- Export_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Export_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5737,7 +5737,7 @@ Std_Export_DU(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_LONG_PTR,
               GX_CONST GX_LONG_PTR);
 
-/*---------------- Export2_DU[_licensed] ----------------*/
+/*---------------- Export2_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Export2_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5762,7 +5762,7 @@ Std_Export2_DU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_LONG_PTR,
                GX_CONST GX_LONG_PTR);
 
-/*---------------- ExportAMIRA_DU[_licensed] ----------------*/
+/*---------------- ExportAMIRA_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportAMIRA_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5791,7 +5791,7 @@ Std_ExportAMIRA_DU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_STR_PTR,
                    GX_CONST GX_STR_PTR);
 
-/*---------------- ExportAseg_DU[_licensed] ----------------*/
+/*---------------- ExportAseg_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportAseg_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5810,7 +5810,7 @@ Std_ExportAseg_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_STR_PTR,
                   GX_CONST GX_STR_PTR);
 
-/*---------------- ExportAsegProj_DU[_licensed] ----------------*/
+/*---------------- ExportAsegProj_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportAsegProj_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5882,7 +5882,7 @@ Std_ExportDatabaseCRC_DU(GX_VAR   GX_OBJECT_PTR,
                          GX_VAR   GX_LONG_PTR,
                          GX_CONST GX_STR_PTR);
 
-/*---------------- ExportGBN_DU[_licensed] ----------------*/
+/*---------------- ExportGBN_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportGBN_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5895,7 +5895,7 @@ Std_ExportGBN_DU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_STR_PTR);
 
-/*---------------- ExportMDB_DU[_licensed] ----------------*/
+/*---------------- ExportMDB_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportMDB_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5952,7 +5952,7 @@ Std_GetExistingFeatureClassesInGeodatabase_DU(GX_VAR   GX_OBJECT_PTR,
                                               GX_CONST GX_HANDLE_PTR,
                                               GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ExportSHP_DU[_licensed] ----------------*/
+/*---------------- ExportSHP_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportSHP_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5973,7 +5973,7 @@ Std_ExportSHP_DU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_STR_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ExportXYZ_DU[_licensed] ----------------*/
+/*---------------- ExportXYZ_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportXYZ_DU(GX_VAR   GX_OBJECT_PTR,
@@ -5986,7 +5986,7 @@ Std_ExportXYZ_DU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_STR_PTR,
                  GX_CONST GX_STR_PTR);
 
-/*---------------- ExportXYZ2_DU[_licensed] ----------------*/
+/*---------------- ExportXYZ2_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportXYZ2_DU(GX_VAR   GX_OBJECT_PTR,
@@ -6340,7 +6340,7 @@ Std_ImportAllDAO_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_STR_PTR,
                     GX_CONST GX_LONG_PTR);
 
-/*---------------- ImportAMIRA_DU[_licensed] ----------------*/
+/*---------------- ImportAMIRA_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ImportAMIRA_DU(GX_VAR   GX_OBJECT_PTR,
@@ -6353,7 +6353,7 @@ Std_ImportAMIRA_DU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ImportAseg_DU[_licensed] ----------------*/
+/*---------------- ImportAseg_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ImportAseg_DU(GX_VAR   GX_OBJECT_PTR,
@@ -6372,7 +6372,7 @@ Std_ImportAseg_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_STR_PTR,
                   GX_CONST GX_LONG_PTR);
 
-/*---------------- ImportAsegProj_DU[_licensed] ----------------*/
+/*---------------- ImportAsegProj_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ImportAsegProj_DU(GX_VAR   GX_OBJECT_PTR,
@@ -6548,7 +6548,7 @@ Std_ImportODDF_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_STR_PTR);
 
-/*---------------- ImportPico_DU[_licensed] ----------------*/
+/*---------------- ImportPico_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ImportPico_DU(GX_VAR   GX_OBJECT_PTR,
@@ -6827,7 +6827,7 @@ Std_LoadLTB_DU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_LONG_PTR);
 
-/*---------------- MakeFid_DU[_licensed] ----------------*/
+/*---------------- MakeFid_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 MakeFid_DU(GX_VAR   GX_OBJECT_PTR,
@@ -6946,7 +6946,7 @@ Std_NLFilt_DU(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_LONG_PTR,
               GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- Normal_DU[_licensed] ----------------*/
+/*---------------- Normal_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Normal_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7150,7 +7150,7 @@ Std_QCSurveyPlan_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- rDirection_DU[_licensed] ----------------*/
+/*---------------- rDirection_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
 rDirection_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7165,7 +7165,7 @@ Std_rDirection_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
 
-/*---------------- ReFid_DU[_licensed] ----------------*/
+/*---------------- ReFid_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReFid_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7190,7 +7190,7 @@ Std_ReFid_DU(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_DOUBLE_PTR,
              GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- ReFidAllCh_DU[_licensed] ----------------*/
+/*---------------- ReFidAllCh_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReFidAllCh_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7203,7 +7203,7 @@ Std_ReFidAllCh_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
 
-/*---------------- ReFidCh_DU[_licensed] ----------------*/
+/*---------------- ReFidCh_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReFidCh_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7313,7 +7313,7 @@ Std_ScanADO_DU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_STR_PTR,
                GX_CONST GX_STR_PTR);
 
-/*---------------- ScanAseg_DU[_licensed] ----------------*/
+/*---------------- ScanAseg_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ScanAseg_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7328,7 +7328,7 @@ Std_ScanAseg_DU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_STR_PTR,
                 GX_CONST GX_STR_PTR);
 
-/*---------------- ScanDAO_DU[_licensed] ----------------*/
+/*---------------- ScanDAO_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ScanDAO_DU(GX_VAR   GX_OBJECT_PTR,
@@ -7723,7 +7723,7 @@ Std_VoxelSection_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
-/*---------------- WriteWA_DU[_licensed] ----------------*/
+/*---------------- WriteWA_DU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 WriteWA_DU(GX_VAR   GX_OBJECT_PTR,

@@ -1038,7 +1038,7 @@ iCanAppendTo_VOX (
 // Available                 6.3.1
 //
 
-[_licensed] void
+[_public] void
 IGetCellSizeStrings_VOX (
                          VOX,         // Voxel
                          var string,  // X String
@@ -1107,7 +1107,7 @@ iIsVectorVoxel_VOX (
 // Available                 6.3.1
 //
 
-[_licensed] int
+[_public] int
 iSetCellSizeStrings_VOX (
                          VOX,     // Voxel
                          string,  // X String
@@ -1503,7 +1503,7 @@ SetMETA_VOX (
 // Available       6.3.1
 //
 
-[_licensed] void
+[_public] void
 SetOrigin_VOX (
                VOX,   // VOX object
                int,   // Type of origin being set <define>VOX_ORIGIN</define>

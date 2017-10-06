@@ -454,7 +454,7 @@ CopyVVtoVM_VV (
 // Available5.0.0
 //
 
-[_licensed] CRC
+[_public] CRC
 CRC_VV (
         VV,   // VV
         CRC   // previous CRC <define>CRC_INIT_VALUE</define>
@@ -478,7 +478,7 @@ CRC_VV (
 // Available       5.0.0
 //
 
-[_licensed] CRC
+[_public] CRC
 CRCInexact_VV (
                VV,   // VV
                CRC,  // previous CRC <define>CRC_INIT_VALUE</define>
@@ -861,7 +861,7 @@ iLength_VV (
 // Available        6.2.0
 //
 
-[_licensed] void
+[_public] void
 IndexInsert_VV (
                 VV,  // Output Data VV (modified with inserted data)
                 VV,  // Data items to insert (must be same type as output data VV)
@@ -903,7 +903,7 @@ IndexOrder_VV (
 // Available      6.2.0
 //
 
-[_licensed] void
+[_public] void
 InitIndex_VV (
               VV,   // Index VV to initialize (type INT)
               int   // Final length of VV (-1 to use current length).
@@ -1218,7 +1218,7 @@ RangeDouble_VV (
 // Available  5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReFid_VV (
           VV,    // VV to resample
           real,  // New fid start
@@ -1240,7 +1240,7 @@ ReFid_VV (
 // Available    5.0.0
 //
 
-[_licensed] void
+[_public] void
 ReFidVV_VV (
             VV,  // VV to resample
             VV   // VV model (fid increment and start)
@@ -1255,7 +1255,7 @@ ReFidVV_VV (
 // Available     5.1.1
 //
 
-[_licensed] void
+[_public] void
 ReSample_VV (
              VV,    // VV to resample
              real,  // Current start fid
