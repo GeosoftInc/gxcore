@@ -23543,6 +23543,22 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
+                static void export_to_xml(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ExportToXML_MULTIVOXSET(
+                        gx_->pGeo, param1.c_str(), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
+                static void check_equal_to_legacy_voxel(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    CheckEqualToLegacyVoxel_MULTIVOXSET(
+                        gx_->pGeo, param1.c_str(), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
                 static void import_from_ubc(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, double param4, GXIPJPtr param5)
                 {
                     GXContextPtr gx_ = GXContext::current();

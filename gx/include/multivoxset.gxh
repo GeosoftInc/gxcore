@@ -176,6 +176,36 @@ ExportToBinary_MULTIVOXSET (
 
 
 //-----------------------------------------------------------------------------------------------------------
+// ExportToXML_MULTIVOXSET   Export a MULTIVOXSET to XML
+//
+// Returns                   Nothing
+//
+// Available                 9.3.0
+//
+
+[_public] void
+ExportToXML_MULTIVOXSET (
+                         string,  // Voxel file
+                         string   // XML file
+                         );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// CheckEqualToLegacyVoxel_MULTIVOXSET   Compare MULTIVOXSET to Legacy Voxel
+//
+// Returns                               Nothing
+//
+// Available                             9.3.0
+//
+
+[_public] void
+CheckEqualToLegacyVoxel_MULTIVOXSET (
+                                     string,  // Voxel file
+                                     string   // Legacy Voxel file
+                                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
 // ImportFromUBC_MULTIVOXSET   Import UBC file into a MultiVoxset
 //
 // Returns                     Nothing

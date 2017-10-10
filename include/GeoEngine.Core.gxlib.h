@@ -11064,6 +11064,28 @@ Std_ExportToBinary_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
                                GX_CONST GX_LONG_PTR,
                                GX_CONST GX_LONG_PTR);
 
+/*---------------- ExportToXML_MULTIVOXSET[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ExportToXML_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ExportToXML_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
+
+/*---------------- CheckEqualToLegacyVoxel_MULTIVOXSET[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CheckEqualToLegacyVoxel_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CheckEqualToLegacyVoxel_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR);
+
 /*---------------- ImportFromUBC_MULTIVOXSET[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
