@@ -24726,6 +24726,21 @@ namespace geosoft
                     return gx_->createPtr<GXITR>(ret);
                 }
 
+                int32_t group_itr_exists(int32_t param1)
+                {
+                    int32_t ret = iGroupITRExists_MVIEW(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                void delete_group_itr(int32_t param1)
+                {
+                    DeleteGroupITR_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+
                 void set_group_tpat(int32_t param1, GXTPATPtr param2)
                 {
                     SetGroupTPAT_MVIEW(
@@ -24739,6 +24754,51 @@ namespace geosoft
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
                     gx_->throw_on_error();
                     return gx_->createPtr<GXTPAT>(ret);
+                }
+
+                int32_t group_tpat_exists(int32_t param1)
+                {
+                    int32_t ret = iGroupTPATExists_MVIEW(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                void delete_group_tpat(int32_t param1)
+                {
+                    DeleteGroupTPAT_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+
+                int32_t group_storage_exists(int32_t param1, const gx_string_type& param2)
+                {
+                    int32_t ret = iGroupStorageExists_MVIEW(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), param2.c_str());
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                GXBFPtr read_group_storage(int32_t param1, const gx_string_type& param2)
+                {
+                    int32_t ret = ReadGroupStorage_MVIEW(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), param2.c_str());
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXBF>(ret);
+                }
+
+                void delete_group_storage(int32_t param1, const gx_string_type& param2)
+                {
+                    DeleteGroupStorage_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
+                void write_group_storage(int32_t param1, const gx_string_type& param2, GXBFPtr param3)
+                {
+                    WriteGroupStorage_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), param2.c_str(), reinterpret_cast<const long*>(&gx_->handle(param3)));
+                    gx_->throw_on_error();
                 }
 
                 void copy_marked_groups(GXMVIEWPtr param1)

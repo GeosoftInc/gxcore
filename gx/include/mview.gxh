@@ -3268,6 +3268,12 @@ DrawVectors3D_MVIEW (
 //
 // Returns             Nothing
 //
+// Notes               
+//                     A group ITR associate a color distribution with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                     Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                     to refresh the objects.
+//                     
+//
 // Available           9.3.0
 //
 
@@ -3284,6 +3290,12 @@ SetGroupITR_MVIEW (
 //
 // Returns             ITR
 //
+// Notes               
+//                     A group ITR associate a color distribution with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                     Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                     to refresh the objects.
+//                     
+//
 // Available           9.3.0
 //
 
@@ -3295,9 +3307,57 @@ GetGroupITR_MVIEW (
 
 
 //-----------------------------------------------------------------------------------------------------------
+// iGroupITRExists_MVIEW   Determine if group ITR exists.
+//
+// Returns                 1 - ITR exists, 0 - ITR does not exist
+//
+// Notes                   
+//                         A group ITR associate a color distribution with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                         Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                         to refresh the objects.
+//                         
+//
+// Available               9.3.0
+//
+
+[_public] int
+iGroupITRExists_MVIEW (
+                       MVIEW,  // View
+                       int     // Group number
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// DeleteGroupITR_MVIEW   Deletes existing ITR associated with a group.
+//
+// Returns                Nothing
+//
+// Notes                  
+//                        A group ITR associate a color distribution with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                        Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                        to refresh the objects.
+//                        
+//
+// Available              9.3.0
+//
+
+[_public] void
+DeleteGroupITR_MVIEW (
+                      MVIEW,  // View
+                      int     // Group number
+                      );
+
+
+//-----------------------------------------------------------------------------------------------------------
 // SetGroupTPAT_MVIEW   Set group TPAT
 //
 // Returns              Nothing
+//
+// Notes                
+//                      A group TPAT associate a thematic color map with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                      Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                      to refresh the objects.
+//                      
 //
 // Available            9.3.0
 //
@@ -3315,6 +3375,12 @@ SetGroupTPAT_MVIEW (
 //
 // Returns              TPAT
 //
+// Notes                
+//                      A group TPAT associate a thematic color map with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                      Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                      to refresh the objects.
+//                      
+//
 // Available            9.3.0
 //
 
@@ -3323,6 +3389,121 @@ GetGroupTPAT_MVIEW (
                     MVIEW,  // View
                     int     // Group number
                     );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGroupTPATExists_MVIEW   Determine if group TPAT exists.
+//
+// Returns                  1 - TPAT exists, 0 - TPAT does not exist
+//
+// Notes                    
+//                          A group TPAT associate a thematic color map with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                          Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                          to refresh the objects.
+//                          
+//
+// Available                9.3.0
+//
+
+[_public] int
+iGroupTPATExists_MVIEW (
+                        MVIEW,  // View
+                        int     // Group number
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// DeleteGroupTPAT_MVIEW   Deletes existing TPAT associated with a group.
+//
+// Returns                 Nothing
+//
+// Notes                   
+//                         A group TPAT associate a thematic color map with mixed vector groups (e.g. Drillhole Lithology tubes) groups. Used by legend UI support in 3D.
+//                         Note that modifying this information does not currently change the group contents and a group needs to be regenerated (e.g. with maker)
+//                         to refresh the objects.
+//                         
+//
+// Available               9.3.0
+//
+
+[_public] void
+DeleteGroupTPAT_MVIEW (
+                       MVIEW,  // View
+                       int     // Group number
+                       );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// iGroupStorageExists_MVIEW   Determine if generic storage associated with a group exists.
+//
+// Returns                     1 - storage exists, 0 - storage does not exist
+//
+// Notes                       External API users should not use storage names starting with "Geosoft"
+//
+// Available                   9.3.0
+//
+
+[_public] int
+iGroupStorageExists_MVIEW (
+                           MVIEW,   // View
+                           int,     // Group number
+                           string   // Storage name
+                           );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// ReadGroupStorage_MVIEW   Reads existing generic storage associated with a group into an in-memory BF.
+//
+// Returns                  BF Object
+//
+// Notes                    External API users should not use storage names starting with "Geosoft"
+//
+// Available                5.0.0
+//
+
+[_public] BF
+ReadGroupStorage_MVIEW (
+                        MVIEW,   // View
+                        int,     // Group number
+                        string   // Storage name
+                        );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// DeleteGroupStorage_MVIEW   Deletes existing generic storage associated with a group.
+//
+// Returns                    Nothing
+//
+// Notes                      External API users should not use storage names starting with "Geosoft"
+//
+// Available                  9.3.0
+//
+
+[_public] void
+DeleteGroupStorage_MVIEW (
+                          MVIEW,   // View
+                          int,     // Group number
+                          string   // Storage name
+                          );
+
+
+//-----------------------------------------------------------------------------------------------------------
+// WriteGroupStorage_MVIEW   Open generic existing storage associated with a group for reading.
+//
+// Returns                   Nothing
+//
+// Notes                     External API users should not use storage names starting with "Geosoft"
+//
+// Available                 9.3.0
+//
+
+[_public] void
+WriteGroupStorage_MVIEW (
+                         MVIEW,   // View
+                         int,     // Group number
+                         string,  // Storage name
+                         BF       // BF to read from
+                         );
 
 
 //-----------------------------------------------------------------------------------------------------------
