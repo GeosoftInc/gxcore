@@ -153,8 +153,8 @@ GetString_TB (
               TB,          // Table handle
               int,         // Row of element to Get
               int,         // Column of element to Get
-              var string,  // returned string
-              int          // maximum string size
+              var string,  // Returned string
+              int          // Maximum string size
               );
 
 #define _GetString_TB(A, B, C, D) GetString_TB(A, B, C, D, sizeof(D))
@@ -283,9 +283,9 @@ iNumRows_TB (
 
 [_public] void
 LoadDB_TB (
-           TB,       // table
-           DB,       // database
-           DB_SYMB   // line
+           TB,       // Table
+           DB,       // Database
+           DB_SYMB   // Line
            );
 
 
@@ -338,9 +338,9 @@ Save_TB (
 
 [_public] void
 SaveDB_TB (
-           TB,       // table
-           DB,       // database
-           DB_SYMB   // line
+           TB,       // Table
+           DB,       // Database
+           DB_SYMB   // Line
            );
 
 

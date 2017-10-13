@@ -84,9 +84,9 @@ Destroy_GER (
 [_public] int
 IiGet_GER (
            GER,         // GER Object
-           int,         // message number
-           var string,  // message string returned, replacements filtered
-           int          // maximum string length
+           int,         // Message number
+           var string,  // Message string returned, replacements filtered
+           int          // Maximum string length
            );
 
 #define iGet_GER(A, B, C) IiGet_GER(A, B, C, sizeof(C))
@@ -103,8 +103,8 @@ IiGet_GER (
 [_public] void
 SetInt_GER (
             GER,     // GER Object
-            string,  // replacement string (ie. "%1")
-            int      // setting
+            string,  // Replacement string (ie. "%1")
+            int      // Setting
             );
 
 
@@ -119,8 +119,8 @@ SetInt_GER (
 [_public] void
 SetReal_GER (
              GER,     // GER Object
-             string,  // replacement string (ie. "%1")
-             real     // setting
+             string,  // Replacement string (ie. "%1")
+             real     // Setting
              );
 
 
@@ -135,8 +135,8 @@ SetReal_GER (
 [_public] void
 SetString_GER (
                GER,     // GER Object
-               string,  // replacement string (ie. "%1")
-               string   // setting
+               string,  // Replacement string (ie. "%1")
+               string   // Setting
                );
 
 

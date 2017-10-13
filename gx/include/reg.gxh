@@ -62,8 +62,8 @@ Clear_REG (
 
 [_public] void
 Copy_REG (
-          REG,  // destination
-          REG   // source
+          REG,  // Destination
+          REG   // Source
           );
 
 
@@ -77,7 +77,7 @@ Copy_REG (
 
 [_public] REG
 Create_REG (
-            int   // maximum size of "parameter=setting" string.
+            int   // Maximum size of "parameter=setting" string.
             );
 
 
@@ -157,7 +157,7 @@ GetInt_REG (
 [_public] void
 GetOne_REG (
             REG,         // Handle to REG object (stores control parameters)
-            int,         // sequential number of REG entry
+            int,         // Sequential number of REG entry
             var string,  // String to put parameter name
             int,         // Size of parameter String
             var string,  // String to put data into.
@@ -245,8 +245,8 @@ MatchString_REG (
 
 [_public] void
 Merge_REG (
-           REG,  // destination
-           REG,  // source
+           REG,  // Destination
+           REG,  // Source
            int   // <define>REG_MERGE</define>
            );
 

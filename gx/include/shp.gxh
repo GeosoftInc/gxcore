@@ -124,7 +124,7 @@ Destroy_SHP (
 [_public] int
 iAddIntField_SHP (
                   SHP,     // SHP object
-                  string   // field name
+                  string   // Field name
                   );
 
 
@@ -142,8 +142,8 @@ iAddIntField_SHP (
 [_public] int
 iAddRealField_SHP (
                    SHP,     // SHP object
-                   string,  // field name
-                   int      // number of decimal places
+                   string,  // Field name
+                   int      // Number of decimal places
                    );
 
 
@@ -161,7 +161,7 @@ iAddRealField_SHP (
 [_public] int
 iAddStringField_SHP (
                      SHP,     // SHP object
-                     string,  // field name
+                     string,  // Field name
                      int      // Maximum number of characters in the string
                      );
 
@@ -177,7 +177,7 @@ iAddStringField_SHP (
 [_public] int
 iFindField_SHP (
                 SHP,     // SHP object
-                string   // field name
+                string   // Field name
                 );
 
 
@@ -226,7 +226,7 @@ iNumRecords_SHP (
 //-----------------------------------------------------------------------------------------------------------
 // iType_SHP   Get the SHP object's geometry type.
 //
-// Returns     the SHP object's geometry type (<define>SHP_GEOM_TYPE</define>)
+// Returns     The SHP object's geometry type (<define>SHP_GEOM_TYPE</define>)
 //
 // Available   7.2.0
 //
@@ -301,8 +301,8 @@ SetArcZ_SHP (
 [_public] void
 SetInt_SHP (
             SHP,  // SHP object
-            int,  // data field index
-            int   // input int value
+            int,  // Data field index
+            int   // Input int value
             );
 
 
@@ -324,7 +324,7 @@ SetInt_SHP (
 [_public] void
 SetIPJ_SHP (
             SHP,  // SHP object
-            IPJ   // input IPJ
+            IPJ   // Input IPJ
             );
 
 
@@ -417,8 +417,8 @@ SetPolygonZ_SHP (
 [_public] void
 SetReal_SHP (
              SHP,   // SHP object
-             int,   // data field index
-             real   // input real value
+             int,   // Data field index
+             real   // Input real value
              );
 
 
@@ -435,8 +435,8 @@ SetReal_SHP (
 [_public] void
 SetString_SHP (
                SHP,     // SHP object
-               int,     // data field index
-               string   // input string value
+               int,     // Data field index
+               string   // Input string value
                );
 
 

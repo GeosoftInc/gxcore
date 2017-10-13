@@ -110,7 +110,7 @@ Current_ARCDB (
 ExportToDB_ARCDB (
                   ARCDB,   // Handle to table
                   DB,      // Database
-                  string,  // import template name
+                  string,  // Import template name
                   string   // Oasis montaj line name to create (overrides template value)
                   );
 
@@ -209,7 +209,7 @@ iGetIUnknown_ARCDB (
 [_extended] int
 iImportChemDatabaseWizard_ARCDB (
                                  ARCDB,   // Handle to table
-                                 string,  // template to make
+                                 string,  // Template to make
                                  int      // <define>IMPCH_TYPE</define>
                                  );
 

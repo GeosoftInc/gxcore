@@ -33,18 +33,18 @@
 //
 // Layout constraint specifiers
 //
-// LAYOUT_CONSTR_LEFT      adjust rectangle's left side
-// LAYOUT_CONSTR_RIGHT     adjust rectangle's right side
-// LAYOUT_CONSTR_TOP       adjust rectangle's top side
-// LAYOUT_CONSTR_BOTTOM    adjust rectangle's bottom side
-// LAYOUT_CONSTR_WIDTH     adjust rectangle's width
-// LAYOUT_CONSTR_HEIGHT    adjust rectangle's height
-// LAYOUT_CONSTR_HCENTER   center rectangle with respect to width
-// LAYOUT_CONSTR_VCENTER   center rectangle with respect to height
-// LAYOUT_CONSTR_MOVEL     move rectangle, with respect to left
-// LAYOUT_CONSTR_MOVER     move rectangle, with respect to right
-// LAYOUT_CONSTR_MOVET     move rectangle, with respect to top
-// LAYOUT_CONSTR_MOVEB     move rectangle, with respect to bottom
+// LAYOUT_CONSTR_LEFT      Adjust rectangle's left side
+// LAYOUT_CONSTR_RIGHT     Adjust rectangle's right side
+// LAYOUT_CONSTR_TOP       Adjust rectangle's top side
+// LAYOUT_CONSTR_BOTTOM    Adjust rectangle's bottom side
+// LAYOUT_CONSTR_WIDTH     Adjust rectangle's width
+// LAYOUT_CONSTR_HEIGHT    Adjust rectangle's height
+// LAYOUT_CONSTR_HCENTER   Center rectangle with respect to width
+// LAYOUT_CONSTR_VCENTER   Center rectangle with respect to height
+// LAYOUT_CONSTR_MOVEL     Move rectangle, with respect to left
+// LAYOUT_CONSTR_MOVER     Move rectangle, with respect to right
+// LAYOUT_CONSTR_MOVET     Move rectangle, with respect to top
+// LAYOUT_CONSTR_MOVEB     Move rectangle, with respect to bottom
 //
 //===========================================================================================================
 

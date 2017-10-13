@@ -181,7 +181,7 @@ Dummy_PG (
 
 [_public] int
 iEType_PG (
-           PG   // source PG
+           PG   // Source PG
            );
 
 
@@ -195,7 +195,7 @@ iEType_PG (
 
 [_public] int
 iNCols_PG (
-           PG   // source PG
+           PG   // Source PG
            );
 
 
@@ -209,7 +209,7 @@ iNCols_PG (
 
 [_public] int
 iNRows_PG (
-           PG   // source PG
+           PG   // Source PG
            );
 
 
@@ -223,7 +223,7 @@ iNRows_PG (
 
 [_public] int
 iNSlices_PG (
-             PG   // source PG
+             PG   // Source PG
              );
 
 

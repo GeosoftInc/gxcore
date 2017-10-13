@@ -24,8 +24,8 @@
 
 [_public] void
 LaunchDigitizationUI_STRINGS (
-                              string,  // string file
-                              string   // definition guid
+                              string,  // String file
+                              string   // Definition guid
                               );
 
 

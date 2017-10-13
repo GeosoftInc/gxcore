@@ -25,8 +25,8 @@
 
 [_licensed] void
 ConvertCG3toRAW_MISC (
-                      string,  // name of the CG3 file
-                      string,  // name of the RAW file
+                      string,  // Name of the CG3 file
+                      string,  // Name of the RAW file
                       int      // TideCorr Option: 1 - use geosoft, 0 - use CG3/CG5
                       );
 
@@ -41,8 +41,8 @@ ConvertCG3toRAW_MISC (
 
 [_licensed] void
 ConvertCG5toRAW_MISC (
-                      string,  // name of the CG5 file
-                      string,  // name of the RAW file
+                      string,  // Name of the CG5 file
+                      string,  // Name of the RAW file
                       int      // TideCorr Option: 1 - use geosoft, 0 - use CG3/CG5
                       );
 
@@ -67,9 +67,9 @@ ConvertCG5toRAW_MISC (
 
 [_licensed] void
 Ukoa2Tbl_MISC (
-               string,  // name of the UKOA file
-               string,  // line name alias table
-               string   // name of the output table
+               string,  // Name of the UKOA file
+               string,  // Line name alias table
+               string   // Name of the output table
                );
 
 

@@ -109,11 +109,11 @@
 //
 // Voxel log gridding options
 //
-// VOX_GRID_LOGOPT_LINEAR                 linear
-// VOX_GRID_LOGOPT_LOG_SAVELINEAR         log, save as linear
-// VOX_GRID_LOGOPT_LOGLINEAR_SAVELINEAR   log-linear, save as linear
-// VOX_GRID_LOGOPT_LOG_SAVELOG            log, save as log
-// VOX_GRID_LOGOPT_LOGLINEAR_SAVELOG      log-linear, save as log
+// VOX_GRID_LOGOPT_LINEAR                 Linear
+// VOX_GRID_LOGOPT_LOG_SAVELINEAR         Log, save as linear
+// VOX_GRID_LOGOPT_LOGLINEAR_SAVELINEAR   Log-linear, save as linear
+// VOX_GRID_LOGOPT_LOG_SAVELOG            Log, save as log
+// VOX_GRID_LOGOPT_LOGLINEAR_SAVELOG      Log-linear, save as log
 //
 //===========================================================================================================
 
@@ -380,8 +380,8 @@ ExportXYZ_VOX (
 Filter_VOX (
             VOX,     // VOX object
             int,     // <define>VOX_FILTER3D</define>
-            string,  // filter file, if filter is VOX_FILTER3D_FILE
-            int,     // number of filter passes
+            string,  // Filter file, if filter is VOX_FILTER3D_FILE
+            int,     // Number of filter passes
             int,     // (1: interpolate dummies)
             string   // Output voxel file name.
             );
@@ -1389,10 +1389,10 @@ SampleCDI_VOX (
                int,     // Line handle
                int,     // X channel handle
                int,     // Y channel handle
-               int,     // depth array channel handle
-               int,     // depths sign: 0 - positive down, 1 - negative down
-               int,     // elevation channel handle (can be NULLSYMB)
-               int,     // interpolation mode: 0 - linear, 1 - nearest
+               int,     // Depth array channel handle
+               int,     // Depths sign: 0 - positive down, 1 - negative down
+               int,     // Elevation channel handle (can be NULLSYMB)
+               int,     // Interpolation mode: 0 - linear, 1 - nearest
                string   // Output channel name
                );
 
@@ -1416,7 +1416,7 @@ SampleCDIToTopography_VOX (
                            int,     // X channel handle
                            int,     // Y channel handle
                            VV,      // Z values to sample at each X, Y
-                           int,     // interpolation mode: 0 - linear, 1 - nearest
+                           int,     // Interpolation mode: 0 - linear, 1 - nearest
                            string,  // Output data array channel name
                            string   // Output topography channel name
                            );
@@ -1440,8 +1440,8 @@ SampleVV_VOX (
               VV,   // X locations (input)
               VV,   // Y locations (input)
               VV,   // Z locations (input)
-              int,  // interpolation mode: 0 - linear, 1 - nearest
-              VV    // returned values
+              int,  // Interpolation mode: 0 - linear, 1 - nearest
+              VV    // Returned values
               );
 
 
@@ -1490,7 +1490,7 @@ SetLocation_VOX (
 
 [_public] void
 SetMETA_VOX (
-             VOX,   // source VOX
+             VOX,   // Source VOX
              META   // META object to add to VOX's meta
              );
 
@@ -1631,7 +1631,7 @@ SubsetToRealExtents_VOX (
 
 [_licensed] void
 Sync_VOX (
-          string   // voxel name
+          string   // Voxel name
           );
 
 

@@ -325,7 +325,7 @@ _hAssayDB_DH (
 _hAssaySymb_DH (
                 DH,   // hDH object
                 int,  // Assay dataset number
-                int   // hole index number
+                int   // Hole index number
                 );
 #define hAssaySymb_DH _hAssaySymb_DH
 
@@ -394,7 +394,7 @@ _hDipAzSurveyDB_DH (
 [_extended] DB_SYMB
 _hDipAzSurveySymb_DH (
                       DH,   // hDH object
-                      int   // hole index number
+                      int   // Hole index number
                       );
 #define hDipAzSurveySymb_DH _hDipAzSurveySymb_DH
 
@@ -429,7 +429,7 @@ _hENSurveyDB_DH (
 [_extended] DB_SYMB
 _hENSurveySymb_DH (
                    DH,   // hDH object
-                   int   // hole index number
+                   int   // Hole index number
                    );
 #define hENSurveySymb_DH _hENSurveySymb_DH
 
@@ -462,7 +462,7 @@ AddSurveyTable_DH (
 [_extended] void
 AssayHoleLST_DH (
                  DH,   // DH Handle
-                 int,  // index of the assay database
+                 int,  // Index of the assay database
                  LST   // LST handle
                  );
 
@@ -531,18 +531,18 @@ Clean_DH (
 CompositeDB_DH (
                 DH,      // DH Object
                 DB,      // Input assay DB object
-                DB,      // output composite DB object
+                DB,      // Output composite DB object
                 int,     // <define>DH_COMPSTDB_HOLSEL</define>
                 int,     // <define>DH_COMPSTDB_INTSEL</define>
-                real,    // fixed interval length
-                string,  // name of lithology cannel
-                string,  // name of interval file
-                string,  // name of Weight channel
+                real,    // Fixed interval length
+                string,  // Name of lithology cannel
+                string,  // Name of interval file
+                string,  // Name of Weight channel
                 real,    // dRej1Val for intervals short than, (GS_R8DM for no action)
                 real,    // dRej2Val for intervals gap greater than, (GS_R8DM for no action)
                 real,    // dRej3Val for Rej3Ch with Rej3Op, (GS_R8DM for no action)
                 int,     // dRej3Op: 0: >, 1: >=, 2: <, 3: <=
-                string   // name of Rej3Ch channel
+                string   // Name of Rej3Ch channel
                 );
 
 
@@ -891,11 +891,11 @@ GetDataType_DH (
 [_extended] void
 GetDefaultSection_DH (
                       DH,        // DH Object
-                      var real,  // azimuth of section (returned)
-                      var real,  // corner X (Easting) of section (returned)
-                      var real,  // corner Y (Northing) of section (returned)
-                      var real,  // section length (returned)
-                      var real   // section width (returned)
+                      var real,  // Azimuth of section (returned)
+                      var real,  // Corner X (Easting) of section (returned)
+                      var real,  // Corner Y (Northing) of section (returned)
+                      var real,  // Section length (returned)
+                      var real   // Section width (returned)
                       );
 
 
@@ -968,7 +968,7 @@ GetIPJ_DH (
 [_extended] void
 GetMapNamesVV_DH (
                   DH,  // DH object
-                  VV   // returned map names (string type VV)
+                  VV   // Returned map names (string type VV)
                   );
 
 
@@ -1218,8 +1218,8 @@ iFindHole_DH (
 [_extended] void
 IGetCollarTableDB_DH (
                       DH,          // DH object
-                      var string,  // returned file name
-                      int          // buffer size for the file name
+                      var string,  // Returned file name
+                      int          // Buffer size for the file name
                       );
 
 #define GetCollarTableDB_DH(A, B) IGetCollarTableDB_DH(A, B, sizeof(B))
@@ -1240,9 +1240,9 @@ IGetCollarTableDB_DH (
 [_extended] void
 IGetInfo_DH (
              DH,          // DH Handle
-             int,         // hole index
+             int,         // Hole index
              string,      // Name of information
-             var string,  // buffer to place information
+             var string,  // Buffer to place information
              int          // Size of buffer
              );
 
@@ -1260,8 +1260,8 @@ IGetInfo_DH (
 [_extended] void
 IGetProjectName_DH (
                     DH,          // DH object
-                    var string,  // returned string
-                    int          // buffer size for the project name
+                    var string,  // Returned string
+                    int          // Buffer size for the project name
                     );
 
 #define GetProjectName_DH(A, B) IGetProjectName_DH(A, B, sizeof(B))
@@ -1407,8 +1407,8 @@ IGetTemplateInfoEx_DH (
 IGetUnits_DH (
               DH,          // DH Handle
               var string,  // Units (i.e. "m")
-              int,         // length of Units string
-              var real     // conversion (units/m)
+              int,         // Length of Units string
+              var real     // Conversion (units/m)
               );
 
 #define GetUnits_DH(A, B, C) IGetUnits_DH(A, B, sizeof(B), C)
@@ -2015,7 +2015,7 @@ iSliceSelectionToolGUI_DH (
 [_extended] int
 iUpdateSurveyFromCollar_DH (
                             DH,   // DH handle
-                            int   // hole index
+                            int   // Hole index
                             );
 
 
@@ -2090,7 +2090,7 @@ MaskPLY_DH (
             PLY,     // Masking polygon
             IPJ,     // Projection from data to polygon coordinates
             real,    // Slice thickness - rDUMMY for no limiting thickness
-            string,  // name of mask channel
+            string,  // Name of mask channel
             int,     // <define>DH_HOLES</define>
             int      // <define>DH_MASK</define>
             );
@@ -2121,7 +2121,7 @@ Open_DH (
 [_extended] void
 OpenJob_DH (
             DH,      // DH object
-            string,  // job file name
+            string,  // Job file name
             int      // <define>DH_PLOT</define>
             );
 
@@ -2444,15 +2444,15 @@ PlotHolesOnSection_DH (
 ReSurveyEastNorth_DH (
                       DH,        // DH object
                       string,    // Hole ID (for error messages)
-                      VV,        // input East
-                      VV,        // input North
-                      VV,        // input RL
-                      VV,        // returned depths down the hole
-                      real,      // input collar East
-                      real,      // input collar North
-                      real,      // input collar RL
-                      real,      // input top of hole depth
-                      var real   // returned bottom depth
+                      VV,        // Input East
+                      VV,        // Input North
+                      VV,        // Input RL
+                      VV,        // Returned depths down the hole
+                      real,      // Input collar East
+                      real,      // Input collar North
+                      real,      // Input collar RL
+                      real,      // Input top of hole depth
+                      var real   // Returned bottom depth
                       );
 
 
@@ -2633,7 +2633,7 @@ SaveDataParametersINI_DH (
 [_extended] void
 SaveJob_DH (
             DH,      // DH object
-            string,  // job file name
+            string,  // Job file name
             int      // <define>DH_PLOT</define>
             );
 
@@ -2720,7 +2720,7 @@ SelectHoles_DH (
 [_extended] void
 SelectName_DH (
                DH,      // DH object
-               string,  // mask
+               string,  // Mask
                int,     // 0 - deselect, 1 - select
                int      // 0 - overwrite, 1 - append
                );
@@ -2832,7 +2832,7 @@ SetCurrentViewName_DH (
 [_extended] void
 SetInfo_DH (
             DH,      // DH Handle
-            int,     // hole index
+            int,     // Hole index
             string,  // Name of information
             string   // Information
             );
@@ -2894,7 +2894,7 @@ SetMAP_DH (
 [_extended] void
 SetNewIPJ_DH (
               DH,      // DH object
-              string   // project database name
+              string   // Project database name
               );
 
 
@@ -2948,7 +2948,7 @@ SetTemplateBlob_DH (
 SignificantIntersectionsDB_DH (
                                DH,      // DH Object
                                DB,      // Input assay DB object
-                               DB,      // output composite DB object
+                               DB,      // Output composite DB object
                                int,     // <define>DH_COMPSTDB_HOLSEL</define>
                                string,  // The primary assay channel.
                                real,    // Minimum Cut off grade for Primary Assay
@@ -2981,7 +2981,7 @@ TestImportLAS_DH (
                   DH,       // DH Handle
                   string,   // Assay table name
                   string,   // LAS file name
-                  real,     // averaging/desampling interval
+                  real,     // Averaging/desampling interval
                   WA,       // Log file handle
                   var int   // 1 returned if problems found
                   );
@@ -3041,7 +3041,7 @@ UpdateCollarTable_DH (
 [_extended] void
 UpdateHoleExtent_DH (
                      DH,   // DH handle
-                     int   // hole index
+                     int   // Hole index
                      );
 
 
@@ -3318,7 +3318,7 @@ IGetChanCodeInfo_DH (
                      DH,          // DH object
                      string,      // Input channel code "[Assay] channel"
                      var int,     // Returned assay database index
-                     var string,  // channel name
+                     var string,  // Channel name
                      int          // Buffer size for channel name
                      );
 
@@ -3345,9 +3345,9 @@ iGridIntersection_DH (
                       real,      // Dip (positive up) in degrees
                       real,      // Azimuth in degrees
                       string,    // DEM grid
-                      var real,  // returned intersection point X
-                      var real,  // returned intersection point Y
-                      var real   // returned intersection point Z
+                      var real,  // Returned intersection point X
+                      var real,  // Returned intersection point Y
+                      var real   // Returned intersection point Z
                       );
 
 
@@ -3372,7 +3372,7 @@ iGridIntersection_DH (
 LithoGrid3D_DH (
                 DH,      // DH Object
                 string,  // Lithology channel code
-                TPAT,    // Codes, colours etc.
+                TPAT,    // Codes, colors etc.
                 string,  // Name of VOX Persistent Storage file
                 real,    // Cell Size (GS_R8DM for automatic calculation)
                 real,    // Max gap to skip when compositing (GS_R8DM for none)

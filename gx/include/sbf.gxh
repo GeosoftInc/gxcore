@@ -67,7 +67,7 @@
 [_public] SBF
 Create_SBF (
             SBF,     // Parent SBF
-            string,  // directory name to open / create
+            string,  // Directory name to open / create
             int      // <define>SBF_OPEN</define>
             );
 

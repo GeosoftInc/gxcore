@@ -96,7 +96,7 @@ Destroy_VM (
 [_public] int
 iGetInt_VM (
             VM,   // VM
-            int   // element wanted
+            int   // Element wanted
             );
 
 
@@ -119,9 +119,9 @@ iGetInt_VM (
 [_public] void
 IGetString_VM (
                VM,          // VM
-               int,         // element wanted
-               var string,  // string in which to place element
-               int          // maximum length of the string
+               int,         // Element wanted
+               var string,  // String in which to place element
+               int          // Maximum length of the string
                );
 
 #define GetString_VM(A, B, C) IGetString_VM(A, B, C, sizeof(C))
@@ -154,7 +154,7 @@ iLength_VM (
 [_public] void
 ReSize_VM (
            VM,   // VM to resize
-           int   // new size (number of elements)
+           int   // New size (number of elements)
            );
 
 
@@ -172,7 +172,7 @@ ReSize_VM (
 [_public] real
 rGetReal_VM (
              VM,   // VM
-             int   // element wanted
+             int   // Element wanted
              );
 
 
@@ -195,8 +195,8 @@ rGetReal_VM (
 [_public] void
 SetInt_VM (
            VM,   // VM
-           int,  // element to set
-           int   // value to set
+           int,  // Element to set
+           int   // Value to set
            );
 
 
@@ -219,8 +219,8 @@ SetInt_VM (
 [_public] void
 SetReal_VM (
             VM,    // VM
-            int,   // element to set
-            real   // value to set
+            int,   // Element to set
+            real   // Value to set
             );
 
 
@@ -243,8 +243,8 @@ SetReal_VM (
 [_public] void
 SetString_VM (
               VM,      // VM
-              int,     // element to set
-              string   // string to set
+              int,     // Element to set
+              string   // String to set
               );
 
 

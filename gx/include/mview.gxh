@@ -18,8 +18,8 @@
 // Notes
 //
 // 
-// CSYMB groups (colour symbols) contain data and rules for
-// presenting the data as colour symbols.  See ColSymbol_MVIEW
+// CSYMB groups (color symbols) contain data and rules for
+// presenting the data as color symbols.  See ColSymbol_MVIEW
 // and the CSYMB class.
 // 
 // AGG groups (aggregates) contain images.  See Aggregate_MVIEW
@@ -416,7 +416,7 @@
 //
 // Define	MVIEW_NAME_LENGTH
 //
-// maximum length for view and group names
+// Maximum length for view and group names
 //
 // MVIEW_NAME_LENGTH   Maximum Length (1040)
 //
@@ -461,7 +461,7 @@
 //                     Locations and attributes (sizes, thicknesses, angles)
 //                     will be transformed to the view coordinate system.
 //                     
-// MVIEW_PJ_ON         mode before the last MVIEW_PJ_OFF.
+// MVIEW_PJ_ON         Mode before the last MVIEW_PJ_OFF.
 //
 //===========================================================================================================
 
@@ -530,10 +530,10 @@
 //
 // Coordinate systems defines
 //
-// MVIEW_UNIT_VIEW            view coordinates
-// MVIEW_UNIT_PLOT            plot hi-metric (mm*100) on the map.
-// MVIEW_UNIT_MM              plot mm on the map.
-// MVIEW_UNIT_VIEW_UNWARPED   view coordinates without a warp if there is one
+// MVIEW_UNIT_VIEW            View coordinates
+// MVIEW_UNIT_PLOT            Plot hi-metric (mm*100) on the map.
+// MVIEW_UNIT_MM              Plot mm on the map.
+// MVIEW_UNIT_VIEW_UNWARPED   View coordinates without a warp if there is one
 //
 //===========================================================================================================
 
@@ -812,8 +812,8 @@ FontWeightLST_MVIEW (
 [_public] void
 GetAGGFileNames_MVIEW (
                        MVIEW,   // View
-                       string,  // group name
-                       VV       // returned string VV of type -STR_FILE
+                       string,  // Group name
+                       VV       // Returned string VV of type -STR_FILE
                        );
 
 
@@ -912,12 +912,12 @@ PolyLine3D_MVIEW (
 
 [_public] void
 RelocateGroup_MVIEW (
-                     MVIEW,   // view
-                     string,  // group name
-                     real,    // area X minimum
-                     real,    // area Y minimum
-                     real,    // area X maximum
-                     real,    // area Y maximum
+                     MVIEW,   // View
+                     string,  // Group name
+                     real,    // Area X minimum
+                     real,    // Area Y minimum
+                     real,    // Area X maximum
+                     real,    // Area Y maximum
                      int      // <define>MVIEW_RELOCATE</define>
                      );
 
@@ -999,7 +999,7 @@ UpdateMETAfromGroup_MVIEW (
 [_public] void
 DeletePlane_MVIEW (
                    MVIEW,  // MVIEW object
-                   int,    // plane number to delete
+                   int,    // Plane number to delete
                    int     // TRUE to delete all groups on the plane
                    );
 
@@ -1095,7 +1095,7 @@ iCreatePlane_MVIEW (
 [_public] int
 iFindPlane_MVIEW (
                   MVIEW,   // MVIEW object
-                  string   // name of the plane
+                  string   // Name of the plane
                   );
 
 
@@ -1117,8 +1117,8 @@ iFindPlane_MVIEW (
 [_public] void
 IGetDefPlane_MVIEW (
                     MVIEW,       // MVIEW handle
-                    var string,  // name
-                    int          // maximum name length
+                    var string,  // Name
+                    int          // Maximum name length
                     );
 
 #define GetDefPlane_MVIEW(A, B) IGetDefPlane_MVIEW(A, B, sizeof(B))
@@ -1181,7 +1181,7 @@ iIsSection_MVIEW (
 [_public] void
 ListPlaneGroups_MVIEW (
                        MVIEW,  // MVIEW object
-                       int,    // plane number
+                       int,    // Plane number
                        LST     // List of plane names and numbers
                        );
 
@@ -1256,7 +1256,7 @@ SetAllNewGroupsToPlane_MVIEW (
 [_public] void
 SetDefPlane_MVIEW (
                    MVIEW,   // MVIEW handle
-                   string   // name
+                   string   // Name
                    );
 
 
@@ -1864,7 +1864,7 @@ Color2RGB_MVIEW (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// ColorDescr_MVIEW   Convert a colour to a colour string label
+// ColorDescr_MVIEW   Convert a color to a color string label
 //
 // Returns            Nothing
 //
@@ -1876,26 +1876,26 @@ Color2RGB_MVIEW (
 [_public] void
 ColorDescr_MVIEW (
                   int,         // COL_ANY variable
-                  var string,  // colour descriptor returned
-                  int          // length of the string
+                  var string,  // Color descriptor returned
+                  int          // Length of the string
                   );
 
 #define _ColorDescr_MVIEW(A, B) ColorDescr_MVIEW(A, B, sizeof(B))
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iColor_MVIEW   Get a color from a colour string label
+// iColor_MVIEW   Get a color from a color string label
 //
-// Returns        colour int
+// Returns        Color int
 //
 // Notes          
-//                Colour strings may be "R","G","B","C","M","Y",
+//                Color strings may be "R","G","B","C","M","Y",
 //                "H","S","V", or "K" or a combination of these
 //                characters, each followed by up to three digits
 //                specifying a number between 0 and 255.
 //                An empty string produce C_ANY_NONE.
 //                
-//                You must stay in the same colour model, RGB, CMY,
+//                You must stay in the same color model, RGB, CMY,
 //                HSV or K.
 //                
 //                For example "R", "R127G22", "H255S127V32"
@@ -1910,14 +1910,14 @@ ColorDescr_MVIEW (
 
 [_public] int
 iColor_MVIEW (
-              string   // colour name string
+              string   // Color name string
               );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // iColorCMY_MVIEW   Return CMY color.
 //
-// Returns           colour int based on color model.
+// Returns           Color int based on color model.
 //
 // Notes             Color component intensities must be in the range 0-255.
 //
@@ -1937,7 +1937,7 @@ iColorCMY_MVIEW (
 //-----------------------------------------------------------------------------------------------------------
 // iColorHSV_MVIEW   Return HSV color.
 //
-// Returns           colour int based on color model.
+// Returns           Color int based on color model.
 //
 // Notes             Color component intensities must be in the range 0-255.
 //
@@ -1957,7 +1957,7 @@ iColorHSV_MVIEW (
 //-----------------------------------------------------------------------------------------------------------
 // iColorRGB_MVIEW   Return RGB color.
 //
-// Returns           colour int based on color model.
+// Returns           Color int based on color model.
 //
 // Notes             Color component intensities must be in the range 0-255.
 //
@@ -2022,7 +2022,7 @@ ClipMode_MVIEW (
 [_public] void
 FillColor_MVIEW (
                  MVIEW,  // MVIEW handle
-                 int     // color
+                 int     // Color
                  );
 
 
@@ -2095,7 +2095,7 @@ LineStyle_MVIEW (
 [_public] void
 LineThick_MVIEW (
                  MVIEW,  // MVIEW handle
-                 real    // line thickness in view space units
+                 real    // Line thickness in view space units
                  );
 
 
@@ -2166,7 +2166,7 @@ PatDensity_MVIEW (
 //
 // Notes             
 //                   Pattern 0 is solid fill.(default)
-//                   Set the pattern colour using FillColor_MVIEW.
+//                   Set the pattern color using FillColor_MVIEW.
 //                   
 //                   Patterns are selected by ordinal value (pattern number)
 //                   from those defined in default.pat.  If default.pat does
@@ -2272,7 +2272,7 @@ PatThick_MVIEW (
 [_public] void
 SymbAngle_MVIEW (
                  MVIEW,  // MVIEW handle
-                 real    // angle in degrees CCW from +X
+                 real    // Angle in degrees CCW from +X
                  );
 
 
@@ -2287,7 +2287,7 @@ SymbAngle_MVIEW (
 [_public] void
 SymbColor_MVIEW (
                  MVIEW,  // MVIEW handle
-                 int     // color
+                 int     // Color
                  );
 
 
@@ -2325,7 +2325,7 @@ SymbFillColor_MVIEW (
 [_public] void
 SymbFont_MVIEW (
                 MVIEW,   // MVIEW handle
-                string,  // face name
+                string,  // Face name
                 int,     // Geosoft font? <define>GEO_BOOL</define>
                 int,     // <define>MVIEW_FONT_WEIGHT</define>
                 int      // Italic font? <define>GEO_BOOL</define>
@@ -2352,7 +2352,7 @@ SymbFont_MVIEW (
 [_public] void
 SymbNumber_MVIEW (
                   MVIEW,  // MVIEW handle
-                  int     // symbol number
+                  int     // Symbol number
                   );
 
 
@@ -2367,7 +2367,7 @@ SymbNumber_MVIEW (
 [_public] void
 SymbSize_MVIEW (
                 MVIEW,  // MVIEW handle
-                real    // size in view units
+                real    // Size in view units
                 );
 
 
@@ -2382,7 +2382,7 @@ SymbSize_MVIEW (
 [_public] void
 TextAngle_MVIEW (
                  MVIEW,  // MVIEW handle
-                 real    // angle in degrees CCW from +X
+                 real    // Angle in degrees CCW from +X
                  );
 
 
@@ -2397,7 +2397,7 @@ TextAngle_MVIEW (
 [_public] void
 TextColor_MVIEW (
                  MVIEW,  // MVIEW handle
-                 int     // color
+                 int     // Color
                  );
 
 
@@ -2497,7 +2497,7 @@ TextRef_MVIEW (
 [_public] void
 TextSize_MVIEW (
                 MVIEW,  // MVIEW handle
-                real    // size in view units
+                real    // Size in view units
                 );
 
 
@@ -2559,13 +2559,13 @@ ZValue_MVIEW (
 [_public] void
 Arc_MVIEW (
            MVIEW,  // MVIEW handle
-           real,   // center x
-           real,   // center y
-           real,   // radius
-           real,   // ratio x/y
-           real,   // angle
-           real,   // start angle
-           real    // end angle
+           real,   // Center x
+           real,   // Center y
+           real,   // Radius
+           real,   // Ratio x/y
+           real,   // Angle
+           real,   // Start angle
+           real    // End angle
            );
 
 
@@ -2580,13 +2580,13 @@ Arc_MVIEW (
 [_public] void
 Chord_MVIEW (
              MVIEW,  // MVIEW handle
-             real,   // center x
-             real,   // center y
-             real,   // radius
-             real,   // ratio x/y
-             real,   // angle
-             real,   // start angle
-             real    // end angle
+             real,   // Center x
+             real,   // Center y
+             real,   // Radius
+             real,   // Ratio x/y
+             real,   // Angle
+             real,   // Start angle
+             real    // End angle
              );
 
 
@@ -2601,7 +2601,7 @@ Chord_MVIEW (
 //                           
 //                           "95,100,120"      maximums of each class
 //                           "2.0,2.5,3.0"     sizes in mm
-//                           "y,g,r"           fill colours
+//                           "y,g,r"           fill colors
 //                           
 //
 // Available                 5.0.0
@@ -2613,11 +2613,11 @@ ClassifiedSymbols_MVIEW (
                          VV,      // X VV
                          VV,      // Y VV
                          VV,      // Data VV
-                         real,    // scale factor to convert mm to view units
+                         real,    // Scale factor to convert mm to view units
                          real,    // Classified minimum Z to plot
-                         string,  // comma delimited list of Z maximums
-                         string,  // comma delimited list of sizes in mm
-                         string   // comma delimited list of colour strings
+                         string,  // Comma delimited list of Z maximums
+                         string,  // Comma delimited list of sizes in mm
+                         string   // Comma delimited list of color strings
                          );
 
 
@@ -2651,11 +2651,11 @@ ComplexPolygon_MVIEW (
 [_public] void
 Ellipse_MVIEW (
                MVIEW,  // MVIEW handle
-               real,   // center x
-               real,   // center y
-               real,   // radius
-               real,   // ratio x/y
-               real    // angle
+               real,   // Center x
+               real,   // Center y
+               real,   // Radius
+               real,   // Ratio x/y
+               real    // Angle
                );
 
 
@@ -2670,10 +2670,10 @@ Ellipse_MVIEW (
 [_public] void
 Line_MVIEW (
             MVIEW,  // MVIEW handle
-            real,   // x0
-            real,   // y0
-            real,   // x1
-            real    // y1
+            real,   // X0
+            real,   // Y0
+            real,   // X1
+            real    // Y1
             );
 
 
@@ -2797,10 +2797,10 @@ PolyWrap_MVIEW (
 [_public] void
 Rectangle_MVIEW (
                  MVIEW,  // MVIEW handle
-                 real,   // x0
-                 real,   // y0
-                 real,   // x1
-                 real    // y1
+                 real,   // X0
+                 real,   // Y0
+                 real,   // X1
+                 real    // Y1
                  );
 
 
@@ -2815,13 +2815,13 @@ Rectangle_MVIEW (
 [_public] void
 Segment_MVIEW (
                MVIEW,  // MVIEW handle
-               real,   // center x
-               real,   // center y
-               real,   // radius
-               real,   // ratio x/y
-               real,   // angle
-               real,   // start angle
-               real    // end angle
+               real,   // Center x
+               real,   // Center y
+               real,   // Radius
+               real,   // Ratio x/y
+               real,   // Angle
+               real,   // Start angle
+               real    // End angle
                );
 
 
@@ -2838,7 +2838,7 @@ SizeSymbols_MVIEW (
                    MVIEW,  // View
                    VV,     // X
                    VV,     // Y
-                   VV      // symbol sizes (in view units)
+                   VV      // Symbol sizes (in view units)
                    );
 
 
@@ -2903,9 +2903,9 @@ SymbolsITR_MVIEW (
 [_public] void
 Text_MVIEW (
             MVIEW,   // MVIEW handle
-            string,  // text to plot
-            real,    // x location of text
-            real     // y location of text
+            string,  // Text to plot
+            real,    // X location of text
+            real     // Y location of text
             );
 
 
@@ -2946,7 +2946,7 @@ Aggregate_MVIEW (
 [_public] AGG
 GetAggregate_MVIEW (
                     MVIEW,  // View
-                    int     // group number
+                    int     // Group number
                     );
 
 
@@ -3002,7 +3002,7 @@ ColSymbol_MVIEW (
 [_public] CSYMB
 GetColSymbol_MVIEW (
                     MVIEW,  // View
-                    int     // group number
+                    int     // Group number
                     );
 
 
@@ -3018,7 +3018,7 @@ GetColSymbol_MVIEW (
 DATALINKD_MVIEW (
                  MVIEW,      // View
                  DATALINKD,  // DATALINKD
-                 string      // name Maximum length is MVIEW_NAME_LENGTH
+                 string      // Name Maximum length is MVIEW_NAME_LENGTH
                  );
 
 
@@ -3037,7 +3037,7 @@ DATALINKD_MVIEW (
 [_public] DATALINKD
 GetDATALINKD_MVIEW (
                     MVIEW,  // View
-                    int     // group number
+                    int     // Group number
                     );
 
 
@@ -3091,9 +3091,9 @@ ExternalStringObject_MVIEW (
                             real,    // Min Y
                             real,    // Max X
                             real,    // Max Y
-                            string,  // name of external object
-                            string,  // class of external object
-                            string   // string data of external object
+                            string,  // Name of external object
+                            string,  // Class of external object
+                            string   // String data of external object
                             );
 
 
@@ -3161,7 +3161,7 @@ Meta_MVIEW (
 VOXD_MVIEW (
             MVIEW,   // View
             VOXD,    // VOXD
-            string   // name Maximum length is MVIEW_NAME_LENGTH
+            string   // Name Maximum length is MVIEW_NAME_LENGTH
             );
 
 
@@ -3180,7 +3180,7 @@ VOXD_MVIEW (
 [_public] VOXD
 GetVOXD_MVIEW (
                MVIEW,  // View
-               int     // group number
+               int     // Group number
                );
 
 
@@ -3200,7 +3200,7 @@ GetVOXD_MVIEW (
 DrawVectorVoxelVectors_MVIEW (
                               MVIEW,   // View
                               VOX,     // VOX
-                              string,  // view group name Maximum length is MVIEW_NAME_LENGTH
+                              string,  // View group name Maximum length is MVIEW_NAME_LENGTH
                               ITR,     // Image transform - must contain zones
                               real,    // Vector length scale factor - w.r.t. the voxel minimum horizontal cell size (default 1)
                               real,    // Ratio of the vector cone height to its base (default 4)
@@ -3225,7 +3225,7 @@ DrawVectorVoxelVectors_MVIEW (
 [_public] VECTOR3D
 GetVECTOR3D_MVIEW (
                    MVIEW,  // View
-                   int     // group number
+                   int     // Group number
                    );
 
 
@@ -3240,7 +3240,7 @@ GetVECTOR3D_MVIEW (
 [_public] void
 DrawVectors3D_MVIEW (
                      MVIEW,   // View
-                     string,  // view group name Maximum length is MVIEW_NAME_LENGTH
+                     string,  // View group name Maximum length is MVIEW_NAME_LENGTH
                      VV,      // X locations
                      VV,      // Y locations
                      VV,      // Z locations
@@ -3373,7 +3373,7 @@ CopyRawMarkedGroups_MVIEW (
 
 [_public] CRC
 CRCGroup_MVIEW (
-                MVIEW,   // view
+                MVIEW,   // View
                 string,  // Group name
                 CRC      // CRC to start (use <define>CRC_INIT_VALUE</define>)
                 );
@@ -3421,7 +3421,7 @@ DelMarkedGroups_MVIEW (
 [_public] void
 GetGroupExtent_MVIEW (
                       MVIEW,     // MVIEW object
-                      string,    // group name
+                      string,    // Group name
                       var real,  // Minimum X, returned
                       var real,  // Minimum Y, returned
                       var real,  // Maximum X, returned
@@ -3463,7 +3463,7 @@ GetGroupTransparency_MVIEW (
 
 [_public] void
 GroupToPLY_MVIEW (
-                  MVIEW,   // view
+                  MVIEW,   // View
                   string,  // Group name
                   PLY      // PLY to add to
                   );
@@ -3551,7 +3551,7 @@ IGenNewGroupName_MVIEW (
 [_public] int
 iIsGroup_MVIEW (
                 MVIEW,   // MVIEW handle
-                string,  // group name
+                string,  // Group name
                 int      // <define>MVIEW_IS</define>
                 );
 
@@ -3567,7 +3567,7 @@ iIsGroup_MVIEW (
 [_public] int
 iIsGroupEmpty_MVIEW (
                      MVIEW,   // MVIEW handle
-                     string   // group name
+                     string   // Group name
                      );
 
 
@@ -3616,7 +3616,7 @@ iIsVisible_MVIEW (
 [_public] int
 iListGroups_MVIEW (
                    MVIEW,  // MVIEW object
-                   LST,    // list
+                   LST,    // List
                    int     // <define>MVIEW_GROUP_LIST</define>
                    );
 
@@ -3678,7 +3678,7 @@ MarkEmptyGroups_MVIEW (
 [_public] void
 MarkGroup_MVIEW (
                  MVIEW,   // MVIEW handle
-                 string,  // group name
+                 string,  // Group name
                  int      // 0 - unmark, 1 - mark
                  );
 
@@ -3772,7 +3772,7 @@ RenameGroup_MVIEW (
 [_public] void
 SetGroupMoveable_MVIEW (
                         MVIEW,   // MVIEW handle
-                        string,  // group name
+                        string,  // Group name
                         int      // 0 - not movable, 1 - movable
                         );
 
@@ -3867,7 +3867,7 @@ SetVisibility_MVIEW (
 // Returns            Nothing
 //
 // Notes              
-//                    Line and fill colours and thickness must be set
+//                    Line and fill colors and thickness must be set
 //                    before drawing to a group.
 //                    
 //                    If the group name is NULL, output will be sent to
@@ -4214,9 +4214,9 @@ iFindGroup_MVIEW (
 [_public] void
 IGroupName_MVIEW (
                   MVIEW,       // MVIEW object
-                  int,         // group number, error if not valid
+                  int,         // Group number, error if not valid
                   var string,  // Group Name
-                  int          // maximum name length
+                  int          // Maximum name length
                   );
 
 #define GroupName_MVIEW(A, B, C) IGroupName_MVIEW(A, B, C, sizeof(C))
@@ -4257,13 +4257,13 @@ _SetUFac_MVIEW (
 
 [_public] void
 AxisX_MVIEW (
-             MVIEW,  // view
+             MVIEW,  // View
              real,   // Y location in view units
-             real,   // left  X
-             real,   // right X
-             real,   // major tick interval
-             real,   // minor tick interval (half size of major)
-             real    // tick size in view units (negative for down ticks)
+             real,   // Left  X
+             real,   // Right X
+             real,   // Major tick interval
+             real,   // Minor tick interval (half size of major)
+             real    // Tick size in view units (negative for down ticks)
              );
 
 
@@ -4281,13 +4281,13 @@ AxisX_MVIEW (
 
 [_public] void
 AxisY_MVIEW (
-             MVIEW,  // view
+             MVIEW,  // View
              real,   // X location in view units
-             real,   // bottom Y
-             real,   // top    Y
-             real,   // major tick interval
-             real,   // minor tick interval (half size of major)
-             real    // tick size in view units (negative for left ticks)
+             real,   // Bottom Y
+             real,   // Top    Y
+             real,   // Major tick interval
+             real,   // Minor tick interval (half size of major)
+             real    // Tick size in view units (negative for left ticks)
              );
 
 
@@ -4308,7 +4308,7 @@ AxisY_MVIEW (
 
 [_public] void
 Grid_MVIEW (
-            MVIEW,  // view
+            MVIEW,  // View
             real,   // X grid increment
             real,   // Y grid increment
             real,   // dX dot increment/cross X size
@@ -4336,11 +4336,11 @@ Grid_MVIEW (
 
 [_public] void
 LabelFid_MVIEW (
-                MVIEW,  // view
+                MVIEW,  // View
                 VV,     // X VV
-                real,   // fiducial start
-                real,   // fiducial increment
-                real,   // fiducial label interval, default 100.0
+                real,   // Fiducial start
+                real,   // Fiducial increment
+                real,   // Fiducial label interval, default 100.0
                 real,   // Y location in view unit
                 real    // Y scale
                 );
@@ -4364,11 +4364,11 @@ LabelFid_MVIEW (
 
 [_public] void
 LabelX_MVIEW (
-              MVIEW,  // view
+              MVIEW,  // View
               real,   // Y location in view units
-              real,   // left  X
-              real,   // right X
-              real,   // label interval
+              real,   // Left  X
+              real,   // Right X
+              real,   // Label interval
               int,    // <define>MVIEW_LABEL_JUST</define>
               int,    // <define>MVIEW_LABEL_BOUND</define>
               int     // <define>MVIEW_LABEL_ORIENT</define>
@@ -4393,11 +4393,11 @@ LabelX_MVIEW (
 
 [_public] void
 LabelY_MVIEW (
-              MVIEW,  // view
+              MVIEW,  // View
               real,   // X location in view units
-              real,   // bottom Y
-              real,   // top    Y
-              real,   // label interval
+              real,   // Bottom Y
+              real,   // Top    Y
+              real,   // Label interval
               int,    // <define>MVIEW_LABEL_JUST</define>
               int,    // <define>MVIEW_LABEL_BOUND</define>
               int     // <define>MVIEW_LABEL_ORIENT</define>
@@ -4414,9 +4414,9 @@ LabelY_MVIEW (
 
 [_public] void
 OptimumTick_MVIEW (
-                   real,      // minimum of range
-                   real,      // maximum
-                   var real   // optimum interval
+                   real,      // Minimum of range
+                   real,      // Maximum
+                   var real   // Optimum interval
                    );
 
 
@@ -4610,8 +4610,8 @@ GetREG_MVIEW (
 [_public] void
 IGetName_MVIEW (
                 MVIEW,       // View handle
-                var string,  // view name returned
-                int          // view name string size
+                var string,  // View name returned
+                int          // View name string size
                 );
 
 #define GetName_MVIEW(A, B) IGetName_MVIEW(A, B, sizeof(B))
@@ -4732,10 +4732,10 @@ BestFitWindow_MVIEW (
                      var real,  // Y minimum  ..
                      var real,  // X maximum  ..
                      var real,  // Y maximum  ..
-                     var real,  // min X in ground coordinate to fit to the area defined above
-                     var real,  // min Y in ground coordinate ..
-                     var real,  // max X in ground coordinate ..
-                     var real,  // max Y in ground coordinate ..
+                     var real,  // Min X in ground coordinate to fit to the area defined above
+                     var real,  // Min Y in ground coordinate ..
+                     var real,  // Max X in ground coordinate ..
+                     var real,  // Max Y in ground coordinate ..
                      int        // <define>MVIEW_FIT</define>
                      );
 
@@ -4769,10 +4769,10 @@ FitMapWindow3D_MVIEW (
                       real,   // Y minimum  ..
                       real,   // X maximum  ..
                       real,   // Y maximum  ..
-                      real,   // min X in ground coordinate to fit to the area defined above
-                      real,   // min Y in ground coordinate ..
-                      real,   // max X in ground coordinate ..
-                      real    // max Y in ground coordinate ..
+                      real,   // Min X in ground coordinate to fit to the area defined above
+                      real,   // Min Y in ground coordinate ..
+                      real,   // Max X in ground coordinate ..
+                      real    // Max Y in ground coordinate ..
                       );
 
 
@@ -4798,10 +4798,10 @@ FitWindow_MVIEW (
                  real,   // Y minimum  ..
                  real,   // X maximum  ..
                  real,   // Y maximum  ..
-                 real,   // min X in ground coordinate to fit to the area defined above
-                 real,   // min Y in ground coordinate ..
-                 real,   // max X in ground coordinate ..
-                 real    // max Y in ground coordinate ..
+                 real,   // Min X in ground coordinate to fit to the area defined above
+                 real,   // Min Y in ground coordinate ..
+                 real,   // Max X in ground coordinate ..
+                 real    // Max Y in ground coordinate ..
                  );
 
 
@@ -4822,9 +4822,9 @@ FitWindow_MVIEW (
 [_public] void
 IGetClassName_MVIEW (
                      MVIEW,       // MVIEW handle
-                     string,      // class
-                     var string,  // name
-                     int          // maximum name length
+                     string,      // Class
+                     var string,  // Name
+                     int          // Maximum name length
                      );
 
 #define GetClassName_MVIEW(A, B, C) IGetClassName_MVIEW(A, B, C, sizeof(C))
@@ -4863,7 +4863,7 @@ MapOrigin_MVIEW (
 [_public] void
 ReScale_MVIEW (
                MVIEW,  // MVIEW object
-               real    // scale factor (> 0.0)
+               real    // Scale factor (> 0.0)
                );
 
 
@@ -4995,8 +4995,8 @@ ScaleWindow_MVIEW (
                    real,   // Y maximum
                    real,   // X minimum in plot coordinates
                    real,   // Y minimum
-                   real,   // horizontal scale (view unit/plot unit in mm)
-                   real    // vertical scale
+                   real,   // Horizontal scale (view unit/plot unit in mm)
+                   real    // Vertical scale
                    );
 
 
@@ -5017,8 +5017,8 @@ ScaleWindow_MVIEW (
 [_public] void
 SetClassName_MVIEW (
                     MVIEW,   // MVIEW handle
-                    string,  // class
-                    string   // name
+                    string,  // Class
+                    string   // Name
                     );
 
 

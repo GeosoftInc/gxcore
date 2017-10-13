@@ -107,7 +107,7 @@ hCreateSQL_HXYZ (
 
 [_public] void
 SetMETA_HXYZ (
-              HXYZ,  // source HXYZ
+              HXYZ,  // Source HXYZ
               META   // META object to add to HXYZ's meta
               );
 

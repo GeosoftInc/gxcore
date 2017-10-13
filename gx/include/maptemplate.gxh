@@ -53,8 +53,8 @@
 [_licensed] void
 GetTmpCopy_MAPTEMPLATE (
                         MAPTEMPLATE,  // MAPTEMPLATE
-                        var string,   // returned temporary map template file name
-                        int           // size of file name string
+                        var string,   // Returned temporary map template file name
+                        int           // Size of file name string
                         );
 
 #define _GetTmpCopy_MAPTEMPLATE(A, B) GetTmpCopy_MAPTEMPLATE(A, B, sizeof(B))
@@ -165,8 +165,8 @@ Discard_MAPTEMPLATE (
 [_licensed] void
 GetFileName_MAPTEMPLATE (
                          MAPTEMPLATE,  // MAPTEMPLATE
-                         var string,   // returned map template file name
-                         int           // size of file name string
+                         var string,   // Returned map template file name
+                         int           // Size of file name string
                          );
 
 #define _GetFileName_MAPTEMPLATE(A, B) GetFileName_MAPTEMPLATE(A, B, sizeof(B))

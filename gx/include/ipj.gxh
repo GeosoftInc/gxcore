@@ -120,28 +120,28 @@
 //
 // Project Name
 //
-// IPJ_NAME_PCS                   projected coordinate system name
-// IPJ_NAME_PROJECTION            projection name
-// IPJ_NAME_METHOD                projection method name
-// IPJ_NAME_DATUM                 datum name
-// IPJ_NAME_ELLIPSOID             ellipsoid name
-// IPJ_NAME_LDATUM                local datum name
-// IPJ_NAME_UNIT_ABBR             unit abbreviation
-// IPJ_NAME_UNIT_FULL             full unit name
-// IPJ_NAME_TYPE                  projection type description
-// IPJ_NAME_LLDATUM               datum transform table name
-// IPJ_NAME_METHOD_PARMS          projection method parameters in GXF order
-// IPJ_NAME_METHOD_LABEL          projection method parameters labels
-// IPJ_NAME_DATUM_PARMS           datum parameters (major axis, flattening, prime meridian)
+// IPJ_NAME_PCS                   Projected coordinate system name
+// IPJ_NAME_PROJECTION            Projection name
+// IPJ_NAME_METHOD                Projection method name
+// IPJ_NAME_DATUM                 Datum name
+// IPJ_NAME_ELLIPSOID             Ellipsoid name
+// IPJ_NAME_LDATUM                Local datum name
+// IPJ_NAME_UNIT_ABBR             Unit abbreviation
+// IPJ_NAME_UNIT_FULL             Full unit name
+// IPJ_NAME_TYPE                  Projection type description
+// IPJ_NAME_LLDATUM               Datum transform table name
+// IPJ_NAME_METHOD_PARMS          Projection method parameters in GXF order
+// IPJ_NAME_METHOD_LABEL          Projection method parameters labels
+// IPJ_NAME_DATUM_PARMS           Datum parameters (major axis, flattening, prime meridian)
 // IPJ_NAME_LDATUM_PARMS          
 //                                local datum parameters (dX,dY,dZ,rX,rY,rZ,scale)
 //                                See GXF revision 3 for parameter list order and
 //                                specifications.
 //                                
-// IPJ_NAME_GEOID                 geoid name if known
-// IPJ_NAME_LDATUMDESCRIPTION     local datum description
-// IPJ_NAME_METHOD_PARMS_NATIVE   projection method parameters in GXF order (Native units for eastings/northings)
-// IPJ_NAME_ORIENTATION_PARMS     orientation parameters
+// IPJ_NAME_GEOID                 Geoid name if known
+// IPJ_NAME_LDATUMDESCRIPTION     Local datum description
+// IPJ_NAME_METHOD_PARMS_NATIVE   Projection method parameters in GXF order (Native units for eastings/northings)
+// IPJ_NAME_ORIENTATION_PARMS     Orientation parameters
 //
 //===========================================================================================================
 
@@ -319,14 +319,14 @@
 // Warp (Transformation) type
 //
 // IPJ_WARP_MATRIX         Matrix Warp
-// IPJ_WARP_NONE           no warp
-// IPJ_WARP_TRANS1         translate only (needs 1 point)
-// IPJ_WARP_TRANS2         translate, rotate, normal scale (needs 2 pts)
-// IPJ_WARP_TRANS3         translate, rotate, scale X and Y (needs 3 pts or more, least-square fit)
-// IPJ_WARP_QUAD           quadrilateral warp (needs 4 points)
-// IPJ_WARP_MULTIPOINT     multipoint warp (needs at least 3 points)
-// IPJ_WARP_LOG            convert from linear to log coords in X and/or Y
-// IPJ_WARP_MULTIPOINT_Y   multipoint warp in Y only (needs at least 3 points)
+// IPJ_WARP_NONE           No warp
+// IPJ_WARP_TRANS1         Translate only (needs 1 point)
+// IPJ_WARP_TRANS2         Translate, rotate, normal scale (needs 2 pts)
+// IPJ_WARP_TRANS3         Translate, rotate, scale X and Y (needs 3 pts or more, least-square fit)
+// IPJ_WARP_QUAD           Quadrilateral warp (needs 4 points)
+// IPJ_WARP_MULTIPOINT     Multipoint warp (needs at least 3 points)
+// IPJ_WARP_LOG            Convert from linear to log coords in X and/or Y
+// IPJ_WARP_MULTIPOINT_Y   Multipoint warp in Y only (needs at least 3 points)
 //
 //===========================================================================================================
 
@@ -396,8 +396,8 @@ _MakeWGS84_IPJ (
 [_public] void
 _SetUnits_IPJ (
                IPJ,     // IPJ
-               real,    // factor to meters, must be >= 0.0
-               string   // abbreviation, can be ""
+               real,    // Factor to meters, must be >= 0.0
+               string   // Abbreviation, can be ""
                );
 #define SetUnits_IPJ _SetUnits_IPJ
 
@@ -559,8 +559,8 @@ ConvertOrientationWarpVV_IPJ (
 
 [_public] void
 Copy_IPJ (
-          IPJ,  // source IPJ
-          IPJ   // destination IPJ
+          IPJ,  // Source IPJ
+          IPJ   // Destination IPJ
           );
 
 
@@ -579,8 +579,8 @@ Copy_IPJ (
 
 [_public] void
 CopyProjection_IPJ (
-                    IPJ,  // destination
-                    IPJ   // source
+                    IPJ,  // Destination
+                    IPJ   // Source
                     );
 
 
@@ -727,8 +727,8 @@ GetCrookedSectionViewVVs_IPJ (
 [_public] void
 GetList_IPJ (
              int,     // <define>IPJ_PARM_LST</define>
-             string,  // datum filter, "" for no filter
-             LST      // list returned
+             string,  // Datum filter, "" for no filter
+             LST      // List returned
              );
 
 
@@ -961,8 +961,8 @@ iCoordinateSystemsAreTheSameWithinASmallTolerance_IPJ (
 [_public] void
 IGetDisplayName_IPJ (
                      IPJ,         // IPJ object
-                     var string,  // name returned
-                     int          // maximum name size
+                     var string,  // Name returned
+                     int          // Maximum name size
                      );
 
 #define GetDisplayName_IPJ(A, B) IGetDisplayName_IPJ(A, B, sizeof(B))
@@ -985,7 +985,7 @@ IGetDisplayName_IPJ (
 IGetESRI_IPJ (
               IPJ,         // IPJ object
               var string,  // ESRI projection string returned
-              int          // string length, should be at least 1024
+              int          // String length, should be at least 1024
               );
 
 #define GetESRI_IPJ(A, B) IGetESRI_IPJ(A, B, sizeof(B))
@@ -1008,12 +1008,12 @@ IGetESRI_IPJ (
 [_public] void
 IGetGXF_IPJ (
              IPJ,         // IPJ object
-             var string,  // projection name
-             var string,  // datum name, major axis, elipticity
-             var string,  // method name, parameters
-             var string,  // unit name, factor
-             var string,  // local transform name,dX,dY,dZ,rX,rY,rZ,Scale
-             int          // maximum length of all strings
+             var string,  // Projection name
+             var string,  // Datum name, major axis, elipticity
+             var string,  // Method name, parameters
+             var string,  // Unit name, factor
+             var string,  // Local transform name,dX,dY,dZ,rX,rY,rZ,Scale
+             int          // Maximum length of all strings
              );
 
 #define GetGXF_IPJ(A, B, C, D, E, F) IGetGXF_IPJ(A, B, C, D, E, F, sizeof(F))
@@ -1031,9 +1031,9 @@ IGetGXF_IPJ (
 IGetMICoordSys_IPJ (
                     IPJ,         // IPJ object
                     var string,  // MapInfo coordsys string returned
-                    int,         // coordsys string length
+                    int,         // Coordsys string length
                     var string,  // MapInfo unit string returned
-                    int          // unit string length
+                    int          // Unit string length
                     );
 
 #define GetMICoordSys_IPJ(A, B, C) IGetMICoordSys_IPJ(A, B, sizeof(B), C, sizeof(C))
@@ -1051,8 +1051,8 @@ IGetMICoordSys_IPJ (
 IGetName_IPJ (
               IPJ,         // IPJ object
               int,         // <define>IPJ_NAME</define>
-              var string,  // name returned
-              int          // maximum name size
+              var string,  // Name returned
+              int          // Maximum name size
               );
 
 #define GetName_IPJ(A, B, C) IGetName_IPJ(A, B, C, sizeof(C))
@@ -1085,7 +1085,7 @@ IGetName_IPJ (
 [_public] void
 SetVCS_IPJ (
             IPJ,     // IPJ object
-            string   // new name (See Valid inputs above).
+            string   // New name (See Valid inputs above).
             );
 
 
@@ -1119,8 +1119,8 @@ iGetOrientation_IPJ (
 [_public] void
 IGetOrientationName_IPJ (
                          IPJ,         // IPJ object
-                         var string,  // name returned
-                         int          // maximum name size
+                         var string,  // Name returned
+                         int          // Maximum name size
                          );
 
 #define GetOrientationName_IPJ(A, B) IGetOrientationName_IPJ(A, B, sizeof(B))
@@ -1137,9 +1137,9 @@ IGetOrientationName_IPJ (
 [_public] void
 IGetUnits_IPJ (
                IPJ,         // IPJ
-               var real,    // factor to meters
-               var string,  // abbreviation
-               int          // length of string
+               var real,    // Factor to meters
+               var string,  // Abbreviation
+               int          // Length of string
                );
 
 #define GetUnits_IPJ(A, B, C) IGetUnits_IPJ(A, B, C, sizeof(C))
@@ -1157,7 +1157,7 @@ IGetUnits_IPJ (
 IGetXML_IPJ (
              IPJ,         // IPJ object
              var string,  // XML string returned
-             int          // string length, should be at least 1024
+             int          // String length, should be at least 1024
              );
 
 #define GetXML_IPJ(A, B) IGetXML_IPJ(A, B, sizeof(B))
@@ -1407,10 +1407,10 @@ iSupportDatumTransform_IPJ (
 
 [_public] void
 IUnitName_IPJ (
-               real,        // factor to meters
+               real,        // Factor to meters
                int,         // <define>IPJ_UNIT</define>
-               var string,  // name returned, "" if cannot find unit
-               int          // length of string
+               var string,  // Name returned, "" if cannot find unit
+               int          // Length of string
                );
 
 #define UnitName_IPJ(A, B, C) IUnitName_IPJ(A, B, C, sizeof(C))
@@ -1500,10 +1500,10 @@ iWarpType_IPJ (
 [_public] void
 MakeProjected_IPJ (
                    IPJ,   // IPJ to modify
-                   real,  // minimum longitude
-                   real,  // minimum latitude
-                   real,  // maximum longitude
-                   real   // maximum latitude
+                   real,  // Minimum longitude
+                   real,  // Minimum latitude
+                   real,  // Maximum longitude
+                   real   // Maximum latitude
                    );
 
 
@@ -1523,16 +1523,16 @@ MakeProjected_IPJ (
 
 [_public] void
 NewBoxResolution_IPJ (
-                      IPJ,       // original IPJ
-                      IPJ,       // new IPJ
-                      real,      // data resolution in original IPJ
+                      IPJ,       // Original IPJ
+                      IPJ,       // New IPJ
+                      real,      // Data resolution in original IPJ
                       real,      // X minimum of bounding box in new IPJ
                       real,      // Y minimum
                       real,      // X maximum
                       real,      // Y maximum
-                      var real,  // minimum data resolution in new IPJ,
-                      var real,  // maximum data resolution in new IPJ
-                      var real   // diagonal data resolution in new IPJ
+                      var real,  // Minimum data resolution in new IPJ,
+                      var real,  // Maximum data resolution in new IPJ
+                      var real   // Diagonal data resolution in new IPJ
                       );
 
 
@@ -1548,9 +1548,9 @@ NewBoxResolution_IPJ (
 Read_IPJ (
           IPJ,     // IPJ object
           int,     // <define>IPJ_TYPE</define>
-          string,  // string 1
-          string,  // string 2
-          string   // string 3
+          string,  // String 1
+          string,  // String 2
+          string   // String 3
           );
 
 
@@ -1585,8 +1585,8 @@ rGetMethodParm_IPJ (
 [_public] real
 rGetNorthAzimuth_IPJ (
                       IPJ,   // IPJ object
-                      real,  // input X location
-                      real   // input Y location
+                      real,  // Input X location
+                      real   // Input Y location
                       );
 
 
@@ -1602,8 +1602,8 @@ rGetNorthAzimuth_IPJ (
 
 [_public] real
 rUnitScale_IPJ (
-                string,  // unit name, abbreviation or full name
-                real     // default to return if name not found
+                string,  // Unit name, abbreviation or full name
+                real     // Default to return if name not found
                 );
 
 
@@ -1994,7 +1994,7 @@ SetGXF_IPJ (
 SetMethodParm_IPJ (
                    IPJ,   // IPJ object
                    int,   // <define>IPJ_CSP</define>
-                   real   // parameter value
+                   real   // Parameter value
                    );
 
 
@@ -2063,7 +2063,7 @@ SetPlanView_IPJ (
                  real,  // X location of view origin
                  real,  // Y location of view origin
                  real,  // Z location of view origin
-                 real   // rotation CCW from normal XY coords
+                 real   // Rotation CCW from normal XY coords
                  );
 
 
@@ -2138,10 +2138,10 @@ SetSectionView_IPJ (
 SetWMSCoordSys_IPJ (
                     IPJ,     // IPJ object
                     string,  // WMS style coordinate string
-                    real,    // minimum X bounding box
-                    real,    // minimum Y
-                    real,    // maximum X
-                    real     // maximum Y
+                    real,    // Minimum X bounding box
+                    real,    // Minimum Y
+                    real,    // Maximum X
+                    real     // Maximum Y
                     );
 
 

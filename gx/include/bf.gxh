@@ -71,9 +71,9 @@
 // Open Status
 //
 // BF_READ            Read only
-// BF_READWRITE_NEW   erases existing file
-// BF_READWRITE_OLD   file must pre-exist
-// BF_READWRITE_APP   open and append onto pre-existing file (cannot be read from)
+// BF_READWRITE_NEW   Erases existing file
+// BF_READWRITE_OLD   File must pre-exist
+// BF_READWRITE_APP   Open and append onto pre-existing file (cannot be read from)
 //
 //===========================================================================================================
 
@@ -111,7 +111,7 @@
 [_public] void
 _ChSize_BF (
             BF,   // BF handle
-            int   // new length in bytes
+            int   // New length in bytes
             );
 #define ChSize_BF _ChSize_BF
 
@@ -131,7 +131,7 @@ _ChSize_BF (
 [_public] void
 _Seek_BF (
           BF,   // BF handle
-          int,  // number of bytes from reference point
+          int,  // Number of bytes from reference point
           int   // <define>BF_SEEK</define>
           );
 #define Seek_BF _Seek_BF
@@ -162,7 +162,7 @@ Copy_BF (
 [_public] CRC
 CRC_BF (
         BF,   // BF handle
-        int,  // number of bytes to CRC
+        int,  // Number of bytes to CRC
         CRC   // CRC start (use <define>CRC_INIT_VALUE</define> for new)
         );
 
@@ -191,7 +191,7 @@ CRC_BF (
 
 [_public] BF
 Create_BF (
-           string,  // file name to open ("" is a temporary file)
+           string,  // File name to open ("" is a temporary file)
            int      // <define>BF_OPEN_MODE</define>
            );
 
@@ -209,7 +209,7 @@ Create_BF (
 [_public] BF
 CreateSBF_BF (
               SBF,     // Storage
-              string,  // file name to open ("" is a temporary file)
+              string,  // File name to open ("" is a temporary file)
               int      // <define>BF_OPEN_MODE</define>
               );
 
@@ -217,7 +217,7 @@ CreateSBF_BF (
 //-----------------------------------------------------------------------------------------------------------
 // Destroy_BF   Destroy BF handle.
 //
-// Returns      nothing
+// Returns      Nothing
 //
 // Notes        The DestroyEx call implies BF_KEEP
 //
@@ -292,7 +292,7 @@ IReadBinaryString_BF (
                       BF,          // BF handle
                       int,         // Number of bytes to read
                       int,         // <define>BF_ENCODE</define>
-                      var string,  // data
+                      var string,  // Data
                       int          // Length of the string buffer
                       );
 
@@ -352,7 +352,7 @@ iTell_BF (
 ReadInt_BF (
             BF,       // BF handle
             int,      // <define>GS_TYPES</define> and <define>BF_BYTEORDER</define>
-            var int   // data
+            var int   // Data
             );
 
 
@@ -381,7 +381,7 @@ ReadInt_BF (
 ReadReal_BF (
              BF,        // BF handle
              int,       // <define>GS_TYPES</define> and <define>BF_BYTEORDER</define>
-             var real   // data
+             var real   // Data
              );
 
 
@@ -470,7 +470,7 @@ SetDestroyStatus_BF (
 WriteBinaryString_BF (
                       BF,      // BF handle
                       int,     // <define>BF_ENCODE</define>
-                      string   // string to write out
+                      string   // String to write out
                       );
 
 
@@ -508,7 +508,7 @@ WriteDataNull_BF (
 WriteInt_BF (
              BF,   // BF handle
              int,  // <define>GS_TYPES</define> and <define>BF_BYTEORDER</define>
-             int   // data
+             int   // Data
              );
 
 
@@ -532,7 +532,7 @@ WriteInt_BF (
 WriteReal_BF (
               BF,    // BF handle
               int,   // <define>GS_TYPES</define> and <define>BF_BYTEORDER</define>
-              real   // data
+              real   // Data
               );
 
 
@@ -556,7 +556,7 @@ WriteReal_BF (
 WriteVM_BF (
             BF,   // BF handle
             int,  // <define>GS_TYPES</define> and <define>BF_BYTEORDER</define>
-            VM    // data
+            VM    // Data
             );
 
 
@@ -580,7 +580,7 @@ WriteVM_BF (
 WriteVV_BF (
             BF,   // BF handle
             int,  // <define>GS_TYPES</define> and <define>BF_BYTEORDER</define>
-            VV    // data
+            VV    // Data
             );
 
 

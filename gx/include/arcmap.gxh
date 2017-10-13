@@ -21,10 +21,10 @@
 //
 // Flags that can be combined and passed to iLoadMap_ARCMAP
 //
-// ARCMAP_LOAD_DELFRAME            If an exisiting frame is found delete it
-// ARCMAP_LOAD_DELLAYER            If an exisiting layer is found delete it
-// ARCMAP_LOAD_EXISTFRAME          If an exisiting frame is found add new layers to it
-// ARCMAP_LOAD_COPYLAYER           If an exisiting layer is found make a copy
+// ARCMAP_LOAD_DELFRAME            If an existing frame is found delete it
+// ARCMAP_LOAD_DELLAYER            If an existing layer is found delete it
+// ARCMAP_LOAD_EXISTFRAME          If an existing frame is found add new layers to it
+// ARCMAP_LOAD_COPYLAYER           If an existing layer is found make a copy
 // ARCMAP_LOAD_HIDESIBLINGS        Hide all other existing layers in frame
 // ARCMAP_LOAD_PREFIXMAPFRAME      Prefix the map filename part as part of the frame name
 // ARCMAP_LOAD_PREFIXMAPLAYER      Prefix the map filename part as part of the layer name
@@ -94,7 +94,7 @@ ExportFeatureLayerByNameTo3DFile_ARCMAP (
                                          string,  // MXD filename
                                          string,  // Dataframe name
                                          string,  // Layer name
-                                         string   // output file name
+                                         string   // Output file name
                                          );
 
 
@@ -108,7 +108,7 @@ ExportFeatureLayerByNameTo3DFile_ARCMAP (
 
 [_extended] void
 ExportSelectedFeatureLayerTo3DFile_ARCMAP (
-                                           string   // output file name
+                                           string   // Output file name
                                            );
 
 
@@ -232,8 +232,8 @@ iLoadMAPEx_ARCMAP (
 
 [_public] int
 iLoadShape_ARCMAP (
-                   string,  // shape file to load
-                   int      // delete existing layers?
+                   string,  // Shape file to load
+                   int      // Delete existing layers?
                    );
 
 
@@ -247,8 +247,8 @@ iLoadShape_ARCMAP (
 
 [_public] int
 iLoadSPF_ARCMAP (
-                 string,  // list of shape files to load
-                 int      // number of shape files
+                 string,  // List of shape files to load
+                 int      // Number of shape files
                  );
 
 
@@ -374,7 +374,7 @@ MapViewToShape_ARCMAP (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// QuerySize_ARCMAP   Querie the page size in mm of the entire map page.
+// QuerySize_ARCMAP   Query the page size in mm of the entire map page.
 //
 // Returns            Nothing
 //

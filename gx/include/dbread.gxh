@@ -36,7 +36,7 @@
 [_public] DBREAD
 Create_DBREAD (
                DB,   // Database input
-               LST   // list of lines to process NAME = line name, VALUE = line symbol
+               LST   // List of lines to process NAME = line name, VALUE = line symbol
                );
 
 
@@ -52,7 +52,7 @@ Create_DBREAD (
 [_public] DBREAD
 CreateXY_DBREAD (
                  DB,   // Database input
-                 LST   // list of lines to process NAME = line name, VALUE = line symbol
+                 LST   // List of lines to process NAME = line name, VALUE = line symbol
                  );
 
 
@@ -69,14 +69,14 @@ CreateXY_DBREAD (
 [_public] DBREAD
 CreateXYZ_DBREAD (
                   DB,   // Database input
-                  LST   // list of lines to process NAME = line name, VALUE = line symbol
+                  LST   // List of lines to process NAME = line name, VALUE = line symbol
                   );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // Destroy_DBREAD   Destroy DBREAD handle.
 //
-// Returns          nothing
+// Returns          Nothing
 //
 // Available        8.5.0
 //

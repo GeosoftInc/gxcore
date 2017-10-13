@@ -230,7 +230,7 @@
 // implies original grid lines:
 // 
 //
-// IMU_TRANS_DEFAULT   can be ANY orientation
+// IMU_TRANS_DEFAULT   Can be ANY orientation
 // IMU_TRANS_Y         MUST be parallel to Y-Axis
 // IMU_TRANS_X         MUST be parallel to X-Axis
 //
@@ -348,8 +348,8 @@ AggToGeoColor_IMU (
 
 [_public] CRC
 CRC_IMU (
-         IMG,  // input image
-         CRC   // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
+         IMG,  // Input image
+         CRC   // Starting CRC (use <define>CRC_INIT_VALUE</define> if none)
          );
 
 
@@ -363,8 +363,8 @@ CRC_IMU (
 
 [_public] CRC
 CRCGrid_IMU (
-             string,  // grid
-             CRC      // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
+             string,  // Grid
+             CRC      // Starting CRC (use <define>CRC_INIT_VALUE</define> if none)
              );
 
 
@@ -387,8 +387,8 @@ CRCGrid_IMU (
 
 [_public] CRC
 CRCGridInexact_IMU (
-                    string,  // grid
-                    CRC,     // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
+                    string,  // Grid
+                    CRC,     // Starting CRC (use <define>CRC_INIT_VALUE</define> if none)
                     int,     // <define>IMU_FLOAT_CRC_BITS</define>
                     int      // <define>IMU_DOUBLE_CRC_BITS</define>
                     );
@@ -413,8 +413,8 @@ CRCGridInexact_IMU (
 
 [_public] CRC
 CRCInexact_IMU (
-                IMG,  // input image
-                CRC,  // starting CRC (use <define>CRC_INIT_VALUE</define> if none)
+                IMG,  // Input image
+                CRC,  // Starting CRC (use <define>CRC_INIT_VALUE</define> if none)
                 int,  // <define>IMU_FLOAT_CRC_BITS</define>
                 int   // <define>IMU_DOUBLE_CRC_BITS</define>
                 );
@@ -494,7 +494,7 @@ ExportXML_IMU (
 
 [_licensed] void
 GetZVV_IMU (
-            IMG,  // input grid
+            IMG,  // Input grid
             VV,   // X VV
             VV,   // Y VV
             VV    // Z VV filled with values (set to be same size as X, Y)
@@ -515,7 +515,7 @@ GetZVV_IMU (
 
 [_licensed] void
 GetZPeaksVV_IMU (
-                 IMG,  // input grid
+                 IMG,  // Input grid
                  VV,   // X VV
                  VV,   // Y VV
                  VV    // Z VV filled with values (set to be same size as X, Y)
@@ -819,7 +819,7 @@ GridMask_IMU (
 [_licensed] void
 GridPeak_IMU (
               string,  // Grid file name
-              int,     // peak test directions (1 to 4)
+              int,     // Peak test directions (1 to 4)
               VV,      // X of found peaks
               VV,      // Y of found peaks
               VV       // Z values of found peaks
@@ -846,7 +846,7 @@ GridPeak_IMU (
 
 [_licensed] void
 GridPLY_IMU (
-             IMG,  // the IMG
+             IMG,  // The IMG
              PLY,  // PLY to which the bounding polygons will be added.
              int   // TRUE to force the boundary to be refreshed.
              );
@@ -872,7 +872,7 @@ GridPLY_IMU (
 
 [_licensed] void
 GridPLYEx_IMU (
-               IMG,  // the IMG
+               IMG,  // The IMG
                PLY,  // PLY to which the bounding polygons will be added.
                int,  // TRUE to force the boundary to be refreshed.
                int   // Minimum number of points in polygons refreshed (0 for all)
@@ -917,10 +917,10 @@ GridResample_IMU (
                   string,  // Output grid filename
                   real,    // Origin X
                   real,    // Origin Y
-                  real,    // cell spacing X
-                  real,    // cell spacing Y
-                  int,     // elements in X
-                  int      // elements in Y
+                  real,    // Cell spacing X
+                  real,    // Cell spacing Y
+                  int,     // Elements in X
+                  int      // Elements in Y
                   );
 
 
@@ -954,11 +954,11 @@ GridResize_IMU (
 
 [_licensed] void
 GridShad_IMU (
-              string,    // input image name
-              string,    // output new shaded image
-              var real,  // inclination 0-90 degrees (def. 45)
-              var real,  // declination 0-360 degrees azimuth (def. 45)
-              var real   // vertical scale factor (distance/z unit)
+              string,    // Input image name
+              string,    // Output new shaded image
+              var real,  // Inclination 0-90 degrees (def. 45)
+              var real,  // Declination 0-360 degrees azimuth (def. 45)
+              var real   // Vertical scale factor (distance/z unit)
               );
 
 
@@ -979,7 +979,7 @@ GridShad_IMU (
 
 [_licensed] void
 GridST_IMU (
-            string,  // grid name
+            string,  // Grid name
             ST       // ST (statistics) object to fill/update
             );
 
@@ -1024,7 +1024,7 @@ GridStat_IMU (
 [_public] void
 GridStatComp_IMU (
                   string,    // Name of the grid to get stats from
-                  var int,   // Element type: 0 - byte 1 - USHORT 2 - SHORT 3 - LONG 4 - FLOAT 5 - DOUBLE 6 - 32 byte Colour (RGBx)
+                  var int,   // Element type: 0 - byte 1 - USHORT 2 - SHORT 3 - LONG 4 - FLOAT 5 - DOUBLE 6 - 32 byte Color (RGBx)
                   var int,   // Elements in X direction
                   var int,   // Elements in Y direction
                   var real,  // X element separation
@@ -1098,11 +1098,11 @@ GridStatTrend_IMU (
 
 [_licensed] void
 GridStatTrendExt_IMU (
-                      string,    // grid name
-                      var int,   // trend order
+                      string,    // Grid name
+                      var int,   // Trend order
                       var int,   // Number of coefficients
-                      var real,  // trend origin Xo
-                      var real,  // trend origin Yo
+                      var real,  // Trend origin Xo
+                      var real,  // Trend origin Yo
                       VM         // VM hold coefficient values MUST BE OF TYPE 'real'
                       );
 
@@ -1144,10 +1144,10 @@ rSlopeStandardDeviation_IMU (
 
 [_licensed] void
 GridStitch_IMU (
-                string,  // Input Grid1 Name
-                string,  // Input Grid2 Name
-                string,  // Output Grid Name
-                int,     // Stitching Method
+                string,  // Input Grid1 name
+                string,  // Input Grid2 name
+                string,  // Output Grid name
+                int,     // Stitching method
                 int,     // Grid 1 trend removal order
                 int,     // Grid 2 trend removal order
                 int,     // Trend removal type of points to use
@@ -1156,7 +1156,7 @@ GridStitch_IMU (
                 int,     // Path selection
                 PLY,     // PLY object for user path
                 real,    // Correction weighting
-                int      // width of corrections, in grid cells (8 to 256)
+                int      // Width of corrections, in grid cells (8 to 256)
                 );
 
 
@@ -1186,7 +1186,7 @@ GridStitchCtl_IMU (
 // Returns        Nothing
 //
 // Notes          
-//                The background colour can be either selected
+//                The background color can be either selected
 //                from one of 8 settings, or can be specified
 //                as a combination of Reg,Green, and Blue values.
 //                
@@ -1198,13 +1198,13 @@ GridStitchCtl_IMU (
 GridTiff_IMU (
               string,  // Comma-delimited string containing names of all grids to use in Tiff generation Up to 16 grids allowed.
               string,  // Name of Tiff file to create
-              string,  // Background colour option. One of W (White)  K (Black) C (Cyan) M (Magenta) Y (Yellow) R (Red)  G (Green) B (Blue)
+              string,  // Background color option. One of W (White)  K (Black) C (Cyan) M (Magenta) Y (Yellow) R (Red)  G (Green) B (Blue)
               int,     // Background Red value (0-255)
               int,     // Background Green (0-255)
               int,     // Background Blue  (0-255)
               real,    // New cell size
               int,     // Pixel size of registration marks
-              real     // Map Scale
+              real     // Map scale
               );
 
 
@@ -1272,7 +1272,7 @@ GridTrns_IMU (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// GridVD_IMU   Apply vertical derivertive convolution filter to a grid.
+// GridVD_IMU   Apply vertical derivative convolution filter to a grid.
 //
 // Returns      Nothing
 //
@@ -1281,8 +1281,8 @@ GridTrns_IMU (
 
 [_licensed] void
 GridVD_IMU (
-            IMG,  // input image
-            IMG   // output image
+            IMG,  // Input image
+            IMG   // Output image
             );
 
 
@@ -1571,7 +1571,7 @@ PeakSize2_IMU (
 
 [_licensed] void
 PigeonHole_IMU (
-                IMG,      // input grid
+                IMG,      // Input grid
                 VV,       // X locations
                 VV,       // Y locations
                 var int   // Number of points located in the grid.
@@ -1593,12 +1593,12 @@ PigeonHole_IMU (
 
 [_licensed] void
 Profile_IMU (
-             IMG,   // input image
+             IMG,   // Input image
              real,  // X1
              real,  // Y1
              real,  // X2
              real,  // Y2
-             real,  // sample separation, if 0.0, use grid cell size
+             real,  // Sample separation, if 0.0, use grid cell size
              VV     // VV in which to place result
              );
 
@@ -1615,7 +1615,7 @@ Profile_IMU (
 
 [_licensed] void
 ProfileVV_IMU (
-               IMG,  // input image
+               IMG,  // Input image
                VV,   // X VV coordinates
                VV,   // Y VV coordinates
                VV    // VV in which to place result
@@ -1640,8 +1640,8 @@ ProfileVV_IMU (
 
 [_licensed] void
 RangeGrids_IMU (
-                string,    // list of grid files, "|" delimited
-                IPJ,       // projection for the range - see notes
+                string,    // List of grid files, "|" delimited
+                IPJ,       // Projection for the range - see notes
                 var real,  // Min X - returned range in the projection
                 var real,  // Min Y
                 var real,  // Max X
@@ -1670,7 +1670,7 @@ RangeGrids_IMU (
 
 [_licensed] void
 RangeLL_IMU (
-             IMG,       // input image
+             IMG,       // Input image
              var real,  // Min latitude
              var real,  // Min longitude
              var real,  // Max latitude
@@ -1697,11 +1697,11 @@ RangeLL_IMU (
 [_licensed] void
 StatWindow_IMU (
                 IMG,   // Name of the grid to get stats from
-                real,  // min X window
-                real,  // min Y window
-                real,  // max X window
-                real,  // max Y window
-                int,   // maximum values needed, 0 for all
+                real,  // Min X window
+                real,  // Min Y window
+                real,  // Max X window
+                real,  // Max Y window
+                int,   // Maximum values needed, 0 for all
                 ST     // ST object, stats are accumulated
                 );
 

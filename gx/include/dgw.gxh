@@ -67,7 +67,7 @@
 // LISTVAL     .      .      R      .      .
 // LISTALIAS   .      .      RW     .      .
 //
-// DGW_LABEL       The text label tied to each Dialogue component.
+// DGW_LABEL       The text label tied to each Dialog component.
 // DGW_TEXT        The edit field text.
 // DGW_PATH        The file edit path.
 // DGW_FILEPATH    The complete file name, path included.
@@ -89,7 +89,7 @@
 
 
 //-----------------------------------------------------------------------------------------------------------
-// Create_DGW   This method creates a Dialogue window from a specified
+// Create_DGW   This method creates a Dialog window from a specified
 //              resource. The Resource is loaded into memory but not displayed.
 //
 // Returns      Handle to the DGW object.
@@ -104,7 +104,7 @@ Create_DGW (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// Destroy_DGW   Destroys a Dialogue Window.
+// Destroy_DGW   Destroys a Dialog Window.
 //
 // Returns       Nothing
 //
@@ -113,12 +113,12 @@ Create_DGW (
 
 [_public_app] void
 Destroy_DGW (
-             DGW   // Dialogue to Destroy
+             DGW   // Dialog to Destroy
              );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// GetInfoMETA_DGW   Copies the Dialogue information to a META attribute.
+// GetInfoMETA_DGW   Copies the Dialog information to a META attribute.
 //
 // Returns           Nothing
 //
@@ -127,8 +127,8 @@ Destroy_DGW (
 
 [_public_app] void
 GetInfoMETA_DGW (
-                 DGW,         // Dialogue
-                 DGW_OBJ,     // Dialogue Object
+                 DGW,         // Dialog
+                 DGW_OBJ,     // Dialog Object
                  int,         // <define>DGW_OBJECT</define>
                  META,        // META
                  META_TOKEN,  // Object
@@ -137,7 +137,7 @@ GetInfoMETA_DGW (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// GetInfoSYS_DGW   This method uses the information in a Dialogue box to
+// GetInfoSYS_DGW   This method uses the information in a Dialog box to
 //                  set a SYS variable.
 //
 // Returns          Nothing
@@ -147,8 +147,8 @@ GetInfoMETA_DGW (
 
 [_public_app] void
 GetInfoSYS_DGW (
-                DGW,      // Dialogue
-                DGW_OBJ,  // Dialogue Object
+                DGW,      // Dialog
+                DGW_OBJ,  // Dialog Object
                 int,      // <define>DGW_OBJECT</define>
                 string,   // Group name of the Variable
                 string    // Variable name
@@ -157,7 +157,7 @@ GetInfoSYS_DGW (
 
 //-----------------------------------------------------------------------------------------------------------
 // GetList_DGW   This method retrieves the list (LST) object associated
-//               with a Dialogue object.
+//               with a Dialog object.
 //
 // Returns       The List Object
 //
@@ -166,8 +166,8 @@ GetInfoSYS_DGW (
 
 [_public_app] LST
 GetList_DGW (
-             DGW,      // Dialogue
-             DGW_OBJ   // Dialogue Object
+             DGW,      // Dialog
+             DGW_OBJ   // Dialog Object
              );
 
 
@@ -182,7 +182,7 @@ GetList_DGW (
 
 [_public_app] void
 GtInfo_DGW (
-            DGW,         // Dialogue
+            DGW,         // Dialog
             DGW_OBJ,     // Handle to the TEXT Object
             int,         // <define>DGW_OBJECT</define>
             var string,  // Where to place the String
@@ -193,16 +193,16 @@ GtInfo_DGW (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iRunDialogue_DGW   This method runs the Dialogue window.
+// iRunDialogue_DGW   This method runs the Dialog window.
 //
-// Returns            The Exit Code of the Dialogue window.
+// Returns            The Exit Code of the Dialog window.
 //
 // Available          5.0.0
 //
 
 [_public_app] int
 iRunDialogue_DGW (
-                  DGW   // Dialogue Window
+                  DGW   // Dialog Window
                   );
 
 
@@ -217,7 +217,7 @@ iRunDialogue_DGW (
 
 [_public_app] void
 SetInfo_DGW (
-             DGW,      // Dialogue
+             DGW,      // Dialog
              DGW_OBJ,  // Handle to the TEXT Object
              int,      // <define>DGW_OBJECT</define>
              string    // String to set the Text To
@@ -234,8 +234,8 @@ SetInfo_DGW (
 
 [_public_app] void
 SetInfoMETA_DGW (
-                 DGW,         // Dialogue
-                 DGW_OBJ,     // Dialogue Object
+                 DGW,         // Dialog
+                 DGW_OBJ,     // Dialog Object
                  int,         // <define>DGW_OBJECT</define>
                  META,        // META
                  META_TOKEN,  // Object
@@ -255,8 +255,8 @@ SetInfoMETA_DGW (
 
 [_public_app] void
 SetInfoSYS_DGW (
-                DGW,      // Dialogue
-                DGW_OBJ,  // Dialogue Object
+                DGW,      // Dialog
+                DGW_OBJ,  // Dialog Object
                 int,      // <define>DGW_OBJECT</define>
                 string,   // Group name of the Variable
                 string    // Variable name
@@ -288,7 +288,7 @@ SetInfoSYS_DGW (
 
 [_public_app] void
 SetTitle_DGW (
-              DGW,     // Dialogue
+              DGW,     // Dialog
               string   // Title to set
               );
 

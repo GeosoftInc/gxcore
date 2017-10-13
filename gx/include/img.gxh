@@ -107,7 +107,7 @@
 // IMG_QUERY_iRENDER              
 //                                Render modes are:    0 - interpolate
 //                                1 - pixelate
-//                                2 - colour
+//                                2 - color
 //                                
 // IMG_QUERY_iKX
 // IMG_QUERY_iNX
@@ -152,8 +152,8 @@
 //
 // Relocation Style
 //
-// IMG_RELOCATE_FIT      will fit the image to fill the specified area
-// IMG_RELOCATE_ASPECT   will maintain aspect ratio
+// IMG_RELOCATE_FIT      Will fit the image to fill the specified area
+// IMG_RELOCATE_ASPECT   Will maintain aspect ratio
 //
 //===========================================================================================================
 
@@ -196,15 +196,15 @@ Average2_IMG (
 
 [_public] void
 Copy_IMG (
-          IMG,  // source IMG
-          IMG   // target IMG
+          IMG,  // Source IMG
+          IMG   // Target IMG
           );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // Create_IMG   Creates an IMG not tied to a file at all
 //
-// Returns      IMG Object
+// Returns      IMG object
 //
 // Notes        Once destroyed all the data in this IMG is lost.
 //
@@ -223,12 +223,12 @@ Create_IMG (
 //-----------------------------------------------------------------------------------------------------------
 // CreateFile_IMG   Creates an Image object tied to a grid file.
 //
-// Returns          IMG Object
+// Returns          IMG object
 //
 // Notes            
 //                  When the GS_DOUBLE data type is chosen the actual on-disk
 //                  type of the input image will be used instead of GS_DOUBLE
-//                  if the on-disk values represent colour data as opposed
+//                  if the on-disk values represent color data as opposed
 //                  to real numbers.
 //                  
 //
@@ -239,14 +239,14 @@ Create_IMG (
 CreateFile_IMG (
                 int,     // Data type, <define>GS_TYPES</define> or GS_TYPE_DEFAULT to use native DAT type.
                 string,  // Name of the Grid to link to
-                int      // Grid File Open Mode <define>IMG_FILE</define>
+                int      // Grid file open mode <define>IMG_FILE</define>
                 );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // CreateMem_IMG   Creates an IMG object that is backed only by memory.
 //
-// Returns         IMG Object
+// Returns         IMG object
 //
 // Notes           Once destroyed all the data is lost. This is temporary.
 //
@@ -265,7 +265,7 @@ CreateMem_IMG (
 //-----------------------------------------------------------------------------------------------------------
 // CreateNewFile_IMG   Creates an output image file using User defined info.
 //
-// Returns             IMG Object
+// Returns             IMG object
 //
 // Notes               
 //                     Special Note for developers who use this function and
@@ -298,12 +298,12 @@ CreateNewFile_IMG (
 //-----------------------------------------------------------------------------------------------------------
 // CreateOutFile_IMG   Creates an output image file using input image info.
 //
-// Returns             IMG Object
+// Returns             IMG object
 //
 // Notes               
 //                     When the GS_DOUBLE data type is chosen the actual on-disk
 //                     type of the input image will be used instead of GS_DOUBLE
-//                     if the on-disk values represent colour data as opposed
+//                     if the on-disk values represent color data as opposed
 //                     to real numbers.
 //                     
 //
@@ -439,7 +439,7 @@ GetInfo_IMG (
              var real,  // Y element separation
              var real,  // X location of first point
              var real,  // Y location of first point
-             var real   // grid X axis rotation deg. CCW from reference X
+             var real   // Grid X axis rotation deg. CCW from reference X
              );
 
 
@@ -572,13 +572,13 @@ iEType_IMG (
 
 [_public] int
 iGetDefITR_IMG (
-                IMG,  // image
-                ITR   // transform
+                IMG,  // Image
+                ITR   // Transform
                 );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iIsColour_IMG   Is this a Geosoft colour grid?
+// iIsColour_IMG   Is this a Geosoft color grid?
 //
 // Returns         <define>GEO_BOOL</define>
 //
@@ -633,7 +633,7 @@ iIsValidIMGFileEx_IMG (
 
 [_public] int
 iNE_IMG (
-         IMG   // source IMG
+         IMG   // Source IMG
          );
 
 
@@ -674,7 +674,7 @@ Inherit_IMG (
 [_public] void
 InheritIMG_IMG (
                 IMG,  // IMG to make match source IMG
-                IMG   // source IMG
+                IMG   // Source IMG
                 );
 
 
@@ -688,7 +688,7 @@ InheritIMG_IMG (
 
 [_public] int
 iNV_IMG (
-         IMG   // source IMG
+         IMG   // Source IMG
          );
 
 
@@ -702,7 +702,7 @@ iNV_IMG (
 
 [_public] int
 iNX_IMG (
-         IMG   // source IMG
+         IMG   // Source IMG
          );
 
 
@@ -716,7 +716,7 @@ iNX_IMG (
 
 [_public] int
 iNY_IMG (
-         IMG   // source IMG
+         IMG   // Source IMG
          );
 
 
@@ -767,8 +767,8 @@ iQueryKX_IMG (
 
 [_public] int
 iSetDefITR_IMG (
-                IMG,  // image
-                ITR   // transform
+                IMG,  // Image
+                ITR   // Transform
                 );
 
 
@@ -777,7 +777,7 @@ iSetDefITR_IMG (
 //
 // Returns                                       
 //                                               0 - User wishes to plot grids as regular (flat) grid
-//                                               1 - User wishes to plot grids as colour-shaded grids
+//                                               1 - User wishes to plot grids as color-shaded grids
 //                                               
 //
 // Available                                     7.3.0
@@ -793,14 +793,14 @@ iUserPreferenceToPlotAsColourShadedGrid_IMG (
 //
 // Returns       Nothing
 //
-// Notes         The Cell sizes and projections must be the same.
+// Notes         The cell sizes and projections must be the same.
 //
 // Available     5.0.6
 //
 
 [_public] void
 LoadIMG_IMG (
-             IMG,  // master IMG
+             IMG,  // Master IMG
              IMG   // IMG to load
              );
 
@@ -857,7 +857,7 @@ OptKX_IMG (
 ReadV_IMG (
            IMG,  // IMG handle
            int,  // Vector to Read
-           int,  // begining element # to read (0 is the first)
+           int,  // Begining element # to read (0 is the first)
            int,  // # elements to read (0 for whole vector)
            VV    // VV handle
            );
@@ -875,7 +875,7 @@ ReadV_IMG (
 ReadX_IMG (
            IMG,  // IMG handle
            int,  // X column
-           int,  // start Y to read
+           int,  // Start Y to read
            int,  // # Y to read (0 for whole vector)
            VV    // VV
            );
@@ -893,7 +893,7 @@ ReadX_IMG (
 ReadY_IMG (
            IMG,  // IMG handle
            int,  // Y row
-           int,  // start X to read
+           int,  // Start X to read
            int,  // # X to read (0 for whole vector)
            VV    // VV
            );
@@ -909,7 +909,7 @@ ReadY_IMG (
 
 [_public] void
 RefreshGI_IMG (
-               string   // grid name
+               string   // Grid name
                );
 
 
@@ -923,11 +923,11 @@ RefreshGI_IMG (
 
 [_public] void
 Relocate_IMG (
-              IMG,   // image to relocate
-              real,  // area X minimum
-              real,  // area Y minimum
-              real,  // area X maximum
-              real,  // area Y maximum
+              IMG,   // Image to relocate
+              real,  // Area X minimum
+              real,  // Area Y minimum
+              real,  // Area X maximum
+              real,  // Area Y maximum
               int    // <define>IMG_RELOCATE</define>
               );
 
@@ -944,8 +944,8 @@ Relocate_IMG (
 Report_IMG (
             string,  // Grid name
             WA,      // Text file to write to
-            int,     // recalc statistics (0 - no; 1 - yes)
-            int,     // number of decimals to put in results
+            int,     // Recalc statistics (0 - no; 1 - yes)
+            int,     // Number of decimals to put in results
             string   // Title for report
             );
 
@@ -967,8 +967,8 @@ Report_IMG (
 ReportCSV_IMG (
                string,  // Grid name
                WA,      // Text file to write to
-               int,     // recalc statistics (0 - no; 1 - yes)
-               int,     // number of decimals to put in results
+               int,     // Recalc statistics (0 - no; 1 - yes)
+               int,     // Number of decimals to put in results
                int      // Write header line (0 - no; 1 - yes)?
                );
 
@@ -983,7 +983,7 @@ ReportCSV_IMG (
 
 [_public] real
 rGetZ_IMG (
-           IMG,   // source IMG
+           IMG,   // Source IMG
            real,  // X location in the grid projection
            real   // Y location in the grid projection
            );
@@ -1043,7 +1043,7 @@ SetInfo_IMG (
              real,  // Y element separation
              real,  // X location of first point
              real,  // Y location of first point
-             real   // grid X axis rotation deg. CCW from reference X
+             real   // Grid X axis rotation deg. CCW from reference X
              );
 
 
@@ -1062,7 +1062,7 @@ SetInfo_IMG (
 
 [_public] void
 SetIPJ_IMG (
-            IMG,  // source IMG
+            IMG,  // Source IMG
             IPJ   // Projection
             );
 
@@ -1077,7 +1077,7 @@ SetIPJ_IMG (
 
 [_public] void
 SetMETA_IMG (
-             IMG,   // source IMG
+             IMG,   // Source IMG
              META   // Metadata to add to the grid
              );
 
@@ -1122,7 +1122,7 @@ SetTR_IMG (
 
 [_public] void
 Sync_IMG (
-          string   // grid name
+          string   // Grid name
           );
 
 
@@ -1137,8 +1137,8 @@ Sync_IMG (
 [_public] void
 WriteV_IMG (
             IMG,  // IMG handle
-            int,  // vector to write
-            int,  // begining element to write (0 is the first)
+            int,  // Vector to write
+            int,  // Begining element to write (0 is the first)
             int,  // # elements to write (0 for whole vector)
             VV    // VV handle
             );
@@ -1156,7 +1156,7 @@ WriteV_IMG (
 WriteX_IMG (
             IMG,  // IMG handle
             int,  // X column
-            int,  // start Y to write
+            int,  // Start Y to write
             int,  // # Y to write (0 for whole vector)
             VV    // VV
             );
@@ -1174,7 +1174,7 @@ WriteX_IMG (
 WriteY_IMG (
             IMG,  // IMG handle
             int,  // Y row
-            int,  // start X to write
+            int,  // Start X to write
             int,  // # X write (0 for whole vector)
             VV    // VV
             );

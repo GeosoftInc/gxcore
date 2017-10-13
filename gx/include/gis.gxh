@@ -72,8 +72,8 @@
 
 [_public] GIS
 Create_GIS (
-            string,  // data source (file)
-            string,  // data qualifying information if required.
+            string,  // Data source (file)
+            string,  // Data qualifying information if required.
             int      // <define>GIS_TYPE</define>
             );
 
@@ -235,8 +235,8 @@ iDatamineType_GIS (
 [_public] void
 IGetFileName_GIS (
                   GIS,         // GIS Handle
-                  var string,  // returned file name
-                  int          // size of file name string
+                  var string,  // Returned file name
+                  int          // Size of file name string
                   );
 
 #define GetFileName_GIS(A, B) IGetFileName_GIS(A, B, sizeof(B))
@@ -447,7 +447,7 @@ LoadASCII_GIS (
 [_public] void
 LoadGDB_GIS (
              GIS,  // GIS object
-             DB    // database
+             DB    // Database
              );
 
 
@@ -464,7 +464,7 @@ LoadGDB_GIS (
 [_public] void
 LoadMAP_GIS (
              GIS,    // GIS object
-             MVIEW   // view in which to place GIS drawing.
+             MVIEW   // View in which to place GIS drawing.
              );
 
 
@@ -505,7 +505,7 @@ LoadMAPEx_GIS (
 [_public] void
 LoadMetaGroupsMAP_GIS (
                        GIS,         // GIS
-                       MVIEW,       // view in which to place GIS drawing.
+                       MVIEW,       // View in which to place GIS drawing.
                        META,        // META
                        META_TOKEN,  // Class
                        string,      // Group Name prefix
@@ -553,7 +553,7 @@ LoadPLY_GIS (
 [_public] void
 LoadShapesGDB_GIS (
                    GIS,  // GIS object
-                   DB    // database
+                   DB    // Database
                    );
 
 

@@ -46,7 +46,7 @@ int iArcGIS, iNGroups, iToks, i;
 string(STR_FILE) sDXFFile, sMap;
 string(STR_GROUP) sView, sGroup;
 string(STR_DEFAULT_LONG) sLicenseClass, sTok;
-string(4096) sGroups;
+string(4259840) sGroups; // Value is STR_GROUP * 4096 to avoid buffer overflow
 
 //===========================================================================
 //                                   CODE

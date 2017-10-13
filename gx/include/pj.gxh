@@ -23,9 +23,9 @@
 //
 // Define	PJ_ELEVATION
 //
-// elevation correction method
+// Elevation correction method
 //
-// PJ_ELEVATION_NONE         elevation transform not supported.
+// PJ_ELEVATION_NONE         Elevation transform not supported.
 // PJ_ELEVATION_GEOCENTRIC   
 //                           elevation transformation uses earth-centre shift
 //                           and is not accurate.
@@ -239,12 +239,12 @@ CreateIPJ_PJ (
 
 [_public] PJ
 CreateRectified_PJ (
-                    real,  // longitude  at (X,Y) origin
-                    real,  // latitude   at (X,Y) origin
+                    real,  // Longitude  at (X,Y) origin
+                    real,  // Latitude   at (X,Y) origin
                     real,  // (X,Y) origin
                     real,
-                    real,  // coordinate Y relative to geographic N (deg azm)
-                    real,  // scale to convert X,Y to m.
+                    real,  // Coordinate Y relative to geographic N (deg azm)
+                    real,  // Scale to convert X,Y to m.
                     int    // <define>PJ_RECT</define>
                     );
 
@@ -373,7 +373,7 @@ ProjectBoundingRectangle2_PJ (
                               var real,  // Bounding Region Min Y
                               var real,  // Bounding Region Max X
                               var real,  // Bounding Region Max Y
-                              real       // maximum allowable projection error if <= 0.0, will use 0.005% of smallest dimension
+                              real       // Maximum allowable projection error if <= 0.0, will use 0.005% of smallest dimension
                               );
 
 
@@ -425,7 +425,7 @@ ProjectBoundingRectangleRes2_PJ (
                                  var real,  // Bounding Region Max X
                                  var real,  // Bounding Region Max Y
                                  var real,  // Resolution
-                                 real       // maximum allowable projection error if <= 0.0, will use 0.005% of smallest dimension
+                                 real       // Maximum allowable projection error if <= 0.0, will use 0.005% of smallest dimension
                                  );
 
 

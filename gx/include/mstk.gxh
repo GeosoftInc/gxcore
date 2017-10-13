@@ -193,11 +193,11 @@ IFindSTK_MSTK (
                MSTK,        // hMSTK
                string,      // Input string (see notes above). Will be modified on return
                var int,     // Index to the STK found, Must be greater than 0 if found, -1 if not found
-               var string,  // output group name string
+               var string,  // Output group name string
                int,         // Group string length
-               var string,  // output X channel name string
+               var string,  // Output X channel name string
                int,         // X string length
-               var string,  // output Y channel name string
+               var string,  // Output Y channel name string
                int          // Y string length
                );
 

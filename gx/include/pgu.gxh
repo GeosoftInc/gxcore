@@ -89,7 +89,7 @@
 //
 // Define	PGU_TRANS
 //
-// transform methods for the columns
+// Transform methods for the columns
 //
 // PGU_TRANS_NONE
 // PGU_TRANS_LOG
@@ -104,7 +104,7 @@
 //
 // Define	PGU_INTERP_ORDER
 //
-// interpolation direction order
+// Interpolation direction order
 //
 // PGU_INTERP_ORDER_XYZ
 // PGU_INTERP_ORDER_XZY
@@ -137,7 +137,7 @@
 
 [_licensed] void
 Bool_PGU (
-          PG,      // pager obj
+          PG,      // Pager obj
           string   // sRefFil - reference file for boolean mask flag.
           );
 
@@ -155,12 +155,12 @@ Bool_PGU (
 
 [_licensed] void
 DirectGriddingDAT_PGU (
-                       PG,    // input grid
+                       PG,    // Input grid
                        real,  // X origin of grid
                        real,  // Y origin of grid
                        real,  // X cell size
                        real,  // Y cell size
-                       real,  // rotation angle (degrees CCW).
+                       real,  // Rotation angle (degrees CCW).
                        DAT,   // DAT source
                        int    // <define>PGU_DIRECTGRID</define>
                        );
@@ -179,14 +179,14 @@ DirectGriddingDAT_PGU (
 
 [_licensed] void
 DirectGriddingDAT3D_PGU (
-                         PG,    // input 3D PG
+                         PG,    // Input 3D PG
                          real,  // X origin of 3D grid
                          real,  // Y origin of 3D grid
                          real,  // Z origin of 3D grid
                          real,  // X cell size
                          real,  // Y cell size
                          real,  // Z cell size
-                         real,  // rotation angle (degrees CCW, vertical axis only).
+                         real,  // Rotation angle (degrees CCW, vertical axis only).
                          DAT,   // 3D DAT source
                          int    // <define>PGU_DIRECTGRID</define>
                          );
@@ -205,12 +205,12 @@ DirectGriddingDAT3D_PGU (
 
 [_licensed] void
 DirectGriddingDB_PGU (
-                      PG,       // input grid
+                      PG,       // Input grid
                       real,     // X origin of grid
                       real,     // Y origin of grid
                       real,     // X cell size
                       real,     // Y cell size
-                      real,     // rotation angle (degrees CCW).
+                      real,     // Rotation angle (degrees CCW).
                       DB,       // Database
                       DB_SYMB,  // X Channel [READONLY]
                       DB_SYMB,  // Y Channel [READONLY]
@@ -232,14 +232,14 @@ DirectGriddingDB_PGU (
 
 [_licensed] void
 DirectGriddingDB3D_PGU (
-                        PG,       // input 3D PG
+                        PG,       // Input 3D PG
                         real,     // X origin of 3D grid
                         real,     // Y origin of 3D grid
                         real,     // Z origin of 3D grid
                         real,     // X cell size
                         real,     // Y cell size
                         real,     // Z cell size
-                        real,     // rotation angle (degrees CCW, vertical axis only).
+                        real,     // Rotation angle (degrees CCW, vertical axis only).
                         DB,       // Database
                         DB_SYMB,  // X Channel [READONLY]
                         DB_SYMB,  // Y Channel [READONLY]
@@ -262,12 +262,12 @@ DirectGriddingDB3D_PGU (
 
 [_licensed] void
 DirectGriddingVV_PGU (
-                      PG,    // input grid
+                      PG,    // Input grid
                       real,  // X origin of grid
                       real,  // Y origin of grid
                       real,  // X cell size
                       real,  // Y cell size
-                      real,  // rotation angle (degrees CCW).
+                      real,  // Rotation angle (degrees CCW).
                       VV,    // X locations of values
                       VV,    // Y locations of values
                       VV,    // Z values to grid
@@ -287,10 +287,10 @@ DirectGriddingVV_PGU (
 
 [_licensed] void
 Expand_PGU (
-            PG,    // original pager obj
-            PG,    // expanded pager obj
+            PG,    // Original pager obj
+            PG,    // Expanded pager obj
             real,  // % expansion
-            int,   // option  0 - rectangular, 1 - square
+            int,   // Option  0 - rectangular, 1 - square
             int,   // X dimension to expand to (0 for expansion to FFT2D legal dimension)
             int    // Y dimension to expand to (0 for expansion to FFT2D legal dimension)
             );
@@ -306,7 +306,7 @@ Expand_PGU (
 
 [_licensed] void
 Fill_PGU (
-          PG,      // pager obj
+          PG,      // Pager obj
           int,     // Roll off weighting option: 1 - linear, 2 - square
           real,    // dRollBase - the value to roll off to, GS_R8DM for roll off to mean value line by line.
           int,     // lRollDist - (at unit of cell dist.) for roll-off. 0 for no roll of, -1 for the default: 2 times of min. dummy edge dim.
@@ -330,7 +330,7 @@ Fill_PGU (
 
 [_licensed] void
 FillValue_PGU (
-               PG,    // pager obj
+               PG,    // Pager obj
                real   // Value to set in pager
                );
 
@@ -345,12 +345,12 @@ FillValue_PGU (
 
 [_licensed] void
 FiltSym_PGU (
-             PG,      // pager obj
-             int,     // number of time to pass smooth filter
-             int,     // flag to use filter file
-             string,  // file for filter values
-             int,     // size of filter window, 5/7/9
-             VV       // array of 6/10/15 filter coefficients
+             PG,      // Pager obj
+             int,     // Number of time to pass smooth filter
+             int,     // Flag to use filter file
+             string,  // File for filter values
+             int,     // Size of filter window, 5/7/9
+             VV       // Array of 6/10/15 filter coefficients
              );
 
 
@@ -364,11 +364,11 @@ FiltSym_PGU (
 
 [_licensed] void
 FiltSym5_PGU (
-              PG,      // pager obj
-              int,     // number of time to pass smooth filter
-              int,     // flag to use filter file
-              string,  // file for filter values
-              VV       // array of 6 filter coefficients at position 00, 10, 11, 20, 21, 22. Symmetric filters look like : 22 21 20 21 22 21 11 10 11 21 20 10 00 10 20 21 11 10 11 21 22 21 20 21 22
+              PG,      // Pager obj
+              int,     // Number of time to pass smooth filter
+              int,     // Flag to use filter file
+              string,  // File for filter values
+              VV       // Array of 6 filter coefficients at position 00, 10, 11, 20, 21, 22. Symmetric filters look like : 22 21 20 21 22 21 11 10 11 21 20 10 00 10 20 21 11 10 11 21 22 21 20 21 22
               );
 
 
@@ -407,7 +407,7 @@ GridPeak_PGU (
 
 [_licensed] void
 IDWGriddingDAT_PGU (
-                    PG,   // input grid
+                    PG,   // Input grid
                     DAT,  // DAT source
                     REG   // Parameters (see above)
                     );
@@ -425,7 +425,7 @@ IDWGriddingDAT_PGU (
 
 [_licensed] void
 IDWGriddingDAT3D_PGU (
-                      PG,   // input 3D PG
+                      PG,   // Input 3D PG
                       DAT,  // DAT source
                       REG   // Parameters (see above)
                       );
@@ -461,7 +461,7 @@ IDWGriddingDAT3D_PGU (
 
 [_licensed] void
 IDWGriddingDB_PGU (
-                   PG,       // input grid
+                   PG,       // Input grid
                    DB,       // Database
                    DB_SYMB,  // X Channel [READONLY]
                    DB_SYMB,  // Y Channel [READONLY]
@@ -500,7 +500,7 @@ IDWGriddingDB_PGU (
 
 [_licensed] void
 IDWGriddingDB3D_PGU (
-                     PG,       // input 3D PG
+                     PG,       // Input 3D PG
                      DB,       // Database
                      DB_SYMB,  // X Channel [READONLY]
                      DB_SYMB,  // Y Channel [READONLY]
@@ -522,7 +522,7 @@ IDWGriddingDB3D_PGU (
 
 [_licensed] void
 IDWGriddingVV_PGU (
-                   PG,   // input grid
+                   PG,   // Input grid
                    VV,   // X locations
                    VV,   // Y locations
                    VV,   // Data values to grid
@@ -648,12 +648,12 @@ RefFile_PGU (
 
 [_licensed] void
 SaveFile_PGU (
-              PG,      // input PG object
+              PG,      // Input PG object
               real,    // X origin
               real,    // Y origin
               real,    // DX
               real,    // DY
-              real,    // rotation angle
+              real,    // Rotation angle
               TR,      // Trend information or NULL
               IPJ,     // Projection or NULL
               string   // Output file name
@@ -696,15 +696,15 @@ ThematicToNumeric_PGU (
 
 [_licensed] void
 Trend_PGU (
-           PG,    // original pager obj
-           PG,    // trended pager obj
-           TR,    // trend obj
-           int,   // option  0 - calculate, 1 - given in TR, 2 - replace back from TR
-           int,   // trend base on: 0 - all points, 1 - edge points
-           real,  // trend orogin  rXo,
-           real,  // trend orogin  rYo,
-           real,  // inclrement in X directon  rDx,
-           real   // inclrement in Y directon  rDy
+           PG,    // Original pager obj
+           PG,    // Trended pager obj
+           TR,    // Trend obj
+           int,   // Option  0 - calculate, 1 - given in TR, 2 - replace back from TR
+           int,   // Trend base on: 0 - all points, 1 - edge points
+           real,  // Trend origin  rXo,
+           real,  // Trend origin  rYo,
+           real,  // Increment in X direction  rDx,
+           real   // Increment in Y direction  rDy
            );
 
 
@@ -769,8 +769,8 @@ MultiplyScalar_PGU (
 
 [_licensed] void
 CorrelationMatrix_PGU (
-                       PG,  // input matrix
-                       PG   // returned correlation matrix
+                       PG,  // Input matrix
+                       PG   // Returned correlation matrix
                        );
 
 
@@ -784,9 +784,9 @@ CorrelationMatrix_PGU (
 
 [_licensed] void
 CorrelationMatrix2_PGU (
-                        PG,   // input matrix
+                        PG,   // Input matrix
                         int,  // <define>PGU_CORR</define>
-                        PG    // returned correlation matrix
+                        PG    // Returned correlation matrix
                         );
 
 
@@ -847,9 +847,9 @@ Jacobi_PGU (
 [_licensed] void
 LUBackSub_PGU (
                PG,  // LU decomposition of A
-               VV,  // permutation vector (type INT)
-               VV,  // right hand side vector B (input)
-               VV   // solution vector (output)
+               VV,  // Permutation vector (type INT)
+               VV,  // Right hand side vector B (input)
+               VV   // Solution vector (output)
                );
 
 
@@ -874,9 +874,9 @@ LUBackSub_PGU (
 
 [_licensed] void
 LUDecomp_PGU (
-              PG,  // input
+              PG,  // Input
               PG,  // LU decomposition (may be same pager as input)
-              VV   // permutation vector (type INT)
+              VV   // Permutation vector (type INT)
               );
 
 
@@ -897,11 +897,11 @@ LUDecomp_PGU (
 
 [_licensed] void
 MatrixMult_PGU (
-                PG,   // matrix U
+                PG,   // Matrix U
                 int,  // TRUE (1) if U should be transposed before multiplication
-                PG,   // matrix V
+                PG,   // Matrix V
                 int,  // TRUE (1) if V should be transposed before multiplication
-                PG    // returned matrix U*V
+                PG    // Returned matrix U*V
                 );
 
 
@@ -922,9 +922,9 @@ MatrixMult_PGU (
 
 [_licensed] void
 MatrixVectorMult_PGU (
-                      PG,  // matrix U
-                      VV,  // vector x
-                      VV   // returned vector U*x
+                      PG,  // Matrix U
+                      VV,  // Vector x
+                      VV   // Returned vector U*x
                       );
 
 
@@ -1007,7 +1007,7 @@ SVRecompose_PGU (
 [_licensed] void
 PCCommunality_PGU (
                    PG,  // Input pager of the principal components
-                   VV   // returned communality values
+                   VV   // Returned communality values
                    );
 
 
@@ -1032,8 +1032,8 @@ PCCommunality_PGU (
 
 [_licensed] void
 PCLoadings_PGU (
-                PG,  // standardized data matrix (M by N)
-                PG   // principal component loadings (N by N)
+                PG,  // Standardized data matrix (M by N)
+                PG   // Principal component loadings (N by N)
                 );
 
 
@@ -1049,8 +1049,8 @@ PCLoadings_PGU (
 
 [_licensed] void
 PCLoadings2_PGU (
-                 PG,  // correllation matrix (N by N)
-                 PG   // principal component loadings (N by N)
+                 PG,  // Correllation matrix (N by N)
+                 PG   // Principal component loadings (N by N)
                  );
 
 
@@ -1072,9 +1072,9 @@ PCLoadings2_PGU (
 
 [_licensed] void
 PCScores_PGU (
-              PG,  // standardized data matrix  (M by N)
-              PG,  // principal component loadings (input) (N by L, L<=N)
-              PG   // principal component scores (returned) (M by L, L<=N)
+              PG,  // Standardized data matrix  (M by N)
+              PG,  // Principal component loadings (input) (N by L, L<=N)
+              PG   // Principal component scores (returned) (M by L, L<=N)
               );
 
 
@@ -1090,9 +1090,9 @@ PCScores_PGU (
 
 [_licensed] void
 PCStandardize_PGU (
-                   PG,   // matrix to standardize
-                   VV,   // means
-                   VV,   // standard deviations
+                   PG,   // Matrix to standardize
+                   VV,   // Means
+                   VV,   // Standard deviations
                    int   // <define>PGU_DIRECTION</define>
                    );
 
@@ -1113,11 +1113,11 @@ PCStandardize_PGU (
 
 [_licensed] void
 PCStandardize2_PGU (
-                    PG,   // matrix to standardize
-                    VV,   // mask VV for data selection (forward only)
-                    VV,   // means
-                    VV,   // standard deviations
-                    int   // forward or reverse
+                    PG,   // Matrix to standardize
+                    VV,   // Mask VV for data selection (forward only)
+                    VV,   // Means
+                    VV,   // Standard deviations
+                    int   // Forward or reverse
                     );
 
 
@@ -1141,9 +1141,9 @@ PCStandardize2_PGU (
 
 [_licensed] void
 PCTransform_PGU (
-                 PG,   // matrix to transform
-                 VV,   // detection limits for the columns
-                 VV,   // maximum values for the columns
+                 PG,   // Matrix to transform
+                 VV,   // Detection limits for the columns
+                 VV,   // Maximum values for the columns
                  VV,   // <define>PGU_TRANS</define>
                  int   // <define>PGU_DIRECTION</define>
                  );
@@ -1165,8 +1165,8 @@ PCTransform_PGU (
 
 [_licensed] void
 PCVarimax_PGU (
-               PG,  // principal component loadings (input) (N by M, M<=N)
-               PG   // rotated principal component loadings (returned) (N by L, L<=M)
+               PG,  // Principal component loadings (input) (N by M, M<=N)
+               PG   // Rotated principal component loadings (returned) (N by L, L<=M)
                );
 
 

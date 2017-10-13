@@ -56,7 +56,7 @@
 //
 // Duplicate handling mode
 //
-// VV_DUP_AVERAGE   average numeric values (for strings, same as VV_DUP_1)
+// VV_DUP_AVERAGE   Average numeric values (for strings, same as VV_DUP_1)
 // VV_DUP_1         Use first value of the pair
 // VV_DUP_2         Use second value of the pair
 // VV_DUP_DUMMY     Set to dummy
@@ -107,8 +107,8 @@
 //
 // Type of clipping
 //
-// VVU_CLIP_DUMMY   clip replaces clipped values with a dummy.
-// VVU_CLIP_LIMIT   clip replaces clipped values with the limit.
+// VVU_CLIP_DUMMY   Clip replaces clipped values with a dummy.
+// VVU_CLIP_LIMIT   Clip replaces clipped values with the limit.
 //
 //===========================================================================================================
 
@@ -122,9 +122,9 @@
 //
 // How to deal with repeats
 //
-// VVU_DUMMYREPEAT_FIRST    dummies all but first point.
-// VVU_DUMMYREPEAT_LAST     dummies all but last point.
-// VVU_DUMMYREPEAT_MIDDLE   dummies all but middle point.
+// VVU_DUMMYREPEAT_FIRST    Dummies all but first point.
+// VVU_DUMMYREPEAT_LAST     Dummies all but last point.
+// VVU_DUMMYREPEAT_MIDDLE   Dummies all but middle point.
 //
 //===========================================================================================================
 
@@ -209,8 +209,8 @@
 //
 // Matching style
 //
-// VVU_MATCH_FULL_STRINGS   entire string
-// VVU_MATCH_INPUT_LENGTH   match the first part of a string.
+// VVU_MATCH_FULL_STRINGS   Entire string
+// VVU_MATCH_INPUT_LENGTH   Match the first part of a string.
 //
 //===========================================================================================================
 
@@ -323,8 +323,8 @@
 
 [_licensed] void
 AverageRepeat_VVU (
-                   VV,  // reference VV
-                   VV   // data VV to average
+                   VV,  // Reference VV
+                   VV   // Data VV to average
                    );
 
 
@@ -349,8 +349,8 @@ AverageRepeat_VVU (
 
 [_licensed] void
 AverageRepeatEx_VVU (
-                     VV,   // reference VV
-                     VV,   // data VV to average
+                     VV,   // Reference VV
+                     VV,   // Data VV to average
                      int   // <define>VVU_MODE</define>
                      );
 
@@ -376,9 +376,9 @@ AverageRepeatEx_VVU (
 
 [_licensed] void
 AverageRepeat2_VVU (
-                    VV,  // reference VV
-                    VV,  // reference VV
-                    VV   // data VV to average
+                    VV,  // Reference VV
+                    VV,  // Reference VV
+                    VV   // Data VV to average
                     );
 
 
@@ -404,9 +404,9 @@ AverageRepeat2_VVU (
 
 [_licensed] void
 AverageRepeat2Ex_VVU (
-                      VV,   // reference VV
-                      VV,   // reference VV
-                      VV,   // data VV to average
+                      VV,   // Reference VV
+                      VV,   // Reference VV
+                      VV,   // Data VV to average
                       int   // <define>VVU_MODE</define>
                       );
 
@@ -425,7 +425,7 @@ AverageRepeat2Ex_VVU (
 [_licensed] void
 BinarySearch_VVU (
                   VV,       // VV
-                  real,     // value to search for.
+                  real,     // Value to search for.
                   var int,  // Minmum Location
                   var int   // Maximum Location
                   );
@@ -461,8 +461,8 @@ BoxCox_VVU (
 
 [_licensed] void
 BPFilt_VVU (
-            VV,    // input VV
-            VV,    // filtered VV
+            VV,    // Input VV
+            VV,    // Filtered VV
             real,  // Short wavelength cutoff, 0 for highpass
             real,  // Long wavelength cutoff, 0 for lowpass
             int    // Filter Length, 0 for default length
@@ -480,8 +480,8 @@ BPFilt_VVU (
 [_public] void
 Clip_VVU (
           VV,    // VV to clip
-          real,  // minimum value, rDUMMY for no minimum clip
-          real,  // maximum value, rDUMMY for no maximum clip
+          real,  // Minimum value, rDUMMY for no minimum clip
+          real,  // Maximum value, rDUMMY for no maximum clip
           int    // <define>VVU_CLIP</define>
           );
 
@@ -527,7 +527,7 @@ ClipToDetectLimit_VVU (
 [_licensed] void
 Decimate_VVU (
               VV,   // VV
-              int   // decimation factor (must be > 0)
+              int   // Decimation factor (must be > 0)
               );
 
 
@@ -699,7 +699,7 @@ DummyRangeEx_VVU (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// DummyRepeat_VVU   dummy repeat values in a VV.
+// DummyRepeat_VVU   Dummy repeat values in a VV.
 //
 // Returns           Nothing
 //
@@ -773,8 +773,8 @@ ExpDist_VVU (
 
 [_licensed] void
 Filter_VVU (
-            VV,      // input VV
-            VV,      // filtered VV
+            VV,      // Input VV
+            VV,      // Filtered VV
             FILTER   // Filter handle (see FLT)
             );
 
@@ -844,8 +844,8 @@ FractalFilter_VVU (
 iCloseXY_VVU (
               VV,    // X locations
               VV,    // Y locations
-              real,  // input X
-              real   // input Y
+              real,  // Input X
+              real   // Input Y
               );
 
 
@@ -869,8 +869,8 @@ iCloseXYM_VVU (
                VV,    // X locations
                VV,    // Y locations
                VV,    // Mask values
-               real,  // input X
-               real   // input Y
+               real,  // Input X
+               real   // Input Y
                );
 
 
@@ -891,9 +891,9 @@ iCloseXYZ_VVU (
                VV,    // X locations
                VV,    // Y locations
                VV,    // Z locations
-               real,  // input X
-               real,  // input Y
-               real   // input Z
+               real,  // Input X
+               real,  // Input Y
+               real   // Input Z
                );
 
 
@@ -918,9 +918,9 @@ iCloseXYZM_VVU (
                 VV,    // Y locations
                 VV,    // Z locations
                 VV,    // Mask values
-                real,  // input X
-                real,  // input Y
-                real   // input Z
+                real,  // Input X
+                real,  // Input Y
+                real   // Input Z
                 );
 
 
@@ -959,8 +959,8 @@ iFindDummy_VVU (
                 VV,   // VV handle
                 int,  // 0 increasing order 1 decreasing order
                 int,  // 0 to find the first dummy 1 find first non-dummy
-                int,  // start search range at element
-                int   // end search range at element (-1 for last)
+                int,  // Start search range at element
+                int   // End search range at element (-1 for last)
                 );
 
 
@@ -993,7 +993,7 @@ iFindDummy_VVU (
 
 [_licensed] void
 Interp_VVU (
-            VV,   // input VV
+            VV,   // Input VV
             int,  // <define>VVU_INTERP</define>
             int   // <define>VVU_INTERP_EDGE</define>
             );
@@ -1011,10 +1011,10 @@ Interp_VVU (
 
 [_licensed] int
 iQCFillGaps_VVU (
-                 VV,    // input/output X VV on which to operate Required in GS_DOUBLE or GS_FLOAT
-                 VV,    // input/output Y VV on which to operate In GS_DOUBLE or GS_FLOAT
-                 VV,    // input Flag VV Required in GS_BYTE
-                 VV,    // input Gap VV to use for locating the fill inline segments In GS_DOUBLE or GS_FLOAT
+                 VV,    // Input/output X VV on which to operate Required in GS_DOUBLE or GS_FLOAT
+                 VV,    // Input/output Y VV on which to operate In GS_DOUBLE or GS_FLOAT
+                 VV,    // Input Flag VV Required in GS_BYTE
+                 VV,    // Input Gap VV to use for locating the fill inline segments In GS_DOUBLE or GS_FLOAT
                  real   // Min segment length  (required)
                  );
 
@@ -1044,7 +1044,7 @@ iSearchText_VVU (
                  string,  // Text to match
                  int,     // <define>VVU_CASE</define>
                  int,     // <define>VVU_MATCH</define>
-                 int,     // index to begin search (-1 for full VV)
+                 int,     // Index to begin search (-1 for full VV)
                  int      // 1: forward search, -1: backward search
                  );
 
@@ -1064,7 +1064,7 @@ iSearchText_VVU (
 [_licensed] void
 Mask_VVU (
           VV,  // VV to be masked
-          VV   // mask reference VV
+          VV   // Mask reference VV
           );
 
 
@@ -1114,8 +1114,8 @@ MaskOR_VVU (
 
 [_licensed] void
 NLFilt_VVU (
-            VV,    // input VV
-            VV,    // filtered VV
+            VV,    // Input VV
+            VV,    // Filtered VV
             int,   // Filter Width
             real   // Filter Tolerance, 0 for 1% of Std. Dev.
             );
@@ -1138,10 +1138,10 @@ NLFilt_VVU (
 
 [_licensed] void
 NoiseCheck_VVU (
-                VV,    // input VV on which to apply quality control Required in GS_DOUBLE or GS_FLOAT
-                VV,    // output flag VV with result 0 and 1. Required in GS_BYTE
-                real,  // allowed deviation over a number of data points in input VV (next parameter). Must be >= 0.0
-                int    // number of data points. Must be > 0
+                VV,    // Input VV on which to apply quality control Required in GS_DOUBLE or GS_FLOAT
+                VV,    // Output flag VV with result 0 and 1. Required in GS_BYTE
+                real,  // Allowed deviation over a number of data points in input VV (next parameter). Must be >= 0.0
+                int    // Number of data points. Must be > 0
                 );
 
 
@@ -1168,11 +1168,11 @@ NoiseCheck_VVU (
 
 [_licensed] void
 NoiseCheck2_VVU (
-                 VV,    // input VV on which to apply quality control Required in GS_DOUBLE or GS_FLOAT
-                 VV,    // output flag VV with result 0 and 1. Required in GS_BYTE
+                 VV,    // Input VV on which to apply quality control Required in GS_DOUBLE or GS_FLOAT
+                 VV,    // Output flag VV with result 0 and 1. Required in GS_BYTE
                  VV,    // Output maximum deviation VV.
-                 real,  // allowed deviation over a number of data points in input VV (next parameter). Must be >= 0.0
-                 int    // number of data points in the line segment. Must be > 0
+                 real,  // Allowed deviation over a number of data points in input VV (next parameter). Must be >= 0.0
+                 int    // Number of data points in the line segment. Must be > 0
                  );
 
 
@@ -1225,8 +1225,8 @@ NormalDist_VVU (
 OffsetCircles_VVU (
                    VV,    // Input X locations
                    VV,    // Input Y locations
-                   real,  // minimum offset distance
-                   real,  // symbol radius
+                   real,  // Minimum offset distance
+                   real,  // Symbol radius
                    VV,    // Output (offset) X locations
                    VV     // Output (offset) Y locations
                    );
@@ -1398,9 +1398,9 @@ OffsetCorrectXYZ_VVU (
 OffsetRectangles_VVU (
                       VV,    // Input X locations
                       VV,    // Input Y locations
-                      real,  // minimum offset distance
-                      real,  // symbol X size (width)
-                      real,  // symbol Y size (height)
+                      real,  // Minimum offset distance
+                      real,  // Symbol X size (width)
+                      real,  // Symbol Y size (height)
                       VV,    // Output (offset) X locations
                       VV     // Output (offset) Y locations
                       );
@@ -1427,10 +1427,10 @@ OffsetRectangles_VVU (
 
 [_licensed] void
 PickPeak_VVU (
-              VV,    // input VV
-              VV,    // returned peak VV, all dummies except peak points.
-              real,  // minimum value to accept (0.0 to find all)
-              int    // minimum width to accept (1 to find all)
+              VV,    // Input VV
+              VV,    // Returned peak VV, all dummies except peak points.
+              real,  // Minimum value to accept (0.0 to find all)
+              int    // Minimum width to accept (1 to find all)
               );
 
 
@@ -1452,10 +1452,10 @@ PickPeak_VVU (
 
 [_licensed] void
 PickPeak2_VVU (
-               VV,    // input VV
-               VV,    // returned peak VV, all dummies except peak points.
-               real,  // base level to accept (0.0 to find all)
-               real   // minimum amplitude to accept
+               VV,    // Input VV
+               VV,    // Returned peak VV, all dummies except peak points.
+               real,  // Base level to accept (0.0 to find all)
+               real   // Minimum amplitude to accept
                );
 
 
@@ -1508,7 +1508,7 @@ PickPeak3_VVU (
 [_licensed] void
 PolyFill_VVU (
               VV,   // VV with output data. (Preset length)
-              int,  // order of the polynomial 0-9
+              int,  // Order of the polynomial 0-9
               VV    // VV with polynomial coefficients (input)
               );
 
@@ -1530,7 +1530,7 @@ PolyFill_VVU (
 PolyFill2_VVU (
                VV,   // VV with x spacing (input)
                VV,   // VV with output data. (Preset length)
-               int,  // order of the polynomial 0-9
+               int,  // Order of the polynomial 0-9
                VV    // VV with polynomial coefficients (order+1 values)
                );
 
@@ -1603,13 +1603,13 @@ Prune_VVU (
 
 [_licensed] void
 QC_VVU (
-        VV,    // input VV on which to apply quality control Required in GS_DOUBLE or GS_FLOAT
-        VV,    // distance VV (NULL if criterion #2 does not apply). In GS_DOUBLE or GS_FLOAT
-        VV,    // output flag VV with result 0,1,2,3,-1,-2,-3. Required in GS_BYTE
-        real,  // nominal reading  (required, must not be GS_R8DM)
-        real,  // maximum tolerance/deviation applied to a single reading (criterion #1). GS_R8DM if criterion #1 does not apply. Otherwise, must be positive value including 0.0
-        real,  // allowed tolerance/deviation over a given distance (next parameter) (criterion #2). GS_R8DM if criterion #2 does not apply. Otherwise, must be positive value including 0.0
-        real,  // the specified distance. GS_R8DM if criterion #2 does not apply. Otherwise, must be positive value excluding 0.0
+        VV,    // Input VV on which to apply quality control Required in GS_DOUBLE or GS_FLOAT
+        VV,    // Distance VV (NULL if criterion #2 does not apply). In GS_DOUBLE or GS_FLOAT
+        VV,    // Output flag VV with result 0,1,2,3,-1,-2,-3. Required in GS_BYTE
+        real,  // Nominal reading  (required, must not be GS_R8DM)
+        real,  // Maximum tolerance/deviation applied to a single reading (criterion #1). GS_R8DM if criterion #1 does not apply. Otherwise, must be positive value including 0.0
+        real,  // Allowed tolerance/deviation over a given distance (next parameter) (criterion #2). GS_R8DM if criterion #2 does not apply. Otherwise, must be positive value including 0.0
+        real,  // The specified distance. GS_R8DM if criterion #2 does not apply. Otherwise, must be positive value excluding 0.0
         int    // <define>QC_CRITERION</define>
         );
 
@@ -1646,8 +1646,8 @@ RangeVectorMag_VVU (
 Regress_VVU (
              VV,        // X data
              VV,        // Y data
-             var real,  // returns slope
-             var real   // returns intercept
+             var real,  // Returns slope
+             var real   // Returns intercept
              );
 
 
@@ -1890,8 +1890,8 @@ RollingStats_VVU (
 [_licensed] void
 SearchReplace_VVU (
                    VV,    // VV
-                   real,  // value to replace
-                   real   // replacement
+                   real,  // Value to replace
+                   real   // Replacement
                    );
 
 
@@ -1911,10 +1911,10 @@ SearchReplace_VVU (
 [_licensed] void
 SearchReplaceText_VVU (
                        VV,      // VV
-                       int,     // string format for numeric VV
-                       int,     // decimals for formating numeric VV
-                       string,  // formatted string to replace
-                       string,  // replacement
+                       int,     // String format for numeric VV
+                       int,     // Decimals for formating numeric VV
+                       string,  // Formatted string to replace
+                       string,  // Replacement
                        int      // <define>VVU_SRCHREPL_CASE</define>
                        );
 
@@ -1935,12 +1935,12 @@ SearchReplaceText_VVU (
 [_licensed] void
 SearchReplaceTextEx_VVU (
                          VV,       // VV
-                         int,      // string format for numeric VV
-                         int,      // decimals for formating numeric VV
-                         string,   // formatted string to replace
-                         string,   // replacement
+                         int,      // String format for numeric VV
+                         int,      // Decimals for formating numeric VV
+                         string,   // Formatted string to replace
+                         string,   // Replacement
                          int,      // <define>VVU_SRCHREPL_CASE</define>
-                         var int   // number of items replaced (returned)
+                         var int   // Number of items replaced (returned)
                          );
 
 
@@ -1957,7 +1957,7 @@ Spline_VVU (
             VV,    // X (no dummies)
             VV,    // Y to be splined (no dummies)
             VV,    // Y output
-            int,   // output Length
+            int,   // Output Length
             real,  // Starting Location
             real,  // Separation Distance
             real,  // Maximum gap to interpolate across
@@ -1987,7 +1987,7 @@ Spline2_VVU (
 //-----------------------------------------------------------------------------------------------------------
 // iTokenizeToValues_VVU   Tokenize a string based on any characters.
 //
-// Returns                 number of tokens (length of VV)
+// Returns                 Number of tokens (length of VV)
 //
 // Notes                   
 //                         Parses a series of space, tab or comma-delimited values to a VV.
@@ -1999,7 +1999,7 @@ Spline2_VVU (
 [_public] int
 iTokenizeToValues_VVU (
                        VV,      // VV to place values in
-                       string   // str - String to parse
+                       string   // Str - String to parse
                        );
 
 
@@ -2016,8 +2016,8 @@ iTokenizeToValues_VVU (
 [_public] void
 Translate_VVU (
                VV,    // VV
-               real,  // base
-               real   // scale
+               real,  // Base
+               real   // Scale
                );
 
 
@@ -2043,7 +2043,7 @@ Translate_VVU (
 [_licensed] void
 Trend_VVU (
            VV,   // VV with input data
-           int,  // order of the polynomial 0-9
+           int,  // Order of the polynomial 0-9
            VV    // VV to hold polynomial coefficients (returned).
            );
 
@@ -2071,7 +2071,7 @@ Trend_VVU (
 Trend2_VVU (
             VV,   // VV with x spacing (input)
             VV,   // VV with input data
-            int,  // order of the polynomial 0-9
+            int,  // Order of the polynomial 0-9
             VV    // VV to hold polynomial coefficients (returned)
             );
 

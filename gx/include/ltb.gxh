@@ -123,8 +123,8 @@
 [_public] void
 AddRecord_LTB (
                LTB,      // LTB object
-               string,   // key name
-               var int   // returned record number
+               string,   // Key name
+               var int   // Returned record number
                );
 
 
@@ -172,7 +172,7 @@ Contract_LTB (
 
 [_public] LTB
 Create_LTB (
-            string,  // file name, .csv assumed, searched locally then in GEOSOFT.
+            string,  // File name, .csv assumed, searched locally then in GEOSOFT.
             int,     // <define>LTB_TYPE</define>
             int,     // <define>LTB_DELIM</define>
             string   // Key to find if only one record required, "" to read entire table.
@@ -194,7 +194,7 @@ Create_LTB (
 
 [_public] LTB
 CreateCrypt_LTB (
-                 string,  // file name, .csv assumed, searched locally then in GEOSOFT.
+                 string,  // File name, .csv assumed, searched locally then in GEOSOFT.
                  int,     // <define>LTB_TYPE</define>
                  int,     // <define>LTB_DELIM</define>
                  int,     // <define>LTB_CASE</define>
@@ -218,7 +218,7 @@ CreateCrypt_LTB (
 
 [_public] LTB
 CreateEx_LTB (
-              string,  // file name, .csv assumed, searched locally then in GEOSOFT.
+              string,  // File name, .csv assumed, searched locally then in GEOSOFT.
               int,     // <define>LTB_TYPE</define>
               int,     // <define>LTB_DELIM</define>
               int,     // <define>LTB_CASE</define>
@@ -242,7 +242,7 @@ CreateEx_LTB (
 [_public] void
 DeleteRecord_LTB (
                   LTB,  // LTB object
-                  int   // record number to delete
+                  int   // Record number to delete
                   );
 
 
@@ -277,10 +277,10 @@ Destroy_LTB (
 [_public] void
 GetConLST_LTB (
                LTB,     // LTB object
-               int,     // field
-               string,  // string to match to field, must be lower-case
+               int,     // Field
+               string,  // String to match to field, must be lower-case
                int,     // <define>LTB_CONLST</define>
-               LST      // list to populate
+               LST      // List to populate
                );
 
 
@@ -301,8 +301,8 @@ GetConLST_LTB (
 [_public] void
 GetLST_LTB (
             LTB,  // LTB object
-            int,  // field to get, 0 for key field
-            LST   // list to populate
+            int,  // Field to get, 0 for key field
+            LST   // List to populate
             );
 
 
@@ -323,16 +323,16 @@ GetLST_LTB (
 [_public] void
 GetLST2_LTB (
              LTB,  // LTB object
-             int,  // field for names, 0 for key field
-             int,  // field for values, 0 for key field
-             LST   // list to populate
+             int,  // Field for names, 0 for key field
+             int,  // Field for values, 0 for key field
+             LST   // List to populate
              );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // iFields_LTB   Get number of fields.
 //
-// Returns       number of fields in the LTB.
+// Returns       Number of fields in the LTB.
 //
 // Available     5.0.0
 //
@@ -357,7 +357,7 @@ iFields_LTB (
 [_public] int
 iFindField_LTB (
                 LTB,     // LTB object
-                string   // field name
+                string   // Field name
                 );
 
 
@@ -375,7 +375,7 @@ iFindField_LTB (
 [_public] int
 iFindKey_LTB (
               LTB,     // LTB object
-              string   // key name
+              string   // Key name
               );
 
 
@@ -392,9 +392,9 @@ iFindKey_LTB (
 [_public] void
 IGetField_LTB (
                LTB,         // LTB object
-               int,         // field number
-               var string,  // returned field name
-               int          // maximum field name string length
+               int,         // Field number
+               var string,  // Returned field name
+               int          // Maximum field name string length
                );
 
 #define GetField_LTB(A, B, C) IGetField_LTB(A, B, C, sizeof(C))
@@ -414,8 +414,8 @@ IGetField_LTB (
 [_public] int
 iGetInt_LTB (
              LTB,  // LTB object
-             int,  // record number
-             int   // field number
+             int,  // Record number
+             int   // Field number
              );
 
 
@@ -435,10 +435,10 @@ iGetInt_LTB (
 [_public] void
 IGetString_LTB (
                 LTB,         // LTB object
-                int,         // record number
-                int,         // field number
-                var string,  // returned field token
-                int          // maximum field token string length
+                int,         // Record number
+                int,         // Field number
+                var string,  // Returned field token
+                int          // Maximum field token string length
                 );
 
 #define GetString_LTB(A, B, C, D) IGetString_LTB(A, B, C, D, sizeof(D))
@@ -460,10 +460,10 @@ IGetString_LTB (
 [_public] void
 IGetEnglishString_LTB (
                        LTB,         // LTB object
-                       int,         // record number
-                       int,         // field number
-                       var string,  // returned field token
-                       int          // maximum field token string length
+                       int,         // Record number
+                       int,         // Field number
+                       var string,  // Returned field token
+                       int          // Maximum field token string length
                        );
 
 #define GetEnglishString_LTB(A, B, C, D) IGetEnglishString_LTB(A, B, C, D, sizeof(D))
@@ -472,7 +472,7 @@ IGetEnglishString_LTB (
 //-----------------------------------------------------------------------------------------------------------
 // iRecords_LTB   Get number of records in LTB.
 //
-// Returns        number of records in the LTB.
+// Returns        Number of records in the LTB.
 //
 // Available      5.0.0
 //
@@ -497,9 +497,9 @@ iRecords_LTB (
 [_public] int
 iSearch_LTB (
              LTB,     // LTB object
-             int,     // search start record
-             int,     // field number
-             string   // search string (case sensitive)
+             int,     // Search start record
+             int,     // Field number
+             string   // Search string (case sensitive)
              );
 
 
@@ -553,8 +553,8 @@ Merge_LTB (
 [_public] real
 rGetReal_LTB (
               LTB,  // LTB object
-              int,  // record number
-              int   // field number
+              int,  // Record number
+              int   // Field number
               );
 
 
@@ -569,7 +569,7 @@ rGetReal_LTB (
 [_public] void
 Save_LTB (
           LTB,     // LTB
-          string   // file name, .csv assumed.  If "", save to original file.
+          string   // File name, .csv assumed.  If "", save to original file.
           );
 
 
@@ -584,8 +584,8 @@ Save_LTB (
 [_public] void
 SaveCrypt_LTB (
                LTB,     // LTB
-               string,  // file name, .csv assumed.  If "", save to original file.
-               string   // encryption key  <define>SYS_CRYPT_KEY</define>
+               string,  // File name, .csv assumed.  If "", save to original file.
+               string   // Encryption key  <define>SYS_CRYPT_KEY</define>
                );
 
 
@@ -600,9 +600,9 @@ SaveCrypt_LTB (
 [_public] void
 SetInt_LTB (
             LTB,  // LTB object
-            int,  // record number
-            int,  // field number
-            int   // entry
+            int,  // Record number
+            int,  // Field number
+            int   // Entry
             );
 
 
@@ -617,9 +617,9 @@ SetInt_LTB (
 [_public] void
 SetReal_LTB (
              LTB,   // LTB object
-             int,   // record number
-             int,   // field number
-             real   // entry
+             int,   // Record number
+             int,   // Field number
+             real   // Entry
              );
 
 
@@ -634,9 +634,9 @@ SetReal_LTB (
 [_public] void
 SetString_LTB (
                LTB,     // LTB object
-               int,     // record number
-               int,     // field number
-               string   // entry
+               int,     // Record number
+               int,     // Field number
+               string   // Entry
                );
 
 

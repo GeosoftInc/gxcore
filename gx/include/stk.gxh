@@ -460,7 +460,7 @@ ISetFlag_STK (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetArrayColors_STK   Set colours for individual channels in a VA, via an ITR
+// SetArrayColors_STK   Set colors for individual channels in a VA, via an ITR
 //
 // Returns              Nothing
 //
@@ -474,7 +474,7 @@ ISetFlag_STK (
 [_licensed] void
 SetArrayColors_STK (
                     STK,  // STK,
-                    ITR   // ITR object for colours
+                    ITR   // ITR object for colors
                     );
 
 
@@ -786,12 +786,12 @@ SetTransParms_STK (
                    STK,   // STK handle
                    int,   // Type of transformation for horizontal axis
                    real,  // Minimum value to apply logarithmic
-                   int,   // future use
-                   int,   // future use
+                   int,   // Future use
+                   int,   // Future use
                    int,   // Type of scaling for vertical axis
                    real,  // Minimum value to apply logarithmic
-                   int,   // future use
-                   int    // future use
+                   int,   // Future use
+                   int    // Future use
                    );
 
 

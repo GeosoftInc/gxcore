@@ -103,7 +103,7 @@ hCreateIMG_HGD (
 
 [_public] void
 SetMETA_HGD (
-             HGD,   // source HGD
+             HGD,   // Source HGD
              META   // META object to add to HGD's meta
              );
 

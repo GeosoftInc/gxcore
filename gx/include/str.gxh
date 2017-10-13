@@ -30,8 +30,8 @@
 //
 // Extension option
 //
-// FILE_EXT_ADD_IF_NONE   will add the extension only if no extension is present.
-// FILE_EXT_FORCE         will cause a renaming of the file extension to the new extension.
+// FILE_EXT_ADD_IF_NONE   Will add the extension only if no extension is present.
+// FILE_EXT_FORCE         Will cause a renaming of the file extension to the new extension.
 //
 //===========================================================================================================
 
@@ -225,13 +225,13 @@ rScanTime_STR (
 
 [_public] void
 IFileCombineParts_STR (
-                       string,      // drive
-                       string,      // directory
-                       string,      // name
-                       string,      // extension
-                       string,      // qualifiers
-                       var string,  // destination string, can be same as input
-                       int          // string length
+                       string,      // Drive
+                       string,      // Directory
+                       string,      // Name
+                       string,      // Extension
+                       string,      // Qualifiers
+                       var string,  // Destination string, can be same as input
+                       int          // String length
                        );
 
 #define FileCombineParts_STR(A, B, C, D, E, F) IFileCombineParts_STR(A, B, C, D, E, F, sizeof(F))
@@ -247,11 +247,11 @@ IFileCombineParts_STR (
 
 [_public] void
 IFileExt_STR (
-              string,      // file name to extend
-              string,      // extension if "", extenstion and '.' are stripped.
-              var string,  // extended file name (can be same as input)
+              string,      // File name to extend
+              string,      // Extension if "", extenstion and '.' are stripped.
+              var string,  // Extended file name (can be same as input)
               int,         // <define>FILE_EXT</define>
-              int          // length of buffer
+              int          // Length of buffer
               );
 
 #define FileExt_STR(A, B, C, D) IFileExt_STR(A, B, C, D, sizeof(C))
@@ -267,9 +267,9 @@ IFileExt_STR (
 
 [_public] void
 IFileNamePart_STR (
-                   string,      // file name
-                   var string,  // destination string, can be same as input
-                   int,         // string length
+                   string,      // File name
+                   var string,  // Destination string, can be same as input
+                   int,         // String length
                    int          // <define>STR_FILE_PART</define>
                    );
 
@@ -291,10 +291,10 @@ IFileNamePart_STR (
 
 [_public] void
 IGetMFile_STR (
-               string,      // input multifile string
-               var string,  // output filepath string
-               int,         // sizeof output filepath string
-               int          // index of file
+               string,      // Input multifile string
+               var string,  // Output filepath string
+               int,         // Sizeof output filepath string
+               int          // Index of file
                );
 
 #define GetMFile_STR(A, B, C) IGetMFile_STR(A, B, sizeof(B), C)
@@ -310,9 +310,9 @@ IGetMFile_STR (
 
 [_public] void
 IRemoveQualifiers_STR (
-                       string,      // input file name
-                       var string,  // output file name (can be same as input)
-                       int          // length of buffer
+                       string,      // Input file name
+                       var string,  // Output file name (can be same as input)
+                       int          // Length of buffer
                        );
 
 #define RemoveQualifiers_STR(A, B) IRemoveQualifiers_STR(A, B, sizeof(B))
@@ -353,7 +353,7 @@ IFormatCRC_STR (
 
 [_public] void
 IFormatDate_STR (
-                 real,        // date value in decimal years to format
+                 real,        // Date value in decimal years to format
                  var string,  // Resulting string
                  int,         // Size of the Resulting String
                  int,         // Width of the field
@@ -373,7 +373,7 @@ IFormatDate_STR (
 
 [_public] void
 IFormatI_STR (
-              int,         // value to format
+              int,         // Value to format
               var string,  // Resulting string
               int,         // Size of the Resulting String
               int          // Width of the field
@@ -392,7 +392,7 @@ IFormatI_STR (
 
 [_public] void
 IFormatR_STR (
-              real,        // value to format
+              real,        // Value to format
               var string,  // Resulting string
               int,         // Size of the Resulting String
               int,         // Width of the field
@@ -412,7 +412,7 @@ IFormatR_STR (
 
 [_public] void
 IFormatR2_STR (
-               real,        // value to format
+               real,        // Value to format
                var string,  // Resulting string
                int,         // Size of the Resulting String
                int,         // Width of the field
@@ -432,7 +432,7 @@ IFormatR2_STR (
 
 [_public] void
 IFormatReal_STR (
-                 real,        // value to format
+                 real,        // Value to format
                  var string,  // Resulting string
                  int,         // Size of the Resulting String
                  int,         // <define>GS_FORMATS</define>
@@ -453,7 +453,7 @@ IFormatReal_STR (
 
 [_public] void
 IFormatTime_STR (
-                 real,        // time value in decimal hours to format
+                 real,        // Time value in decimal hours to format
                  var string,  // Resulting string
                  int,         // Size of the Resulting String
                  int,         // Width of the field
@@ -501,8 +501,8 @@ IFormatTime_STR (
 
 [_public] void
 _Escape_STR (
-             var string,  // string to modify
-             int,         // string size
+             var string,  // String to modify
+             int,         // String size
              int          // <define>STR_ESCAPE</define>
              );
 
@@ -519,7 +519,7 @@ _Escape_STR (
 
 [_public] int
 iChar_STR (
-           string   // string to return ascii value of first character
+           string   // String to return ascii value of first character
            );
 
 
@@ -536,9 +536,9 @@ iChar_STR (
 
 [_public] int
 IiCharN_STR (
-             string,  // string
-             int,     // character to get
-             int      // maximum string length (unused)
+             string,  // String
+             int,     // Character to get
+             int      // Maximum string length (unused)
              );
 
 
@@ -557,11 +557,11 @@ IiCharN_STR (
 
 [_public] void
 IJustify_STR (
-              string,      // string to justify
-              var string,  // result string, can be same as input
-              int,         // justification width
+              string,      // String to justify
+              var string,  // Result string, can be same as input
+              int,         // Justification width
               int,         // <define>STR_JUSTIFY</define>
-              int          // maximum size of result
+              int          // Maximum size of result
               );
 
 #define Justify_STR(A, B, C, D) IJustify_STR(A, B, C, D, sizeof(B))
@@ -584,9 +584,9 @@ IJustify_STR (
 [_public] void
 IReplaceiMatchString_STR (
                           var string,  // Destination String
-                          string,      // match string to replace
-                          string,      // replacement string
-                          int          // size of the Destination String
+                          string,      // Match string to replace
+                          string,      // Replacement string
+                          int          // Size of the Destination String
                           );
 
 #define ReplaceiMatchString_STR(A, B, C) IReplaceiMatchString_STR(A, B, C, sizeof(A))
@@ -609,9 +609,9 @@ IReplaceiMatchString_STR (
 [_public] void
 IReplaceMatchString_STR (
                          var string,  // Destination String
-                         string,      // match string to replace
-                         string,      // replacement string
-                         int          // size of the Destination String
+                         string,      // Match string to replace
+                         string,      // Replacement string
+                         int          // Size of the Destination String
                          );
 
 #define ReplaceMatchString_STR(A, B, C) IReplaceMatchString_STR(A, B, C, sizeof(A))
@@ -627,9 +627,9 @@ IReplaceMatchString_STR (
 
 [_public] void
 ISetCharN_STR (
-               var string,  // string
-               int,         // character to set
-               int,         // maximum string length
+               var string,  // String
+               int,         // Character to set
+               int,         // Maximum string length
                int          // ASCII value
                );
 
@@ -659,10 +659,10 @@ ISetCharN_STR (
 
 [_public] void
 ISplitString_STR (
-                  var string,  // original string
-                  string,      // split character (first character of string)
-                  var string,  // split string past split character.
-                  int          // maximum length of split string.
+                  var string,  // Original string
+                  string,      // Split character (first character of string)
+                  var string,  // Split string past split character.
+                  int          // Maximum length of split string.
                   );
 
 #define SplitString_STR(A, B, C) ISplitString_STR(A, B, C, sizeof(C))
@@ -700,8 +700,8 @@ IStrcat_STR (
 
 [_public] int
 iStrcmp_STR (
-             string,  // string A
-             string,  // string B
+             string,  // String A
+             string,  // String B
              int      // <define>STR_CASE</define>
              );
 
@@ -716,9 +716,9 @@ iStrcmp_STR (
 
 [_public] void
 IStrcpy_STR (
-             var string,  // destination string
-             string,      // origin string
-             int          // size of the destination string
+             var string,  // Destination string
+             string,      // Origin string
+             int          // Size of the destination string
              );
 
 #define Strcpy_STR(A, B) IStrcpy_STR(A, B, sizeof(A))
@@ -745,8 +745,8 @@ IStrcpy_STR (
 
 [_public] int
 iStriMask_STR (
-               string,  // mask
-               string   // string to test
+               string,  // Mask
+               string   // String to test
                );
 
 
@@ -784,7 +784,7 @@ IStrins_STR (
 
 [_public] int
 iStrlen_STR (
-             string   // string to find the length of
+             string   // String to find the length of
              );
 
 
@@ -809,8 +809,8 @@ iStrlen_STR (
 
 [_public] int
 iStrMask_STR (
-              string,  // mask
-              string   // string to test
+              string,  // Mask
+              string   // String to test
               );
 
 
@@ -832,7 +832,7 @@ iStrMask_STR (
 
 [_public] int
 iStrMin_STR (
-             var string   // string to find the min length of
+             var string   // String to find the min length of
              );
 
 
@@ -846,7 +846,7 @@ iStrMin_STR (
 
 [_public] int
 iStrMin2_STR (
-              string   // string to find the min length of
+              string   // String to find the min length of
               );
 
 
@@ -864,9 +864,9 @@ iStrMin2_STR (
 
 [_public] int
 iStrncmp_STR (
-              string,  // string A
-              string,  // string B
-              int,     // number of characters to compare
+              string,  // String A
+              string,  // String B
+              int,     // Number of characters to compare
               int      // <define>STR_CASE</define>
               );
 
@@ -884,8 +884,8 @@ iStrncmp_STR (
 
 [_public] int
 iStrStr_STR (
-             string,  // string to scan
-             string,  // string to look for
+             string,  // String to scan
+             string,  // String to look for
              int      // <define>STR_CASE</define>
              );
 
@@ -906,11 +906,11 @@ iStrStr_STR (
 
 [_public] void
 ISubstr_STR (
-             var string,  // destination string
+             var string,  // Destination string
              int,         // Size of output string buffer
-             string,      // origin string
-             int,         // start location
-             int          // number of characters
+             string,      // Origin string
+             int,         // Start location
+             int          // Number of characters
              );
 
 #define Substr_STR(A, B, C, D) ISubstr_STR(A, sizeof(A), B, C, D)
@@ -960,9 +960,9 @@ IToUpper_STR (
 
 [_public] void
 IXYZLine_STR (
-              string,      // line name to convert
-              var string,  // buffer to hold new line name
-              int          // length of buffer
+              string,      // Line name to convert
+              var string,  // Buffer to hold new line name
+              int          // Length of buffer
               );
 
 #define XYZLine_STR(A, B) IXYZLine_STR(A, B, sizeof(B))
@@ -994,9 +994,9 @@ MakeAlpha_STR (
 
 [_public] void
 Printf_STR (
-            var string,  // destination string
-            int,         // size of the destination string
-            string       // pattern string
+            var string,  // Destination string
+            int,         // Size of the destination string
+            string       // Pattern string
             );
 
 #define _Printf_STR(A, B) Printf_STR(A, sizeof(A), B)
@@ -1017,9 +1017,9 @@ Printf_STR (
 
 [_public] void
 ReplaceChar_STR (
-                 var string,  // string to modify
-                 string,      // character to replace (first character only)
-                 string       // replacement character (first character only)
+                 var string,  // String to modify
+                 string,      // Character to replace (first character only)
+                 string       // Replacement character (first character only)
                  );
 
 
@@ -1039,9 +1039,9 @@ ReplaceChar_STR (
 
 [_public] void
 ReplaceChar2_STR (
-                  var string,  // string to modify
-                  string,      // character to replace (first character only)
-                  string       // replacement character (first character only)
+                  var string,  // String to modify
+                  string,      // Character to replace (first character only)
+                  string       // Replacement character (first character only)
                   );
 
 
@@ -1060,9 +1060,9 @@ ReplaceChar2_STR (
 
 [_public] void
 ReplaceMultiChar_STR (
-                      var string,  // string to modify
-                      string,      // characters to replace
-                      string       // replacement characters
+                      var string,  // String to modify
+                      string,      // Characters to replace
+                      string       // Replacement characters
                       );
 
 
@@ -1081,8 +1081,8 @@ ReplaceMultiChar_STR (
 
 [_public] void
 ReplaceNonASCII_STR (
-                     var string,  // string to modify
-                     string       // replacement character
+                     var string,  // String to modify
+                     string       // Replacement character
                      );
 
 
@@ -1096,7 +1096,7 @@ ReplaceNonASCII_STR (
 
 [_public] void
 SetChar_STR (
-             var string,  // string
+             var string,  // String
              int          // ASCII value
              );
 
@@ -1199,11 +1199,11 @@ UnQuote_STR (
 
 [_public] void
 IGenGroupName_STR (
-                   string,      // input type string (static part)
-                   string,      // input db string
-                   string,      // input ch string (could be 0 length)
-                   var string,  // output group name string
-                   int          // output buffer lengths (maximum 32)
+                   string,      // Input type string (static part)
+                   string,      // Input db string
+                   string,      // Input ch string (could be 0 length)
+                   var string,  // Output group name string
+                   int          // Output buffer lengths (maximum 32)
                    );
 
 #define GenGroupName_STR(A, B, C, D) IGenGroupName_STR(A, B, C, D, sizeof(D))
@@ -1234,8 +1234,8 @@ IGenGroupName_STR (
 
 [_public] int
 iCountTokens_STR (
-                  string,  // string to tokenize
-                  string   // delimiter characters
+                  string,  // String to tokenize
+                  string   // Delimiter characters
                   );
 
 
@@ -1262,10 +1262,10 @@ iCountTokens_STR (
 
 [_public] void
 IGetToken_STR (
-               var string,  // destination string
-               int,         // maximum destination string length
-               string,      // tokenized string
-               int          // token number wanted  (0 is the first!)
+               var string,  // Destination string
+               int,         // Maximum destination string length
+               string,      // Tokenized string
+               int          // Token number wanted  (0 is the first!)
                );
 
 #define GetToken_STR(A, B, C) IGetToken_STR(A, sizeof(A), B, C)
@@ -1274,7 +1274,7 @@ IGetToken_STR (
 //-----------------------------------------------------------------------------------------------------------
 // iTokenize_STR   Tokenize a string based on any characters.
 //
-// Returns         number of tokens
+// Returns         Number of tokens
 //
 // Notes           
 //                 This uses a finite state machine to tokenize on these
@@ -1315,7 +1315,7 @@ IGetToken_STR (
 
 [_public] int
 iTokenize_STR (
-               var string,  // str - String containing token(s)
+               var string,  // STR - String containing token(s)
                string,      // szSoft - Soft delimiters (spaces/tabs)
                string,      // szHard - Hard delimiters (commas)
                string,      // szEsc  - Escape delimiters (back-slash)
@@ -1326,7 +1326,7 @@ iTokenize_STR (
 //-----------------------------------------------------------------------------------------------------------
 // iTokens_STR   Tokenize a string
 //
-// Returns       number of tokens, maximum is 2048
+// Returns       Number of tokens, maximum is 2048
 //
 // Notes         
 //               Delimiters in the string are reduced to a single NULL.
@@ -1344,8 +1344,8 @@ iTokenize_STR (
 
 [_public] int
 iTokens_STR (
-             var string,  // string to tokenize
-             string       // delimiter characters
+             var string,  // String to tokenize
+             string       // Delimiter characters
              );
 
 
@@ -1367,7 +1367,7 @@ iTokens_STR (
 
 [_public] int
 iTokens2_STR (
-              var string,  // string to tokenize
+              var string,  // String to tokenize
               string,      // szSoft - Soft delimiters (spaces/tabs)
               string,      // szHard - Hard delimiters (commas)
               string,      // szEsc  - Escape delimiters (back-slash)

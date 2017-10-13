@@ -30,7 +30,7 @@ _Clear_BIGRID (
 #define Clear_BIGRID _Clear_BIGRID
 
 //-----------------------------------------------------------------------------------------------------------
-// Create_BIGRID   Create a handle to a Brigrid object
+// Create_BIGRID   Create a handle to a Bigrid object
 //
 // Returns         BIGRID Object
 //
@@ -114,7 +114,7 @@ iLoadWarp_BIGRID (
 [_extended] void
 Run_BIGRID (
             BIGRID,  // Handle to BIGRID object (stores control parameters)
-            string,  // not used, pass as ""
+            string,  // Not used, pass as ""
             DAT,     // Handle to source DAT object (from database)
             DAT      // Handle to output grid file DAT
             );
@@ -132,7 +132,7 @@ Run_BIGRID (
 [_extended] void
 Run2_BIGRID (
              BIGRID,  // Handle to BIGRID object (stores control parameters)
-             string,  // not used, pass as ""
+             string,  // Not used, pass as ""
              DAT,     // Handle to source DAT object (from database)
              DAT,     // Handle to output grid file DAT
              IPJ      // IPJ handle of the projection system

@@ -29,8 +29,8 @@
 
 [_licensed] void
 Copy_TIN (
-          TIN,  // destination TIN
-          TIN   // source TIN
+          TIN,  // Destination TIN
+          TIN   // Source TIN
           );
 
 
@@ -220,7 +220,7 @@ GetTriangles_TIN (
 [_licensed] void
 GetTriangle_TIN (
                  TIN,       // TIN object
-                 int,       // triangle index [0...N-1]
+                 int,       // Triangle index [0...N-1]
                  var real,  // X0
                  var real,  // Y0
                  var real,  // X1
@@ -284,9 +284,9 @@ iIsZValued_TIN (
 [_licensed] int
 iLocateTriangle_TIN (
                      TIN,   // TIN object
-                     int,   // seed triangle (can be iDummy or <0)
-                     real,  // target X location
-                     real   // target Y location
+                     int,   // Seed triangle (can be iDummy or <0)
+                     real,  // Target X location
+                     real   // Target Y location
                      );
 
 

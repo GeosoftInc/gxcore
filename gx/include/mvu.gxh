@@ -407,7 +407,7 @@ ArrowVectorVV_MVU (
                    int,    // <define>MVU_VSIZE</define>
                    int,    // <define>MVU_VSTYLE</define>
                    int,    // <define>MVU_VPOINT</define>
-                   real    // line thickness (can be Dummy)
+                   real    // Line thickness (can be Dummy)
                    );
 
 
@@ -453,12 +453,12 @@ BarChart_MVU (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// CDIPixelPlot_MVU   Create a colour pixel-style plot of CDI data.
+// CDIPixelPlot_MVU   Create a color pixel-style plot of CDI data.
 //
 // Returns            Nothing
 //
 // Notes              
-//                    Draws a single coloured rectangle for each data point in
+//                    Draws a single colored rectangle for each data point in
 //                    Conductivity-Depth data (for example). It is similar to the
 //                    result you get if you plot a grid with Pixel=1, but in this
 //                    data the row and column widths are not necessarily constant,
@@ -477,19 +477,19 @@ CDIPixelPlot_MVU (
                   VA,      // Data [lNR x lNC]
                   VA,      // Elevations (Y) [lNR x lNC]
                   VV,      // Position (X) [lNC]
-                  ITR      // Data colour transform
+                  ITR      // Data color transform
                   );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// CDIPixelPlot3D_MVU   Create a colour pixel-style plot of CDI data in a 3D view.
+// CDIPixelPlot3D_MVU   Create a color pixel-style plot of CDI data in a 3D view.
 //
 // Returns              Nothing
 //
 // Notes                
 //                      Similar to CDIPixelPlot_MVU, but plotted onto a series of
 //                      plotting planes which hang from the XY path in 3D. Each vertical plane azimuth
-//                      is defined by two adjacent points on the path. The colour "pixel" for each
+//                      is defined by two adjacent points on the path. The color "pixel" for each
 //                      data point is plotted in two halves, with each half on adjacent plotting planes,
 //                      with the bend at the data point.
 //                      
@@ -505,7 +505,7 @@ CDIPixelPlot3D_MVU (
                     VA,      // Elevations (Z) [lNR x lNC]
                     VV,      // Position (X) [lNC]
                     VV,      // Position (Y) [lNC]
-                    ITR      // Data colour transform
+                    ITR      // Data color transform
                     );
 
 
@@ -521,11 +521,11 @@ CDIPixelPlot3D_MVU (
 ColorBar_MVU (
               MVIEW,  // View
               ITR,    // Itr
-              int,    // decimals
-              real,   // annotation offset from box in mm.
-              real,   // box height
-              real,   // box width
-              real,   // X location (bottom left corner of colour boxes)
+              int,    // Decimals
+              real,   // Annotation offset from box in mm.
+              real,   // Box height
+              real,   // Box width
+              real,   // X location (bottom left corner of color boxes)
               real    // Y location
               );
 
@@ -548,11 +548,11 @@ ColorBar2_MVU (
                MVIEW,  // View
                ITR,    // ITR
                ITR,    // Secondary ITR
-               int,    // decimals
-               real,   // annotation size
-               real,   // box height
-               real,   // box width
-               real,   // X location (bottom left corner of colour boxes)
+               int,    // Decimals
+               real,   // Annotation size
+               real,   // Box height
+               real,   // Box width
+               real,   // X location (bottom left corner of color boxes)
                real    // Y location
                );
 
@@ -575,11 +575,11 @@ ColorBar2Style_MVU (
                     MVIEW,  // View
                     ITR,    // ITR
                     ITR,    // Secondary ITR
-                    int,    // decimals
-                    real,   // annotation size
-                    real,   // box height
-                    real,   // box width
-                    real,   // X location (bottom left corner of colour boxes)
+                    int,    // Decimals
+                    real,   // Annotation size
+                    real,   // Box height
+                    real,   // Box width
+                    real,   // X location (bottom left corner of color boxes)
                     real,   // Y location
                     int     // <define>COLORBAR_STYLE</define>
                     );
@@ -606,11 +606,11 @@ ColorBar2Style_MVU (
 ColorBarHor_MVU (
                  MVIEW,  // View
                  ITR,    // Itr
-                 int,    // decimals
-                 real,   // annotation offset from box in mm (negative for labels below).
-                 real,   // box width in mm
-                 real,   // box height in mm
-                 real,   // X location (bottom left corner of colour boxes) in mm
+                 int,    // Decimals
+                 real,   // Annotation offset from box in mm (negative for labels below).
+                 real,   // Box width in mm
+                 real,   // Box height in mm
+                 real,   // X location (bottom left corner of color boxes) in mm
                  real,   // Y location in mm
                  int     // <define>COLORBAR_LABEL</define>
                  );
@@ -634,11 +634,11 @@ ColorBarHor2_MVU (
                   MVIEW,  // View
                   ITR,    // ITR
                   ITR,    // Secondary ITR
-                  int,    // decimals
-                  real,   // annotation size
-                  real,   // box height
-                  real,   // box width
-                  real,   // X location (bottom left corner of colour boxes)
+                  int,    // Decimals
+                  real,   // Annotation size
+                  real,   // Box height
+                  real,   // Box width
+                  real,   // X location (bottom left corner of color boxes)
                   real,   // Y location
                   int     // <define>COLORBAR_LABEL</define>
                   );
@@ -662,11 +662,11 @@ ColorBarHor2Style_MVU (
                        MVIEW,  // View
                        ITR,    // ITR
                        ITR,    // Secondary ITR
-                       int,    // decimals
-                       real,   // annotation size
-                       real,   // box height
-                       real,   // box width
-                       real,   // X location (bottom left corner of colour boxes)
+                       int,    // Decimals
+                       real,   // Annotation size
+                       real,   // Box height
+                       real,   // Box width
+                       real,   // X location (bottom left corner of color boxes)
                        real,   // Y location
                        int,    // <define>COLORBAR_STYLE</define>
                        int     // <define>COLORBAR_LABEL</define>
@@ -685,11 +685,11 @@ ColorBarHor2Style_MVU (
 ColorBarHorStyle_MVU (
                       MVIEW,  // View
                       ITR,    // Itr
-                      int,    // decimals
-                      real,   // annotation size
-                      real,   // box height
-                      real,   // box width
-                      real,   // X location (bottom left corner of colour boxes)
+                      int,    // Decimals
+                      real,   // Annotation size
+                      real,   // Box height
+                      real,   // Box width
+                      real,   // X location (bottom left corner of color boxes)
                       real,   // Y location
                       int,    // <define>COLORBAR_STYLE</define>
                       int     // <define>COLORBAR_LABEL</define>
@@ -708,11 +708,11 @@ ColorBarHorStyle_MVU (
 ColorBarStyle_MVU (
                    MVIEW,  // View
                    ITR,    // Itr
-                   int,    // decimals
-                   real,   // annotation size
-                   real,   // box height
-                   real,   // box width
-                   real,   // X location (bottom left corner of colour boxes)
+                   int,    // Decimals
+                   real,   // Annotation size
+                   real,   // Box height
+                   real,   // Box width
+                   real,   // X location (bottom left corner of color boxes)
                    real,   // Y location
                    int     // <define>COLORBAR_STYLE</define>
                    );
@@ -729,11 +729,11 @@ ColorBarStyle_MVU (
 //                   BAR_ORIENTATION        one of MVU_ORIENTATION_XXX (DEFAULT = MVU_ORIENTATION_VERTICAL)
 //                   DECIMALS					decimals in plotted values (see sFormatStr_GS for rules) (DEFAULT = 1)
 //                   ANNOFF						annotation offset from bar (+/- determines side of the bar left/right and below/above)
-//                   BOX_SIZE               box height (mm) (width for horizontal colour bar) (DEFAULT = 4)
-//                   BAR_WIDTH              width (mm) (short dimension) of the colour bar (DEFAULT = 8)
+//                   BOX_SIZE               box height (mm) (width for horizontal color bar) (DEFAULT = 4)
+//                   BAR_WIDTH              width (mm) (short dimension) of the color bar (DEFAULT = 8)
 //                   MINIMUM_GAP            Minimum space between annotations, otherwise drop annotations (DEFAULT = 0 mm)
 //                   The actual height is over-estimated, so even with zero gap there will normally always be some space between labels.
-//                   FIXED_INTERVAL         Preset interval for annotations scale (DEFAULT = DUMMY, use colour zones)
+//                   FIXED_INTERVAL         Preset interval for annotations scale (DEFAULT = DUMMY, use color zones)
 //                   FIXED_MINOR_INTERVAL   Preset minor interval for annotations scale (DEFAULT = DUMMY, if defined must be 1/10, 1/5, 1/4 or 1/2 of FIXED_INTERVAL)
 //                   X								X location	(REQUIRED)
 //                   Y								Y location	(REQUIRED)
@@ -799,7 +799,7 @@ ContourPLY_MVU (
 // Returns           Nothing
 //
 // Notes             
-//                   If the symbol size, colour, font etc are specified in
+//                   If the symbol size, color, font etc are specified in
 //                   the ITR's REG, then the Symbol scale factor is used
 //                   allow the user to adjust the symbol sizes. They will be
 //                   plotted at a size equal to the size in the REG times
@@ -809,7 +809,7 @@ ContourPLY_MVU (
 //                   If no symbol font or number info is included in the
 //                   REG, it is the programmer's responsibility to select
 //                   the correct font and symbol before CSymbLegend is
-//                   called. The same is true of the edge colour.
+//                   called. The same is true of the edge color.
 //                   
 //
 // Available         5.0.0
@@ -862,8 +862,8 @@ DecayCurve_MVU (
                 real,    // X scale
                 real,    // Y scale
                 real,    // Line pitch, default is 5.0mm
-                int,     // line style
-                string   // line color
+                int,     // Line style
+                string   // Line color
                 );
 
 
@@ -941,7 +941,7 @@ EMForward_MVU (
 // Notes                      
 //                            The lines, rectangles and polygons in the specified groups
 //                            will be exported to a Datamine coordinate string (*.dm) file.
-//                            The function attemps to duplicate the colours, etc. used.
+//                            The function attemps to duplicate the colors, etc. used.
 //                            Complex polygon objects will be exported as independent
 //                            single polygons.
 //                            
@@ -988,7 +988,7 @@ ExportDXF3D_MVU (
 //                       The lines, rectangles and polygons in the specified groups
 //                       will be exported to a Surpac STR file. An accompanying styles
 //                       file will be created which will attempt to duplicate the
-//                       colours, etc. used.
+//                       colors, etc. used.
 //                       Complex polygon objects will be exported as independent
 //                       single polygons.
 //                       
@@ -1016,7 +1016,7 @@ ExportSurpacSTR_MVU (
 //                  Current line color, thickness and style are used to
 //                  draw the line.
 //                  
-//                  Current font, font colour and font style are used to
+//                  Current font, font color and font style are used to
 //                  annotate the line labels.
 //                  
 //                  If current clipping is ON in the VIEW, lines will be
@@ -1046,12 +1046,12 @@ FlightPlot_MVU (
                 MVIEW,   // View
                 VV,      // X
                 VV,      // Y
-                string,  // line label
+                string,  // Line label
                 int,     // <define>MVU_FLIGHT_LOCATE</define>
-                real,    // lines steeper than this angle are considered vertical and the up label direction is used.
-                int,     // up label direction:   1 up is right, -1 up is left
-                real,    // along line label offset in mm.
-                real     // perpendicular label offset mm.
+                real,    // Lines steeper than this angle are considered vertical and the up label direction is used.
+                int,     // Up label direction:   1 up is right, -1 up is left
+                real,    // Along line label offset in mm.
+                real     // Perpendicular label offset mm.
                 );
 
 
@@ -1063,8 +1063,8 @@ FlightPlot_MVU (
 // Notes          
 //                The specified line group will be used to create a new group that
 //                is composed of all the resolved polygonal areas in the line group.
-//                Each polygonal area is assigned a colour/pattern as specified in the
-//                colour and pattern VV's.  Colour/patterns are assigned in rotating
+//                Each polygonal area is assigned a color/pattern as specified in the
+//                color and pattern VV's.  Color/patterns are assigned in rotating
 //                sequence.
 //                
 //
@@ -1077,9 +1077,9 @@ FlightPlot_MVU (
 GenAreas_MVU (
               MVIEW,   // View
               string,  // Group with lines
-              VV,      // colours  (colour int)
-              VV,      // patterns (int), must be same length at colours
-              real     // pattern size
+              VV,      // Colors  (color int)
+              VV,      // Patterns (int), must be same length at colors
+              real     // Pattern size
               );
 
 
@@ -1129,16 +1129,16 @@ Histogram_MVU (
                ST,      // ST with summary stats of original data
                ST,      // ST with histogram info of original or log10 data
                string,  // Title
-               string,  // unit
+               string,  // Unit
                real,    // X in mm (bottom left corner of histogram box)
                real,    // Y in mm (bottom left corner of histogram box)
-               real,    // box width in mm
-               real,    // box height in mm
+               real,    // Box width in mm
+               real,    // Box height in mm
                real,    // Minimum X in data unit (bottom left corner of histogram boxes)
                real,    // Minimum Y in data unit
-               real,    // box width in data unit
-               real,    // box height in data unit
-               real,    // width (mm) of the additional box for summary stats
+               real,    // Box width in data unit
+               real,    // Box height in data unit
+               real,    // Width (mm) of the additional box for summary stats
                int,     // Log horizontal axis: 0 - Normal, 1 - Log
                int,     // Summary stats: 0 - do not draw, 1 - draw
                int,     // Fill color
@@ -1171,16 +1171,16 @@ Histogram2_MVU (
                 real,    // Text size in mm for X/Y axis' titles. Accept dummy
                 string,  // Overall title. Plotted below X axis if X axis title is not given
                 real,    // Text size in mm for plot overall title. Accept dummy
-                string,  // unit
+                string,  // Unit
                 real,    // X in mm (bottom left corner of histogram box)
                 real,    // Y in mm (bottom left corner of histogram box)
-                real,    // box width in mm
-                real,    // box height in mm
+                real,    // Box width in mm
+                real,    // Box height in mm
                 real,    // Minimum X in data unit (bottom left corner of histogram boxes)
                 real,    // Minimum Y in data unit
-                real,    // box width in data unit
-                real,    // box height in data unit
-                real,    // width (mm) of the additional box for summary stats
+                real,    // Box width in data unit
+                real,    // Box height in data unit
+                real,    // Width (mm) of the additional box for summary stats
                 int,     // Log horizontal axis: 0 - Normal, 1 - Log
                 int,     // Summary stats: 0 - do not draw, 1 - draw
                 int,     // Fill color
@@ -1203,16 +1203,16 @@ Histogram3_MVU (
                 ST,      // ST with summary stats of original data
                 ST,      // ST with histogram info of original or log10 data
                 string,  // Title
-                string,  // unit
+                string,  // Unit
                 real,    // X in mm (bottom left corner of histogram box)
                 real,    // Y in mm (bottom left corner of histogram box)
-                real,    // box width in mm
-                real,    // box height in mm
+                real,    // Box width in mm
+                real,    // Box height in mm
                 real,    // Minimum X in data unit (bottom left corner of histogram boxes)
                 real,    // Minimum Y in data unit
-                real,    // box width in data unit
-                real,    // box height in data unit
-                real,    // width (mm) of the additional box for summary stats
+                real,    // Box width in data unit
+                real,    // Box height in data unit
+                real,    // Width (mm) of the additional box for summary stats
                 int,     // Log horizontal axis: 0 - Normal, 1 - Log
                 int,     // Summary stats: 0 - do not draw, 1 - draw
                 int,     // Fill color
@@ -1236,16 +1236,16 @@ Histogram4_MVU (
                 ST,      // ST with summary stats of original data
                 ST,      // ST with histogram info of original or log10 data
                 string,  // Title
-                string,  // unit
+                string,  // Unit
                 real,    // X in mm (bottom left corner of histogram box)
                 real,    // Y in mm (bottom left corner of histogram box)
-                real,    // box width in mm
-                real,    // box height in mm
+                real,    // Box width in mm
+                real,    // Box height in mm
                 real,    // Minimum X in data unit (bottom left corner of histogram boxes)
                 real,    // Minimum Y in data unit
-                real,    // box width in data unit
-                real,    // box height in data unit
-                real,    // width (mm) of the additional box for summary stats
+                real,    // Box width in data unit
+                real,    // Box height in data unit
+                real,    // Width (mm) of the additional box for summary stats
                 int,     // Log horizontal axis: 0 - Normal, 1 - Log
                 int,     // Summary stats: 0 - do not draw, 1 - draw
                 int,     // Probability scaling: 0 - linear scale, 1 - scale as normal distribution
@@ -1257,7 +1257,7 @@ Histogram4_MVU (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// Histogram5_MVU   As Histogram4_MVU, but allow ITR to colour bars.
+// Histogram5_MVU   As Histogram4_MVU, but allow ITR to color bars.
 //
 // Returns          Nothing
 //
@@ -1272,17 +1272,17 @@ Histogram5_MVU (
                 ST,      // ST with summary stats of original data
                 ST,      // ST with histogram info of original or log10 data
                 string,  // Title
-                string,  // unit
+                string,  // Unit
                 real,    // [i] Lambda Value
                 real,    // X in mm (bottom left corner of histogram box)
                 real,    // Y in mm (bottom left corner of histogram box)
-                real,    // box width in mm
-                real,    // box height in mm
+                real,    // Box width in mm
+                real,    // Box height in mm
                 real,    // Minimum X in data unit (bottom left corner of histogram boxes)
                 real,    // Minimum Y in data unit
-                real,    // box width in data unit
-                real,    // box height in data unit
-                real,    // width (mm) of the additional box for summary stats
+                real,    // Box width in data unit
+                real,    // Box height in data unit
+                real,    // Width (mm) of the additional box for summary stats
                 int,     // Log horizontal axis: 0 - Normal, 1 - Log, 2 - Lambda
                 int,     // Summary stats: 0 - do not draw, 1 - draw
                 int,     // Probability scaling: 0 - linear scale, 1 - scale as normal distribution
@@ -1290,7 +1290,7 @@ Histogram5_MVU (
                 int,     // Decimals for data, negative for sig. fig.
                 int,     // Decimals for stats, negative for sig. fig.
                 ST,      // ST with histogram for box-whisker plot (-1 for no plot)
-                ITR      // ITR to colour bars.
+                ITR      // ITR to color bars.
                 );
 
 
@@ -1341,10 +1341,10 @@ iMapsetTest_MVU (
                  int,       // 1 - map size fixed to media; 0 - map size adjusted to data and margins.
                  var real,  // Map scale (rDummy for default)
                  real,      // Conversion factor (to units/meter) (rDummy for default)
-                 real,      // left margin (cm)
-                 real,      // right margin (cm)
-                 real,      // bottom margin (cm)
-                 real,      // top margin (cm)
+                 real,      // Left margin (cm)
+                 real,      // Right margin (cm)
+                 real,      // Bottom margin (cm)
+                 real,      // Top margin (cm)
                  real       // Inside data margin (cm)
                  );
 
@@ -1373,10 +1373,10 @@ iMapset2Test_MVU (
                   var real,  // Map scale (rDummy for default)
                   real,      // Vertical exaggeration (Normally 1.0)
                   real,      // Conversion factor (to units/meter) (rDummy for default)
-                  real,      // left margin (cm)
-                  real,      // right margin (cm)
-                  real,      // bottom margin (cm)
-                  real,      // top margin (cm)
+                  real,      // Left margin (cm)
+                  real,      // Right margin (cm)
+                  real,      // Bottom margin (cm)
+                  real,      // Top margin (cm)
                   real       // Inside data margin (cm)
                   );
 
@@ -1400,7 +1400,7 @@ iMapset2Test_MVU (
 ImportGOCADSurface_MVU (
                         MVIEW,   // View
                         string,  // GOCAD file name
-                        int      // Color to plot (C_TRANSPARENT to use file-defined colour).
+                        int      // Color to plot (C_TRANSPARENT to use file-defined color).
                         );
 
 
@@ -1415,7 +1415,7 @@ ImportGOCADSurface_MVU (
 [_public] void
 LoadPlot_MVU (
               MAP,     // Map handle
-              string   // plot file name
+              string   // Plot file name
               );
 
 
@@ -1484,10 +1484,10 @@ Mapset_MVU (
             int,     // 1 - map size fixed to media; 0 - map size adjusted to data and margins.
             real,    // Map scale (rDummy for default)
             real,    // Conversion factor (to units/meter) (rDummy for default)
-            real,    // left margin (cm)
-            real,    // right margin (cm)
-            real,    // bottom margin (cm)
-            real,    // top margin (cm)
+            real,    // Left margin (cm)
+            real,    // Right margin (cm)
+            real,    // Bottom margin (cm)
+            real,    // Top margin (cm)
             real     // Inside data margin (cm)
             );
 
@@ -1515,10 +1515,10 @@ Mapset2_MVU (
              real,    // Map scale (rDummy for default)
              real,    // Vertical Exaggeration (1.0 for none)
              real,    // Conversion factor (to units/meter) (rDummy for default)
-             real,    // left margin (cm)
-             real,    // right margin (cm)
-             real,    // bottom margin (cm)
-             real,    // top margin (cm)
+             real,    // Left margin (cm)
+             real,    // Right margin (cm)
+             real,    // Bottom margin (cm)
+             real,    // Top margin (cm)
              real     // Inside data margin (cm)
              );
 
@@ -1560,13 +1560,13 @@ PathPlot_MVU (
               MVIEW,   // View
               VV,      // X
               VV,      // Y
-              string,  // line label
+              string,  // Line label
               int,     // <define>MVU_FLIGHT_LOCATE</define>
-              real,    // lines steeper than this angle are considered vertical and the up label direction is used.
-              int,     // up label direction:   1 up is right -1 up is left
-              real,    // along line label offset in mm.
-              real,    // perpendicular label offset mm.
-              real     // maximum gap before breaking line, 0.0 for no breaks.
+              real,    // Lines steeper than this angle are considered vertical and the up label direction is used.
+              int,     // Up label direction:   1 up is right -1 up is left
+              real,    // Along line label offset in mm.
+              real,    // Perpendicular label offset mm.
+              real     // Maximum gap before breaking line, 0.0 for no breaks.
               );
 
 
@@ -1587,14 +1587,14 @@ PathPlotEx_MVU (
                 MVIEW,   // View
                 VV,      // X
                 VV,      // Y
-                string,  // line label
+                string,  // Line label
                 int,     // <define>MVU_FLIGHT_LOCATE</define>
                 int,     // <define>MVU_FLIGHT_COMPASS</define>
-                real,    // lines steeper than this angle are considered vertical and the up label direction is used.
-                int,     // up label direction:   1 up is right -1 up is left
-                real,    // along line label offset in mm.
-                real,    // perpendicular label offset mm.
-                real     // maximum gap before breaking line, 0.0 for no breaks.
+                real,    // Lines steeper than this angle are considered vertical and the up label direction is used.
+                int,     // Up label direction:   1 up is right -1 up is left
+                real,    // Along line label offset in mm.
+                real,    // Perpendicular label offset mm.
+                real     // Maximum gap before breaking line, 0.0 for no breaks.
                 );
 
 
@@ -1615,14 +1615,14 @@ PathPlotEx2_MVU (
                  MVIEW,   // View
                  VV,      // X
                  VV,      // Y
-                 string,  // line label
+                 string,  // Line label
                  int,     // <define>MVU_FLIGHT_LOCATE</define>
                  int,     // <define>MVU_FLIGHT_COMPASS</define>
-                 real,    // lines steeper than this angle are considered vertical and the up label direction is used.
-                 int,     // up label direction:   1 up is right -1 up is left
-                 real,    // along line label offset in mm.
-                 real,    // perpendicular label offset mm.
-                 real,    // maximum gap before breaking line, 0.0 for no breaks.
+                 real,    // Lines steeper than this angle are considered vertical and the up label direction is used.
+                 int,     // Up label direction:   1 up is right -1 up is left
+                 real,    // Along line label offset in mm.
+                 real,    // Perpendicular label offset mm.
+                 real,    // Maximum gap before breaking line, 0.0 for no breaks.
                  int      // <define>MVU_FLIGHT_DUMMIES</define>
                  );
 
@@ -1648,7 +1648,7 @@ PlotVoxelSurface_MVU (
                       MVIEW,  // View
                       VOX,    // Voxel model
                       real,   // Iso-surface value
-                      int,    // Drawing colour
+                      int,    // Drawing color
                       real    // Line thickness for line drawing, and 2D views.
                       );
 
@@ -1674,7 +1674,7 @@ PlotVoxelSurface2_MVU (
                        MVIEW,   // View
                        VOX,     // Voxel model
                        real,    // Iso-surface value
-                       int,     // Drawing colour
+                       int,     // Drawing color
                        real,    // Line thickness for line drawing, and 2D views.
                        real,    // Transparency (0 - transparent, 1 - opaque).
                        string   // Iso-surface name
@@ -1699,7 +1699,7 @@ GenerateSurfaceFromVoxel_MVU (
                               int,     // <define>MVU_VOX_SURFACE_OPTION</define>
                               real,    // TODO
                               real,    // TODO
-                              int,     // Drawing colour
+                              int,     // Drawing color
                               real,    // Line thickness for line drawing, and 2D views.
                               real,    // Transparency (0 - transparent, 1 - opaque).
                               string   // Geosurface file
@@ -1746,7 +1746,7 @@ PostEx_MVU (
             VV,     // Station
             int,    // Do not plot dummy values? <define>GEO_BOOL</define>
             real,   // Base to remove, default is 0.0
-            real,   // detection limit, can be GS_R8DM
+            real,   // Detection limit, can be GS_R8DM
             int,    // Numb Size
             int,    // Format
             int,    // Decimals
@@ -1757,7 +1757,7 @@ PostEx_MVU (
             int,    // Reference point number
             real,   // Text angle (degree, CCW from down-line)
             int,    // Fixed angle ?
-            real,   // vertical reference angle
+            real,   // Vertical reference angle
             int     // 1 up is right, -1 up is left
             );
 
@@ -1778,20 +1778,20 @@ Probability_MVU (
                  ST,      // ST with summary stats of original data
                  ST,      // ST with histogram info of original or log10 data
                  string,  // Title
-                 string,  // unit
+                 string,  // Unit
                  int,     // Transform type (0: Raw, 1: Log, 2: Lambda)
                  real,    // Lambda Value for lambda transform
                  real,    // X in mm (bottom left corner of histogram box)
                  real,    // Y in mm (bottom left corner of histogram box)
-                 real,    // box width in mm
-                 real,    // box height in mm
-                 real,    // symbol size in mm
+                 real,    // Box width in mm
+                 real,    // Box height in mm
+                 real,    // Symbol size in mm
                  real,    // Sigma (X range is -sigma to sigma)
-                 real,    // width (mm) of the additional box for summary stats
+                 real,    // Width (mm) of the additional box for summary stats
                  int,     // Summary stats: 0 - do not draw, 1 - draw
                  int,     // Decimals for data, negative for sig. fig.
                  int,     // Decimals for stats, negative for sig. fig.
-                 ITR      // ITR to colour symbols.
+                 ITR      // ITR to color symbols.
                  );
 
 
@@ -1811,8 +1811,8 @@ ProfilePlot_MVU (
                  VV,     // X
                  VV,     // Y
                  VV,     // Z
-                 real,   // lines steeper than this angle are considered vertical and the up label direction is used.
-                 int,    // up label direction:   1 up is right -1 up is left
+                 real,   // Lines steeper than this angle are considered vertical and the up label direction is used.
+                 int,    // Up label direction:   1 up is right -1 up is left
                  real,   // Maximum gap in data to span (view units)
                  real,   // Z profile base, rDUMMY to use data minimum
                  real,   // Z scale in view units/Z unit
@@ -1836,8 +1836,8 @@ ProfilePlotEx_MVU (
                    VV,      // X
                    VV,      // Y
                    VV,      // Z
-                   real,    // lines steeper than this angle are considered vertical and the up label direction is used.
-                   int,     // up label direction:   1 up is right -1 up is left
+                   real,    // Lines steeper than this angle are considered vertical and the up label direction is used.
+                   int,     // Up label direction:   1 up is right -1 up is left
                    real,    // Maximum gap in data to span (view units)
                    real,    // Z profile base, rDUMMY to use data minimum
                    real,    // Z scale in view units/Z unit
@@ -1845,8 +1845,8 @@ ProfilePlotEx_MVU (
                    int,     // Log option: 0 linear (default), 1 logarithm, 2 log/linear
                    real,    // Log base
                    int,     // Smooth curve option: 0 no (default), 1 yes
-                   string,  // positive fill color
-                   string   // negative fill color
+                   string,  // Positive fill color
+                   string   // Negative fill color
                    );
 
 
@@ -1948,8 +1948,8 @@ TextBox_MVU (
              real,    // Min Y
              real,    // Max X
              real,    // Max Y
-             string,  // text
-             real,    // line spacing (1.2 good)
+             string,  // Text
+             real,    // Line spacing (1.2 good)
              int      // <define>MVU_TEXTBOX</define>
              );
 

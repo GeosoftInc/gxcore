@@ -285,7 +285,7 @@ SetIPJ_DSEL (
 [_public] void
 SpatialAccuracy_DSEL (
                       DSEL,  // DSEL object
-                      real   // spatial accuracy desired
+                      real   // Spatial accuracy desired
                       );
 
 

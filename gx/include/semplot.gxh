@@ -126,7 +126,7 @@ ApplyFilterToMask_SEMPLOT (
 
 [_extended] void
 ConvertDummies_SEMPLOT (
-                        DB,       // database handle
+                        DB,       // Database handle
                         DB_SYMB   // Input line to convert
                         );
 
@@ -240,10 +240,10 @@ EditPlotParameters_SEMPLOT (
 
 [_extended] void
 ExportOverlay_SEMPLOT (
-                       string,  // overlay file name
-                       string,  // associated map
+                       string,  // Overlay file name
+                       string,  // Associated map
                        MVIEW,   // View with group
-                       string,  // group name
+                       string,  // Group name
                        int,     // <define>SEMPLOT_PLOT</define>
                        string,  // XStage
                        string,  // XOxide
@@ -335,7 +335,7 @@ FilterMineralPosData_SEMPLOT (
                               DB,      // Database handle
                               string,  // Mask channel
                               string,  // Mineral channel
-                              string,  // mineral (string) - "C", "I" etc.
+                              string,  // Mineral (string) - "C", "I" etc.
                               int      // Grain position
                               );
 
@@ -434,8 +434,8 @@ GetFullPositionLST_SEMPLOT (
 
 [_extended] void
 GetGroupingLST_SEMPLOT (
-                        DB,   // database handle
-                        LST   // list to hold items
+                        DB,   // Database handle
+                        LST   // List to hold items
                         );
 
 
@@ -450,8 +450,8 @@ GetGroupingLST_SEMPLOT (
 
 [_extended] int
 iCreateASCIITemplate_SEMPLOT (
-                              string,  // data file name
-                              string   // template to make
+                              string,  // Data file name
+                              string   // Template to make
                               );
 
 
@@ -466,8 +466,8 @@ iCreateASCIITemplate_SEMPLOT (
 
 [_extended] int
 iCreateDatabaseTemplate_SEMPLOT (
-                                 string,  // data file name
-                                 string   // template to make
+                                 string,  // Data file name
+                                 string   // Template to make
                                  );
 
 
@@ -544,10 +544,10 @@ IGetMineralChannelName_SEMPLOT (
 
 [_extended] void
 IImportAsciiWizard_SEMPLOT (
-                            string,      // data file name
-                            string,      // template to make
-                            var string,  // anomaly name (can be "")
-                            int          // buffer size
+                            string,      // Data file name
+                            string,      // Template to make
+                            var string,  // Anomaly name (can be "")
+                            int          // Buffer size
                             );
 
 #define ImportAsciiWizard_SEMPLOT(A, B, C) IImportAsciiWizard_SEMPLOT(A, B, C, sizeof(C))
@@ -563,10 +563,10 @@ IImportAsciiWizard_SEMPLOT (
 
 [_extended] void
 IImportDatabaseODBC_SEMPLOT (
-                             var string,  // connection string (input and returned)
-                             int,         // connection string buffer size
-                             var string,  // template file (returned)
-                             int          // templage file buffer size
+                             var string,  // Connection string (input and returned)
+                             int,         // Connection string buffer size
+                             var string,  // Template file (returned)
+                             int          // Templage file buffer size
                              );
 
 #define ImportDatabaseODBC_SEMPLOT(A, B) IImportDatabaseODBC_SEMPLOT(A, sizeof(A), B, sizeof(B))
@@ -599,8 +599,8 @@ IImportDatabaseODBC_SEMPLOT (
 [_extended] void
 ImportBIN_SEMPLOT (
                    DB,      // Database
-                   string,  // import data file name
-                   string,  // import template name
+                   string,  // Import data file name
+                   string,  // Import template name
                    string,  // Optional Line name (see note 3.)
                    int,     // Optional Flight number
                    real     // Optional date
@@ -617,8 +617,8 @@ ImportBIN_SEMPLOT (
 
 [_extended] void
 ImportDatabaseADO_SEMPLOT (
-                           string,  // data file name
-                           string   // template to make
+                           string,  // Data file name
+                           string   // Template to make
                            );
 
 
@@ -636,7 +636,7 @@ ImportDatabaseADO_SEMPLOT (
 
 [_extended] void
 InitGroupSymbolsUsed_SEMPLOT (
-                              DB   // database handle
+                              DB   // Database handle
                               );
 
 
@@ -838,18 +838,18 @@ PropSymb_SEMPLOT (
                   DB,      // Database handle
                   MAP,     // Map to plot to
                   string,  // View to replot
-                  string,  // channel name
-                  string,  // mask channel (can be "")
-                  string,  // mineral channel (
-                  int,     // linear (0) or logarithmic (1) scaling
-                  int,     // scale by diameter (0) or area (1)
-                  real,    // scale base (log) data units
-                  real,    // scale factor (log) data units/mm
-                  int,     // symbol number
-                  int,     // symbol weight
-                  int,     // symbol line color
-                  int,     // symbol fill color
-                  int      // plot legend?
+                  string,  // Channel name
+                  string,  // Mask channel (can be "")
+                  string,  // Mineral channel (
+                  int,     // Linear (0) or logarithmic (1) scaling
+                  int,     // Scale by diameter (0) or area (1)
+                  real,    // Scale base (log) data units
+                  real,    // Scale factor (log) data units/mm
+                  int,     // Symbol number
+                  int,     // Symbol weight
+                  int,     // Symbol line color
+                  int,     // Symbol fill color
+                  int      // Plot legend?
                   );
 
 
@@ -932,7 +932,7 @@ ResetGroups_SEMPLOT (
 
 [_extended] void
 ResetUsedChannel_SEMPLOT (
-                          DB   // database handle
+                          DB   // Database handle
                           );
 
 
@@ -982,8 +982,8 @@ SelectPoly_SEMPLOT (
 
 [_extended] void
 SetChannelOrder_SEMPLOT (
-                         DB,   // database handle
-                         LST   // channel names, handles
+                         DB,   // Database handle
+                         LST   // Channel names, handles
                          );
 
 
@@ -1002,7 +1002,7 @@ SetChannelOrder_SEMPLOT (
 
 [_extended] void
 SetChannelUnits_SEMPLOT (
-                         DB   // database handle
+                         DB   // Database handle
                          );
 
 
@@ -1105,7 +1105,7 @@ TileWindows_SEMPLOT (
 
 [_extended] void
 TotalOxides_SEMPLOT (
-                     DB,      // database handle
+                     DB,      // Database handle
                      string   // Mineral channel
                      );
 

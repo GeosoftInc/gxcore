@@ -30,9 +30,9 @@
 [_public] VOXD
 Create_VOXD (
              VOX,     // VOX Object
-             string,  // colour table name, "" for default
+             string,  // Color table name, "" for default
              int,     // <define>ITR_ZONE</define>
-             real     // colour contour interval or rDUMMY
+             real     // Color contour interval or rDUMMY
              );
 
 
@@ -183,8 +183,8 @@ GetDrawControls_VOXD (
 [_public] void
 IGetName_VOXD (
                VOXD,        // VOXD handle
-               var string,  // file name returned
-               int          // file name string size
+               var string,  // File name returned
+               int          // File name string size
                );
 
 #define GetName_VOXD(A, B) IGetName_VOXD(A, B, sizeof(B))

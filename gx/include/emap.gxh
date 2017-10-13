@@ -103,8 +103,8 @@
 //
 // EMAP_PATH_FULL       d:\directory\file.gdb
 // EMAP_PATH_DIR        \directory\file.gdb
-// EMAP_PATH_NAME_EXT   file.gdb
-// EMAP_PATH_NAME       file
+// EMAP_PATH_NAME_EXT   File.gdb
+// EMAP_PATH_NAME       File
 //
 //===========================================================================================================
 
@@ -597,7 +597,7 @@ iPackedFiles_EMAP (
 //                      Activating a group basically enters the edit mode associated
 //                      with the type of group. E.g. a vector group will enable the
 //                      edit toolbar for that gorup and an AGG will bring up the
-//                      image colour tool. Be sure to pass a combined name containing
+//                      image color tool. Be sure to pass a combined name containing
 //                      both the view name and the group separated by a "/" or "\".
 //                      
 //
@@ -751,7 +751,7 @@ FontLST_EMAP (
 [_public_app] int
 iChangeCurrentView_EMAP (
                          EMAP,    // EMAP object
-                         string   // view name
+                         string   // View name
                          );
 
 
@@ -808,8 +808,8 @@ IGet3DViewName_EMAP (
 [_public_app] void
 IGetCurrentGroup_EMAP (
                        EMAP,        // EMAP object
-                       var string,  // returned group name
-                       int          // length of the name string passed in
+                       var string,  // Returned group name
+                       int          // Length of the name string passed in
                        );
 
 #define GetCurrentGroup_EMAP(A, B) IGetCurrentGroup_EMAP(A, B, sizeof(B))
@@ -828,8 +828,8 @@ IGetCurrentGroup_EMAP (
 [_public_app] void
 IGetCurrentView_EMAP (
                       EMAP,        // EMAP object
-                      var string,  // returned view name
-                      int          // length of the name string passed in
+                      var string,  // Returned view name
+                      int          // Length of the name string passed in
                       );
 
 #define GetCurrentView_EMAP(A, B) IGetCurrentView_EMAP(A, B, sizeof(B))
@@ -902,7 +902,7 @@ iHaveCurrent_EMAP (
 iIGetSpecifiedMapName_EMAP (
                             string,      // REG field name
                             string,      // REG field value to find
-                            var string,  // buffer for map name
+                            var string,  // Buffer for map name
                             int          // Buffer size
                             );
 
@@ -993,7 +993,7 @@ iIsLocked_EMAP (
 
 [_public_app] int
 iLoaded_EMAP (
-              string   // map name
+              string   // Map name
               );
 
 
@@ -1096,7 +1096,7 @@ iRealizeGroupSnapshot_EMAP (
 [_public_app] int
 iSetCurrentView_EMAP (
                       EMAP,    // EMAP object
-                      string   // view name
+                      string   // View name
                       );
 
 
@@ -1117,7 +1117,7 @@ iSetCurrentView_EMAP (
 [_public_app] void
 GetViewIPJ_EMAP (
                  EMAP,    // EMAP object
-                 string,  // view name
+                 string,  // View name
                  IPJ      // IPJ in which to place the view IPJ
                  );
 
@@ -1142,7 +1142,7 @@ GetViewIPJ_EMAP (
 
 [_public_app] EMAP
 Load_EMAP (
-           string   // list of maps (';' or '|' delimited) to load.
+           string   // List of maps (';' or '|' delimited) to load.
            );
 
 
@@ -1164,7 +1164,7 @@ Load_EMAP (
 
 [_public_app] EMAP
 LoadNoActivate_EMAP (
-                     string   // list of documents (';' or '|' delimited) to load.
+                     string   // List of documents (';' or '|' delimited) to load.
                      );
 
 
@@ -1473,7 +1473,7 @@ iDigitize_EMAP (
                 EMAP,    // EMAP object
                 WA,      // WA in which to write digitized points
                 IMG,     // IMG for Z value, or IMG_NULL for no Z.
-                int,     // number of significant digits to use, 0 for all.
+                int,     // Number of significant digits to use, 0 for all.
                 string,  // Command line prompt string
                 string,  // New line prefix string
                 string,  // Delimiter
@@ -1508,9 +1508,9 @@ iDigitize_EMAP (
 [_public_app] int
 iDigitize2_EMAP (
                  EMAP,    // EMAP object
-                 VV,      // real X VV
-                 VV,      // real Y VV
-                 VV,      // real Z VV
+                 VV,      // Real X VV
+                 VV,      // Real Y VV
+                 VV,      // Real Z VV
                  IMG,     // IMG for Z value, or IMG_NULL for no Z.
                  string,  // Command line prompt string
                  int      // 0 for no newline 1 for automatic newline at each point
@@ -1540,9 +1540,9 @@ iDigitize2_EMAP (
 [_public_app] int
 iDigitizePeaks_EMAP (
                      EMAP,    // EMAP object
-                     VV,      // real X VV
-                     VV,      // real Y VV
-                     VV,      // real Z VV
+                     VV,      // Real X VV
+                     VV,      // Real Y VV
+                     VV,      // Real Z VV
                      IMG,     // IMG for Z value, or IMG_NULL for no Z.
                      string,  // Command line prompt string
                      int      // 0 for no newline 1 for automatic newline at each point
@@ -1571,13 +1571,13 @@ iDigitizePeaks_EMAP (
 [_public_app] int
 iDigitizePolygon_EMAP (
                        EMAP,    // EMAP object
-                       VV,      // real X VV
-                       VV,      // real Y VV
-                       VV,      // real Z VV
+                       VV,      // Real X VV
+                       VV,      // Real Y VV
+                       VV,      // Real Z VV
                        IMG,     // IMG for Z value, or IMG_NULL for no Z.
                        string,  // Command line prompt string
                        int,     // 0 for no newline 1 for automatic newline at each point
-                       int      // close the polygon if the selected location is within this radius in screen pixels.
+                       int      // Close the polygon if the selected location is within this radius in screen pixels.
                        );
 
 
@@ -1595,7 +1595,7 @@ iDigitizePolygon_EMAP (
 [_public_app] int
 iGetBox_EMAP (
               EMAP,      // EMAP object
-              string,    // user prompt string
+              string,    // User prompt string
               var real,  // X minimum in current view user units.
               var real,  // Y
               var real,  // X maximum
@@ -1625,7 +1625,7 @@ iGetBox_EMAP (
 [_public_app] int
 iGetBox2_EMAP (
                EMAP,      // EMAP object
-               string,    // user prompt string
+               string,    // User prompt string
                var real,  // X1 bottom left corner
                var real,  // Y1
                var real,  // X2 bottom right corner
@@ -1664,7 +1664,7 @@ iGetBox2_EMAP (
 [_public_app] int
 iGetGrid_EMAP (
                EMAP,      // EMAP object
-               string,    // user prompt string
+               string,    // User prompt string
                int,       // Number of elements along primary axis to draw.
                int,       // Number of elements along secondary axis to draw.
                var real,  // Angle of primary axis in degrees
@@ -1694,7 +1694,7 @@ iGetGrid_EMAP (
 [_public_app] int
 iGetLine_EMAP (
                EMAP,      // EMAP object
-               string,    // user prompt string
+               string,    // User prompt string
                var real,  // X1 in view user units
                var real,  // Y1
                var real,  // X2
@@ -1722,7 +1722,7 @@ iGetLine_EMAP (
 [_public_app] int
 iGetLineEx_EMAP (
                  EMAP,      // EMAP object
-                 string,    // user prompt string
+                 string,    // User prompt string
                  var real,  // X1 in view user units
                  var real,  // Y1
                  var real,  // X2
@@ -1752,7 +1752,7 @@ iGetLineEx_EMAP (
 [_public_app] int
 iGetLineXYZ_EMAP (
                   EMAP,      // EMAP object
-                  string,    // user prompt string
+                  string,    // User prompt string
                   var real,  // X1 in view user units
                   var real,  // Y1
                   var real,  // Z1
@@ -1780,7 +1780,7 @@ iGetLineXYZ_EMAP (
 [_public_app] int
 iGetPoint_EMAP (
                 EMAP,      // EMAP object
-                string,    // user prompt string
+                string,    // User prompt string
                 var real,  // X coordinate in current view user units.
                 var real   // Y
                 );
@@ -1806,7 +1806,7 @@ iGetPoint_EMAP (
 [_public_app] int
 iGetPointEx_EMAP (
                   EMAP,      // EMAP object
-                  string,    // user prompt string
+                  string,    // User prompt string
                   var real,  // X coordinate in current view user units.
                   var real   // Y
                   );
@@ -1832,7 +1832,7 @@ iGetPointEx_EMAP (
 [_public_app] int
 iGetPoint3D_EMAP (
                   EMAP,      // EMAP object
-                  string,    // user prompt string
+                  string,    // User prompt string
                   var real,  // X coordinate in current view user units.
                   var real,  // Y
                   var real   // Z
@@ -1858,7 +1858,7 @@ iGetPoint3D_EMAP (
 [_public_app] int
 iGetPolyLine_EMAP (
                    EMAP,    // EMAP object
-                   string,  // user prompt string
+                   string,  // User prompt string
                    VV,      // X
                    VV       // Y
                    );
@@ -1885,7 +1885,7 @@ iGetPolyLine_EMAP (
 [_public_app] int
 iGetPolyLineXYZ_EMAP (
                       EMAP,    // EMAP object
-                      string,  // user prompt string
+                      string,  // User prompt string
                       VV,      // X
                       VV,      // Y
                       VV       // Z
@@ -1925,7 +1925,7 @@ iGetPolyLineXYZ_EMAP (
 [_public_app] int
 iGetRect_EMAP (
                EMAP,      // EMAP object
-               string,    // user prompt string
+               string,    // User prompt string
                var real,  // X minimum in current view user units.   (defines corner)
                var real,  // Y
                var real,  // X maximum

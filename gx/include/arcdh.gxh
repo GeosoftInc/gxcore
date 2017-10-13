@@ -71,7 +71,7 @@ StopEditingStringFileGDB_ARCDH (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iHasStringFileGDBEdits_ARCDH   Is a Geostring File Geodatabase loaded and contain edits?
+// iHasStringFileGDBEdits_ARCDH   Is a Geostring File Geodatabase loaded and contains edits?
 //
 // Returns                        Nothing
 //
@@ -106,8 +106,8 @@ iGeostringsExtensionAvailable_ARCDH (
 
 [_extended] void
 GetCurrentStringFileGDB_ARCDH (
-                               var string,  // name returned
-                               int          // string size
+                               var string,  // Name returned
+                               int          // String size
                                );
 
 #define _GetCurrentStringFileGDB_ARCDH(A) GetCurrentStringFileGDB_ARCDH(A, sizeof(A))
@@ -137,7 +137,7 @@ iIsValidFGDBFileName_ARCDH (
 
 [_extended] int
 iIsValidFeatureClassName_ARCDH (
-                                string   // featureclass name
+                                string   // Featureclass name
                                 );
 
 

@@ -64,7 +64,7 @@ iIsValidUTF16Char_UNC (
 iValidSymbol_UNC (
                   string,  // Face name (undecorated)
                   int,     // Geosoft font? <define>GEO_BOOL</define>
-                  int      // symbol number
+                  int      // Symbol number
                   );
 
 

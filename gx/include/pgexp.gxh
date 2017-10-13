@@ -29,7 +29,7 @@
 [_licensed] void
 AddPager_PGEXP (
                 PGEXP,   // PGEXP object
-                PG,      // pager to add
+                PG,      // Pager to add
                 string   // Variable name
                 );
 

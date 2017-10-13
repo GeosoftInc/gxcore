@@ -30,14 +30,14 @@
 
 [_licensed] LL2
 Create_LL2 (
-            real,  // longitude origin
-            real,  // latitude origin
-            real,  // longitude increment
-            real,  // latitude increment
+            real,  // Longitude origin
+            real,  // Latitude origin
+            real,  // Longitude increment
+            real,  // Latitude increment
             int,   // # longitudes
             int,   // # latitudes
-            IPJ,   // input projection
-            IPJ    // output projection
+            IPJ,   // Input projection
+            IPJ    // Output projection
             );
 
 
@@ -72,7 +72,7 @@ Destroy_LL2 (
 [_licensed] void
 Save_LL2 (
           LL2,     // LL2 object
-          string   // named resource
+          string   // Named resource
           );
 
 
@@ -95,9 +95,9 @@ Save_LL2 (
 [_licensed] void
 SetRow_LL2 (
             LL2,  // LL2 object
-            int,  // the row to set
-            VV,   // longitude corrections
-            VV    // latitude corrections
+            int,  // The row to set
+            VV,   // Longitude corrections
+            VV    // Latitude corrections
             );
 
 

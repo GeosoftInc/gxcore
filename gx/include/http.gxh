@@ -65,8 +65,8 @@
 [_public] HTTP
 Create_HTTP (
              string,  // URL of the server
-             string,  // user name, "" for none
-             string,  // password,  "" for none
+             string,  // User name, "" for none
+             string,  // Password,  "" for none
              string   // Purpose of communication (for user verification)
              );
 
@@ -100,7 +100,7 @@ Destroy_HTTP (
 
 [_public] void
 Download_HTTP (
-               HTTP,    // http object
+               HTTP,    // Http object
                string,  // File Name on the HTTP site
                BF,      // BF in which to place the file
                int      // Dynamic content (0 - no, 1 - yes)
@@ -122,7 +122,7 @@ Download_HTTP (
 
 [_public] void
 SilentDownload_HTTP (
-                     HTTP,    // http object
+                     HTTP,    // Http object
                      string,  // File Name on the HTTP site
                      BF,      // BF in which to place the file
                      int      // Dynamic content (0 - no, 1 - yes)
@@ -147,11 +147,11 @@ SilentDownload_HTTP (
 
 [_public] void
 Get_HTTP (
-          HTTP,    // http object
-          string,  // http path (file or an ISAPI DLL), no spaces
-          string,  // http search string, no spaces
-          BF,      // data to send
-          BF       // data returned
+          HTTP,    // Http object
+          string,  // Http path (file or an ISAPI DLL), no spaces
+          string,  // Http search string, no spaces
+          BF,      // Data to send
+          BF       // Data returned
           );
 
 
@@ -172,10 +172,10 @@ Get_HTTP (
 
 [_public] void
 Post_HTTP (
-           HTTP,    // http object
-           string,  // http path (file or an ISAPI DLL)
-           string,  // http search string, no spaces
-           BF       // data to post
+           HTTP,    // Http object
+           string,  // Http path (file or an ISAPI DLL)
+           string,  // Http search string, no spaces
+           BF       // Data to post
            );
 
 
@@ -192,9 +192,9 @@ Post_HTTP (
 
 [_public] void
 SetProxyCredentials_HTTP (
-                          HTTP,    // http object
-                          string,  // username
-                          string   // password
+                          HTTP,    // Http object
+                          string,  // Username
+                          string   // Password
                           );
 
 

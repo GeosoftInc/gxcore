@@ -146,11 +146,11 @@
 AxisX_MVG (
            MVG,   // MVG
            real,  // Y location in plot units (mm)
-           real,  // left  X (rescaling unit)
-           real,  // right X (rescaling unit)
-           real,  // major tick interval (rescaling unit). Ticks drawn in decades in LOG or LOGLINEAR scale
-           real,  // minor tick interval  (rescaling unit). Not used in LOG/LOGLINEAR
-           real   // tick size in view units (mm) (negative for down ticks)
+           real,  // Left  X (rescaling unit)
+           real,  // Right X (rescaling unit)
+           real,  // Major tick interval (rescaling unit). Ticks drawn in decades in LOG or LOGLINEAR scale
+           real,  // Minor tick interval  (rescaling unit). Not used in LOG/LOGLINEAR
+           real   // Tick size in view units (mm) (negative for down ticks)
            );
 
 
@@ -171,11 +171,11 @@ AxisX_MVG (
 AxisY_MVG (
            MVG,   // MVG
            real,  // X location in plot units (mm)
-           real,  // bottom Y (rescaling unit)
-           real,  // top Y (rescaling unit)
-           real,  // major tick interval (rescaling unit). Ticks drawn in decades in LOG or LOGLINEAR scale
-           real,  // minor tick interval  (rescaling unit). Not used in LOG/LOGLINEAR
-           real   // tick size in plot units (mm)(negative for left ticks)
+           real,  // Bottom Y (rescaling unit)
+           real,  // Top Y (rescaling unit)
+           real,  // Major tick interval (rescaling unit). Ticks drawn in decades in LOG or LOGLINEAR scale
+           real,  // Minor tick interval  (rescaling unit). Not used in LOG/LOGLINEAR
+           real   // Tick size in plot units (mm)(negative for left ticks)
            );
 
 
@@ -286,12 +286,12 @@ Grid_MVG (
 LabelX_MVG (
             MVG,   // MVG
             real,  // Y location in plot units (mm)
-            real,  // left  X (rescaling unit)
-            real,  // right X (rescaling unit)
-            real,  // major tick interval (ignored if in LOG or LOGLINEAR rescaling)
-            int,   // label justification <define>MVG_LABEL_JUST</define>
-            int,   // edge label bounding <define>MVG_LABEL_BOUND</define>
-            int    // label orientation   <define>MVG_LABEL_ORIENT</define>
+            real,  // Left  X (rescaling unit)
+            real,  // Right X (rescaling unit)
+            real,  // Major tick interval (ignored if in LOG or LOGLINEAR rescaling)
+            int,   // Label justification <define>MVG_LABEL_JUST</define>
+            int,   // Edge label bounding <define>MVG_LABEL_BOUND</define>
+            int    // Label orientation   <define>MVG_LABEL_ORIENT</define>
             );
 
 
@@ -316,12 +316,12 @@ LabelX_MVG (
 LabelY_MVG (
             MVG,   // MVG
             real,  // X location in plot units (mm)
-            real,  // bottom  Y (rescaling unit)
-            real,  // top Y (rescaling unit)
-            real,  // label interval (ignored if in LOG or LOGLINEAR rescaling)
-            int,   // label justification <define>MVG_LABEL_JUST</define>
-            int,   // edge label bounding <define>MVG_LABEL_BOUND</define>
-            int    // label orientation   <define>MVG_LABEL_ORIENT</define>
+            real,  // Bottom  Y (rescaling unit)
+            real,  // Top Y (rescaling unit)
+            real,  // Label interval (ignored if in LOG or LOGLINEAR rescaling)
+            int,   // Label justification <define>MVG_LABEL_JUST</define>
+            int,   // Edge label bounding <define>MVG_LABEL_BOUND</define>
+            int    // Label orientation   <define>MVG_LABEL_ORIENT</define>
             );
 
 

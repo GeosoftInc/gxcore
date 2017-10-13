@@ -84,7 +84,7 @@
 //
 // Ways to handle negatives
 //
-// VV_LOG_NEGATIVE_NO    dummies out value less than the minimum.
+// VV_LOG_NEGATIVE_NO    Dummies out value less than the minimum.
 // VV_LOG_NEGATIVE_YES   
 //                       if the data is in the range +/- minimum,
 //                       it is left alone.  Otherwise, the data
@@ -106,11 +106,11 @@
 //
 // Lookup style
 //
-// VV_LOOKUP_EXACT          only exact matches are used
-// VV_LOOKUP_NEAREST        nearest match is used (regardless of sampling range)
-// VV_LOOKUP_INTERPOLATE    interpolate between values (regardless of sampling range)
-// VV_LOOKUP_NEARESTCLOSE   use nearest match only if within sampling range
-// VV_LOOKUP_INTERPCLOSE    interpolate only if within sampling range
+// VV_LOOKUP_EXACT          Only exact matches are used
+// VV_LOOKUP_NEAREST        Nearest match is used (regardless of sampling range)
+// VV_LOOKUP_INTERPOLATE    Interpolate between values (regardless of sampling range)
+// VV_LOOKUP_NEARESTCLOSE   Use nearest match only if within sampling range
+// VV_LOOKUP_INTERPCLOSE    Interpolate only if within sampling range
 //
 //===========================================================================================================
 
@@ -193,8 +193,8 @@
 
 [_public] void
 _Copy_VV (
-          VV,  // destination
-          VV   // source
+          VV,  // Destination
+          VV   // Source
           );
 #define Copy_VV _Copy_VV
 
@@ -242,7 +242,7 @@ _Log_VV (
          VV,    // VV handle
          int,   // <define>VV_LOG_BASE</define>
          int,   // <define>VV_LOG_NEGATIVE</define>
-         real   // minimum value for <define>VV_LOG_NEGATIVE</define>
+         real   // Minimum value for <define>VV_LOG_NEGATIVE</define>
          );
 #define Log_VV _Log_VV
 
@@ -269,7 +269,7 @@ _Log_VV (
 [_public] void
 _LogLinear_VV (
                VV,    // VV handle
-               real   // minimum value
+               real   // Minimum value
                );
 #define LogLinear_VV _LogLinear_VV
 
@@ -339,8 +339,8 @@ _Serial_VV (
 [_public] void
 _Trans_VV (
            VV,    // VV handle
-           real,  // base value
-           real   // mult value
+           real,  // Base value
+           real   // Mult value
            );
 #define Trans_VV _Trans_VV
 
@@ -387,9 +387,9 @@ Add_VV (
 [_public] void
 Add2_VV (
          VV,    // VV A
-         real,  // multiplier f1 for A
+         real,  // Multiplier f1 for A
          VV,    // VV B
-         real,  // multiplier f2 for B
+         real,  // Multiplier f2 for B
          VV     // VV C (returned), C = A*f1 + B*f2
          );
 
@@ -421,8 +421,8 @@ Append_VV (
 
 [_public] void
 CopyVMtoVV_VV (
-               VV,  // destination VV, will be resized to length of the VM
-               VM   // source VM
+               VV,  // Destination VV, will be resized to length of the VM
+               VM   // Source VM
                );
 
 
@@ -441,8 +441,8 @@ CopyVMtoVV_VV (
 
 [_public] void
 CopyVVtoVM_VV (
-               VM,  // destination VM, will be resized to length of the VV
-               VV   // source VV
+               VM,  // Destination VM, will be resized to length of the VV
+               VV   // Source VV
                );
 
 
@@ -457,7 +457,7 @@ CopyVVtoVM_VV (
 [_public] CRC
 CRC_VV (
         VV,   // VV
-        CRC   // previous CRC <define>CRC_INIT_VALUE</define>
+        CRC   // Previous CRC <define>CRC_INIT_VALUE</define>
         );
 
 
@@ -481,7 +481,7 @@ CRC_VV (
 [_public] CRC
 CRCInexact_VV (
                VV,   // VV
-               CRC,  // previous CRC <define>CRC_INIT_VALUE</define>
+               CRC,  // Previous CRC <define>CRC_INIT_VALUE</define>
                int,  // <define>VV_FLOAT_CRC_BITS</define>
                int   // <define>VV_DOUBLE_CRC_BITS</define>
                );
@@ -668,7 +668,7 @@ FillReal_VV (
 [_public] void
 FillString_VV (
                VV,      // Data VV
-               string   // string
+               string   // String
                );
 
 
@@ -769,7 +769,7 @@ iGetFidExpansion_VV (
 [_public] int
 iGetInt_VV (
             VV,   // VV
-            int   // element wanted
+            int   // Element wanted
             );
 
 
@@ -792,9 +792,9 @@ iGetInt_VV (
 [_public] void
 IGetString_VV (
                VV,          // VV
-               int,         // element wanted
-               var string,  // string in which to place element
-               int          // maximum length of the string
+               int,         // Element wanted
+               var string,  // String in which to place element
+               int          // Maximum length of the string
                );
 
 #define GetString_VV(A, B, C) IGetString_VV(A, B, C, sizeof(C))
@@ -936,7 +936,7 @@ InvLog_VV (
            VV,    // VV handle
            int,   // <define>VV_LOG_BASE</define>
            int,   // <define>VV_LOG_NEGATIVE</define>
-           real   // minimum value for <define>VV_LOG_NEGATIVE</define>
+           real   // Minimum value for <define>VV_LOG_NEGATIVE</define>
            );
 
 
@@ -951,7 +951,7 @@ InvLog_VV (
 [_licensed] int
 iOrder_VV (
            VV,       // VV to check order
-           var int   // returned: Do any values repeat (0: No, 1: Yes)?
+           var int   // Returned: Do any values repeat (0: No, 1: Yes)?
            );
 
 
@@ -974,9 +974,9 @@ iOrder_VV (
 
 [_licensed] void
 LinesToXY_VV (
-              VV,  // input VV of GS_D2LINE type (create with type -32)
-              VV,  // output VV with X locations (GS_DOUBLE)
-              VV   // output VV with Y locations (GS_DOUBLE)
+              VV,  // Input VV of GS_D2LINE type (create with type -32)
+              VV,  // Output VV with X locations (GS_DOUBLE)
+              VV   // Output VV with Y locations (GS_DOUBLE)
               );
 
 
@@ -1205,8 +1205,8 @@ Project3D_VV (
 [_public] void
 RangeDouble_VV (
                 VV,        // VV
-                var real,  // minimum value - returned
-                var real   // maximum value - returned
+                var real,  // Minimum value - returned
+                var real   // Maximum value - returned
                 );
 
 
@@ -1314,7 +1314,7 @@ rGetFidStart_VV (
 [_public] real
 rGetReal_VV (
              VV,   // VV
-             int   // element wanted
+             int   // Element wanted
              );
 
 
@@ -1419,8 +1419,8 @@ SetFidStart_VV (
 [_public] void
 SetInt_VV (
            VV,   // VV
-           int,  // element to set
-           int   // value to set
+           int,  // Element to set
+           int   // Value to set
            );
 
 
@@ -1441,9 +1441,9 @@ SetInt_VV (
 [_public] void
 SetIntN_VV (
             VV,   // VV
-            int,  // start element (>= 0)
+            int,  // Start element (>= 0)
             int,  // # elements to set (-1 sets all elements to end)
-            int   // value to set
+            int   // Value to set
             );
 
 
@@ -1496,8 +1496,8 @@ SetLen_VV (
 [_public] void
 SetReal_VV (
             VV,    // VV
-            int,   // element to set
-            real   // value to set
+            int,   // Element to set
+            real   // Value to set
             );
 
 
@@ -1518,9 +1518,9 @@ SetReal_VV (
 [_public] void
 SetRealN_VV (
              VV,    // VV
-             int,   // start element (>= 0)
+             int,   // Start element (>= 0)
              int,   // # elements to set (-1 sets all elements to end)
-             real   // value to set
+             real   // Value to set
              );
 
 
@@ -1547,8 +1547,8 @@ SetRealN_VV (
 [_public] void
 SetString_VV (
               VV,      // VV
-              int,     // element to set
-              string   // string to set
+              int,     // Element to set
+              string   // String to set
               );
 
 
@@ -1569,9 +1569,9 @@ SetString_VV (
 [_public] void
 SetStringN_VV (
                VV,      // VV
-               int,     // start element (>= 0)
+               int,     // Start element (>= 0)
                int,     // # elements to set (-1 sets all elements to end)
-               string   // string to set
+               string   // String to set
                );
 
 
@@ -1879,7 +1879,7 @@ Window_VV (
 WriteXML_VV (
              VV,      // VV to save
              string,  // XML file to create
-             int,     // format
+             int,     // Format
              int      // Significant digits/decimals
              );
 

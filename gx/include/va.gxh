@@ -335,8 +335,8 @@ IGetString_VA (
                VA,          // VA, element wanted
                int,         // Row
                int,         // Column
-               var string,  // string in which to place element
-               int          // maximum length of the string
+               var string,  // String in which to place element
+               int          // Maximum length of the string
                );
 
 #define GetString_VA(A, B, C, D) IGetString_VA(A, B, C, D, sizeof(D))
@@ -551,7 +551,7 @@ SetInt_VA (
            VA,   // VA, element want
            int,  // Row
            int,  // Column
-           int   // value to set
+           int   // Value to set
            );
 
 
@@ -571,7 +571,7 @@ SetInt_VA (
 [_public] void
 SetLn_VA (
           VA,   // VA
-          int   // length
+          int   // Length
           );
 
 
@@ -594,7 +594,7 @@ SetReal_VA (
             VA,    // VA, element want
             int,   // Row
             int,   // Column
-            real   // value to set
+            real   // Value to set
             );
 
 
@@ -617,7 +617,7 @@ SetString_VA (
               VA,      // VA, element wanted
               int,     // Row
               int,     // Column
-              string   // string to set
+              string   // String to set
               );
 
 
@@ -651,8 +651,8 @@ SetVV_VA (
 [_licensed] void
 Trans_VA (
           VA,    // VA handle
-          real,  // base value
-          real   // mult value
+          real,  // Base value
+          real   // Mult value
           );
 
 
@@ -674,8 +674,8 @@ Trans_VA (
 [_public] void
 Window_VA (
            VA,   // VA to window
-           int,  // first element in the window
-           int,  // number of elements in the window
+           int,  // First element in the window
+           int,  // Number of elements in the window
            VV    // VV in which to place results
            );
 
@@ -698,8 +698,8 @@ Window_VA (
 [_public] void
 Window2_VA (
             VA,    // VA to window
-            real,  // start point (from 0.0)
-            real,  // end point (< VA elements - 1.0)
+            real,  // Start point (from 0.0)
+            real,  // End point (< VA elements - 1.0)
             VV     // VV in which to place results
             );
 
@@ -725,8 +725,8 @@ iCheckForRepeating_VA (
                        VA,    // VA to check
                        VV,    // Items to test for repeats (length equal to the number of columns in the VA)
                        int,   // If set to 1, subtract single values in the following VV from every array row item before testing (e.g. an elevation value)
-                       VV,    // values to subtract from each row before doing the comparison test (length equal to the length of the VA). Can be VV_NULL (-1) if above subtraction parameter is zero
-                       real   // comparison tolerance - set to zero or dummy for exact match
+                       VV,    // Values to subtract from each row before doing the comparison test (length equal to the length of the VA). Can be VV_NULL (-1) if above subtraction parameter is zero
+                       real   // Comparison tolerance - set to zero or dummy for exact match
                        );
 
 
@@ -752,10 +752,10 @@ iCheckForRepeating2_VA (
                         VA,       // VA to check
                         VV,       // Items to test for repeats (length equal to the number of columns in the VA)
                         int,      // If set to 1, subtract single values in the following VV from every array row item before testing (e.g. an elevation value)
-                        VV,       // values to subtract from each row before doing the comparison test (length equal to the length of the VA). Can be VV_NULL (-1) if above subtraction parameter is zero
-                        real,     // comparison tolerance - set to zero or dummy for exact match
-                        var int,  // row index of first mismatch
-                        var int   // column index of first mismatch
+                        VV,       // Values to subtract from each row before doing the comparison test (length equal to the length of the VA). Can be VV_NULL (-1) if above subtraction parameter is zero
+                        real,     // Comparison tolerance - set to zero or dummy for exact match
+                        var int,  // Row index of first mismatch
+                        var int   // Column index of first mismatch
                         );
 
 

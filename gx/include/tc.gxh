@@ -87,15 +87,15 @@
 
 [_extended] TC
 Create_TC (
-           IMG,   // topo (DEM) grid
-           real,  // elevation unit in 1 metre (i.e. 0.3048 for feet)
-           real,  // inner distance (in topo grid projection units, default in metres)
-           real,  // outer distance (in topo grid projection units, default in metres)
-           real,  // terrain density in g/cc
-           real,  // water density in g/cc
-           real,  // water reference elevation (in elevation unit)
+           IMG,   // Topo (DEM) grid
+           real,  // Elevation unit in 1 metre (i.e. 0.3048 for feet)
+           real,  // Inner distance (in topo grid projection units, default in metres)
+           real,  // Outer distance (in topo grid projection units, default in metres)
+           real,  // Terrain density in g/cc
+           real,  // Water density in g/cc
+           real,  // Water reference elevation (in elevation unit)
            int,   // GS_TRUE to calculate an edge correction (compensation)
-           real,  // average elevation beyond max distance (in elevation unit)
+           real,  // Average elevation beyond max distance (in elevation unit)
            int    // <define>TC_OPT</define>
            );
 
@@ -110,15 +110,15 @@ Create_TC (
 
 [_extended] TC
 CreateEx_TC (
-             IMG,   // topo (DEM) grid
-             real,  // elevation unit in 1 metre (i.e. 0.3048 for feet)
-             real,  // inner distance (in topo grid projection units, default in metres)
-             real,  // outer distance (in topo grid projection units, default in metres)
-             real,  // terrain density in g/cc
-             real,  // water density in g/cc
-             real,  // water reference elevation (in elevation unit)
+             IMG,   // Topo (DEM) grid
+             real,  // Elevation unit in 1 metre (i.e. 0.3048 for feet)
+             real,  // Inner distance (in topo grid projection units, default in metres)
+             real,  // Outer distance (in topo grid projection units, default in metres)
+             real,  // Terrain density in g/cc
+             real,  // Water density in g/cc
+             real,  // Water reference elevation (in elevation unit)
              int,   // GS_TRUE to calculate an edge correction (compensation)
-             real,  // average elevation beyond max distance (in elevation unit)
+             real,  // Average elevation beyond max distance (in elevation unit)
              int,   // <define>TC_OPT</define>
              int    // <define>TC_SURVEYTYPE</define>
              );
@@ -165,11 +165,11 @@ Grregter_TC (
 [_extended] void
 Grterain_TC (
              TC,    // TC handle
-             VV,    // input X channel data (in topo grid projection units, default in metres)
-             VV,    // input Y channel data (in topo grid projection units, default in metres)
-             VV,    // input Elevation channel data (in elevation unit)
-             VV,    // input slope channel data
-             VV,    // output Terrain Corrected channel data
+             VV,    // Input X channel data (in topo grid projection units, default in metres)
+             VV,    // Input Y channel data (in topo grid projection units, default in metres)
+             VV,    // Input Elevation channel data (in elevation unit)
+             VV,    // Input slope channel data
+             VV,    // Output Terrain Corrected channel data
              IMG,   // Image of input correction grid
              real   // Terrain density (default 2.67)
              );
@@ -186,12 +186,12 @@ Grterain_TC (
 [_extended] void
 Grterain2_TC (
               TC,    // TC handle
-              VV,    // input X channel data (in topo grid projection units, default in metres)
-              VV,    // input Y channel data (in topo grid projection units, default in metres)
-              VV,    // input Elevation channel data (in elevation unit)
-              VV,    // input slope channel data
-              VV,    // input Water depth channel data (in metres)
-              VV,    // output Terrain Corrected channel data
+              VV,    // Input X channel data (in topo grid projection units, default in metres)
+              VV,    // Input Y channel data (in topo grid projection units, default in metres)
+              VV,    // Input Elevation channel data (in elevation unit)
+              VV,    // Input slope channel data
+              VV,    // Input Water depth channel data (in metres)
+              VV,    // Output Terrain Corrected channel data
               IMG,   // Image of input correction grid
               real   // Terrain density (default 2.67)
               );
@@ -208,10 +208,10 @@ Grterain2_TC (
 [_extended] void
 GGterain_TC (
              TC,    // TC handle
-             VV,    // input X channel data (in topo grid projection units, default in metres)
-             VV,    // input Y channel data (in topo grid projection units, default in metres)
-             VV,    // input Elevation channel data (in elevation unit)
-             VV,    // output Terrain Corrected channel data
+             VV,    // Input X channel data (in topo grid projection units, default in metres)
+             VV,    // Input Y channel data (in topo grid projection units, default in metres)
+             VV,    // Input Elevation channel data (in elevation unit)
+             VV,    // Output Terrain Corrected channel data
              real,  // Terrain density (default 2.67)
              real,  // Terrain reference level (default 0.0)
              int    // <define>GG_ELEMENT</define>

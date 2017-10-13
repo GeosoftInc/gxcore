@@ -25,9 +25,9 @@
 [_public] void
 Render_PDF3D (
               MVIEW,   // MVIEW handle
-              string,  // filename
-              int,     // resolution
-              int      // noclipping
+              string,  // Filename
+              int,     // Resolution
+              int      // Noclipping
               );
 
 
@@ -42,10 +42,10 @@ Render_PDF3D (
 [_public] void
 RenderToPage_PDF3D (
                     MVIEW,   // MVIEW handle
-                    string,  // filename
-                    int,     // page number
-                    int,     // resolution
-                    int      // noclipping
+                    string,  // Filename
+                    int,     // Page number
+                    int,     // Resolution
+                    int      // Noclipping
                     );
 
 

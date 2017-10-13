@@ -413,7 +413,7 @@ Load_EMAPTEMPLATE (
 
 [_public_app] EMAPTEMPLATE
 LoadNoActivate_EMAPTEMPLATE (
-                             string   // list of documents (';' or '|' delimited) to load.
+                             string   // List of documents (';' or '|' delimited) to load.
                              );
 
 

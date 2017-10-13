@@ -213,7 +213,7 @@ GetExtents_SURFACE (
 [_public] CRC
 CRC_SURFACE (
              string,   // Geosurface file
-             string,   // output file
+             string,   // Output file
              var int   // CRC (unused, always set to 0)
              );
 
@@ -244,7 +244,7 @@ Sync_SURFACE (
 CreateFromDXF_SURFACE (
                        IPJ,     // IPJ
                        string,  // Geosurface file
-                       string   // dxf file
+                       string   // DXF file
                        );
 
 

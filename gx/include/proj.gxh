@@ -53,7 +53,7 @@
 // How to display an object
 //
 // PROJ_DISPLAY_NO       Do not display the object
-// PROJ_DISPLAY_YES      Display the object unless user set option not too
+// PROJ_DISPLAY_YES      Display the object unless user set option not to
 // PROJ_DISPLAY_ALWAYS   Always display the object
 //
 //===========================================================================================================
@@ -122,9 +122,9 @@ iAddDocumentWithoutOpening_PROJ (
 //
 // Returns                       <define>COMMAND_ENV</define>
 //                               
-//                               Notes									We are moving towards embedded tools and menus and this setting can be set
+//                               Notes									We are moving towards embedded tools and menus and this setting can be
 //                               queried from the project to determine how specific commands should react.
-//                               ly 3D viewer is currently making use of this.
+//                               Only 3D viewer is currently making use of this.
 //
 // Available                     5.0.0
 //
@@ -202,17 +202,17 @@ iListLoadedDocuments_PROJ (
 
 [_public_app] void
 ICurrentDocument_PROJ (
-                       var string,  // name (empty if none currenlty loaded)
-                       int,         // maximum name length
-                       var string,  // type
-                       int          // maximum type length
+                       var string,  // Name (empty if none currently loaded)
+                       int,         // Maximum name length
+                       var string,  // Type
+                       int          // Maximum type length
                        );
 
 #define CurrentDocument_PROJ(A, B) ICurrentDocument_PROJ(A, sizeof(A), B, sizeof(B))
 
 
 //-----------------------------------------------------------------------------------------------------------
-// ICurrentDocumentOfType_PROJ   Get the name loaded document of a specific type.
+// ICurrentDocumentOfType_PROJ   Get the name of a loaded document of a specific type.
 //
 // Returns                       Nothing.
 //
@@ -221,9 +221,9 @@ ICurrentDocument_PROJ (
 
 [_public_app] void
 ICurrentDocumentOfType_PROJ (
-                             var string,  // name (empty if none currenlty loaded)
-                             int,         // maximum name length
-                             string       // type
+                             var string,  // Name (empty if none currently loaded)
+                             int,         // Maximum name length
+                             string       // Type
                              );
 
 #define CurrentDocumentOfType_PROJ(A, B) ICurrentDocumentOfType_PROJ(A, sizeof(A), B)

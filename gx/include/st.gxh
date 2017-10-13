@@ -18,22 +18,22 @@
 // Notes
 //
 // 
-// *** Histogram ranges and colour zone ranges ***
+// *** Histogram ranges and color zone ranges ***
 // 
 // Histogram bins are defined with inclusive minima and exclusive maxima;
 // for instance if Min = 0 and Inc = 1, then the second bin would include
 // all values z such that  0 >= z > 1 (the first bin has all values < 0).
 // 
-// Colour zones used in displaying grids (ITR, ZON etc...) are the
+// Color zones used in displaying grids (ITR, ZON etc...) are the
 // opposite, with exclusive minima and inclusive maxima.
 // For instance, if a zone is defined from 0 to 1, then it would
 // contain all values of z such that 0 > z >= 1.
 // 
 // These definitions mean that it is impossible to perfectly assign
-// ITR colours to individual bars of a histogram. The best work-around
-// when the data values are integers is to define the colour zones using
+// ITR colors to individual bars of a histogram. The best work-around
+// when the data values are integers is to define the color zones using
 // 0.5 values between the integers. A general work-around is to make the
-// number of histogram bins much larger than the number of colour zones.
+// number of histogram bins much larger than the number of color zones.
 // 
 // See also  ST2 (bi-variate statistics)
 // 
@@ -241,7 +241,7 @@ GetHistogramInfo_ST (
 //                You should already have the data loaded in order to call this
 //                function.
 //                
-//                See the note above "Histogram ranges and colour zone ranges"
+//                See the note above "Histogram ranges and color zone ranges"
 //                
 //
 // Available      5.0.0
@@ -264,7 +264,7 @@ Histogram_ST (
 //                 and the one after the maximum, so it must be a value >2.
 //                 The width of the individual bins will be (Min-Max)/(# - 2)
 //                 
-//                 See the note above "Histogram ranges and colour zone ranges"
+//                 See the note above "Histogram ranges and color zone ranges"
 //                 
 //
 // Available       5.0.0
@@ -295,7 +295,7 @@ Histogram2_ST (
 [_licensed] real
 rEquivalentPercentile_ST (
                           ST,    // ST
-                          real   // input value
+                          real   // Input value
                           );
 
 
@@ -315,7 +315,7 @@ rEquivalentPercentile_ST (
 [_licensed] real
 rEquivalentValue_ST (
                      ST,    // ST
-                     real   // input percentile (0 - 100)
+                     real   // Input percentile (0 - 100)
                      );
 
 
@@ -363,7 +363,7 @@ rGetInfo_ST (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// rGetNormProb_ST   return percent value
+// rGetNormProb_ST   Return percent value
 //
 // Returns           
 //                   real
@@ -378,7 +378,7 @@ rGetInfo_ST (
 
 [_licensed] real
 rGetNormProb_ST (
-                 real   // real
+                 real   // Real
                  );
 
 
@@ -398,7 +398,7 @@ rGetNormProb_ST (
 
 [_licensed] real
 rGetNormProbX_ST (
-                  real   // real
+                  real   // Real
                   );
 
 

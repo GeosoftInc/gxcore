@@ -69,7 +69,7 @@ CreateIMG_RGRD (
                 VV,      // Z (grid value) data (any numeric VV type)
                 IPJ,     // Projection to apply to the output IMG
                 string,  // RANGRID control file.
-                string   // output grid name (optional)
+                string   // Output grid name (optional)
                 );
 
 
@@ -157,7 +157,7 @@ iRun2_RGRD (
             string,  // X Channel
             string,  // Data channel
             string,  // RANGRID control file.
-            string   // output grid name
+            string   // Output grid name
             );
 
 
@@ -195,7 +195,7 @@ RunVV_RGRD (
             VV,      // Z (grid value) data
             IPJ,     // Projection to put into grid
             string,  // RANGRID control file.
-            string   // output grid name
+            string   // Output grid name
             );
 
 

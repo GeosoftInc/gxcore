@@ -324,7 +324,7 @@ GetMeshInfo_SURFACEITEM (
                          SURFACEITEM,  // SURFACEITEM Object
                          int,          // Index of the component
                          var int,      // <define>GEO_BOOL</define> indicating if mesh is closed
-                         var int,      // number of inner components
+                         var int,      // Number of inner components
                          var real,     // Area
                          var real,     // Volume
                          var real      // Volume confidence interval

@@ -5,8 +5,8 @@
 //-----------------------------------------------------------------------------------------------------------
 // Description
 //
-// This class is used to import Acquire data. It uses the
-// public Acquire API.
+// This class is used to import acQuire data. It uses the
+// public acQuire API.
 //
 //-----------------------------------------------------------------------------------------------------------
 
@@ -31,9 +31,9 @@
 
 
 //-----------------------------------------------------------------------------------------------------------
-// Create_ACQUIRE   Create a ACQUIRE object
+// Create_ACQUIRE   Create an acQuire object
 //
-// Returns          ACQUIRE Object
+// Returns          acQuire Object
 //
 // Available        6.0.0
 //
@@ -53,7 +53,7 @@ Create_ACQUIRE (
 
 [_licensed] void
 DeleteEmptyChan_ACQUIRE (
-                         ACQUIRE,  // ACQUIRE Handle
+                         ACQUIRE,  // acQuire Handle
                          DB        // Database
                          );
 
@@ -68,7 +68,7 @@ DeleteEmptyChan_ACQUIRE (
 
 [_public] void
 Destroy_ACQUIRE (
-                 ACQUIRE   // Aquire Object
+                 ACQUIRE   // acQuire Object
                  );
 
 
@@ -86,11 +86,11 @@ Destroy_ACQUIRE (
 
 [_licensed] int
 iImportHole_ACQUIRE (
-                     ACQUIRE,  // Aquire Object
-                     string,   // project name
-                     string,   // project directory
+                     ACQUIRE,  // acQuire Object
+                     string,   // Project name
+                     string,   // Project directory
                      string,   // Parameter File
-                     VV,       // list of geology name database
+                     VV,       // List of geology name database
                      int,      // 0: Write to existing databases (overwrite holes), 1: Delete existing databases.
                      int       // Convert Negatives (0,1)
                      );
@@ -111,7 +111,7 @@ iImportHole_ACQUIRE (
 
 [_licensed] int
 iImportPoint_ACQUIRE (
-                      ACQUIRE,  // ACQUIRE Handle
+                      ACQUIRE,  // acQuire Handle
                       DB,       // Geosoft GDB
                       string,   // Parameter File
                       int       // Convert Negatives (0,1)
@@ -119,7 +119,7 @@ iImportPoint_ACQUIRE (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iSelectionTool_ACQUIRE   Run the Acquire Selection Tool.
+// iSelectionTool_ACQUIRE   Run the acQuire Selection Tool.
 //
 // Returns                  0 - Ok
 //                          1 - if user cancels
@@ -133,7 +133,7 @@ iImportPoint_ACQUIRE (
 
 [_licensed] int
 iSelectionTool_ACQUIRE (
-                        ACQUIRE,  // Aquire Object
+                        ACQUIRE,  // acQuire Object
                         string,   // Selection File Name
                         int       // <define>ACQUIRE_SEL</define>
                         );

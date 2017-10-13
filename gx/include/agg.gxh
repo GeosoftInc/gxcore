@@ -26,7 +26,7 @@
 // Aggregate Layer Zone defines
 //
 // AGG_LAYER_ZONE_DEFAULT     
-//                            If a colour table with no colour transform is passed
+//                            If a color table with no color transform is passed
 //                            it will be used with the default zoning
 //                            method of the data, which is usually
 //                            AGG_LAYER_ZONE_EQUALAREA.
@@ -124,8 +124,8 @@ _SetModel_AGG (
 //
 // Notes                  
 //                        0.0 brightness does nothing.
-//                        -1.0 to 0.0 makes colours darker, -1.0 is black
-//                        0.0 to 1.0 makes colours lighter, 1.0 is white
+//                        -1.0 to 0.0 makes colors darker, -1.0 is black
+//                        0.0 to 1.0 makes colors lighter, 1.0 is white
 //                        
 //
 // Available              5.0.0
@@ -141,7 +141,7 @@ ChangeBrightness_AGG (
 //-----------------------------------------------------------------------------------------------------------
 // Create_AGG   Create an aggregate
 //
-// Returns      AGG Object
+// Returns      AGG object
 //
 // Available    5.0.0
 //
@@ -154,7 +154,7 @@ Create_AGG (
 //-----------------------------------------------------------------------------------------------------------
 // CreateMap_AGG   Create AGG from Map with Group name.
 //
-// Returns         AGG Object
+// Returns         AGG object
 //
 // Notes           
 //                 The Agg Group name must include the View name with a
@@ -169,7 +169,7 @@ Create_AGG (
 [_public] AGG
 CreateMap_AGG (
                MAP,     // MAP on which to place the view
-               string   // Agg Group name
+               string   // AGG group name
                );
 
 
@@ -207,7 +207,7 @@ Destroy_AGG (
 [_public] void
 GetLayerITR_AGG (
                  AGG,  // AGG
-                 int,  // layer number
+                 int,  // Layer number
                  ITR   // ITR
                  );
 
@@ -215,7 +215,7 @@ GetLayerITR_AGG (
 //-----------------------------------------------------------------------------------------------------------
 // iListImg_AGG   Lists file names of all the IMGs inside of the AGG.
 //
-// Returns        The number of Imgs.
+// Returns        The number of IMGs.
 //
 // Notes          The returned VV contains the file names.
 //
@@ -256,10 +256,10 @@ iNumLayers_AGG (
 [_public] void
 LayerIMG_AGG (
               AGG,     // AGG
-              string,  // grid name
-              int,     // <define>AGG_LAYER_ZONE</define> transform to use if colour table has none defined.
-              string,  // colour table name, "" for default This can be a .TBL .ZON .ITR or .AGG file .TBL is the default
-              real     // colour contour interval or rDUMMY for default
+              string,  // Grid name
+              int,     // <define>AGG_LAYER_ZONE</define> transform to use if color table has none defined.
+              string,  // Color table name, "" for default This can be a .TBL .ZON .ITR or .AGG file .TBL is the default
+              real     // Color contour interval or rDUMMY for default
               );
 
 
@@ -276,12 +276,12 @@ LayerIMG_AGG (
 [_public] void
 LayerIMGEx_AGG (
                 AGG,     // AGG
-                string,  // grid name
-                int,     // <define>AGG_LAYER_ZONE</define> transform to use if colour table has none defined.
-                string,  // colour table name, "" for default This can be a .TBL .ZON .ITR or .AGG file .TBL is the default
-                real,    // minimum value or rDUMMY for default
-                real,    // maximum value or rDUMMY for default
-                real     // colour contour interval or rDUMMY for default
+                string,  // Grid name
+                int,     // <define>AGG_LAYER_ZONE</define> transform to use if color table has none defined.
+                string,  // Color table name, "" for default This can be a .TBL .ZON .ITR or .AGG file .TBL is the default
+                real,    // Minimum value or rDUMMY for default
+                real,    // Maximum value or rDUMMY for default
+                real     // Color contour interval or rDUMMY for default
                 );
 
 
@@ -305,11 +305,11 @@ LayerIMGEx_AGG (
 [_public] void
 LayerShadeIMG_AGG (
                    AGG,       // AGG
-                   string,    // grid name
-                   string,    // colour table name, "" for default
-                   real,      // inclination
-                   real,      // declination
-                   var real   // scale (rDUMMY for default, returns value used)
+                   string,    // Grid name
+                   string,    // Color table name, "" for default
+                   real,      // Inclination
+                   real,      // Declination
+                   var real   // Scale (rDUMMY for default, returns value used)
                    );
 
 
@@ -320,7 +320,7 @@ LayerShadeIMG_AGG (
 //
 // Notes                
 //                      Brightness can range from -1.0 (black) to 1.0 (white).
-//                      This brightness control is relative to the normal colour
+//                      This brightness control is relative to the normal color
 //                      when the AGG is created.
 //                      
 //                      AGG brightness depends on the brightness of the ITR of each layer.
@@ -362,7 +362,7 @@ rGetBrightness_AGG (
 [_public] void
 SetLayerITR_AGG (
                  AGG,  // AGG
-                 int,  // layer number
+                 int,  // Layer number
                  ITR   // ITR
                  );
 

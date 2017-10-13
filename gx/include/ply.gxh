@@ -129,8 +129,8 @@ Clear_PLY (
 
 [_public] void
 Copy_PLY (
-          PLY,  // destination
-          PLY   // source
+          PLY,  // Destination
+          PLY   // Source
           );
 
 
@@ -223,7 +223,7 @@ GetPolygon_PLY (
                 PLY,  // PLY Object
                 VV,   // X VV.
                 VV,   // Y VV.
-                int   // polygon number
+                int   // Polygon number
                 );
 
 
@@ -240,7 +240,7 @@ GetPolygonEx_PLY (
                   PLY,      // PLY Object
                   VV,       // X VV.
                   VV,       // Y VV.
-                  int,      // polygon number
+                  int,      // Polygon number
                   var int   // TRUE if exclusion polygon
                   );
 
@@ -255,11 +255,11 @@ GetPolygonEx_PLY (
 
 [_public] int
 iClipArea_PLY (
-               PLY,   // polygon to clip
-               real,  // min X
-               real,  // min Y
-               real,  // max X
-               real   // max y
+               PLY,   // Polygon to clip
+               real,  // Min X
+               real,  // Min Y
+               real,  // Max X
+               real   // Max y
                );
 
 
@@ -283,13 +283,13 @@ iClipArea_PLY (
 
 [_public] int
 iClipLineInt_PLY (
-                  PLY,      // polygon to clip
-                  real,     // min X of line to clip
-                  real,     // min Y of line to clip
-                  real,     // max X of line to clip
-                  real,     // max y of line to clip
+                  PLY,      // Polygon to clip
+                  real,     // Min X of line to clip
+                  real,     // Min Y of line to clip
+                  real,     // Max X of line to clip
+                  real,     // Max y of line to clip
                   VV,       // DOUBLE VV holding intersection fids
-                  real,     // data element increment (precision)
+                  real,     // Data element increment (precision)
                   var int   // First point value (<define>PLY_LINE_CLIP</define> value)
                   );
 
@@ -310,9 +310,9 @@ iClipLineInt_PLY (
 
 [_public] int
 iClipPLY_PLY (
-              PLY,  // polygon A
-              PLY,  // polygon B
-              PLY   // resulting clipped region
+              PLY,  // Polygon A
+              PLY,  // Polygon B
+              PLY   // Resulting clipped region
               );
 
 
@@ -327,8 +327,8 @@ iClipPLY_PLY (
 [_public] void
 IGetDescription_PLY (
                      PLY,         // PLY Object
-                     var string,  // polygon description
-                     int          // string size
+                     var string,  // Polygon description
+                     int          // String size
                      );
 
 #define GetDescription_PLY(A, B) IGetDescription_PLY(A, B, sizeof(B))
@@ -337,7 +337,7 @@ IGetDescription_PLY (
 //-----------------------------------------------------------------------------------------------------------
 // iNumPoly_PLY   Get the number of polygons.
 //
-// Returns        number of polygons in the PLY.
+// Returns        Number of polygons in the PLY.
 //
 // Available      5.0.0
 //
@@ -455,7 +455,7 @@ Serial_PLY (
 [_public] void
 SetDescription_PLY (
                     PLY,     // PLY Object
-                    string   // polygon description
+                    string   // Polygon description
                     );
 
 
@@ -493,7 +493,7 @@ SetIPJ_PLY (
 [_public] void
 Thin_PLY (
           PLY,   // PLY Object
-          real   // thining resolution
+          real   // Thining resolution
           );
 
 

@@ -206,9 +206,9 @@
 //
 // Leveling Options
 //
-// DU_LEVEL_LINES   extract line corrections
-// DU_LEVEL_TIES    extract tie corrections
-// DU_LEVEL_ALL     extract all corrections
+// DU_LEVEL_LINES   Extract line corrections
+// DU_LEVEL_TIES    Extract tie corrections
+// DU_LEVEL_ALL     Extract all corrections
 //
 //===========================================================================================================
 
@@ -415,9 +415,9 @@
 //
 // Move Style
 //
-// DU_MOVE_ABSOLUTE   move input to absolute value in control channel
-// DU_MOVE_MINUS      subtract control channel from input channel
-// DU_MOVE_PLUS       add control channel to input channel
+// DU_MOVE_ABSOLUTE   Move input to absolute value in control channel
+// DU_MOVE_MINUS      Subtract control channel from input channel
+// DU_MOVE_PLUS       Add control channel to input channel
 // DU_MOVE_INTERP     
 //                    data is NOT moved, but dummies in the input are interpolated
 //                    based on the control channel, assuming both the input and control
@@ -1001,10 +1001,10 @@ ClosestPoint_DU (
                  DB,        // DB
                  real,      // X location
                  real,      // Y location
-                 var real,  // located X location
-                 var real,  // located Y location
-                 var int,   // line for located point
-                 var real   // fiducial of located point
+                 var real,  // Located X location
+                 var real,  // Located Y location
+                 var int,   // Line for located point
+                 var real   // Fiducial of located point
                  );
 
 
@@ -1308,9 +1308,9 @@ Export_DU (
            DB,      // Database
            int,     // <define>DU_EXPORT</define>
            string,  // Current line
-           VV,      // list of channels - channel symbols stored as INT
+           VV,      // List of channels - channel symbols stored as INT
            int,     // <define>DU_CHANNELS</define>
-           string,  // data file name
+           string,  // Data file name
            int,     // Write out dummies?
            int      // Include a header with channel names?
            );
@@ -1334,9 +1334,9 @@ Export2_DU (
             DB,      // Database
             int,     // <define>DU_EXPORT</define>
             string,  // Current line
-            VV,      // list of channels - channel symbols stored as INT
+            VV,      // List of channels - channel symbols stored as INT
             int,     // <define>DU_CHANNELS</define>
-            string,  // data file name
+            string,  // Data file name
             int,     // Write out dummies?
             int,     // Include a header with channel names?
             int      // Include line names as data?
@@ -1398,8 +1398,8 @@ ExportAseg_DU (
                string,  // Current line
                VV,      // Displayed channels
                int,     // <define>DU_CHANNELS</define>
-               string,  // header file name
-               string   // data file name
+               string,  // Header file name
+               string   // Data file name
                );
 
 
@@ -1431,9 +1431,9 @@ ExportAsegProj_DU (
                    string,  // Current line
                    VV,      // Displayed channels
                    int,     // <define>DU_CHANNELS</define>
-                   string,  // export header file name
-                   string,  // export data file name
-                   string,  // export projection file name
+                   string,  // Export header file name
+                   string,  // Export data file name
+                   string,  // Export projection file name
                    IPJ      // Projection handle
                    );
 
@@ -1486,7 +1486,7 @@ ExportCSV_DU (
               string,  // Current line
               VV,      // Displayed channels
               int,     // <define>DU_CHANNELS</define>
-              string,  // data file name
+              string,  // Data file name
               int,     // Write out dummies?
               int      // Include a header with channel names?
               );
@@ -1532,7 +1532,7 @@ ExportDatabaseCRC_DU (
 ExportGBN_DU (
               DB,      // Database
               VV,      // List of channels to export
-              string   // export data file name
+              string   // Export data file name
               );
 
 
@@ -1558,7 +1558,7 @@ ExportMDB_DU (
               VV,      // Displayed channels
               int,     // <define>DU_CHANNELS</define>
               int,     // <define>DU_LINEOUT</define>
-              string   // export data file name
+              string   // Export data file name
               );
 
 
@@ -1586,7 +1586,7 @@ ExportGeodatabase_DU (
                       int,     // <define>DU_CHANNELS</define>
                       int,     // <define>DU_FEATURE_TYPE_OUTPUT</define>
                       int,     // <define>DU_LINEOUT</define>
-                      string   // export data file name
+                      string   // Export data file name
                       );
 
 
@@ -1635,7 +1635,7 @@ ExportSHP_DU (
               VV,      // Displayed channels
               int,     // <define>DU_CHANNELS</define>
               int,     // <define>DU_LINEOUT</define>
-              string,  // export shape file name or base filename (shp assumed if no extension given)
+              string,  // Export shape file name or base filename (shp assumed if no extension given)
               LST      // LST object will be filled with shape files created
               );
 
@@ -1671,8 +1671,8 @@ ExportSHP_DU (
 [_public] void
 ExportXYZ_DU (
               DB,      // Database
-              string,  // export data file name
-              string   // export template name
+              string,  // Export data file name
+              string   // Export template name
               );
 
 
@@ -1689,8 +1689,8 @@ ExportXYZ_DU (
 [_public] void
 ExportXYZ2_DU (
                DB,  // Database
-               WA,  // export data file WA handle
-               RA   // export template file RA handle
+               WA,  // Export data file WA handle
+               RA   // Export template file RA handle
                );
 
 
@@ -1706,9 +1706,9 @@ ExportXYZ2_DU (
 FFT_DU (
         DB,       // Database
         DB_SYMB,  // Line handle
-        DB_SYMB,  // space Channel [DB_LOCK_READONLY]
-        DB_SYMB,  // real Channel  [DB_LOCK_READWRITE]
-        DB_SYMB   // imaginary Channel [DB_LOCK_READWRITE]
+        DB_SYMB,  // Space Channel [DB_LOCK_READONLY]
+        DB_SYMB,  // Real Channel  [DB_LOCK_READWRITE]
+        DB_SYMB   // Imaginary Channel [DB_LOCK_READWRITE]
         );
 
 
@@ -1783,8 +1783,8 @@ GenLevDB_DU (
 
 [_public] void
 GenXYZTemp_DU (
-               string,  // xyz file name
-               string   // template file name to create
+               string,  // Xyz file name
+               string   // Template file name to create
                );
 
 
@@ -1798,8 +1798,8 @@ GenXYZTemp_DU (
 
 [_public] void
 GetXYZNumFields_DU (
-                    string,   // xyz file name
-                    var int   // returned number of fields
+                    string,   // Xyz file name
+                    var int   // Returned number of fields
                     );
 
 
@@ -1900,13 +1900,13 @@ Gradient_DU (
 
 [_licensed] void
 GravDrift_DU (
-              DB,       // database
-              DB_SYMB,  // line                    [DB_LOCK_READONLY]
-              DB_SYMB,  // date                    [DB_LOCK_READONLY]
-              DB_SYMB,  // local time (on date)    [DB_LOCK_READONLY]
-              DB_SYMB,  // reading                 [DB_LOCK_READONLY]
-              DB_SYMB,  // base                    [DB_LOCK_READWRITE]
-              DB_SYMB   // closure error           [DB_LOCK_READWRITE]
+              DB,       // Database
+              DB_SYMB,  // Line                    [DB_LOCK_READONLY]
+              DB_SYMB,  // Date                    [DB_LOCK_READONLY]
+              DB_SYMB,  // Local time (on date)    [DB_LOCK_READONLY]
+              DB_SYMB,  // Reading                 [DB_LOCK_READONLY]
+              DB_SYMB,  // Base                    [DB_LOCK_READWRITE]
+              DB_SYMB   // Closure error           [DB_LOCK_READWRITE]
               );
 
 
@@ -1920,14 +1920,14 @@ GravDrift_DU (
 
 [_licensed] void
 GravTide_DU (
-             DB,       // database
-             DB_SYMB,  // line
-             DB_SYMB,  // lat  [DB_LOCK_READONLY]
-             DB_SYMB,  // long [DB_LOCK_READONLY]
-             DB_SYMB,  // date [DB_LOCK_READONLY]
-             DB_SYMB,  // local time (on date) [DB_LOCK_READONLY]
+             DB,       // Database
+             DB_SYMB,  // Line
+             DB_SYMB,  // Lat  [DB_LOCK_READONLY]
+             DB_SYMB,  // Long [DB_LOCK_READONLY]
+             DB_SYMB,  // Date [DB_LOCK_READONLY]
+             DB_SYMB,  // Local time (on date) [DB_LOCK_READONLY]
              real,     // GMT difference (added to time to give GMT)
-             DB_SYMB   // calculated tide [DB_LOCK_READWRITE]
+             DB_SYMB   // Calculated tide [DB_LOCK_READWRITE]
              );
 
 
@@ -1942,11 +1942,11 @@ GravTide_DU (
 [_licensed] void
 GridLoad_DU (
              DB,   // Database
-             IMG,  // grid img
+             IMG,  // Grid img
              int,  // X decimation factor
              int,  // Y decimation factor
              int,  // 0 trim leading/trailing dummies (default), 1 trim all dummies, 2 leave all dummies
-             int   // flag for creating index channel: 0 no (default), 1 yes.
+             int   // Flag for creating index channel: 0 no (default), 1 yes.
              );
 
 
@@ -1961,7 +1961,7 @@ GridLoad_DU (
 [_licensed] void
 GridLoadXYZ_DU (
                 DB,       // Database
-                IMG,      // grid img
+                IMG,      // Grid img
                 DB_SYMB,  // X Channel
                 DB_SYMB,  // Y Channel
                 DB_SYMB,  // Z Channel
@@ -1969,7 +1969,7 @@ GridLoadXYZ_DU (
                 int,      // X decimation factor
                 int,      // Y decimation factor
                 int,      // 0 trim leading/trailing dummies (default), 1 trim all dummies, 2 leave all dummies
-                int       // flag for creating index channel: 0 no (default), 1 yes.
+                int       // Flag for creating index channel: 0 no (default), 1 yes.
                 );
 
 
@@ -1990,12 +1990,12 @@ GridLoadXYZ_DU (
 
 [_licensed] void
 Head_DU (
-         DB,       // database object
-         DB_SYMB,  // line Symbol
-         DB_SYMB,  // channel to correct [DB_LOCK_READONLY]
-         DB_SYMB,  // corrected channel  [DB_LOCK_READWRITE]
-         TB,       // heading table
-         real      // line direction
+         DB,       // Database object
+         DB_SYMB,  // Line Symbol
+         DB_SYMB,  // Channel to correct [DB_LOCK_READONLY]
+         DB_SYMB,  // Corrected channel  [DB_LOCK_READWRITE]
+         TB,       // Heading table
+         real      // Line direction
          );
 
 
@@ -2019,8 +2019,8 @@ Head_DU (
 [_public] void
 IImportBIN3_DU (
                 DB,          // Database
-                string,      // import data file name
-                string,      // import template name
+                string,      // Import data file name
+                string,      // Import template name
                 var string,  // Optional Line name (on return, the actual line)
                 int,         // Buffer size for line name
                 int,         // Optional Flight number
@@ -2045,7 +2045,7 @@ IImportBIN3_DU (
 ImpCBPly_DU (
              DB,       // Database
              PJ,       // Projection Files Object
-             string,   // import data file name
+             string,   // Import data file name
              DB_SYMB,  // X channel handle
              DB_SYMB   // Y channel handle
              );
@@ -2073,9 +2073,9 @@ ImpCBPly_DU (
 [_public] void
 ImportADO_DU (
               DB,      // Database
-              string,  // import database connection string       (overrides template value)
-              string,  // imported table in database file (overrides template value)
-              string,  // import template name
+              string,  // Import database connection string       (overrides template value)
+              string,  // Imported table in database file (overrides template value)
+              string,  // Import template name
               string   // Oasis montaj line name to create (overrides template value)
               );
 
@@ -2105,7 +2105,7 @@ ImportADO_DU (
 [_public] void
 ImportAllADO_DU (
                  DB,      // Database
-                 string,  // import database connection string
+                 string,  // Import database connection string
                  int      // <define>DU_STORAGE</define>
                  );
 
@@ -2151,8 +2151,8 @@ ImportAllADO_DU (
 [_public] void
 ImportAllDAO_DU (
                  DB,      // Database
-                 string,  // import data file name
-                 string,  // database type
+                 string,  // Import data file name
+                 string,  // Database type
                  int      // <define>DU_STORAGE</define>
                  );
 
@@ -2193,9 +2193,9 @@ ImportAMIRA_DU (
 [_public] void
 ImportAseg_DU (
                DB,      // Database
-               string,  // template file name
-               string,  // header file name
-               string,  // data file name
+               string,  // Template file name
+               string,  // Header file name
+               string,  // Data file name
                string,  // Flight Line Channel name
                int      // Number of channels to import at one time
                );
@@ -2214,12 +2214,12 @@ ImportAseg_DU (
 [_public] void
 ImportAsegProj_DU (
                    DB,      // Database
-                   string,  // template file name
-                   string,  // header file name
-                   string,  // data file name
+                   string,  // Template file name
+                   string,  // Header file name
+                   string,  // Data file name
                    string,  // Flight Line Channel name
                    int,     // Number of channels to import at one time
-                   string,  // projection file name
+                   string,  // Projection file name
                    string,  // Channel pair to associate projection
                    string   // Channel pair to associate projection
                    );
@@ -2252,8 +2252,8 @@ ImportAsegProj_DU (
 [_public] void
 ImportBIN_DU (
               DB,      // Database
-              string,  // import data file name
-              string,  // import template name
+              string,  // Import data file name
+              string,  // Import template name
               string,  // Optional Line name (see note 3.)
               int,     // Optional Flight number
               real     // Optional date
@@ -2287,8 +2287,8 @@ ImportBIN_DU (
 [_public] void
 ImportBIN2_DU (
                DB,      // Database
-               string,  // import data file name
-               string,  // import template name
+               string,  // Import data file name
+               string,  // Import template name
                string,  // Optional Line name (see note 3.)
                int,     // Optional Flight number
                real,    // Optional date
@@ -2314,8 +2314,8 @@ ImportBIN2_DU (
 ImportBIN4_DU (
                DB,      // Database
                int,     // <define>DU_IMPORT</define>
-               string,  // import data file name
-               string,  // import template name
+               string,  // Import data file name
+               string,  // Import template name
                string,  // Optional Line name (see note 3.)
                int,     // Optional Flight number
                real,    // Optional date
@@ -2398,10 +2398,10 @@ ImportDAARC500SerialGPS_DU (
 [_public] void
 ImportDAO_DU (
               DB,      // Database
-              string,  // import database file name   (overrides template value)
-              string,  // import data file type       (overrides template value)
-              string,  // imported table in database file (overrides template value)
-              string,  // import template name
+              string,  // Import database file name   (overrides template value)
+              string,  // Import data file type       (overrides template value)
+              string,  // Imported table in database file (overrides template value)
+              string,  // Import template name
               string   // Oasis Montaj line name to create (overrides template value)
               );
 
@@ -2428,8 +2428,8 @@ ImportDAO_DU (
 [_public] void
 ImportESRI_DU (
                DB,      // Database
-               string,  // import database connection string (e.g. "d:\\Personal\\test.mdb|Table" or "d:\\File\\test.gdb|FeatureClass, overrides template value)
-               string,  // import template name
+               string,  // Import database connection string (e.g. "d:\\Personal\\test.mdb|Table" or "d:\\File\\test.gdb|FeatureClass, overrides template value)
+               string,  // Import template name
                string   // Oasis montaj line name to create (overrides template value)
                );
 
@@ -2475,8 +2475,8 @@ ImportODDF_DU (
 [_public] void
 ImportPico_DU (
                DB,      // Database
-               string,  // template file name
-               string,  // data file name
+               string,  // Template file name
+               string,  // Data file name
                int      // Number of channels to import at one time
                );
 
@@ -2539,8 +2539,8 @@ ImportUSGSPost_DU (
 ImportXYZ_DU (
               DB,      // Database
               int,     // <define>DU_IMPORT</define>
-              string,  // import data file name
-              string   // import template name
+              string,  // Import data file name
+              string   // Import template name
               );
 
 
@@ -2564,8 +2564,8 @@ ImportXYZ_DU (
 ImportXYZ2_DU (
                DB,      // Database
                int,     // <define>DU_IMPORT</define>
-               string,  // import data file name
-               string,  // import template name
+               string,  // Import data file name
+               string,  // Import template name
                WA       // WA
                );
 
@@ -2603,8 +2603,8 @@ ImportIoGAS_DU (
 IndexOrder_DU (
                DB,       // Database
                DB_SYMB,  // Line symbol
-               DB_SYMB,  // ordered index channel (should be int) [DB_LOCK_READONLY]
-               DB_SYMB   // channel to reorder [DB_LOCK_READWRITE]
+               DB_SYMB,  // Ordered index channel (should be int) [DB_LOCK_READONLY]
+               DB_SYMB   // Channel to reorder [DB_LOCK_READWRITE]
                );
 
 
@@ -2785,10 +2785,10 @@ IntersectTBLtoGDB_DU (
 
 [_public] void
 LabTemplate_DU (
-                string,  // data file name
-                string,  // new template name
+                string,  // Data file name
+                string,  // New template name
                 int,     // <define>DU_LAB_TYPE</define>
-                string,  // delimiter string
+                string,  // Delimiter string
                 int,     // Offset to column labels line (0 for first line)
                 int,     // Offset to unit labels line, -1 if none
                 int,     // Offset to first line that contains data
@@ -2834,10 +2834,10 @@ LabTemplate_DU (
 
 [_licensed] void
 LoadGravity_DU (
-                DB,       // database
+                DB,       // Database
                 REG,      // REG to hold constant data
-                DB_SYMB,  // line in which to load data
-                string    // gravity data file
+                DB_SYMB,  // Line in which to load data
+                string    // Gravity data file
                 );
 
 
@@ -2866,8 +2866,8 @@ LoadGravity_DU (
 [_licensed] void
 LoadLTB_DU (
             DB,       // Database
-            DB_SYMB,  // line
-            LTB,      // table
+            DB_SYMB,  // Line
+            LTB,      // Table
             int       // <define>DU_LOADLTB</define>
             );
 
@@ -2882,10 +2882,10 @@ LoadLTB_DU (
 
 [_public] void
 MakeFid_DU (
-            DB,       // database object
-            DB_SYMB,  // line Symbol
-            DB_SYMB,  // base channel [DB_LOCK_READONLY]
-            DB_SYMB   // new fiducial channel [DB_LOCK_READWRITE]
+            DB,       // Database object
+            DB_SYMB,  // Line Symbol
+            DB_SYMB,  // Base channel [DB_LOCK_READONLY]
+            DB_SYMB   // New fiducial channel [DB_LOCK_READWRITE]
             );
 
 
@@ -2933,8 +2933,8 @@ Mask_DU (
 [_licensed] void
 Math_DU (
          DB,       // Database
-         DB_SYMB,  // line handle
-         EXP       // math expression object (EXP)
+         DB_SYMB,  // Line handle
+         EXP       // Math expression object (EXP)
          );
 
 
@@ -2977,11 +2977,11 @@ MergeLine_DU (
 [_licensed] void
 ModFidRange_DU (
                 DB,       // Database
-                DB_SYMB,  // line
-                real,     // base fid start
-                real,     // base fid increment
-                int,      // start index (can be negative)
-                int,      // number of fids
+                DB_SYMB,  // Line
+                real,     // Base fid start
+                real,     // Base fid increment
+                int,      // Start index (can be negative)
+                int,      // Number of fids
                 int       // <define>DU_MODFID</define>
                 );
 
@@ -3358,13 +3358,13 @@ ReFidCh_DU (
 Rotate_DU (
            DB,       // Database
            DB_SYMB,  // Line symbol
-           DB_SYMB,  // input X channel [DB_LOCK_READONLY]
-           DB_SYMB,  // input Y channel [DB_LOCK_READONLY]
-           DB_SYMB,  // output X channel [DB_LOCK_READWRITE]
-           DB_SYMB,  // output Y channel [DB_LOCK_READWRITE]
+           DB_SYMB,  // Input X channel [DB_LOCK_READONLY]
+           DB_SYMB,  // Input Y channel [DB_LOCK_READONLY]
+           DB_SYMB,  // Output X channel [DB_LOCK_READWRITE]
+           DB_SYMB,  // Output Y channel [DB_LOCK_READWRITE]
            real,     // X point about which to rotate
            real,     // Y of point about which to rotate
-           real      // angle in degrees CCW
+           real      // Angle in degrees CCW
            );
 
 
@@ -3462,8 +3462,8 @@ ScanADO_DU (
 
 [_public] void
 ScanAseg_DU (
-             string,  // header file name
-             string,  // data file name
+             string,  // Header file name
+             string,  // Data file name
              string,  // Flight Line Channel name
              string   // Template file name to Create
              );
@@ -3518,7 +3518,7 @@ ScanPico_DU (
 Sort_DU (
          DB,       // Database
          DB_SYMB,  // Line symbol
-         DB_SYMB,  // channel to sort [DB_LOCK_READONLY]
+         DB_SYMB,  // Channel to sort [DB_LOCK_READONLY]
          int       // <define>DU_SORT</define>
          );
 
@@ -3535,8 +3535,8 @@ Sort_DU (
 SortIndex_DU (
               DB,       // Database
               DB_SYMB,  // Line symbol
-              DB_SYMB,  // channel to sort [DB_LOCK_READONLY]
-              DB_SYMB,  // output index channel (should be int) [DB_LOCK_READWRITE]
+              DB_SYMB,  // Channel to sort [DB_LOCK_READONLY]
+              DB_SYMB,  // Output index channel (should be int) [DB_LOCK_READWRITE]
               int       // <define>DU_SORT</define>
               );
 
@@ -3557,7 +3557,7 @@ SortIndex2_DU (
                int,      // <define>DU_SORT</define>
                DB_SYMB,  // Then by this channel [DB_LOCK_READONLY]
                int,      // <define>DU_SORT</define>
-               DB_SYMB   // output index channel (should be int) [DB_LOCK_READWRITE]
+               DB_SYMB   // Output index channel (should be int) [DB_LOCK_READWRITE]
                );
 
 
@@ -3939,9 +3939,9 @@ VoxelSection_DU (
 
 [_public] void
 WriteWA_DU (
-            DB,       // database
-            DB_SYMB,  // line symbol
-            LST,      // list of channel names to write
+            DB,       // Database
+            DB_SYMB,  // Line symbol
+            LST,      // List of channel names to write
             WA        // WA to write to
             );
 

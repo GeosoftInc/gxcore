@@ -71,8 +71,8 @@ DXF2ViewEx_DXFI (
                  MVIEW,   // MVIEW
                  int,     // User defined number of pens to use (can be iDUMMY)
                  int,     // TRUE to place entire DXF in one group
-                 string,  // group name for one group (can be "" if above is FALSE)
-                 int,     // TRUE to force one colour
+                 string,  // Group name for one group (can be "" if above is FALSE)
+                 int,     // TRUE to force one color
                  int      // <define>MVIEW_COLOR</define> (ignored if above is FALSE)
                  );
 

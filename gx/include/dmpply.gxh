@@ -38,8 +38,8 @@ _Clear_DMPPLY (
 
 [_licensed] void
 Copy_DMPPLY (
-             DMPPLY,  // destination
-             DMPPLY   // source
+             DMPPLY,  // Destination
+             DMPPLY   // Source
              );
 
 
@@ -85,7 +85,7 @@ Destroy_DMPPLY (
 [_licensed] void
 GetAzimuth_DMPPLY (
                    DMPPLY,    // DMPPLY object
-                   int,       // polygon number (1 to NP)
+                   int,       // Polygon number (1 to NP)
                    var real   // Azimuth (degrees) (o)
                    );
 
@@ -101,7 +101,7 @@ GetAzimuth_DMPPLY (
 [_licensed] void
 GetExtents_DMPPLY (
                    DMPPLY,    // DMPPLY object
-                   int,       // polygon number (1 to NP)
+                   int,       // Polygon number (1 to NP)
                    var real,  // Center point X (o)
                    var real,  // Center point Y (o)
                    var real,  // Center point Z (o)
@@ -125,7 +125,7 @@ GetExtents_DMPPLY (
 [_licensed] void
 GetJoins_DMPPLY (
                  DMPPLY,  // Datamine polygon Object
-                 int,     // polygon number (1 to N)
+                 int,     // Polygon number (1 to N)
                  VV       // INT VV of join indices (1 to NJoins).
                  );
 
@@ -147,7 +147,7 @@ GetJoins_DMPPLY (
 [_licensed] void
 GetNormalVectors_DMPPLY (
                          DMPPLY,    // DMPPLY object
-                         int,       // polygon number (1 to NP)
+                         int,       // Polygon number (1 to NP)
                          var real,  // X component (o) (Horizontal azimuth vector)
                          var real,  // Y component (o)
                          var real,  // Z component (o)
@@ -173,7 +173,7 @@ GetNormalVectors_DMPPLY (
 [_licensed] void
 GetPoly_DMPPLY (
                 DMPPLY,  // DMPPLY object
-                int,     // polygon number (1 to NP) (i)
+                int,     // Polygon number (1 to NP) (i)
                 VV,      // X Locations (o)
                 VV,      // Y Locations (o)
                 VV       // Z Locations (o)
@@ -195,7 +195,7 @@ GetPoly_DMPPLY (
 [_licensed] void
 GetSwing_DMPPLY (
                  DMPPLY,    // DMPPLY object
-                 int,       // polygon number (1 to NP)
+                 int,       // Polygon number (1 to NP)
                  var real   // Swing (degrees) (o)
                  );
 
@@ -211,8 +211,8 @@ GetSwing_DMPPLY (
 [_licensed] void
 GetVertex_DMPPLY (
                   DMPPLY,    // DMPPLY object
-                  int,       // polygon number (1 to NP)
-                  int,       // vertex number (1 to NV)
+                  int,       // Polygon number (1 to NP)
+                  int,       // Vertex number (1 to NV)
                   var real,  // X Location (o)
                   var real,  // Y Location (o)
                   var real   // Z Location (o)
@@ -264,7 +264,7 @@ iNumPolys_DMPPLY (
 [_licensed] int
 iNumVertices_DMPPLY (
                      DMPPLY,  // DMPPLY object
-                     int      // polygon number (1 to NP)
+                     int      // Polygon number (1 to NP)
                      );
 
 
@@ -294,11 +294,11 @@ Load_DMPPLY (
 [_licensed] void
 MoveVertex_DMPPLY (
                    DMPPLY,  // DMPPLY object
-                   int,     // polygon number (1 to NP)
-                   int,     // vertex number (1 to NV)
-                   real,    // new location X
-                   real,    // new location Y
-                   real     // new location Z
+                   int,     // Polygon number (1 to NP)
+                   int,     // Vertex number (1 to NV)
+                   real,    // New location X
+                   real,    // New location Y
+                   real     // New location Z
                    );
 
 
@@ -320,12 +320,12 @@ MoveVertex_DMPPLY (
 [_licensed] void
 ProjectPoly_DMPPLY (
                     DMPPLY,  // DMPPLY object
-                    int,     // polygon number (1 to NP)
+                    int,     // Polygon number (1 to NP)
                     real,    // X location of plane origin in 3D
                     real,    // Y location of plane origin in 3D
                     real,    // Z location of plane origin in 3D
-                    real,    // azimuth of the plane in degrees
-                    real,    // swing of the plane in degrees
+                    real,    // Azimuth of the plane in degrees
+                    real,    // Swing of the plane in degrees
                     VV,      // X (horizontal along-section locations on vertical plane  (o)
                     VV,      // Y (vertical locations on vertical plane  (o)
                     VV       // Z (horizontal distances perpendicular to the plane  (o)
@@ -348,11 +348,11 @@ ProjectPoly_DMPPLY (
 [_licensed] void
 ReProjectPoly_DMPPLY (
                       DMPPLY,  // DMPPLY object
-                      int,     // polygon number (1 to lNP) (i)
+                      int,     // Polygon number (1 to lNP) (i)
                       real,    // X location of plane origin in 3D (i)
                       real,    // Y location of plane origin in 3D (i)
                       real,    // Z location of plane origin in 3D (i)
-                      real,    // azimuth of the plane in degrees (i)
+                      real,    // Azimuth of the plane in degrees (i)
                       VV,      // X locations on vertical plane  (i)
                       VV,      // Y (actually Z) locations on vertical plane  (i)
                       VV,      // X Locations of polygon (o)
@@ -389,7 +389,7 @@ Save_DMPPLY (
 [_licensed] void
 SetPoly_DMPPLY (
                 DMPPLY,  // DMPPLY object
-                int,     // polygon number (1 to NP) (i)
+                int,     // Polygon number (1 to NP) (i)
                 VV,      // X Locations (i)
                 VV,      // Y Locations (i)
                 VV       // Z Locations (i)

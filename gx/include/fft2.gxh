@@ -57,7 +57,7 @@ Fft2In_FFT2 (
 
 [_extended] void
 FilterPG_FFT2 (
-               PG,      // pager obj
+               PG,      // Pager obj
                string,  // sConFil - FFT filter control file
                TR,      // TR obj
                real,    // rDx - X increment
@@ -188,7 +188,7 @@ TdXdY_FFT2 (
 
 [_extended] void
 TransPG_FFT2 (
-              PG,   // pager obj
+              PG,   // Pager obj
               int   // <define>FFT2_PG</define>
               );
 

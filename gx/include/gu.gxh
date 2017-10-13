@@ -151,11 +151,11 @@ DipoleMag_GU (
 
 [_licensed] void
 EMHalfSpaceInv_GU (
-                   real,  // coil spacing: error if == 0
-                   real,  // frequency
+                   real,  // Coil spacing: error if == 0
+                   real,  // Frequency
                    int,   // <define>EMLAY_GEOMETRY</define>
-                   real,  // fractional error in best fit resistivity
-                   real,  // don't invert values below this
+                   real,  // Fractional error in best fit resistivity
+                   real,  // Don't invert values below this
                    VV,    // Height above ground
                    VV,    // In-phase part (ppm)
                    VV,    // Quadrature part (ppm)
@@ -177,7 +177,7 @@ EMHalfSpaceInv_GU (
 [_licensed] void
 EMHalfSpaceVV_GU (
                   real,  // Coil separation
-                  real,  // frequency
+                  real,  // Frequency
                   int,   // <define>EMLAY_GEOMETRY</define>
                   VV,    // Input resistivity values
                   VV,    // Input height values
@@ -482,9 +482,9 @@ GravityStillReadingCorrection_GU (
 
 [_licensed] int
 iEMLayer_GU (
-             real,      // coil spacing, error if == 0
-             real,      // coil frequency
-             real,      // coil height above layer [0]
+             real,      // Coil spacing, error if == 0
+             real,      // Coil frequency
+             real,      // Coil height above layer [0]
              int,       // <define>EMLAY_GEOMETRY</define>
              int,       // Number of layers (including lower halfspace)
              VV,        // sNLayer-1 thicknesses  [0] to [sNLayer-2]
@@ -505,11 +505,11 @@ iEMLayer_GU (
 
 [_licensed] int
 iEMPlate_GU (
-             real,  // plate strike length (m)
+             real,  // Plate strike length (m)
              real,  // Plate dip length (m)
              real,  // Plate strike (degrees) from X axis
              real,  // Plate dip (degrees) from horizontal
-             real,  // plate plunge (degrees) from horizontal
+             real,  // Plate plunge (degrees) from horizontal
              real,  // Rx offset in X from Tx
              real,  // Rx offset in Y from Tx
              real,  // Rx offset in Z from Tx (+'ve down)
@@ -547,10 +547,10 @@ iEMPlate_GU (
 
 [_public] void
 IGenUXDetectSymbolsGroupName_GU (
-                                 string,      // input Targets database name
-                                 string,      // input Targets group (line) name
-                                 var string,  // output group name string
-                                 int          // output buffer lengths (maximum 32)
+                                 string,      // Input Targets database name
+                                 string,      // Input Targets group (line) name
+                                 var string,  // Output group name string
+                                 int          // Output buffer lengths (maximum 32)
                                  );
 
 #define GenUXDetectSymbolsGroupName_GU(A, B, C) IGenUXDetectSymbolsGroupName_GU(A, B, C, sizeof(C))
@@ -661,11 +661,11 @@ MaxwellPlateCorners_GU (
                         real,      // Top-center point, X
                         real,      // Top-center point, Y
                         real,      // Top-center point, Z
-                        real,      // dip
-                        real,      // dip-direction
-                        real,      // plunge
-                        real,      // length
-                        real,      // width (height)
+                        real,      // Dip
+                        real,      // Dip-direction
+                        real,      // Plunge
+                        real,      // Length
+                        real,      // Width (height)
                         var real,  // [returned] Corner 1 X
                         var real,  // [returned] Corner 1 Y
                         var real,  // [returned] Corner 1 Z

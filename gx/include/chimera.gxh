@@ -64,8 +64,8 @@ BarPlot_CHIMERA (
                  VV,      // X locations
                  VV,      // Y locations
                  VV,      // Data handles, stored as INT values
-                 VV,      // Colours
-                 int,     // Colour for edges
+                 VV,      // Colors
+                 int,     // Color for edges
                  int,     // Offset symbols (0: No, 1: Yes)
                  real,    // Offset symbol size
                  real     // Single bar width in data units.
@@ -200,16 +200,16 @@ DrawRectangleOffsetMarkers_CHIMERA (
 DuplicateChem_CHIMERA (
                        MVIEW,   // View
                        VV,      // Duplicate data
-                       int,     // log-transform: 0 - linear, 1 - log
+                       int,     // Log-transform: 0 - linear, 1 - log
                        real,    // Detect Limit
-                       int,     // number of old samples in the VV
-                       VV,      // tolerances (1-5 values)
+                       int,     // Number of old samples in the VV
+                       VV,      // Tolerances (1-5 values)
                        string,  // Title
                        string,  // Unit
                        real,    // X location (bottom left corner of graph)
                        real,    // Y location
-                       real,    // graph width
-                       real     // graph height
+                       real,    // Graph width
+                       real     // Graph height
                        );
 
 
@@ -228,10 +228,10 @@ DuplicateChemView_CHIMERA (
                            string,    // New group name
                            IPJ,       // IPJ
                            VV,        // Duplicate data
-                           int,       // log-transform: 0 - linear, 1 - log
+                           int,       // Log-transform: 0 - linear, 1 - log
                            real,      // Detect Limit
-                           int,       // number of old samples in the VV
-                           VV,        // tolerances (1-5 values)
+                           int,       // Number of old samples in the VV
+                           VV,        // Tolerances (1-5 values)
                            string,    // Title
                            string,    // Unit
                            VV,        // VV X
@@ -259,8 +259,8 @@ DuplicateChemView_CHIMERA (
 GetExpressionDataVV_CHIMERA (
                              DB,       // Database
                              DB_SYMB,  // Line to read
-                             string,   // geochem stage (just "raw data stage" for now).
-                             string,   // channel expression
+                             string,   // Geochem stage (just "raw data stage" for now).
+                             string,   // Channel expression
                              string,   // INI file name with required units (e.g. PARAMETER.CU="ppm") (optional)
                              VV        // Returned data
                              );
@@ -332,8 +332,8 @@ GetTransform_CHIMERA (
                       DB,        // DB handle
                       string,    // Channel name
                       int,       // Transform option: -1, 0, 1 or 2
-                      var int,   // returned transform used
-                      var real   // returned lambda value for option==2
+                      var int,   // Returned transform used
+                      var real   // Returned lambda value for option==2
                       );
 
 
@@ -352,12 +352,12 @@ GetTransform_CHIMERA (
 
 [_extended] int
 iIsAcquireChan_CHIMERA (
-                        string,      // string to test
-                        var string,  // returned channel name
-                        int,         // buffer size for channel name
-                        var string,  // returned units
-                        int,         // buffer size for units
-                        var real,    // units factor (e.g. ppm = 1.e-6)
+                        string,      // String to test
+                        var string,  // Returned channel name
+                        int,         // Buffer size for channel name
+                        var string,  // Returned units
+                        int,         // Buffer size for units
+                        var real,    // Buffer factor (e.g. ppm = 1.e-6)
                         var int      // <define>GEO_BOOL</define> is this an oxide?
                         );
 
@@ -377,7 +377,7 @@ iIsAcquireChan_CHIMERA (
 
 [_extended] int
 iIsElement_CHIMERA (
-                    string,  // string to test
+                    string,  // String to test
                     int      // <define>STR_CASE</define>
                     );
 
@@ -425,7 +425,7 @@ LaunchProbability_CHIMERA (
 //
 // Notes                   The scatter tool uses the following INI parameters
 //                         
-//                         SCATTER.STM       name of the scatter template,"none" for none
+//                         SCATTER.STM       name of the scatter template, "none" for none
 //                         SCATTER.STM_NAME  name of last template section, "" for none.
 //                         SCATTER.X         name of channel to display in X
 //                         SCATTER.Y         name of channel to display in Y
@@ -451,7 +451,7 @@ LaunchScatter_CHIMERA (
 //
 // Notes                   The Triplot tool uses the following INI parameters
 //                         
-//                         TRIPLOT.TTM       name of the triplot template,"none" for none
+//                         TRIPLOT.TTM       name of the triplot template, "none" for none
 //                         TRIPLOT.TTM_NAME  name of last template section, "" for none.
 //                         TRIPLOT.X         name of channel to display in X
 //                         TRIPLOT.Y         name of channel to display in Y
@@ -524,7 +524,7 @@ OrderedChannelLST_CHIMERA (
 //
 // Notes             The number of channels is taken from the Data handles VV.
 //                   The values in each data VV are summed and the pie arc is
-//                   is given by the percent contribution of each consituent.
+//                   is given by the percent contribution of each constituent.
 //                   See the note on offset symbols in RosePlot_CHIMERA
 //
 // Available         5.0.7
@@ -538,8 +538,8 @@ PiePlot_CHIMERA (
                  VV,      // X locations
                  VV,      // Y locations
                  VV,      // Data handles, stored as INT values
-                 VV,      // Colours
-                 int,     // Colour for edges
+                 VV,      // Colors
+                 int,     // Color for edges
                  int,     // Offset symbols (0: No, 1: Yes)
                  real,    // Offset symbol size
                  real     // Pie plot radius in data units.
@@ -566,8 +566,8 @@ PiePlot2_CHIMERA (
                   VV,      // X locations
                   VV,      // Y locations
                   VV,      // Data handles, stored as INT values
-                  VV,      // Colours
-                  int,     // Colour for edges
+                  VV,      // Colors
+                  int,     // Color for edges
                   int,     // Offset symbols (0: No, 1: Yes)
                   real,    // Offset symbol size
                   real,    // Pie plot radius in data units.
@@ -590,12 +590,12 @@ PiePlot2_CHIMERA (
 [_extended] void
 PlotStringClassifiedSymbolsLegendFromClassFile_CHIMERA (
                                                         MVIEW,   // Map view object
-                                                        string,  // title
-                                                        real,    // left side X location
-                                                        real,    // bottom Y bound
-                                                        real,    // top Y bound
+                                                        string,  // Title
+                                                        real,    // Left side X location
+                                                        real,    // Bottom Y bound
+                                                        real,    // Top Y bound
                                                         string,  // Class file name (TPAT)
-                                                        VV       // Class indices  (INT VV)
+                                                        VV       // Class indices (INT VV)
                                                         );
 
 
@@ -612,7 +612,7 @@ PlotStringClassifiedSymbolsLegendFromClassFile_CHIMERA (
 
 [_extended] real
 rAtomicWeight_CHIMERA (
-                       string   // element name (case insensitive)
+                       string   // Element name (case insensitive)
                        );
 
 
@@ -646,8 +646,8 @@ RosePlot_CHIMERA (
                   VV,      // X locations
                   VV,      // Y locations
                   VV,      // Data handles, stored as INT values
-                  VV,      // Colours
-                  int,     // Colour for edges
+                  VV,      // Colors
+                  int,     // Color for edges
                   int,     // Offset symbols (0: No, 1: Yes)
                   real     // Offset symbol size
                   );
@@ -673,8 +673,8 @@ RosePlot2_CHIMERA (
                    VV,      // X locations
                    VV,      // Y locations
                    VV,      // Data handles, stored as INT values
-                   VV,      // Colours
-                   int,     // Colour for edges
+                   VV,      // Colors
+                   int,     // Color for edges
                    int,     // Offset symbols (0: No, 1: Yes)
                    real,    // Offset symbol size
                    real     // Starting angle in degrees CCW from horizontal (rDUMMY gives 0.0)
@@ -700,14 +700,14 @@ Scatter2_CHIMERA (
                   string,  // Title
                   real,    // X location (bottom left corner of box)
                   real,    // Y location
-                  real,    // box width
-                  real,    // box height
+                  real,    // Box width
+                  real,    // Box height
                   VV,      // Horizontal channel
                   VV,      // Vertical channel
-                  string,  // decorated font name, "" for default symbol font (normally symbols.gfn)
+                  string,  // Decorated font name, "" for default symbol font (normally symbols.gfn)
                   VV,      // Symbol numbers
                   VV,      // Symbol sizes
-                  VV,      // Colours  if symbol number or colour == 0, do not plot
+                  VV,      // Colors  if symbol number or Color == 0, do not plot
                   int,     // Annotation style 0 - outside, 1 - inside
                   string,  // Horizontal channel name
                   string,  // Vertical channel name
@@ -725,16 +725,16 @@ Scatter2_CHIMERA (
                   int,     // Use Max Horz. Range selection?
                   int,     // Use Min Vert. Range selection?
                   int,     // Use Max Vert. Range selection?
-                  int,     // horizontal axis scaling: 0 - linear, 1 - log
-                  int      // vertical axis scaling
+                  int,     // Horizontal axis scaling: 0 - linear, 1 - log
+                  int      // Vertical axis scaling
                   );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // FixedSymbolScatterPlot_CHIMERA   
 //                                  Plot a scatter plot using a single fixed symbol.
-//                                  Optional data masking with masking colour.
-//                                  Optioinal database linking.
+//                                  Optional data masking with masking Color.
+//                                  Optional database linking.
 //                                  
 //
 // Returns                          Nothing
@@ -752,18 +752,18 @@ FixedSymbolScatterPlot_CHIMERA (
                                 string,  // Title
                                 real,    // X location (bottom left corner of box)
                                 real,    // Y location
-                                real,    // box width
-                                real,    // box height
+                                real,    // Box width
+                                real,    // Box height
                                 VV,      // Horizontal channel data
                                 VV,      // Vertical channel data
                                 VV,      // Mask channel data (can be NULL)
-                                int,     // Mask colour; overrides symbol colour where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
-                                string,  // decorated font name, "" for default symbol font (normally symbols.gfn)
+                                int,     // Mask Color; overrides symbol Color where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
+                                string,  // Decorated font name, "" for default symbol font (normally symbols.gfn)
                                 int,     // Symbol number (>=0)
                                 real,    // Symbol size ( >=0)
                                 real,    // Symbol angle (-360 to 360)
-                                int,     // Symbol colour
-                                int,     // Symbol fill colour
+                                int,     // Symbol Color
+                                int,     // Symbol fill Color
                                 DB,      // Database (source of data)
                                 VV,      // Line handles for data
                                 VV,      // Fid values for data
@@ -776,23 +776,23 @@ FixedSymbolScatterPlot_CHIMERA (
                                 real,    // Max. Horizontal value
                                 real,    // Min. Vertical value
                                 real,    // Max. Vertical value
-                                int,     // horizontal axis scaling: 0 - linear, 1 - log
-                                int,     // vertical axis scaling
-                                string   // plot overlay ("" for none)
+                                int,     // Horizontal axis scaling: 0 - linear, 1 - log
+                                int,     // Vertical axis scaling
+                                string   // Plot overlay ("" for none)
                                 );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // ZoneColouredScatterPlot_CHIMERA   
-//                                   Plot a scatter plot using colours based on a zone file.
-//                                   Optional data masking with masking colour.
-//                                   Optioinal database linking.
+//                                   Plot a scatter plot using colors based on a zone file.
+//                                   Optional data masking with masking color.
+//                                   Optional database linking.
 //                                   
 //
 // Returns                           Nothing
 //
 // Notes                             
-//                                   Plot a scatter plot using colours based on a zone file.
+//                                   Plot a scatter plot using colors based on a zone file.
 //                                   
 //
 // Available                         8.0.1
@@ -804,21 +804,21 @@ ZoneColouredScatterPlot_CHIMERA (
                                  string,  // Title
                                  real,    // X location (bottom left corner of box)
                                  real,    // Y location
-                                 real,    // box width
-                                 real,    // box height
+                                 real,    // Box width
+                                 real,    // Box height
                                  VV,      // Horizontal channel data
                                  VV,      // Vertical channel data
                                  VV,      // Mask channel data (can be NULL)
-                                 int,     // Mask colour; overrides symbol colour where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
+                                 int,     // Mask color; overrides symbol color where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
                                  VV,      // Zone channel data
                                  string,  // Zone file name
-                                 string,  // decorated font name, "" for default symbol font (normally symbols.gfn)
+                                 string,  // Decorated font name, "" for default symbol font (normally symbols.gfn)
                                  int,     // Symbol number (>=0)
                                  real,    // Symbol size ( >=0)
                                  real,    // Symbol angle (-360 to 360)
-                                 int,     // Symbol colour
-                                 int,     // Symbol fill colour
-                                 int,     // Fix symbol edge colour?
+                                 int,     // Symbol color
+                                 int,     // Symbol fill color
+                                 int,     // Fix symbol edge color?
                                  DB,      // Database (source of data)
                                  VV,      // Line handles for data
                                  VV,      // Fid values for data
@@ -831,17 +831,17 @@ ZoneColouredScatterPlot_CHIMERA (
                                  real,    // Max. Horizontal value
                                  real,    // Min. Vertical value
                                  real,    // Max. Vertical value
-                                 int,     // horizontal axis scaling: 0 - linear, 1 - log
-                                 int,     // vertical axis scaling
-                                 string   // plot overlay ("" for none)
+                                 int,     // Horizontal axis scaling: 0 - linear, 1 - log
+                                 int,     // Vertical axis scaling
+                                 string   // Plot overlay ("" for none)
                                  );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // StringClassifiedScatterPlot_CHIMERA   
 //                                       Plot a scatter plot using symbols based on a symbol class file.
-//                                       Optional data masking with masking colour.
-//                                       Optioinal database linking.
+//                                       Optional data masking with masking color.
+//                                       Optional database linking.
 //                                       
 //
 // Returns                               Nothing
@@ -859,12 +859,12 @@ StringClassifiedScatterPlot_CHIMERA (
                                      string,  // Title
                                      real,    // X location (bottom left corner of box)
                                      real,    // Y location
-                                     real,    // box width
-                                     real,    // box height
+                                     real,    // Box width
+                                     real,    // Box height
                                      VV,      // Horizontal channel data
                                      VV,      // Vertical channel data
                                      VV,      // Mask channel data
-                                     int,     // Mask colour; overrides symbol colour. Set to iColor_MVIEW("") to not plot.
+                                     int,     // Mask color; overrides symbol color. Set to iColor_MVIEW("") to not plot.
                                      VV,      // Class channel data
                                      string,  // Class file (TPAT) name.
                                      real,    // Symbol size override. Set to 0.0 to use class file symbol sizes.
@@ -880,9 +880,9 @@ StringClassifiedScatterPlot_CHIMERA (
                                      real,    // Max. Horizontal value
                                      real,    // Min. Vertical value
                                      real,    // Max. Vertical value
-                                     int,     // horizontal axis scaling: 0 - linear, 1 - log
-                                     int,     // vertical axis scaling
-                                     string   // plot overlay ("" for none)
+                                     int,     // Horizontal axis scaling: 0 - linear, 1 - log
+                                     int,     // Vertical axis scaling
+                                     string   // Plot overlay ("" for none)
                                      );
 
 
@@ -924,7 +924,7 @@ SetLithogeochemData_CHIMERA (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// StackedBarPlot_CHIMERA   Plot a Bar plot of up to 8 channels, bars stacked on each other
+// StackedBarPlot_CHIMERA   Plot a Bar plot of up to 8 channels, bars stacked on each other.
 //
 // Returns                  Nothing
 //
@@ -943,8 +943,8 @@ StackedBarPlot_CHIMERA (
                         VV,      // X locations
                         VV,      // Y locations
                         VV,      // Data handles, stored as INT values
-                        VV,      // Colours
-                        int,     // Colour for edges
+                        VV,      // Colors
+                        int,     // Color for edges
                         int,     // Offset symbols (0: No, 1: Yes)
                         real,    // Offset symbol size
                         real     // Single bar width in data units.
@@ -965,17 +965,17 @@ StackedBarPlot_CHIMERA (
 [_extended] void
 Standard_CHIMERA (
                   MVIEW,   // View
-                  VV,      // standard data
-                  int,     // number of old samples in the VV
-                  real,    // tolerance as a function of std dev
-                  real,    // minimum acceptable value
-                  real,    // maximum acceptable value
+                  VV,      // Standard data
+                  int,     // Number of old samples in the VV
+                  real,    // Tolerance as a function of std dev
+                  real,    // Minimum acceptable value
+                  real,    // Maximum acceptable value
                   string,  // Title
                   string,  // Unit
                   real,    // X location (bottom left corner of graph)
                   real,    // Y location
-                  real,    // graph width
-                  real     // graph height
+                  real,    // Graph width
+                  real     // Graph height
                   );
 
 
@@ -995,11 +995,11 @@ StandardView_CHIMERA (
                       string,    // New view name
                       string,    // New group name
                       IPJ,       // IPJ
-                      VV,        // standard data (VV Y)
-                      int,       // number of old samples in the VV
-                      real,      // tolerance as a function of std dev
-                      real,      // minimum acceptable value
-                      real,      // maximum acceptable value
+                      VV,        // Standard data (VV Y)
+                      int,       // Number of old samples in the VV
+                      real,      // Tolerance as a function of std dev
+                      real,      // Minimum acceptable value
+                      real,      // Maximum acceptable value
                       string,    // Title
                       string,    // Unit
                       real,      // Size X
@@ -1032,16 +1032,16 @@ TriPlot2_CHIMERA (
                   string,  // Title
                   real,    // X location (bottom left corner of box)
                   real,    // Y location
-                  real,    // box width
-                  real,    // box height
+                  real,    // Box width
+                  real,    // Box height
                   VV,      // X channel
                   VV,      // Y channel
                   VV,      // Z channel
                   VV,      // Mask channel
-                  string,  // decorated font name, "" for default symbol font (normally symbols.gfn)
+                  string,  // Decorated font name, "" for default symbol font (normally symbols.gfn)
                   VV,      // Symbol numbers
                   VV,      // Symbol sizes
-                  VV,      // Colours  if symbol number or colour == 0, do not plot
+                  VV,      // Colors  if symbol number or color == 0, do not plot
                   string,  // X channel name
                   string,  // Y channel name
                   string,  // Z channel name
@@ -1066,8 +1066,8 @@ TriPlot2_CHIMERA (
 //-----------------------------------------------------------------------------------------------------------
 // FixedSymbolTriPlot_CHIMERA   
 //                              Plot a tri-plot using a single fixed symbol.
-//                              Optional data masking with masking colour.
-//                              Optioinal database linking.
+//                              Optional data masking with masking color.
+//                              Optional database linking.
 //                              
 //
 // Returns                      Nothing
@@ -1090,13 +1090,13 @@ FixedSymbolTriPlot_CHIMERA (
                             VV,      // Y channel data
                             VV,      // Z channel data
                             VV,      // Mask channel data
-                            int,     // Mask colour; overrides symbol colour where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
-                            string,  // decorated font name, "" for default symbol font (normally symbols.gfn)
+                            int,     // Mask color; overrides symbol color where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
+                            string,  // Decorated font name, "" for default symbol font (normally symbols.gfn)
                             int,     // Symbol number (>=0)
                             real,    // Symbol size ( >=0)
                             real,    // Symbol angle (-360 to 360)
-                            int,     // Symbol colour
-                            int,     // Symbol fill colour
+                            int,     // Symbol color
+                            int,     // Symbol fill color
                             DB,      // Database (source of data)
                             VV,      // Line handles for data
                             VV,      // Fid values for data
@@ -1106,21 +1106,21 @@ FixedSymbolTriPlot_CHIMERA (
                             int,     // Plot Grid lines? (0: Just outside edge tics, 1: Grid lines).
                             real,    // Tic Increment (in percent)
                             real,    // Grid increment (in percent)
-                            string   // plot overlay ("" for none)
+                            string   // Plot overlay ("" for none)
                             );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // ZoneColouredTriPlot_CHIMERA   
-//                               Plot a tri-plot using colours based on a zone file.
-//                               Optional data masking with masking colour.
-//                               Optioinal database linking.
+//                               Plot a tri-plot using colors based on a zone file.
+//                               Optional data masking with masking color.
+//                               Optional database linking.
 //                               
 //
 // Returns                       Nothing
 //
 // Notes                         
-//                               Plot a tri plot using colours based on a zone file.
+//                               Plot a tri plot using colors based on a zone file.
 //                               
 //
 // Available                     8.0.1
@@ -1137,16 +1137,16 @@ ZoneColouredTriPlot_CHIMERA (
                              VV,      // Y channel data
                              VV,      // Z channel data
                              VV,      // Mask channel data
-                             int,     // Mask colour; overrides symbol colour where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
+                             int,     // Mask color; overrides symbol color where mask data is not dummy. Set to iColor_MVIEW("") to not plot.
                              VV,      // Zone channel data
                              string,  // Zone file name
-                             string,  // decorated font name, "" for default symbol font (normally symbols.gfn)
+                             string,  // Decorated font name, "" for default symbol font (normally symbols.gfn)
                              int,     // Symbol number (>=0)
                              real,    // Symbol size ( >=0)
                              real,    // Symbol angle (-360 to 360)
-                             int,     // Symbol colour
-                             int,     // Symbol fill colour
-                             int,     // Fix symbol edge colour?
+                             int,     // Symbol color
+                             int,     // Symbol fill color
+                             int,     // Fix symbol edge color?
                              DB,      // Database (source of data)
                              VV,      // Line handles for data
                              VV,      // Fid values for data
@@ -1156,15 +1156,15 @@ ZoneColouredTriPlot_CHIMERA (
                              int,     // Plot Grid lines? (0: Just outside edge tics, 1: Grid lines).
                              real,    // Tic Increment (in percent)
                              real,    // Grid increment (in percent)
-                             string   // plot overlay ("" for none)
+                             string   // Plot overlay ("" for none)
                              );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // StringClassifiedTriPlot_CHIMERA   
 //                                   Plot a tri-plot using symbols based on a symbol class file.
-//                                   Optional data masking with masking colour.
-//                                   Optioinal database linking.
+//                                   Optional data masking with masking color.
+//                                   Optional database linking.
 //                                   
 //
 // Returns                           Nothing
@@ -1187,7 +1187,7 @@ StringClassifiedTriPlot_CHIMERA (
                                  VV,      // Y channel data
                                  VV,      // Z channel data
                                  VV,      // Mask channel data
-                                 int,     // Mask colour; overrides symbol colour. Set to iColor_MVIEW("") to not plot.
+                                 int,     // Mask color; overrides symbol color. Set to iColor_MVIEW("") to not plot.
                                  VV,      // Class channel data
                                  string,  // Class file (TPAT) name.
                                  real,    // Symbol size override. Set to 0.0 to use class file symbol sizes.
@@ -1200,7 +1200,7 @@ StringClassifiedTriPlot_CHIMERA (
                                  int,     // Plot Grid lines? (0: Just outside edge tics, 1: Grid lines).
                                  real,    // Tic Increment (in percent)
                                  real,    // Grid increment (in percent)
-                                 string   // plot overlay ("" for none)
+                                 string   // Plot overlay ("" for none)
                                  );
 
 

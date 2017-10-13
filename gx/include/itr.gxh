@@ -7,7 +7,7 @@
 //
 // 
 // The ITR class provides access to ITR files. An ITR file maps
-// ranges of values to specific colours. The ITR object is typically
+// ranges of values to specific colors. The ITR object is typically
 // used in conjunction with MVIEW objects (see MVIEW and MVU).
 // 
 //
@@ -16,22 +16,22 @@
 // Notes
 //
 // 
-// Histogram ranges and colour zone ranges
+// Histogram ranges and color zone ranges
 // 
 // Histogram bins are defined with inclusive minima and exclusive maxima;
 // for instance if Min = 0 and Inc = 1, then the second bin would include
 // all values z such that  0 <= z < 1 (the first bin has all values < 0).
 // 
-// Colour zones used in displaying grids (ITR, ZON etc...) are the
+// Color zones used in displaying grids (ITR, ZON etc...) are the
 // opposite, with exclusive minima and inclusive maxima.
 // For instance, if a zone is defined from 0 to 1, then it would
 // contain all values of z such that 0 < z <= 1.
 // 
 // These definitions mean that it is impossible to perfectly assign
-// ITR colours to individual bars of a histogram. The best work-around
-// when the data values are integers is to define the colour zones using
+// ITR colors to individual bars of a histogram. The best work-around
+// when the data values are integers is to define the color zones using
 // 0.5 values between the integers. A general work-around is to make the
-// number of histogram bins much larger than the number of colour zones.
+// number of histogram bins much larger than the number of color zones.
 // 
 // The <define>ITR_NULL</define> is used to hold a NULL handle to an ITR class.
 // 
@@ -64,7 +64,7 @@
 //
 // Define	ITR_NULL
 //
-// Null ITR Object
+// Null ITR object
 //
 // ITR_NULL
 //
@@ -141,8 +141,8 @@
 //
 // Notes                  
 //                        0.0 brightness does nothing.
-//                        -1.0 to 0.0 makes colours darker, -1.0 is black
-//                        0.0 to 1.0 makes colours lighter, 1.0 is white
+//                        -1.0 to 0.0 makes colors darker, -1.0 is black
+//                        0.0 to 1.0 makes colors lighter, 1.0 is white
 //                        
 //
 // Available              5.0.0
@@ -161,8 +161,8 @@ ChangeBrightness_ITR (
 // Returns       Nothing
 //
 // Notes         
-//               If the input value is a dummy, then the output colour
-//               is 0 (no colour).
+//               If the input value is a dummy, then the output color
+//               is 0 (no color).
 //               
 //
 // Available     5.1.6
@@ -172,7 +172,7 @@ ChangeBrightness_ITR (
 ColorVV_ITR (
              ITR,  // ITR
              VV,   // Input VV of values (none-string)
-             VV    // Output VV of colours (type INT)
+             VV    // Output VV of colors (type INT)
              );
 
 
@@ -192,9 +192,9 @@ Copy_ITR (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// Create_ITR   Create an ITR Object
+// Create_ITR   Create an ITR object
 //
-// Returns      ITR Object
+// Returns      ITR object
 //
 // Available    5.0.0
 //
@@ -205,23 +205,23 @@ Create_ITR (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// CreateFile_ITR   Create an ITR Object from an itr, tbl, zon, lut file.
+// CreateFile_ITR   Create an ITR object from an itr, tbl, zon, lut file.
 //
-// Returns          ITR Object
+// Returns          ITR object
 //
 // Available        5.0.0
 //
 
 [_public] ITR
 CreateFile_ITR (
-                string   // file name, type determined from extension
+                string   // File name, type determined from extension
                 );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // CreateIMG_ITR   Create an ITR for an image.
 //
-// Returns         ITR Object
+// Returns         ITR object
 //
 // Notes           
 //                 The ITR_ZONE_DEFAULT model will ask the IMG to provide
@@ -239,16 +239,16 @@ CreateFile_ITR (
 [_public] ITR
 CreateIMG_ITR (
                IMG,
-               string,  // colour table name, NULL for default
+               string,  // Color table name, NULL for default
                int,     // <define>ITR_ZONE</define>
-               real     // colour contour interval or rDUMMY
+               real     // Color contour interval or rDUMMY
                );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// CreateMap_ITR   Create ITR from Map with Agg Group name.
+// CreateMap_ITR   Create ITR from Map with AGG Group name.
 //
-// Returns         ITR Object
+// Returns         ITR object
 //
 // Available       5.0.0
 //
@@ -256,14 +256,14 @@ CreateIMG_ITR (
 [_public] ITR
 CreateMap_ITR (
                MAP,     // MAP on which to place the view
-               string   // Agg Group name
+               string   // AGG Group name
                );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// CreateS_ITR   Create an ITR Object from a BF
+// CreateS_ITR   Create an ITR object from a BF
 //
-// Returns       ITR Object
+// Returns       ITR object
 //
 // Available     5.0.0
 //
@@ -300,7 +300,7 @@ Destroy_ITR (
 EqualArea_ITR (
                ITR,   // ITR object
                ST,    // Stat object with a histogram
-               real   // colour contour interval or dummy for none
+               real   // Color contour interval or dummy for none
                );
 
 
@@ -344,7 +344,7 @@ GetREG_ITR (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// GetZoneColor_ITR   Get the colour in a zone of the ITR
+// GetZoneColor_ITR   Get the color in a zone of the ITR
 //
 // Returns            Nothing
 //
@@ -355,7 +355,7 @@ GetREG_ITR (
 
 [_public] void
 GetZoneColor_ITR (
-                  ITR,      // ITR Object
+                  ITR,      // ITR object
                   int,      // Number of the zone to set.
                   var int   // <define>MVIEW_COLOR</define>
                   );
@@ -386,7 +386,7 @@ iColorValue_ITR (
 
 [_public] int
 iGetSize_ITR (
-              ITR   // The ITR Object
+              ITR   // The ITR object
               );
 
 
@@ -396,7 +396,7 @@ iGetSize_ITR (
 // Returns                 <define>ITR_ZONE_MODEL</define>
 //
 // Notes                   
-//                         This function may be used to determine if a colour
+//                         This function may be used to determine if a color
 //                         transform is included in an ITR.
 //                         
 //
@@ -420,9 +420,9 @@ iGetZoneModelType_ITR (
 [_public] void
 Linear_ITR (
             ITR,   // ITR object
-            real,  // minimum
-            real,  // maximum
-            real   // colour contour interval or dummy for none
+            real,  // Minimum
+            real,  // Maximum
+            real   // Color contour interval or dummy for none
             );
 
 
@@ -437,7 +437,7 @@ Linear_ITR (
 [_public] void
 LoadA_ITR (
            ITR,     // ITR
-           string   // file name
+           string   // File name
            );
 
 
@@ -454,9 +454,9 @@ LoadA_ITR (
 [_public] void
 LogLinear_ITR (
                ITR,   // ITR object
-               real,  // minimum ( > 0)
-               real,  // maximum ( > minimum)
-               real   // colour contour interval or dummy for none
+               real,  // Minimum ( > 0)
+               real,  // Maximum ( > minimum)
+               real   // Color contour interval or dummy for none
                );
 
 
@@ -472,9 +472,9 @@ LogLinear_ITR (
 Normal_ITR (
             ITR,   // ITR object
             real,  // Standard deviation
-            real,  // mean
-            real,  // expansion, normally 1.0
-            real   // colour contour interval or dummy for none
+            real,  // Mean
+            real,  // Expansion, normally 1.0
+            real   // Color contour interval or dummy for none
             );
 
 
@@ -500,7 +500,7 @@ PowerZone_ITR (
 //
 // Notes                
 //                      Brightness can range from -1.0 (black) to 1.0 (white).
-//                      This brightness control is relative to the normal colour
+//                      This brightness control is relative to the normal color
 //                      when the ITR is created.
 //                      
 //
@@ -527,7 +527,7 @@ rGetBrightness_ITR (
 
 [_public] real
 rGetZoneValue_ITR (
-                   ITR,  // ITR Object
+                   ITR,  // ITR object
                    int   // Number of the zone to set.
                    );
 
@@ -543,7 +543,7 @@ rGetZoneValue_ITR (
 [_public] void
 SaveA_ITR (
            ITR,     // ITR
-           string   // file name
+           string   // File name
            );
 
 
@@ -558,7 +558,7 @@ SaveA_ITR (
 [_public] void
 SaveFile_ITR (
               ITR,     // ITR
-              string   // file name
+              string   // File name
               );
 
 
@@ -578,7 +578,7 @@ Serial_ITR (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetAggMap_ITR   Set ITR to an Agg in map
+// SetAggMap_ITR   Set ITR to an AGG in map
 //
 // Returns         Nothing
 //
@@ -590,13 +590,13 @@ Serial_ITR (
 [_public] void
 SetAggMap_ITR (
                MAP,     // MAP on which to place the view
-               string,  // Agg group name
+               string,  // AGG group name
                ITR      // ITR object to set
                );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetBrightContrast_ITR   Set the brightness of the ITR colours
+// SetBrightContrast_ITR   Set the brightness of the ITR colors
 //
 // Returns                 Nothing
 //
@@ -632,7 +632,7 @@ SetBrightContrast_ITR (
 
 [_public] void
 SetColorModel_ITR (
-                   ITR,  // ITR Object
+                   ITR,  // ITR object
                    int   // <define>ITR_COLOR_MODEL</define>
                    );
 
@@ -663,13 +663,13 @@ SetDataLimits_ITR (
 
 [_public] void
 SetSize_ITR (
-             ITR,  // ITR Object
+             ITR,  // ITR object
              int   // Number of zones to set ITR to.
              );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetZoneColor_ITR   Set the colour in a zone of the ITR
+// SetZoneColor_ITR   Set the color in a zone of the ITR
 //
 // Returns            Nothing
 //
@@ -680,7 +680,7 @@ SetSize_ITR (
 
 [_public] void
 SetZoneColor_ITR (
-                  ITR,  // ITR Object
+                  ITR,  // ITR object
                   int,  // Number of the zone to set.
                   int   // <define>MVIEW_COLOR</define>
                   );
@@ -698,7 +698,7 @@ SetZoneColor_ITR (
 
 [_public] void
 SetZoneValue_ITR (
-                  ITR,   // ITR Object
+                  ITR,   // ITR object
                   int,   // Number of the zone to set.
                   real   // The value to set
                   );

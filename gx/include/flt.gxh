@@ -15,7 +15,7 @@
 #define FLT_GXH_DEFINED
 
 //-----------------------------------------------------------------------------------------------------------
-// Create_FLT   create a filter from a comma/space delimited string.
+// Create_FLT   Create a filter from a comma/space delimited string.
 //
 // Returns      FLT Object
 //

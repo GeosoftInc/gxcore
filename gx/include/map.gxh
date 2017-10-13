@@ -200,7 +200,7 @@
 [_public] void
 AGGList_MAP (
              MAP,  // MAP Handle
-             LST,  // list to hold the views (allow up to 96 characters)
+             LST,  // List to hold the views (allow up to 96 characters)
              int   // 0 - view/agg only 1 - view/agg/layer
              );
 
@@ -223,7 +223,7 @@ AGGList_MAP (
 [_public] void
 AGGListEx_MAP (
                MAP,  // MAP Handle
-               LST,  // list to hold the views (allow up to 96 characters)
+               LST,  // List to hold the views (allow up to 96 characters)
                int,  // 0 - view/agg only 1 - view/agg/layer
                int   // <define>MAP_LIST_MODE</define>
                );
@@ -482,7 +482,7 @@ GetREG_MAP (
 [_public] void
 GroupList_MAP (
                MAP,  // MAP Handle
-               LST   // list to hold the view/groups.  Names may be up to 2080 characters in length.
+               LST   // List to hold the view/groups.  Names may be up to 2080 characters in length.
                );
 
 
@@ -499,7 +499,7 @@ GroupList_MAP (
 [_public] void
 GroupListEx_MAP (
                  MAP,  // MAP Handle
-                 LST,  // list to hold the views.  View names may be up to 2080 characters in length.
+                 LST,  // List to hold the views.  View names may be up to 2080 characters in length.
                  int   // <define>MAP_LIST_MODE</define>
                  );
 
@@ -567,9 +567,9 @@ iExistView_MAP (
 [_public] void
 IGetClassName_MAP (
                    MAP,         // MAP handle
-                   string,      // class
-                   var string,  // name
-                   int          // maximum name length
+                   string,      // Class
+                   var string,  // Name
+                   int          // Maximum name length
                    );
 
 #define GetClassName_MAP(A, B, C) IGetClassName_MAP(A, B, C, sizeof(C))
@@ -586,8 +586,8 @@ IGetClassName_MAP (
 [_public] void
 IGetFileName_MAP (
                   MAP,         // MAP Handle
-                  var string,  // returned map file name
-                  int          // size of map name string
+                  var string,  // Returned map file name
+                  int          // Size of map name string
                   );
 
 #define GetFileName_MAP(A, B) IGetFileName_MAP(A, B, sizeof(B))
@@ -604,8 +604,8 @@ IGetFileName_MAP (
 [_public] void
 IGetMapName_MAP (
                  MAP,         // MAP Handle
-                 var string,  // returned map name
-                 int          // size of map name string
+                 var string,  // Returned map name
+                 int          // Size of map name string
                  );
 
 #define GetMapName_MAP(A, B) IGetMapName_MAP(A, B, sizeof(B))
@@ -804,8 +804,8 @@ SaveAsMXD_MAP (
 [_public] void
 SetClassName_MAP (
                   MAP,     // MAP handle
-                  string,  // class
-                  string   // name
+                  string,  // Class
+                  string   // Name
                   );
 
 
@@ -854,7 +854,7 @@ SetMapName_MAP (
 [_public] void
 SetMapScale_MAP (
                  MAP,   // MAP object
-                 real   // new map scale (must be > 0).
+                 real   // New map scale (must be > 0).
                  );
 
 
@@ -956,7 +956,7 @@ UnPackFiles_MAP (
 [_public] void
 ViewList_MAP (
               MAP,  // MAP Handle
-              LST   // list to hold the views.  View names may be up to 2080 characters in length.
+              LST   // List to hold the views.  View names may be up to 2080 characters in length.
               );
 
 
@@ -971,7 +971,7 @@ ViewList_MAP (
 [_public] void
 ViewListEx_MAP (
                 MAP,  // MAP Handle
-                LST,  // list to hold the views.  View names may be up to 2080 characters in length.
+                LST,  // List to hold the views.  View names may be up to 2080 characters in length.
                 int   // <define>MAP_LIST_MODE</define>
                 );
 
@@ -1124,7 +1124,7 @@ RenderBitmap_MAP (
 //-----------------------------------------------------------------------------------------------------------
 // CreateLinked3DView_MAP   Create a 3D View in this map that is linked to a MVIEW in a 3D View file.
 //
-// Returns                  nothing
+// Returns                  Nothing
 //
 // Available                9.2.0
 //

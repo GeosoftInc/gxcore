@@ -590,7 +590,7 @@ GetTopoLine_IP (
 iGetChanDomain_IP (
                    IP,      // IP Object
                    DB,      // Database
-                   string   // channel to check
+                   string   // Channel to check
                    );
 
 
@@ -626,7 +626,7 @@ IGetChanLabel_IP (
 GetChannelInfo_IP (
                    IP,        // IP Object
                    DB,        // Database
-                   string,    // channel to check
+                   string,    // Channel to check
                    var int,   // <define>IP_DOMAIN</define>
                    var real,  // Delay or Base Frequency
                    var int,   // Number of time windows or frequencies
@@ -646,7 +646,7 @@ GetChannelInfo_IP (
 SetChannelInfo_IP (
                    IP,      // IP Object
                    DB,      // Database
-                   string,  // channel to check
+                   string,  // Channel to check
                    int,     // <define>IP_DOMAIN</define>
                    real,    // Delay or Base Frequency
                    int,     // Number of time windows or frequencies
@@ -985,8 +985,8 @@ PseudoPlot_IP (
                IP,      // IP object
                DB,      // Database
                string,  // "IPPLOT" INI file name
-               string,  // current line name
-               string   // map name to create
+               string,  // Current line name
+               string   // Map name to create
                );
 
 
@@ -1006,9 +1006,9 @@ PseudoPlot2_IP (
                 IP,      // IP object
                 DB,      // Database
                 string,  // "IPPLOT" INI file name
-                string,  // current line name
-                string,  // tag for created grids
-                string   // map name to create
+                string,  // Current line name
+                string,  // Tag for created grids
+                string   // Map name to create
                 );
 
 
@@ -1028,10 +1028,10 @@ PseudoPlot2Dir_IP (
                    IP,      // IP object
                    DB,      // Database
                    string,  // "IPPLOT" INI file name
-                   string,  // current line name
-                   string,  // tag for created grids
-                   string,  // map name to create
-                   string   // directory to create files
+                   string,  // Current line name
+                   string,  // Tag for created grids
+                   string,  // Map name to create
+                   string   // Directory to create files
                    );
 
 
@@ -1050,9 +1050,9 @@ PseudoPlot2Dir_IP (
 PSStack_IP (
             IP,      // IP object
             DB,      // DB object
-            string,  // channel to plot
+            string,  // Channel to plot
             string,  // "IPPLOT" INI file name
-            string   // map name to create
+            string   // Map name to create
             );
 
 
@@ -1068,10 +1068,10 @@ PSStack_IP (
 PSStack2_IP (
              IP,      // IP object
              DB,      // DB object
-             string,  // channel to plot
+             string,  // Channel to plot
              string,  // "IPPLOT" INI file name
              int,     // <define>IP_STACK_TYPE</define>
-             string   // map name to create
+             string   // Map name to create
              );
 
 
@@ -1087,11 +1087,11 @@ PSStack2_IP (
 PSStack2Dir_IP (
                 IP,      // IP object
                 DB,      // DB object
-                string,  // channel to plot
+                string,  // Channel to plot
                 string,  // "IPPLOT" INI file name
                 int,     // <define>IP_STACK_TYPE</define>
-                string,  // map name to create
-                string   // directory to create files
+                string,  // Map name to create
+                string   // Directory to create files
                 );
 
 
@@ -1465,8 +1465,8 @@ SetElectrodeMaskValuesSingleQCChannel_IP (
 GetQCChannel_IP (
                  DB,          // DB object
                  int,         // QC channel type.  <define>IP_QCTYPE</define>
-                 var string,  // string to place name into
-                 int          // maximum length of string, should be <define>DB_SYMB_NAME_SIZE</define> to hold all possible channel names.
+                 var string,  // String to place name into
+                 int          // Maximum length of string, should be <define>DB_SYMB_NAME_SIZE</define> to hold all possible channel names.
                  );
 
 #define _GetQCChannel_IP(A, B, C) GetQCChannel_IP(A, B, C, sizeof(C))
@@ -1543,7 +1543,7 @@ ExportUBCIP3_IP (
                  string,  // Output error channel name ("" for none)
                  string,  // Output OBS file name
                  string,  // Output TOPO file name
-                 real     // version number (3 or 5)
+                 real     // Version number (3 or 5)
                  );
 
 
@@ -1568,13 +1568,13 @@ ExportUBCIPControl_IP (
                        int,     // irest
                        real,    // chifact
                        string,  // IP obs file
-                       string,  // conductivity file
-                       string,  // mesh file
-                       string,  // topography file
-                       string,  // initial model file
-                       string,  // reference model
-                       string,  // alphas
-                       string   // weights file
+                       string,  // Conductivity file
+                       string,  // Mesh file
+                       string,  // Topography file
+                       string,  // Initial model file
+                       string,  // Reference model
+                       string,  // Alphas
+                       string   // Weights file
                        );
 
 
@@ -1596,18 +1596,18 @@ ExportUBCIPControlV5_IP (
                          int,     // niter
                          real,    // chifact
                          string,  // RES obs file
-                         string,  // topography file (required)
+                         string,  // Topography file (required)
                          int,     // Conductivity type <define>IP_UBC_CONTROL</define> FILE or VALUE
                          string,  // Conductivity file (can be "") or value
                          int,     // Mesh type <define>IP_UBC_CONTROL</define> FILE, VALUE or DEFAULT
-                         string,  // mesh file (can be "") or value
+                         string,  // Mesh file (can be "") or value
                          int,     // Initial model type <define>IP_UBC_CONTROL</define> FILE, VALUE or DEFAULT
-                         string,  // initial model file (can be "") or value
+                         string,  // Initial model file (can be "") or value
                          int,     // Reference model type <define>IP_UBC_CONTROL</define> FILE, VALUE or DEFAULT
-                         string,  // reference model file (can be "") or value(
+                         string,  // Reference model file (can be "") or value(
                          int,     // Alphas type <define>IP_UBC_CONTROL</define> FILE, VALUE, LENGTH or DEFAULT
-                         string,  // alphas  file (can be ""), value or length
-                         string   // weights file
+                         string,  // Alphas  file (can be ""), value or length
+                         string   // Weights file
                          );
 
 
@@ -1636,7 +1636,7 @@ ExportUBCRes3_IP (
                   string,  // Output error channel name ("" for none)
                   string,  // Output OBS file name
                   string,  // Output TOPO file name
-                  real     // version number (3 or 5)
+                  real     // Version number (3 or 5)
                   );
 
 
@@ -1662,12 +1662,12 @@ ExportUBCResControl_IP (
                         int,     // irest
                         real,    // chifact
                         string,  // RES obs file
-                        string,  // mesh file
-                        string,  // topography file (required)
-                        string,  // initial model file (can be "" or "NULL")
-                        real,    // reference model conductivity
-                        string,  // alphas
-                        string   // weights file
+                        string,  // Mesh file
+                        string,  // Topography file (required)
+                        string,  // Initial model file (can be "" or "NULL")
+                        real,    // Reference model conductivity
+                        string,  // Alphas
+                        string   // Weights file
                         );
 
 
@@ -1689,16 +1689,16 @@ ExportUBCResControlV5_IP (
                           int,     // niter
                           real,    // chifact
                           string,  // RES obs file
-                          string,  // topography file (required)
+                          string,  // Topography file (required)
                           int,     // Mesh type <define>IP_UBC_CONTROL</define> FILE, VALUE or DEFAULT
-                          string,  // mesh file (can be "") or value
+                          string,  // Mesh file (can be "") or value
                           int,     // Initial model type <define>IP_UBC_CONTROL</define> FILE, VALUE or DEFAULT
-                          string,  // initial model file (can be "") or value
+                          string,  // Initial model file (can be "") or value
                           int,     // Reference model type <define>IP_UBC_CONTROL</define> FILE, VALUE or DEFAULT
-                          string,  // reference model file (can be "") or value(
+                          string,  // Reference model file (can be "") or value(
                           int,     // Alphas type <define>IP_UBC_CONTROL</define> FILE, VALUE, LENGTH or DEFAULT
-                          string,  // alphas  file (can be ""), value or length
-                          string   // weights file
+                          string,  // Alphas  file (can be ""), value or length
+                          string   // Weights file
                           );
 
 
@@ -1801,7 +1801,7 @@ ImportUBC2DTopo_IP (
 [_extended] void
 OpenJob_IP (
             IP,      // IP object
-            string,  // job file name
+            string,  // Job file name
             int      // Job type <define>IP_PLOT</define>
             );
 
@@ -1817,7 +1817,7 @@ OpenJob_IP (
 [_extended] void
 SaveJob_IP (
             IP,      // IP object
-            string,  // job file name
+            string,  // Job file name
             int      // Job type  <define>IP_PLOT</define>
             );
 

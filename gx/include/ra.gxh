@@ -28,7 +28,7 @@
 
 [_public] RA
 Create_RA (
-           string   // name of the file
+           string   // Name of the file
            );
 
 
@@ -53,7 +53,7 @@ Create_RA (
 [_public] RA
 CreateSBF_RA (
               SBF,     // Storage
-              string   // name of the file
+              string   // Name of the file
               );
 
 
@@ -85,8 +85,8 @@ Destroy_RA (
 [_public] int
 IiGets_RA (
            RA,          // RA handle
-           var string,  // buffer in which to place string
-           int          // maximum length of the string buffer
+           var string,  // Buffer in which to place string
+           int          // Maximum length of the string buffer
            );
 
 #define iGets_RA(A, B) IiGets_RA(A, B, sizeof(B))
@@ -136,7 +136,7 @@ iLine_RA (
 [_public] int
 iSeek_RA (
           RA,   // RA handle
-          int   // line #, 0 is the first.
+          int   // Line #, 0 is the first.
           );
 
 

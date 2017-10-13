@@ -50,8 +50,8 @@
 //
 // EDB_PATH_FULL       d:\directory\file.gdb
 // EDB_PATH_DIR        \directory\file.gdb
-// EDB_PATH_NAME_EXT   file.gdb
-// EDB_PATH_NAME       file
+// EDB_PATH_NAME_EXT   File.gdb
+// EDB_PATH_NAME       File
 //
 //===========================================================================================================
 
@@ -412,8 +412,8 @@ GetCurLineSymb_EDB (
 [_public_app] void
 GetDisplFidRange_EDB (
                       EDB,      // EDB Object
-                      var int,  // fiducial start
-                      var int   // number of fiducials
+                      var int,  // Fiducial start
+                      var int   // Number of fiducials
                       );
 
 
@@ -445,9 +445,9 @@ GetCurPoint_EDB (
 [_public_app] void
 GetFidRange_EDB (
                  EDB,       // EDB Object
-                 var real,  // fiducial start
-                 var real,  // fiducial increment
-                 var int    // number of fiducials
+                 var real,  // Fiducial start
+                 var real,  // Fiducial increment
+                 var int    // Number of fiducials
                  );
 
 
@@ -496,8 +496,8 @@ GetPrevLineSymb_EDB (
 [_public_app] void
 GetProfileRangeX_EDB (
                       EDB,          // EDB
-                      var real,     // minimum x
-                      var real,     // maximum x
+                      var real,     // Minimum x
+                      var real,     // Maximum x
                       var DB_SYMB   // X axis channel, <define>NULLSYMB</define> if none
                       );
 
@@ -513,10 +513,10 @@ GetProfileRangeX_EDB (
 [_public_app] void
 GetProfileRangeY_EDB (
                       EDB,       // EDB
-                      int,       // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                      int,       // profile number in window (see iWindowProfiles_EDB which returns number of profiles in a window)
-                      var real,  // minimum y
-                      var real,  // maximum y
+                      int,       // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                      int,       // Profile number in window (see iWindowProfiles_EDB which returns number of profiles in a window)
+                      var real,  // Minimum y
+                      var real,  // Maximum y
                       var int    // <define>EDB_PROFILE_SCALE</define>
                       );
 
@@ -532,8 +532,8 @@ GetProfileRangeY_EDB (
 [_public_app] void
 GetProfileSplit_EDB (
                      EDB,       // EDB
-                     var real,  // split d1 (profile window 0 height / entire profile window height)
-                     var real   // split d2 (profile window 1 height / entire profile window height)
+                     var real,  // Split d1 (profile window 0 height / entire profile window height)
+                     var real   // Split d2 (profile window 1 height / entire profile window height)
                      );
 
 
@@ -548,10 +548,10 @@ GetProfileSplit_EDB (
 [_public_app] void
 GetProfileSplit5_EDB (
                       EDB,       // EDB
-                      var real,  // split d1 (profile window 0 height / entire profile window height)
-                      var real,  // split d2 (profile window 1 height / entire profile window height)
-                      var real,  // split d3 (profile window 2 height / entire profile window height)
-                      var real   // split d4 (profile window 3 height / entire profile window height)
+                      var real,  // Split d1 (profile window 0 height / entire profile window height)
+                      var real,  // Split d2 (profile window 1 height / entire profile window height)
+                      var real,  // Split d3 (profile window 2 height / entire profile window height)
+                      var real   // Split d4 (profile window 3 height / entire profile window height)
                       );
 
 
@@ -577,7 +577,7 @@ GetProfileSplit5_EDB (
 [_public_app] void
 GetProfileSplitVV_EDB (
                        EDB,  // EDB
-                       VV    // split VV (REAL) (profile window heights / entire profile window height)
+                       VV    // Split VV (REAL) (profile window heights / entire profile window height)
                        );
 
 
@@ -592,8 +592,8 @@ GetProfileSplitVV_EDB (
 [_public_app] void
 GetProfileVerticalGridLines_EDB (
                                  EDB,       // EDB
-                                 var int,   // vertical grid lines?
-                                 var real   // vertical grid interval
+                                 var int,   // Vertical grid lines?
+                                 var real   // Vertical grid interval
                                  );
 
 
@@ -608,9 +608,9 @@ GetProfileVerticalGridLines_EDB (
 [_public_app] void
 GetProfileWindow_EDB (
                       EDB,      // EDB
-                      int,      // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                      var int,  // window x size in pixels
-                      var int   // window y size in pixels
+                      int,      // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                      var int,  // Window x size in pixels
+                      var int   // Window y size in pixels
                       );
 
 
@@ -625,7 +625,7 @@ GetProfileWindow_EDB (
 [_public_app] void
 GotoColumn_EDB (
                 EDB,  // EDB Object
-                int   // channel column number, 0 is first -1 for first column without data
+                int   // Channel column number, 0 is first -1 for first column without data
                 );
 
 
@@ -671,9 +671,9 @@ GotoLine_EDB (
 Histogram_EDB (
                EDB,   // EDB Object
                ST,    // ST handle to update
-               real,  // histogram minimum
-               real,  // histogram increment
-               int    // number of increments
+               real,  // Histogram minimum
+               real,  // Histogram increment
+               int    // Number of increments
                );
 
 
@@ -801,7 +801,7 @@ iDispChanLST_EDB (
 iDispClassChanLST_EDB (
                        EDB,     // EDB Object
                        LST,     // LST object
-                       string   // class name ("" for all)
+                       string   // Class name ("" for all)
                        );
 
 
@@ -819,7 +819,7 @@ iDispClassChanLST_EDB (
 [_public_app] int
 iFindChannelColumn_EDB (
                         EDB,     // EDB Object
-                        string   // channel
+                        string   // Channel
                         );
 
 
@@ -852,7 +852,7 @@ iFindNearest_EDB (
 //
 // Returns           Nothing
 //
-// Notes             returns "" if mark not currently in a channel.
+// Notes             Returns "" if mark not currently in a channel.
 //
 // Available         5.0.0
 //
@@ -920,9 +920,9 @@ IGetCurLine_EDB (
 [_public_app] int
 iGetCurMark_EDB (
                  EDB,       // EDB Object
-                 var real,  // start fiducial
-                 var real,  // end fiducial
-                 var real   // fiducial increment
+                 var real,  // Start fiducial
+                 var real,  // End fiducial
+                 var real   // Fiducial increment
                  );
 
 
@@ -1061,8 +1061,8 @@ IGetName_EDB (
 [_public_app] int
 iGetProfileParm_EDB (
                      EDB,  // EDB
-                     int,  // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                     int,  // profile number in window (see GetProfileRangeY_EDB)
+                     int,  // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                     int,  // Profile number in window (see GetProfileRangeY_EDB)
                      int   // <define>EDB_PROF</define>
                      );
 
@@ -1118,7 +1118,7 @@ iIsLocked_EDB (
 
 [_public_app] int
 iLoaded_EDB (
-             string   // database name
+             string   // Database name
              );
 
 
@@ -1141,7 +1141,7 @@ iLoaded_EDB (
 [_public_app] int
 iProfileOpen_EDB (
                   EDB,  // EDB
-                  int   // profile window number: 0 is the top window 1 is the middle window 2 is the bottom window
+                  int   // Profile window number: 0 is the top window 1 is the middle window 2 is the bottom window
                   );
 
 
@@ -1212,7 +1212,7 @@ SetWindowPosition_EDB (
 [_public_app] int
 iShowProfileName_EDB (
                       EDB,     // EDB
-                      int,     // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                      int,     // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
                       string   // Name of the channel
                       );
 
@@ -1228,7 +1228,7 @@ iShowProfileName_EDB (
 [_public_app] int
 iGetWindowYAxisDirection_EDB (
                               EDB,  // EDB
-                              int   // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                              int   // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
                               );
 
 
@@ -1243,7 +1243,7 @@ iGetWindowYAxisDirection_EDB (
 [_public_app] int
 iWindowProfiles_EDB (
                      EDB,  // EDB
-                     int   // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                     int   // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
                      );
 
 
@@ -1313,7 +1313,7 @@ LaunchScatter_EDB (
 
 [_public_app] EDB
 Load_EDB (
-          string   // list of databases (';' or '|' delimited) to load.
+          string   // List of databases (';' or '|' delimited) to load.
           );
 
 
@@ -1335,7 +1335,7 @@ Load_EDB (
 
 [_public_app] EDB
 LoadNoActivate_EDB (
-                    string   // list of documents (';' or '|' delimited) to load.
+                    string   // List of documents (';' or '|' delimited) to load.
                     );
 
 
@@ -1369,7 +1369,7 @@ LoadAllChans_EDB (
 [_public_app] void
 LoadChan_EDB (
               EDB,     // EDB Object
-              string   // channel name
+              string   // Channel name
               );
 
 
@@ -1476,8 +1476,8 @@ MakeCurrent_EDB (
 [_public_app] void
 RemoveProfile_EDB (
                    EDB,  // EDB
-                   int,  // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                   int   // profile number in window (see GetProfileRangeY_EDB)
+                   int,  // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                   int   // Profile number in window (see GetProfileRangeY_EDB)
                    );
 
 
@@ -1513,8 +1513,8 @@ rGetCurFid_EDB (
 [_public_app] real
 rGetProfileParm_EDB (
                      EDB,  // EDB
-                     int,  // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                     int,  // profile number in window (see GetProfileRangeY_EDB)
+                     int,  // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                     int,  // Profile number in window (see GetProfileRangeY_EDB)
                      int   // <define>EDB_PROF</define>
                      );
 
@@ -1552,7 +1552,7 @@ rGetSplit_EDB (
 [_public_app] void
 RunChannelMaker_EDB (
                      EDB,     // EDB
-                     string   // channel name
+                     string   // Channel name
                      );
 
 
@@ -1583,7 +1583,7 @@ RunChannelMakers_EDB (
 [_public_app] void
 SetCurLine_EDB (
                 EDB,     // EDB Object
-                string   // line name
+                string   // Line name
                 );
 
 
@@ -1598,7 +1598,7 @@ SetCurLine_EDB (
 [_public_app] void
 SetCurLineNoMessage_EDB (
                          EDB,     // EDB Object
-                         string   // line name
+                         string   // Line name
                          );
 
 
@@ -1613,8 +1613,8 @@ SetCurLineNoMessage_EDB (
 [_public_app] void
 SetCurMark_EDB (
                 EDB,   // EDB Object
-                real,  // start fiducial
-                real   // end fiducial
+                real,  // Start fiducial
+                real   // End fiducial
                 );
 
 
@@ -1629,10 +1629,10 @@ SetCurMark_EDB (
 [_public_app] void
 SetProfileParmI_EDB (
                      EDB,  // EDB
-                     int,  // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                     int,  // profile number in window (see GetProfileRangeY_EDB)
+                     int,  // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                     int,  // Profile number in window (see GetProfileRangeY_EDB)
                      int,  // <define>EDB_PROF</define>
-                     int   // setting
+                     int   // Setting
                      );
 
 
@@ -1647,10 +1647,10 @@ SetProfileParmI_EDB (
 [_public_app] void
 SetProfileParmR_EDB (
                      EDB,   // EDB
-                     int,   // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                     int,   // profile number in window (see GetProfileRangeY_EDB)
+                     int,   // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                     int,   // Profile number in window (see GetProfileRangeY_EDB)
                      int,   // <define>EDB_PROF</define>
-                     real   // setting
+                     real   // Setting
                      );
 
 
@@ -1665,8 +1665,8 @@ SetProfileParmR_EDB (
 [_public_app] void
 SetProfileRangeX_EDB (
                       EDB,      // EDB
-                      real,     // minimum x, rDUMMY for data minimum
-                      real,     // maximum x, rDUMMY for data maximum
+                      real,     // Minimum x, rDUMMY for data minimum
+                      real,     // Maximum x, rDUMMY for data maximum
                       DB_SYMB   // X axis channel, <define>NULLSYMB</define> to use fids
                       );
 
@@ -1687,10 +1687,10 @@ SetProfileRangeX_EDB (
 [_public_app] void
 SetProfileRangeY_EDB (
                       EDB,   // EDB
-                      int,   // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                      int,   // profile number in window (see GetProfileRangeY_EDB)
-                      real,  // minimum y
-                      real,  // maximum y
+                      int,   // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                      int,   // Profile number in window (see GetProfileRangeY_EDB)
+                      real,  // Minimum y
+                      real,  // Maximum y
                       int    // <define>EDB_PROFILE_SCALE</define>
                       );
 
@@ -1706,8 +1706,8 @@ SetProfileRangeY_EDB (
 [_public_app] void
 SetProfileSplit_EDB (
                      EDB,   // EDB
-                     real,  // split d1 (profile window 0 height / entire profile window height)
-                     real   // split d2 (profile window 1 height / entire profile window height)
+                     real,  // Split d1 (profile window 0 height / entire profile window height)
+                     real   // Split d2 (profile window 1 height / entire profile window height)
                      );
 
 
@@ -1722,10 +1722,10 @@ SetProfileSplit_EDB (
 [_public_app] void
 SetProfileSplit5_EDB (
                       EDB,   // EDB
-                      real,  // split d1 (profile window 0 height / entire profile window height)
-                      real,  // split d2 (profile window 1 height / entire profile window height)
-                      real,  // split d3 (profile window 2 height / entire profile window height)
-                      real   // split d4 (profile window 3 height / entire profile window height)
+                      real,  // Split d1 (profile window 0 height / entire profile window height)
+                      real,  // Split d2 (profile window 1 height / entire profile window height)
+                      real,  // Split d3 (profile window 2 height / entire profile window height)
+                      real   // Split d4 (profile window 3 height / entire profile window height)
                       );
 
 
@@ -1749,7 +1749,7 @@ SetProfileSplit5_EDB (
 [_public_app] void
 SetProfileSplitVV_EDB (
                        EDB,  // EDB
-                       VV    // split VV (REAL) (relative sizes of each profile window)
+                       VV    // Split VV (REAL) (relative sizes of each profile window)
                        );
 
 
@@ -1769,7 +1769,7 @@ SetProfileSplitVV_EDB (
 [_public_app] void
 SetSplit_EDB (
               EDB,   // EDB
-              real   // split d (0.0 <= d <= 1.0).
+              real   // Split d (0.0 <= d <= 1.0).
               );
 
 
@@ -1801,8 +1801,8 @@ SetWindowState_EDB (
 [_public_app] void
 ShowProfile_EDB (
                  EDB,      // EDB
-                 int,      // profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
-                 DB_SYMB   // channel symbol
+                 int,      // Profile window number (0 to MAX_PROF_WND-1, see iProfileOpen_EDB)
+                 DB_SYMB   // Channel symbol
                  );
 
 
@@ -1885,7 +1885,7 @@ UnLoadAllChans_EDB (
 [_public_app] void
 UnLoadChan_EDB (
                 EDB,     // EDB Object
-                string   // channel name
+                string   // Channel name
                 );
 
 

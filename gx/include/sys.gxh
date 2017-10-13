@@ -150,8 +150,8 @@
 //
 // Registry key domains
 //
-// REG_DOMAIN_MACHINE   same as HKEY_LOCAL_MACHINE in Windows
-// REG_DOMAIN_USER      same as HKEY_CURRENT_USER in Windows
+// REG_DOMAIN_MACHINE   Same as HKEY_LOCAL_MACHINE in Windows
+// REG_DOMAIN_USER      Same as HKEY_CURRENT_USER in Windows
 //
 //===========================================================================================================
 
@@ -200,8 +200,8 @@
 //
 // SYS Directory locations
 //
-// SYS_DIR_LOCAL                    is the workspace working directory
-// SYS_DIR_GEOSOFT                  is the geosoft installation directory (read-only)
+// SYS_DIR_LOCAL                    Is the workspace working directory
+// SYS_DIR_GEOSOFT                  Is the geosoft installation directory (read-only)
 // SYS_DIR_USER                     
 //                                  is the geosoft installation directory that
 //                                  contains user read/write files.
@@ -383,7 +383,7 @@
 // Font types
 //
 // SYS_FONT_GFN   Geosoft GFN fonts.
-// SYS_FONT_TT    available TrueType fonts
+// SYS_FONT_TT    Available TrueType fonts
 //
 //===========================================================================================================
 
@@ -486,8 +486,8 @@
 // have a directory separator at the end.
 // 
 //
-// SYS_PATH_LOCAL                      is the workspace working directory
-// SYS_PATH_GEOSOFT                    is the geosoft installation directory (read-only)
+// SYS_PATH_LOCAL                      Is the workspace working directory
+// SYS_PATH_GEOSOFT                    Is the geosoft installation directory (read-only)
 // SYS_PATH_GEOSOFT_USER               
 //                                     is the geosoft installation directory that
 //                                     contains user read/write files.
@@ -876,10 +876,10 @@
 
 [_public] void
 BreakDate_SYS (
-               real,     // date value to break
-               var int,  // year
-               var int,  // month (0-11)
-               var int   // day   (0-30)
+               real,     // Date value to break
+               var int,  // Year
+               var int,  // Month (0-11)
+               var int   // Day   (0-30)
                );
 
 
@@ -897,7 +897,7 @@ BreakDate_SYS (
 
 [_public] int
 iDatetoLong_SYS (
-                 real   // date
+                 real   // Date
                  );
 
 
@@ -947,7 +947,7 @@ rDate_SYS (
 
 [_public] real
 rLongtoDate_SYS (
-                 int   // day
+                 int   // Day
                  );
 
 
@@ -961,7 +961,7 @@ rLongtoDate_SYS (
 
 [_public] real
 rLongtoTime_SYS (
-                 int   // seconds
+                 int   // Seconds
                  );
 
 
@@ -975,9 +975,9 @@ rLongtoTime_SYS (
 
 [_public] real
 rMakeDate_SYS (
-               int,  // year
-               int,  // month (0-11)
-               int   // day   (0-30)
+               int,  // Year
+               int,  // Month (0-11)
+               int   // Day   (0-30)
                );
 
 
@@ -991,7 +991,7 @@ rMakeDate_SYS (
 
 [_public] real
 rSecondstoTime_SYS (
-                    real   // seconds
+                    real   // Seconds
                     );
 
 
@@ -1082,7 +1082,7 @@ rUTCTime_SYS (
 
 [_public] int
 iExistEnv_SYS (
-               string   // setting
+               string   // Setting
                );
 
 
@@ -1096,9 +1096,9 @@ iExistEnv_SYS (
 
 [_public] void
 IGetEnv_SYS (
-             string,      // setting
-             var string,  // value string
-             int          // sizeof string
+             string,      // Setting
+             var string,  // Value string
+             int          // Sizeof string
              );
 
 #define GetEnv_SYS(A, B) IGetEnv_SYS(A, B, sizeof(B))
@@ -1114,8 +1114,8 @@ IGetEnv_SYS (
 
 [_public] void
 SetEnv_SYS (
-            string,  // setting
-            string   // value
+            string,  // Setting
+            string   // Value
             );
 
 
@@ -1168,7 +1168,7 @@ iGetTopErrorAP_SYS (
 
 [_public] void
 IGetErrorMessageAP_SYS (
-                        int,         // the error index (0 to N-1, where N=number of registered errors)
+                        int,         // The error index (0 to N-1, where N=number of registered errors)
                         var string,  // Buffer to return message in
                         int          // Length of buffer
                         );
@@ -1246,8 +1246,8 @@ SetServerMessagesAP_SYS (
 
 [_public] int
 iRun_SYS (
-          string,  // command name
-          string,  // command line arguments
+          string,  // Command name
+          string,  // Command line arguments
           int      // Flags <define>SYS_RUN_TYPE</define> <define>SYS_RUN_DISPLAY</define> <define>SYS_RUN_HOLD</define> <define>SYS_RUN_WIN</define>
           );
 
@@ -1269,7 +1269,7 @@ iRun_SYS (
 
 [_public] int
 iRunGS_SYS (
-            string   // name of GS to run.
+            string   // Name of GS to run.
             );
 
 
@@ -1296,7 +1296,7 @@ iRunGS_SYS (
 
 [_public] int
 iRunGX_SYS (
-            string   // name of GX to run.
+            string   // Name of GX to run.
             );
 
 
@@ -1317,8 +1317,8 @@ iRunGX_SYS (
 
 [_public] int
 iRunGXEx_SYS (
-              string,   // name of GX to run.
-              var int   // return value set in the child GX (0 by default)
+              string,   // Name of GX to run.
+              var int   // Return value set in the child GX (0 by default)
               );
 
 
@@ -1338,8 +1338,8 @@ iRunGXEx_SYS (
 
 [_licensed_app] int
 iRunPDF_SYS (
-             string,  // group name, can be "".
-             string   // pdf name    (.pdf assumed)
+             string,  // Group name, can be "".
+             string   // PDF name    (.pdf assumed)
              );
 
 
@@ -1454,9 +1454,9 @@ DoCommand_SYS (
 
 [_public] void
 Error_SYS (
-           string,  // your error file name, "" if none.
-           string,  // module name in which error occured.
-           int      // error number
+           string,  // Your error file name, "" if none.
+           string,  // Module name in which error occured.
+           int      // Error number
            );
 
 
@@ -1478,8 +1478,8 @@ Error_SYS (
 
 [_public] void
 ErrorTag_SYS (
-              string,  // tag string, ie "%1".
-              string   // string to replace the tag.
+              string,  // Tag string, ie "%1".
+              string   // String to replace the tag.
               );
 
 
@@ -1513,9 +1513,9 @@ ErrorTag_SYS (
 
 [_public] int
 iAssertGX_SYS (
-               int,     // boolean expression (ie. (dB != 0.0) )
-               string,  // module name
-               string   // argument name
+               int,     // Boolean expression (ie. (dB != 0.0) )
+               string,  // Module name
+               string   // Argument name
                );
 
 
@@ -1545,7 +1545,7 @@ iOLEAutomation_SYS (
 
 [_public_app] void
 SaveLog_SYS (
-             string   // output file name
+             string   // Output file name
              );
 
 
@@ -1605,7 +1605,7 @@ ShowError_SYS (
 
 [_public] void
 Terminate_SYS (
-               string   // module name
+               string   // Module name
                );
 
 
@@ -1715,8 +1715,8 @@ IAbsoluteFileName_SYS (
 
 [_public] int
 iCopyFile_SYS (
-               string,  // source file
-               string   // destination file
+               string,  // Source file
+               string   // Destination file
                );
 
 
@@ -1733,7 +1733,7 @@ iCopyFile_SYS (
 
 [_public] int
 iDeleteFile_SYS (
-                 string   // name of file to delete
+                 string   // Name of file to delete
                  );
 
 
@@ -1753,7 +1753,7 @@ iDeleteFile_SYS (
 
 [_public] int
 iDeleteGIFile_SYS (
-                   string   // name of grid file to delete
+                   string   // Name of grid file to delete
                    );
 
 
@@ -1776,7 +1776,7 @@ iDeleteGIFile_SYS (
 
 [_public] int
 iDeleteGridFile_SYS (
-                     string   // name of grid file to delete
+                     string   // Name of grid file to delete
                      );
 
 
@@ -1833,7 +1833,7 @@ iFileExist_SYS (
 
 [_public] int
 iFileSize_SYS (
-               string   // name of file
+               string   // Name of file
                );
 
 
@@ -1940,7 +1940,7 @@ iFindPathEx_SYS (
 [_public] void
 IGetDirectory_SYS (
                    int,         // <define>SYS_DIR</define>
-                   var string,  // returned directory path string
+                   var string,  // Returned directory path string
                    int          // Size of the string
                    );
 
@@ -1960,7 +1960,7 @@ IGetDirectory_SYS (
 [_public] void
 IGetPath_SYS (
               int,         // <define>SYS_PATH</define>
-              var string,  // string in which to place path
+              var string,  // String in which to place path
               int          // Maximum string size
               );
 
@@ -2014,7 +2014,7 @@ iMakeDir_SYS (
 
 [_public] int
 iMakeFileReadonly_SYS (
-                       string   // name of file
+                       string   // Name of file
                        );
 
 
@@ -2031,7 +2031,7 @@ iMakeFileReadonly_SYS (
 
 [_public] int
 iMakeFileWritable_SYS (
-                       string   // name of file
+                       string   // Name of file
                        );
 
 
@@ -2088,7 +2088,7 @@ IShortPathFileName_SYS (
 
 [_public] void
 ITempFileExt_SYS (
-                  string,      // Input Extesion (without .)
+                  string,      // Input extension (without .)
                   var string,  // Output name
                   int          // Size of output name
                   );
@@ -2137,9 +2137,9 @@ ITempFileName_SYS (
 
 [_public] void
 ITransferPath_SYS (
-                   string,      // input file path/name
-                   var string,  // output file name with path transfered
-                   int          // maximum length of output string
+                   string,      // Input file path/name
+                   var string,  // Output file name with path transfered
+                   int          // Maximum length of output string
                    );
 
 #define TransferPath_SYS(A, B) ITransferPath_SYS(A, B, sizeof(B))
@@ -2200,7 +2200,7 @@ iWriteInDir_SYS (
 
 [_public] real
 rFileDate_SYS (
-               string   // file name
+               string   // File name
                );
 
 
@@ -2219,7 +2219,7 @@ rFileDate_SYS (
 
 [_public] real
 rFileTime_SYS (
-               string   // file name
+               string   // File name
                );
 
 
@@ -2238,7 +2238,7 @@ rFileTime_SYS (
 
 [_public] real
 rUTCFileDate_SYS (
-                  string   // file name
+                  string   // File name
                   );
 
 
@@ -2257,7 +2257,7 @@ rUTCFileDate_SYS (
 
 [_public] real
 rUTCFileTime_SYS (
-                  string   // file name
+                  string   // File name
                   );
 
 
@@ -2291,7 +2291,7 @@ GetSettingsMETA_SYS (
 
 [_public] void
 GlobalReset_SYS (
-                 string   // new INI file name, if "", use default.
+                 string   // New INI file name, if "", use default.
                  );
 
 
@@ -2594,7 +2594,7 @@ ClearLineageSources_SYS (
 [_licensed] void
 CopyGeoFile_SYS (
                  string,  // File Name
-                 string   // target directory
+                 string   // Target directory
                  );
 
 
@@ -2762,9 +2762,9 @@ ClearMenus_SYS (
 
 [_public_app] void
 GetLoadedMenus_SYS (
-                    LST,  // default menus (typically a single entry based on product)
-                    LST,  // loaded menus
-                    LST   // loaded user menus
+                    LST,  // Default menus (typically a single entry based on product)
+                    LST,  // Loaded menus
+                    LST   // Loaded user menus
                     );
 
 
@@ -2783,9 +2783,9 @@ GetLoadedMenus_SYS (
 
 [_public_app] void
 SetLoadedMenus_SYS (
-                    LST,  // default menus (typically a single entry based on product, do not change the name returned by GetLoadedMenus_SYS)
-                    LST,  // loaded menus
-                    LST   // loaded user menus
+                    LST,  // Default menus (typically a single entry based on product, do not change the name returned by GetLoadedMenus_SYS)
+                    LST,  // Loaded menus
+                    LST   // Loaded user menus
                     );
 
 
@@ -2970,9 +2970,9 @@ FontLST_SYS (
 
 [_public] int
 IiGetDotNetGXEntries_SYS (
-                          string,      // name of .NET GX assembly
-                          var string,  // buffer to place list of entries in
-                          int          // sizeof buffer
+                          string,      // Name of .NET GX assembly
+                          var string,  // Buffer to place list of entries in
+                          int          // Sizeof buffer
                           );
 
 #define iGetDotNetGXEntries_SYS(A, B) IiGetDotNetGXEntries_SYS(A, B, sizeof(B))
@@ -3088,7 +3088,7 @@ RunMultiUserScript_SYS (
 
 [_public] void
 ClearGroup_SYS (
-                string   // group to clear
+                string   // Group to clear
                 );
 
 
@@ -3102,7 +3102,7 @@ ClearGroup_SYS (
 
 [_public] void
 ClearGroupParm_SYS (
-                    string   // string
+                    string   // String
                     );
 
 
@@ -3196,8 +3196,8 @@ DefaultString_SYS (
 //                  valid range is 0-100.
 //                  "PAT_DENSITY"   Tile spacing. A value of 1 means tiles are laid with no overlap.
 //                  A value of 2 means they overlap each other.
-//                  "PAT_COLOR"     The colour value.
-//                  "PAT_BACKCOLOR" Background colour value.
+//                  "PAT_COLOR"     The color value.
+//                  "PAT_BACKCOLOR" Background color value.
 //                  
 //                  Returned values may be DUMMY, but will be acceptable for use with
 //                  the iColorForm_GUI function, to set defaults.
@@ -3229,7 +3229,7 @@ GetPattern_SYS (
 [_public] void
 GetREG_SYS (
             REG,     // REG to add parameters to
-            string   // group name wanted
+            string   // Group name wanted
             );
 
 
@@ -3462,8 +3462,8 @@ SetInt_SYS (
 //                  valid range is 0-100.
 //                  "PAT_DENSITY"   Tile spacing. A value of 1 means tiles are laid with no overlap.
 //                  A value of 2 means they overlap each other.
-//                  "PAT_COLOR"     The colour value.
-//                  "PAT_BACKCOLOR" Background colour value.
+//                  "PAT_COLOR"     The color value.
+//                  "PAT_BACKCOLOR" Background color value.
 //                  
 //                  Input values may be DUMMY.
 //                  
@@ -3648,8 +3648,8 @@ ProgUpdate_SYS (
 
 [_public] void
 ProgUpdateL_SYS (
-                 int,  // count
-                 int   // max count >= count
+                 int,  // Count
+                 int   // Max count >= count
                  );
 
 
@@ -3670,8 +3670,8 @@ ProgUpdateL_SYS (
 [_public] void
 IGetSysInfo_SYS (
                  int,         // <define>SYS_INFO</define>
-                 var string,  // returned setting
-                 int          // size of string
+                 var string,  // Returned setting
+                 int          // Size of string
                  );
 
 #define GetSysInfo_SYS(A, B) IGetSysInfo_SYS(A, B, sizeof(B))
@@ -3694,7 +3694,7 @@ IiRegistryGetVal_SYS (
                       string,      // Key to set
                       string,      // Value name within key
                       var string,  // String for value data
-                      int          // size of String
+                      int          // Size of String
                       );
 
 #define iRegistryGetVal_SYS(A, B, C, D) IiRegistryGetVal_SYS(A, B, C, D, sizeof(D))
@@ -3793,7 +3793,7 @@ DestroyPTMP_SYS (
 
 [_public] void
 GetPTMP_SYS (
-             PTMP   // saved with Save_PTMP_SYS
+             PTMP   // Saved with Save_PTMP_SYS
              );
 
 
@@ -3895,7 +3895,7 @@ Cancel_SYS (
 //-----------------------------------------------------------------------------------------------------------
 // iDelay_SYS   Idle delay method.
 //
-// Returns      success if the delay has elapsed.
+// Returns      Success if the delay has elapsed.
 //
 // Available    6.0.0
 //
@@ -3907,9 +3907,9 @@ iDelay_SYS (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iGetTimer_SYS   return the elapsed time since the established time.
+// iGetTimer_SYS   Return the elapsed time since the established time.
 //
-// Returns         success if the delay has elapsed.
+// Returns         Success if the delay has elapsed.
 //
 // Notes           
 //                 1st time through call the method with a flag of 1 to identify
@@ -3923,8 +3923,8 @@ iDelay_SYS (
 [_public] int
 iGetTimer_SYS (
                int,       // 1 - set start time, 0 - return elapsed time
-               var real,  // start time in seconds
-               var real   // elapsed time in seconds
+               var real,  // Start time in seconds
+               var real   // Elapsed time in seconds
                );
 
 
@@ -3975,7 +3975,7 @@ DisplayHelpTopic_SYS (
 [_public_app] void
 DisplayInt_SYS (
                 string,  // Title of the Window
-                int      // number
+                int      // Number
                 );
 
 
@@ -4382,8 +4382,8 @@ DisableGXDebugger_SYS (
 
 [_public] void
 EnableGXDebugger_SYS (
-                      string,  // path that will be scanned recursively for GXC source files
-                      string   // name of gx where first breakpoint should be set
+                      string,  // Path that will be scanned recursively for GXC source files
+                      string   // Name of gx where first breakpoint should be set
                       );
 
 

@@ -70,7 +70,7 @@ AddItem_LST (
 AddSymbItem_LST (
                  LST,      // LST Handle
                  string,   // Name of the channel, line or blob symbol
-                 DB_SYMB   // symbol handle
+                 DB_SYMB   // Symbol handle
                  );
 
 
@@ -425,7 +425,7 @@ iFindItemMask_LST (
 //-----------------------------------------------------------------------------------------------------------
 // iGetInt_LST   Get an integer item.
 //
-// Returns       integer, iDUMMY if conversion fails or string is empty.
+// Returns       Integer, iDUMMY if conversion fails or string is empty.
 //
 // Available     5.1.2
 //
@@ -493,8 +493,8 @@ iSize_LST (
 LoadCSV_LST (
              LST,     // LST Handle
              string,  // The CSV file
-             string,  // column label for the item name
-             string   // column label for the item value
+             string,  // Column label for the item name
+             string   // Column label for the item value
              );
 
 
@@ -529,7 +529,7 @@ LoadCSV_LST (
 [_public] void
 LoadFile_LST (
               LST,     // LST Handle
-              string   // name of the file
+              string   // Name of the file
               );
 
 
@@ -555,7 +555,7 @@ Resource_LST (
 //-----------------------------------------------------------------------------------------------------------
 // rGetReal_LST   Get a real item.
 //
-// Returns        real, rDUMMY if conversion fails or string is empty.
+// Returns        Real, rDUMMY if conversion fails or string is empty.
 //
 // Available      5.1.2
 //
@@ -595,7 +595,7 @@ rGetReal_LST (
 [_public] void
 SaveFile_LST (
               LST,     // LST Handle
-              string   // name of the file
+              string   // Name of the file
               );
 
 

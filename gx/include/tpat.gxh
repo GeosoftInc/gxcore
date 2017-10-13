@@ -24,9 +24,9 @@
 // Density:       The tiling density. If not specified, defaults to 1.0.
 // Thickness:     The line thickness in the tile, expressed as a integer
 // percentage (0-100) of the tile size.
-// Colour:        The pattern line work colour. If not specified, defaults to black.
+// Color:        The pattern line work color. If not specified, defaults to black.
 // 
-// Background colour: The pattern background colour. If not specified, defaults to
+// Background color: The pattern background color. If not specified, defaults to
 // transparent (C_ANY_NONE)
 // 
 // 
@@ -135,7 +135,7 @@ iCode_TPAT (
 // Returns                 Nothing
 //
 // Notes                   
-//                         Returns the solid colour, pattern foreground color, or symbol
+//                         Returns the solid color, pattern foreground color, or symbol
 //                         color, along with the code, label and description.
 //                         
 //
@@ -145,13 +145,13 @@ iCode_TPAT (
 [_public] void
 IGetSolidPattern_TPAT (
                        TPAT,        // TPAT handle
-                       int,         // index
+                       int,         // Index
                        var string,  // Returned Code
-                       int,         // length of supplied code string variable
+                       int,         // Length of supplied code string variable
                        var string,  // Returned Label
-                       int,         // length of supplied code string variable
+                       int,         // Length of supplied code string variable
                        var string,  // Returned Description
-                       int,         // length of supplied code string variable
+                       int,         // Length of supplied code string variable
                        var int      // Color.
                        );
 
@@ -182,13 +182,13 @@ iSize_TPAT (
 //                of fields found inside it.
 //                
 //                The following fields are identified. Only the "CODE" field is
-//                required, as the "default" thematic pattern is a solid black colour.
+//                required, as the "default" thematic pattern is a solid black color.
 //                
 //                CODE   The pattern code (required by all types - CASE SENSITIVE)
 //                LABEL  Longer text identifier to use in legends etc. (up to 31 characters)
 //                DESCRIPTION Much longer text string (up to 127 characters).
 //                
-//                COLOR  Line colour used in patterns, and for solid colours, the colour.
+//                COLOR  Line color used in patterns, and for solid colors, the color.
 //                If only this field is found (and none below), the pattern file
 //                is assumed to be type TPAT_TYPE_COLOR.
 //                

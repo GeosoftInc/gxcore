@@ -506,7 +506,7 @@
 [_public] void
 CreateDup_DB (
               DB,      // DB input
-              string   // name of the Database File to Create
+              string   // Name of the Database File to Create
               );
 
 
@@ -525,7 +525,7 @@ CreateDup_DB (
 [_public] void
 CreateDupComp_DB (
                   DB,      // DB input
-                  string,  // name of the Database File to Create
+                  string,  // Name of the Database File to Create
                   int      // <define>DB_COMP</define>
                   );
 
@@ -582,12 +582,12 @@ EasyMakerSymb_DB (
 
 [_public] void
 GetChanStr_DB (
-               DB,          // database
-               DB_SYMB,     // line
-               DB_SYMB,     // channel
-               int,         // index
-               var string,  // string
-               int          // length
+               DB,          // Database
+               DB_SYMB,     // Line
+               DB_SYMB,     // Channel
+               int,         // Index
+               var string,  // String
+               int          // Length
                );
 
 #define _GetChanStr_DB(A, B, C, D, E) GetChanStr_DB(A, B, C, D, E, sizeof(E))
@@ -683,7 +683,7 @@ GetIPJ_DB (
 [_public] void
 GetITR_DB (
            DB,       // hDB
-           DB_SYMB,  // channel
+           DB_SYMB,  // Channel
            ITR       // ITR to fill in
            );
 
@@ -737,8 +737,8 @@ GetRegSymbSetting_DB (
                       DB,          // Database
                       DB_SYMB,     // Symbol, <define>NULLSYMB</define> for the database REG
                       string,      // REG entry name
-                      var string,  // returned setting
-                      int          // string length
+                      var string,  // Returned setting
+                      int          // String length
                       );
 
 #define _GetRegSymbSetting_DB(A, B, C, D) GetRegSymbSetting_DB(A, B, C, D, sizeof(D))
@@ -813,11 +813,11 @@ iChansMax_DB (
 
 [_public] void
 IFormatChan_DB (
-                DB,          // database
-                DB_SYMB,     // channel handle
-                real,        // value to format
-                var string,  // string
-                int          // string length
+                DB,          // Database
+                DB_SYMB,     // Channel handle
+                real,        // Value to format
+                var string,  // String
+                int          // String length
                 );
 
 #define FormatChan_DB(A, B, C, D) IFormatChan_DB(A, B, C, D, sizeof(D))
@@ -860,8 +860,8 @@ iGetChanArraySize_DB (
 IGetChanClass_DB (
                   DB,          // Database
                   DB_SYMB,     // Channel handle
-                  var string,  // returned class into
-                  int          // size of string
+                  var string,  // Returned class into
+                  int          // Size of string
                   );
 
 #define GetChanClass_DB(A, B, C) IGetChanClass_DB(A, B, C, sizeof(C))
@@ -928,10 +928,10 @@ iGetChanFormat_DB (
 
 [_public] int
 iGetChanInt_DB (
-                DB,       // database
-                DB_SYMB,  // line
-                DB_SYMB,  // channel
-                int       // index
+                DB,       // Database
+                DB_SYMB,  // Line
+                DB_SYMB,  // Channel
+                int       // Index
                 );
 
 
@@ -954,8 +954,8 @@ iGetChanInt_DB (
 IGetChanLabel_DB (
                   DB,          // Database
                   DB_SYMB,     // Channel handle
-                  var string,  // returned label into
-                  int          // size of string
+                  var string,  // Returned label into
+                  int          // Size of string
                   );
 
 #define GetChanLabel_DB(A, B, C) IGetChanLabel_DB(A, B, C, sizeof(C))
@@ -978,8 +978,8 @@ IGetChanLabel_DB (
 IGetChanName_DB (
                  DB,          // Database
                  DB_SYMB,     // Channel handle
-                 var string,  // string to place name into
-                 int          // maximum length of string, should be <define>DB_SYMB_NAME_SIZE</define> to hold all possible channel names.
+                 var string,  // String to place name into
+                 int          // Maximum length of string, should be <define>DB_SYMB_NAME_SIZE</define> to hold all possible channel names.
                  );
 
 #define GetChanName_DB(A, B, C) IGetChanName_DB(A, B, C, sizeof(C))
@@ -1045,8 +1045,8 @@ iGetChanType_DB (
 IGetChanUnit_DB (
                  DB,          // Database
                  DB_SYMB,     // Channel handle
-                 var string,  // string to place unit into
-                 int          // size of string
+                 var string,  // String to place unit into
+                 int          // Size of string
                  );
 
 #define GetChanUnit_DB(A, B, C) IGetChanUnit_DB(A, B, C, sizeof(C))
@@ -1084,8 +1084,8 @@ iGetChanWidth_DB (
 IGetName_DB (
              DB,          // Database Object
              int,         // <define>DB_NAME</define>
-             var string,  // name returned
-             int          // string size
+             var string,  // Name returned
+             int          // String size
              );
 
 #define GetName_DB(A, B, C) IGetName_DB(A, B, C, sizeof(C))
@@ -1133,8 +1133,8 @@ iGetRegSymbSetting_DB (
 IGetSymbName_DB (
                  DB,          // Database
                  DB_SYMB,     // Symbol handle
-                 var string,  // string to place name into
-                 int          // maximum length of string, should be <define>DB_SYMB_NAME_SIZE</define> to hold all possible channel names.
+                 var string,  // String to place name into
+                 int          // Maximum length of string, should be <define>DB_SYMB_NAME_SIZE</define> to hold all possible channel names.
                  );
 
 #define GetSymbName_DB(A, B, C) IGetSymbName_DB(A, B, C, sizeof(C))
@@ -1146,7 +1146,7 @@ IGetSymbName_DB (
 // Returns
 //
 // Notes         
-//               If a channel has an ITR, the ITR colours are  used to
+//               If a channel has an ITR, the ITR colors are used to
 //               display channel values in the spreadsheet.
 //               
 //               If a channel does not have an ITR, GetITR_DB will not change
@@ -1159,7 +1159,7 @@ IGetSymbName_DB (
 [_public] int
 iHaveITR_DB (
              DB,       // hDB
-             DB_SYMB   // channel
+             DB_SYMB   // Channel
              );
 
 
@@ -1180,9 +1180,9 @@ iHaveITR_DB (
 [_public] int
 IiCoordPair_DB (
                 DB,          // hDB - Shared Database
-                string,      // channel name
-                var string,  // string in which to place paired channel name
-                int          // string length
+                string,      // Channel name
+                var string,  // String in which to place paired channel name
+                int          // String length
                 );
 
 #define iCoordPair_DB(A, B, C) IiCoordPair_DB(A, B, C, sizeof(C))
@@ -1320,10 +1320,10 @@ ReadBlobBF_DB (
 
 [_public] real
 rGetChanReal_DB (
-                 DB,       // database
-                 DB_SYMB,  // line
-                 DB_SYMB,  // channel
-                 int       // index
+                 DB,       // Database
+                 DB_SYMB,  // Line
+                 DB_SYMB,  // Channel
+                 int       // Index
                  );
 
 
@@ -1392,7 +1392,7 @@ SetAllChanProtect_DB (
 SetChanClass_DB (
                  DB,       // Database
                  DB_SYMB,  // Channel handle
-                 string    // class
+                 string    // Class
                  );
 
 
@@ -1453,11 +1453,11 @@ SetChanFormat_DB (
 
 [_public] void
 SetChanInt_DB (
-               DB,       // database
-               DB_SYMB,  // line
-               DB_SYMB,  // channel
-               int,      // index
-               int       // value
+               DB,       // Database
+               DB_SYMB,  // Line
+               DB_SYMB,  // Channel
+               int,      // Index
+               int       // Value
                );
 
 
@@ -1479,7 +1479,7 @@ SetChanInt_DB (
 SetChanLabel_DB (
                  DB,       // Database
                  DB_SYMB,  // Channel handle
-                 string    // label
+                 string    // Label
                  );
 
 
@@ -1497,7 +1497,7 @@ SetChanLabel_DB (
 SetChanName_DB (
                 DB,       // Database
                 DB_SYMB,  // Channel handle
-                string    // string to set channel name to
+                string    // String to set channel name to
                 );
 
 
@@ -1541,11 +1541,11 @@ SetChanProtect_DB (
 
 [_public] void
 SetChanReal_DB (
-                DB,       // database
-                DB_SYMB,  // line
-                DB_SYMB,  // channel
-                int,      // index
-                real      // value
+                DB,       // Database
+                DB_SYMB,  // Line
+                DB_SYMB,  // Channel
+                int,      // Index
+                real      // Value
                 );
 
 
@@ -1564,11 +1564,11 @@ SetChanReal_DB (
 
 [_public] void
 SetChanStr_DB (
-               DB,       // database
-               DB_SYMB,  // line
-               DB_SYMB,  // channel
-               int,      // index
-               string    // string
+               DB,       // Database
+               DB_SYMB,  // Line
+               DB_SYMB,  // Channel
+               int,      // Index
+               string    // String
                );
 
 
@@ -1589,7 +1589,7 @@ SetChanStr_DB (
 SetChanUnit_DB (
                 DB,       // Database
                 DB_SYMB,  // Channel handle
-                string    // string to put channel unit
+                string    // String to put channel unit
                 );
 
 
@@ -1647,7 +1647,7 @@ SetIPJ_DB (
 [_public] void
 SetITR_DB (
            DB,       // hDB
-           DB_SYMB,  // channel
+           DB_SYMB,  // Channel
            ITR       // ITR to fill in
            );
 
@@ -1701,7 +1701,7 @@ SetRegSymbSetting_DB (
                       DB,       // Shared Database
                       DB_SYMB,  // Symbol, <define>NULLSYMB</define> for the database REG
                       string,   // REG entry name
-                      string    // setting
+                      string    // Setting
                       );
 
 
@@ -1771,7 +1771,7 @@ Compact_DB (
 
 [_public] void
 Create_DB (
-           string,  // name of the Database File to Create
+           string,  // Name of the Database File to Create
            int,     // Max Lines in the Database    (200)
            int,     // Max Channels in the Database (50)
            int,     // Max Blobs in the Database    (Channels+Lines+20)
@@ -1796,7 +1796,7 @@ Create_DB (
 
 [_public] void
 CreateComp_DB (
-               string,  // name of the Database File to Create
+               string,  // Name of the Database File to Create
                int,     // Max Lines in the Database    (200)
                int,     // Max Channels in the Database (50)
                int,     // Max Blobs in the Database    (Channels+Lines+20)
@@ -1823,7 +1823,7 @@ CreateComp_DB (
 
 [_public] void
 CreateEx_DB (
-             string,  // name of the Database File to Create
+             string,  // Name of the Database File to Create
              int,     // Max Lines in the Database    (200)
              int,     // Max Channels in the Database (50)
              int,     // Max Blobs in the Database    (Channels+Lines+20)
@@ -1913,7 +1913,7 @@ Discard_DB (
 
 [_public] void
 Grow_DB (
-         string,  // name of the Database File to Create
+         string,  // Name of the Database File to Create
          int,     // Max Lines in the Database    (200)
          int,     // Max Channels in the Database (50)
          int,     // Max Blobs in the Database    (Channels+Lines+20)
@@ -1939,7 +1939,7 @@ Grow_DB (
 
 [_public] int
 iCanOpen_DB (
-             string,  // name of the Database File to Open
+             string,  // Name of the Database File to Open
              string,  // Name of the user ("SUPER" normally)
              string   // Password of the user ("" normally)
              );
@@ -1962,7 +1962,7 @@ iCanOpen_DB (
 
 [_public] int
 iCanOpenReadOnly_DB (
-                     string,  // name of the Database File to Open
+                     string,  // Name of the Database File to Open
                      string,  // Name of the user ("SUPER" normally)
                      string   // Password of the user ("" normally)
                      );
@@ -2035,7 +2035,7 @@ iIsLineEmpty_DB (
 
 [_public] DB
 Open_DB (
-         string,  // name of the Database File to Open
+         string,  // Name of the Database File to Open
          string,  // Name of the user ("SUPER" normally)
          string   // Password of the user ("" normally)
          );
@@ -2058,7 +2058,7 @@ Open_DB (
 
 [_public] DB
 OpenReadOnly_DB (
-                 string,  // name of the Database File to Open
+                 string,  // Name of the Database File to Open
                  string,  // Name of the user ("SUPER" normally)
                  string   // Password of the user ("" normally)
                  );
@@ -2074,7 +2074,7 @@ OpenReadOnly_DB (
 
 [_public] void
 Repair_DB (
-           string   // name of the Database File to Create
+           string   // Name of the Database File to Create
            );
 
 
@@ -2524,10 +2524,10 @@ iLineFlight_DB (
 
 [_public] void
 ILineLabel_DB (
-               DB,          // database
-               DB_SYMB,     // line symbol
-               var string,  // string in which to place label
-               int,         // string length
+               DB,          // Database
+               DB_SYMB,     // Line symbol
+               var string,  // String in which to place label
+               int,         // String length
                int          // <define>DB_LINE_LABEL_FORMAT</define>
                );
 
@@ -2975,7 +2975,7 @@ GetMETA_DB (
 
 [_public] void
 SetMETA_DB (
-            DB,    // source DB
+            DB,    // Source DB
             META   // Meta object to add to database's meta
             );
 
@@ -3228,7 +3228,7 @@ CreateSymbEx_DB (
 CSVChanLST_DB (
                DB,      // hDB - Database Object
                LST,     // LST object to populate
-               string   // comma-separated list of channels
+               string   // Comma-separated list of channels
                );
 
 
@@ -3565,8 +3565,8 @@ iGetSymbLock_DB (
 IGetXYZChan_DB (
                 DB,          // hDB - Database object
                 int,         // <define>DB_CHAN_SYMBOL</define>
-                var string,  // returned name
-                int          // buffer length
+                var string,  // Returned name
+                int          // Buffer length
                 );
 
 #define GetXYZChan_DB(A, B, C) IGetXYZChan_DB(A, B, C, sizeof(C))
@@ -3721,7 +3721,7 @@ SetChanOrderLST_DB (
 SetXYZChan_DB (
                DB,      // hDB - Database object
                int,     // <define>DB_CHAN_SYMBOL</define>
-               string   // channel name
+               string   // Channel name
                );
 
 
@@ -3890,7 +3890,7 @@ AddComment_DB (
 AddIntComment_DB (
                   DB,      // Database Object
                   string,  // Comment
-                  int,     // value
+                  int,     // Value
                   int      // Indent comment one tab? <define>GEO_BOOL</define>
                   );
 
@@ -3976,7 +3976,7 @@ AddTimeComment_DB (
 [_public] void
 Associate_DB (
               DB,       // hDB - Shared Database
-              DB_SYMB,  // group line
+              DB_SYMB,  // Group line
               DB_SYMB   // Channel
               );
 
@@ -3998,7 +3998,7 @@ Associate_DB (
 [_public] void
 AssociateAll_DB (
                  DB,       // hDB - Shared Database
-                 DB_SYMB   // group line
+                 DB_SYMB   // Group line
                  );
 
 
@@ -4097,7 +4097,7 @@ GetChanVA_DB (
 [_public] void
 GetVAScaling_DB (
                  DB,        // hDB
-                 DB_SYMB,   // channel (Locked DB_LOCK_READWRITE)
+                 DB_SYMB,   // Channel (Locked DB_LOCK_READWRITE)
                  var real,  // Base value (rDummy for none)
                  var real   // Range value (rDummy for none)
                  );
@@ -4116,7 +4116,7 @@ GetVAScaling_DB (
 [_public] void
 GetVAWindows_DB (
                  DB,       // hDB
-                 DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
+                 DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
                  var int,  // First window (0 to N-2, iDummy for default)
                  var int   // Last window (1 to N-1, iDummy for default)
                  );
@@ -4135,7 +4135,7 @@ GetVAWindows_DB (
 [_public] void
 SetVABaseCoordinateInfo_DB (
                             DB,       // hDB
-                            DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
+                            DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
                             int,      // <define>DB_ARRAY_BASETYPE</define>
                             real,     // Optional offset or base frequency
                             VV,       // Values (one per array channel column) (REAL)
@@ -4157,12 +4157,12 @@ SetVABaseCoordinateInfo_DB (
 [_public] void
 GetVABaseCoordinateInfo_DB (
                             DB,          // hDB
-                            DB_SYMB,     // channel (Locked DB_LOCK_READONLY)
+                            DB_SYMB,     // Channel (Locked DB_LOCK_READONLY)
                             var int,     // <define>DB_ARRAY_BASETYPE</define>
                             var real,    // Optional offset or base frequency
                             VV,          // Values (one per array channel column) (REAL)
                             var string,  // Units
-                            int          // size of units string
+                            int          // Size of units string
                             );
 
 #define _GetVABaseCoordinateInfo_DB(A, B, C, D, E, F) GetVABaseCoordinateInfo_DB(A, B, C, D, E, F, sizeof(F))
@@ -4189,8 +4189,8 @@ GetVABaseCoordinateInfo_DB (
 IGetGroupClass_DB (
                    DB,          // hDB - Shared Database
                    DB_SYMB,     // Group line - DB_LOCK_READWRITE or DB_LOCK_READONLY
-                   var string,  // returned class name - max size = DB_GROUP_CLASS_SIZE - 1
-                   int          // buffer size
+                   var string,  // Returned class name - max size = DB_GROUP_CLASS_SIZE - 1
+                   int          // Buffer size
                    );
 
 #define GetGroupClass_DB(A, B, C) IGetGroupClass_DB(A, B, C, sizeof(C))
@@ -4212,7 +4212,7 @@ iGetInfo_DB (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// IGetVAProfColorFile_DB   Get colours for a VA channel when displayed in the profile window.
+// IGetVAProfColorFile_DB   Get colors for a VA channel when displayed in the profile window.
 //
 // Returns                  Nothing
 //
@@ -4224,9 +4224,9 @@ iGetInfo_DB (
 [_public] void
 IGetVAProfColorFile_DB (
                         DB,          // hDB
-                        DB_SYMB,     // channel (Locked DB_LOCK_READWRITE)
-                        var string,  // zone file name, "" to clear.
-                        int          // buffer size for string
+                        DB_SYMB,     // Channel (Locked DB_LOCK_READWRITE)
+                        var string,  // Zone file name, "" to clear.
+                        int          // Buffer size for string
                         );
 
 #define GetVAProfColorFile_DB(A, B, C) IGetVAProfColorFile_DB(A, B, C, sizeof(C))
@@ -4243,16 +4243,16 @@ IGetVAProfColorFile_DB (
 [_public] void
 IGetVAProfSectOption_DB (
                          DB,          // hDB
-                         DB_SYMB,     // channel (Locked DB_LOCK_READWRITE)
+                         DB_SYMB,     // Channel (Locked DB_LOCK_READWRITE)
                          var string,  // Option  "Profile", "Section" or "Section and Profile"
-                         int          // buffer size for string
+                         int          // Buffer size for string
                          );
 
 #define GetVAProfSectOption_DB(A, B, C) IGetVAProfSectOption_DB(A, B, C, sizeof(C))
 
 
 //-----------------------------------------------------------------------------------------------------------
-// IGetVASectColorFile_DB   Get colours for a VA channel when displayed section in the profile window.
+// IGetVASectColorFile_DB   Get colors for a VA channel when displayed section in the profile window.
 //
 // Returns                  Nothing
 //
@@ -4264,9 +4264,9 @@ IGetVAProfSectOption_DB (
 [_public] void
 IGetVASectColorFile_DB (
                         DB,          // hDB
-                        DB_SYMB,     // channel (Locked DB_LOCK_READWRITE)
-                        var string,  // zone file name
-                        int          // buffer size for string
+                        DB_SYMB,     // Channel (Locked DB_LOCK_READWRITE)
+                        var string,  // Zone file name
+                        int          // Buffer size for string
                         );
 
 #define GetVASectColorFile_DB(A, B, C) IGetVASectColorFile_DB(A, B, C, sizeof(C))
@@ -4365,29 +4365,29 @@ SetGroupClass_DB (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetVAProfColorFile_DB   Set colours for a VA channel when displayed in the profile window.
+// SetVAProfColorFile_DB   Set colors for a VA channel when displayed in the profile window.
 //
 // Returns                 Nothing
 //
 // Notes                   
 //                         Fails in the channel is not an array channel, if the
-//                         file does not exist, or if it is not a valid colour zone file.
+//                         file does not exist, or if it is not a valid color zone file.
 //                         
 //                         The individual columns in the array channel are displayed using the input
-//                         zone file colours. A linear ITR from 0 to 1 is created on the colour zones
+//                         zone file colors. A linear ITR from 0 to 1 is created on the color zones
 //                         to map to individual channel indices (expressed as a fraction as shown below).
 //                         
-//                         For instance, for a file with 8 colours the ranges are as follows:
+//                         For instance, for a file with 8 colors the ranges are as follows:
 //                         
-//                         Colour Range
-//                         Colour 1    0        > value >=  0.125
-//                         Colour 2    0.125    > value >=  0.25
-//                         Colour 3    0.25     > value >=  0.375
-//                         Colour 4    0.375    > value >=  0.5
-//                         Colour 5    0.5      > value >=  0.625
-//                         Colour 6    0.625    > value >=  0.75
-//                         Colour 7    0.75     > value >=  0.875
-//                         Colour 8    0.875    > value >=  1.0
+//                         Color Range
+//                         Color 1    0        > value >=  0.125
+//                         Color 2    0.125    > value >=  0.25
+//                         Color 3    0.25     > value >=  0.375
+//                         Color 4    0.375    > value >=  0.5
+//                         Color 5    0.5      > value >=  0.625
+//                         Color 6    0.625    > value >=  0.75
+//                         Color 7    0.75     > value >=  0.875
+//                         Color 8    0.875    > value >=  1.0
 //                         
 //                         When an array channel is displayed, the index of each element (column) is mapped
 //                         into the corresponding range above using the following formula:
@@ -4396,7 +4396,7 @@ SetGroupClass_DB (
 //                         
 //                         For an array with 8 columns, you get the following values:
 //                         
-//                         Column   Value    Colour
+//                         Column   Value    Color
 //                         0        0        1
 //                         1        0.14     2
 //                         2        0.28     3
@@ -4406,7 +4406,7 @@ SetGroupClass_DB (
 //                         6        0.86     7
 //                         7        1.0      8
 //                         
-//                         The colour file search path is: Local directory, then oasismontaj\tbl.
+//                         The color file search path is: Local directory, then oasismontaj\tbl.
 //                         
 //
 // Available               5.1.5
@@ -4415,8 +4415,8 @@ SetGroupClass_DB (
 [_public] void
 SetVAProfColorFile_DB (
                        DB,       // hDB
-                       DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
-                       string    // zone file name, "" to clear.
+                       DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
+                       string    // Zone file name, "" to clear.
                        );
 
 
@@ -4431,7 +4431,7 @@ SetVAProfColorFile_DB (
 [_public] void
 SetVAProfSectOption_DB (
                         DB,       // hDB
-                        DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
+                        DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
                         string    // Option  "Profile", "Section" or "Section and Profile"
                         );
 
@@ -4454,20 +4454,20 @@ SetVAProfSectOption_DB (
 [_public] void
 SetVAScaling_DB (
                  DB,       // hDB
-                 DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
+                 DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
                  real,     // Base value (rDummy for none)
                  real      // Range value (rDummy for none)
                  );
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetVASectColorFile_DB   Set colours for a VA channel when displayed section in the profile window.
+// SetVASectColorFile_DB   Set colors for a VA channel when displayed section in the profile window.
 //
 // Returns                 Nothing
 //
 // Notes                   
 //                         Fails in the channel is not an array channel, if the
-//                         file does not exist, or if it is not a valid colour zone file.
+//                         file does not exist, or if it is not a valid color zone file.
 //                         
 //
 // Available               5.1.6
@@ -4476,8 +4476,8 @@ SetVAScaling_DB (
 [_public] void
 SetVASectColorFile_DB (
                        DB,       // hDB
-                       DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
-                       string    // zone file name
+                       DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
+                       string    // Zone file name
                        );
 
 
@@ -4497,7 +4497,7 @@ SetVASectColorFile_DB (
 [_public] void
 SetVAWindows_DB (
                  DB,       // hDB
-                 DB_SYMB,  // channel (Locked DB_LOCK_READWRITE)
+                 DB_SYMB,  // Channel (Locked DB_LOCK_READWRITE)
                  int,      // First window (0 to N-1, iDummy for default)
                  int       // Last window (0 to N-1, iDummy for default)
                  );

@@ -73,7 +73,7 @@ CreateXYZ_DBWRITE (
 //-----------------------------------------------------------------------------------------------------------
 // Destroy_DBWRITE   Destroy DBWRITE handle.
 //
-// Returns           nothing
+// Returns           Nothing
 //
 // Available         9.0.0
 //
@@ -247,7 +247,7 @@ iGetChanArraySize_DBWRITE (
 //-----------------------------------------------------------------------------------------------------------
 // AddBlock_DBWRITE   Add the current block of data.
 //
-// Returns            nothing
+// Returns            Nothing
 //
 // Notes              
 //                    First, set up the data for each channel by copying values into the individual channel VVs and VAs.
@@ -266,7 +266,7 @@ AddBlock_DBWRITE (
 //-----------------------------------------------------------------------------------------------------------
 // Commit_DBWRITE   Commit remaining data to the database.
 //
-// Returns          nothing
+// Returns          Nothing
 //
 // Available        9.0.0
 //
@@ -280,7 +280,7 @@ Commit_DBWRITE (
 //-----------------------------------------------------------------------------------------------------------
 // TestFunc_DBWRITE   Temporary test function.
 //
-// Returns            nothing
+// Returns            Nothing
 //
 // Notes              
 //                    Designed to import the "Massive.xyz" file, which has data in the format "X Y Z Data".

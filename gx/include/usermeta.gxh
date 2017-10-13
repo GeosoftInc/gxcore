@@ -204,7 +204,7 @@ iCompare_USERMETA (
 IGetDataCreator_USERMETA (
                           USERMETA,    // USERMETA
                           var string,  // DataCreator returned
-                          int          // maximum name size
+                          int          // Maximum name size
                           );
 
 #define GetDataCreator_USERMETA(A, B) IGetDataCreator_USERMETA(A, B, sizeof(B))
@@ -221,8 +221,8 @@ IGetDataCreator_USERMETA (
 [_public] void
 IGetFormat_USERMETA (
                      USERMETA,    // USERMETA
-                     var string,  // title returned
-                     int          // maximum name size
+                     var string,  // Title returned
+                     int          // Maximum name size
                      );
 
 #define GetFormat_USERMETA(A, B) IGetFormat_USERMETA(A, B, sizeof(B))
@@ -240,7 +240,7 @@ IGetFormat_USERMETA (
 IGetMetaCreator_USERMETA (
                           USERMETA,    // USERMETA
                           var string,  // MetaCreator returned
-                          int          // maximum name size
+                          int          // Maximum name size
                           );
 
 #define GetMetaCreator_USERMETA(A, B) IGetMetaCreator_USERMETA(A, B, sizeof(B))
@@ -257,8 +257,8 @@ IGetMetaCreator_USERMETA (
 [_public] void
 IGetProject_USERMETA (
                       USERMETA,    // USERMETA
-                      var string,  // title returned
-                      int          // maximum name size
+                      var string,  // Title returned
+                      int          // Maximum name size
                       );
 
 #define GetProject_USERMETA(A, B) IGetProject_USERMETA(A, B, sizeof(B))
@@ -275,8 +275,8 @@ IGetProject_USERMETA (
 [_public] void
 IGetTitle_USERMETA (
                     USERMETA,    // USERMETA
-                    var string,  // title returned
-                    int          // maximum name size
+                    var string,  // Title returned
+                    int          // Maximum name size
                     );
 
 #define GetTitle_USERMETA(A, B) IGetTitle_USERMETA(A, B, sizeof(B))

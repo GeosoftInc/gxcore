@@ -43,7 +43,7 @@ CrossProduct_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // iAbs_MATH   Calculate absolute value
 //
-// Returns     integer
+// Returns     Integer
 //
 // Notes       Dummy values return dummy
 //
@@ -52,7 +52,7 @@ CrossProduct_MATH (
 
 [_public] int
 iAbs_MATH (
-           int   // integer
+           int   // Integer
            );
 
 
@@ -80,7 +80,7 @@ iAnd_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // iMod_MATH   Calculates the modulus of two integers
 //
-// Returns     int
+// Returns     Int
 //
 // Notes       If A or B is a dummy, returns dummy.
 //
@@ -118,7 +118,7 @@ iOr_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // iRound_MATH   Round to the nearest whole number
 //
-// Returns       integer
+// Returns       Integer
 //
 // Notes         
 //               Negative values with decimal parts larger than .5 round down (-1.5 -> 2.0)
@@ -131,7 +131,7 @@ iOr_MATH (
 
 [_public] int
 iRound_MATH (
-             real   // round
+             real   // Round
              );
 
 
@@ -228,7 +228,7 @@ Normalise3D_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rAbs_MATH   Calculate absolute value
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       Dummy values return dummy
 //
@@ -237,14 +237,14 @@ Normalise3D_MATH (
 
 [_public] real
 rAbs_MATH (
-           real   // real
+           real   // Real
            );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rArcCos_MATH   Calculate the arccosine
 //
-// Returns        real
+// Returns        Real
 //
 // Notes          Dummy values or values < -1 or > 1 return dummy
 //
@@ -253,14 +253,14 @@ rAbs_MATH (
 
 [_public] real
 rArcCos_MATH (
-              real   // real
+              real   // Real
               );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rArcSin_MATH   Calculate the arcsin
 //
-// Returns        real
+// Returns        Real
 //
 // Notes          Dummy values or values < -1 or > 1 return dummy
 //
@@ -269,14 +269,14 @@ rArcCos_MATH (
 
 [_public] real
 rArcSin_MATH (
-              real   // real
+              real   // Real
               );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rArcTan_MATH   Calculate the arctan
 //
-// Returns        real
+// Returns        Real
 //
 // Notes          Dummy values return dummy
 //
@@ -285,14 +285,14 @@ rArcSin_MATH (
 
 [_public] real
 rArcTan_MATH (
-              real   // real
+              real   // Real
               );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rArcTan2_MATH   Calculate ArcTan(Y/X)
 //
-// Returns         real
+// Returns         Real
 //
 // Notes           If either X or Y is a dummy, returns dummy
 //
@@ -309,7 +309,7 @@ rArcTan2_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rCeil_MATH   Calculates the ceiling of the value
 //
-// Returns      real
+// Returns      Real
 //
 // Notes        Dummy values return dummy
 //
@@ -318,14 +318,14 @@ rArcTan2_MATH (
 
 [_public] real
 rCeil_MATH (
-            real   // real
+            real   // Real
             );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rCos_MATH   Calculate the cosine
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       Dummy values return dummy
 //
@@ -360,7 +360,7 @@ rDotProduct3D_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rExp_MATH   Calculate e raised to the power of X
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       Dummy values return dummy
 //
@@ -376,7 +376,7 @@ rExp_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rFloor_MATH   Calculates the floor of the value
 //
-// Returns       real
+// Returns       Real
 //
 // Notes         Dummy values return dummy
 //
@@ -385,14 +385,14 @@ rExp_MATH (
 
 [_public] real
 rFloor_MATH (
-             real   // real
+             real   // Real
              );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rHypot_MATH   sqrt(X*X + Y*Y)
 //
-// Returns       real
+// Returns       Real
 //
 // Notes         If either X or Y is a dummy, the returned value is dummy
 //
@@ -452,7 +452,7 @@ rLambdaTransRev_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rLog_MATH   Calculate the natural log
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       Dummy values return dummy
 //
@@ -461,14 +461,14 @@ rLambdaTransRev_MATH (
 
 [_public] real
 rLog_MATH (
-           real   // real
+           real   // Real
            );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rLog10_MATH   Calculate the base 10 log
 //
-// Returns       real
+// Returns       Real
 //
 // Notes         Dummy values return dummy
 //
@@ -477,7 +477,7 @@ rLog_MATH (
 
 [_public] real
 rLog10_MATH (
-             real   // real
+             real   // Real
              );
 
 
@@ -520,7 +520,7 @@ rLogZ_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rMod_MATH   Calculates the modulus of two reals (A mod B)
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       
 //             The modulus of A with respect to B is defined
@@ -576,7 +576,7 @@ RotateVector_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rPow_MATH   Calculate X raised to the power of Y
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       If either X or Y is a dummy, returns dummy
 //
@@ -593,7 +593,7 @@ rPow_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rRand_MATH   Get a  random number between 0 and 1
 //
-// Returns      a real number
+// Returns      A real number
 //
 // Notes        
 //              Use SRand_MATH to seed the random number generator before a series of
@@ -612,7 +612,7 @@ rRand_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rRound_MATH   Round to n significant digits
 //
-// Returns       real
+// Returns       Real
 //
 // Notes         
 //               Negative values ending in 5XXX to n sig digits round down
@@ -625,8 +625,8 @@ rRand_MATH (
 
 [_public] real
 rRound_MATH (
-             real,  // real
-             int    // number of significant digits to round to
+             real,  // Real
+             int    // Number of significant digits to round to
              );
 
 
@@ -650,7 +650,7 @@ rSign_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rSin_MATH   Calculate the sin
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       Dummy values return dummy
 //
@@ -666,7 +666,7 @@ rSin_MATH (
 //-----------------------------------------------------------------------------------------------------------
 // rSqrt_MATH   Calculate the square root
 //
-// Returns      real
+// Returns      Real
 //
 // Notes        Dummy values return dummy
 //
@@ -675,14 +675,14 @@ rSin_MATH (
 
 [_public] real
 rSqrt_MATH (
-            real   // real
+            real   // Real
             );
 
 
 //-----------------------------------------------------------------------------------------------------------
 // rTan_MATH   Calculate the tangent
 //
-// Returns     real
+// Returns     Real
 //
 // Notes       Dummy values return dummy
 //
@@ -709,7 +709,7 @@ rTan_MATH (
 
 [_public] real
 rUnLogZ_MATH (
-              real,  // log value
+              real,  // Log value
               int,   // Log Mode (0 - Log, 1 - LogLinearLog)
               real   // Log Minimum (must be greater than 0)
               );

@@ -37,8 +37,8 @@
 [_licensed] MAPL
 Create_MAPL (
              string,  // MAPL file name
-             string,  // map base reference name
-             int      // start line number in file (0 is first)
+             string,  // Map base reference name
+             int      // Start line number in file (0 is first)
              );
 
 
@@ -59,8 +59,8 @@ Create_MAPL (
 [_licensed] MAPL
 CreateREG_MAPL (
                 string,  // MAPL file name
-                string,  // map base reference name
-                int,     // start line number in file (0 is first)
+                string,  // Map base reference name
+                int,     // Start line number in file (0 is first)
                 REG      // REG
                 );
 

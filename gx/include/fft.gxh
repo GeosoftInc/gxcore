@@ -23,10 +23,10 @@
 //
 // Detrending option
 //
-// FFT_DETREND_NONE   no trend remove
-// FFT_DETREND_ENDS   detrend order 1 using only two end points
-// FFT_DETREND_ALL    detrend order 1 using all data points
-// FFT_DETREND_MEAN   remove mean value
+// FFT_DETREND_NONE   No trend remove
+// FFT_DETREND_ENDS   Detrend order 1 using only two end points
+// FFT_DETREND_ALL    Detrend order 1 using all data points
+// FFT_DETREND_MEAN   Remove mean value
 //
 //===========================================================================================================
 
@@ -189,7 +189,7 @@ CreateEx_FFT (
               VV,    // VV to transform.
               real,  // Element space interval
               int,   // <define>FFT_DETREND</define>
-              real   // minimum expansion %
+              real   // Minimum expansion %
               );
 
 
@@ -230,7 +230,7 @@ CreateRefEx_FFT (
                  VV,    // VV contains channel data to perform FFT operations upon.
                  real,  // Element space interval, should be the same as in Create(Ex)_FFT() call
                  int,   // <define>FFT_DETREND</define>
-                 real,  // minimum expansion %, should be the same as in CreateEx_FFT() call
+                 real,  // Minimum expansion %, should be the same as in CreateEx_FFT() call
                  real   // DC level multiple
                  );
 
@@ -276,8 +276,8 @@ Gaus_FFT (
 [_extended] void
 GetVV_FFT (
            FFT,  // FFT
-           VV,   // real component
-           VV    // imaginary component
+           VV,   // Real component
+           VV    // Imaginary component
            );
 
 
@@ -431,8 +431,8 @@ rWaveIncr_FFT (
 [_extended] void
 SetVV_FFT (
            FFT,  // FFT
-           VV,   // real component
-           VV    // imaginary component
+           VV,   // Real component
+           VV    // Imaginary component
            );
 
 

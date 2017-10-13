@@ -49,7 +49,7 @@ OpenMVIEW_3DV (
 //-----------------------------------------------------------------------------------------------------------
 // ICopyToMAP_3DV   Copy the 3DV's 3D MVIEW into a map.
 //
-// Returns          nothing
+// Returns          Nothing
 //
 // Notes            
 //                  A 3DV packs all source files. This functions creates an unpacked map and

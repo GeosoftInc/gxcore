@@ -40,9 +40,9 @@
 //
 // Define	AOI_RETURN_STATE
 //
-// AOI Query Return State
+// AOI query return state
 //
-// AOI_RETURN_CANCEL     User Canceled
+// AOI_RETURN_CANCEL     User canceled
 // AOI_RETURN_NODEFINE   User chose to continue with no AOI defined or available
 // AOI_RETURN_DEFINE     User chose to continue and defined valid AOI parameters
 //
@@ -101,24 +101,24 @@
 //
 // Define	FILE_FILTER
 //
-// File Filters
+// File filters
 //
-// FILE_FILTER_ALL                       All Files              *.*                  ANYWHERE
+// FILE_FILTER_ALL                       All files              *.*                  ANYWHERE
 // FILE_FILTER_GDB                       Geosoft Database       *.gdb                LOCAL
 // FILE_FILTER_GX                        Geosoft Executable     *.gx                 GEOSOFT
 // FILE_FILTER_GS                        Geosoft Script         *.gs                 BOTH
-// FILE_FILTER_INI                       Parameter Files        *.ini                GEOSOFT
-// FILE_FILTER_OMN                       Oasis Menu Files       *.omn                GEOSOFT
-// FILE_FILTER_VU                        Oasis View Files       *.vu                 LOCAL
-// FILE_FILTER_MAP                       Oasis Map Files        *.map                LOCAL
-// FILE_FILTER_PRJ                       Projection File        *.prj                LOCAL
-// FILE_FILTER_CON                       Configuration File     *.con                LOCAL
-// FILE_FILTER_MNU                       Sushi MNU Files        *.mnu                GEOSOFT
-// FILE_FILTER_PDF                       PDF Files              *.pdf                GEOSOFT
+// FILE_FILTER_INI                       Parameter files        *.ini                GEOSOFT
+// FILE_FILTER_OMN                       Oasis Menu files       *.omn                GEOSOFT
+// FILE_FILTER_VU                        Oasis View files       *.vu                 LOCAL
+// FILE_FILTER_MAP                       Oasis Map files        *.map                LOCAL
+// FILE_FILTER_PRJ                       Projection file        *.prj                LOCAL
+// FILE_FILTER_CON                       Configuration file     *.con                LOCAL
+// FILE_FILTER_MNU                       Sushi MNU files        *.mnu                GEOSOFT
+// FILE_FILTER_PDF                       PDF files              *.pdf                GEOSOFT
 // FILE_FILTER_PLT                       Geosoft PLT files      *.plt                LOCAL
 // FILE_FILTER_GWS                       Geosoft workspace      *.gws                LOCAL
 // FILE_FILTER_AGG                       Aggregate              *.agg                LOCAL
-// FILE_FILTER_TBL                       Color Table            *.tbl                GEOSOFT
+// FILE_FILTER_TBL                       Color table            *.tbl                GEOSOFT
 // FILE_FILTER_ZON                       Zone                   *.zon                LOCAL
 // FILE_FILTER_ITR                       Image transform        *.itr                LOCAL
 // FILE_FILTER_DXF                       AutoCAD DXF files      *.dxf                LOCAL
@@ -126,38 +126,38 @@
 // FILE_FILTER_EMF                       Enhanced Metafies      *.emf                LOCAL
 // FILE_FILTER_BMP                       Bitmap files           *.bmp                LOCAL
 // FILE_FILTER_LUT                       ER Mapper LUT          *.lut                GEOSOFT
-// FILE_FILTER_PNG                       PNG Files              *.png                LOCAL
-// FILE_FILTER_JPG                       JPG Files              *.jpg                LOCAL
-// FILE_FILTER_PCX                       PCX Files              *.pcx                LOCAL
-// FILE_FILTER_GIF                       GIF Files              *.gif                LOCAL
-// FILE_FILTER_GRD                       GRD Files              *.grd                LOCAL
-// FILE_FILTER_ERS                       ERS Files              *.ers                LOCAL
-// FILE_FILTER_EPS                       EPS Files              *.eps                LOCAL
-// FILE_FILTER_SHP                       ArcView Shape Files    *.shp                LOCAL
-// FILE_FILTER_CGM                       CGM Files              *.cgm                LOCAL
-// FILE_FILTER_TAB                       MapInfo Tab Files      *.tab                LOCAL
+// FILE_FILTER_PNG                       PNG files              *.png                LOCAL
+// FILE_FILTER_JPG                       JPG files              *.jpg                LOCAL
+// FILE_FILTER_PCX                       PCX files              *.pcx                LOCAL
+// FILE_FILTER_GIF                       GIF files              *.gif                LOCAL
+// FILE_FILTER_GRD                       GRD files              *.grd                LOCAL
+// FILE_FILTER_ERS                       ERS files              *.ers                LOCAL
+// FILE_FILTER_EPS                       EPS files              *.eps                LOCAL
+// FILE_FILTER_SHP                       ArcView Shape files    *.shp                LOCAL
+// FILE_FILTER_CGM                       CGM files              *.cgm                LOCAL
+// FILE_FILTER_TAB                       MapInfo Tab files      *.tab                LOCAL
 // FILE_FILTER_COMPS                     Software Components    Components           LOCAL
-// FILE_FILTER_CSV                       MapInfo Tab Files      *.tab                LOCAL
+// FILE_FILTER_CSV                       MapInfo Tab files      *.tab                LOCAL
 // FILE_FILTER_GPF                       Geosoft Project        *.gpf                LOCAL
 // FILE_FILTER_PLY                       Geosoft Polygons       *.ply                LOCAL
 // FILE_FILTER_STM                       Scatter templates      *.stm                LOCAL
 // FILE_FILTER_TTM                       Triplot templates      *.ttm                LOCAL
-// FILE_FILTER_XYZ                       Geosoft XYZ Files      *.xyz                LOCAL
-// FILE_FILTER_BAR                       Geosoft Bar File       *.geobar             LOCAL
-// FILE_FILTER_GEOSOFT_LICENSE           Geosoft License Files   *.geosoft_license   LOCAL
-// FILE_FILTER_XML                       XML Files              *.xml                LOCAL
-// FILE_FILTER_GXNET                     GX.NET Files           *.dll                GEOSOFT
-// FILE_FILTER_ECW                       ECW Files              *.ecw                LOCAL
-// FILE_FILTER_J2K                       J2K JPEG 2000 Files    *.j2k                LOCAL
-// FILE_FILTER_JP2                       JP2 JPEG 2000 Files    *.jp2                LOCAL
+// FILE_FILTER_XYZ                       Geosoft XYZ files      *.xyz                LOCAL
+// FILE_FILTER_BAR                       Geosoft Bar file       *.geobar             LOCAL
+// FILE_FILTER_GEOSOFT_LICENSE           Geosoft License files   *.geosoft_license   LOCAL
+// FILE_FILTER_XML                       XML files              *.xml                LOCAL
+// FILE_FILTER_GXNET                     GX.NET files           *.dll                GEOSOFT
+// FILE_FILTER_ECW                       ECW files              *.ecw                LOCAL
+// FILE_FILTER_J2K                       J2K JPEG 2000 files    *.j2k                LOCAL
+// FILE_FILTER_JP2                       JP2 JPEG 2000 files    *.jp2                LOCAL
 // FILE_FILTER_SEL                       acQuire parameters     *.sel                LOCAL
-// FILE_FILTER_SVG                       SVG File               *.svg                LOCAL
-// FILE_FILTER_SVZ                       SVG Compressed File    *.svz                LOCAL
-// FILE_FILTER_WRP                       Warp File              *.wrp                LOCAL
-// FILE_FILTER_MAPPLOT                   MAPPLOT File           *.con                LOCAL
-// FILE_FILTER_DTM                       Surpac DTM Files       *.dtm                LOCAL
+// FILE_FILTER_SVG                       SVG file               *.svg                LOCAL
+// FILE_FILTER_SVZ                       SVG Compressed file    *.svz                LOCAL
+// FILE_FILTER_WRP                       Warp file              *.wrp                LOCAL
+// FILE_FILTER_MAPPLOT                   MAPPLOT file           *.con                LOCAL
+// FILE_FILTER_DTM                       Surpac DTM files       *.dtm                LOCAL
 // FILE_FILTER_VOXEL                     Geosoft Voxel          *.geosoft_voxel      LOCAL
-// FILE_FILTER_MAPTEMPLATE               Map Template File      *.geosoft_maptemplate      LOCAL
+// FILE_FILTER_MAPTEMPLATE               Map Template file      *.geosoft_maptemplate      LOCAL
 // FILE_FILTER_ACTION                    Action Scripts         *.action             LOCAL
 // FILE_FILTER_DM                        Datamine files         *.dm                 LOCAL
 // FILE_FILTER_KML                       Google Earth KML       *.kml                LOCAL
@@ -166,18 +166,18 @@
 // FILE_FILTER_TARGET_SECTION            Target parameter ini file for sections   *.ins    LOCAL
 // FILE_FILTER_TARGET_STRIPLOG           Target parameter ini file for strip logs *.inl    LOCAL
 // FILE_FILTER_TARGET_3D                 Target parameter ini file for 3D plots   *.in3    LOCAL
-// FILE_FILTER_ARGIS_LYR                 ArcGIS Layer Files			 *.lyr    LOCAL
-// FILE_FILTER_ARGIS_MXD                 ArcGIS Map Document Files	 *.mxd    LOCAL
-// FILE_FILTER_GOCAD_TS                  GOCAD TSurf Files			 *.ts     LOCAL
+// FILE_FILTER_ARGIS_LYR                 ArcGIS Layer files			 *.lyr    LOCAL
+// FILE_FILTER_ARGIS_MXD                 ArcGIS Map Document files	 *.mxd    LOCAL
+// FILE_FILTER_GOCAD_TS                  GOCAD TSurf files			 *.ts     LOCAL
 // FILE_FILTER_LST                       Geosoft list of items: names, values  *.lst     LOCAL
-// FILE_FILTER_ECS                       GM-SYS Extern Coord Sys *.ecs               LOCAL
+// FILE_FILTER_ECS                       GM-SYS external coordinate system     *.ecs     LOCAL
 // FILE_FILTER_TARGET_FENCE              Target parameter ini file for fence sections   *.ins    LOCAL
-// FILE_FILTER_GMS3D                     GMSYS 3D Model *.geosoft_gms3d LOCAL
+// FILE_FILTER_GMS3D                     GM-SYS 3D model   *.geosoft_gmsys3d    LOCAL
 // FILE_FILTER_BT2                       GEMCOM BT2 *.bt2 LOCAL
 // FILE_FILTER_BPR                       GEMCOM BPR *.bpr LOCAL
 // FILE_FILTER_BPR2                      GEMCOM BPR2 *.bpr2 LOCAL
-// FILE_FILTER_XLS                       Excel 97-2003 Workbook		*.xls					LOCAL
-// FILE_FILTER_XLSX                      Excel 2007 Workbook 			*.xlsx				LOCAL
+// FILE_FILTER_XLS                       Excel 97-2003 workbook		*.xls					LOCAL
+// FILE_FILTER_XLSX                      Excel 2007 workbook 			*.xlsx				LOCAL
 // FILE_FILTER_MDB                       Access 97-2003  				*.mdb 				LOCAL
 // FILE_FILTER_ACCDB                     Access 2007 					*.accdb 				LOCAL
 // FILE_FILTER_INTERSECTION_TBL          Levelling intersection		*.tbl					LOCAL
@@ -193,34 +193,34 @@
 // FILE_FILTER_ASCII_TEMPLATE_I3         ASCII Import Templates		   *.i3				LOCAL
 // FILE_FILTER_ODBC_TEMPLATE_I4          ODBC Import Templates		   *.i4				LOCAL
 // FILE_FILTER_EXP                       Math expression files		   *.exp  			LOCAL
-// FILE_FILTER_SEGY                      SEGY files							*.sgy  			LOCAL
+// FILE_FILTER_SEGY                      SEG-Y files							*.sgy  			LOCAL
 // FILE_FILTER_DAARC500                  DAARC500 files						xYYMMDD 		   LOCAL
 // FILE_FILTER_TXT                       Text files							*.txt  			LOCAL
 // FILE_FILTER_VOXEL_INVERSION           Voxi									*.geosoft_voxi	LOCAL
-// FILE_FILTER_GMS                       GM-SYS									*.gms	LOCAL
-// FILE_FILTER_FLT3D                     Geosoft 3D filter Files			*.flt3d			LOCAL
+// FILE_FILTER_GMS                       GM-SYS Profile model file		*.gms	LOCAL
+// FILE_FILTER_FLT3D                     Geosoft 3D filter files			*.flt3d			LOCAL
 // FILE_FILTER_RESOURCE_PACK             Geosoft Resource Update Packages *.geosoft_resource_pack LOCAL
-// FILE_FILTER_GEOSTRING                 Geostring Files *.geosoft_string LOCAL
-// FILE_FILTER_GEOSURFACE                Geosurface Files *.geosoft_surface LOCAL
+// FILE_FILTER_GEOSTRING                 Geostring files *.geosoft_string LOCAL
+// FILE_FILTER_GEOSURFACE                Geosurface files *.geosoft_surface LOCAL
 // FILE_FILTER_GEOSOFT3DV                Geosoft 3DV *.geosoft_3dv LOCAL
 // FILE_FILTER_VECTORVOXEL               Geosoft Vector Voxel *.geosoft_vectorvoxel LOCAL
 // FILE_FILTER_FLT                       Geosoft Filters *.flt LOCAL
 // FILE_FILTER_XYZ_TEMPLATE_O0           XYZ Export Templates *.o0 LOCAL
-// FILE_FILTER_GMS2D                     GMSYS 2D Model *.geosoft_gms2d LOCAL
+// FILE_FILTER_GMS2D                     GM-SYS Profile model    *.geosoft_gmsys2d   LOCAL
 // FILE_FILTER_IP_DATABASE_TEMPLATE      IP Database Template *.geosoft_ipdatabasetemplate LOCAL
 // FILE_FILTER_GEOSOFT_RESOURCE_MODULE   Geosoft Resource Module *.geosoft_resources  LOCAL
-// FILE_FILTER_VT                        Shell VT Files     *.vt        LOCAL
-// FILE_FILTER_INT                       Shell INT Files     *.int      LOCAL
-// FILE_FILTER_SGT                       Shell SGT Files     *.sgt      LOCAL
-// FILE_FILTER_IMGVIEW                   Image Viewer Files  *.imgview  LOCAL
-// FILE_FILTER_ZIP                       Zip Files  *.zip  LOCAL
+// FILE_FILTER_VT                        Shell VT files     *.vt        LOCAL
+// FILE_FILTER_INT                       Shell INT files     *.int      LOCAL
+// FILE_FILTER_SGT                       Shell SGT files     *.sgt      LOCAL
+// FILE_FILTER_IMGVIEW                   Image Viewer files  *.imgview  LOCAL
+// FILE_FILTER_ZIP                       Zip files  *.zip  LOCAL
 // FILE_FILTER_GPS_TABLE                 GPS Table *.tbl GEOSOFT
 // FILE_FILTER_VULCAN_TRIANGULATION      Maptek Vulcan trianguilation file   *.tbl     LOCAL
 // FILE_FILTER_VULCAN_BLOCK_MODEL        Maptek Vulcan block model file       *.bmf                        LOCAL
-// FILE_FILTER_PRJVIEW                   Layout Files  *.prjview  LOCAL
+// FILE_FILTER_PRJVIEW                   Layout files  *.prjview  LOCAL
 // FILE_FILTER_LEAPFROG_MODEL            Leapfrog model files  *.lfm  LOCAL
 // FILE_FILTER_IOGAS                     Reflex ioGAS files  *.gas  LOCAL
-// FILE_FILTER_ASEG_ESF                  ASEG ESF File  *.esf  LOCAL
+// FILE_FILTER_ASEG_ESF                  ASEG ESF file  *.esf  LOCAL
 // FILE_FILTER_LACOSTE_DAT               Micro-g LaCoste MGS-6 gravity files  *.DAT  LOCAL
 // FILE_FILTER_VAR                       Geosoft variogram file  *.var  LOCAL
 // FILE_FILTER_P190                      UKOOA data exchange file  *.p190  LOCAL
@@ -544,7 +544,7 @@ GetPrinterLST_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iGetWindowState_GUI   Retrieve the current state of the oasis Montaj window
+// iGetWindowState_GUI   Retrieve the current state of the Oasis montaj window
 //
 // Returns               <define>WINDOW_STATE</define>
 //
@@ -557,7 +557,7 @@ iGetWindowState_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetWindowState_GUI   Changes the state of the oasis Montaj window
+// SetWindowState_GUI   Changes the state of the Oasis montaj window
 //
 // Returns              Nothing
 //
@@ -571,7 +571,7 @@ SetWindowState_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// GetWindowPosition_GUI   Get the oasis Montaj window's position state
+// GetWindowPosition_GUI   Get the Oasis montaj window's position state
 //
 // Returns                 Nothing
 //
@@ -589,7 +589,7 @@ GetWindowPosition_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// SetWindowPosition_GUI   Get the oasis Montaj window's position and state
+// SetWindowPosition_GUI   Get the Oasis montaj window's position and state
 //
 // Returns                 Nothing
 //
@@ -607,7 +607,7 @@ SetWindowPosition_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// GetClientWindowArea_GUI   Get the location of the oasis montaj client window.
+// GetClientWindowArea_GUI   Get the location of the Oasis montaj client window.
 //
 // Returns                   Nothing
 //
@@ -658,19 +658,19 @@ VoxelStatHist_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iColorForm_GUI   Select a colour.
+// iColorForm_GUI   Select a color.
 //
 // Returns          0 - Ok
 //                  1 - Cancel
 //
-// Notes            Colour value is set on input, and new value returned.
-//                  If the input colour type is C_TRANSPARENT, then the color
+// Notes            Color value is set on input, and new value returned.
+//                  If the input color type is C_TRANSPARENT, then the color
 //                  is set to white, if any other type is input the output is
 //                  guaranteed to be of the same type.
 //                  
 //                  If the third flag is GS_TRUE is used, then on exit, if white is
 //                  selected, the user is prompted: 'Do you want white (Yes) or
-//                  "None" (No) ?' and the colour is converted as requested.
+//                  "None" (No) ?' and the color is converted as requested.
 //                  If this is not the case, the C_TRANSPARENT is converted
 //                  to white (if "Ok" is selected) and no choice is offered.
 //
@@ -679,7 +679,7 @@ VoxelStatHist_GUI (
 
 [_public_app] int
 iColorForm_GUI (
-                var int,  // Colour (modified)
+                var int,  // Color (modified)
                 int       // Ask about C_TRANSPARENT if white is selected (1: yes, 0: no)?
                 );
 
@@ -771,8 +771,8 @@ iCoordSysWizardLicensed_GUI (
 
 [_public_app] int
 iCoordSysWizardGrid_GUI (
-                         IPJ,       // original grid IPJ object
-                         IPJ,       // source (target) grid IPJ object. This is supplied so the modified orientation can be calculated and displayed.
+                         IPJ,       // Original grid IPJ object
+                         IPJ,       // Source (target) grid IPJ object. This is supplied so the modified orientation can be calculated and displayed.
                          int,       // Editable IPJ (0:No, 1:Yes)
                          int,       // <define>COORDSYS_MODE</define>
                          string,    // Data source label
@@ -805,8 +805,8 @@ iCoordSysWizardGrid_GUI (
 [_licensed_app] int
 iDatabaseType_GUI (
                    string,      // File Name
-                   var string,  // database type (returned)
-                   int          // size of type string
+                   var string,  // Database type (returned)
+                   int          // Size of type string
                    );
 
 #define _iDatabaseType_GUI(A, B) iDatabaseType_GUI(A, B, sizeof(B))
@@ -911,12 +911,12 @@ iFileFilterIndex_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iGCSDatumWarningSHP_GUI   Launch the GCS Datum Warning dialogue for SHP files.
+// iGCSDatumWarningSHP_GUI   Launch the GCS Datum Warning dialog for SHP files.
 //
 // Returns                   0 - Ok
 //                           1 - Cancel
 //
-// Notes                     Runs the GCS Warning dialogue with one data source
+// Notes                     Runs the GCS Warning dialog with one data source
 //
 // Available                 7.1.0
 //
@@ -929,12 +929,12 @@ iGCSDatumWarningSHP_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iGCSDatumWarningSHPDBEx_GUI   Launch the GCS Datum Warning dialogue for SHP files (Database).
+// iGCSDatumWarningSHPDBEx_GUI   Launch the GCS Datum Warning dialog for SHP files (Database).
 //
 // Returns                       0 - Ok
 //                               1 - Cancel
 //
-// Notes                         Runs the GCS Warning dialogue with multiple data sources (Database)
+// Notes                         Runs the GCS Warning dialog with multiple data sources (Database)
 //
 // Available                     7.1.0
 //
@@ -949,12 +949,12 @@ iGCSDatumWarningSHPDBEx_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// iGCSDatumWarningSHPEx_GUI   Launch the GCS Datum Warning dialogue for SHP files.
+// iGCSDatumWarningSHPEx_GUI   Launch the GCS Datum Warning dialog for SHP files.
 //
 // Returns                     0 - Ok
 //                             1 - Cancel
 //
-// Notes                       Runs the GCS Warning dialogue with multiple data sources
+// Notes                       Runs the GCS Warning dialog with multiple data sources
 //
 // Available                   7.1.0
 //
@@ -1132,7 +1132,7 @@ IiBrowseDir_GUI (
 // Notes                    The statistics object is required in order to determine
 //                          data ranges, percentiles, etc. Create it using
 //                          CreateExact_ST, or be sure to enable histogram statistics.
-//                          The colour transform file name is used as the default when the save
+//                          The color transform file name is used as the default when the save
 //                          button is pushed, and is updated both after the load and save buttons
 //                          are pushed by the value input or selected by the user.
 //
@@ -1145,7 +1145,7 @@ IiColorTransformEx_GUI (
                         ST,          // ST object (input)
                         int,         // Max number of zones (8 or 12)
                         int,         // Show file load/save buttons (TRUE or FALSE)?
-                        var string,  // Default colour transform file name
+                        var string,  // Default color transform file name
                         int          // Buffer size for the file name
                         );
 
@@ -1168,8 +1168,8 @@ IiColorTransformEx_GUI (
 //                           unless that data is already given in percent.
 //                           
 //                           If the file name is defined on input, the initial ITR will be loaded from it.
-//                           If it is left blank, a default 5-colour transform with
-//                           The colour transform file name is used as the default when the save
+//                           If it is left blank, a default 5-color transform with
+//                           The color transform file name is used as the default when the save
 //                           button is pushed, and is updated both after the load and save buttons
 //                           are pushed by the value input or selected by the user.
 //
@@ -1178,7 +1178,7 @@ IiColorTransformEx_GUI (
 
 [_licensed_app] int
 IiCumulativePercent_GUI (
-                         var string,  // Default colour transform file name
+                         var string,  // Default color transform file name
                          int,         // Buffer size for the file name
                          ITR          // ITR object (returned)
                          );
@@ -1297,7 +1297,7 @@ IiCustomFileForm_GUI (
 [_licensed_app] int
 IiImportDrillDatabaseADO2_GUI (
                                string,      // External database connection string (Blank for OLEDB Wizard)
-                               var string,  // template to make (if left blank, the created template name is returned)
+                               var string,  // Template to make (if left blank, the created template name is returned)
                                int,         // Size of the template name string
                                var string,  // Name of table
                                int,         // Size of table name string
@@ -1324,7 +1324,7 @@ IiImportDrillDatabaseADO2_GUI (
 [_licensed_app] int
 IiImportDrillDatabaseESRI_GUI (
                                string,      // External database connection string  (e.g. "d:\\Personal\\test.mdb|Table" or "d:\\File\\test.gdb|TableX|FeatureClassY)"
-                               var string,  // template to make (if left blank, the created template name is returned)
+                               var string,  // Template to make (if left blank, the created template name is returned)
                                int,         // Size of the template name string
                                var string,  // Name of table
                                int,         // Size of table name string
@@ -1356,10 +1356,10 @@ IiImportDrillDatabaseESRI_GUI (
 
 [_licensed_app] int
 IiImportDrillDatabaseODBC_GUI (
-                               var string,  // connection string
-                               int,         // size of connection string returned
-                               var string,  // template to make
-                               int,         // size of template string returned
+                               var string,  // Connection string
+                               int,         // Size of connection string returned
+                               var string,  // Template to make
+                               int,         // Size of template string returned
                                var string,  // Name of table
                                int,         // Size of table name string
                                var int,     // Type of import returned <define>DH_DATA</define>
@@ -1381,10 +1381,10 @@ IiImportDrillDatabaseODBC_GUI (
 
 [_licensed_app] int
 IiImportDrillDatabaseODBCMaxwell_GUI (
-                                      var string,  // connection string
-                                      int,         // size of connection string returned
-                                      var string,  // template to make
-                                      int,         // size of template string returned
+                                      var string,  // Connection string
+                                      int,         // Size of connection string returned
+                                      var string,  // Template to make
+                                      int,         // Size of template string returned
                                       var string,  // Name of table
                                       int,         // Size of table name string
                                       var int,     // Type of import returned <define>DH_DATA</define>
@@ -1405,8 +1405,8 @@ IiImportDrillDatabaseODBCMaxwell_GUI (
 
 [_licensed_app] int
 iImportAsciiWizard_GUI (
-                        string,  // data file name
-                        string   // template to make
+                        string,  // Data file name
+                        string   // Template to make
                         );
 
 
@@ -1421,8 +1421,8 @@ iImportAsciiWizard_GUI (
 
 [_licensed_app] int
 iImportChemDatabase_GUI (
-                         string,      // data file name
-                         string,      // template to make
+                         string,      // Data file name
+                         string,      // Template to make
                          var string,  // Name of table
                          int,         // Size of table name string
                          int          // <define>IMPCH_TYPE</define>
@@ -1447,7 +1447,7 @@ iImportChemDatabase_GUI (
 [_licensed_app] int
 iImportChemDatabaseADO_GUI (
                             string,      // External database connection string (Blank for OLEDB Wizard)
-                            string,      // template to make
+                            string,      // Template to make
                             var string,  // Name of table
                             int,         // Size of table name string
                             int          // <define>IMPCH_TYPE</define>
@@ -1631,7 +1631,7 @@ iImportDatabaseSQLADO_GUI (
 [_licensed_app] int
 iImportDrillDatabaseADO_GUI (
                              string,      // External database connection string (Blank for OLEDB Wizard)
-                             string,      // template to make
+                             string,      // Template to make
                              var string,  // Name of table
                              int,         // Size of table name string
                              var int,     // Type of import returned <define>DH_DATA</define>
@@ -1736,10 +1736,10 @@ iImportXYZTemplateEditor_GUI (
 IiODBCFileConnect_GUI (
                        string,      // File Name
                        var string,  // Connection string (returned)
-                       int,         // size of connection string
+                       int,         // Size of connection string
                        int,         // File Usage (0 - ODBC drivers not queried, 1 - Directory containing tables, 2 - File containing tables)
                        var string,  // Table name of file (returned if plUsage==1)
-                       int          // size of table name
+                       int          // Size of table name
                        );
 
 #define iODBCFileConnect_GUI(A, B, C, D) IiODBCFileConnect_GUI(A, B, sizeof(B), C, D, sizeof(D))
@@ -1759,14 +1759,14 @@ IiODBCFileConnect_GUI (
 [_public_app] int
 IiSymbolForm_GUI (
                   var string,  // Symbol font file name
-                  int,         // buffer size for symbol font face name
+                  int,         // Buffer size for symbol font face name
                   var int,     // Geosoft font? <define>GEO_BOOL</define>
-                  var int,     // weight <define>MVIEW_FONT_WEIGHT</define>
-                  var int,     // symbol number
-                  var real,    // symbol size
-                  var real,    // symbol angle
-                  var int,     // edge colour
-                  var int      // fill colour
+                  var int,     // Weight <define>MVIEW_FONT_WEIGHT</define>
+                  var int,     // Symbol number
+                  var real,    // Symbol size
+                  var real,    // Symbol angle
+                  var int,     // Edge color
+                  var int      // Fill color
                   );
 
 #define iSymbolForm_GUI(A, B, C, D, E, F, G, H) IiSymbolForm_GUI(A, sizeof(A), B, C, D, E, F, G, H)
@@ -1799,8 +1799,8 @@ iMetaDataTool_GUI (
 
 [_licensed_app] void
 ImportChemWizard_GUI (
-                      string,  // data file name
-                      string,  // template to make
+                      string,  // Data file name
+                      string,  // Template to make
                       int      // <define>IMPCH_TYPE</define>
                       );
 
@@ -1815,8 +1815,8 @@ ImportChemWizard_GUI (
 
 [_licensed_app] void
 ImportDrillWizard_GUI (
-                       string,   // data file name
-                       string,   // template to make
+                       string,   // Data file name
+                       string,   // Template to make
                        string,   // Name of table
                        int,      // Size of table name string
                        var int,  // Type of import returned <define>DH_DATA</define>
@@ -2115,7 +2115,7 @@ LaunchGeoXToolEx_GUI (
 [_public_app] void
 MetaDataViewer_GUI (
                     META,        // Meta object
-                    META_TOKEN,  // Root Token, H_META_INVALID_TOKEN for root
+                    META_TOKEN,  // Root token, H_META_INVALID_TOKEN for root
                     int          // Display schema information ?
                     );
 
@@ -2168,7 +2168,7 @@ SetProgAlwaysOn_GUI (
 
 
 //-----------------------------------------------------------------------------------------------------------
-// ShowDirectHist_GUI   Display Histogram of data directly
+// ShowDirectHist_GUI   Display histogram of data directly
 //
 // Returns              Nothing
 //
@@ -2225,7 +2225,7 @@ SimpleMapDialog_GUI (
 //
 // Returns                 Nothing
 //
-// Notes                   Displays the thematic voxel codes, colours, total volume for
+// Notes                   Displays the thematic voxel codes, colors, total volume for
 //                         each code, and number of valid items (cubes) for each code.
 //                         This is a replacement for the numeric stats done on normal
 //                         numerical voxel grids.

@@ -39,8 +39,8 @@
 
 [_public] void
 Copy_DOCU (
-           DOCU,  // destination DOCU
-           DOCU   // source DOCU
+           DOCU,  // Destination DOCU
+           DOCU   // Source DOCU
            );
 
 
@@ -96,7 +96,7 @@ Destroy_DOCU (
 [_public] void
 GetFile_DOCU (
               DOCU,    // DOCU
-              string   // file to which to write document
+              string   // File to which to write document
               );
 
 
@@ -119,7 +119,7 @@ GetFile_DOCU (
 [_public] void
 GetFileMeta_DOCU (
                   DOCU,    // DOCU
-                  string   // file to which to write document
+                  string   // File to which to write document
                   );
 
 
@@ -149,8 +149,8 @@ GetMETA_DOCU (
 [_public] void
 IDocName_DOCU (
                DOCU,        // DOCU
-               var string,  // buffer to fill with document name
-               int          // size of buffer
+               var string,  // Buffer to fill with document name
+               int          // Size of buffer
                );
 
 #define DocName_DOCU(A, B) IDocName_DOCU(A, B, sizeof(B))
@@ -167,8 +167,8 @@ IDocName_DOCU (
 [_public] void
 IFileName_DOCU (
                 DOCU,        // DOCU
-                var string,  // buffer to fill with document file name
-                int          // size of buffer
+                var string,  // Buffer to fill with document file name
+                int          // Size of buffer
                 );
 
 #define FileName_DOCU(A, B) IFileName_DOCU(A, B, sizeof(B))
@@ -279,9 +279,9 @@ Serial_DOCU (
 [_public] void
 SetFile_DOCU (
               DOCU,    // DOCU
-              string,  // document type
-              string,  // document name, if "" file name will be used
-              string   // document file, must exist
+              string,  // Document type
+              string,  // Document name, if "" file name will be used
+              string   // Document file, must exist
               );
 
 
@@ -312,9 +312,9 @@ SetFile_DOCU (
 [_public] void
 SetFileMeta_DOCU (
                   DOCU,    // DOCU
-                  string,  // document type extension
-                  string,  // document name, if NULL use file name
-                  string   // document file or URL
+                  string,  // Document type extension
+                  string,  // Document name, if NULL use file name
+                  string   // Document file or URL
                   );
 
 
