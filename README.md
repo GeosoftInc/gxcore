@@ -3,7 +3,7 @@ Geosoft GX Developer includes:
 
  | directory           | content                                    |
  |---------------------|--------------------------------------------|
- | examples            | C, C++, CSharp examples                    |
+ | examples            | C, C++, CSharp examples (for Python see gxpy and gxapi) |
  | gx/examples/desktop | Geosoft GXC source for all Geosoft GXs     |
  | gx/examples/include | Geosoft GXC documented header files (.gxh) |
  | include             | header files                               |
