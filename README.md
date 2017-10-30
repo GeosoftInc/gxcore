@@ -1,5 +1,8 @@
 # gxdeveloper
-Geosoft GX Developer includes:
+
+Geosoft GX Developer support files for GXC, C, C++ and CSharp.  
+
+See https://geosoftgxdev.atlassian.net/wiki/spaces/GD/overview for more information.
 
  | directory           | content                                    |
  |---------------------|--------------------------------------------|
