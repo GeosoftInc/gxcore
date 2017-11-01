@@ -8,9 +8,9 @@ Geosoft GX Wapper Function Headers
 
 */
 
-#include <windows.h>
+#ifdef _MSC_VER
 
-#ifdef C_MICROSOFT
+#include <windows.h>
 
 #define GX_WRAPPER_FUNC  __declspec(dllexport)
 #define GX_STANDARD_FUNC 

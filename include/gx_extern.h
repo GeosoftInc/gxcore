@@ -9,6 +9,7 @@
 #ifndef GX_EXTERN_H
 #define GX_EXTERN_H
 
+#include <Windows.h>
 
 #ifdef __cplusplus
 extern "C" {
