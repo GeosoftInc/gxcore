@@ -11,7 +11,7 @@ Refer to the documentation for more information.
 
 [C/C++ Development](https://geosoftgxdev.atlassian.net/wiki/spaces/GXD93/pages/78119004/C+C+Development)
 
-Also see the [Geosoft Inc . organization on Github](https://github.com/GeosoftInc) for the other programming language specific repos.
+Also see the [Geosoft Inc. organization on Github](https://github.com/GeosoftInc) for the other programming language specific repos.
 
 License
 -------
