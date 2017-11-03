@@ -8,9 +8,9 @@ Geosoft GX Wapper Function Headers
 
 */
 
-#ifdef _MSC_VER
-
 #include <windows.h>
+
+#ifdef C_MICROSOFT
 
 #define GX_WRAPPER_FUNC  __declspec(dllexport)
 #define GX_STANDARD_FUNC 
@@ -11254,13 +11254,15 @@ ConvertVectorToDouble_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_STR_PTR,
-                                  GX_CONST GX_STR_PTR);
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ConvertVectorToDouble_MULTIVOXSET(GX_VAR   GX_OBJECT_PTR,
                                       GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR,
-                                      GX_CONST GX_STR_PTR);
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR);
 
 /*---------------- CreateDoubleConstant_MULTIVOXSET[_public] ----------------*/
 
