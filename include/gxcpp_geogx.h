@@ -23625,11 +23625,11 @@ namespace geosoft
                gx_->throw_on_error();
             }
 
-            static void convert_vector_to_double(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4)
+            static void convert_vector_to_double(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, int32_t param5)
             {
                GXContextPtr gx_ = GXContext::current();
                ConvertVectorToDouble_MULTIVOXSET(
-                  gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str());
+                  gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), reinterpret_cast<const long*>(&param5));
                gx_->throw_on_error();
             }
 
