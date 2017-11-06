@@ -13,8 +13,8 @@ Refer to the documentation for more information.
 
 Also see the [Geosoft Inc. organization on Github](https://github.com/GeosoftInc) for the other programming language specific repos.
 
-How to build
-------------
+Quick Start
+-----------
 
 The `build.proj` and `env.targets` files contain [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) scripts that  can be used to build the examples or launch Visual Studio with the correct environments defined.
 
