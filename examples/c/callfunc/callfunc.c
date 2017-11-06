@@ -1,18 +1,19 @@
-//--------------------------------------------------------------------
-//
-// callfunc.c   Sample code to create a DLL that can be called from a GX.
-//
-// See callfunc.gxh for the GX prototype headers that describe the calling
-// parameters for these functions.
-//
-//    iSum_CALLFUNC      Return the sum of two long integers
-//    Sum_CALLFUNC       Return the sum of integers in a variable
-//    ChanBase_CALLFUNC  Add a base value to a channel of a database
-//
-//    iSumAandB_CALLFUNC    Add two numbers
-//    ShowMessage_CALLFUNC  Call An APP Function
-//
-//--------------------------------------------------------------------
+
+/**
+* @file callfunc.c
+* @date 
+* @brief Sample code to create a DLL that can be called from a GX.
+*
+* See callfunc.gxh for the GX prototype headers that describe the calling
+* parameters for these functions.
+* 
+*    iSum_CALLFUNC      Return the sum of two long integers
+*    Sum_CALLFUNC       Return the sum of integers in a variable
+*    ChanBase_CALLFUNC  Add a base value to a channel of a database
+* 
+*    iSumAandB_CALLFUNC    Add two numbers
+*    ShowMessage_CALLFUNC  Call An APP Function
+*/
 
 // --- STANDARD INCLUDES ---
 
