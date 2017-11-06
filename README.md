@@ -15,6 +15,9 @@ Also see the [Geosoft Inc. organization on Github](https://github.com/GeosoftInc
 
 Quick Start
 -----------
+### Configuration
+
+Select a __[Release](https://github.com/GeosoftInc/gxcore/releases)__ and download the source code compressed file.  Extract to a folder (e.g. ___c:\geosoft_code\gxcore___) on your system. This will contain the following sub-folders:
 
 The `build.proj` and `env.targets` files contain [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) scripts that  can be used to build the examples or launch Visual Studio with the correct environments defined.
 
@@ -23,6 +26,9 @@ The `build.proj` and `env.targets` files contain [MSBuild](https://docs.microsof
 The MSBuild scripts require [the MSBuild Extension Pack](http://www.msbuildextensionpack.com/).
 
 The commands are intended to be executed under the [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/en-us/dotnet/framework/tools/developer-command-prompt-for-vs)
+
+### GXC Build
+To build GX files for certain examples the build scripts assumes that a __[GXC Release](https://github.com/GeosoftInc/gxc/releases)__ is  available in the parent directory of the, (e.g. ___c:\geosoft_code\gxc___).
 
 ### Commandline Build
 ```
