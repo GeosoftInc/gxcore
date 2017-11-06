@@ -2,11 +2,11 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
    <Import Project="env.targets"/>
    
-   <Target Name="Build" DependsOnTargets="SetGXDeveloperEnvVariables">
+   <Target Name="Build" DependsOnTargets="SetGXCoreEnvVariables">
       <MSBuild Projects="examples\examples.sln" Properties="$(GXCoreBuildProperties)" BuildInParallel="true" />
    </Target>
    
-   <Target Name="StartDevEnv" DependsOnTargets="SetGXDeveloperEnvVariables">
+   <Target Name="StartDevEnv" DependsOnTargets="SetGXCoreEnvVariables">
       <MSBuild.ExtensionPack.Framework.AsyncExec Command="start devenv.exe"/>
    </Target>
 </Project>
