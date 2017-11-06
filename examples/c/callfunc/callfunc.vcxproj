@@ -43,12 +43,12 @@
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -68,7 +68,7 @@
       </DataExecutionPrevention>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -93,7 +93,7 @@
       </DataExecutionPrevention>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -103,9 +103,9 @@
     <None Include="callfunc.gxh" />
     <CustomBuild Include="callfunc1.gxc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXCRoot)\include
 "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXCRoot)\include
 "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
@@ -114,9 +114,9 @@
     </CustomBuild>
     <CustomBuild Include="callfunc2.gxc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXCRoot)\include
 "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXDeveloperRoot)\gx\include
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXCRoot)\include
 "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>

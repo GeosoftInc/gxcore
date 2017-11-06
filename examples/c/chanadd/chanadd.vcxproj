@@ -101,33 +101,33 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Ansi|x64'">$(ProjectName)_ansi</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Ansi|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Unicode|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug UTF8|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Ansi|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Unicode|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release UTF8|x64'">
-    <IncludePath>$(GXDeveloperRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GXDeveloperRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(GXCoreRoot)\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(GXCoreRoot)\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Ansi|x64'">
@@ -150,7 +150,7 @@
       </DataExecutionPrevention>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Ansi|x64'">
@@ -175,7 +175,7 @@
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Unicode|x64'">
@@ -198,7 +198,7 @@
       </DataExecutionPrevention>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Unicode|x64'">
@@ -223,7 +223,7 @@
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug UTF8|x64'">
@@ -246,7 +246,7 @@
       </DataExecutionPrevention>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release UTF8|x64'">
@@ -271,7 +271,7 @@
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>xcopy /Y /D $(GXDeveloperRoot)\redist\*.* $(OutDir)</Command>
+      <Command>xcopy /Y /D $(GXCoreRoot)\redist\*.* $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
