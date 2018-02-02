@@ -1156,6 +1156,8 @@
 // Class TB
 #define TB_SEARCH_BINARY    0
 #define TB_SEARCH_LINEAR    1
+#define TB_SORT_UNIQUE              0
+#define TB_SORT_ALLOW_DUPLICATES    1
 
 
 // Class TPAT

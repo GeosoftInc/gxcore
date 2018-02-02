@@ -9816,7 +9816,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GetDataProj_MAP(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Create_MAPL[_licensed] ----------------*/
+/*---------------- Create_MAPL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
 Create_MAPL(GX_VAR   GX_OBJECT_PTR,
@@ -9829,7 +9829,7 @@ Std_Create_MAPL(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_STR_PTR,
                 GX_CONST GX_LONG_PTR);
 
-/*---------------- CreateREG_MAPL[_licensed] ----------------*/
+/*---------------- CreateREG_MAPL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
 CreateREG_MAPL(GX_VAR   GX_OBJECT_PTR,
@@ -9853,7 +9853,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Destroy_MAPL(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Process_MAPL[_licensed] ----------------*/
+/*---------------- Process_MAPL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Process_MAPL(GX_VAR   GX_OBJECT_PTR,
@@ -9864,7 +9864,7 @@ Std_Process_MAPL(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ReplaceString_MAPL[_licensed] ----------------*/
+/*---------------- ReplaceString_MAPL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReplaceString_MAPL(GX_VAR   GX_OBJECT_PTR,
@@ -14852,7 +14852,7 @@ Std_ViewToUser_MVIEW(GX_VAR   GX_OBJECT_PTR,
                      GX_VAR   GX_DOUBLE_PTR,
                      GX_VAR   GX_DOUBLE_PTR);
 
-/*---------------- Arrow_MVU[_licensed] ----------------*/
+/*---------------- Arrow_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Arrow_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -14875,7 +14875,7 @@ Std_Arrow_MVU(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_DOUBLE_PTR,
               GX_CONST GX_LONG_PTR);
 
-/*---------------- ArrowVectorVV_MVU[_licensed] ----------------*/
+/*---------------- ArrowVectorVV_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ArrowVectorVV_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -14904,7 +14904,7 @@ Std_ArrowVectorVV_MVU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_LONG_PTR,
                       GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- BarChart_MVU[_licensed] ----------------*/
+/*---------------- BarChart_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 BarChart_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15007,7 +15007,7 @@ Std_CDIPixelPlot3D_MVU(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_HANDLE_PTR,
                        GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ColorBar_MVU[_licensed] ----------------*/
+/*---------------- ColorBar_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBar_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15030,7 +15030,7 @@ Std_ColorBar_MVU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_DOUBLE_PTR,
                  GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- ColorBar2_MVU[_licensed] ----------------*/
+/*---------------- ColorBar2_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBar2_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15055,7 +15055,7 @@ Std_ColorBar2_MVU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_DOUBLE_PTR,
                   GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- ColorBar2Style_MVU[_licensed] ----------------*/
+/*---------------- ColorBar2Style_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBar2Style_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15082,7 +15082,7 @@ Std_ColorBar2Style_MVU(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_DOUBLE_PTR,
                        GX_CONST GX_LONG_PTR);
 
-/*---------------- ColorBarHor_MVU[_licensed] ----------------*/
+/*---------------- ColorBarHor_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBarHor_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15107,7 +15107,7 @@ Std_ColorBarHor_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
-/*---------------- ColorBarHor2_MVU[_licensed] ----------------*/
+/*---------------- ColorBarHor2_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBarHor2_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15134,7 +15134,7 @@ Std_ColorBarHor2_MVU(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_DOUBLE_PTR,
                      GX_CONST GX_LONG_PTR);
 
-/*---------------- ColorBarHor2Style_MVU[_licensed] ----------------*/
+/*---------------- ColorBarHor2Style_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBarHor2Style_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15163,7 +15163,7 @@ Std_ColorBarHor2Style_MVU(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_LONG_PTR,
                           GX_CONST GX_LONG_PTR);
 
-/*---------------- ColorBarHorStyle_MVU[_licensed] ----------------*/
+/*---------------- ColorBarHorStyle_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBarHorStyle_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15190,7 +15190,7 @@ Std_ColorBarHorStyle_MVU(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_LONG_PTR,
                          GX_CONST GX_LONG_PTR);
 
-/*---------------- ColorBarStyle_MVU[_licensed] ----------------*/
+/*---------------- ColorBarStyle_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBarStyle_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15215,7 +15215,7 @@ Std_ColorBarStyle_MVU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_DOUBLE_PTR,
                       GX_CONST GX_LONG_PTR);
 
-/*---------------- ColorBarREG_MVU[_licensed] ----------------*/
+/*---------------- ColorBarREG_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ColorBarREG_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15230,7 +15230,7 @@ Std_ColorBarREG_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR,
                     GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Contour_MVU[_licensed] ----------------*/
+/*---------------- Contour_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Contour_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15243,7 +15243,7 @@ Std_Contour_MVU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_STR_PTR,
                 GX_CONST GX_STR_PTR);
 
-/*---------------- ContourPLY_MVU[_licensed] ----------------*/
+/*---------------- ContourPLY_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ContourPLY_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15258,7 +15258,7 @@ Std_ContourPLY_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_STR_PTR,
                    GX_CONST GX_STR_PTR);
 
-/*---------------- CSymbLegend_MVU[_licensed] ----------------*/
+/*---------------- CSymbLegend_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 CSymbLegend_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15281,7 +15281,7 @@ Std_CSymbLegend_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_STR_PTR,
                     GX_CONST GX_STR_PTR);
 
-/*---------------- DecayCurve_MVU[_licensed] ----------------*/
+/*---------------- DecayCurve_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 DecayCurve_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15330,7 +15330,7 @@ Std_DecayCurve_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_STR_PTR);
 
-/*---------------- DirectionPlot_MVU[_licensed] ----------------*/
+/*---------------- DirectionPlot_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 DirectionPlot_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15405,7 +15405,7 @@ Std_ExportDatamineString_MVU(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_HANDLE_PTR,
                              GX_CONST GX_STR_PTR);
 
-/*---------------- ExportDXF3D_MVU[_licensed] ----------------*/
+/*---------------- ExportDXF3D_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportDXF3D_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15433,7 +15433,7 @@ Std_ExportSurpacSTR_MVU(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_HANDLE_PTR,
                         GX_CONST GX_HANDLE_PTR);
 
-/*---------------- FlightPlot_MVU[_licensed] ----------------*/
+/*---------------- FlightPlot_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 FlightPlot_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15458,7 +15458,7 @@ Std_FlightPlot_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_DOUBLE_PTR,
                    GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- GenAreas_MVU[_licensed] ----------------*/
+/*---------------- GenAreas_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GenAreas_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15475,7 +15475,7 @@ Std_GenAreas_MVU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- GetRangeGOCADSurface_MVU[_licensed] ----------------*/
+/*---------------- GetRangeGOCADSurface_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GetRangeGOCADSurface_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15496,7 +15496,7 @@ Std_GetRangeGOCADSurface_MVU(GX_VAR   GX_OBJECT_PTR,
                              GX_VAR   GX_DOUBLE_PTR,
                              GX_VAR   GX_DOUBLE_PTR);
 
-/*---------------- Histogram_MVU[_licensed] ----------------*/
+/*---------------- Histogram_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Histogram_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15539,7 +15539,7 @@ Std_Histogram_MVU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Histogram2_MVU[_licensed] ----------------*/
+/*---------------- Histogram2_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Histogram2_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15592,7 +15592,7 @@ Std_Histogram2_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- Histogram3_MVU[_licensed] ----------------*/
+/*---------------- Histogram3_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Histogram3_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15639,7 +15639,7 @@ Std_Histogram3_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Histogram4_MVU[_licensed] ----------------*/
+/*---------------- Histogram4_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Histogram4_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15688,7 +15688,7 @@ Std_Histogram4_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
-/*---------------- Histogram5_MVU[_licensed] ----------------*/
+/*---------------- Histogram5_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Histogram5_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15741,7 +15741,7 @@ Std_Histogram5_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iExportableDXF3DGroupsLST_MVU[_licensed] ----------------*/
+/*---------------- iExportableDXF3DGroupsLST_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iExportableDXF3DGroupsLST_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15752,7 +15752,7 @@ Std_iExportableDXF3DGroupsLST_MVU(GX_VAR   GX_OBJECT_PTR,
                                   GX_CONST GX_HANDLE_PTR,
                                   GX_CONST GX_HANDLE_PTR);
 
-/*---------------- iMapsetTest_MVU[_licensed] ----------------*/
+/*---------------- iMapsetTest_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iMapsetTest_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15787,7 +15787,7 @@ Std_iMapsetTest_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- iMapset2Test_MVU[_licensed] ----------------*/
+/*---------------- iMapset2Test_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iMapset2Test_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15824,7 +15824,7 @@ Std_iMapset2Test_MVU(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_DOUBLE_PTR,
                      GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- ImportGOCADSurface_MVU[_licensed] ----------------*/
+/*---------------- ImportGOCADSurface_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ImportGOCADSurface_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -15979,7 +15979,7 @@ Std_MDF_MVU(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_STR_PTR,
             GX_CONST GX_STR_PTR);
 
-/*---------------- PathPlot_MVU[_licensed] ----------------*/
+/*---------------- PathPlot_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PathPlot_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16006,7 +16006,7 @@ Std_PathPlot_MVU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_DOUBLE_PTR,
                  GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- PathPlotEx_MVU[_licensed] ----------------*/
+/*---------------- PathPlotEx_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PathPlotEx_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16035,7 +16035,7 @@ Std_PathPlotEx_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_DOUBLE_PTR,
                    GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- PathPlotEx2_MVU[_licensed] ----------------*/
+/*---------------- PathPlotEx2_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PathPlotEx2_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16066,7 +16066,7 @@ Std_PathPlotEx2_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
-/*---------------- PlotVoxelSurface_MVU[_licensed] ----------------*/
+/*---------------- PlotVoxelSurface_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PlotVoxelSurface_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16083,7 +16083,7 @@ Std_PlotVoxelSurface_MVU(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_LONG_PTR,
                          GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- PlotVoxelSurface2_MVU[_licensed] ----------------*/
+/*---------------- PlotVoxelSurface2_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PlotVoxelSurface2_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16104,7 +16104,7 @@ Std_PlotVoxelSurface2_MVU(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_DOUBLE_PTR,
                           GX_CONST GX_STR_PTR);
 
-/*---------------- GenerateSurfaceFromVoxel_MVU[_licensed] ----------------*/
+/*---------------- GenerateSurfaceFromVoxel_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GenerateSurfaceFromVoxel_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16131,7 +16131,7 @@ Std_GenerateSurfaceFromVoxel_MVU(GX_VAR   GX_OBJECT_PTR,
                                  GX_CONST GX_DOUBLE_PTR,
                                  GX_CONST GX_STR_PTR);
 
-/*---------------- Post_MVU[_licensed] ----------------*/
+/*---------------- Post_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Post_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16158,7 +16158,7 @@ Std_Post_MVU(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_LONG_PTR,
              GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- PostEx_MVU[_licensed] ----------------*/
+/*---------------- PostEx_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PostEx_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16205,7 +16205,7 @@ Std_PostEx_MVU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_DOUBLE_PTR,
                GX_CONST GX_LONG_PTR);
 
-/*---------------- Probability_MVU[_licensed] ----------------*/
+/*---------------- Probability_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Probability_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16248,7 +16248,7 @@ Std_Probability_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_LONG_PTR,
                     GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ProfilePlot_MVU[_licensed] ----------------*/
+/*---------------- ProfilePlot_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ProfilePlot_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16275,7 +16275,7 @@ Std_ProfilePlot_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
-/*---------------- ProfilePlotEx_MVU[_licensed] ----------------*/
+/*---------------- ProfilePlotEx_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ProfilePlotEx_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16312,7 +16312,7 @@ Std_ProfilePlotEx_MVU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_STR_PTR,
                       GX_CONST GX_STR_PTR);
 
-/*---------------- PropSymbLegend_MVU[_licensed] ----------------*/
+/*---------------- PropSymbLegend_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 PropSymbLegend_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16341,7 +16341,7 @@ Std_PropSymbLegend_MVU(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_STR_PTR,
                        GX_CONST GX_STR_PTR);
 
-/*---------------- ReGenAreas_MVU[_licensed] ----------------*/
+/*---------------- ReGenAreas_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ReGenAreas_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16352,7 +16352,7 @@ Std_ReGenAreas_MVU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_STR_PTR);
 
-/*---------------- SymbOff_MVU[_licensed] ----------------*/
+/*---------------- SymbOff_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 SymbOff_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16371,7 +16371,7 @@ Std_SymbOff_MVU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- TextBox_MVU[_licensed] ----------------*/
+/*---------------- TextBox_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 TextBox_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16394,7 +16394,7 @@ Std_TextBox_MVU(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_LONG_PTR);
 
-/*---------------- Tick_MVU[_licensed] ----------------*/
+/*---------------- Tick_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 Tick_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16417,7 +16417,7 @@ Std_Tick_MVU(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_DOUBLE_PTR,
              GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- TickEx_MVU[_licensed] ----------------*/
+/*---------------- TickEx_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 TickEx_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -16442,7 +16442,7 @@ Std_TickEx_MVU(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_DOUBLE_PTR,
                GX_CONST GX_DOUBLE_PTR);
 
-/*---------------- TrndPath_MVU[_licensed] ----------------*/
+/*---------------- TrndPath_MVU[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 TrndPath_MVU(GX_VAR   GX_OBJECT_PTR,
@@ -21803,6 +21803,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Sort_TB(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_HANDLE_PTR,
             GX_CONST GX_LONG_PTR);
+
+/*---------------- SetSortMode_TB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetSortMode_TB(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetSortMode_TB(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR);
 
 /*---------------- AddColor_TPAT[_public] ----------------*/
 

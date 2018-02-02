@@ -3034,10 +3034,16 @@ namespace geosoft
             TB_SEARCH_LINEAR = 1
          };
 
-         enum TPAT_STRING_SIZE
-         {
-            TPAT_CODE_SIZE = 21,
-            TPAT_LABEL_SIZE = 32,
+            enum TB_SORT
+            {
+                TB_SORT_UNIQUE = 0,
+                TB_SORT_ALLOW_DUPLICATES = 1
+            };
+
+            enum TPAT_STRING_SIZE
+            {
+                TPAT_CODE_SIZE = 21,
+                TPAT_LABEL_SIZE = 32,
             TPAT_DESC_SIZE = 128,
             TPAT_SYMBFONT_SIZE = 32
          };
@@ -8017,11 +8023,19 @@ namespace geosoft
                GXContextPtr gx_ = GXContext::current();
                LoadGravity_DU(
                   gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), param4.c_str());
-               gx_->throw_on_error();
-            }
+                    gx_->throw_on_error();
+                }
 
-            static void load_ltb(GXDBPtr param1, int32_t param2, GXLTBPtr param3, DU_LOADLTB param4)
-            {
+                static void load_gravity_cg6(GXDBPtr param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    LoadGravityCG6_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
+                static void load_ltb(GXDBPtr param1, int32_t param2, GXLTBPtr param3, DU_LOADLTB param4)
+                {
                GXContextPtr gx_ = GXContext::current();
                LoadLTB_DU(
                   gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&param4));
@@ -30075,12 +30089,19 @@ namespace geosoft
                gx_->throw_on_error();
             }
 
-            void sort(int32_t param1)
-            {
-               Sort_TB(
-                  gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
-               gx_->throw_on_error();
-            }
+                void sort(int32_t param1)
+                {
+                    Sort_TB(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+
+                void set_sort_mode(TB_SORT param1)
+                {
+                    SetSortMode_TB(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
 
 
          };
