@@ -9,7 +9,6 @@
 #ifndef GX_EXTERN_H
 #define GX_EXTERN_H
 
-#include <Windows.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -269,10 +268,10 @@ static double * _d(double a)
 #define _nL(STRING)  (L ## STRING)
 
 __declspec(dllexport) const char* _cdecl CTranslateString(const char* domain, const char* msg_ctxt_id, const char* inStr);
-__declspec(dllexport) const wchar_t* _cdecl CTranslateStringW(const char* domain, const char* msg_ctxt_id, const char* inStr);
+__declspec(dllexport) const wchar_t* _cdecl CTranslateStringW(const char* domain, const char* msg_ctxt_id, const wchar_t* inStr);
 
 #define _(text)	CTranslateString(LANGUAGE_DOMAIN, MESSAGE_CONTEXT, text)
-#define _L(text)	CTranslateStringW(LANGUAGE_DOMAIN, MESSAGE_CONTEXT, text)
+#define _L(text)	CTranslateStringW(LANGUAGE_DOMAIN, MESSAGE_CONTEXT, L ## text)
 
 #endif
 

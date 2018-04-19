@@ -189,8 +189,6 @@
 #define DATE_FORMAT_YYYYMMDD    1
 #define DATE_FORMAT_DDMMYYYY    2
 #define DATE_FORMAT_MMDDYYYY    3
-#define GS_FALSE    0
-#define GS_TRUE     1
 #define iDUMMY    -2147483647
 #define rDUMMY    -1.0E32
 #define GS_S1MX         127
@@ -245,6 +243,8 @@
 #define STR_MULTI_PATH       16384
 #define GS_MAX_PATH          STR_FILE
 #define GS_MULTI_PATH        STR_MULTI_FILE
+#define GS_FALSE    0
+#define GS_TRUE     1
 #define GS_INT     0
 #define GS_REAL    1
 #define FORMAT_DECIMAL          0
@@ -305,6 +305,12 @@
 #define GIS_TYPE_GEMCOM       6
 #define GIS_TYPE_MICROMINE    7
 #define GIS_TYPE_MINESIGHT    8
+
+
+// Class GRID3D
+#define GRID3D_DOUBLE      0
+#define GRID3D_VECTOR      1
+#define GRID3D_THEMATIC    2
 
 
 // Class HGD
@@ -631,7 +637,7 @@
 #define META_CORE_TYPE_ClassType    -215
 
 
-// Class MULTIVOXSET
+// Class MULTIGRID3D
 #define DIRECTION3D_XYZ    0
 #define DIRECTION3D_YXZ    1
 #define DIRECTION3D_XZY    2
@@ -652,9 +658,15 @@
 #define FILTER3D_Y_GRADIENT        4
 #define FILTER3D_Z_GRADIENT        5
 #define FILTER3D_TOTAL_GRADIENT    6
-#define MULTIVOXSET_DIRECTGRID_MIN     0
-#define MULTIVOXSET_DIRECTGRID_MAX     1
-#define MULTIVOXSET_DIRECTGRID_MEAN    2
+#define MULTIGRID3D_DIRECTGRID_MIN     0
+#define MULTIGRID3D_DIRECTGRID_MAX     1
+#define MULTIGRID3D_DIRECTGRID_MEAN    2
+
+
+// Class MULTIGRID3DUTIL
+#define RBFKERNEL_DISTANCE          0
+#define RBFKERNEL_GUASSIAN          1
+#define RBFKERNEL_MULTIQUADRATIC    2
 
 
 // Class MVIEW
@@ -923,6 +935,9 @@
 #define ST2_PCORR    1
 
 
+// Class STORAGEPROJECT
+
+
 // Class STR
 #define FILE_EXT_ADD_IF_NONE    0
 #define FILE_EXT_FORCE          1
@@ -1156,6 +1171,8 @@
 // Class TB
 #define TB_SEARCH_BINARY    0
 #define TB_SEARCH_LINEAR    1
+#define TB_SORT_UNIQUE              0
+#define TB_SORT_ALLOW_DUPLICATES    1
 
 
 // Class TPAT

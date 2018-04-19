@@ -6812,6 +6812,17 @@ Std_LoadGravity_DU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_STR_PTR);
 
+/*---------------- LoadGravityCG6_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LoadGravityCG6_DU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LoadGravityCG6_DU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_STR_PTR);
+
 /*---------------- LoadLTB_DU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -8059,6 +8070,148 @@ Std_DirectGridItemCountsToVoxel_DU(GX_VAR   GX_OBJECT_PTR,
                                    GX_CONST GX_DOUBLE_PTR,
                                    GX_CONST GX_DOUBLE_PTR,
                                    GX_CONST GX_LONG_PTR);
+
+/*---------------- iEMTauAutomatic_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iEMTauAutomatic_DU(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_VAR   GX_LONG_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_VAR   GX_LONG_PTR,
+                   GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iEMTauAutomatic_DU(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_VAR   GX_LONG_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_LONG_PTR,
+                       GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iEMTauCalc_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iEMTauCalc_DU(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_DOUBLE_PTR,
+              GX_CONST GX_DOUBLE_PTR,
+              GX_CONST GX_DOUBLE_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_VAR   GX_LONG_PTR,
+              GX_VAR   GX_DOUBLE_PTR,
+              GX_VAR   GX_DOUBLE_PTR,
+              GX_VAR   GX_DOUBLE_PTR,
+              GX_VAR   GX_LONG_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iEMTauCalc_DU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_VAR   GX_LONG_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_LONG_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iEMTauLateTime_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iEMTauLateTime_DU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_VAR   GX_LONG_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_LONG_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iEMTauLateTime_DU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_VAR   GX_LONG_PTR,
+                      GX_VAR   GX_DOUBLE_PTR,
+                      GX_VAR   GX_DOUBLE_PTR,
+                      GX_VAR   GX_DOUBLE_PTR,
+                      GX_VAR   GX_LONG_PTR,
+                      GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iEMTauManual_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iEMTauManual_DU(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_VAR   GX_LONG_PTR,
+                GX_VAR   GX_DOUBLE_PTR,
+                GX_VAR   GX_DOUBLE_PTR,
+                GX_VAR   GX_DOUBLE_PTR,
+                GX_VAR   GX_LONG_PTR,
+                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iEMTauManual_DU(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_VAR   GX_LONG_PTR,
+                    GX_VAR   GX_DOUBLE_PTR,
+                    GX_VAR   GX_DOUBLE_PTR,
+                    GX_VAR   GX_DOUBLE_PTR,
+                    GX_VAR   GX_LONG_PTR,
+                    GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Create_DXFI[_public] ----------------*/
 
@@ -11766,6 +11919,17 @@ Std_RadSpc_FFT2(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR,
                 GX_CONST GX_STR_PTR);
 
+/*---------------- RadSpcAlt_FFT2[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadSpcAlt_FFT2(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadSpcAlt_FFT2(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR);
+
 /*---------------- RadSpc1_FFT2[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -13378,7 +13542,7 @@ GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 App_ImportDrillWizard_GUI(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_STR_PTR,
                           GX_CONST GX_STR_PTR,
-                          GX_CONST GX_STR_PTR,
+                          GX_VAR   GX_STR_PTR,
                           GX_CONST GX_LONG_PTR,
                           GX_VAR   GX_LONG_PTR,
                           GX_CONST GX_HANDLE_PTR);
@@ -13386,7 +13550,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_ImportDrillWizard_GUI(GX_VAR   GX_OBJECT_PTR,
                               GX_CONST GX_STR_PTR,
                               GX_CONST GX_STR_PTR,
-                              GX_CONST GX_STR_PTR,
+                              GX_VAR   GX_STR_PTR,
                               GX_CONST GX_LONG_PTR,
                               GX_VAR   GX_LONG_PTR,
                               GX_CONST GX_HANDLE_PTR);
@@ -13773,6 +13937,25 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_Show3DViewerDialog_GUI(GX_VAR   GX_OBJECT_PTR,
                                GX_CONST GX_STR_PTR,
                                GX_CONST GX_STR_PTR);
+
+/*---------------- iMultipleArrayChannelProfileViewer_GUI[_licensed_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iMultipleArrayChannelProfileViewer_GUI(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iMultipleArrayChannelProfileViewer_GUI(GX_VAR   GX_OBJECT_PTR,
+                                               GX_CONST GX_HANDLE_PTR,
+                                               GX_VAR   GX_STR_PTR,
+                                               GX_VAR   GX_STR_PTR,
+                                               GX_VAR   GX_STR_PTR,
+                                               GX_VAR   GX_STR_PTR,
+                                               GX_CONST GX_LONG_PTR);
 
 /*---------------- Create_HTTP[_public] ----------------*/
 
@@ -15253,6 +15436,35 @@ Std_GetQCChannel_IP(GX_VAR   GX_OBJECT_PTR,
                     GX_VAR   GX_STR_PTR,
                     GX_CONST GX_LONG_PTR);
 
+/*---------------- LocateContributingElectrodes_IP[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LocateContributingElectrodes_IP(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LocateContributingElectrodes_IP(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- iModifyJob_IPGUI[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -15302,6 +15514,17 @@ GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 iIPQCToolExists_IPGUI(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iIPQCToolExists_IPGUI(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- LaunchRemoveContributingElectrodesEXTTool_IPGUI[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LaunchRemoveContributingElectrodesEXTTool_IPGUI(GX_VAR   GX_OBJECT_PTR,
+                                                GX_CONST GX_STR_PTR,
+                                                GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LaunchRemoveContributingElectrodesEXTTool_IPGUI(GX_VAR   GX_OBJECT_PTR,
+                                                    GX_CONST GX_STR_PTR,
+                                                    GX_CONST GX_STR_PTR);
 
 /*---------------- _Clear_KGRD[_extended] ----------------*/
 
@@ -15996,56 +16219,6 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Bool_PGU(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_HANDLE_PTR,
              GX_CONST GX_STR_PTR);
-
-/*---------------- DirectGriddingDAT_PGU[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-DirectGriddingDAT_PGU(GX_VAR   GX_OBJECT_PTR,
-                      GX_CONST GX_HANDLE_PTR,
-                      GX_CONST GX_DOUBLE_PTR,
-                      GX_CONST GX_DOUBLE_PTR,
-                      GX_CONST GX_DOUBLE_PTR,
-                      GX_CONST GX_DOUBLE_PTR,
-                      GX_CONST GX_DOUBLE_PTR,
-                      GX_CONST GX_HANDLE_PTR,
-                      GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_DirectGriddingDAT_PGU(GX_VAR   GX_OBJECT_PTR,
-                          GX_CONST GX_HANDLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_HANDLE_PTR,
-                          GX_CONST GX_LONG_PTR);
-
-/*---------------- DirectGriddingDAT3D_PGU[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-DirectGriddingDAT3D_PGU(GX_VAR   GX_OBJECT_PTR,
-                        GX_CONST GX_HANDLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_DOUBLE_PTR,
-                        GX_CONST GX_HANDLE_PTR,
-                        GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_DirectGriddingDAT3D_PGU(GX_VAR   GX_OBJECT_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_LONG_PTR);
 
 /*---------------- DirectGriddingDB_PGU[_licensed] ----------------*/
 
@@ -17004,6 +17177,23 @@ Std_RunVV_RGRD(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_STR_PTR,
                GX_CONST GX_STR_PTR);
+
+/*---------------- RunList_RGRD[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RunList_RGRD(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_STR_PTR,
+             GX_CONST GX_STR_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_STR_PTR,
+             GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RunList_RGRD(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_STR_PTR);
 
 /*---------------- ApplyFilterToMask_SEMPLOT[_extended] ----------------*/
 
