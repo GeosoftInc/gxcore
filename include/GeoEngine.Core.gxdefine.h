@@ -664,9 +664,6 @@
 
 
 // Class MULTIGRID3DUTIL
-#define RBFKERNEL_DISTANCE          0
-#define RBFKERNEL_GUASSIAN          1
-#define RBFKERNEL_MULTIQUADRATIC    2
 
 
 // Class MVIEW

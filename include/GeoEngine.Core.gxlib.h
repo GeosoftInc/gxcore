@@ -12538,31 +12538,6 @@ Std_Filter_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_LONG_PTR,
                            GX_CONST GX_LONG_PTR);
 
-/*---------------- GenerateRBF_MULTIGRID3DUTIL[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-GenerateRBF_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_STR_PTR,
-                            GX_CONST GX_STR_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_LONG_PTR,
-                            GX_CONST GX_LONG_PTR,
-                            GX_CONST GX_LONG_PTR,
-                            GX_CONST GX_DOUBLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_GenerateRBF_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
-                                GX_CONST GX_HANDLE_PTR,
-                                GX_CONST GX_STR_PTR,
-                                GX_CONST GX_STR_PTR,
-                                GX_CONST GX_DOUBLE_PTR,
-                                GX_CONST GX_DOUBLE_PTR,
-                                GX_CONST GX_LONG_PTR,
-                                GX_CONST GX_LONG_PTR,
-                                GX_CONST GX_LONG_PTR,
-                                GX_CONST GX_DOUBLE_PTR);
-
 /*---------------- GridDirectFromGDB_MULTIGRID3DUTIL[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL

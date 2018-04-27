@@ -2075,13 +2075,6 @@ namespace geosoft
                 MULTIGRID3D_DIRECTGRID_MEAN = 2
             };
 
-            enum RBFKERNEL
-            {
-                RBFKERNEL_DISTANCE = 0,
-                RBFKERNEL_GUASSIAN = 1,
-                RBFKERNEL_MULTIQUADRATIC = 2
-            };
-
             enum MVG_DRAW
             {
                 MVG_DRAW_POLYLINE = 0,
@@ -4926,6 +4919,14 @@ namespace geosoft
                 {
                     GXContextPtr gx_ = GXContext::current();
                     LoadRaster_ARCMAP(
+                        gx_->pGeo, param1.c_str());
+                    gx_->throw_on_error();
+                }
+
+                static void load_raster_ex(const gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    LoadRasterEx_ARCMAP(
                         gx_->pGeo, param1.c_str());
                     gx_->throw_on_error();
                 }
@@ -21434,14 +21435,6 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     Filter_MULTIGRID3DUTIL(
                         gx_->pGeo, param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&param3), param4.c_str(), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6));
-                    gx_->throw_on_error();
-                }
-
-                static void generate_rbf(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, double param4, double param5, int32_t param6, int32_t param7, int32_t param8, double param9)
-                {
-                    GXContextPtr gx_ = GXContext::current();
-                    GenerateRBF_MULTIGRID3DUTIL(
-                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), &param4, &param5, reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8), &param9);
                     gx_->throw_on_error();
                 }
 

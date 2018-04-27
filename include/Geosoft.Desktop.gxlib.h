@@ -546,6 +546,15 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_LoadRaster_ARCMAP(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_STR_PTR);
 
+/*---------------- LoadRasterEx_ARCMAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LoadRasterEx_ARCMAP(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LoadRasterEx_ARCMAP(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR);
+
 /*---------------- LoadShape_ARCMAP[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
