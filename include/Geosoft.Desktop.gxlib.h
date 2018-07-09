@@ -8222,6 +8222,69 @@ Std_iEMTauManual_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_VAR   GX_LONG_PTR,
                     GX_CONST GX_HANDLE_PTR);
 
+/*---------------- EMTauTrendWindow_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+EMTauTrendWindow_DU(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_EMTauTrendWindow_DU(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- FootprintCoverageStatic_DU[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+FootprintCoverageStatic_DU(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_FootprintCoverageStatic_DU(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_VAR   GX_DOUBLE_PTR,
+                               GX_VAR   GX_DOUBLE_PTR,
+                               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- FootprintCoverageDynamic_DU[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+FootprintCoverageDynamic_DU(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_VAR   GX_DOUBLE_PTR,
+                            GX_VAR   GX_DOUBLE_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_FootprintCoverageDynamic_DU(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_VAR   GX_DOUBLE_PTR,
+                                GX_VAR   GX_DOUBLE_PTR,
+                                GX_CONST GX_HANDLE_PTR);
+
 /*---------------- Create_DXFI[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -12399,6 +12462,21 @@ Std_GravityStillReadingCorrection_GU(GX_VAR   GX_OBJECT_PTR,
                                      GX_CONST GX_STR_PTR,
                                      GX_CONST GX_LONG_PTR);
 
+/*---------------- DespikeEMArray_GU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DespikeEMArray_GU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DespikeEMArray_GU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_VAR   GX_LONG_PTR);
+
 /*---------------- iEMLayer_GU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -16229,97 +16307,6 @@ Std_Bool_PGU(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_HANDLE_PTR,
              GX_CONST GX_STR_PTR);
 
-/*---------------- DirectGriddingDB_PGU[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-DirectGriddingDB_PGU(GX_VAR   GX_OBJECT_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_LONG_PTR,
-                     GX_CONST GX_LONG_PTR,
-                     GX_CONST GX_LONG_PTR,
-                     GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_DirectGriddingDB_PGU(GX_VAR   GX_OBJECT_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_LONG_PTR,
-                         GX_CONST GX_LONG_PTR,
-                         GX_CONST GX_LONG_PTR,
-                         GX_CONST GX_LONG_PTR);
-
-/*---------------- DirectGriddingDB3D_PGU[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-DirectGriddingDB3D_PGU(GX_VAR   GX_OBJECT_PTR,
-                       GX_CONST GX_HANDLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_DOUBLE_PTR,
-                       GX_CONST GX_HANDLE_PTR,
-                       GX_CONST GX_LONG_PTR,
-                       GX_CONST GX_LONG_PTR,
-                       GX_CONST GX_LONG_PTR,
-                       GX_CONST GX_LONG_PTR,
-                       GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_DirectGriddingDB3D_PGU(GX_VAR   GX_OBJECT_PTR,
-                           GX_CONST GX_HANDLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_DOUBLE_PTR,
-                           GX_CONST GX_HANDLE_PTR,
-                           GX_CONST GX_LONG_PTR,
-                           GX_CONST GX_LONG_PTR,
-                           GX_CONST GX_LONG_PTR,
-                           GX_CONST GX_LONG_PTR,
-                           GX_CONST GX_LONG_PTR);
-
-/*---------------- DirectGriddingVV_PGU[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-DirectGriddingVV_PGU(GX_VAR   GX_OBJECT_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_DOUBLE_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_DirectGriddingVV_PGU(GX_VAR   GX_OBJECT_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_DOUBLE_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_LONG_PTR);
-
 /*---------------- Expand_PGU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -16910,6 +16897,97 @@ GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
 Std_rMaximumTerrainSteepness_PGU(GX_VAR   GX_OBJECT_PTR,
                                  GX_CONST GX_HANDLE_PTR,
                                  GX_CONST GX_LONG_PTR);
+
+/*---------------- DirectGriddingDB_PGU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DirectGriddingDB_PGU(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DirectGriddingDB_PGU(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR);
+
+/*---------------- DirectGriddingDB3D_PGU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DirectGriddingDB3D_PGU(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DirectGriddingDB3D_PGU(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_LONG_PTR);
+
+/*---------------- DirectGriddingVV_PGU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DirectGriddingVV_PGU(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DirectGriddingVV_PGU(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR);
 
 /*---------------- iLaunch_PRAGA3[_extended] ----------------*/
 

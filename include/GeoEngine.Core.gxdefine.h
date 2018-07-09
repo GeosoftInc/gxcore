@@ -538,6 +538,7 @@
 #define DUPMAP_BLANK         0
 #define DUPMAP_COPY          1
 #define DUPMAP_COPY_PRE62    2
+#define MAP_EXPORT_BITS_32         32
 #define MAP_EXPORT_BITS_24         24
 #define MAP_EXPORT_BITS_GREY8      9
 #define MAP_EXPORT_BITS_8          8
@@ -584,6 +585,22 @@
 
 
 // Class MATH
+
+
+// Class MESH
+#define ATTRIBUTE_DOUBLE      0
+#define ATTRIBUTE_THEMATIC    1
+#define ATTRIBUTE_VECTOR      2
+#define ATTRIBUTE_SINGLE           0
+#define ATTRIBUTE_SURFACE_SIDES    1
+#define ATTRIBUTE_VERTICES         2
+#define ATTRIBUTE_FACES            3
+
+
+// Class MESHUTIL
+#define SURFACE_CLIP_ABOVE    0
+#define SURFACE_CLIP_BELOW    1
+#define SURFACE_CLIP_BOTH     2
 
 
 // Class META
@@ -637,6 +654,9 @@
 #define META_CORE_TYPE_ClassType    -215
 
 
+// Class MPLY
+
+
 // Class MULTIGRID3D
 #define DIRECTION3D_XYZ    0
 #define DIRECTION3D_YXZ    1
@@ -658,12 +678,16 @@
 #define FILTER3D_Y_GRADIENT        4
 #define FILTER3D_Z_GRADIENT        5
 #define FILTER3D_TOTAL_GRADIENT    6
-#define MULTIGRID3D_DIRECTGRID_MIN     0
-#define MULTIGRID3D_DIRECTGRID_MAX     1
-#define MULTIGRID3D_DIRECTGRID_MEAN    2
+#define MULTIGRID3D_DIRECTGRID_MINIMUM       0
+#define MULTIGRID3D_DIRECTGRID_MAXIMUM       1
+#define MULTIGRID3D_DIRECTGRID_MEAN          2
+#define MULTIGRID3D_DIRECTGRID_ITEMS         3
+#define MULTIGRID3D_DIRECTGRID_DUMMYITEMS    4
 
 
 // Class MULTIGRID3DUTIL
+#define RBFKERNEL_DISTANCE          0
+#define RBFKERNEL_MULTIQUADRATIC    1
 
 
 // Class MVIEW
@@ -1237,6 +1261,9 @@
 
 
 // Class VOXD
+#define VOXELRENDER_SMOOTH    0
+#define VOXELRENDER_FILL      1
+#define VOXELRENDER_EDGES     2
 
 
 // Class VOXE
@@ -1259,8 +1286,10 @@
 #define VV_FLOAT_CRC_BITS_MAX        22
 #define VV_LOG_BASE_10    0
 #define VV_LOG_BASE_E     1
-#define VV_LOG_NEGATIVE_NO     0
-#define VV_LOG_NEGATIVE_YES    1
+#define VV_LOGMODE_CLIPPED    0
+#define VV_LOGMODE_SCALED     1
+#define VV_LOGMODE_CLAMPED    2
+#define VV_LOGMODE_LINEAR     3
 #define VV_LOOKUP_EXACT           0
 #define VV_LOOKUP_NEAREST         1
 #define VV_LOOKUP_INTERPOLATE     2

@@ -10784,6 +10784,379 @@ SRand_MATH(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_SRand_MATH(GX_VAR   GX_OBJECT_PTR);
 
+/*---------------- Create_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Create_MESH(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Create_MESH(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_STR_PTR);
+
+/*---------------- Open_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Open_MESH(GX_VAR   GX_OBJECT_PTR,
+          GX_CONST GX_STR_PTR,
+          GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Open_MESH(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_STR_PTR,
+              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- InsertPatch_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+InsertPatch_MESH(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_InsertPatch_MESH(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR);
+
+/*---------------- DeletePatch_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeletePatch_MESH(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeletePatch_MESH(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_LONG_PTR);
+
+/*---------------- PatchExists_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+PatchExists_MESH(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_PatchExists_MESH(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_LONG_PTR);
+
+/*---------------- NumPatches_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+NumPatches_MESH(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_NumPatches_MESH(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR);
+
+/*---------------- AddVertex_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddVertex_MESH(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_DOUBLE_PTR,
+               GX_CONST GX_DOUBLE_PTR,
+               GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddVertex_MESH(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- NumVertices_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+NumVertices_MESH(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_NumVertices_MESH(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_LONG_PTR);
+
+/*---------------- AddFace_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddFace_MESH(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_STR_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddFace_MESH(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR);
+
+/*---------------- NumFaces_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+NumFaces_MESH(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_STR_PTR,
+              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_NumFaces_MESH(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_LONG_PTR);
+
+/*---------------- GetVertexPoint_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetVertexPoint_MESH(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_VAR   GX_DOUBLE_PTR,
+                    GX_VAR   GX_DOUBLE_PTR,
+                    GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetVertexPoint_MESH(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_VAR   GX_DOUBLE_PTR,
+                        GX_VAR   GX_DOUBLE_PTR,
+                        GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- GetVertices_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetVertices_MESH(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetVertices_MESH(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetFaces_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetFaces_MESH(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_STR_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetFaces_MESH(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+
+/*---------------- InsertAttributes_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+InsertAttributes_MESH(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_InsertAttributes_MESH(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR);
+
+/*---------------- SetAttributeValues_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetAttributeValues_MESH(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetAttributeValues_MESH(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetAttributeValues_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetAttributeValues_MESH(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetAttributeValues_MESH(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ImportGridToMesh_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+ImportGridToMesh_MESH(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_ImportGridToMesh_MESH(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR);
+
+/*---------------- Save_MESH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Save_MESH(GX_VAR   GX_OBJECT_PTR,
+          GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Save_MESH(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ClipSurfaceWithGrid_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ClipSurfaceWithGrid_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ClipSurfaceWithGrid_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR);
+
+/*---------------- ClipSurfaceWithExtents_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ClipSurfaceWithExtents_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ClipSurfaceWithExtents_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- ClipSurfaceWithPolygon2d_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ClipSurfaceWithPolygon2d_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ClipSurfaceWithPolygon2d_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR);
+
+/*---------------- ComputeSurfaceUnion_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComputeSurfaceUnion_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComputeSurfaceUnion_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR);
+
+/*---------------- ComputeSurfaceClip_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComputeSurfaceClip_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComputeSurfaceClip_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR);
+
 /*---------------- CreateAttrib_META[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -11356,6 +11729,22 @@ Std_ResolveUMN_META(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR,
                     GX_CONST GX_STR_PTR);
 
+/*---------------- Create_MPLY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Create_MPLY(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Create_MPLY(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- Destroy_MPLY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Destroy_MPLY(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Destroy_MPLY(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+
 /*---------------- Open_MULTIGRID3D[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -11752,6 +12141,21 @@ Std_GetSectionCellSizes_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
                                     GX_VAR   GX_DOUBLE_PTR,
                                     GX_VAR   GX_DOUBLE_PTR);
 
+/*---------------- GetVectorOrientation_MULTIGRID3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetVectorOrientation_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetVectorOrientation_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_LONG_PTR);
+
 /*---------------- Fill_MULTIGRID3D[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -11897,6 +12301,48 @@ GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
 Std_ExportToPG_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_HANDLE_PTR);
 
+/*---------------- GetDataExtents_MULTIGRID3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetDataExtents_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetDataExtents_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR);
+
+/*---------------- GetDataGroundExtents_MULTIGRID3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetDataGroundExtents_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetDataGroundExtents_MULTIGRID3D(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR);
+
 /*---------------- ImportFromXYZ_MULTIGRID3DUTIL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -12023,6 +12469,17 @@ Std_ListPropertiesGOCAD_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_STR_PTR,
                                         GX_CONST GX_HANDLE_PTR);
 
+/*---------------- ImportFromSegy_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ImportFromSegy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ImportFromSegy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR);
+
 /*---------------- ImportFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -12065,11 +12522,9 @@ GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ExportToSEGY_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_STR_PTR,
                              GX_CONST GX_STR_PTR,
-                             GX_CONST GX_STR_PTR,
                              GX_CONST GX_DOUBLE_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ExportToSEGY_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
-                                 GX_CONST GX_STR_PTR,
                                  GX_CONST GX_STR_PTR,
                                  GX_CONST GX_STR_PTR,
                                  GX_CONST GX_DOUBLE_PTR);
@@ -12156,6 +12611,25 @@ Std_ConvertVectorToDouble_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                           GX_CONST GX_STR_PTR,
                                           GX_CONST GX_LONG_PTR);
 
+/*---------------- ConvertVectorToDoubleUsingRotation_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ConvertVectorToDoubleUsingRotation_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                                   GX_CONST GX_STR_PTR,
+                                                   GX_CONST GX_STR_PTR,
+                                                   GX_CONST GX_STR_PTR,
+                                                   GX_CONST GX_STR_PTR,
+                                                   GX_CONST GX_DOUBLE_PTR,
+                                                   GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ConvertVectorToDoubleUsingRotation_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                                       GX_CONST GX_STR_PTR,
+                                                       GX_CONST GX_STR_PTR,
+                                                       GX_CONST GX_STR_PTR,
+                                                       GX_CONST GX_STR_PTR,
+                                                       GX_CONST GX_DOUBLE_PTR,
+                                                       GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- ConvertThematicToDouble_MULTIGRID3DUTIL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -12175,10 +12649,12 @@ GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ConvertDoubleToThematic_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_STR_PTR,
                                         GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
                                         GX_CONST GX_STR_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ConvertDoubleToThematic_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                             GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_HANDLE_PTR,
                                             GX_CONST GX_HANDLE_PTR,
                                             GX_CONST GX_STR_PTR);
 
@@ -12538,6 +13014,68 @@ Std_Filter_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_LONG_PTR,
                            GX_CONST GX_LONG_PTR);
 
+/*---------------- InvertZ_MULTIGRID3DUTIL[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+InvertZ_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_InvertZ_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
+
+/*---------------- ExtractDEM_MULTIGRID3DUTIL[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ExtractDEM_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ExtractDEM_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_STR_PTR);
+
+/*---------------- ClipToPolygon_MULTIGRID3DUTIL[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ClipToPolygon_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ClipToPolygon_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_LONG_PTR);
+
+/*---------------- GenerateRBF_MULTIGRID3DUTIL[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GenerateRBF_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GenerateRBF_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- GridDirectFromGDB_MULTIGRID3DUTIL[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -12576,6 +13114,386 @@ Std_GridDirectFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                       GX_CONST GX_LONG_PTR,
                                       GX_CONST GX_LONG_PTR,
                                       GX_CONST GX_LONG_PTR);
+
+/*---------------- GridIDWFromGDB_MULTIGRID3DUTIL[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GridIDWFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GridIDWFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_LONG_PTR);
+
+/*---------------- GetDataExtents_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetDataExtents_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetDataExtents_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR);
+
+/*---------------- GetDataGroundExtents_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetDataGroundExtents_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetDataGroundExtents_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- GridPointsFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GridPointsFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GridPointsFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GridPointsZFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GridPointsZFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GridPointsZFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GridPointsZExFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GridPointsZExFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_VAR   GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_DOUBLE_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_HANDLE_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GridPointsZExFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_VAR   GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- LogGridPointsZExFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LogGridPointsZExFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LogGridPointsZExFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_DOUBLE_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_HANDLE_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_HANDLE_PTR);
+
+/*---------------- KrigFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+KrigFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_KrigFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_HANDLE_PTR);
+
+/*---------------- CreateSubset_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+CreateSubset_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_CreateSubset_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_LONG_PTR);
+
+/*---------------- CreateSubsetFromRealExtents_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+CreateSubsetFromRealExtents_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_CreateSubsetFromRealExtents_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                                GX_CONST GX_STR_PTR,
+                                                GX_CONST GX_STR_PTR);
 
 /*---------------- Box3D_MVIEW[_public] ----------------*/
 
@@ -14053,6 +14971,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_PolygonPLY_MVIEW(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_HANDLE_PTR);
+
+/*---------------- PolygonMPLY_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+PolygonMPLY_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_PolygonMPLY_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR);
 
 /*---------------- PolyLine_MVIEW[_public] ----------------*/
 
@@ -18509,6 +19438,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Copy_PLY(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_HANDLE_PTR,
              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Combine_PLY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Combine_PLY(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Combine_PLY(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_LONG_PTR);
 
 /*---------------- Create_PLY[_public] ----------------*/
 
@@ -25979,6 +26921,28 @@ Std_SetShellControls_VOXD(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_DOUBLE_PTR,
                           GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- GetRenderMode_VOXD[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetRenderMode_VOXD(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetRenderMode_VOXD(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_VAR   GX_LONG_PTR);
+
+/*---------------- SetRenderMode_VOXD[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetRenderMode_VOXD(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetRenderMode_VOXD(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR);
+
 /*---------------- Create_VOXE[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -26828,7 +27792,6 @@ ReSample_VV(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_DOUBLE_PTR,
             GX_CONST GX_DOUBLE_PTR,
             GX_CONST GX_DOUBLE_PTR,
-            GX_CONST GX_LONG_PTR,
             GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ReSample_VV(GX_VAR   GX_OBJECT_PTR,
@@ -26837,7 +27800,6 @@ Std_ReSample_VV(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR,
-                GX_CONST GX_LONG_PTR,
                 GX_CONST GX_LONG_PTR);
 
 /*---------------- rGetFidIncr_VV[_public] ----------------*/

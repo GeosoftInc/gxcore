@@ -1363,7 +1363,11 @@ namespace geosoft
                 FILE_FILTER_UBC_MOD = 124,
                 FILE_FILTER_UBC_DEN = 125,
                 FILE_FILTER_UBC_SUS = 126,
-                FILE_FILTER_GOCAD_VOXET = 127
+                FILE_FILTER_GOCAD_VOXET = 127,
+                FILE_FILTER_SCINTREX_DAT = 128,
+                FILE_FILTER_DMP = 129,
+                FILE_FILTER_RAW = 130,
+                FILE_FILTER_DAT = 131
             };
 
             enum FILE_FORM
@@ -1905,6 +1909,7 @@ namespace geosoft
 
             enum MAP_EXPORT_BITS
             {
+                MAP_EXPORT_BITS_32 = 32,
                 MAP_EXPORT_BITS_24 = 24,
                 MAP_EXPORT_BITS_GREY8 = 9,
                 MAP_EXPORT_BITS_8 = 8,
@@ -1966,6 +1971,28 @@ namespace geosoft
             {
                 MAPTEMPLATE_WRITENEW = 0,
                 MAPTEMPLATE_EXIST = 1
+            };
+
+            enum ATTRIBUTE_DATA_TYPE
+            {
+                ATTRIBUTE_DOUBLE = 0,
+                ATTRIBUTE_THEMATIC = 1,
+                ATTRIBUTE_VECTOR = 2
+            };
+
+            enum ATTRIBUTE_TYPE
+            {
+                ATTRIBUTE_SINGLE = 0,
+                ATTRIBUTE_SURFACE_SIDES = 1,
+                ATTRIBUTE_VERTICES = 2,
+                ATTRIBUTE_FACES = 3
+            };
+
+            enum SURFACE_CLIP_MODE
+            {
+                SURFACE_CLIP_ABOVE = 0,
+                SURFACE_CLIP_BELOW = 1,
+                SURFACE_CLIP_BOTH = 2
             };
 
             enum H_META_INVALID_TOKEN
@@ -2070,9 +2097,17 @@ namespace geosoft
 
             enum MULTIGRID3D_DIRECTGRID_METHOD
             {
-                MULTIGRID3D_DIRECTGRID_MIN = 0,
-                MULTIGRID3D_DIRECTGRID_MAX = 1,
-                MULTIGRID3D_DIRECTGRID_MEAN = 2
+                MULTIGRID3D_DIRECTGRID_MINIMUM = 0,
+                MULTIGRID3D_DIRECTGRID_MAXIMUM = 1,
+                MULTIGRID3D_DIRECTGRID_MEAN = 2,
+                MULTIGRID3D_DIRECTGRID_ITEMS = 3,
+                MULTIGRID3D_DIRECTGRID_DUMMYITEMS = 4
+            };
+
+            enum RBFKERNEL
+            {
+                RBFKERNEL_DISTANCE = 0,
+                RBFKERNEL_MULTIQUADRATIC = 1
             };
 
             enum MVG_DRAW
@@ -3183,6 +3218,13 @@ namespace geosoft
                 VOX_VECTORVOX_AID = 2
             };
 
+            enum VOXELRENDER_MODE
+            {
+                VOXELRENDER_SMOOTH = 0,
+                VOXELRENDER_FILL = 1,
+                VOXELRENDER_EDGES = 2
+            };
+
             enum VOXE_EVAL
             {
                 VOXE_EVAL_NEAR = 0,
@@ -3216,10 +3258,12 @@ namespace geosoft
                 VV_LOG_BASE_E = 1
             };
 
-            enum VV_LOG_NEGATIVE
+            enum VV_LOGMODE
             {
-                VV_LOG_NEGATIVE_NO = 0,
-                VV_LOG_NEGATIVE_YES = 1
+                VV_LOGMODE_CLIPPED = 0,
+                VV_LOGMODE_SCALED = 1,
+                VV_LOGMODE_CLAMPED = 2,
+                VV_LOGMODE_LINEAR = 3
             };
 
             enum VV_LOOKUP
@@ -3676,10 +3720,16 @@ namespace geosoft
             typedef std::shared_ptr<GXMAPTEMPLATE> GXMAPTEMPLATEPtr;
             class GXMATH;
             typedef std::shared_ptr<GXMATH> GXMATHPtr;
+            class GXMESH;
+            typedef std::shared_ptr<GXMESH> GXMESHPtr;
+            class GXMESHUTIL;
+            typedef std::shared_ptr<GXMESHUTIL> GXMESHUTILPtr;
             class GXMETA;
             typedef std::shared_ptr<GXMETA> GXMETAPtr;
             class GXMISC;
             typedef std::shared_ptr<GXMISC> GXMISCPtr;
+            class GXMPLY;
+            typedef std::shared_ptr<GXMPLY> GXMPLYPtr;
             class GXMSTK;
             typedef std::shared_ptr<GXMSTK> GXMSTKPtr;
             class GXMULTIGRID3D;
@@ -3863,8 +3913,11 @@ namespace geosoft
                 friend class GXMAPL;
                 friend class GXMAPTEMPLATE;
                 friend class GXMATH;
+                friend class GXMESH;
+                friend class GXMESHUTIL;
                 friend class GXMETA;
                 friend class GXMISC;
+                friend class GXMPLY;
                 friend class GXMSTK;
                 friend class GXMULTIGRID3D;
                 friend class GXMULTIGRID3DUTIL;
@@ -10965,6 +11018,30 @@ namespace geosoft
                     return ret;
                 }
 
+                static void em_tau_trend_window(GXVVPtr param1, GXVVPtr param2, int32_t param3, GXVVPtr param4, GXVVPtr param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    EMTauTrendWindow_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)));
+                    gx_->throw_on_error();
+                }
+
+                static void footprint_coverage_static(GXDATPtr param1, GXPLYPtr param2, double param3, int32_t param4, double param5, double& param6, double& param7, GXMPLYPtr param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    FootprintCoverageStatic_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), &param3, reinterpret_cast<const long*>(&param4), &param5, &param6, &param7, reinterpret_cast<const long*>(&gx_->handle(param8)));
+                    gx_->throw_on_error();
+                }
+
+                static void footprint_coverage_dynamic(GXDATPtr param1, GXPLYPtr param2, const gx_string_type& param3, int32_t param4, double param5, double& param6, double& param7, GXMPLYPtr param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    FootprintCoverageDynamic_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), param3.c_str(), reinterpret_cast<const long*>(&param4), &param5, &param6, &param7, reinterpret_cast<const long*>(&gx_->handle(param8)));
+                    gx_->throw_on_error();
+                }
+
 
             };
             class GXDXFI
@@ -14550,6 +14627,14 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     GravityStillReadingCorrection_GU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), param5.c_str(), reinterpret_cast<const long*>(&param6));
+                    gx_->throw_on_error();
+                }
+
+                static void despike_em_array(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, int32_t& param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DespikeEMArray_GU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<long*>(&param4));
                     gx_->throw_on_error();
                 }
 
@@ -20318,6 +20403,228 @@ namespace geosoft
 
 
             };
+            class GXMESH
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GXMESH(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GXMESHPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GXMESH>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                static GXMESHPtr create(const gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Create_MESH(
+                                      gx_->pGeo, param1.c_str());
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMESH>(ret);
+                }
+
+                static GXMESHPtr open(const gx_string_type& param1, GXLSTPtr param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Open_MESH(
+                                      gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMESH>(ret);
+                }
+
+                int32_t insert_patch(const gx_string_type& param1)
+                {
+                    int32_t ret = InsertPatch_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                void delete_patch(const gx_string_type& param1, int32_t param2)
+                {
+                    DeletePatch_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                }
+
+                int32_t patch_exists(const gx_string_type& param1, int32_t param2)
+                {
+                    int32_t ret = PatchExists_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                int32_t num_patches(const gx_string_type& param1)
+                {
+                    int32_t ret = NumPatches_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                int32_t add_vertex(const gx_string_type& param1, int32_t param2, double param3, double param4, double param5)
+                {
+                    int32_t ret = AddVertex_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2), &param3, &param4, &param5);
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                int32_t num_vertices(const gx_string_type& param1, int32_t param2)
+                {
+                    int32_t ret = NumVertices_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                int32_t add_face(const gx_string_type& param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5)
+                {
+                    int32_t ret = AddFace_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                int32_t num_faces(const gx_string_type& param1, int32_t param2)
+                {
+                    int32_t ret = NumFaces_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                int32_t get_vertex_point(const gx_string_type& param1, int32_t param2, int32_t param3, double& param4, double& param5, double& param6)
+                {
+                    int32_t ret = GetVertexPoint_MESH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), &param4, &param5, &param6);
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+                void get_vertices(const gx_string_type& param1, int32_t param2, GXVVPtr param3, GXVVPtr param4, GXVVPtr param5)
+                {
+                    GetVertices_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)));
+                    gx_->throw_on_error();
+                }
+
+                void get_faces(const gx_string_type& param1, int32_t param2, GXVVPtr param3, GXVVPtr param4, GXVVPtr param5)
+                {
+                    GetFaces_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)));
+                    gx_->throw_on_error();
+                }
+
+                void insert_attributes(const gx_string_type& param1, const gx_string_type& param2, int32_t param3, int32_t param4)
+                {
+                    InsertAttributes_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4));
+                    gx_->throw_on_error();
+                }
+
+                void set_attribute_values(const gx_string_type& param1, const gx_string_type& param2, int32_t param3, int32_t param4, int32_t param5, GXVVPtr param6)
+                {
+                    SetAttributeValues_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&gx_->handle(param6)));
+                    gx_->throw_on_error();
+                }
+
+                void get_attribute_values(const gx_string_type& param1, const gx_string_type& param2, int32_t param3, int32_t param4, int32_t param5, GXVVPtr param6)
+                {
+                    GetAttributeValues_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&gx_->handle(param6)));
+                    gx_->throw_on_error();
+                }
+
+                static GXMESHPtr import_grid_to_mesh(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = ImportGridToMesh_MESH(
+                                      gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str());
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMESH>(ret);
+                }
+
+                void save()
+                {
+                    Save_MESH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                }
+
+
+            };
+            class GXMESHUTIL
+            {
+            private:
+                GXMESHUTIL();
+                ~GXMESHUTIL();
+            public:
+
+
+                static void clip_surface_with_grid(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, const gx_string_type& param6, int32_t param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ClipSurfaceWithGrid_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), param6.c_str(), reinterpret_cast<const long*>(&param7));
+                    gx_->throw_on_error();
+                }
+
+                static void clip_surface_with_extents(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, double param4, double param5, double param6, double param7, double param8, double param9)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ClipSurfaceWithExtents_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), &param4, &param5, &param6, &param7, &param8, &param9);
+                    gx_->throw_on_error();
+                }
+
+                static void clip_surface_with_polygon2d(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, int32_t param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ClipSurfaceWithPolygon2d_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), reinterpret_cast<const long*>(&param5));
+                    gx_->throw_on_error();
+                }
+
+                static void compute_surface_union(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, const gx_string_type& param6)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ComputeSurfaceUnion_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), param6.c_str());
+                    gx_->throw_on_error();
+                }
+
+                static void compute_surface_clip(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, const gx_string_type& param6)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ComputeSurfaceClip_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), param6.c_str());
+                    gx_->throw_on_error();
+                }
+
+
+            };
             class GXMETA
             {
             private:
@@ -20712,6 +21019,55 @@ namespace geosoft
                     Ukoa2Tbl_MISC(
                         gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str());
                     gx_->throw_on_error();
+                }
+
+
+            };
+            class GXMPLY
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GXMPLY(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GXMPLYPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GXMPLY>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                static GXMPLYPtr create()
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Create_MPLY(
+                                      gx_->pGeo);
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMPLY>(ret);
+                }
+
+                ~GXMPLY()
+                {
+                    if (handle_ == 0)
+                        return;
+                    Destroy_MPLY(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                 }
 
 
@@ -21112,6 +21468,13 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
+                void get_vector_orientation(double& param1, double& param2, int32_t& param3)
+                {
+                    GetVectorOrientation_MULTIGRID3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, &param2, reinterpret_cast<long*>(&param3));
+                    gx_->throw_on_error();
+                }
+
                 void fill(const gx_string_type& param1, int32_t param2, double param3)
                 {
                     Fill_MULTIGRID3D(
@@ -21174,6 +21537,20 @@ namespace geosoft
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                     return gx_->createPtr<GXPG>(ret);
+                }
+
+                void get_data_extents(int32_t& param1, int32_t& param2, int32_t& param3, int32_t& param4, int32_t& param5, int32_t& param6)
+                {
+                    GetDataExtents_MULTIGRID3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<long*>(&param1), reinterpret_cast<long*>(&param2), reinterpret_cast<long*>(&param3), reinterpret_cast<long*>(&param4), reinterpret_cast<long*>(&param5), reinterpret_cast<long*>(&param6));
+                    gx_->throw_on_error();
+                }
+
+                void get_data_ground_extents(double& param1, double& param2, double& param3, double& param4, double& param5, double& param6)
+                {
+                    GetDataGroundExtents_MULTIGRID3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, &param2, &param3, &param4, &param5, &param6);
+                    gx_->throw_on_error();
                 }
 
 
@@ -21250,6 +21627,14 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
+                static void import_from_segy(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ImportFromSegy_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
                 static void import_from_gdb(const gx_string_type& param1, GXDBPtr param2, int32_t param3)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -21266,11 +21651,11 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
-                static void export_to_segy(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, double param4)
+                static void export_to_segy(const gx_string_type& param1, const gx_string_type& param2, double param3)
                 {
                     GXContextPtr gx_ = GXContext::current();
                     ExportToSEGY_MULTIGRID3DUTIL(
-                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), &param4);
+                        gx_->pGeo, param1.c_str(), param2.c_str(), &param3);
                     gx_->throw_on_error();
                 }
 
@@ -21306,6 +21691,14 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
+                static void convert_vector_to_double_using_rotation(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, double param5, double param6)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ConvertVectorToDoubleUsingRotation_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), &param5, &param6);
+                    gx_->throw_on_error();
+                }
+
                 static void convert_thematic_to_double(const gx_string_type& param1, GXVVPtr param2, const gx_string_type& param3)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -21314,11 +21707,11 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
-                static void convert_double_to_thematic(const gx_string_type& param1, GXVVPtr param2, const gx_string_type& param3)
+                static void convert_double_to_thematic(const gx_string_type& param1, GXVVPtr param2, GXTPATPtr param3, const gx_string_type& param4)
                 {
                     GXContextPtr gx_ = GXContext::current();
                     ConvertDoubleToThematic_MULTIGRID3DUTIL(
-                        gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), param3.c_str());
+                        gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), param4.c_str());
                     gx_->throw_on_error();
                 }
 
@@ -21438,12 +21831,126 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
+                static void invert_z(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    InvertZ_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
+                static void extract_dem(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ExtractDEM_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
+                static void clip_to_polygon(const gx_string_type& param1, const gx_string_type& param2, GXPLYPtr param3, int32_t param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ClipToPolygon_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&param4));
+                    gx_->throw_on_error();
+                }
+
+                static void generate_rbf(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, double param4, double param5, int32_t param6, int32_t param7, int32_t param8, double param9)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GenerateRBF_MULTIGRID3DUTIL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), &param4, &param5, reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8), &param9);
+                    gx_->throw_on_error();
+                }
+
                 static void grid_direct_from_gdb(const gx_string_type& param1, double param2, double param3, double param4, int32_t param5, int32_t param6, int32_t param7, double param8, double param9, double param10, int32_t param11, GXDBPtr param12, int32_t param13, int32_t param14, int32_t param15, int32_t param16)
                 {
                     GXContextPtr gx_ = GXContext::current();
                     GridDirectFromGDB_MULTIGRID3DUTIL(
                         gx_->pGeo, param1.c_str(), &param2, &param3, &param4, reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), &param8, &param9, &param10, reinterpret_cast<const long*>(&param11), reinterpret_cast<const long*>(&gx_->handle(param12)), reinterpret_cast<const long*>(&param13), reinterpret_cast<const long*>(&param14), reinterpret_cast<const long*>(&param15), reinterpret_cast<const long*>(&param16));
                     gx_->throw_on_error();
+                }
+
+                static void grid_idw_from_gdb(const gx_string_type& param1, double param2, double param3, double param4, int32_t param5, int32_t param6, int32_t param7, double param8, double param9, double param10, GXDBPtr param11, int32_t param12, int32_t param13, int32_t param14, int32_t param15, double param16, double param17, double param18, double param19, int32_t param20, double param21, int32_t param22)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GridIDWFromGDB_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), &param2, &param3, &param4, reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), &param8, &param9, &param10, reinterpret_cast<const long*>(&gx_->handle(param11)), reinterpret_cast<const long*>(&param12), reinterpret_cast<const long*>(&param13), reinterpret_cast<const long*>(&param14), reinterpret_cast<const long*>(&param15), &param16, &param17, &param18, &param19, reinterpret_cast<const long*>(&param20), &param21, reinterpret_cast<const long*>(&param22));
+                    gx_->throw_on_error();
+                }
+
+                static void get_data_extents(const gx_string_type& param1, int32_t& param2, int32_t& param3, int32_t& param4, int32_t& param5, int32_t& param6, int32_t& param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GetDataExtents_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), reinterpret_cast<long*>(&param2), reinterpret_cast<long*>(&param3), reinterpret_cast<long*>(&param4), reinterpret_cast<long*>(&param5), reinterpret_cast<long*>(&param6), reinterpret_cast<long*>(&param7));
+                    gx_->throw_on_error();
+                }
+
+                static void get_data_ground_extents(const gx_string_type& param1, double& param2, double& param3, double& param4, double& param5, double& param6, double& param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GetDataGroundExtents_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), &param2, &param3, &param4, &param5, &param6, &param7);
+                    gx_->throw_on_error();
+                }
+
+                static void grid_points_from_gdb(const gx_string_type& param1, const gx_string_type& param2, double param3, int32_t param4, double param5, double param6, int32_t param7, int32_t param8, int32_t param9, double param10, double param11, double param12, double param13, double param14, int32_t param15, GXDBPtr param16, int32_t param17, int32_t param18, int32_t param19, int32_t param20, GXIPJPtr param21)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GridPointsFromGDB_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), &param3, reinterpret_cast<const long*>(&param4), &param5, &param6, reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), &param10, &param11, &param12, &param13, &param14, reinterpret_cast<const long*>(&param15), reinterpret_cast<const long*>(&gx_->handle(param16)), reinterpret_cast<const long*>(&param17), reinterpret_cast<const long*>(&param18), reinterpret_cast<const long*>(&param19), reinterpret_cast<const long*>(&param20), reinterpret_cast<const long*>(&gx_->handle(param21)));
+                    gx_->throw_on_error();
+                }
+
+                static void grid_points_z_from_gdb(const gx_string_type& param1, const gx_string_type& param2, double param3, const gx_string_type& param4, int32_t param5, double param6, double param7, int32_t param8, int32_t param9, int32_t param10, double param11, double param12, double param13, double param14, double param15, int32_t param16, GXDBPtr param17, int32_t param18, int32_t param19, int32_t param20, int32_t param21, GXIPJPtr param22)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GridPointsZFromGDB_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), &param3, param4.c_str(), reinterpret_cast<const long*>(&param5), &param6, &param7, reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), reinterpret_cast<const long*>(&param10), &param11, &param12, &param13, &param14, &param15, reinterpret_cast<const long*>(&param16), reinterpret_cast<const long*>(&gx_->handle(param17)), reinterpret_cast<const long*>(&param18), reinterpret_cast<const long*>(&param19), reinterpret_cast<const long*>(&param20), reinterpret_cast<const long*>(&param21), reinterpret_cast<const long*>(&gx_->handle(param22)));
+                    gx_->throw_on_error();
+                }
+
+                static void grid_points_z_ex_from_gdb(const gx_string_type& param1, const gx_string_type& param2, double param3, const gx_string_type& param4, int32_t param5, double param6, double param7, int32_t param8, int32_t param9, int32_t param10, double param11, double& param12, double& param13, double param14, double& param15, double param16, double param17, double param18, double param19, double param20, int32_t param21, GXDBPtr param22, int32_t param23, int32_t param24, int32_t param25, int32_t param26, GXIPJPtr param27)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GridPointsZExFromGDB_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), &param3, param4.c_str(), reinterpret_cast<const long*>(&param5), &param6, &param7, reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), reinterpret_cast<const long*>(&param10), &param11, &param12, &param13, &param14, &param15, &param16, &param17, &param18, &param19, &param20, reinterpret_cast<const long*>(&param21), reinterpret_cast<const long*>(&gx_->handle(param22)), reinterpret_cast<const long*>(&param23), reinterpret_cast<const long*>(&param24), reinterpret_cast<const long*>(&param25), reinterpret_cast<const long*>(&param26), reinterpret_cast<const long*>(&gx_->handle(param27)));
+                    gx_->throw_on_error();
+                }
+
+                static void log_grid_points_z_ex_from_gdb(const gx_string_type& param1, const gx_string_type& param2, double param3, const gx_string_type& param4, int32_t param5, double param6, double param7, int32_t param8, int32_t param9, int32_t param10, double param11, double& param12, double& param13, double param14, double& param15, double param16, double param17, double param18, double param19, double param20, int32_t param21, double param22, int32_t param23, GXDBPtr param24, int32_t param25, int32_t param26, int32_t param27, int32_t param28, GXIPJPtr param29)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    LogGridPointsZExFromGDB_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), &param3, param4.c_str(), reinterpret_cast<const long*>(&param5), &param6, &param7, reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), reinterpret_cast<const long*>(&param10), &param11, &param12, &param13, &param14, &param15, &param16, &param17, &param18, &param19, &param20, reinterpret_cast<const long*>(&param21), &param22, reinterpret_cast<const long*>(&param23), reinterpret_cast<const long*>(&gx_->handle(param24)), reinterpret_cast<const long*>(&param25), reinterpret_cast<const long*>(&param26), reinterpret_cast<const long*>(&param27), reinterpret_cast<const long*>(&param28), reinterpret_cast<const long*>(&gx_->handle(param29)));
+                    gx_->throw_on_error();
+                }
+
+                static void krig_from_gdb(const gx_string_type& param1, double param2, int32_t param3, GXDBPtr param4, int32_t param5, int32_t param6, int32_t param7, int32_t param8, GXIPJPtr param9, GXREGPtr param10)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    KrigFromGDB_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), &param2, reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&gx_->handle(param10)));
+                    gx_->throw_on_error();
+                }
+
+                static GXMULTIGRID3DPtr create_subset(const gx_string_type& param1, const gx_string_type& param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6, int32_t param7, int32_t param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = CreateSubset_MULTIGRID3DUTIL(
+                                      gx_->pGeo, param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMULTIGRID3D>(ret);
+                }
+
+                static GXMULTIGRID3DPtr create_subset_from_double_extents(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = CreateSubsetFromRealExtents_MULTIGRID3DUTIL(
+                                      gx_->pGeo, param1.c_str(), param2.c_str());
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXMULTIGRID3D>(ret);
                 }
 
 
@@ -22331,6 +22838,13 @@ namespace geosoft
                 void polygon_ply(GXPLYPtr param1)
                 {
                     PolygonPLY_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+
+                void polygon_mply(GXMPLYPtr param1)
+                {
+                    PolygonMPLY_MVIEW(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
                     gx_->throw_on_error();
                 }
@@ -24289,30 +24803,6 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
-                static void direct_gridding_db(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, GXDBPtr param7, int32_t param8, int32_t param9, int32_t param10, int32_t param11)
-                {
-                    GXContextPtr gx_ = GXContext::current();
-                    DirectGriddingDB_PGU(
-                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11));
-                    gx_->throw_on_error();
-                }
-
-                static void direct_gridding_db_3d(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, GXDBPtr param9, int32_t param10, int32_t param11, int32_t param12, int32_t param13, int32_t param14)
-                {
-                    GXContextPtr gx_ = GXContext::current();
-                    DirectGriddingDB3D_PGU(
-                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, &param7, &param8, reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11), reinterpret_cast<const long*>(&param12), reinterpret_cast<const long*>(&param13), reinterpret_cast<const long*>(&param14));
-                    gx_->throw_on_error();
-                }
-
-                static void direct_gridding_vv(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, GXVVPtr param7, GXVVPtr param8, GXVVPtr param9, int32_t param10)
-                {
-                    GXContextPtr gx_ = GXContext::current();
-                    DirectGriddingVV_PGU(
-                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&gx_->handle(param8)), reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&param10));
-                    gx_->throw_on_error();
-                }
-
                 static void expand(GXPGPtr param1, GXPGPtr param2, double param3, int32_t param4, int32_t param5, int32_t param6)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -24626,6 +25116,30 @@ namespace geosoft
                     return ret;
                 }
 
+                static void direct_gridding_db(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, GXDBPtr param7, int32_t param8, int32_t param9, int32_t param10, int32_t param11)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DirectGriddingDB_PGU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11));
+                    gx_->throw_on_error();
+                }
+
+                static void direct_gridding_db_3d(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, GXDBPtr param9, int32_t param10, int32_t param11, int32_t param12, int32_t param13, int32_t param14)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DirectGriddingDB3D_PGU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, &param7, &param8, reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11), reinterpret_cast<const long*>(&param12), reinterpret_cast<const long*>(&param13), reinterpret_cast<const long*>(&param14));
+                    gx_->throw_on_error();
+                }
+
+                static void direct_gridding_vv(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, GXVVPtr param7, GXVVPtr param8, GXVVPtr param9, int32_t param10)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DirectGriddingVV_PGU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&gx_->handle(param8)), reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&param10));
+                    gx_->throw_on_error();
+                }
+
 
             };
             class GXPJ
@@ -24872,6 +25386,13 @@ namespace geosoft
                 {
                     Copy_PLY(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+
+                void combine(GXPLYPtr param1, int32_t param2)
+                {
+                    Combine_PLY(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2));
                     gx_->throw_on_error();
                 }
 
@@ -31936,6 +32457,20 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
+                void get_render_mode(int32_t& param1)
+                {
+                    GetRenderMode_VOXD(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<long*>(&param1));
+                    gx_->throw_on_error();
+                }
+
+                void set_render_mode(int32_t param1)
+                {
+                    SetRenderMode_VOXD(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+
 
             };
             class GXVOXE
@@ -32484,10 +33019,10 @@ namespace geosoft
                     gx_->throw_on_error();
                 }
 
-                void re_sample(double param1, double param2, double param3, double param4, int32_t param5, int32_t param6)
+                void re_sample(double param1, double param2, double param3, double param4, int32_t param5)
                 {
                     ReSample_VV(
-                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, &param2, &param3, &param4, reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6));
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, &param2, &param3, &param4, reinterpret_cast<const long*>(&param5));
                     gx_->throw_on_error();
                 }
 

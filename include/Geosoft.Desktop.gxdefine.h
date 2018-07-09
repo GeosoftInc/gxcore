@@ -550,6 +550,10 @@
 #define FILE_FILTER_UBC_DEN                    125
 #define FILE_FILTER_UBC_SUS                    126
 #define FILE_FILTER_GOCAD_VOXET                127
+#define FILE_FILTER_SCINTREX_DAT               128
+#define FILE_FILTER_DMP                        129
+#define FILE_FILTER_RAW                        130
+#define FILE_FILTER_DAT                        131
 #define FILE_FORM_OPEN    0
 #define FILE_FORM_SAVE    1
 #define GS_DIRECTORY_NONE                 0
