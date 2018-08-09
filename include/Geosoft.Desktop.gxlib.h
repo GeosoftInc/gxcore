@@ -3134,6 +3134,52 @@ Std_GetHoleSurvey_DH(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_HANDLE_PTR);
 
+/*---------------- GetHoleSurveyEx_DH[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetHoleSurveyEx_DH(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetHoleSurveyEx_DH(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR);
+
+/*---------------- GetHoleSurveyFromTo_DH[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetHoleSurveyFromTo_DH(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetHoleSurveyFromTo_DH(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR);
+
 /*---------------- GetIPJ_DH[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL

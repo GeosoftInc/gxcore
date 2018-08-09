@@ -11066,9 +11066,11 @@ ClipSurfaceWithGrid_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_STR_PTR,
                              GX_CONST GX_STR_PTR,
                              GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
                              GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ClipSurfaceWithGrid_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
                                  GX_CONST GX_STR_PTR,
                                  GX_CONST GX_STR_PTR,
                                  GX_CONST GX_STR_PTR,
@@ -11156,6 +11158,70 @@ Std_ComputeSurfaceClip_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                 GX_CONST GX_STR_PTR,
                                 GX_CONST GX_STR_PTR,
                                 GX_CONST GX_STR_PTR);
+
+/*---------------- ComputeSurfaceIntersection_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComputeSurfaceIntersection_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComputeSurfaceIntersection_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR);
+
+/*---------------- ComputeSurfaceSimplification_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComputeSurfaceSimplification_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComputeSurfaceSimplification_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_STR_PTR,
+                                          GX_CONST GX_STR_PTR,
+                                          GX_CONST GX_STR_PTR,
+                                          GX_CONST GX_STR_PTR);
+
+/*---------------- ComputeSurfaceSubdivision_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComputeSurfaceSubdivision_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComputeSurfaceSubdivision_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR);
+
+/*---------------- DoesSurfaceIntersect_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DoesSurfaceIntersect_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DoesSurfaceIntersect_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
 
 /*---------------- CreateAttrib_META[_public] ----------------*/
 
@@ -12783,6 +12849,19 @@ Std_CreateDoubleConstant_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                          GX_CONST GX_LONG_PTR,
                                          GX_CONST GX_LONG_PTR,
                                          GX_CONST GX_HANDLE_PTR);
+
+/*---------------- CreateDoubleConstantCopy_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CreateDoubleConstantCopy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_DOUBLE_PTR,
+                                         GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CreateDoubleConstantCopy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                             GX_CONST GX_STR_PTR,
+                                             GX_CONST GX_DOUBLE_PTR,
+                                             GX_CONST GX_STR_PTR);
 
 /*---------------- CreateThematicConstant_MULTIGRID3DUTIL[_public] ----------------*/
 
@@ -19438,6 +19517,15 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Copy_PLY(GX_VAR   GX_OBJECT_PTR,
              GX_CONST GX_HANDLE_PTR,
              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- IsValid_PLY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+IsValid_PLY(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_IsValid_PLY(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Combine_PLY[_public] ----------------*/
 
