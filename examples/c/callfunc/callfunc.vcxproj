@@ -104,24 +104,24 @@
     <CustomBuild Include="callfunc1.gxc">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXCRoot)\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+"$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXCRoot)\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+"$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
     </CustomBuild>
     <CustomBuild Include="callfunc2.gxc">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set INCLUDE=$(GXCRoot)\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+"$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set INCLUDE=$(GXCRoot)\include
-"$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
+"$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).gx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).gx</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GeosoftBinFolder)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GXC Compile:  "$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GXC Compile:  "$(GXCToolsPath)\gxc.exe" "%(FullPath)" "-f$(OutDir)%(Filename).gx"</Message>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

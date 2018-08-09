@@ -97,8 +97,8 @@ void CopyGrid(gx_string_type& gridName)
    try
    {
       // load an existing grid and create new ones
-      GXIMGPtr grid = GXIMG::create_file(GS_TYPES::GS_TYPE_DEFAULT, gridName, IMG_FILE::IMG_FILE_READONLY);
-      GXIMGPtr outGrid = GXIMG::create_out_file(GS_TYPES::GS_TYPE_DEFAULT, outGridName, grid);
+      GXIMGPtr grid = GXIMG::create_file(GS_TYPE_DEFAULT, gridName, IMG_FILE_READONLY);
+      GXIMGPtr outGrid = GXIMG::create_out_file(GS_TYPE_DEFAULT, outGridName, grid);
 
       //copy grid
       grid->copy(outGrid);

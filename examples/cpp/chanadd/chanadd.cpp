@@ -220,7 +220,7 @@ void ProcessData(gx_string_type& databaseName, gx_string_type& channelName, doub
 void ModifyVAChannel(GXDBPtr db, int32_t channelSymbol, double addValue)
 {
    // create VV to hold the channel data
-   GXVAPtr va = GXVA::create(GEO_VAR::GS_REAL, 0, db->get_col_va(channelSymbol));
+   GXVAPtr va = GXVA::create(GS_REAL, 0, db->get_col_va(channelSymbol));
 
    // loop through all lines to process the channel data
    for (int32_t curLineSymb = db->first_sel_line(); db->is_line_valid(curLineSymb); curLineSymb = db->next_sel_line(curLineSymb))
@@ -253,7 +253,7 @@ void ModifyVAChannel(GXDBPtr db, int32_t channelSymbol, double addValue)
 void ModifyVVChannel(GXDBPtr db, int32_t channelSymbol, double addValue)
 {
    // create VV to hold the channel data
-   GXVVPtr vv = GXVV::create(GEO_VAR::GS_REAL, 16386);
+   GXVVPtr vv = GXVV::create(GS_REAL, 16386);
 
    // loop through all lines to process the channel data
    for (int32_t curLineSymb = db->first_sel_line(); db->is_line_valid(curLineSymb); curLineSymb = db->next_sel_line(curLineSymb))
