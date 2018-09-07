@@ -1,3 +1,7 @@
+//*** extends 'gxlib_empty.h'
+
+//*** block Header
+//** NOTICE: Do not edit anything here, it is generated code
 
 #pragma once
 /*
@@ -47,7 +51,10 @@ Geosoft GX Wapper Function Headers
    extern "C" {
 #endif
 
+//*** endblock Header
 
+//*** block WapperDeclare
+//** NOTICE: Do not edit anything here, it is generated code
 
 /*---------------- Create_ACQUIRE[_licensed] ----------------*/
 
@@ -21010,7 +21017,13 @@ Std_UniformDist_VVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
+//*** endblock WapperDeclare
+
+//*** block Footer
+//** NOTICE: Do not edit anything here, it is generated code
 
 #ifdef __cplusplus
    }
 #endif
+
+//*** endblock Footer

@@ -1,3 +1,7 @@
+//*** extends 'gxlib_empty.h'
+
+//*** block Header
+//** NOTICE: Do not edit anything here, it is generated code
 
 #pragma once
 /*
@@ -47,7 +51,10 @@ Geosoft GX Wapper Function Headers
    extern "C" {
 #endif
 
+//*** endblock Header
 
+//*** block WapperDeclare
+//** NOTICE: Do not edit anything here, it is generated code
 
 /*---------------- Copy_3DN[_public] ----------------*/
 
@@ -11055,6 +11062,19 @@ Save_MESH(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Save_MESH(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ImportGridToSurface_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ImportGridToSurface_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ImportGridToSurface_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR);
 
 /*---------------- ClipSurfaceWithGrid_MESHUTIL[_public] ----------------*/
 
@@ -28339,7 +28359,13 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_NewLine_WA(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR);
 
+//*** endblock WapperDeclare
+
+//*** block Footer
+//** NOTICE: Do not edit anything here, it is generated code
 
 #ifdef __cplusplus
    }
 #endif
+
+//*** endblock Footer
