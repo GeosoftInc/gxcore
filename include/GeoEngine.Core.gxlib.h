@@ -1,7 +1,3 @@
-//*** extends 'gxlib_empty.h'
-
-//*** block Header
-//** NOTICE: Do not edit anything here, it is generated code
 
 #pragma once
 /*
@@ -51,10 +47,7 @@ Geosoft GX Wapper Function Headers
    extern "C" {
 #endif
 
-//*** endblock Header
 
-//*** block WapperDeclare
-//** NOTICE: Do not edit anything here, it is generated code
 
 /*---------------- Copy_3DN[_public] ----------------*/
 
@@ -11106,6 +11099,7 @@ ClipSurfaceWithExtents_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                 GX_CONST GX_STR_PTR,
                                 GX_CONST GX_STR_PTR,
                                 GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
                                 GX_CONST GX_DOUBLE_PTR,
                                 GX_CONST GX_DOUBLE_PTR,
                                 GX_CONST GX_DOUBLE_PTR,
@@ -11114,6 +11108,7 @@ ClipSurfaceWithExtents_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                 GX_CONST GX_DOUBLE_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ClipSurfaceWithExtents_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_STR_PTR,
                                     GX_CONST GX_STR_PTR,
                                     GX_CONST GX_STR_PTR,
                                     GX_CONST GX_STR_PTR,
@@ -11132,9 +11127,11 @@ ClipSurfaceWithPolygon2d_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
                                   GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ClipSurfaceWithPolygon2d_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR,
@@ -11242,6 +11239,17 @@ Std_DoesSurfaceIntersect_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_STR_PTR);
+
+/*---------------- DoesSurfaceSelfIntersect_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DoesSurfaceSelfIntersect_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DoesSurfaceSelfIntersect_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR);
 
 /*---------------- CreateAttrib_META[_public] ----------------*/
 
@@ -12555,7 +12563,7 @@ Std_ListPropertiesGOCAD_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_STR_PTR,
                                         GX_CONST GX_HANDLE_PTR);
 
-/*---------------- ImportFromSegy_MULTIGRID3DUTIL[_public] ----------------*/
+/*---------------- ImportFromSegy_MULTIGRID3DUTIL[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 ImportFromSegy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
@@ -25395,41 +25403,6 @@ Std_GeneratePG_VOX(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
-/*---------------- GenerateConstantValue_VOX[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
-GenerateConstantValue_VOX(GX_VAR   GX_OBJECT_PTR,
-                          GX_CONST GX_STR_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_LONG_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_DOUBLE_PTR,
-                          GX_CONST GX_LONG_PTR,
-                          GX_CONST GX_LONG_PTR,
-                          GX_CONST GX_LONG_PTR,
-                          GX_CONST GX_HANDLE_PTR,
-                          GX_CONST GX_HANDLE_PTR);
-GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
-Std_GenerateConstantValue_VOX(GX_VAR   GX_OBJECT_PTR,
-                              GX_CONST GX_STR_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_LONG_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_DOUBLE_PTR,
-                              GX_CONST GX_LONG_PTR,
-                              GX_CONST GX_LONG_PTR,
-                              GX_CONST GX_LONG_PTR,
-                              GX_CONST GX_HANDLE_PTR,
-                              GX_CONST GX_HANDLE_PTR);
-
 /*---------------- GeneratePGVV_VOX[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -25456,35 +25429,6 @@ Std_GeneratePGVV_VOX(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_HANDLE_PTR);
-
-/*---------------- GenerateConstantValueVV_VOX[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
-GenerateConstantValueVV_VOX(GX_VAR   GX_OBJECT_PTR,
-                            GX_CONST GX_STR_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_LONG_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_DOUBLE_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_HANDLE_PTR,
-                            GX_CONST GX_HANDLE_PTR);
-GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
-Std_GenerateConstantValueVV_VOX(GX_VAR   GX_OBJECT_PTR,
-                                GX_CONST GX_STR_PTR,
-                                GX_CONST GX_DOUBLE_PTR,
-                                GX_CONST GX_LONG_PTR,
-                                GX_CONST GX_DOUBLE_PTR,
-                                GX_CONST GX_DOUBLE_PTR,
-                                GX_CONST GX_DOUBLE_PTR,
-                                GX_CONST GX_HANDLE_PTR,
-                                GX_CONST GX_HANDLE_PTR,
-                                GX_CONST GX_HANDLE_PTR,
-                                GX_CONST GX_HANDLE_PTR,
-                                GX_CONST GX_HANDLE_PTR);
 
 /*---------------- InitGenerateBySubsetPG_VOX[_public] ----------------*/
 
@@ -27900,6 +27844,7 @@ ReSample_VV(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_DOUBLE_PTR,
             GX_CONST GX_DOUBLE_PTR,
             GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_LONG_PTR,
             GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ReSample_VV(GX_VAR   GX_OBJECT_PTR,
@@ -27908,6 +27853,7 @@ Std_ReSample_VV(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_LONG_PTR,
                 GX_CONST GX_LONG_PTR);
 
 /*---------------- rGetFidIncr_VV[_public] ----------------*/
@@ -28359,13 +28305,7 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_NewLine_WA(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR);
 
-//*** endblock WapperDeclare
-
-//*** block Footer
-//** NOTICE: Do not edit anything here, it is generated code
 
 #ifdef __cplusplus
    }
 #endif
-
-//*** endblock Footer

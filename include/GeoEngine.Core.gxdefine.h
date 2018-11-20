@@ -1261,9 +1261,10 @@
 
 
 // Class VOXD
-#define VOXELRENDER_SMOOTH    0
-#define VOXELRENDER_FILL      1
-#define VOXELRENDER_EDGES     2
+#define VOXELRENDER_FILL          0
+#define VOXELRENDER_EDGES         1
+#define VOXELRENDER_FILL_EDGES    2
+#define VOXELRENDER_SMOOTH        3
 
 
 // Class VOXE

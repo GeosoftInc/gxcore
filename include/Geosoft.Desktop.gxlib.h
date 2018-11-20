@@ -1,7 +1,3 @@
-//*** extends 'gxlib_empty.h'
-
-//*** block Header
-//** NOTICE: Do not edit anything here, it is generated code
 
 #pragma once
 /*
@@ -51,10 +47,7 @@ Geosoft GX Wapper Function Headers
    extern "C" {
 #endif
 
-//*** endblock Header
 
-//*** block WapperDeclare
-//** NOTICE: Do not edit anything here, it is generated code
 
 /*---------------- Create_ACQUIRE[_licensed] ----------------*/
 
@@ -13695,6 +13688,25 @@ Std_App_ImportDrillWizard_GUI(GX_VAR   GX_OBJECT_PTR,
                               GX_VAR   GX_LONG_PTR,
                               GX_CONST GX_HANDLE_PTR);
 
+/*---------------- ImportDrillWizardEx_GUI[_licensed_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_ImportDrillWizardEx_GUI(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_ImportDrillWizardEx_GUI(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_VAR   GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_HANDLE_PTR);
+
 /*---------------- InternetTrust_GUI[_licensed_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -13900,6 +13912,30 @@ Std_App_LaunchGeoXToolEx_GUI(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_LONG_PTR,
                              GX_CONST GX_LONG_PTR);
 
+/*---------------- iVAViewMultipleToolExists_GUI[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iVAViewMultipleToolExists_GUI(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iVAViewMultipleToolExists_GUI(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- LaunchVAViewMultipleTool_GUI[_extended_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_LaunchVAViewMultipleTool_GUI(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_LaunchVAViewMultipleTool_GUI(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR);
+
 /*---------------- MetaDataViewer_GUI[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -14077,25 +14113,6 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_Show3DViewerDialog_GUI(GX_VAR   GX_OBJECT_PTR,
                                GX_CONST GX_STR_PTR,
                                GX_CONST GX_STR_PTR);
-
-/*---------------- iMultipleArrayChannelProfileViewer_GUI[_licensed_app] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-App_iMultipleArrayChannelProfileViewer_GUI(GX_VAR   GX_OBJECT_PTR,
-                                           GX_CONST GX_HANDLE_PTR,
-                                           GX_VAR   GX_STR_PTR,
-                                           GX_VAR   GX_STR_PTR,
-                                           GX_VAR   GX_STR_PTR,
-                                           GX_VAR   GX_STR_PTR,
-                                           GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_App_iMultipleArrayChannelProfileViewer_GUI(GX_VAR   GX_OBJECT_PTR,
-                                               GX_CONST GX_HANDLE_PTR,
-                                               GX_VAR   GX_STR_PTR,
-                                               GX_VAR   GX_STR_PTR,
-                                               GX_VAR   GX_STR_PTR,
-                                               GX_VAR   GX_STR_PTR,
-                                               GX_CONST GX_LONG_PTR);
 
 /*---------------- Create_HTTP[_public] ----------------*/
 
@@ -21017,13 +21034,7 @@ Std_UniformDist_VVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
-//*** endblock WapperDeclare
-
-//*** block Footer
-//** NOTICE: Do not edit anything here, it is generated code
 
 #ifdef __cplusplus
    }
 #endif
-
-//*** endblock Footer
