@@ -902,6 +902,9 @@
 #define PLY_CLIP_INTERSECT       1
 #define PLY_CLIP_A_IN_B          2
 #define PLY_CLIP_B_IN_A          3
+#define PLY_POINT_CLIP_INSIDE     0
+#define PLY_POINT_CLIP_OUTSIDE    1
+#define PLY_POINT_CLIP_ERROR      2
 #define PLY_LINE_CLIP_INSIDE          0
 #define PLY_LINE_CLIP_NO_INTERSECT    0
 #define PLY_LINE_CLIP_OUTSIDE         1
@@ -923,6 +926,9 @@
 #define SBF_TYPE_DIRS     1
 #define SBF_TYPE_FILES    2
 #define SBF_TYPE_BOTH     3
+
+
+// Class SEGYREADER
 
 
 // Class ST

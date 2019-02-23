@@ -29,6 +29,9 @@
 #define ARCMAP_LOAD_NAMETAGISPREFIX      4096
 
 
+// Class ARCPY
+
+
 // Class ARCSYS
 
 
@@ -249,22 +252,25 @@
 #define EDB_PATH_DIR         1
 #define EDB_PATH_NAME_EXT    2
 #define EDB_PATH_NAME        3
-#define EDB_PROF_I_CHANNEL               0
-#define EDB_PROF_I_LINE_STYLE            1
-#define EDB_PROF_I_LINE_WEIGHT           2
-#define EDB_PROF_I_SYMBOL                3
-#define EDB_PROF_I_SYMBOL_WEIGHT         4
-#define EDB_PROF_I_COLOR                 5
-#define EDB_PROF_I_WRAP                  6
-#define EDB_PROF_I_BREAK_ON_DUMMY        7
-#define EDB_PROF_I_GRID_LINE             8
-#define EDB_PROF_R_GRID_LINE_INTERVAL    9
-#define EDB_PROF_I_LOG                   10
-#define EDB_PROF_R_LOG_MINIMUM           11
-#define EDB_PROF_I_SAMESCALE             12
-#define EDB_PROF_I_SOURCELINE            13
-#define EDB_PROF_I_SCALEOPTION           14
-#define EDB_PROF_I_SAMERANGE             15
+#define EDB_PROF_I_CHANNEL                    0
+#define EDB_PROF_I_LINE_STYLE                 1
+#define EDB_PROF_I_LINE_WEIGHT                2
+#define EDB_PROF_I_SYMBOL                     3
+#define EDB_PROF_I_SYMBOL_WEIGHT              4
+#define EDB_PROF_I_COLOR                      5
+#define EDB_PROF_I_WRAP                       6
+#define EDB_PROF_I_BREAK_ON_DUMMY             7
+#define EDB_PROF_I_GRID_LINE                  8
+#define EDB_PROF_R_GRID_LINE_INTERVAL         9
+#define EDB_PROF_I_LOG                        10
+#define EDB_PROF_R_LOG_MINIMUM                11
+#define EDB_PROF_I_SAMESCALE                  12
+#define EDB_PROF_I_SOURCELINE                 13
+#define EDB_PROF_I_SCALEOPTION                14
+#define EDB_PROF_I_SAMERANGE                  15
+#define EDB_PROF_I_VERT_GRID_LINE             16
+#define EDB_PROF_R_VERT_GRID_LINE_INTERVAL    17
+#define EDB_PROF_I_AUTO_RESCALE_X             18
 #define EDB_PROFILE_SCALE_LINEAR       0
 #define EDB_PROFILE_SCALE_LOG          1
 #define EDB_PROFILE_SCALE_LOGLINEAR    2

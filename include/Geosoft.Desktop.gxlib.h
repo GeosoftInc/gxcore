@@ -1,3 +1,7 @@
+//*** extends 'gxlib_empty.h'
+
+//*** block Header
+//** NOTICE: Do not edit anything here, it is generated code
 
 #pragma once
 /*
@@ -47,7 +51,10 @@ Geosoft GX Wapper Function Headers
    extern "C" {
 #endif
 
+//*** endblock Header
 
+//*** block WapperDeclare
+//** NOTICE: Do not edit anything here, it is generated code
 
 /*---------------- Create_ACQUIRE[_licensed] ----------------*/
 
@@ -124,6 +131,34 @@ Std_iSelectionTool_ACQUIRE(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_HANDLE_PTR,
                            GX_CONST GX_STR_PTR,
                            GX_CONST GX_LONG_PTR);
+
+/*---------------- iSelectionToolForceGridSelection_ACQUIRE[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iSelectionToolForceGridSelection_ACQUIRE(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iSelectionToolForceGridSelection_ACQUIRE(GX_VAR   GX_OBJECT_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_STR_PTR,
+                                             GX_CONST GX_LONG_PTR);
+
+/*---------------- GetSelectionInfo_ACQUIRE[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetSelectionInfo_ACQUIRE(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_VAR   GX_LONG_PTR,
+                         GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetSelectionInfo_ACQUIRE(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_VAR   GX_LONG_PTR,
+                             GX_VAR   GX_LONG_PTR);
 
 /*---------------- CreateDAT_ARCDB[_extended] ----------------*/
 
@@ -635,6 +670,33 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GetIPJForPredefinedEsriPCS_ARCMAP(GX_VAR   GX_OBJECT_PTR,
                                       GX_CONST GX_HANDLE_PTR,
                                       GX_CONST GX_LONG_PTR);
+
+/*---------------- AddMessage_ARCPY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddMessage_ARCPY(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddMessage_ARCPY(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_STR_PTR);
+
+/*---------------- AddWarning_ARCPY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddWarning_ARCPY(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddWarning_ARCPY(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_STR_PTR);
+
+/*---------------- AddError_ARCPY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddError_ARCPY(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddError_ARCPY(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_STR_PTR);
 
 /*---------------- IGetBrowseLoc_ARCSYS[_public] ----------------*/
 
@@ -4738,6 +4800,38 @@ Std_SurfaceIntersections_DH(GX_VAR   GX_OBJECT_PTR,
                             GX_CONST GX_STR_PTR,
                             GX_CONST GX_LONG_PTR);
 
+/*---------------- GetMXDepositRightsInfo_DH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetMXDepositRightsInfo_DH(GX_VAR   GX_OBJECT_PTR,
+                          GX_VAR   GX_LONG_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetMXDepositRightsInfo_DH(GX_VAR   GX_OBJECT_PTR,
+                              GX_VAR   GX_LONG_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_CONST GX_LONG_PTR);
+
+/*---------------- NavigateToMXDeposit_DH[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+NavigateToMXDeposit_DH(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_NavigateToMXDeposit_DH(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
+
 /*---------------- _Clear_DMPPLY[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -8542,6 +8636,36 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_GetPrevLineSymb_EDB(GX_VAR   GX_OBJECT_PTR,
                             GX_CONST GX_HANDLE_PTR);
 
+/*---------------- GetProfileXAxisOptions_EDB[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_GetProfileXAxisOptions_EDB(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_LONG_PTR,
+                               GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_GetProfileXAxisOptions_EDB(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR,
+                                   GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- SetProfileXAxisOptions_EDB[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_SetProfileXAxisOptions_EDB(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_SetProfileXAxisOptions_EDB(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- GetProfileRangeX_EDB[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -9330,6 +9454,17 @@ Std_App_SetProfileRangeY_EDB(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_DOUBLE_PTR,
                              GX_CONST GX_DOUBLE_PTR,
                              GX_CONST GX_LONG_PTR);
+
+/*---------------- ProfileRescaleAll_EDB[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_ProfileRescaleAll_EDB(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_ProfileRescaleAll_EDB(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_LONG_PTR);
 
 /*---------------- SetProfileSplit_EDB[_public_app] ----------------*/
 
@@ -13911,30 +14046,6 @@ Std_App_LaunchGeoXToolEx_GUI(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_LONG_PTR,
                              GX_CONST GX_LONG_PTR,
                              GX_CONST GX_LONG_PTR);
-
-/*---------------- iVAViewMultipleToolExists_GUI[_extended] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-iVAViewMultipleToolExists_GUI(GX_VAR   GX_OBJECT_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_iVAViewMultipleToolExists_GUI(GX_VAR   GX_OBJECT_PTR);
-
-/*---------------- LaunchVAViewMultipleTool_GUI[_extended_app] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-App_LaunchVAViewMultipleTool_GUI(GX_VAR   GX_OBJECT_PTR,
-                                 GX_CONST GX_STR_PTR,
-                                 GX_CONST GX_STR_PTR,
-                                 GX_CONST GX_STR_PTR,
-                                 GX_CONST GX_STR_PTR,
-                                 GX_CONST GX_STR_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_App_LaunchVAViewMultipleTool_GUI(GX_VAR   GX_OBJECT_PTR,
-                                     GX_CONST GX_STR_PTR,
-                                     GX_CONST GX_STR_PTR,
-                                     GX_CONST GX_STR_PTR,
-                                     GX_CONST GX_STR_PTR,
-                                     GX_CONST GX_STR_PTR);
 
 /*---------------- MetaDataViewer_GUI[_public_app] ----------------*/
 
@@ -21034,7 +21145,13 @@ Std_UniformDist_VVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
 
+//*** endblock WapperDeclare
+
+//*** block Footer
+//** NOTICE: Do not edit anything here, it is generated code
 
 #ifdef __cplusplus
    }
 #endif
+
+//*** endblock Footer

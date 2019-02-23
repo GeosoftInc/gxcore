@@ -1,3 +1,7 @@
+//*** extends 'gxlib_empty.h'
+
+//*** block Header
+//** NOTICE: Do not edit anything here, it is generated code
 
 #pragma once
 /*
@@ -47,7 +51,10 @@ Geosoft GX Wapper Function Headers
    extern "C" {
 #endif
 
+//*** endblock Header
 
+//*** block WapperDeclare
+//** NOTICE: Do not edit anything here, it is generated code
 
 /*---------------- Copy_3DN[_public] ----------------*/
 
@@ -6701,6 +6708,25 @@ Std_PigeonHole_IMU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_VAR   GX_LONG_PTR);
 
+/*---------------- PigeonHoleColor_IMU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+PigeonHoleColor_IMU(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_PigeonHoleColor_IMU(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_VAR   GX_LONG_PTR);
+
 /*---------------- Profile_IMU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -9642,6 +9668,31 @@ Std_RenderBitmap_MAP(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_STR_PTR,
                      GX_CONST GX_LONG_PTR);
 
+/*---------------- RenderViewBitmap_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RenderViewBitmap_MAP(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RenderViewBitmap_MAP(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_LONG_PTR);
+
 /*---------------- CreateLinked3DView_MAP[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -11251,6 +11302,25 @@ Std_DoesSurfaceSelfIntersect_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                       GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR);
 
+/*---------------- ExtractIsosurfaceFromVoxel_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ExtractIsosurfaceFromVoxel_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ExtractIsosurfaceFromVoxel_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_DOUBLE_PTR,
+                                        GX_CONST GX_LONG_PTR);
+
 /*---------------- CreateAttrib_META[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -12562,17 +12632,6 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ListPropertiesGOCAD_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_STR_PTR,
                                         GX_CONST GX_HANDLE_PTR);
-
-/*---------------- ImportFromSegy_MULTIGRID3DUTIL[_licensed] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-ImportFromSegy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
-                               GX_CONST GX_STR_PTR,
-                               GX_CONST GX_STR_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_ImportFromSegy_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
-                                   GX_CONST GX_STR_PTR,
-                                   GX_CONST GX_STR_PTR);
 
 /*---------------- ImportFromGDB_MULTIGRID3DUTIL[_public] ----------------*/
 
@@ -19706,6 +19765,19 @@ Std_iClipPLY_PLY(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_HANDLE_PTR);
 
+/*---------------- iClipPoint_PLY[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iClipPoint_PLY(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_DOUBLE_PTR,
+               GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iClipPoint_PLY(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- IGetDescription_PLY[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -20242,6 +20314,537 @@ Std_SaveLog_SBF(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_STR_PTR,
                 GX_CONST GX_STR_PTR,
                 GX_CONST GX_LONG_PTR);
+
+/*---------------- OpenFile_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+OpenFile_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_OpenFile_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR);
+
+/*---------------- SetZType_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR);
+
+/*---------------- GetZType_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_VAR   GX_STR_PTR,
+                    GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
+
+/*---------------- GetPossibleZUnits_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetPossibleZUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_VAR   GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetPossibleZUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_VAR   GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR);
+
+/*---------------- GetZUnits_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_VAR   GX_STR_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_VAR   GX_STR_PTR,
+                         GX_CONST GX_LONG_PTR);
+
+/*---------------- SetZUnits_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR);
+
+/*---------------- GetZOffsetUnits_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZOffsetUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_VAR   GX_STR_PTR,
+                           GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZOffsetUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_VAR   GX_STR_PTR,
+                               GX_CONST GX_LONG_PTR);
+
+/*---------------- SetZOffsetUnits_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZOffsetUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZOffsetUnits_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_STR_PTR);
+
+/*---------------- GetLastSampleAt_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetLastSampleAt_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetLastSampleAt_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- HasSaneSetup_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+HasSaneSetup_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_HasSaneSetup_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
+
+/*---------------- ListBinaryHeaderFields_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+ListBinaryHeaderFields_SEGYREADER(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_ListBinaryHeaderFields_SEGYREADER(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- ListTraceHeaderFields_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+ListTraceHeaderFields_SEGYREADER(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_ListTraceHeaderFields_SEGYREADER(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- GetTextHeader_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTextHeader_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_VAR   GX_STR_PTR,
+                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTextHeader_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_VAR   GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR);
+
+/*---------------- GetBinaryHeader_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetBinaryHeader_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetBinaryHeader_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetNumTraceDataTypes_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetNumTraceDataTypes_SEGYREADER(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetNumTraceDataTypes_SEGYREADER(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- GetTraceDataTypeName_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceDataTypeName_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_VAR   GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceDataTypeName_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_LONG_PTR,
+                                    GX_VAR   GX_STR_PTR,
+                                    GX_CONST GX_LONG_PTR);
+
+/*---------------- GetTraceDataTypeDisplayName_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceDataTypeDisplayName_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceDataTypeDisplayName_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR);
+
+/*---------------- GetTraceDataType_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceDataType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceDataType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_VAR   GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR);
+
+/*---------------- SetTraceDataType_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetTraceDataType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetTraceDataType_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_STR_PTR);
+
+/*---------------- GetTraceLengthConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceLengthConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceLengthConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_VAR   GX_LONG_PTR);
+
+/*---------------- SetTraceLengthConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetTraceLengthConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetTraceLengthConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR);
+
+/*---------------- GetTraceLength_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceLength_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceLength_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetSampleIntervalConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetSampleIntervalConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetSampleIntervalConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_VAR   GX_STR_PTR,
+                                              GX_CONST GX_LONG_PTR,
+                                              GX_VAR   GX_LONG_PTR);
+
+/*---------------- SetSampleIntervalConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetSampleIntervalConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetSampleIntervalConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_STR_PTR,
+                                              GX_CONST GX_LONG_PTR,
+                                              GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- GetSampleInterval_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetSampleInterval_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetSampleInterval_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- GetZOffsetConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZOffsetConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_VAR   GX_STR_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZOffsetConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_VAR   GX_LONG_PTR);
+
+/*---------------- SetZOffsetConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZOffsetConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZOffsetConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- GetZOffset_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZOffset_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZOffset_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- ScanFile_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ScanFile_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ScanFile_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetFieldConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetFieldConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetFieldConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetFieldConfiguration_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetFieldConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetFieldConfiguration_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR,
+                                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetTraceCount_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceCount_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceCount_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_VAR   GX_LONG_PTR);
+
+/*---------------- GetVoxelDimensions_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetVoxelDimensions_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_VAR   GX_LONG_PTR,
+                              GX_VAR   GX_LONG_PTR,
+                              GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetVoxelDimensions_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_VAR   GX_LONG_PTR,
+                                  GX_VAR   GX_LONG_PTR,
+                                  GX_VAR   GX_LONG_PTR);
+
+/*---------------- GetVoxelCellSize_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetVoxelCellSize_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_VAR   GX_DOUBLE_PTR,
+                            GX_VAR   GX_DOUBLE_PTR,
+                            GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetVoxelCellSize_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_VAR   GX_DOUBLE_PTR,
+                                GX_VAR   GX_DOUBLE_PTR,
+                                GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- SetAutoVoxelCellSizeXY_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetAutoVoxelCellSizeXY_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetAutoVoxelCellSizeXY_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetUserVoxelCellSizeXY_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetUserVoxelCellSizeXY_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetUserVoxelCellSizeXY_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- GetGeoreferencing_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetGeoreferencing_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetGeoreferencing_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetGeoreferencing_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetGeoreferencing_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetGeoreferencing_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetNumTiePoints_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetNumTiePoints_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetNumTiePoints_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetTiePoint_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTiePoint_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_LONG_PTR,
+                       GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTiePoint_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR);
+
+/*---------------- SetNumTiePoints_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetNumTiePoints_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetNumTiePoints_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR);
+
+/*---------------- SetTiePoint_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetTiePoint_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetTiePoint_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_LONG_PTR);
+
+/*---------------- RecalculateGeoreferencing_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RecalculateGeoreferencing_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RecalculateGeoreferencing_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ResetTiePoints_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ResetTiePoints_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ResetTiePoints_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ExportVoxelAndDatabase_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ExportVoxelAndDatabase_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ExportVoxelAndDatabase_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR);
 
 /*---------------- Create_ST[_licensed] ----------------*/
 
@@ -21950,6 +22553,15 @@ iGetTopErrorAP_SYS(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iGetTopErrorAP_SYS(GX_VAR   GX_OBJECT_PTR);
 
+/*---------------- iGetErrorAP_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetErrorAP_SYS(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetErrorAP_SYS(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_LONG_PTR);
+
 /*---------------- IGetErrorMessageAP_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -22628,6 +23240,15 @@ GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 SignIn_SYS(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_SignIn_SYS(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- CheckProductUpdates_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CheckProductUpdates_SYS(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CheckProductUpdates_SYS(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_LONG_PTR);
 
 /*---------------- GeosoftConnectAuthenticateAndNavigate_SYS[_public] ----------------*/
 
@@ -23601,6 +24222,13 @@ iInteractive_SYS(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iInteractive_SYS(GX_VAR   GX_OBJECT_PTR);
 
+/*---------------- iTestingSystemMode_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iTestingSystemMode_SYS(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iTestingSystemMode_SYS(GX_VAR   GX_OBJECT_PTR);
+
 /*---------------- IiPrompt_SYS[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -24254,6 +24882,17 @@ Std_GetXMLFormat_USERMETA(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_HANDLE_PTR,
                           GX_VAR   GX_LONG_PTR);
 
+/*---------------- SetXMLFormat_USERMETA[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetXMLFormat_USERMETA(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetXMLFormat_USERMETA(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR);
+
 /*---------------- iCompare_USERMETA[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -24767,6 +25406,27 @@ Std_LookupIndex_VA(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_CONST GX_HANDLE_PTR);
 
+/*---------------- Range_VA[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Range_VA(GX_VAR   GX_OBJECT_PTR,
+         GX_CONST GX_HANDLE_PTR,
+         GX_CONST GX_LONG_PTR,
+         GX_CONST GX_LONG_PTR,
+         GX_CONST GX_LONG_PTR,
+         GX_CONST GX_LONG_PTR,
+         GX_VAR   GX_DOUBLE_PTR,
+         GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Range_VA(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_VAR   GX_DOUBLE_PTR,
+             GX_VAR   GX_DOUBLE_PTR);
+
 /*---------------- RangeDouble_VA[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -24779,6 +25439,27 @@ Std_RangeDouble_VA(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_HANDLE_PTR,
                    GX_VAR   GX_DOUBLE_PTR,
                    GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- RangeColumns_VA[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RangeColumns_VA(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RangeColumns_VA(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR);
 
 /*---------------- ReFid_VA[_public] ----------------*/
 
@@ -28305,7 +28986,13 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_NewLine_WA(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR);
 
+//*** endblock WapperDeclare
+
+//*** block Footer
+//** NOTICE: Do not edit anything here, it is generated code
 
 #ifdef __cplusplus
    }
 #endif
+
+//*** endblock Footer
