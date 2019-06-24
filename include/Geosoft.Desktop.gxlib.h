@@ -6316,6 +6316,29 @@ Std_GravDrift_DU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_LONG_PTR,
                  GX_CONST GX_LONG_PTR);
 
+/*---------------- GravDrift2_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GravDrift2_DU(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GravDrift2_DU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR);
+
 /*---------------- GravTide_DU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7309,6 +7332,49 @@ Std_QCSurveyPlan_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_LONG_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- QCSurveyPlan2_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+QCSurveyPlan2_DU(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_QCSurveyPlan2_DU(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR);
 
 /*---------------- rDirection_DU[_public] ----------------*/
 
@@ -10021,6 +10087,17 @@ Std_App_DrawRect3D_EMAP(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_DOUBLE_PTR,
                         GX_CONST GX_DOUBLE_PTR,
                         GX_CONST GX_LONG_PTR);
+
+/*---------------- DrawPLY_EMAP[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_DrawPLY_EMAP(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_DrawPLY_EMAP(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
 
 /*---------------- GetDisplayArea_EMAP[_public_app] ----------------*/
 

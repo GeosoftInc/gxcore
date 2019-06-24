@@ -601,6 +601,9 @@
 #define SURFACE_CLIP_ABOVE    0
 #define SURFACE_CLIP_BELOW    1
 #define SURFACE_CLIP_BOTH     2
+#define SURFACE_CLIP_SUCCESS          0
+#define SURFACE_CLIP_SUCCESS_EMPTY    1
+#define SURFACE_CLIP_FAIL             2
 
 
 // Class META
