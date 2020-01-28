@@ -2165,146 +2165,6 @@ Std_WriteLine_COM(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_STR_PTR);
 
-/*---------------- _SetAngle_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-_SetAngle_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                GX_CONST GX_HANDLE_PTR,
-                GX_CONST GX_DOUBLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std__SetAngle_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                    GX_CONST GX_HANDLE_PTR,
-                    GX_CONST GX_DOUBLE_PTR);
-
-/*---------------- _SetBase_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-_SetBase_CSYMB(GX_VAR   GX_OBJECT_PTR,
-               GX_CONST GX_HANDLE_PTR,
-               GX_CONST GX_DOUBLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std__SetBase_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                   GX_CONST GX_HANDLE_PTR,
-                   GX_CONST GX_DOUBLE_PTR);
-
-/*---------------- _SetDynamicCol_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-_SetDynamicCol_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std__SetDynamicCol_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                         GX_CONST GX_HANDLE_PTR,
-                         GX_CONST GX_LONG_PTR);
-
-/*---------------- _SetFixed_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-_SetFixed_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                GX_CONST GX_HANDLE_PTR,
-                GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std__SetFixed_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                    GX_CONST GX_HANDLE_PTR,
-                    GX_CONST GX_LONG_PTR);
-
-/*---------------- _SetNumber_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-_SetNumber_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                 GX_CONST GX_HANDLE_PTR,
-                 GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std__SetNumber_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                     GX_CONST GX_HANDLE_PTR,
-                     GX_CONST GX_LONG_PTR);
-
-/*---------------- _SetScale_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-_SetScale_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                GX_CONST GX_HANDLE_PTR,
-                GX_CONST GX_DOUBLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std__SetScale_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                    GX_CONST GX_HANDLE_PTR,
-                    GX_CONST GX_DOUBLE_PTR);
-
-/*---------------- AddData_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-AddData_CSYMB(GX_VAR   GX_OBJECT_PTR,
-              GX_CONST GX_HANDLE_PTR,
-              GX_CONST GX_HANDLE_PTR,
-              GX_CONST GX_HANDLE_PTR,
-              GX_CONST GX_HANDLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_AddData_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                  GX_CONST GX_HANDLE_PTR,
-                  GX_CONST GX_HANDLE_PTR,
-                  GX_CONST GX_HANDLE_PTR,
-                  GX_CONST GX_HANDLE_PTR);
-
-/*---------------- Create_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
-Create_CSYMB(GX_VAR   GX_OBJECT_PTR,
-             GX_CONST GX_STR_PTR);
-GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
-Std_Create_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                 GX_CONST GX_STR_PTR);
-
-/*---------------- Destroy_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-Destroy_CSYMB(GX_VAR   GX_OBJECT_PTR,
-              GX_CONST GX_HANDLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_Destroy_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                  GX_CONST GX_HANDLE_PTR);
-
-/*---------------- GetITR_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-GetITR_CSYMB(GX_VAR   GX_OBJECT_PTR,
-             GX_CONST GX_HANDLE_PTR,
-             GX_CONST GX_HANDLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_GetITR_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                 GX_CONST GX_HANDLE_PTR,
-                 GX_CONST GX_HANDLE_PTR);
-
-/*---------------- SetFont_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-SetFont_CSYMB(GX_VAR   GX_OBJECT_PTR,
-              GX_CONST GX_HANDLE_PTR,
-              GX_CONST GX_STR_PTR,
-              GX_CONST GX_LONG_PTR,
-              GX_CONST GX_LONG_PTR,
-              GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_SetFont_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                  GX_CONST GX_HANDLE_PTR,
-                  GX_CONST GX_STR_PTR,
-                  GX_CONST GX_LONG_PTR,
-                  GX_CONST GX_LONG_PTR,
-                  GX_CONST GX_LONG_PTR);
-
-/*---------------- SetStaticCol_CSYMB[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-SetStaticCol_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                   GX_CONST GX_HANDLE_PTR,
-                   GX_CONST GX_LONG_PTR,
-                   GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_SetStaticCol_CSYMB(GX_VAR   GX_OBJECT_PTR,
-                       GX_CONST GX_HANDLE_PTR,
-                       GX_CONST GX_LONG_PTR,
-                       GX_CONST GX_LONG_PTR);
-
 /*---------------- Create_DGW[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -3241,6 +3101,119 @@ Std_GetHoleSurveyFromTo_DH(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_HANDLE_PTR,
                            GX_CONST GX_HANDLE_PTR,
                            GX_CONST GX_LONG_PTR);
+
+/*---------------- Desurvey_DH[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Desurvey_DH(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_LONG_PTR,
+            GX_CONST GX_LONG_PTR,
+            GX_CONST GX_LONG_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_LONG_PTR,
+            GX_CONST GX_LONG_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Desurvey_DH(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_DOUBLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ConvertOrientedCoreDipDirForHoleSurvey_DH[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ConvertOrientedCoreDipDirForHoleSurvey_DH(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ConvertOrientedCoreDipDirForHoleSurvey_DH(GX_VAR   GX_OBJECT_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_LONG_PTR);
+
+/*---------------- DesurveyFromTo_DH[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DesurveyFromTo_DH(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DesurveyFromTo_DH(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR);
 
 /*---------------- GetIPJ_DH[_extended] ----------------*/
 
@@ -6316,6 +6289,29 @@ Std_GravDrift_DU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_LONG_PTR,
                  GX_CONST GX_LONG_PTR);
 
+/*---------------- GravDrift2_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GravDrift2_DU(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GravDrift2_DU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR);
+
 /*---------------- GravTide_DU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7309,6 +7305,49 @@ Std_QCSurveyPlan_DU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_LONG_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- QCSurveyPlan2_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+QCSurveyPlan2_DU(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_QCSurveyPlan2_DU(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR);
 
 /*---------------- rDirection_DU[_public] ----------------*/
 
@@ -8475,6 +8514,27 @@ Std_DXF2ViewEx_DXFI(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_LONG_PTR,
                     GX_CONST GX_LONG_PTR);
 
+/*---------------- DXF2ViewNoSurfaces_DXFI[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DXF2ViewNoSurfaces_DXFI(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DXF2ViewNoSurfaces_DXFI(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR);
+
 /*---------------- GetRange_DXFI[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -9154,6 +9214,17 @@ Std_App_iShowProfileName_EDB(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_HANDLE_PTR,
                              GX_CONST GX_LONG_PTR,
                              GX_CONST GX_STR_PTR);
+
+/*---------------- iProfileShown_EDB[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iProfileShown_EDB(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iProfileShown_EDB(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR);
 
 /*---------------- iGetWindowYAxisDirection_EDB[_public_app] ----------------*/
 
@@ -10021,6 +10092,17 @@ Std_App_DrawRect3D_EMAP(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_DOUBLE_PTR,
                         GX_CONST GX_DOUBLE_PTR,
                         GX_CONST GX_LONG_PTR);
+
+/*---------------- DrawPLY_EMAP[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_DrawPLY_EMAP(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_DrawPLY_EMAP(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
 
 /*---------------- GetDisplayArea_EMAP[_public_app] ----------------*/
 
@@ -12642,6 +12724,33 @@ Std_GravityStillReadingCorrection_GU(GX_VAR   GX_OBJECT_PTR,
                                      GX_CONST GX_LONG_PTR,
                                      GX_CONST GX_STR_PTR,
                                      GX_CONST GX_LONG_PTR);
+
+/*---------------- GravityStillReadingDatabaseCorrection_GU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GravityStillReadingDatabaseCorrection_GU(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GravityStillReadingDatabaseCorrection_GU(GX_VAR   GX_OBJECT_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_STR_PTR,
+                                             GX_CONST GX_STR_PTR,
+                                             GX_CONST GX_STR_PTR,
+                                             GX_CONST GX_STR_PTR,
+                                             GX_CONST GX_LONG_PTR);
 
 /*---------------- DespikeEMArray_GU[_licensed] ----------------*/
 
@@ -15733,6 +15842,52 @@ Std_LocateContributingElectrodes_IP(GX_VAR   GX_OBJECT_PTR,
                                     GX_CONST GX_STR_PTR,
                                     GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- LocateContributingElectrodes3D_IP[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LocateContributingElectrodes3D_IP(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LocateContributingElectrodes3D_IP(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- GetGridsVV_IP[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetGridsVV_IP(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetGridsVV_IP(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+
 /*---------------- iModifyJob_IPGUI[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -17209,6 +17364,21 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_iAddDocumentWithoutOpening_PROJ(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_STR_PTR,
                                         GX_CONST GX_STR_PTR);
+
+/*---------------- iAddGridDocument_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iAddGridDocument_PROJ(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iAddGridDocument_PROJ(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_LONG_PTR);
 
 /*---------------- iGetCommandEnvironment_PROJ[_public_app] ----------------*/
 

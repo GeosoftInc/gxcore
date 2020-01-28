@@ -39,6 +39,11 @@
 #define BF_SEEK_EOF        2
 
 
+// Class CSYMB
+#define CSYMB_COLOR_EDGE    0
+#define CSYMB_COLOR_FILL    1
+
+
 // Class DAT
 #define DAT_FILE_GRID     1
 #define DAT_FILE_IMAGE    2
@@ -601,6 +606,9 @@
 #define SURFACE_CLIP_ABOVE    0
 #define SURFACE_CLIP_BELOW    1
 #define SURFACE_CLIP_BOTH     2
+#define SURFACE_CLIP_SUCCESS          0
+#define SURFACE_CLIP_SUCCESS_EMPTY    1
+#define SURFACE_CLIP_FAIL             2
 
 
 // Class META
@@ -766,6 +774,8 @@
 #define MVIEW_IS_VOXD                        10
 #define MVIEW_IS_SHADOW_2D_INTERPRETATION    11
 #define MVIEW_IS_VECTOR3D                    12
+#define MVIEW_IS_GENSURF                     13
+#define MVIEW_IS_VOXSURF                     14
 #define MVIEW_LABEL_BOUND_NO     0
 #define MVIEW_LABEL_BOUND_YES    1
 #define MVIEW_LABEL_JUST_TOP       0

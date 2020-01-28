@@ -79,11 +79,6 @@
 #define COM_STOPBITS_TWO     2
 
 
-// Class CSYMB
-#define CSYMB_COLOR_EDGE    0
-#define CSYMB_COLOR_FILL    1
-
-
 // Class DGW
 #define DGW_LABEL        0
 #define DGW_TEXT         1
@@ -146,6 +141,9 @@
 #define DH_SURFACE_LAST_LAYER_TO        5
 #define DIP_CONVENTION_NEGATIVE    -1
 #define DIP_CONVENTION_POSITIVE    1
+#define DH_DESURVEY_RAD_CURVE       0
+#define DH_DESURVEY_POLYNOMIAL      1
+#define DH_DESURVEY_STRAIGHT_SEG    2
 
 
 // Class DMPPLY
@@ -560,6 +558,8 @@
 #define FILE_FILTER_DMP                        129
 #define FILE_FILTER_RAW                        130
 #define FILE_FILTER_DAT                        131
+#define FILE_FILTER_OMF                        132
+#define FILE_FILTER_3DSURVEY                   133
 #define FILE_FORM_OPEN    0
 #define FILE_FORM_SAVE    1
 #define GS_DIRECTORY_NONE                 0
