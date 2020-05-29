@@ -3474,6 +3474,19 @@ Std_iGetTemplateBlob_DH(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_STR_PTR,
                         GX_VAR   GX_LONG_PTR);
 
+/*---------------- iGetTemplateBlobNoSourceResolve_DH[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetTemplateBlobNoSourceResolve_DH(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetTemplateBlobNoSourceResolve_DH(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_VAR   GX_LONG_PTR);
+
 /*---------------- IGetTemplateInfo_DH[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -6967,6 +6980,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_LoadGravityCG6_DU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_HANDLE_PTR,
                       GX_CONST GX_STR_PTR);
+
+/*---------------- LoadGravityCG6ToLine_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LoadGravityCG6ToLine_DU(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LoadGravityCG6ToLine_DU(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
 
 /*---------------- LoadLTB_DU[_licensed] ----------------*/
 

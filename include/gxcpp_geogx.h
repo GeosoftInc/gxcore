@@ -5668,6 +5668,14 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
                     gx_->throw_on_error();
                 }
+                static GXLSTPtr create_symb_lst()
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = CreateSymbLST_DB(
+                                      gx_->pGeo);
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXLST>(ret);
+                }
                 void array_lst(GXLSTPtr param1)
                 {
                     ArrayLST_DB(
@@ -7031,6 +7039,14 @@ namespace geosoft
                 {
                     GXContextPtr gx_ = GXContext::current();
                     int32_t ret = iGetTemplateBlob_DH(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<long*>(&param3));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                static int32_t get_template_blob_no_source_resolve(GXDBPtr param1, const gx_string_type& param2, int32_t& param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = iGetTemplateBlobNoSourceResolve_DH(
                                       gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<long*>(&param3));
                     gx_->throw_on_error();
                     return ret;
@@ -8735,6 +8751,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     LoadGravityCG6_DU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str());
+                    gx_->throw_on_error();
+                }
+                static void load_gravity_cg6_to_line(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    LoadGravityCG6ToLine_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str());
                     gx_->throw_on_error();
                 }
                 static void load_ltb(GXDBPtr param1, int32_t param2, GXLTBPtr param3, int32_t param4)
@@ -25422,6 +25445,19 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<long*>(&param1), reinterpret_cast<long*>(&param2), reinterpret_cast<long*>(&param3), reinterpret_cast<long*>(&param4), reinterpret_cast<long*>(&param5), reinterpret_cast<long*>(&param6), reinterpret_cast<long*>(&param7));
                     gx_->throw_on_error();
                 }
+                void compute_poly_line_intersections(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, GXVVPtr param4, GXVVPtr param5, GXVVPtr param6)
+                {
+                    ComputePolyLineIntersections_SURFACEITEM(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), reinterpret_cast<const long*>(&gx_->handle(param6)));
+                    gx_->throw_on_error();
+                }
+                int32_t intersects_bounding_box(double param1, double param2, double param3, double param4, double param5, double param6)
+                {
+                    int32_t ret = iIntersectsBoundingBox_SURFACEITEM(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, &param2, &param3, &param4, &param5, &param6);
+                    gx_->throw_on_error();
+                    return ret;
+                }
 
             };
             class GXSYS
@@ -26141,6 +26177,35 @@ namespace geosoft
                     int32_t paramSize1 = STR_VERY_LONG * STRING_CHAR_SIZE;
                     param1.resize(STR_VERY_LONG);
                     GetAPIKey_SYS(
+                        gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                }
+                static void connect_with_current_central_instance(gx_string_type& param1, gx_string_type& param2, gx_string_type& param3, gx_string_type& param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize1 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    int32_t paramSize3 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    int32_t paramSize5 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    int32_t paramSize7 = STR_VERY_LONG * STRING_CHAR_SIZE;
+                    param1.resize(STR_DEFAULT_LONG);
+                    param2.resize(STR_DEFAULT_LONG);
+                    param3.resize(STR_DEFAULT_LONG);
+                    param4.resize(STR_VERY_LONG);
+                    ConnectWithCurrentCentralInstance_SYS(
+                        gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize5 ), (gx_string_char_type*)param4.data(), reinterpret_cast<const long*>(&paramSize7 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                    param2.resize(gx_string_len(param2.c_str()));
+                    param3.resize(gx_string_len(param3.c_str()));
+                    param4.resize(gx_string_len(param4.c_str()));
+                }
+                static void get_view_service_url(gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize1 = STR_VERY_LONG * STRING_CHAR_SIZE;
+                    param1.resize(STR_VERY_LONG);
+                    GetViewServiceURL_SYS(
                         gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ));
                     gx_->throw_on_error();
                     param1.resize(gx_string_len(param1.c_str()));

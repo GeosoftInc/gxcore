@@ -2705,6 +2705,13 @@ Std_SetMETA_DB(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_HANDLE_PTR);
 
+/*---------------- CreateSymbLST_DB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+CreateSymbLST_DB(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_CreateSymbLST_DB(GX_VAR   GX_OBJECT_PTR);
+
 /*---------------- ArrayLST_DB[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -23026,6 +23033,48 @@ Std_ComputeExtendedInfo_SURFACEITEM(GX_VAR   GX_OBJECT_PTR,
                                     GX_VAR   GX_LONG_PTR,
                                     GX_VAR   GX_LONG_PTR);
 
+/*---------------- ComputePolyLineIntersections_SURFACEITEM[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComputePolyLineIntersections_SURFACEITEM(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComputePolyLineIntersections_SURFACEITEM(GX_VAR   GX_OBJECT_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iIntersectsBoundingBox_SURFACEITEM[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iIntersectsBoundingBox_SURFACEITEM(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iIntersectsBoundingBox_SURFACEITEM(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR,
+                                       GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- BreakDate_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -23910,6 +23959,40 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GetAPIKey_SYS(GX_VAR   GX_OBJECT_PTR,
                   GX_VAR   GX_STR_PTR,
                   GX_CONST GX_LONG_PTR);
+
+/*---------------- ConnectWithCurrentCentralInstance_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ConnectWithCurrentCentralInstance_SYS(GX_VAR   GX_OBJECT_PTR,
+                                      GX_VAR   GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_VAR   GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_VAR   GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_VAR   GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ConnectWithCurrentCentralInstance_SYS(GX_VAR   GX_OBJECT_PTR,
+                                          GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR);
+
+/*---------------- GetViewServiceURL_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetViewServiceURL_SYS(GX_VAR   GX_OBJECT_PTR,
+                      GX_VAR   GX_STR_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetViewServiceURL_SYS(GX_VAR   GX_OBJECT_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR);
 
 /*---------------- GetViewURL_SYS[_public] ----------------*/
 
