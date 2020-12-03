@@ -11854,6 +11854,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Destroy_EXP(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR);
 
+/*---------------- AddWhiteNoise_FFT[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddWhiteNoise_FFT(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_DOUBLE_PTR,
+                  GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddWhiteNoise_FFT(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_LONG_PTR);
+
 /*---------------- AppDens_FFT[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -12344,6 +12357,25 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_TransPG_FFT2(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_LONG_PTR);
+
+/*---------------- FilterResponse_FFT2[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+FilterResponse_FFT2(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_STR_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_DOUBLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_FilterResponse_FFT2(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_DOUBLE_PTR,
+                        GX_CONST GX_DOUBLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Create_FLT[_licensed] ----------------*/
 
@@ -12938,6 +12970,19 @@ Std_LagDAARC500GPS_GU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_HANDLE_PTR,
                       GX_CONST GX_HANDLE_PTR);
 
+/*---------------- MagneticTiltDepth_GU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+MagneticTiltDepth_GU(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_MagneticTiltDepth_GU(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR);
+
 /*---------------- MaxwellPlateCorners_GU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -13097,17 +13142,6 @@ App_CreateWNDFromHWND_GUI(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_CreateWNDFromHWND_GUI(GX_VAR   GX_OBJECT_PTR,
                               HWND);
-
-/*---------------- Fft2SpecFilter_GUI[_licensed_app] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-App_Fft2SpecFilter_GUI(GX_VAR   GX_OBJECT_PTR,
-                       GX_CONST GX_STR_PTR,
-                       GX_CONST GX_STR_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_App_Fft2SpecFilter_GUI(GX_VAR   GX_OBJECT_PTR,
-                           GX_CONST GX_STR_PTR,
-                           GX_CONST GX_STR_PTR);
 
 /*---------------- GetParentWND_GUI[_public_app] ----------------*/
 
@@ -13562,6 +13596,29 @@ Std_App_IiDatFileForm_GUI(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_LONG_PTR,
                           GX_CONST GX_LONG_PTR);
 
+/*---------------- IiDatFileFormEx_GUI[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_IiDatFileFormEx_GUI(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_IiDatFileFormEx_GUI(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR);
+
 /*---------------- IiGenFileForm_GUI[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -13859,13 +13916,13 @@ Std_App_iImportTemplateSQLADO_GUI(GX_VAR   GX_OBJECT_PTR,
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 App_iImportXYZTemplateEditor_GUI(GX_VAR   GX_OBJECT_PTR,
                                  GX_CONST GX_HANDLE_PTR,
-                                 GX_CONST GX_STR_PTR,
+                                 GX_VAR   GX_STR_PTR,
                                  GX_CONST GX_LONG_PTR,
                                  GX_CONST GX_STR_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_iImportXYZTemplateEditor_GUI(GX_VAR   GX_OBJECT_PTR,
                                      GX_CONST GX_HANDLE_PTR,
-                                     GX_CONST GX_STR_PTR,
+                                     GX_VAR   GX_STR_PTR,
                                      GX_CONST GX_LONG_PTR,
                                      GX_CONST GX_STR_PTR);
 
@@ -14359,6 +14416,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_Show3DViewerDialog_GUI(GX_VAR   GX_OBJECT_PTR,
                                GX_CONST GX_STR_PTR,
                                GX_CONST GX_STR_PTR);
+
+/*---------------- Fft2SpecFilter_GUI[_licensed_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_Fft2SpecFilter_GUI(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_Fft2SpecFilter_GUI(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
 
 /*---------------- Create_HTTP[_public] ----------------*/
 
@@ -19540,6 +19608,37 @@ Std_CreateEx_TC(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_DOUBLE_PTR,
                 GX_CONST GX_LONG_PTR,
                 GX_CONST GX_LONG_PTR);
+
+/*---------------- CreateEx2_TC[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+CreateEx2_TC(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_DOUBLE_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_CreateEx2_TC(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_DOUBLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Destroy_TC[_public] ----------------*/
 

@@ -2511,6 +2511,23 @@ Std_ISetLineName2_DB(GX_VAR   GX_OBJECT_PTR,
                      GX_VAR   GX_STR_PTR,
                      GX_CONST GX_LONG_PTR);
 
+/*---------------- RenameLine_DB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RenameLine_DB(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_STR_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RenameLine_DB(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR);
+
 /*---------------- LoadSelect_DB[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -2757,6 +2774,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_NormalChanLST_DB(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_HANDLE_PTR);
+
+/*---------------- NonStringAndNonArrayChanLST_DB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+NonStringAndNonArrayChanLST_DB(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_NonStringAndNonArrayChanLST_DB(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_HANDLE_PTR);
 
 /*---------------- ClassChanLST_DB[_public] ----------------*/
 
@@ -6256,21 +6284,6 @@ Std_GridHead_IMU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_DOUBLE_PTR,
                  GX_CONST GX_DOUBLE_PTR,
                  GX_CONST GX_DOUBLE_PTR);
-
-/*---------------- GridInFill_IMU[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-GridInFill_IMU(GX_VAR   GX_OBJECT_PTR,
-               GX_CONST GX_HANDLE_PTR,
-               GX_CONST GX_STR_PTR,
-               GX_CONST GX_LONG_PTR,
-               GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_GridInFill_IMU(GX_VAR   GX_OBJECT_PTR,
-                   GX_CONST GX_HANDLE_PTR,
-                   GX_CONST GX_STR_PTR,
-                   GX_CONST GX_LONG_PTR,
-                   GX_CONST GX_LONG_PTR);
 
 /*---------------- GridMask_IMU[_licensed] ----------------*/
 
@@ -9808,6 +9821,19 @@ Std_ExportAreaRaster_MAP(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_LONG_PTR,
                          GX_CONST GX_STR_PTR,
                          GX_CONST GX_STR_PTR);
+
+/*---------------- RenameView_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RenameView_MAP(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RenameView_MAP(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_STR_PTR);
 
 /*---------------- RenderBitmap_MAP[_public] ----------------*/
 
@@ -14509,6 +14535,21 @@ Std_SetPlaneSurface_MVIEW(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_LONG_PTR,
                           GX_CONST GX_STR_PTR);
 
+/*---------------- GetPlaneSurface_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetPlaneSurface_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_VAR   GX_STR_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetPlaneSurface_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR);
+
 /*---------------- SetPlaneSurfInfo_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -14529,6 +14570,27 @@ Std_SetPlaneSurfInfo_MVIEW(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_DOUBLE_PTR,
                            GX_CONST GX_DOUBLE_PTR,
                            GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- GetPlaneSurfInfo_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetPlaneSurfInfo_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_VAR   GX_LONG_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_DOUBLE_PTR,
+                       GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetPlaneSurfInfo_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_VAR   GX_LONG_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR,
+                           GX_VAR   GX_DOUBLE_PTR);
 
 /*---------------- DefinePlane3D_MVIEW[_public] ----------------*/
 
@@ -14592,6 +14654,45 @@ Std_DefineViewerPlane3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                               GX_CONST GX_DOUBLE_PTR,
                               GX_CONST GX_DOUBLE_PTR,
                               GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- Get3DSnapshots_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Get3DSnapshots_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Get3DSnapshots_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Restore3DSnapshot_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Restore3DSnapshot_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Restore3DSnapshot_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR);
+
+/*---------------- Capture3DSnapshot_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Capture3DSnapshot_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Capture3DSnapshot_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
 
 /*---------------- _ClipPolyEx_MVIEW[_public] ----------------*/
 
@@ -23301,6 +23402,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iRunGX_SYS(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_STR_PTR);
 
+/*---------------- iRunPython_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iRunPython_SYS(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iRunPython_SYS(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_STR_PTR);
+
 /*---------------- iRunGXEx_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -23949,17 +24061,6 @@ Std_IGetGeosoftID_SYS(GX_VAR   GX_OBJECT_PTR,
                       GX_VAR   GX_STR_PTR,
                       GX_CONST GX_LONG_PTR);
 
-/*---------------- GetAPIKey_SYS[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-GetAPIKey_SYS(GX_VAR   GX_OBJECT_PTR,
-              GX_VAR   GX_STR_PTR,
-              GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_GetAPIKey_SYS(GX_VAR   GX_OBJECT_PTR,
-                  GX_VAR   GX_STR_PTR,
-                  GX_CONST GX_LONG_PTR);
-
 /*---------------- ConnectWithCurrentCentralInstance_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -23982,28 +24083,6 @@ Std_ConnectWithCurrentCentralInstance_SYS(GX_VAR   GX_OBJECT_PTR,
                                           GX_CONST GX_LONG_PTR,
                                           GX_VAR   GX_STR_PTR,
                                           GX_CONST GX_LONG_PTR);
-
-/*---------------- GetViewServiceURL_SYS[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-GetViewServiceURL_SYS(GX_VAR   GX_OBJECT_PTR,
-                      GX_VAR   GX_STR_PTR,
-                      GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_GetViewServiceURL_SYS(GX_VAR   GX_OBJECT_PTR,
-                          GX_VAR   GX_STR_PTR,
-                          GX_CONST GX_LONG_PTR);
-
-/*---------------- GetViewURL_SYS[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-GetViewURL_SYS(GX_VAR   GX_OBJECT_PTR,
-               GX_VAR   GX_STR_PTR,
-               GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_GetViewURL_SYS(GX_VAR   GX_OBJECT_PTR,
-                   GX_VAR   GX_STR_PTR,
-                   GX_CONST GX_LONG_PTR);
 
 /*---------------- IGetProfileName_SYS[_public] ----------------*/
 
