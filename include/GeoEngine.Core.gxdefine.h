@@ -501,6 +501,12 @@
 #define ITR_MODEL_LOGLIN         4
 
 
+// Class KML
+#define KML_ALT_CLAMPTOGROUND       0
+#define KML_ALT_RELATIVETOGROUND    1
+#define KML_ALT_ABSOLUTE            2
+
+
 // Class LAYOUT
 #define LAYOUT_CONSTR_LEFT       0
 #define LAYOUT_CONSTR_RIGHT      1
@@ -1083,6 +1089,7 @@
 #define SYS_DIR_GEOSOFT_SPEC_INI          119
 #define SYS_DIR_GEOSOFT_STYLESHEETS       120
 #define SYS_DIR_GEOSOFT_TBL               121
+#define SYS_DIR_GEOSOFT_PYTHON            127
 #define SYS_DIR_USER_CSV                  200
 #define SYS_DIR_USER_ETC                  201
 #define SYS_DIR_USER_GS                   202

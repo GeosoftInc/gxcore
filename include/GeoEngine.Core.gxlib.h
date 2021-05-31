@@ -6676,6 +6676,21 @@ Std_GridTrns_IMU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_STR_PTR,
                  GX_CONST GX_LONG_PTR);
 
+/*---------------- GridVC_IMU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GridVC_IMU(GX_VAR   GX_OBJECT_PTR,
+           GX_CONST GX_HANDLE_PTR,
+           GX_CONST GX_HANDLE_PTR,
+           GX_CONST GX_LONG_PTR,
+           GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GridVC_IMU(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- GridVD_IMU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7160,6 +7175,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ClearOrientation_IPJ(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_HANDLE_PTR);
 
+/*---------------- CopyOrientation_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CopyOrientation_IPJ(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CopyOrientation_IPJ(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
 /*---------------- ConvertOrientationWarpVV_IPJ[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7423,6 +7449,23 @@ Std_iCompareDatums_IPJ(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_HANDLE_PTR,
                        GX_CONST GX_HANDLE_PTR);
 
+/*---------------- iCompareDatumsToSpecifiedToleranceWithFeedback_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iCompareDatumsToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                   GX_CONST GX_HANDLE_PTR,
+                                                   GX_CONST GX_HANDLE_PTR,
+                                                   GX_CONST GX_LONG_PTR,
+                                                   GX_VAR   GX_STR_PTR,
+                                                   GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iCompareDatumsToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                       GX_CONST GX_HANDLE_PTR,
+                                                       GX_CONST GX_HANDLE_PTR,
+                                                       GX_CONST GX_LONG_PTR,
+                                                       GX_VAR   GX_STR_PTR,
+                                                       GX_CONST GX_LONG_PTR);
+
 /*---------------- iConvertWarp_IPJ[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7476,6 +7519,25 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iCoordinateSystemsAreTheSameWithinASmallTolerance_IPJ(GX_VAR   GX_OBJECT_PTR,
                                                           GX_CONST GX_HANDLE_PTR,
                                                           GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iCoordinateSystemsAreTheSameToSpecifiedToleranceWithFeedback_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iCoordinateSystemsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                                 GX_CONST GX_HANDLE_PTR,
+                                                                 GX_CONST GX_HANDLE_PTR,
+                                                                 GX_CONST GX_LONG_PTR,
+                                                                 GX_CONST GX_LONG_PTR,
+                                                                 GX_VAR   GX_STR_PTR,
+                                                                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iCoordinateSystemsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                                     GX_CONST GX_HANDLE_PTR,
+                                                                     GX_CONST GX_HANDLE_PTR,
+                                                                     GX_CONST GX_LONG_PTR,
+                                                                     GX_CONST GX_LONG_PTR,
+                                                                     GX_VAR   GX_STR_PTR,
+                                                                     GX_CONST GX_LONG_PTR);
 
 /*---------------- IGetDisplayName_IPJ[_public] ----------------*/
 
@@ -7675,6 +7737,23 @@ Std_iOrientationsAreTheSameWithinASmallTolerance_IPJ(GX_VAR   GX_OBJECT_PTR,
                                                      GX_CONST GX_HANDLE_PTR,
                                                      GX_CONST GX_HANDLE_PTR);
 
+/*---------------- iOrientationsAreTheSameToSpecifiedToleranceWithFeedback_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iOrientationsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                            GX_CONST GX_HANDLE_PTR,
+                                                            GX_CONST GX_HANDLE_PTR,
+                                                            GX_CONST GX_LONG_PTR,
+                                                            GX_VAR   GX_STR_PTR,
+                                                            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iOrientationsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                                GX_CONST GX_HANDLE_PTR,
+                                                                GX_CONST GX_HANDLE_PTR,
+                                                                GX_CONST GX_LONG_PTR,
+                                                                GX_VAR   GX_STR_PTR,
+                                                                GX_CONST GX_LONG_PTR);
+
 /*---------------- iHasSectionOrientation_IPJ[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7777,6 +7856,23 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iWarpsAreTheSameWithinASmallTolerance_IPJ(GX_VAR   GX_OBJECT_PTR,
                                               GX_CONST GX_HANDLE_PTR,
                                               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iWarpsAreTheSameToSpecifiedToleranceWithFeedback_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iWarpsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                     GX_CONST GX_HANDLE_PTR,
+                                                     GX_CONST GX_HANDLE_PTR,
+                                                     GX_CONST GX_LONG_PTR,
+                                                     GX_VAR   GX_STR_PTR,
+                                                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iWarpsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                                         GX_CONST GX_HANDLE_PTR,
+                                                         GX_CONST GX_HANDLE_PTR,
+                                                         GX_CONST GX_LONG_PTR,
+                                                         GX_VAR   GX_STR_PTR,
+                                                         GX_CONST GX_LONG_PTR);
 
 /*---------------- iWarpType_IPJ[_public] ----------------*/
 
@@ -8336,6 +8432,62 @@ Std_ReprojectSectionGrid_IPJ(GX_VAR   GX_OBJECT_PTR,
                              GX_VAR   GX_DOUBLE_PTR,
                              GX_VAR   GX_DOUBLE_PTR);
 
+/*---------------- iGetAuthorityID_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetAuthorityID_IPJ(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_VAR   GX_STR_PTR,
+                    GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetAuthorityID_IPJ(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetEPSGIDForDatum_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetEPSGIDForDatum_IPJ(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetEPSGIDForDatum_IPJ(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR);
+
+/*---------------- AddAsFavouriteCoordinateSystem_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddAsFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddAsFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iGetNumberOfFavouriteCoordinateSystems_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetNumberOfFavouriteCoordinateSystems_IPJ(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetNumberOfFavouriteCoordinateSystems_IPJ(GX_VAR   GX_OBJECT_PTR);
+
+/*---------------- GetFavouriteCoordinateSystem_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_LONG_PTR);
+
+/*---------------- RemoveFavouriteCoordinateSystem_IPJ[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RemoveFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RemoveFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_LONG_PTR);
+
 /*---------------- ChangeBrightness_ITR[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -8723,6 +8875,48 @@ Std_SetZoneValue_ITR(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_LONG_PTR,
                      GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- Import3DPolygon_KML[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Import3DPolygon_KML(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Import3DPolygon_KML(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR);
+
+/*---------------- Import3DLinePath_KML[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Import3DLinePath_KML(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Import3DLinePath_KML(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR);
 
 /*---------------- CalculateRects_LAYOUT[_licensed] ----------------*/
 
@@ -21583,6 +21777,32 @@ ExportFiles_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ExportFiles_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetTraceHeaderAsJson_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetTraceHeaderAsJson_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_VAR   GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetTraceHeaderAsJson_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_LONG_PTR,
+                                    GX_VAR   GX_STR_PTR,
+                                    GX_CONST GX_LONG_PTR);
+
+/*---------------- GetTraceData_SEGYREADER[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetTraceData_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetTraceData_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR);
 
 /*---------------- Create_ST[_public] ----------------*/
 

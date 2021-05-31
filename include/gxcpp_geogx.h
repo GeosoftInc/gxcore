@@ -1245,6 +1245,10 @@ namespace geosoft
             constexpr auto ITR_ZONE_MODEL_NORMAL = 2;
             constexpr auto ITR_ZONE_MODEL_EQUAL = 3;
             constexpr auto ITR_MODEL_LOGLIN = 4;
+// KML_ALT
+            constexpr auto KML_ALT_CLAMPTOGROUND = 0;
+            constexpr auto KML_ALT_RELATIVETOGROUND = 1;
+            constexpr auto KML_ALT_ABSOLUTE = 2;
 // LAYOUT_CONSTR
             constexpr auto LAYOUT_CONSTR_LEFT = 0;
             constexpr auto LAYOUT_CONSTR_RIGHT = 1;
@@ -1936,6 +1940,7 @@ namespace geosoft
             constexpr auto SYS_DIR_GEOSOFT_SPEC_INI = 119;
             constexpr auto SYS_DIR_GEOSOFT_STYLESHEETS = 120;
             constexpr auto SYS_DIR_GEOSOFT_TBL = 121;
+            constexpr auto SYS_DIR_GEOSOFT_PYTHON = 127;
             constexpr auto SYS_DIR_USER_CSV = 200;
             constexpr auto SYS_DIR_USER_ETC = 201;
             constexpr auto SYS_DIR_USER_GS = 202;
@@ -2542,6 +2547,8 @@ namespace geosoft
             typedef std::shared_ptr<GXITR> GXITRPtr;
             class GXKGRD;
             typedef std::shared_ptr<GXKGRD> GXKGRDPtr;
+            class GXKML;
+            typedef std::shared_ptr<GXKML> GXKMLPtr;
             class GXLAYOUT;
             typedef std::shared_ptr<GXLAYOUT> GXLAYOUTPtr;
             class GXLL2;
@@ -2748,6 +2755,7 @@ namespace geosoft
                 friend class GXIPJ;
                 friend class GXITR;
                 friend class GXKGRD;
+                friend class GXKML;
                 friend class GXLAYOUT;
                 friend class GXLL2;
                 friend class GXLMSG;
@@ -5971,8 +5979,8 @@ namespace geosoft
                 static void gen_valid_line_symb(const gx_string_type& param1, gx_string_type& param2)
                 {
                     GXContextPtr gx_ = GXContext::current();
-                    int32_t paramSize2 = STR_DB_SYMBOL * STRING_CHAR_SIZE;
-                    param2.resize(STR_DB_SYMBOL);
+                    int32_t paramSize2 = STR_FILE * STRING_CHAR_SIZE;
+                    param2.resize(STR_FILE);
                     GenValidLineSymb_DB(
                         gx_->pGeo, param1.c_str(), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize2 ));
                     gx_->throw_on_error();
@@ -8998,6 +9006,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     SortIndex2_DU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7));
+                    gx_->throw_on_error();
+                }
+                static void sort_index_n(GXDBPtr param1, int32_t param2, GXVVPtr param3, GXVVPtr param4, int32_t param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    SortIndexN_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&param5));
                     gx_->throw_on_error();
                 }
                 static void split_line(GXDBPtr param1, int32_t param2, int32_t param3, double param4)
@@ -14436,6 +14451,13 @@ namespace geosoft
                         gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&param2));
                     gx_->throw_on_error();
                 }
+                static void grid_vc(GXIMGPtr param1, GXIMGPtr param2, int32_t param3, double param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GridVC_IMU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), &param4);
+                    gx_->throw_on_error();
+                }
                 static void grid_vd(GXIMGPtr param1, GXIMGPtr param2)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -15260,6 +15282,12 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                 }
+                void copy_orientation(GXIPJPtr param1)
+                {
+                    CopyOrientation_IPJ(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
                 void convert_orientation_warp_vv(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, int32_t param4)
                 {
                     ConvertOrientationWarpVV_IPJ(
@@ -15359,6 +15387,16 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                int32_t compare_datums_to_specified_tolerance_with_feedback(GXIPJPtr param1, int32_t param2, gx_string_type& param3)
+                {
+                    int32_t paramSize4 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    param3.resize(STR_DEFAULT_LONG);
+                    int32_t ret = iCompareDatumsToSpecifiedToleranceWithFeedback_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize4 ));
+                    gx_->throw_on_error();
+                    param3.resize(gx_string_len(param3.c_str()));
+                    return ret;
+                }
                 int32_t convert_warp(double& param1, double& param2, double& param3, int32_t param4)
                 {
                     int32_t ret = iConvertWarp_IPJ(
@@ -15385,6 +15423,16 @@ namespace geosoft
                     int32_t ret = iCoordinateSystemsAreTheSameWithinASmallTolerance_IPJ(
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
                     gx_->throw_on_error();
+                    return ret;
+                }
+                int32_t coordinate_systems_are_the_same_to_specified_tolerance_with_feedback(GXIPJPtr param1, int32_t param2, int32_t param3, gx_string_type& param4)
+                {
+                    int32_t paramSize5 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    param4.resize(STR_DEFAULT_LONG);
+                    int32_t ret = iCoordinateSystemsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), (gx_string_char_type*)param4.data(), reinterpret_cast<const long*>(&paramSize5 ));
+                    gx_->throw_on_error();
+                    param4.resize(gx_string_len(param4.c_str()));
                     return ret;
                 }
                 void get_display_name(gx_string_type& param1)
@@ -15525,6 +15573,16 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                int32_t orientations_are_the_same_to_specified_tolerance_with_feedback(GXIPJPtr param1, int32_t param2, gx_string_type& param3)
+                {
+                    int32_t paramSize4 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    param3.resize(STR_DEFAULT_LONG);
+                    int32_t ret = iOrientationsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize4 ));
+                    gx_->throw_on_error();
+                    param3.resize(gx_string_len(param3.c_str()));
+                    return ret;
+                }
                 int32_t has_section_orientation()
                 {
                     int32_t ret = iHasSectionOrientation_IPJ(
@@ -15589,6 +15647,16 @@ namespace geosoft
                     int32_t ret = iWarpsAreTheSameWithinASmallTolerance_IPJ(
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
                     gx_->throw_on_error();
+                    return ret;
+                }
+                int32_t warps_are_the_same_to_specified_tolerance_with_feedback(GXIPJPtr param1, int32_t param2, gx_string_type& param3)
+                {
+                    int32_t paramSize4 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    param3.resize(STR_DEFAULT_LONG);
+                    int32_t ret = iWarpsAreTheSameToSpecifiedToleranceWithFeedback_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize4 ));
+                    gx_->throw_on_error();
+                    param3.resize(gx_string_len(param3.c_str()));
                     return ret;
                 }
                 int32_t warp_type()
@@ -15789,6 +15857,52 @@ namespace geosoft
                 {
                     ReprojectSectionGrid_IPJ(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6);
+                    gx_->throw_on_error();
+                }
+                int32_t get_authority_id(gx_string_type& param1)
+                {
+                    int32_t paramSize2 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
+                    param1.resize(STR_DEFAULT_SHORT);
+                    int32_t ret = iGetAuthorityID_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize2 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                    return ret;
+                }
+                int32_t get_epsgid_for_datum()
+                {
+                    int32_t ret = iGetEPSGIDForDatum_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void add_as_favourite_coordinate_system()
+                {
+                    AddAsFavouriteCoordinateSystem_IPJ(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                }
+                static int32_t get_number_of_favourite_coordinate_systems()
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = iGetNumberOfFavouriteCoordinateSystems_IPJ(
+                                      gx_->pGeo);
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                static GXIPJPtr get_favourite_coordinate_system(int32_t param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = GetFavouriteCoordinateSystem_IPJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXIPJ>(ret);
+                }
+                static void remove_favourite_coordinate_system(int32_t param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    RemoveFavouriteCoordinateSystem_IPJ(
+                        gx_->pGeo, reinterpret_cast<const long*>(&param1));
                     gx_->throw_on_error();
                 }
 
@@ -16134,6 +16248,32 @@ namespace geosoft
                 {
                     int32_t ret = iSaveParms_KGRD(
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                    return ret;
+                }
+
+            };
+            class GXKML
+            {
+            private:
+                GXKML();
+                ~GXKML();
+            public:
+
+
+                static int32_t import_3d_polygon(GXMVIEWPtr param1, const gx_string_type& param2, GXVVPtr param3, GXVVPtr param4, GXVVPtr param5, int32_t param6, int32_t param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Import3DPolygon_KML(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                static int32_t import_3d_line_path(GXMVIEWPtr param1, const gx_string_type& param2, GXVVPtr param3, GXVVPtr param4, GXVVPtr param5, int32_t param6, int32_t param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Import3DLinePath_KML(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7));
                     gx_->throw_on_error();
                     return ret;
                 }
@@ -23536,6 +23676,22 @@ namespace geosoft
                     ExportFiles_SEGYREADER(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
+                }
+                void get_trace_header_as_json(int32_t param1, gx_string_type& param2)
+                {
+                    int32_t paramSize3 = STR_VERY_LONG * STRING_CHAR_SIZE;
+                    param2.resize(STR_VERY_LONG);
+                    GetTraceHeaderAsJson_SEGYREADER(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ));
+                    gx_->throw_on_error();
+                    param2.resize(gx_string_len(param2.c_str()));
+                }
+                GXVVPtr get_trace_data(int32_t param1)
+                {
+                    int32_t ret = GetTraceData_SEGYREADER(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXVV>(ret);
                 }
 
             };

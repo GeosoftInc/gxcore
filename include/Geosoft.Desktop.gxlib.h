@@ -7632,6 +7632,23 @@ Std_SortIndex2_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
 
+/*---------------- SortIndexN_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SortIndexN_DU(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SortIndexN_DU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR);
+
 /*---------------- SplitLine_DU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
