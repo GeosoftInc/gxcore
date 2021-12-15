@@ -79,6 +79,18 @@
 #define COM_STOPBITS_TWO     2
 
 
+// Class DCOL
+#define BRIGHT_ALL      0
+#define BRIGHT_LAYER    1
+#define BRIGHTNESS_ALL               0
+#define BRIGHTNESS_ALL_AND_LAYERS    1
+#define DCOL_TYPE_UNKNOWN         0
+#define DCOL_TYPE_GRID            1
+#define DCOL_TYPE_SYMBOLS         2
+#define DCOL_TYPE_VOXEL           3
+#define DCOL_TYPE_VECTOR_VOXEL    4
+
+
 // Class DGW
 #define DGW_LABEL        0
 #define DGW_TEXT         1
@@ -771,6 +783,12 @@
 #define SEMPLOT_PLOT_XYPLOT     1
 #define SEMPLOT_PLOT_TRIPLOT    2
 #define SEMPLOT_PLOT_UNKNOWN    3
+
+
+// Class SHD
+#define SHD_FIX_NONE           0
+#define SHD_FIX_INCLINATION    1
+#define SHD_FIX_DECLINATION    2
 
 
 // Class SHP

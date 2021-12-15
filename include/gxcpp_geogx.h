@@ -378,6 +378,18 @@ namespace geosoft
             constexpr auto DB_ARRAY_BASETYPE_DISCRETE_TIME_WINDOWS = 7;
 // NULLSYMB
             constexpr auto NULLSYMB = -1;
+// BRIGHT
+            constexpr auto BRIGHT_ALL = 0;
+            constexpr auto BRIGHT_LAYER = 1;
+// BRIGHTNESS_TYPES
+            constexpr auto BRIGHTNESS_ALL = 0;
+            constexpr auto BRIGHTNESS_ALL_AND_LAYERS = 1;
+// DCOL_TYPE
+            constexpr auto DCOL_TYPE_UNKNOWN = 0;
+            constexpr auto DCOL_TYPE_GRID = 1;
+            constexpr auto DCOL_TYPE_SYMBOLS = 2;
+            constexpr auto DCOL_TYPE_VOXEL = 3;
+            constexpr auto DCOL_TYPE_VECTOR_VOXEL = 4;
 // DGW_OBJECT
             constexpr auto DGW_LABEL = 0;
             constexpr auto DGW_TEXT = 1;
@@ -976,6 +988,19 @@ namespace geosoft
             constexpr auto XTOOL_DOCK_RIGHT = 3;
             constexpr auto XTOOL_DOCK_BOTTOM = 4;
             constexpr auto XTOOL_DOCK_FLOAT = 5;
+// IMG_DISPLAY_PROPERTY
+            constexpr auto IMG_SHADING_INCLINATION = 0;
+            constexpr auto IMG_SHADING_DECLINATION = 1;
+            constexpr auto IMG_SHADING_SCALE = 2;
+            constexpr auto IMG_SHADING_CONTRAST = 3;
+            constexpr auto IMG_SHADING_BRIGHTNESS = 4;
+            constexpr auto IMG_SHADING_WETLOOK = 5;
+            constexpr auto IMG_COLOURS_REVERSED = 6;
+            constexpr auto IMG_SMOOTHING_ENABLED = 7;
+            constexpr auto IMG_SHADING_ENABLED = 8;
+// IMG_FAULT
+            constexpr auto IMG_FAULT_POLYLINE = 0;
+            constexpr auto IMG_FAULT_POLYGON = 1;
 // IMG_FILE
             constexpr auto IMG_FILE_READONLY = 0;
             constexpr auto IMG_FILE_READWRITE = 2;
@@ -1245,6 +1270,7 @@ namespace geosoft
             constexpr auto ITR_ZONE_MODEL_NORMAL = 2;
             constexpr auto ITR_ZONE_MODEL_EQUAL = 3;
             constexpr auto ITR_MODEL_LOGLIN = 4;
+            constexpr auto ITR_ZONE_MODEL_LOGLIN = 4;
 // KML_ALT
             constexpr auto KML_ALT_CLAMPTOGROUND = 0;
             constexpr auto KML_ALT_RELATIVETOGROUND = 1;
@@ -1344,6 +1370,13 @@ namespace geosoft
             constexpr auto SURFACE_CLIP_SUCCESS = 0;
             constexpr auto SURFACE_CLIP_SUCCESS_EMPTY = 1;
             constexpr auto SURFACE_CLIP_FAIL = 2;
+// SURFACE_PROJECTION_METHOD
+            constexpr auto SURFACE_PROJECTION_MAXIMUM = 0;
+            constexpr auto SURFACE_PROJECTION_MINIMUM = 1;
+            constexpr auto SURFACE_PROJECTION_AVERAGE = 2;
+// SURFACE_TRANSFORMATION_METHOD
+            constexpr auto SURFACE_TRANSFORMATION_METHOD_SHIFT = 0;
+            constexpr auto SURFACE_TRANSFORMATION_METHOD_SCALE = 1;
 // H_META_INVALID_TOKEN
             constexpr auto H_META_INVALID_TOKEN = -1;
 // META_CORE_ATTRIB
@@ -1772,6 +1805,10 @@ namespace geosoft
             constexpr auto SEMPLOT_PLOT_XYPLOT = 1;
             constexpr auto SEMPLOT_PLOT_TRIPLOT = 2;
             constexpr auto SEMPLOT_PLOT_UNKNOWN = 3;
+// SHD_FIX
+            constexpr auto SHD_FIX_NONE = 0;
+            constexpr auto SHD_FIX_INCLINATION = 1;
+            constexpr auto SHD_FIX_DECLINATION = 2;
 // SHP_GEOM_TYPE
             constexpr auto SHP_GEOM_TYPE_POINT = 1;
             constexpr auto SHP_GEOM_TYPE_ARC = 3;
@@ -2061,7 +2098,7 @@ namespace geosoft
             constexpr auto TD_ICON_SUCCESS = 4;
             constexpr auto TD_ICON_CONFIRMATION = 5;
 // TD_BUTTON
-            constexpr auto TD_BUTTON_NONE = 1;
+            constexpr auto TD_BUTTON_NONE = 0;
             constexpr auto TD_BUTTON_OK = 1;
             constexpr auto TD_BUTTON_YES = 2;
             constexpr auto TD_BUTTON_NO = 4;
@@ -2467,6 +2504,8 @@ namespace geosoft
             typedef std::shared_ptr<GXDBREAD> GXDBREADPtr;
             class GXDBWRITE;
             typedef std::shared_ptr<GXDBWRITE> GXDBWRITEPtr;
+            class GXDCOL;
+            typedef std::shared_ptr<GXDCOL> GXDCOLPtr;
             class GXDGW;
             typedef std::shared_ptr<GXDGW> GXDGWPtr;
             class GXDH;
@@ -2623,6 +2662,8 @@ namespace geosoft
             typedef std::shared_ptr<GXSEGYREADER> GXSEGYREADERPtr;
             class GXSEMPLOT;
             typedef std::shared_ptr<GXSEMPLOT> GXSEMPLOTPtr;
+            class GXSHD;
+            typedef std::shared_ptr<GXSHD> GXSHDPtr;
             class GXSHP;
             typedef std::shared_ptr<GXSHP> GXSHPPtr;
             class GXSQLSRV;
@@ -2715,6 +2756,7 @@ namespace geosoft
                 friend class GXDB;
                 friend class GXDBREAD;
                 friend class GXDBWRITE;
+                friend class GXDCOL;
                 friend class GXDGW;
                 friend class GXDH;
                 friend class GXDMPPLY;
@@ -2793,6 +2835,7 @@ namespace geosoft
                 friend class GXSBF;
                 friend class GXSEGYREADER;
                 friend class GXSEMPLOT;
+                friend class GXSHD;
                 friend class GXSHP;
                 friend class GXSQLSRV;
                 friend class GXST;
@@ -3362,6 +3405,13 @@ namespace geosoft
                     GetLayerITR_AGG(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)));
                     gx_->throw_on_error();
+                }
+                GXSTPtr get_layer_st(int32_t param1)
+                {
+                    int32_t ret = GetLayerST_AGG(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXST>(ret);
                 }
                 int32_t list_img(GXVVPtr param1)
                 {
@@ -4133,6 +4183,14 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
                     gx_->throw_on_error();
                 }
+                static int32_t get_defaults(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, double param5, double& param6, double& param7, double& param8, double& param9, double& param10, double& param11, double& param12)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = GetDefaults_BIGRID(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), &param5, &param6, &param7, &param8, &param9, &param10, &param11, &param12);
+                    gx_->throw_on_error();
+                    return ret;
+                }
 
             };
             class GXCHIMERA
@@ -4658,6 +4716,12 @@ namespace geosoft
                 {
                     SetStaticCol_CSYMB(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void get_stat(GXSTPtr param1)
+                {
+                    GetStat_CSYMB(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
                     gx_->throw_on_error();
                 }
 
@@ -6383,6 +6447,152 @@ namespace geosoft
                 }
 
             };
+            class GXDCOL
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GXDCOL(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GXDCOLPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GXDCOL>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                int32_t number_of_layers()
+                {
+                    int32_t ret = App_iNumberOfLayers_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                int32_t get_type()
+                {
+                    int32_t ret = App_iGetType_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void get_layer_info(int32_t param1, GXITRPtr param2, gx_string_type& param3)
+                {
+                    int32_t paramSize4 = STR_FILE * STRING_CHAR_SIZE;
+                    param3.resize(STR_FILE);
+                    App_GetLayerInfo_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize4 ));
+                    gx_->throw_on_error();
+                    param3.resize(gx_string_len(param3.c_str()));
+                }
+                void get_layer_itr(int32_t param1, GXITRPtr param2)
+                {
+                    App_GetLayerITR_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)));
+                    gx_->throw_on_error();
+                }
+                void set_layer_itr(int32_t param1, GXITRPtr param2, int32_t param3)
+                {
+                    App_SetLayerITR_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                }
+                int32_t set_itr_transform_from_layer(int32_t param1, GXITRPtr param2, int32_t param3)
+                {
+                    int32_t ret = App_iSetITRTransformFromLayer_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                int32_t update_zone_transform_type(int32_t param1, int32_t param2)
+                {
+                    int32_t ret = App_iUpdateZoneTransformType_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                GXSTPtr get_layer_statistics(int32_t param1)
+                {
+                    int32_t ret = App_GetLayerStatistics_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXST>(ret);
+                }
+                GXVVPtr get_layer_histogram(int32_t param1, double& param2, double& param3)
+                {
+                    int32_t ret = App_GetLayerHistogram_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), &param2, &param3);
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXVV>(ret);
+                }
+                void save_layer_itr(int32_t param1)
+                {
+                    App_SaveLayerITR_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+                int32_t get_brightness_type()
+                {
+                    int32_t ret = App_iGetBrightnessType_DCOL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void set_brightness(double param1, int32_t param2, int32_t param3)
+                {
+                    App_SetBrightness_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                }
+                double get_brightness(int32_t param1, int32_t param2)
+                {
+                    double ret = App_rGetBrightness_DCOL(
+                                     gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void set_transparency(double param1)
+                {
+                    App_SetTransparency_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1);
+                    gx_->throw_on_error();
+                }
+                double get_transparency()
+                {
+                    double ret = App_rGetTransparency_DCOL(
+                                     gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void reset()
+                {
+                    App_Reset_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                }
+                void end(int32_t param1)
+                {
+                    App_End_DCOL(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+
+            };
             class GXDGW
             {
             private:
@@ -7608,6 +7818,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     SetTemplateBlob_DH(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                }
+                static void update_template_blob(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, int32_t param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    UpdateTemplateBlob_DH(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), reinterpret_cast<const long*>(&param4));
                     gx_->throw_on_error();
                 }
                 void significant_intersections_db(GXDBPtr param1, GXDBPtr param2, int32_t param3, const gx_string_type& param4, double param5, double param6, double param7, double param8, double param9, double param10, double param11)
@@ -12695,6 +12912,13 @@ namespace geosoft
                         gx_->pGeo, param1.c_str());
                     gx_->throw_on_error();
                 }
+                static void grid_stat_hist5(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    App_GridStatHist5_GUI(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str());
+                    gx_->throw_on_error();
+                }
                 static void voxel_stat_hist(const gx_string_type& param1)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -12983,6 +13207,23 @@ namespace geosoft
                     param3.resize(STR_FILE);
                     int32_t ret = App_IiImportDrillDatabaseODBC_GUI(
                                       gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize5 ), reinterpret_cast<long*>(&param4), reinterpret_cast<const long*>(&gx_->handle(param5)));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                    param2.resize(gx_string_len(param2.c_str()));
+                    param3.resize(gx_string_len(param3.c_str()));
+                    return ret;
+                }
+                static int32_t configure_connection(gx_string_type& param1, gx_string_type& param2, gx_string_type& param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize1 = STR_VERY_LONG * STRING_CHAR_SIZE;
+                    int32_t paramSize3 = STR_FILE * STRING_CHAR_SIZE;
+                    int32_t paramSize5 = STR_FILE * STRING_CHAR_SIZE;
+                    param1.resize(STR_VERY_LONG);
+                    param2.resize(STR_FILE);
+                    param3.resize(STR_FILE);
+                    int32_t ret = App_iConfigureConnection_GUI(
+                                      gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize5 ));
                     gx_->throw_on_error();
                     param1.resize(gx_string_len(param1.c_str()));
                     param2.resize(gx_string_len(param2.c_str()));
@@ -14054,6 +14295,13 @@ namespace geosoft
                         gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5));
                     gx_->throw_on_error();
                 }
+                double get_display_property(int32_t param1)
+                {
+                    double ret = rGetDisplayProperty_IMG(
+                                     gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return ret;
+                }
                 double get_z(double param1, double param2)
                 {
                     double ret = rGetZ_IMG(
@@ -14067,6 +14315,27 @@ namespace geosoft
                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
                     gx_->throw_on_error();
                     return ret;
+                }
+                void set_display_property(int32_t param1, double param2)
+                {
+                    SetDisplayProperty_IMG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), &param2);
+                    gx_->throw_on_error();
+                }
+                void get_shadow_grid_path(gx_string_type& param1)
+                {
+                    int32_t paramSize2 = STR_FILE * STRING_CHAR_SIZE;
+                    param1.resize(STR_FILE);
+                    IGetShadowGridPath_IMG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize2 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                }
+                void set_shadow_grid_path(const gx_string_type& param1)
+                {
+                    SetShadowGridPath_IMG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
                 }
                 void set_grid_unchanged()
                 {
@@ -14141,6 +14410,32 @@ namespace geosoft
                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
                     gx_->throw_on_error();
                     return ret;
+                }
+                int32_t number_of_faults()
+                {
+                    int32_t ret = iNumberOfFaults_IMG(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void get_fault(int32_t param1, GXVVPtr param2, GXVVPtr param3, int32_t& param4)
+                {
+                    GetFault_IMG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<long*>(&param4));
+                    gx_->throw_on_error();
+                }
+                int32_t add_fault(GXVVPtr param1, GXVVPtr param2, int32_t param3)
+                {
+                    int32_t ret = iAddFault_IMG(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void delete_fault(int32_t param1)
+                {
+                    DeleteFault_IMG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
                 }
 
             };
@@ -15021,6 +15316,12 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2));
                     gx_->throw_on_error();
                 }
+                void recalculate_derived_data(GXDBPtr param1, int32_t param2, GXLSTPtr param3, int32_t param4)
+                {
+                    RecalculateDerivedData_IP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&param4));
+                    gx_->throw_on_error();
+                }
                 void recalculate_z(GXDBPtr param1)
                 {
                     RecalculateZ_IP(
@@ -15142,6 +15443,12 @@ namespace geosoft
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                     return gx_->createPtr<GXVV>(ret);
+                }
+                void get_line_data(GXDBPtr param1, const gx_string_type& param2, GXVVPtr param3, GXVVPtr param4, GXVVPtr param5, GXVVPtr param6, GXVVPtr param7, GXVVPtr param8, GXVVPtr param9, GXVVPtr param10, GXVVPtr param11, GXVVPtr param12, const gx_string_type& param13, GXVVPtr param14)
+                {
+                    GetLineData_IP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), reinterpret_cast<const long*>(&gx_->handle(param6)), reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&gx_->handle(param8)), reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&gx_->handle(param10)), reinterpret_cast<const long*>(&gx_->handle(param11)), reinterpret_cast<const long*>(&gx_->handle(param12)), param13.c_str(), reinterpret_cast<const long*>(&gx_->handle(param14)));
+                    gx_->throw_on_error();
                 }
 
             };
@@ -15937,6 +16244,21 @@ namespace geosoft
 
 
 
+                void set_name(const gx_string_type& param1)
+                {
+                    SetName_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                }
+                void get_name(gx_string_type& param1)
+                {
+                    int32_t paramSize2 = STR_FILE * STRING_CHAR_SIZE;
+                    param1.resize(STR_FILE);
+                    IGetName_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize2 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                }
                 void change_brightness(double param1)
                 {
                     ChangeBrightness_ITR(
@@ -16027,6 +16349,12 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<long*>(&param2));
                     gx_->throw_on_error();
                 }
+                void get_zone_base_color(int32_t param1, int32_t& param2)
+                {
+                    GetZoneBaseColor_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
                 int32_t color_value(double param1)
                 {
                     int32_t ret = iColorValue_ITR(
@@ -16047,6 +16375,18 @@ namespace geosoft
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                     return ret;
+                }
+                void get_zone_model(int32_t& param1, GXVVPtr param2)
+                {
+                    GetZoneModel_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)));
+                    gx_->throw_on_error();
+                }
+                void set_zone_model(int32_t param1, GXVVPtr param2)
+                {
+                    SetZoneModel_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&gx_->handle(param2)));
+                    gx_->throw_on_error();
                 }
                 void linear(double param1, double param2, double param3)
                 {
@@ -16081,6 +16421,20 @@ namespace geosoft
                 double get_brightness()
                 {
                     double ret = rGetBrightness_ITR(
+                                     gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                double get_contrast()
+                {
+                    double ret = rGetContrast_ITR(
+                                     gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                double get_contour()
+                {
+                    double ret = rGetContour_ITR(
                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                     return ret;
@@ -16154,6 +16508,25 @@ namespace geosoft
                     SetZoneColor_ITR(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
                     gx_->throw_on_error();
+                }
+                void set_zone_base_color(int32_t param1, int32_t param2)
+                {
+                    SetZoneBaseColor_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void set_zone_active(int32_t param1, int32_t param2)
+                {
+                    SetZoneActive_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                int32_t get_zone_active(int32_t param1)
+                {
+                    int32_t ret = iGetZoneActive_ITR(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return ret;
                 }
                 void set_zone_value(int32_t param1, double param2)
                 {
@@ -16248,6 +16621,14 @@ namespace geosoft
                 {
                     int32_t ret = iSaveParms_KGRD(
                                       gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                static int32_t get_defaults(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, double& param5, int32_t& param6)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = GetDefaults_KGRD(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), &param5, reinterpret_cast<long*>(&param6));
                     gx_->throw_on_error();
                     return ret;
                 }
@@ -18080,6 +18461,34 @@ namespace geosoft
                         gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), &param4, &param5, reinterpret_cast<const long*>(&param6));
                     gx_->throw_on_error();
                 }
+                static void reproject_geosurface_file(const gx_string_type& param1, const gx_string_type& param2, GXIPJPtr param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ReprojectGeosurfaceFile_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&gx_->handle(param3)));
+                    gx_->throw_on_error();
+                }
+                static void project_geosurface_onto_grid(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, int32_t param4, const gx_string_type& param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ProjectGeosurfaceOntoGrid_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), reinterpret_cast<const long*>(&param4), param5.c_str());
+                    gx_->throw_on_error();
+                }
+                static void copy_mesh_to_geo_surface_file(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    CopyMeshToGeoSurfaceFile_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str());
+                    gx_->throw_on_error();
+                }
+                static void apply_transformation(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, int32_t param5, double param6, double param7, double param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ApplyTransformation_MESHUTIL(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), reinterpret_cast<const long*>(&param5), &param6, &param7, &param8);
+                    gx_->throw_on_error();
+                }
 
             };
             class GXMETA
@@ -18991,6 +19400,21 @@ namespace geosoft
                     ImportFromGDB_MULTIGRID3DUTIL(
                         gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3));
                     gx_->throw_on_error();
+                }
+                static void import_from_gdb_ignore_stored_voxel_geometry(const gx_string_type& param1, GXDBPtr param2, int32_t param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ImportFromGDBIgnoreStoredVoxelGeometry_MULTIGRID3DUTIL(
+                        gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                }
+                static int32_t database_contains_voxel_geometry(GXDBPtr param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = iDatabaseContainsVoxelGeometry_MULTIGRID3DUTIL(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                    return ret;
                 }
                 static void import_from_vector_gdb(const gx_string_type& param1, GXDBPtr param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6, double param7, double param8)
                 {
@@ -20588,6 +21012,34 @@ namespace geosoft
                     gx_->throw_on_error();
                     param2.resize(gx_string_len(param2.c_str()));
                 }
+                GXLSTPtr get_folder_items_3d(const gx_string_type& param1)
+                {
+                    int32_t ret = GetFolderItems3D_MVIEW(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXLST>(ret);
+                }
+                void add_folder_3d(const gx_string_type& param1, const gx_string_type& param2, gx_string_type& param3)
+                {
+                    int32_t paramSize4 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
+                    param3.resize(STR_DEFAULT_SHORT);
+                    AddFolder3D_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str(), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize4 ));
+                    gx_->throw_on_error();
+                    param3.resize(gx_string_len(param3.c_str()));
+                }
+                void move_group_to_folder_3d(const gx_string_type& param1, int32_t param2)
+                {
+                    MoveGroupToFolder3D_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void delete_folder_3d(const gx_string_type& param1)
+                {
+                    DeleteFolder3D_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                }
                 int32_t find_group_by_guid(const gx_string_type& param1)
                 {
                     int32_t ret = iFindGroupByGUID_MVIEW(
@@ -21071,6 +21523,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     ColorBarREG_MVU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)));
+                    gx_->throw_on_error();
+                }
+                static void color_bar_reg_ex(GXMVIEWPtr param1, GXSTPtr param2, GXITRPtr param3, GXITRPtr param4, GXREGPtr param5, GXVVPtr param6)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    ColorBarREGEx_MVU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), reinterpret_cast<const long*>(&gx_->handle(param6)));
                     gx_->throw_on_error();
                 }
                 static void contour(GXMVIEWPtr param1, const gx_string_type& param2, const gx_string_type& param3)
@@ -21648,6 +22107,12 @@ namespace geosoft
                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2));
                     gx_->throw_on_error();
                     return ret;
+                }
+                void set(int32_t param1, int32_t param2, double param3)
+                {
+                    Set_PG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2), &param3);
+                    gx_->throw_on_error();
                 }
                 void read_col(int32_t param1, int32_t param2, int32_t param3, GXVVPtr param4)
                 {
@@ -22678,6 +23143,60 @@ namespace geosoft
                         gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ));
                     gx_->throw_on_error();
                     param1.resize(gx_string_len(param1.c_str()));
+                }
+                static void get_server_and_project_guid(gx_string_type& param1, gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize1 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
+                    int32_t paramSize3 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
+                    param1.resize(STR_DEFAULT_SHORT);
+                    param2.resize(STR_DEFAULT_SHORT);
+                    App_GetServerAndProjectGUID_PROJ(
+                        gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                    param2.resize(gx_string_len(param2.c_str()));
+                }
+                static void set_central_project_information(const gx_string_type& param1, const gx_string_type& param2, int32_t param3, int32_t param4, const gx_string_type& param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    App_SetCentralProjectInformation_PROJ(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), param5.c_str());
+                    gx_->throw_on_error();
+                }
+                static void get_central_project_information(gx_string_type& param1, gx_string_type& param2, gx_string_type& param3, gx_string_type& param4, gx_string_type& param5, gx_string_type& param6, gx_string_type& param7, gx_string_type& param8, gx_string_type& param9)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize1 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize3 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize5 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    int32_t paramSize7 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize9 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize11 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize13 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize15 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    int32_t paramSize17 = STR_DEFAULT * STRING_CHAR_SIZE;
+                    param1.resize(STR_DEFAULT);
+                    param2.resize(STR_DEFAULT);
+                    param3.resize(STR_DEFAULT_LONG);
+                    param4.resize(STR_DEFAULT);
+                    param5.resize(STR_DEFAULT);
+                    param6.resize(STR_DEFAULT);
+                    param7.resize(STR_DEFAULT);
+                    param8.resize(STR_DEFAULT);
+                    param9.resize(STR_DEFAULT);
+                    App_GetCentralProjectInformation_PROJ(
+                        gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize5 ), (gx_string_char_type*)param4.data(), reinterpret_cast<const long*>(&paramSize7 ), (gx_string_char_type*)param5.data(), reinterpret_cast<const long*>(&paramSize9 ), (gx_string_char_type*)param6.data(), reinterpret_cast<const long*>(&paramSize11 ), (gx_string_char_type*)param7.data(), reinterpret_cast<const long*>(&paramSize13 ), (gx_string_char_type*)param8.data(), reinterpret_cast<const long*>(&paramSize15 ), (gx_string_char_type*)param9.data(), reinterpret_cast<const long*>(&paramSize17 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                    param2.resize(gx_string_len(param2.c_str()));
+                    param3.resize(gx_string_len(param3.c_str()));
+                    param4.resize(gx_string_len(param4.c_str()));
+                    param5.resize(gx_string_len(param5.c_str()));
+                    param6.resize(gx_string_len(param6.c_str()));
+                    param7.resize(gx_string_len(param7.c_str()));
+                    param8.resize(gx_string_len(param8.c_str()));
+                    param9.resize(gx_string_len(param9.c_str()));
                 }
 
             };
@@ -24061,6 +24580,57 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     TotalOxides_SEMPLOT(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str());
+                    gx_->throw_on_error();
+                }
+
+            };
+            class GXSHD
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GXSHD(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GXSHDPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GXSHD>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                void refresh(const gx_string_type& param1, double param2, double param3, double param4, double& param5, double& param6, int32_t param7)
+                {
+                    App_Refresh_SHD(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), &param2, &param3, &param4, &param5, &param6, reinterpret_cast<const long*>(&param7));
+                    gx_->throw_on_error();
+                }
+                int32_t track_interactive(int32_t param1, double& param2, double& param3)
+                {
+                    int32_t ret = App_iTrackInteractive_SHD(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), &param2, &param3);
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void end_shading(int32_t param1)
+                {
+                    App_EndShading_SHD(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
                     gx_->throw_on_error();
                 }
 
@@ -26417,6 +26987,26 @@ namespace geosoft
                         gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ));
                     gx_->throw_on_error();
                     param1.resize(gx_string_len(param1.c_str()));
+                }
+                static void publish_datasets_to_central(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, gx_string_type& param4, int32_t& param5, int32_t& param6, const gx_string_type& param7, const gx_string_type& param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize4 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
+                    param4.resize(STR_DEFAULT_SHORT);
+                    PublishDatasetsToCentral_SYS(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), (gx_string_char_type*)param4.data(), reinterpret_cast<const long*>(&paramSize4 ), reinterpret_cast<long*>(&param5), reinterpret_cast<long*>(&param6), param7.c_str(), param8.c_str());
+                    gx_->throw_on_error();
+                    param4.resize(gx_string_len(param4.c_str()));
+                }
+                static void get_publish_path_for_central(const gx_string_type& param1, gx_string_type& param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize2 = STR_FILE * STRING_CHAR_SIZE;
+                    param2.resize(STR_FILE);
+                    GetPublishPathForCentral_SYS(
+                        gx_->pGeo, param1.c_str(), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize2 ));
+                    gx_->throw_on_error();
+                    param2.resize(gx_string_len(param2.c_str()));
                 }
                 static void connect_with_current_central_instance(gx_string_type& param1, gx_string_type& param2, gx_string_type& param3, gx_string_type& param4)
                 {

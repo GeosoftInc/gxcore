@@ -329,6 +329,17 @@
 
 // Class IMG
 #define IMG_NULL    ((IMG)0)
+#define IMG_SHADING_INCLINATION    0
+#define IMG_SHADING_DECLINATION    1
+#define IMG_SHADING_SCALE          2
+#define IMG_SHADING_CONTRAST       3
+#define IMG_SHADING_BRIGHTNESS     4
+#define IMG_SHADING_WETLOOK        5
+#define IMG_COLOURS_REVERSED       6
+#define IMG_SMOOTHING_ENABLED      7
+#define IMG_SHADING_ENABLED        8
+#define IMG_FAULT_POLYLINE    0
+#define IMG_FAULT_POLYGON     1
 #define IMG_FILE_READONLY       0
 #define IMG_FILE_READWRITE      2
 #define IMG_FILE_READORWRITE    3
@@ -499,6 +510,7 @@
 #define ITR_ZONE_MODEL_NORMAL    2
 #define ITR_ZONE_MODEL_EQUAL     3
 #define ITR_MODEL_LOGLIN         4
+#define ITR_ZONE_MODEL_LOGLIN    4
 
 
 // Class KML
@@ -615,6 +627,11 @@
 #define SURFACE_CLIP_SUCCESS          0
 #define SURFACE_CLIP_SUCCESS_EMPTY    1
 #define SURFACE_CLIP_FAIL             2
+#define SURFACE_PROJECTION_MAXIMUM    0
+#define SURFACE_PROJECTION_MINIMUM    1
+#define SURFACE_PROJECTION_AVERAGE    2
+#define SURFACE_TRANSFORMATION_METHOD_SHIFT    0
+#define SURFACE_TRANSFORMATION_METHOD_SCALE    1
 
 
 // Class META
@@ -1197,7 +1214,7 @@
 #define TD_ICON_INFORMATION     3
 #define TD_ICON_SUCCESS         4
 #define TD_ICON_CONFIRMATION    5
-#define TD_BUTTON_NONE      1
+#define TD_BUTTON_NONE      0
 #define TD_BUTTON_OK        1
 #define TD_BUTTON_YES       2
 #define TD_BUTTON_NO        4

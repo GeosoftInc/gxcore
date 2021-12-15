@@ -13,6 +13,7 @@ Geosoft GX Wapper Function Headers
 */
 
 #include <windows.h>
+#include "gx_disposable.h"
 
 #ifdef C_MICROSOFT
 
@@ -416,6 +417,17 @@ Std_GetLayerITR_AGG(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR,
                     GX_CONST GX_LONG_PTR,
                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetLayerST_AGG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetLayerST_AGG(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetLayerST_AGG(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR);
 
 /*---------------- iListImg_AGG[_public] ----------------*/
 
@@ -974,6 +986,17 @@ Std_SetStaticCol_CSYMB(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_HANDLE_PTR,
                        GX_CONST GX_LONG_PTR,
                        GX_CONST GX_LONG_PTR);
+
+/*---------------- GetStat_CSYMB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetStat_CSYMB(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetStat_CSYMB(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR);
 
 /*---------------- CreateDB_DAT[_public] ----------------*/
 
@@ -5770,6 +5793,17 @@ Std_ReportCSV_IMG(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
 
+/*---------------- rGetDisplayProperty_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
+rGetDisplayProperty_IMG(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
+Std_rGetDisplayProperty_IMG(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR);
+
 /*---------------- rGetZ_IMG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
@@ -5793,6 +5827,43 @@ GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
 Std_rQuery_IMG(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_LONG_PTR);
+
+/*---------------- SetDisplayProperty_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetDisplayProperty_IMG(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetDisplayProperty_IMG(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- IGetShadowGridPath_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+IGetShadowGridPath_IMG(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_VAR   GX_STR_PTR,
+                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_IGetShadowGridPath_IMG(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_VAR   GX_STR_PTR,
+                           GX_CONST GX_LONG_PTR);
+
+/*---------------- SetShadowGridPath_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetShadowGridPath_IMG(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetShadowGridPath_IMG(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR);
 
 /*---------------- SetGridUnchanged_IMG[_public] ----------------*/
 
@@ -5949,6 +6020,58 @@ GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
 Std_rGetRealParameter_IMG(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_HANDLE_PTR,
                           GX_CONST GX_STR_PTR);
+
+/*---------------- iNumberOfFaults_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iNumberOfFaults_IMG(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iNumberOfFaults_IMG(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetFault_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetFault_IMG(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetFault_IMG(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_VAR   GX_LONG_PTR);
+
+/*---------------- iAddFault_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iAddFault_IMG(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iAddFault_IMG(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR);
+
+/*---------------- DeleteFault_IMG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeleteFault_IMG(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeleteFault_IMG(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_LONG_PTR);
 
 /*---------------- AggToGeoColor_IMU[_licensed] ----------------*/
 
@@ -8488,6 +8611,30 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_RemoveFavouriteCoordinateSystem_IPJ(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_LONG_PTR);
 
+/*---------------- SetName_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetName_ITR(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetName_ITR(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_STR_PTR);
+
+/*---------------- IGetName_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+IGetName_ITR(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_VAR   GX_STR_PTR,
+             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_IGetName_ITR(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_VAR   GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR);
+
 /*---------------- ChangeBrightness_ITR[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -8631,6 +8778,19 @@ Std_GetZoneColor_ITR(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_LONG_PTR,
                      GX_VAR   GX_LONG_PTR);
 
+/*---------------- GetZoneBaseColor_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZoneBaseColor_ITR(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZoneBaseColor_ITR(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_VAR   GX_LONG_PTR);
+
 /*---------------- iColorValue_ITR[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -8659,6 +8819,32 @@ iGetZoneModelType_ITR(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iGetZoneModelType_ITR(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetZoneModel_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetZoneModel_ITR(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_VAR   GX_LONG_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetZoneModel_ITR(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_VAR   GX_LONG_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetZoneModel_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZoneModel_ITR(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZoneModel_ITR(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Linear_ITR[_public] ----------------*/
 
@@ -8737,6 +8923,24 @@ rGetBrightness_ITR(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
 Std_rGetBrightness_ITR(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- rGetContrast_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
+rGetContrast_ITR(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
+Std_rGetContrast_ITR(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- rGetContour_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
+rGetContour_ITR(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
+Std_rGetContour_ITR(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
 
 /*---------------- rGetZoneValue_ITR[_public] ----------------*/
 
@@ -8862,6 +9066,43 @@ Std_SetZoneColor_ITR(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_HANDLE_PTR,
                      GX_CONST GX_LONG_PTR,
                      GX_CONST GX_LONG_PTR);
+
+/*---------------- SetZoneBaseColor_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZoneBaseColor_ITR(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZoneBaseColor_ITR(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR);
+
+/*---------------- SetZoneActive_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetZoneActive_ITR(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetZoneActive_ITR(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetZoneActive_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetZoneActive_ITR(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetZoneActive_ITR(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR);
 
 /*---------------- SetZoneValue_ITR[_public] ----------------*/
 
@@ -11705,6 +11946,72 @@ Std_ExtractIsosurfaceFromVoxel_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_DOUBLE_PTR,
                                         GX_CONST GX_LONG_PTR);
 
+/*---------------- ReprojectGeosurfaceFile_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ReprojectGeosurfaceFile_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ReprojectGeosurfaceFile_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ProjectGeosurfaceOntoGrid_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ProjectGeosurfaceOntoGrid_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ProjectGeosurfaceOntoGrid_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_STR_PTR);
+
+/*---------------- CopyMeshToGeoSurfaceFile_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CopyMeshToGeoSurfaceFile_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CopyMeshToGeoSurfaceFile_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR);
+
+/*---------------- ApplyTransformation_MESHUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ApplyTransformation_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_DOUBLE_PTR,
+                             GX_CONST GX_DOUBLE_PTR,
+                             GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ApplyTransformation_MESHUTIL(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_DOUBLE_PTR,
+                                 GX_CONST GX_DOUBLE_PTR,
+                                 GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- CreateAttrib_META[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -13079,6 +13386,28 @@ Std_ImportFromGDB_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
                                   GX_CONST GX_STR_PTR,
                                   GX_CONST GX_HANDLE_PTR,
                                   GX_CONST GX_LONG_PTR);
+
+/*---------------- ImportFromGDBIgnoreStoredVoxelGeometry_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ImportFromGDBIgnoreStoredVoxelGeometry_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                                       GX_CONST GX_STR_PTR,
+                                                       GX_CONST GX_HANDLE_PTR,
+                                                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ImportFromGDBIgnoreStoredVoxelGeometry_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                                           GX_CONST GX_STR_PTR,
+                                                           GX_CONST GX_HANDLE_PTR,
+                                                           GX_CONST GX_LONG_PTR);
+
+/*---------------- iDatabaseContainsVoxelGeometry_MULTIGRID3DUTIL[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iDatabaseContainsVoxelGeometry_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                               GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iDatabaseContainsVoxelGeometry_MULTIGRID3DUTIL(GX_VAR   GX_OBJECT_PTR,
+                                                   GX_CONST GX_HANDLE_PTR);
 
 /*---------------- ImportFromVectorGDB_MULTIGRID3DUTIL[_public] ----------------*/
 
@@ -16674,6 +17003,58 @@ Std_GetGroupGUID_MVIEW(GX_VAR   GX_OBJECT_PTR,
                        GX_VAR   GX_STR_PTR,
                        GX_CONST GX_LONG_PTR);
 
+/*---------------- GetFolderItems3D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetFolderItems3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetFolderItems3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_STR_PTR);
+
+/*---------------- AddFolder3D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_VAR   GX_STR_PTR,
+                  GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_VAR   GX_STR_PTR,
+                      GX_CONST GX_LONG_PTR);
+
+/*---------------- MoveGroupToFolder3D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+MoveGroupToFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_MoveGroupToFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_LONG_PTR);
+
+/*---------------- DeleteFolder3D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeleteFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeleteFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR);
+
 /*---------------- iFindGroupByGUID_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -17910,6 +18291,25 @@ Std_ColorBarREG_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR,
                     GX_CONST GX_HANDLE_PTR,
                     GX_CONST GX_HANDLE_PTR);
+
+/*---------------- ColorBarREGEx_MVU[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ColorBarREGEx_MVU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ColorBarREGEx_MVU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Contour_MVU[_public] ----------------*/
 
@@ -19433,6 +19833,21 @@ Std_rGet_PG(GX_VAR   GX_OBJECT_PTR,
             GX_CONST GX_HANDLE_PTR,
             GX_CONST GX_LONG_PTR,
             GX_CONST GX_LONG_PTR);
+
+/*---------------- Set_PG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Set_PG(GX_VAR   GX_OBJECT_PTR,
+       GX_CONST GX_HANDLE_PTR,
+       GX_CONST GX_LONG_PTR,
+       GX_CONST GX_LONG_PTR,
+       GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Set_PG(GX_VAR   GX_OBJECT_PTR,
+           GX_CONST GX_HANDLE_PTR,
+           GX_CONST GX_LONG_PTR,
+           GX_CONST GX_LONG_PTR,
+           GX_CONST GX_DOUBLE_PTR);
 
 /*---------------- ReadCol_PG[_public] ----------------*/
 
@@ -24280,6 +24695,44 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_IGetGeosoftID_SYS(GX_VAR   GX_OBJECT_PTR,
                       GX_VAR   GX_STR_PTR,
                       GX_CONST GX_LONG_PTR);
+
+/*---------------- PublishDatasetsToCentral_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+PublishDatasetsToCentral_SYS(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_VAR   GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_VAR   GX_LONG_PTR,
+                             GX_VAR   GX_LONG_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_PublishDatasetsToCentral_SYS(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_VAR   GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_VAR   GX_LONG_PTR,
+                                 GX_VAR   GX_LONG_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR);
+
+/*---------------- GetPublishPathForCentral_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetPublishPathForCentral_SYS(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_VAR   GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetPublishPathForCentral_SYS(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_VAR   GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR);
 
 /*---------------- ConnectWithCurrentCentralInstance_SYS[_public] ----------------*/
 
