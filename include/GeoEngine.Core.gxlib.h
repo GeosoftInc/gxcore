@@ -10843,6 +10843,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GetDataProj_MAP(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_HANDLE_PTR);
 
+/*---------------- DatasetFilePathList_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DatasetFilePathList_MAP(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DatasetFilePathList_MAP(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+
 /*---------------- Create_MAPL[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -17014,6 +17025,17 @@ Std_GetFolderItems3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_HANDLE_PTR,
                            GX_CONST GX_STR_PTR);
 
+/*---------------- GetFolderItems2D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetFolderItems2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetFolderItems2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_STR_PTR);
+
 /*---------------- AddFolder3D_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -17031,6 +17053,19 @@ Std_AddFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                       GX_VAR   GX_STR_PTR,
                       GX_CONST GX_LONG_PTR);
 
+/*---------------- AddFolder2D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddFolder2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddFolder2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_STR_PTR);
+
 /*---------------- MoveGroupToFolder3D_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -17044,6 +17079,19 @@ Std_MoveGroupToFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                               GX_CONST GX_STR_PTR,
                               GX_CONST GX_LONG_PTR);
 
+/*---------------- MoveGroupToFolder2D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+MoveGroupToFolder2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_MoveGroupToFolder2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_LONG_PTR);
+
 /*---------------- DeleteFolder3D_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -17052,6 +17100,17 @@ DeleteFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_STR_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_DeleteFolder3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR);
+
+/*---------------- DeleteFolder2D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeleteFolder2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeleteFolder2D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_HANDLE_PTR,
                          GX_CONST GX_STR_PTR);
 

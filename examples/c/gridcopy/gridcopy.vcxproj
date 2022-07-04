@@ -14,6 +14,7 @@
     <ProjectGuid>{1B86EE24-03F5-41FF-800C-E4C4173322A7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">

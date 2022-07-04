@@ -2297,6 +2297,17 @@ Std_App_iUpdateZoneTransformType_DCOL(GX_VAR   GX_OBJECT_PTR,
                                       GX_CONST GX_LONG_PTR,
                                       GX_CONST GX_LONG_PTR);
 
+/*---------------- iUpdateZoneTransformParameters_DCOL[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iUpdateZoneTransformParameters_DCOL(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iUpdateZoneTransformParameters_DCOL(GX_VAR   GX_OBJECT_PTR,
+                                            GX_CONST GX_HANDLE_PTR,
+                                            GX_CONST GX_LONG_PTR);
+
 /*---------------- GetLayerStatistics_DCOL[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
@@ -5722,6 +5733,21 @@ Std_AvgAzimuth_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_DOUBLE_PTR,
                   GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- rAverageSpacing_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
+rAverageSpacing_DU(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
+Std_rAverageSpacing_DU(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR);
 
 /*---------------- BaseData_DU[_licensed] ----------------*/
 
@@ -10305,6 +10331,26 @@ Std_App_UnLoadVerify_EDOC(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_STR_PTR,
                           GX_CONST GX_LONG_PTR,
                           GX_CONST GX_LONG_PTR);
+
+/*---------------- iCopy_EDOC[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iCopy_EDOC(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iCopy_EDOC(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR);
+
+/*---------------- Save_EDOC[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_Save_EDOC(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_Save_EDOC(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR);
 
 /*---------------- DropMapClipData_EMAP[_public_app] ----------------*/
 
@@ -17877,6 +17923,21 @@ Std_App_iAddDocumentWithoutOpening_PROJ(GX_VAR   GX_OBJECT_PTR,
                                         GX_CONST GX_STR_PTR,
                                         GX_CONST GX_STR_PTR);
 
+/*---------------- iAddDocumentIncludeMeta_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iAddDocumentIncludeMeta_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iAddDocumentIncludeMeta_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_LONG_PTR);
+
 /*---------------- iAddGridDocument_PROJ[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -18051,6 +18112,10 @@ App_GetCentralProjectInformation_PROJ(GX_VAR   GX_OBJECT_PTR,
                                       GX_VAR   GX_STR_PTR,
                                       GX_CONST GX_LONG_PTR,
                                       GX_VAR   GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_VAR   GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_VAR   GX_STR_PTR,
                                       GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_GetCentralProjectInformation_PROJ(GX_VAR   GX_OBJECT_PTR,
@@ -18071,7 +18136,49 @@ Std_App_GetCentralProjectInformation_PROJ(GX_VAR   GX_OBJECT_PTR,
                                           GX_VAR   GX_STR_PTR,
                                           GX_CONST GX_LONG_PTR,
                                           GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_VAR   GX_STR_PTR,
+                                          GX_CONST GX_LONG_PTR,
+                                          GX_VAR   GX_STR_PTR,
                                           GX_CONST GX_LONG_PTR);
+
+/*---------------- SaveDocumentView_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_SaveDocumentView_PROJ(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_SaveDocumentView_PROJ(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR);
+
+/*---------------- IGetDefaultProjectPath_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_IGetDefaultProjectPath_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                GX_VAR   GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_IGetDefaultProjectPath_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                    GX_VAR   GX_STR_PTR,
+                                    GX_CONST GX_LONG_PTR);
+
+/*---------------- SetDefaultProjectPath_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_SetDefaultProjectPath_PROJ(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_SetDefaultProjectPath_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_STR_PTR);
+
+/*---------------- HasPendingCentralPublishEvent_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_HasPendingCentralPublishEvent_PROJ(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_HasPendingCentralPublishEvent_PROJ(GX_VAR   GX_OBJECT_PTR);
 
 /*---------------- _Clear_RGRD[_extended] ----------------*/
 
@@ -20612,6 +20719,121 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_SetIPJ_TIN(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Start_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+App_Start_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                         GXDisposable*,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_App_Start_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                             GXDisposable*,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_DOUBLE_PTR,
+                             GX_CONST GX_LONG_PTR);
+
+/*---------------- End_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_End_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_End_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR);
+
+/*---------------- Cancel_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_Cancel_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_Cancel_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Undo_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_Undo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_Undo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Redo_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_Redo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_Redo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iCanUndo_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iCanUndo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iCanUndo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iCanRedo_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iCanRedo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iCanRedo_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SaveToNewLayerGrid_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_SaveToNewLayerGrid_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_SaveToNewLayerGrid_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_STR_PTR);
+
+/*---------------- ApplyConstantTransform_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_ApplyConstantTransform_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_HANDLE_PTR,
+                                          GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_ApplyConstantTransform_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                              GX_CONST GX_HANDLE_PTR,
+                                              GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- SelectNode_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_SelectNode_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_SelectNode_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_LONG_PTR);
+
+/*---------------- ClearNodeSelection_TRANSFORMLAYER[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_ClearNodeSelection_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_ClearNodeSelection_TRANSFORMLAYER(GX_VAR   GX_OBJECT_PTR,
+                                          GX_CONST GX_HANDLE_PTR);
 
 /*---------------- GetMaxMin_TRND[_licensed] ----------------*/
 
