@@ -29,10 +29,12 @@ Geosoft GX Wapper Function Headers
 
 #define GX_VOID          void
 #define GX_LONG          long
+#define GX_LONGLONG      long long
 #define GX_DOUBLE        double
 #define GX_HANDLE        long
 
 #define GX_LONG_PTR      long*
+#define GX_LONGLONG_PTR  long long*
 #define GX_DOUBLE_PTR    double*
 #define GX_HANDLE_PTR    long*
 #define GX_ASTR_PTR      char*
@@ -2205,6 +2207,21 @@ App_Start_DCOL(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
 Std_App_Start_DCOL(GX_VAR   GX_OBJECT_PTR,
                    GXDisposable*);
+
+/*---------------- VoxelDirect_DCOL[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+App_VoxelDirect_DCOL(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GXDisposable*);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_App_VoxelDirect_DCOL(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GXDisposable*);
 
 /*---------------- iNumberOfLayers_DCOL[_public_app] ----------------*/
 
@@ -7138,6 +7155,31 @@ Std_InterpGap_DU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_LONG_PTR,
                  GX_CONST GX_LONG_PTR);
 
+/*---------------- InterpGapAndFill_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+InterpGapAndFill_DU(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_InterpGapAndFill_DU(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- Intersect_DU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -7280,6 +7322,21 @@ Std_LoadGravityCG6ToLine_DU(GX_VAR   GX_OBJECT_PTR,
                             GX_CONST GX_HANDLE_PTR,
                             GX_CONST GX_STR_PTR,
                             GX_CONST GX_STR_PTR);
+
+/*---------------- LoadGravityCG6Ex_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LoadGravityCG6Ex_DU(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR,
+                    GX_CONST GX_STR_PTR,
+                    GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LoadGravityCG6Ex_DU(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
 
 /*---------------- LoadLTB_DU[_licensed] ----------------*/
 
@@ -16607,6 +16664,35 @@ Std_iRun3_KGRD(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_STR_PTR,
                GX_CONST GX_LONG_PTR);
 
+/*---------------- iRunVV_KGRD[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iRunVV_KGRD(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_STR_PTR,
+            GX_CONST GX_STR_PTR,
+            GX_CONST GX_STR_PTR,
+            GX_CONST GX_STR_PTR,
+            GX_CONST GX_STR_PTR,
+            GX_CONST GX_STR_PTR,
+            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iRunVV_KGRD(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_CONST GX_LONG_PTR);
+
 /*---------------- iSaveParms_KGRD[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -16636,6 +16722,15 @@ Std_GetDefaults_KGRD(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_STR_PTR,
                      GX_VAR   GX_DOUBLE_PTR,
                      GX_VAR   GX_LONG_PTR);
+
+/*---------------- GotoLine_LMSG[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GotoLine_LMSG(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GotoLine_LMSG(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_STR_PTR);
 
 /*---------------- GotoPoint_LMSG[_licensed] ----------------*/
 
@@ -20191,6 +20286,21 @@ Std_SetVAIndexStart_STK(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_HANDLE_PTR,
                         GX_CONST GX_LONG_PTR);
 
+/*---------------- SetErrorPlotParams_STK[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetErrorPlotParams_STK(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetErrorPlotParams_STK(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
+
 /*---------------- LaunchDigitizationUI_STRINGS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -21200,6 +21310,27 @@ Std_Distance_VVU(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_DOUBLE_PTR,
                  GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- DistanceLinkNonDummies_VVU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DistanceLinkNonDummies_VVU(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DistanceLinkNonDummies_VVU(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- DistanceNonCumulative_VVU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -21888,6 +22019,29 @@ Std_QC_VVU(GX_VAR   GX_OBJECT_PTR,
            GX_CONST GX_DOUBLE_PTR,
            GX_CONST GX_DOUBLE_PTR,
            GX_CONST GX_LONG_PTR);
+
+/*---------------- QC2_VVU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+QC2_VVU(GX_VAR   GX_OBJECT_PTR,
+        GX_CONST GX_HANDLE_PTR,
+        GX_CONST GX_HANDLE_PTR,
+        GX_CONST GX_HANDLE_PTR,
+        GX_CONST GX_HANDLE_PTR,
+        GX_CONST GX_DOUBLE_PTR,
+        GX_CONST GX_DOUBLE_PTR,
+        GX_CONST GX_DOUBLE_PTR,
+        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_QC2_VVU(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_DOUBLE_PTR,
+            GX_CONST GX_LONG_PTR);
 
 /*---------------- RangeVectorMag_VVU[_licensed] ----------------*/
 

@@ -1,3 +1,6 @@
+// Class 3DC
+
+
 // Class 3DN
 
 
@@ -968,6 +971,7 @@
 #define ST_ITEMS            0
 #define ST_NPOS             1
 #define ST_NZERO            22
+#define ST_TOTAL            24
 #define ST_DUMMIES          2
 #define ST_MIN              3
 #define ST_MAX              4
@@ -975,6 +979,7 @@
 #define ST_MEAN             6
 #define ST_MEDIAN           7
 #define ST_MODE             8
+#define ST_SIMPLE_MODE      23
 #define ST_GEOMEAN          9
 #define ST_VARIANCE         10
 #define ST_STDDEV           11

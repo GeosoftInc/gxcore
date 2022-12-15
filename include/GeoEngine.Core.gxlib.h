@@ -29,10 +29,12 @@ Geosoft GX Wapper Function Headers
 
 #define GX_VOID          void
 #define GX_LONG          long
+#define GX_LONGLONG      long long
 #define GX_DOUBLE        double
 #define GX_HANDLE        long
 
 #define GX_LONG_PTR      long*
+#define GX_LONGLONG_PTR  long long*
 #define GX_DOUBLE_PTR    double*
 #define GX_HANDLE_PTR    long*
 #define GX_ASTR_PTR      char*
@@ -56,6 +58,33 @@ Geosoft GX Wapper Function Headers
 
 //*** block WapperDeclare
 //** NOTICE: Do not edit anything here, it is generated code
+
+/*---------------- Create_3DC[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Create_3DC(GX_VAR   GX_OBJECT_PTR,
+           HWND);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Create_3DC(GX_VAR   GX_OBJECT_PTR,
+               HWND);
+
+/*---------------- GetGeoView_3DC[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONGLONG GX_WRAPPER_CALL
+GetGeoView_3DC(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONGLONG GX_STANDARD_CALL
+Std_GetGeoView_3DC(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR);
+
+/*---------------- DestroyInternal_3DC[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DestroyInternal_3DC(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DestroyInternal_3DC(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Copy_3DN[_public] ----------------*/
 
@@ -8743,6 +8772,19 @@ Std_EqualArea_ITR(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- EqualAreaOrLinear_ITR[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+EqualAreaOrLinear_ITR(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_EqualAreaOrLinear_ITR(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- GetDataLimits_ITR[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -10375,6 +10417,15 @@ Clean_MAP(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Clean_MAP(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- DeleteEmptyGroups_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeleteEmptyGroups_MAP(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeleteEmptyGroups_MAP(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Commit_MAP[_public] ----------------*/
 
@@ -17332,6 +17383,39 @@ Std_Render_MVIEW(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_DOUBLE_PTR,
                  GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- RenderEx_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RenderEx_MVIEW(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               HDC,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_VAR   GX_DOUBLE_PTR,
+               GX_VAR   GX_DOUBLE_PTR,
+               GX_VAR   GX_DOUBLE_PTR,
+               GX_VAR   GX_DOUBLE_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RenderEx_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   HDC,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_VAR   GX_DOUBLE_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR);
+
 /*---------------- _SetUFac_MVIEW[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -19218,6 +19302,31 @@ Std_PathPlotEx2_MVU(GX_VAR   GX_OBJECT_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_DOUBLE_PTR,
                     GX_CONST GX_LONG_PTR);
+
+/*---------------- PlotVoxelSlice_MVU[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+PlotVoxelSlice_MVU(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_PlotVoxelSlice_MVU(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR);
 
 /*---------------- PlotVoxelSurface_MVU[_public] ----------------*/
 

@@ -1825,6 +1825,7 @@ namespace geosoft
             constexpr auto ST_ITEMS = 0;
             constexpr auto ST_NPOS = 1;
             constexpr auto ST_NZERO = 22;
+            constexpr auto ST_TOTAL = 24;
             constexpr auto ST_DUMMIES = 2;
             constexpr auto ST_MIN = 3;
             constexpr auto ST_MAX = 4;
@@ -1832,6 +1833,7 @@ namespace geosoft
             constexpr auto ST_MEAN = 6;
             constexpr auto ST_MEDIAN = 7;
             constexpr auto ST_MODE = 8;
+            constexpr auto ST_SIMPLE_MODE = 23;
             constexpr auto ST_GEOMEAN = 9;
             constexpr auto ST_VARIANCE = 10;
             constexpr auto ST_STDDEV = 11;
@@ -1851,6 +1853,13 @@ namespace geosoft
 // STK_AXIS
             constexpr auto STK_AXIS_X = 0;
             constexpr auto STK_AXIS_Y = 1;
+// STK_AXIS_POS
+            constexpr auto STK_AXIS_NONE = 0;
+            constexpr auto STK_AXIS_LEFT = 1;
+            constexpr auto STK_AXIS_RIGHT = 2;
+            constexpr auto STK_AXIS_BOTH = 3;
+            constexpr auto STK_AXIS_BOTTOM = 1;
+            constexpr auto STK_AXIS_TOP = 2;
 // STK_FLAG
             constexpr auto STK_FLAG_PROFILE = 0;
             constexpr auto STK_FLAG_FID = 1;
@@ -2464,6 +2473,8 @@ namespace geosoft
                 gx_string_type message_;
             };
 
+            class GX3DC;
+            typedef std::shared_ptr<GX3DC> GX3DCPtr;
             class GX3DN;
             typedef std::shared_ptr<GX3DN> GX3DNPtr;
             class GX3DV;
@@ -2738,6 +2749,7 @@ namespace geosoft
             private:
 
 
+                friend class GX3DC;
                 friend class GX3DN;
                 friend class GX3DV;
                 friend class GXACQUIRE;
@@ -3018,6 +3030,59 @@ namespace geosoft
 
             };
 
+            class GX3DC
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GX3DC(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GX3DCPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GX3DC>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                static GX3DCPtr create(HWND param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Create_3DC(
+                                      gx_->pGeo, param1);
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GX3DC>(ret);
+                }
+                int64_t get_geo_view()
+                {
+                    int64_t ret = GetGeoView_3DC(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void destroy_internal()
+                {
+                    DestroyInternal_3DC(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                }
+
+            };
             class GX3DN
             {
             private:
@@ -8953,6 +9018,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8));
                     gx_->throw_on_error();
                 }
+                static void interp_gap_and_fill(GXDBPtr param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6, int32_t param7, int32_t param8, double param9)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    InterpGapAndFill_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&param8), &param9);
+                    gx_->throw_on_error();
+                }
                 static void intersect(GXDBPtr param1, int32_t param2, int32_t param3, int32_t param4, double param5, const gx_string_type& param6)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -9014,6 +9086,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     LoadGravityCG6ToLine_DU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str());
+                    gx_->throw_on_error();
+                }
+                static void load_gravity_cg6_ex(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, int32_t param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    LoadGravityCG6Ex_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), reinterpret_cast<const long*>(&param4));
                     gx_->throw_on_error();
                 }
                 static void load_ltb(GXDBPtr param1, int32_t param2, GXLTBPtr param3, int32_t param4)
@@ -16361,6 +16440,12 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), &param2);
                     gx_->throw_on_error();
                 }
+                void equal_area_or_linear(GXSTPtr param1, double param2)
+                {
+                    EqualAreaOrLinear_ITR(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), &param2);
+                    gx_->throw_on_error();
+                }
                 void get_data_limits(double& param1, double& param2)
                 {
                     GetDataLimits_ITR(
@@ -16648,6 +16733,14 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                static int32_t run_vv(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, GXIPJPtr param4, const gx_string_type& param5, const gx_string_type& param6, const gx_string_type& param7, const gx_string_type& param8, const gx_string_type& param9, const gx_string_type& param10, int32_t param11)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = iRunVV_KGRD(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), param5.c_str(), param6.c_str(), param7.c_str(), param8.c_str(), param9.c_str(), param10.c_str(), reinterpret_cast<const long*>(&param11));
+                    gx_->throw_on_error();
+                    return ret;
+                }
                 int32_t save_parms(const gx_string_type& param1)
                 {
                     int32_t ret = iSaveParms_KGRD(
@@ -16871,6 +16964,13 @@ namespace geosoft
             public:
 
 
+                static void goto_line(const gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GotoLine_LMSG(
+                        gx_->pGeo, param1.c_str());
+                    gx_->throw_on_error();
+                }
                 static void goto_point(double param1, double param2, double param3, GXIPJPtr param4)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -17485,6 +17585,12 @@ namespace geosoft
                 void clean()
                 {
                     Clean_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                }
+                void delete_empty_groups()
+                {
+                    DeleteEmptyGroups_MAP(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                     gx_->throw_on_error();
                 }
@@ -21218,6 +21324,12 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1, reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), &param6, &param7, &param8, &param9);
                     gx_->throw_on_error();
                 }
+                void render_ex(HDC param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, double& param6, double& param7, double& param8, double& param9, int32_t param10, int32_t param11, int32_t param12)
+                {
+                    RenderEx_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1, reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), &param6, &param7, &param8, &param9, reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11), reinterpret_cast<const long*>(&param12));
+                    gx_->throw_on_error();
+                }
                 void set_u_fac(double param1)
                 {
                     _SetUFac_MVIEW(
@@ -21812,6 +21924,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     PathPlotEx2_MVU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), param4.c_str(), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), &param7, reinterpret_cast<const long*>(&param8), &param9, &param10, &param11, reinterpret_cast<const long*>(&param12));
+                    gx_->throw_on_error();
+                }
+                static void plot_voxel_slice(GXMVIEWPtr param1, GXVOXPtr param2, GXITRPtr param3, GXVVPtr param4, GXVVPtr param5, double param6, double param7, double param8, double param9)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    PlotVoxelSlice_MVU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), &param6, &param7, &param8, &param9);
                     gx_->throw_on_error();
                 }
                 static void plot_voxel_surface(GXMVIEWPtr param1, GXVOXPtr param2, double param3, int32_t param4, double param5)
@@ -25473,6 +25592,12 @@ namespace geosoft
                 {
                     SetVAIndexStart_STK(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+                void set_error_plot_params(int32_t param1, const gx_string_type& param2, const gx_string_type& param3)
+                {
+                    SetErrorPlotParams_STK(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), param2.c_str(), param3.c_str());
                     gx_->throw_on_error();
                 }
 
@@ -30980,6 +31105,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), &param4, &param5, &param6, &param7);
                     gx_->throw_on_error();
                 }
+                static void distance_link_non_dummies(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, double param4, double param5, double param6, double param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DistanceLinkNonDummies_VVU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), &param4, &param5, &param6, &param7);
+                    gx_->throw_on_error();
+                }
                 static void distance_non_cumulative(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, double param4, double param5, double param6, double param7)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -31273,6 +31405,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     QC_VVU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), &param4, &param5, &param6, &param7, reinterpret_cast<const long*>(&param8));
+                    gx_->throw_on_error();
+                }
+                static void qc2(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3, GXVVPtr param4, double param5, double param6, double param7, int32_t param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    QC2_VVU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), &param5, &param6, &param7, reinterpret_cast<const long*>(&param8));
                     gx_->throw_on_error();
                 }
                 static void range_vector_mag(GXVVPtr param1, GXVVPtr param2, double& param3, double& param4)

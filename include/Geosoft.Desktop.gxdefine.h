@@ -810,6 +810,12 @@
 // Class STK
 #define STK_AXIS_X    0
 #define STK_AXIS_Y    1
+#define STK_AXIS_NONE      0
+#define STK_AXIS_LEFT      1
+#define STK_AXIS_RIGHT     2
+#define STK_AXIS_BOTH      3
+#define STK_AXIS_BOTTOM    1
+#define STK_AXIS_TOP       2
 #define STK_FLAG_PROFILE    0
 #define STK_FLAG_FID        1
 #define STK_FLAG_SYMBOL     2
