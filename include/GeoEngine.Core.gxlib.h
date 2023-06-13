@@ -1581,6 +1581,15 @@ Std_IGetName_DB(GX_VAR   GX_OBJECT_PTR,
                 GX_VAR   GX_STR_PTR,
                 GX_CONST GX_LONG_PTR);
 
+/*---------------- iGetModificationCount_DB[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetModificationCount_DB(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetModificationCount_DB(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR);
+
 /*---------------- iGetRegSymbSetting_DB[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -6168,6 +6177,21 @@ Std_CRCInexact_IMU(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_LONG_PTR,
                    GX_CONST GX_LONG_PTR);
+
+/*---------------- DecimateCrookedSectionGrid_IMU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DecimateCrookedSectionGrid_IMU(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DecimateCrookedSectionGrid_IMU(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_STR_PTR);
 
 /*---------------- ExportGridWithoutDataSectionXML_IMU[_licensed] ----------------*/
 
