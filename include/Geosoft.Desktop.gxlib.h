@@ -857,6 +857,23 @@ Std_GetDefaults_BIGRID(GX_VAR   GX_OBJECT_PTR,
                        GX_VAR   GX_DOUBLE_PTR,
                        GX_VAR   GX_DOUBLE_PTR);
 
+/*---------------- GetDefaultCellSize_BIGRID[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetDefaultCellSize_BIGRID(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetDefaultCellSize_BIGRID(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_VAR   GX_DOUBLE_PTR);
+
 /*---------------- BarPlot_CHIMERA[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -5751,6 +5768,23 @@ Std_AvgAzimuth_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_DOUBLE_PTR,
                   GX_VAR   GX_DOUBLE_PTR);
 
+/*---------------- AvgAzimuth2_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AvgAzimuth2_DU(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_DOUBLE_PTR,
+               GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AvgAzimuth2_DU(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_VAR   GX_DOUBLE_PTR);
+
 /*---------------- rAverageSpacing_DU[_licensed] ----------------*/
 
 GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
@@ -6555,6 +6589,70 @@ Std_GetChanDataVV_DU(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_LONG_PTR,
                      GX_CONST GX_LONG_PTR,
                      GX_CONST GX_HANDLE_PTR);
+
+/*---------------- rGetGriddingAzimuthToMinimizePadding_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
+rGetGriddingAzimuthToMinimizePadding_DU(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR,
+                                        GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
+Std_rGetGriddingAzimuthToMinimizePadding_DU(GX_VAR   GX_OBJECT_PTR,
+                                            GX_CONST GX_HANDLE_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR,
+                                            GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- GetAngledBoundingRectangle_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetAngledBoundingRectangle_DU(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR,
+                              GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetAngledBoundingRectangle_DU(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR,
+                                  GX_VAR   GX_DOUBLE_PTR);
 
 /*---------------- Gradient_DU[_licensed] ----------------*/
 
@@ -10125,6 +10223,19 @@ Std_App_LoadWithViewControl_EDB(GX_VAR   GX_OBJECT_PTR,
                                 GX_CONST GX_STR_PTR,
                                 GX_CONST GX_HANDLE_PTR,
                                 HWND);
+
+/*---------------- LoadChannelAfter_EDB[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_LoadChannelAfter_EDB(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_LoadChannelAfter_EDB(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR);
 
 /*---------------- CreateNewGMS3D_EDOC[_extended_app] ----------------*/
 
@@ -17915,6 +18026,39 @@ Std_DirectGriddingDB_PGU(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_LONG_PTR,
                          GX_CONST GX_LONG_PTR,
                          GX_CONST GX_LONG_PTR);
+
+/*---------------- DirectGriddingDB2_PGU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DirectGriddingDB2_PGU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DirectGriddingDB2_PGU(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR);
 
 /*---------------- DirectGriddingDB3D_PGU[_licensed] ----------------*/
 

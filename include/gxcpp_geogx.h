@@ -1032,6 +1032,7 @@ namespace geosoft
             constexpr auto IMU_BOOL_OLAP_AVE = 0;
             constexpr auto IMU_BOOL_OLAP_1 = 1;
             constexpr auto IMU_BOOL_OLAP_2 = 2;
+            constexpr auto IMU_BOOL_OLAP_MINUS = 4;
 // IMU_BOOL_OPT
             constexpr auto IMU_BOOL_OPT_AND = 0;
             constexpr auto IMU_BOOL_OPT_OR = 1;
@@ -1323,6 +1324,7 @@ namespace geosoft
             constexpr auto MAP_EXPORT_FORMAT_DXF12 = gx_string_literal("DXF12");
             constexpr auto MAP_EXPORT_FORMAT_DXF13 = gx_string_literal("DXF13");
             constexpr auto MAP_EXPORT_FORMAT_GTIFF = gx_string_literal("GTIFF");
+            constexpr auto MAP_EXPORT_FORMAT_CGTIFF = gx_string_literal("CGTIFF");
             constexpr auto MAP_EXPORT_FORMAT_MTIFF = gx_string_literal("MTIFF");
             constexpr auto MAP_EXPORT_FORMAT_ATIFF = gx_string_literal("ATIFF");
             constexpr auto MAP_EXPORT_FORMAT_GEO = gx_string_literal("GEO");
@@ -4259,6 +4261,14 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                static int32_t get_default_cell_size(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, double& param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = GetDefaultCellSize_BIGRID(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), &param5);
+                    gx_->throw_on_error();
+                    return ret;
+                }
 
             };
             class GXCHIMERA
@@ -5202,6 +5212,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize3 ));
                     gx_->throw_on_error();
                     param2.resize(gx_string_len(param2.c_str()));
+                }
+                int32_t get_modification_count()
+                {
+                    int32_t ret = iGetModificationCount_DB(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
                 }
                 int32_t get_reg_symb_setting_int(int32_t param1, const gx_string_type& param2)
                 {
@@ -8453,6 +8470,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3);
                     gx_->throw_on_error();
                 }
+                static void avg_azimuth2(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, double param4, double& param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    AvgAzimuth2_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), &param4, &param5);
+                    gx_->throw_on_error();
+                }
                 static double average_spacing(GXDBPtr param1, int32_t param2, int32_t param3, int32_t param4)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -8782,6 +8806,21 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     GetChanDataVV_DU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&gx_->handle(param4)));
+                    gx_->throw_on_error();
+                }
+                static double get_gridding_azimuth_to_minimize_padding(GXDBPtr param1, int32_t param2, int32_t param3, int32_t param4, double& param5, double& param6, double& param7, double& param8, double& param9, double& param10, double& param11, double& param12)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    double ret = rGetGriddingAzimuthToMinimizePadding_DU(
+                                     gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), &param5, &param6, &param7, &param8, &param9, &param10, &param11, &param12);
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                static void get_angled_bounding_rectangle(GXDBPtr param1, int32_t param2, int32_t param3, int32_t param4, double param5, double& param6, double& param7, double& param8, double& param9, double& param10, double& param11, double& param12, double& param13)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GetAngledBoundingRectangle_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), &param5, &param6, &param7, &param8, &param9, &param10, &param11, &param12, &param13);
                     gx_->throw_on_error();
                 }
                 static void gradient(GXDBPtr param1, GXDBPtr param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6, int32_t param7, int32_t param8, int32_t param9, double param10, double param11)
@@ -10395,6 +10434,12 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     App_LoadWithViewControl_EDB(
                         gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), param3);
+                    gx_->throw_on_error();
+                }
+                void load_channel_after(const gx_string_type& param1, const gx_string_type& param2)
+                {
+                    App_LoadChannelAfter_EDB(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str());
                     gx_->throw_on_error();
                 }
 
@@ -14595,6 +14640,13 @@ namespace geosoft
                                       gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4));
                     gx_->throw_on_error();
                     return ret;
+                }
+                static void decimate_crooked_section_grid(GXIMGPtr param1, int32_t param2, int32_t param3, const gx_string_type& param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DecimateCrookedSectionGrid_IMU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3), param4.c_str());
+                    gx_->throw_on_error();
                 }
                 static void export_grid_without_data_section_xml(const gx_string_type& param1, int32_t& param2, const gx_string_type& param3)
                 {
@@ -22778,6 +22830,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     DirectGriddingDB_PGU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11));
+                    gx_->throw_on_error();
+                }
+                static void direct_gridding_db2(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, GXDBPtr param9, int32_t param10, int32_t param11, int32_t param12, int32_t param13)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DirectGriddingDB2_PGU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), &param2, &param3, &param4, &param5, &param6, &param7, &param8, reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&param10), reinterpret_cast<const long*>(&param11), reinterpret_cast<const long*>(&param12), reinterpret_cast<const long*>(&param13));
                     gx_->throw_on_error();
                 }
                 static void direct_gridding_db_3d(GXPGPtr param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, GXDBPtr param9, int32_t param10, int32_t param11, int32_t param12, int32_t param13, int32_t param14)

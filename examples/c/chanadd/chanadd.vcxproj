@@ -143,6 +143,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -166,6 +167,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -193,6 +195,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_u.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -216,6 +219,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_u.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -243,6 +247,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_utf8.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -266,6 +271,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_utf8.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
