@@ -767,6 +767,9 @@
 #define PROJ_DISPLAY_NO        0
 #define PROJ_DISPLAY_YES       1
 #define PROJ_DISPLAY_ALWAYS    2
+#define PROJ_OMS_NAME_SIZE         32
+#define PROJ_OMS_DATETIME_SIZE     24
+#define PROJ_OMS_PROCESSID_SIZE    16
 
 
 // Class RGRD

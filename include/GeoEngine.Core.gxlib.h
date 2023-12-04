@@ -11127,6 +11127,23 @@ Std_RenderPreviewMapProduction_MAPTEMPLATE(GX_VAR   GX_OBJECT_PTR,
                                            GX_VAR   GX_LONG_PTR,
                                            GX_VAR   GX_LONG_PTR);
 
+/*---------------- GetMediaSize_MAPTEMPLATE[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetMediaSize_MAPTEMPLATE(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_VAR   GX_DOUBLE_PTR,
+                         GX_VAR   GX_DOUBLE_PTR,
+                         GX_VAR   GX_DOUBLE_PTR,
+                         GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetMediaSize_MAPTEMPLATE(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_VAR   GX_DOUBLE_PTR,
+                             GX_VAR   GX_DOUBLE_PTR,
+                             GX_VAR   GX_DOUBLE_PTR,
+                             GX_VAR   GX_DOUBLE_PTR);
+
 /*---------------- CrossProduct_MATH[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -24465,6 +24482,15 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iDeleteGridFile_SYS(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_STR_PTR);
 
+/*---------------- DeleteDirectory_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeleteDirectory_SYS(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeleteDirectory_SYS(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR);
+
 /*---------------- iDirExist_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -27231,6 +27257,21 @@ Std_SetInt_VA(GX_VAR   GX_OBJECT_PTR,
               GX_CONST GX_LONG_PTR,
               GX_CONST GX_LONG_PTR,
               GX_CONST GX_LONG_PTR);
+
+/*---------------- SetIntN_VA[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetIntN_VA(GX_VAR   GX_OBJECT_PTR,
+           GX_CONST GX_HANDLE_PTR,
+           GX_CONST GX_LONG_PTR,
+           GX_CONST GX_LONG_PTR,
+           GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetIntN_VA(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR);
 
 /*---------------- SetLn_VA[_public] ----------------*/
 

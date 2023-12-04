@@ -12736,6 +12736,21 @@ Std_WriteSpectrum_FFT(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_HANDLE_PTR,
                       GX_CONST GX_STR_PTR);
 
+/*---------------- CrossCorrelationPG_FFT2[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CrossCorrelationPG_FFT2(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CrossCorrelationPG_FFT2(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_HANDLE_PTR);
+
 /*---------------- Fft2In_FFT2[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -13027,6 +13042,15 @@ Launch_GMSYS(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Launch_GMSYS(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_STR_PTR);
+
+/*---------------- RemoveLegacyGMS_GMSYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RemoveLegacyGMS_GMSYS(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RemoveLegacyGMS_GMSYS(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_STR_PTR);
 
 /*---------------- DipoleMag_GU[_licensed] ----------------*/
 
@@ -18419,6 +18443,67 @@ App_HasPendingCentralPublishEvent_PROJ(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_HasPendingCentralPublishEvent_PROJ(GX_VAR   GX_OBJECT_PTR);
 
+/*---------------- RegisterBackgroundScript_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_RegisterBackgroundScript_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_RegisterBackgroundScript_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR);
+
+/*---------------- GetRegisteredBackgroundScript_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_GetRegisteredBackgroundScript_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_VAR   GX_STR_PTR,
+                                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_GetRegisteredBackgroundScript_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_VAR   GX_STR_PTR,
+                                           GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetNumRegisteredBackgroundScripts_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iGetNumRegisteredBackgroundScripts_PROJ(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iGetNumRegisteredBackgroundScripts_PROJ(GX_VAR   GX_OBJECT_PTR);
+
 /*---------------- _Clear_RGRD[_extended] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -18513,6 +18598,27 @@ iRun2_RGRD(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iRun2_RGRD(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_STR_PTR);
+
+/*---------------- iRun3_RGRD[_extended] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iRun3_RGRD(GX_VAR   GX_OBJECT_PTR,
+           GX_CONST GX_HANDLE_PTR,
+           GX_CONST GX_STR_PTR,
+           GX_CONST GX_STR_PTR,
+           GX_CONST GX_STR_PTR,
+           GX_CONST GX_STR_PTR,
+           GX_CONST GX_STR_PTR,
+           GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iRun3_RGRD(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR,
                GX_CONST GX_STR_PTR,
                GX_CONST GX_STR_PTR,
                GX_CONST GX_STR_PTR,

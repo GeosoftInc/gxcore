@@ -1782,6 +1782,10 @@ namespace geosoft
             constexpr auto PROJ_DISPLAY_NO = 0;
             constexpr auto PROJ_DISPLAY_YES = 1;
             constexpr auto PROJ_DISPLAY_ALWAYS = 2;
+// PROJ_OMS
+            constexpr auto PROJ_OMS_NAME_SIZE = 32;
+            constexpr auto PROJ_OMS_DATETIME_SIZE = 24;
+            constexpr auto PROJ_OMS_PROCESSID_SIZE = 16;
 // REG_MERGE
             constexpr auto REG_MERGE_REPLACE = 0;
             constexpr auto REG_MERGE_ADD = 1;
@@ -1828,6 +1832,7 @@ namespace geosoft
             constexpr auto ST_NPOS = 1;
             constexpr auto ST_NZERO = 22;
             constexpr auto ST_TOTAL = 24;
+            constexpr auto ST_NEMPTYSTRINGS = 25;
             constexpr auto ST_DUMMIES = 2;
             constexpr auto ST_MIN = 3;
             constexpr auto ST_MAX = 4;
@@ -11960,6 +11965,13 @@ namespace geosoft
             public:
 
 
+                static void cross_correlation_pg(GXPGPtr param1, GXPGPtr param2, int32_t param3, GXPGPtr param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    CrossCorrelationPG_FFT2(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&gx_->handle(param4)));
+                    gx_->throw_on_error();
+                }
                 static void fft2_in(GXIMGPtr param1, const gx_string_type& param2, const gx_string_type& param3)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -12599,6 +12611,13 @@ namespace geosoft
                 {
                     GXContextPtr gx_ = GXContext::current();
                     Launch_GMSYS(
+                        gx_->pGeo, param1.c_str());
+                    gx_->throw_on_error();
+                }
+                static void remove_legacy_gms(const gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    RemoveLegacyGMS_GMSYS(
                         gx_->pGeo, param1.c_str());
                     gx_->throw_on_error();
                 }
@@ -18103,6 +18122,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1, reinterpret_cast<long*>(&param2), reinterpret_cast<long*>(&param3), reinterpret_cast<long*>(&param4), reinterpret_cast<long*>(&param5));
                     gx_->throw_on_error();
                 }
+                static void get_media_size(const gx_string_type& param1, double& param2, double& param3, double& param4, double& param5)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    GetMediaSize_MAPTEMPLATE(
+                        gx_->pGeo, param1.c_str(), &param2, &param3, &param4, &param5);
+                    gx_->throw_on_error();
+                }
 
             };
             class GXMATH
@@ -23484,6 +23510,44 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                static void register_background_script(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, int32_t param5, GXVVPtr param6, const gx_string_type& param7, const gx_string_type& param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    App_RegisterBackgroundScript_PROJ(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&gx_->handle(param6)), param7.c_str(), param8.c_str());
+                    gx_->throw_on_error();
+                }
+                static void get_registered_background_script(int32_t param1, gx_string_type& param2, gx_string_type& param3, gx_string_type& param4, gx_string_type& param5, gx_string_type& param6, GXVVPtr param7, gx_string_type& param8)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize2 = PROJ_OMS_DATETIME_SIZE * STRING_CHAR_SIZE;
+                    int32_t paramSize5 = PROJ_OMS_NAME_SIZE * STRING_CHAR_SIZE;
+                    int32_t paramSize8 = STR_FILE * STRING_CHAR_SIZE;
+                    int32_t paramSize11 = PROJ_OMS_PROCESSID_SIZE * STRING_CHAR_SIZE;
+                    param2.resize(PROJ_OMS_DATETIME_SIZE);
+                    param3.resize(PROJ_OMS_NAME_SIZE);
+                    param4.resize(PROJ_OMS_NAME_SIZE);
+                    param5.resize(STR_FILE);
+                    param6.resize(STR_FILE);
+                    param8.resize(PROJ_OMS_PROCESSID_SIZE);
+                    App_GetRegisteredBackgroundScript_PROJ(
+                        gx_->pGeo, reinterpret_cast<const long*>(&param1), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize2 ), (gx_string_char_type*)param3.data(), (gx_string_char_type*)param4.data(), reinterpret_cast<const long*>(&paramSize5 ), (gx_string_char_type*)param5.data(), (gx_string_char_type*)param6.data(), reinterpret_cast<const long*>(&paramSize8 ), reinterpret_cast<const long*>(&gx_->handle(param7)), (gx_string_char_type*)param8.data(), reinterpret_cast<const long*>(&paramSize11 ));
+                    gx_->throw_on_error();
+                    param2.resize(gx_string_len(param2.c_str()));
+                    param3.resize(gx_string_len(param3.c_str()));
+                    param4.resize(gx_string_len(param4.c_str()));
+                    param5.resize(gx_string_len(param5.c_str()));
+                    param6.resize(gx_string_len(param6.c_str()));
+                    param8.resize(gx_string_len(param8.c_str()));
+                }
+                static int32_t get_num_registered_background_scripts()
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = App_iGetNumRegisteredBackgroundScripts_PROJ(
+                                      gx_->pGeo);
+                    gx_->throw_on_error();
+                    return ret;
+                }
 
             };
             class GXRA
@@ -23815,6 +23879,14 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     int32_t ret = iRun2_RGRD(
                                       gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), param6.c_str());
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                static int32_t run3(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, const gx_string_type& param6, const gx_string_type& param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = iRun3_RGRD(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), param6.c_str(), param7.c_str());
                     gx_->throw_on_error();
                     return ret;
                 }
@@ -26924,6 +26996,13 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                static void delete_directory(const gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    DeleteDirectory_SYS(
+                        gx_->pGeo, param1.c_str());
+                    gx_->throw_on_error();
+                }
                 static int32_t dir_exist(const gx_string_type& param1)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -29372,6 +29451,12 @@ namespace geosoft
                 void set_int(int32_t param1, int32_t param2, int32_t param3)
                 {
                     SetInt_VA(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                }
+                void set_int_n(int32_t param1, int32_t param2, int32_t param3)
+                {
+                    SetIntN_VA(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3));
                     gx_->throw_on_error();
                 }

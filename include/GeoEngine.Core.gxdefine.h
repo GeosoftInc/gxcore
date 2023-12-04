@@ -974,6 +974,7 @@
 #define ST_NPOS             1
 #define ST_NZERO            22
 #define ST_TOTAL            24
+#define ST_NEMPTYSTRINGS    25
 #define ST_DUMMIES          2
 #define ST_MIN              3
 #define ST_MAX              4
