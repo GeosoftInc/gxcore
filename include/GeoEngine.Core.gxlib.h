@@ -15,8 +15,6 @@ Geosoft GX Wapper Function Headers
 #include <windows.h>
 #include "gx_disposable.h"
 
-#ifdef C_MICROSOFT
-
 #define GX_WRAPPER_FUNC  __declspec(dllexport)
 #define GX_STANDARD_FUNC 
 #define GX_WRAPPER_CALL  _cdecl
@@ -46,9 +44,6 @@ Geosoft GX Wapper Function Headers
 #else
    #define GX_STR_PTR       GX_ASTR_PTR
 #endif
-
-#endif
-
 
 #ifdef __cplusplus
    extern "C" {
@@ -1026,6 +1021,227 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GetStat_CSYMB(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Create_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Create_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_DOUBLE_PTR,
+               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Create_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_LONG_PTR);
+
+/*---------------- Destroy_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Destroy_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Destroy_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+
+/*---------------- AddLocations_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddLocations_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddLocations_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- AddColorData_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddColorData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddColorData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- AddSizeData_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AddSizeData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AddSizeData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetLocations_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetLocations_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetLocations_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetColorData_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetColorData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetColorData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetSizeData_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetSizeData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetSizeData_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetST_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetST_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetST_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+
+/*---------------- Statistics_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Statistics_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Statistics_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetFixedColor_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetFixedColor_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetFixedColor_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetFixedColor_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetFixedColor_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetFixedColor_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iFixedColor_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iFixedColor_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iFixedColor_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetITR_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetITR_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetITR_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetITR_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetITR_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetITR_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SetSymbol_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetSymbol_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetSymbol_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR);
+
+/*---------------- SetFixedSize_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetFixedSize_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetFixedSize_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- SetSizeScale_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetSizeScale_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetSizeScale_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- SetSizeMinMax_CSYMB3D[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetSizeMinMax_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_DOUBLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetSizeMinMax_CSYMB3D(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_DOUBLE_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_DOUBLE_PTR);
 
 /*---------------- CreateDB_DAT[_public] ----------------*/
 
@@ -10744,6 +10960,84 @@ Std_Render_MAP(GX_VAR   GX_OBJECT_PTR,
                GX_CONST GX_HANDLE_PTR,
                GX_CONST GX_STR_PTR);
 
+/*---------------- RemoveGrid_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RemoveGrid_MAP(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_HANDLE_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RemoveGrid_MAP(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_VAR   GX_LONG_PTR);
+
+/*---------------- RemoveGeosurface_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RemoveGeosurface_MAP(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RemoveGeosurface_MAP(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_VAR   GX_LONG_PTR);
+
+/*---------------- RemoveVoxel_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RemoveVoxel_MAP(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_STR_PTR,
+                GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RemoveVoxel_MAP(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR,
+                    GX_VAR   GX_LONG_PTR);
+
+/*---------------- RepairBrokenGridLinks_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RepairBrokenGridLinks_MAP(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_STR_PTR,
+                          GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RepairBrokenGridLinks_MAP(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_VAR   GX_LONG_PTR);
+
+/*---------------- RepairBrokenGeosurfaceLinks_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RepairBrokenGeosurfaceLinks_MAP(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RepairBrokenGeosurfaceLinks_MAP(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_VAR   GX_LONG_PTR);
+
+/*---------------- RepairBrokenVoxelLinks_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RepairBrokenVoxelLinks_MAP(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RepairBrokenVoxelLinks_MAP(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_VAR   GX_LONG_PTR);
+
 /*---------------- ResizeAll_MAP[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -16544,6 +16838,30 @@ Std_DrawVectors3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_DOUBLE_PTR,
                         GX_CONST GX_DOUBLE_PTR,
                         GX_CONST GX_DOUBLE_PTR);
+
+/*---------------- CSYMB3D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CSYMB3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CSYMB3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_HANDLE_PTR,
+                  GX_CONST GX_STR_PTR);
+
+/*---------------- GetCSYMB3D_MVIEW[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+GetCSYMB3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_GetCSYMB3D_MVIEW(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR);
 
 /*---------------- SetGroupITR_MVIEW[_public] ----------------*/
 
@@ -24257,17 +24575,6 @@ Std_iRunPython_SYS(GX_VAR   GX_OBJECT_PTR,
                    GX_CONST GX_STR_PTR,
                    GX_CONST GX_STR_PTR);
 
-/*---------------- iRunGXEx_SYS[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-iRunGXEx_SYS(GX_VAR   GX_OBJECT_PTR,
-             GX_CONST GX_STR_PTR,
-             GX_VAR   GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_iRunGXEx_SYS(GX_VAR   GX_OBJECT_PTR,
-                 GX_CONST GX_STR_PTR,
-                 GX_VAR   GX_LONG_PTR);
-
 /*---------------- iRunPDF_SYS[_licensed_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -24295,15 +24602,6 @@ Std_iShellExecute_SYS(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_STR_PTR,
                       GX_CONST GX_STR_PTR,
                       GX_CONST GX_LONG_PTR);
-
-/*---------------- SetReturn_SYS[_public] ----------------*/
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-SetReturn_SYS(GX_VAR   GX_OBJECT_PTR,
-              GX_CONST GX_LONG_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_SetReturn_SYS(GX_VAR   GX_OBJECT_PTR,
-                  GX_CONST GX_LONG_PTR);
 
 /*---------------- DoCommand_SYS[_public_app] ----------------*/
 
@@ -25284,6 +25582,15 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_LogScriptRun_SYS(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_STR_PTR);
 
+/*---------------- LogBackgroundTask_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LogBackgroundTask_SYS(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LogBackgroundTask_SYS(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_STR_PTR);
+
 /*---------------- iGetThreadID_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -25988,6 +26295,15 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_SetInteractive_SYS(GX_VAR   GX_OBJECT_PTR,
                        GX_CONST GX_LONG_PTR);
 
+/*---------------- SetBackgroundRun_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetBackgroundRun_SYS(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetBackgroundRun_SYS(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_LONG_PTR);
+
 /*---------------- GetWorkspaceREG_SYS[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -26044,6 +26360,19 @@ IsEncryptedString_SYS(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_IsEncryptedString_SYS(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_STR_PTR);
+
+/*---------------- DATListLST_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+DATListLST_SYS(GX_VAR   GX_OBJECT_PTR,
+               GX_CONST GX_STR_PTR,
+               GX_CONST GX_LONG_PTR,
+               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_DATListLST_SYS(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR);
 
 /*---------------- DisableGXDebugger_SYS[_public] ----------------*/
 

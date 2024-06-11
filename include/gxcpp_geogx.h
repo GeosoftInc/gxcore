@@ -247,6 +247,12 @@ namespace geosoft
 // CSYMB_COLOR
             constexpr auto CSYMB_COLOR_EDGE = 0;
             constexpr auto CSYMB_COLOR_FILL = 1;
+// CSYMB3D_SYMBOL
+            constexpr auto CSYMB_SYMBOL_SPHERE = 30;
+            constexpr auto CSYMB_SYMBOL_CUBE = 31;
+            constexpr auto CSYMB_SYMBOL_CYLINDER = 32;
+            constexpr auto CSYMB_SYMBOL_CONE = 33;
+            constexpr auto CSYMB_SYMBOL_DOT = 34;
 // DAT_FILE
             constexpr auto DAT_FILE_GRID = 1;
             constexpr auto DAT_FILE_IMAGE = 2;
@@ -1582,6 +1588,7 @@ namespace geosoft
             constexpr auto MVIEW_IS_VECTOR3D = 12;
             constexpr auto MVIEW_IS_GENSURF = 13;
             constexpr auto MVIEW_IS_VOXSURF = 14;
+            constexpr auto MVIEW_IS_CSYMB3D = 15;
 // MVIEW_LABEL_BOUND
             constexpr auto MVIEW_LABEL_BOUND_NO = 0;
             constexpr auto MVIEW_LABEL_BOUND_YES = 1;
@@ -1946,6 +1953,7 @@ namespace geosoft
             constexpr auto GEO_DIRECTORY_PYGX = 24;
             constexpr auto GEO_DIRECTORY_USER_PYGX = 25;
             constexpr auto GEO_DIRECTORY_USER_GX = 26;
+            constexpr auto GEO_DIRECTORY_USER_TBL_FAVOURITES = 27;
 // REG_DOMAIN
             constexpr auto REG_DOMAIN_MACHINE = 0;
             constexpr auto REG_DOMAIN_USER = 1;
@@ -2011,6 +2019,12 @@ namespace geosoft
 // SYS_FONT
             constexpr auto SYS_FONT_GFN = 1;
             constexpr auto SYS_FONT_TT = 0;
+// SYS_FILE_FORM
+            constexpr auto SYS_FILE_FORM_OPEN = 0;
+            constexpr auto SYS_FILE_FORM_SAVE = 1;
+// SYS_DAT_FILE
+            constexpr auto SYS_DAT_FILE_GRID = 1;
+            constexpr auto SYS_DAT_FILE_IMAG = 2;
 // SYS_INFO
             constexpr auto SYS_INFO_VERSION_MAJOR = 0;
             constexpr auto SYS_INFO_VERSION_MINOR = 1;
@@ -2510,6 +2524,8 @@ namespace geosoft
             typedef std::shared_ptr<GXCOM> GXCOMPtr;
             class GXCSYMB;
             typedef std::shared_ptr<GXCSYMB> GXCSYMBPtr;
+            class GXCSYMB3D;
+            typedef std::shared_ptr<GXCSYMB3D> GXCSYMB3DPtr;
             class GXDAT;
             typedef std::shared_ptr<GXDAT> GXDATPtr;
             class GXDATALINKD;
@@ -2771,6 +2787,7 @@ namespace geosoft
                 friend class GXCHIMERA;
                 friend class GXCOM;
                 friend class GXCSYMB;
+                friend class GXCSYMB3D;
                 friend class GXDAT;
                 friend class GXDATALINKD;
                 friend class GXDATAMINE;
@@ -4805,6 +4822,157 @@ namespace geosoft
                 {
                     GetStat_CSYMB(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+
+            };
+            class GXCSYMB3D
+            {
+            private:
+                friend class GXContext;
+
+                GXContextPtr gx_;
+                int32_t handle_;
+
+                GXCSYMB3D(int32_t handle)
+                    : gx_(GXContext::current()), handle_(handle)
+                {
+                }
+
+            public:
+                static GXCSYMB3DPtr null()
+                {
+                    return GXContext::current()->createNullHandlePtr<GXCSYMB3D>();
+                }
+                bool is_null()
+                {
+                    return handle_ == 0;
+                }
+
+                int32_t _internal_handle()
+                {
+                    return handle_;
+                }
+
+
+
+                static GXCSYMB3DPtr create(double param1, int32_t param2)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = Create_CSYMB3D(
+                                      gx_->pGeo, &param1, reinterpret_cast<const long*>(&param2));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXCSYMB3D>(ret);
+                }
+                ~GXCSYMB3D()
+                {
+                    if (handle_ == 0)
+                        return;
+                    Destroy_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                }
+                void add_locations(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3)
+                {
+                    AddLocations_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)));
+                    gx_->throw_on_error();
+                }
+                void add_color_data(GXVVPtr param1)
+                {
+                    AddColorData_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void add_size_data(GXVVPtr param1)
+                {
+                    AddSizeData_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void get_locations(GXVVPtr param1, GXVVPtr param2, GXVVPtr param3)
+                {
+                    GetLocations_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)));
+                    gx_->throw_on_error();
+                }
+                void get_color_data(GXVVPtr param1)
+                {
+                    GetColorData_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void get_size_data(GXVVPtr param1)
+                {
+                    GetSizeData_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void get_st(GXSTPtr param1)
+                {
+                    GetST_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void statistics(GXSTPtr param1)
+                {
+                    Statistics_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void set_fixed_color(int32_t param1)
+                {
+                    SetFixedColor_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+                int32_t get_fixed_color()
+                {
+                    int32_t ret = iGetFixedColor_CSYMB3D(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                int32_t fixed_color()
+                {
+                    int32_t ret = iFixedColor_CSYMB3D(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_));
+                    gx_->throw_on_error();
+                    return ret;
+                }
+                void get_itr(GXITRPtr param1)
+                {
+                    GetITR_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void set_itr(GXITRPtr param1)
+                {
+                    SetITR_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)));
+                    gx_->throw_on_error();
+                }
+                void set_symbol(int32_t param1)
+                {
+                    SetSymbol_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
+                void set_fixed_size(double param1)
+                {
+                    SetFixedSize_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1);
+                    gx_->throw_on_error();
+                }
+                void set_size_scale(double param1, int32_t param2, double param3)
+                {
+                    SetSizeScale_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, reinterpret_cast<const long*>(&param2), &param3);
+                    gx_->throw_on_error();
+                }
+                void set_size_min_max(double param1, double param2, int32_t param3, double param4)
+                {
+                    SetSizeMinMax_CSYMB3D(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), &param1, &param2, reinterpret_cast<const long*>(&param3), &param4);
                     gx_->throw_on_error();
                 }
 
@@ -9315,6 +9483,13 @@ namespace geosoft
                     GXContextPtr gx_ = GXContext::current();
                     SampleIMGLineLST_DU(
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&gx_->handle(param6)));
+                    gx_->throw_on_error();
+                }
+                static void sample_img_line_lst_ex(GXDBPtr param1, GXLSTPtr param2, int32_t param3, int32_t param4, int32_t param5, GXIMGPtr param6, int32_t param7)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    SampleIMGLineLSTEx_DU(
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&gx_->handle(param6)), reinterpret_cast<const long*>(&param7));
                     gx_->throw_on_error();
                 }
                 static void scan_ado(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3)
@@ -17843,6 +18018,42 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
                     gx_->throw_on_error();
                 }
+                void remove_grid(const gx_string_type& param1, int32_t& param2)
+                {
+                    RemoveGrid_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void remove_geosurface(const gx_string_type& param1, int32_t& param2)
+                {
+                    RemoveGeosurface_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void remove_voxel(const gx_string_type& param1, int32_t& param2)
+                {
+                    RemoveVoxel_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void repair_broken_grid_links(const gx_string_type& param1, int32_t& param2)
+                {
+                    RepairBrokenGridLinks_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void repair_broken_geosurface_links(const gx_string_type& param1, int32_t& param2)
+                {
+                    RepairBrokenGeosurfaceLinks_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
+                void repair_broken_voxel_links(const gx_string_type& param1, int32_t& param2)
+                {
+                    RepairBrokenVoxelLinks_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<long*>(&param2));
+                    gx_->throw_on_error();
+                }
                 void resize_all()
                 {
                     ResizeAll_MAP(
@@ -20930,6 +21141,19 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), reinterpret_cast<const long*>(&gx_->handle(param2)), reinterpret_cast<const long*>(&gx_->handle(param3)), reinterpret_cast<const long*>(&gx_->handle(param4)), reinterpret_cast<const long*>(&gx_->handle(param5)), reinterpret_cast<const long*>(&gx_->handle(param6)), reinterpret_cast<const long*>(&gx_->handle(param7)), reinterpret_cast<const long*>(&gx_->handle(param8)), &param9, &param10, &param11);
                     gx_->throw_on_error();
                 }
+                void csymb_3d(GXCSYMB3DPtr param1, const gx_string_type& param2)
+                {
+                    CSYMB3D_MVIEW(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str());
+                    gx_->throw_on_error();
+                }
+                GXCSYMB3DPtr get_csymb_3d(int32_t param1)
+                {
+                    int32_t ret = GetCSYMB3D_MVIEW(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&handle_), reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXCSYMB3D>(ret);
+                }
                 void set_group_itr(int32_t param1, GXITRPtr param2)
                 {
                     SetGroupITR_MVIEW(
@@ -23329,6 +23553,14 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
+                static int32_t add_grid_documents(GXVVPtr param1, const gx_string_type& param2, int32_t param3, int32_t param4)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = App_iAddGridDocuments_PROJ(
+                                      gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), reinterpret_cast<const long*>(&param3), reinterpret_cast<const long*>(&param4));
+                    gx_->throw_on_error();
+                    return ret;
+                }
                 static int32_t get_command_environment()
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -23517,6 +23749,13 @@ namespace geosoft
                         gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&gx_->handle(param6)), param7.c_str(), param8.c_str());
                     gx_->throw_on_error();
                 }
+                static void register_background_script_ex(const gx_string_type& param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, const gx_string_type& param6, int32_t param7, GXVVPtr param8, GXLSTPtr param9, const gx_string_type& param10, const gx_string_type& param11)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    App_RegisterBackgroundScriptEx_PROJ(
+                        gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), param6.c_str(), reinterpret_cast<const long*>(&param7), reinterpret_cast<const long*>(&gx_->handle(param8)), reinterpret_cast<const long*>(&gx_->handle(param9)), param10.c_str(), param11.c_str());
+                    gx_->throw_on_error();
+                }
                 static void get_registered_background_script(int32_t param1, gx_string_type& param2, gx_string_type& param3, gx_string_type& param4, gx_string_type& param5, gx_string_type& param6, GXVVPtr param7, gx_string_type& param8)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -23539,6 +23778,33 @@ namespace geosoft
                     param5.resize(gx_string_len(param5.c_str()));
                     param6.resize(gx_string_len(param6.c_str()));
                     param8.resize(gx_string_len(param8.c_str()));
+                }
+                static void get_registered_background_script_ex(int32_t param1, gx_string_type& param2, gx_string_type& param3, gx_string_type& param4, gx_string_type& param5, gx_string_type& param6, gx_string_type& param7, gx_string_type& param8, GXLSTPtr param9, GXLSTPtr param10, gx_string_type& param11)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize2 = PROJ_OMS_DATETIME_SIZE * STRING_CHAR_SIZE;
+                    int32_t paramSize5 = PROJ_OMS_NAME_SIZE * STRING_CHAR_SIZE;
+                    int32_t paramSize10 = STR_FILE * STRING_CHAR_SIZE;
+                    int32_t paramSize14 = PROJ_OMS_PROCESSID_SIZE * STRING_CHAR_SIZE;
+                    param2.resize(PROJ_OMS_DATETIME_SIZE);
+                    param3.resize(PROJ_OMS_NAME_SIZE);
+                    param4.resize(PROJ_OMS_NAME_SIZE);
+                    param5.resize(STR_FILE);
+                    param6.resize(STR_FILE);
+                    param7.resize(STR_FILE);
+                    param8.resize(STR_FILE);
+                    param11.resize(PROJ_OMS_PROCESSID_SIZE);
+                    App_GetRegisteredBackgroundScriptEx_PROJ(
+                        gx_->pGeo, reinterpret_cast<const long*>(&param1), (gx_string_char_type*)param2.data(), reinterpret_cast<const long*>(&paramSize2 ), (gx_string_char_type*)param3.data(), (gx_string_char_type*)param4.data(), reinterpret_cast<const long*>(&paramSize5 ), (gx_string_char_type*)param5.data(), (gx_string_char_type*)param6.data(), (gx_string_char_type*)param7.data(), (gx_string_char_type*)param8.data(), reinterpret_cast<const long*>(&paramSize10 ), reinterpret_cast<const long*>(&gx_->handle(param9)), reinterpret_cast<const long*>(&gx_->handle(param10)), (gx_string_char_type*)param11.data(), reinterpret_cast<const long*>(&paramSize14 ));
+                    gx_->throw_on_error();
+                    param2.resize(gx_string_len(param2.c_str()));
+                    param3.resize(gx_string_len(param3.c_str()));
+                    param4.resize(gx_string_len(param4.c_str()));
+                    param5.resize(gx_string_len(param5.c_str()));
+                    param6.resize(gx_string_len(param6.c_str()));
+                    param7.resize(gx_string_len(param7.c_str()));
+                    param8.resize(gx_string_len(param8.c_str()));
+                    param11.resize(gx_string_len(param11.c_str()));
                 }
                 static int32_t get_num_registered_background_scripts()
                 {
@@ -26842,14 +27108,6 @@ namespace geosoft
                     gx_->throw_on_error();
                     return ret;
                 }
-                static int32_t run_gx_ex(const gx_string_type& param1, int32_t& param2)
-                {
-                    GXContextPtr gx_ = GXContext::current();
-                    int32_t ret = iRunGXEx_SYS(
-                                      gx_->pGeo, param1.c_str(), reinterpret_cast<long*>(&param2));
-                    gx_->throw_on_error();
-                    return ret;
-                }
                 static int32_t run_pdf(const gx_string_type& param1, const gx_string_type& param2)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -26865,13 +27123,6 @@ namespace geosoft
                                       gx_->pGeo, param1.c_str(), param2.c_str(), param3.c_str(), param4.c_str(), reinterpret_cast<const long*>(&param5));
                     gx_->throw_on_error();
                     return ret;
-                }
-                static void set_return(int32_t param1)
-                {
-                    GXContextPtr gx_ = GXContext::current();
-                    SetReturn_SYS(
-                        gx_->pGeo, reinterpret_cast<const long*>(&param1));
-                    gx_->throw_on_error();
                 }
                 static void do_command(const gx_string_type& param1)
                 {
@@ -27626,6 +27877,13 @@ namespace geosoft
                         gx_->pGeo, param1.c_str());
                     gx_->throw_on_error();
                 }
+                static void log_background_task(const gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    LogBackgroundTask_SYS(
+                        gx_->pGeo, param1.c_str());
+                    gx_->throw_on_error();
+                }
                 static int32_t get_thread_id()
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -28098,6 +28356,13 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&param1));
                     gx_->throw_on_error();
                 }
+                static void set_background_run(int32_t param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    SetBackgroundRun_SYS(
+                        gx_->pGeo, reinterpret_cast<const long*>(&param1));
+                    gx_->throw_on_error();
+                }
                 static void get_workspace_reg(GXREGPtr param1)
                 {
                     GXContextPtr gx_ = GXContext::current();
@@ -28139,6 +28404,14 @@ namespace geosoft
                                       gx_->pGeo, param1.c_str());
                     gx_->throw_on_error();
                     return ret;
+                }
+                static GXLSTPtr dat_list_lst(const gx_string_type& param1, int32_t param2, int32_t param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t ret = DATListLST_SYS(
+                                      gx_->pGeo, param1.c_str(), reinterpret_cast<const long*>(&param2), reinterpret_cast<const long*>(&param3));
+                    gx_->throw_on_error();
+                    return gx_->createPtr<GXLST>(ret);
                 }
                 static void disable_gx_debugger()
                 {

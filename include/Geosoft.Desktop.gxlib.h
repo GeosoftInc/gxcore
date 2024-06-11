@@ -15,8 +15,6 @@ Geosoft GX Wapper Function Headers
 #include <windows.h>
 #include "gx_disposable.h"
 
-#ifdef C_MICROSOFT
-
 #define GX_WRAPPER_FUNC  __declspec(dllexport)
 #define GX_STANDARD_FUNC 
 #define GX_WRAPPER_CALL  _cdecl
@@ -46,9 +44,6 @@ Geosoft GX Wapper Function Headers
 #else
    #define GX_STR_PTR       GX_ASTR_PTR
 #endif
-
-#endif
-
 
 #ifdef __cplusplus
    extern "C" {
@@ -2239,6 +2234,32 @@ Std_App_VoxelDirect_DCOL(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_STR_PTR,
                          GX_CONST GX_DOUBLE_PTR,
                          GXDisposable*);
+
+/*---------------- ProjectExplorerGrids_DCOL[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+App_ProjectExplorerGrids_DCOL(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GXDisposable*);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_App_ProjectExplorerGrids_DCOL(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GXDisposable*);
+
+/*---------------- StartMultipleGroupsFrom3DV_DCOL[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+App_StartMultipleGroupsFrom3DV_DCOL(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GXDisposable*);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_App_StartMultipleGroupsFrom3DV_DCOL(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GXDisposable*);
 
 /*---------------- iNumberOfLayers_DCOL[_public_app] ----------------*/
 
@@ -7966,6 +7987,27 @@ Std_SampleIMGLineLST_DU(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_LONG_PTR,
                         GX_CONST GX_LONG_PTR,
                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- SampleIMGLineLSTEx_DU[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SampleIMGLineLSTEx_DU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_CONST GX_HANDLE_PTR,
+                      GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SampleIMGLineLSTEx_DU(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR);
 
 /*---------------- ScanADO_DU[_licensed] ----------------*/
 
@@ -18216,6 +18258,21 @@ Std_App_iAddGridDocument_PROJ(GX_VAR   GX_OBJECT_PTR,
                               GX_CONST GX_LONG_PTR,
                               GX_CONST GX_LONG_PTR);
 
+/*---------------- iAddGridDocuments_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iAddGridDocuments_PROJ(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iAddGridDocuments_PROJ(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR);
+
 /*---------------- iGetCommandEnvironment_PROJ[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -18466,6 +18523,35 @@ Std_App_RegisterBackgroundScript_PROJ(GX_VAR   GX_OBJECT_PTR,
                                       GX_CONST GX_STR_PTR,
                                       GX_CONST GX_STR_PTR);
 
+/*---------------- RegisterBackgroundScriptEx_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_RegisterBackgroundScriptEx_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_LONG_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_RegisterBackgroundScriptEx_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR);
+
 /*---------------- GetRegisteredBackgroundScript_PROJ[_public_app] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -18496,6 +18582,43 @@ Std_App_GetRegisteredBackgroundScript_PROJ(GX_VAR   GX_OBJECT_PTR,
                                            GX_CONST GX_HANDLE_PTR,
                                            GX_VAR   GX_STR_PTR,
                                            GX_CONST GX_LONG_PTR);
+
+/*---------------- GetRegisteredBackgroundScriptEx_PROJ[_public_app] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_GetRegisteredBackgroundScriptEx_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_CONST GX_HANDLE_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_GetRegisteredBackgroundScriptEx_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_CONST GX_LONG_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_CONST GX_HANDLE_PTR,
+                                             GX_VAR   GX_STR_PTR,
+                                             GX_CONST GX_LONG_PTR);
 
 /*---------------- iGetNumRegisteredBackgroundScripts_PROJ[_public_app] ----------------*/
 
