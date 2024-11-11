@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // geogdbviewDlg.h : header file
 //
 

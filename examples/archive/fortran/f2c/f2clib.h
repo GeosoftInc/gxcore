@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 /* f2c.h  --  Standard Fortran to C header file */
 
 /**  barf  [ba:rf]  2.  "He suggested using FORTRAN, and everybody barfed."

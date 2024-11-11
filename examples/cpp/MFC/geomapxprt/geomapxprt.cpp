@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // geomapxprt.cpp : Defines the class behaviors for the application.
 //
 

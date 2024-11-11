@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // OMScript.cpp : Defines the class behaviors for the application.
 //
 

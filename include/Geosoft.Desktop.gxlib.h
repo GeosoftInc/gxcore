@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 //*** extends 'gxlib_empty.h'
 
 //*** block Header

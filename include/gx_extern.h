@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 //---------------------------------------------------------------------------------
 //
 // GeoExtern module:  This module is used by 3rd party developers wishing to build

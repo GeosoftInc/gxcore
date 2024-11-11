@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // geogdbview.h : main header file for the PROJECT_NAME application
 //
 

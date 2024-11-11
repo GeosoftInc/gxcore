@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 //---------------------------------------------------------------------------------
 //
 // GeoExtern C++ module:  These functions are for Geosoft internal use and are 

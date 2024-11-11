@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
 // Used by geomapxprt.rc

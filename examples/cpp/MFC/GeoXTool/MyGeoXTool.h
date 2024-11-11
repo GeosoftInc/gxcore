@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // GeoXTool.h : main header file for the GeoXTool DLL
 //
 
