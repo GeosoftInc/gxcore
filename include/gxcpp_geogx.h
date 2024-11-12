@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 #pragma once
 #define C_MICROSOFT
 #include <gx_extern.h>
@@ -945,6 +947,8 @@ namespace geosoft
             constexpr auto FILE_FILTER_DAT = 131;
             constexpr auto FILE_FILTER_OMF = 132;
             constexpr auto FILE_FILTER_3DSURVEY = 133;
+            constexpr auto FILE_FILTER_ARGIS_LYRX = 134;
+            constexpr auto FILE_FILTER_ARGIS_STYLX = 135;
 // FILE_FORM
             constexpr auto FILE_FORM_OPEN = 0;
             constexpr auto FILE_FORM_SAVE = 1;
@@ -5081,6 +5085,17 @@ namespace geosoft
                     int32_t ret = CreateArcLYR_DATALINKD(
                                       gx_->pGeo, param1.c_str());
                     gx_->throw_on_error();
+                    return gx_->createPtr<GXDATALINKD>(ret);
+                }
+                static GXDATALINKDPtr create_arc_lyrx(const gx_string_type& param1, const gx_string_type& param2, gx_string_type& param3)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize3 = STR_DEFAULT_LONG * STRING_CHAR_SIZE;
+                    param3.resize(STR_DEFAULT_LONG);
+                    int32_t ret = CreateArcLYRX_DATALINKD(
+                                      gx_->pGeo, param1.c_str(), param2.c_str(), (gx_string_char_type*)param3.data(), reinterpret_cast<const long*>(&paramSize3 ));
+                    gx_->throw_on_error();
+                    param3.resize(gx_string_len(param3.c_str()));
                     return gx_->createPtr<GXDATALINKD>(ret);
                 }
                 static GXDATALINKDPtr create_arc_lyr_ex(const gx_string_type& param1, int32_t param2)
@@ -17774,6 +17789,12 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str(), &param3, &param4, reinterpret_cast<const long*>(&param5), reinterpret_cast<const long*>(&param6), param7.c_str(), param8.c_str());
                     gx_->throw_on_error();
                 }
+                void export_all_in_view2(const gx_string_type& param1, const gx_string_type& param2, double param3, double param4, double param5, double param6, double param7, int32_t param8, int32_t param9, const gx_string_type& param10, const gx_string_type& param11)
+                {
+                    ExportAllInView2_MAP(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str(), param2.c_str(), &param3, &param4, &param5, &param6, &param7, reinterpret_cast<const long*>(&param8), reinterpret_cast<const long*>(&param9), param10.c_str(), param11.c_str());
+                    gx_->throw_on_error();
+                }
                 void export_all_raster(const gx_string_type& param1, const gx_string_type& param2, int32_t param3, int32_t param4, double param5, int32_t param6, int32_t param7, const gx_string_type& param8, const gx_string_type& param9)
                 {
                     ExportAllRaster_MAP(
@@ -23967,6 +23988,12 @@ namespace geosoft
                     Destroy_REG(
                         gx_->pGeo, reinterpret_cast<const long*>(&handle_));
                 }
+                void get_maker_xml(const gx_string_type& param1)
+                {
+                    GetMakerXML_REG(
+                        gx_->pGeo, reinterpret_cast<const long*>(&handle_), param1.c_str());
+                    gx_->throw_on_error();
+                }
                 void get(const gx_string_type& param1, gx_string_type& param2)
                 {
                     int32_t paramSize3 = STR_VERY_LONG * STRING_CHAR_SIZE;
@@ -27527,6 +27554,17 @@ namespace geosoft
                     int32_t paramSize1 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
                     param1.resize(STR_DEFAULT_SHORT);
                     int32_t ret = iCheckArcLicenseEx_SYS(
+                                      gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ));
+                    gx_->throw_on_error();
+                    param1.resize(gx_string_len(param1.c_str()));
+                    return ret;
+                }
+                static int32_t check_arc_sdk_license_ex(gx_string_type& param1)
+                {
+                    GXContextPtr gx_ = GXContext::current();
+                    int32_t paramSize1 = STR_DEFAULT_SHORT * STRING_CHAR_SIZE;
+                    param1.resize(STR_DEFAULT_SHORT);
+                    int32_t ret = iCheckArcSDKLicenseEx_SYS(
                                       gx_->pGeo, (gx_string_char_type*)param1.data(), reinterpret_cast<const long*>(&paramSize1 ));
                     gx_->throw_on_error();
                     param1.resize(gx_string_len(param1.c_str()));

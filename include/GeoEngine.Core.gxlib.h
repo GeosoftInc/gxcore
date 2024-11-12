@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 //*** extends 'gxlib_empty.h'
 
 //*** block Header
@@ -1324,6 +1326,21 @@ CreateArcLYR_DATALINKD(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
 Std_CreateArcLYR_DATALINKD(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_STR_PTR);
+
+/*---------------- CreateArcLYRX_DATALINKD[_licensed] ----------------*/
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+CreateArcLYRX_DATALINKD(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_CreateArcLYRX_DATALINKD(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
 
 /*---------------- CreateArcLYREx_DATALINKD[_licensed] ----------------*/
 
@@ -10443,6 +10460,37 @@ Std_ExportAllInView_MAP(GX_VAR   GX_OBJECT_PTR,
                         GX_CONST GX_LONG_PTR,
                         GX_CONST GX_STR_PTR,
                         GX_CONST GX_STR_PTR);
+
+/*---------------- ExportAllInView2_MAP[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ExportAllInView2_MAP(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ExportAllInView2_MAP(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR);
 
 /*---------------- ExportAllRaster_MAP[_public] ----------------*/
 
@@ -21540,6 +21588,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_Destroy_REG(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR);
 
+/*---------------- GetMakerXML_REG[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetMakerXML_REG(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetMakerXML_REG(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR);
+
 /*---------------- Get_REG[_public] ----------------*/
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -25124,6 +25183,17 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iCheckArcLicenseEx_SYS(GX_VAR   GX_OBJECT_PTR,
                            GX_VAR   GX_STR_PTR,
                            GX_CONST GX_LONG_PTR);
+
+/*---------------- iCheckArcSDKLicenseEx_SYS[_public] ----------------*/
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iCheckArcSDKLicenseEx_SYS(GX_VAR   GX_OBJECT_PTR,
+                          GX_VAR   GX_STR_PTR,
+                          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iCheckArcSDKLicenseEx_SYS(GX_VAR   GX_OBJECT_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_CONST GX_LONG_PTR);
 
 /*---------------- iCheckIntrinsic_SYS[_public] ----------------*/
 

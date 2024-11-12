@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 #pragma once
 
 // Including SDKDDKVer.h defines the highest available Windows platform.

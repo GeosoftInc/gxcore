@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 //--------------------------------------------------------------------
 //
 // callfunc.c   Sample code to create a DLL that can be called from a GX.

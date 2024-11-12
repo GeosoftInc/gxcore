@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 #ifndef _WRAPPERS_DEF
 #define _WRAPPERS_DEF
 

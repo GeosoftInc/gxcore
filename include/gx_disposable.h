@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 #ifndef GX_DISPOSABLE_H
 #define GX_DISPOSABLE_H
 

@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // geogdbview.cpp : Defines the class behaviors for the application.
 //
 

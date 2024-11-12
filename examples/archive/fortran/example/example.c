@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 static char* __THIS_FILE_NAME__ = __FILE__;
 /* .\example.f -- translated by f2c (version of 24 September 1993  0:51:26).
    You must link the resulting object file with the libraries:

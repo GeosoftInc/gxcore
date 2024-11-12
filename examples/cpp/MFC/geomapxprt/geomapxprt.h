@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // geomapxprt.h : main header file for the PROJECT_NAME application
 //
 

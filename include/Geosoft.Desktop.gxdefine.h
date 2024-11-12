@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // Class ACQUIRE
 #define ACQUIRE_SEL_HOLES    0
 #define ACQUIRE_SEL_POINT    1
@@ -572,6 +573,8 @@
 #define FILE_FILTER_DAT                        131
 #define FILE_FILTER_OMF                        132
 #define FILE_FILTER_3DSURVEY                   133
+#define FILE_FILTER_ARGIS_LYRX                 134
+#define FILE_FILTER_ARGIS_STYLX                135
 #define FILE_FORM_OPEN    0
 #define FILE_FORM_SAVE    1
 #define GS_DIRECTORY_NONE                 0

@@ -1,3 +1,4 @@
+#  Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 import clr
 clr.AddReference("geonet")
 from Geosoft.GXNet import *

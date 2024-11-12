@@ -1,3 +1,4 @@
+// Copyright (c) 2024 Bentley Systems, Incorporated. All rights reserved.
 // GeoXTool.cpp : Defines the initialization routines for the DLL.
 //
 
