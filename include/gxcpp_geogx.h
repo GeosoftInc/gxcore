@@ -9112,11 +9112,11 @@ namespace geosoft
                         gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), reinterpret_cast<const long*>(&param6));
                     gx_->throw_on_error();
                 }
-                static void import_aseg_proj(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, int32_t param6, const gx_string_type& param7, const gx_string_type& param8, const gx_string_type& param9)
+                static void import_aseg_proj(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, const gx_string_type& param5, int32_t param6, const gx_string_type& param7, const gx_string_type& param8, const gx_string_type& param9, int32_t param10)
                 {
                     GXContextPtr gx_ = GXContext::current();
                     ImportAsegProj_DU(
-                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), reinterpret_cast<const long*>(&param6), param7.c_str(), param8.c_str(), param9.c_str());
+                        gx_->pGeo, reinterpret_cast<const long*>(&gx_->handle(param1)), param2.c_str(), param3.c_str(), param4.c_str(), param5.c_str(), reinterpret_cast<const long*>(&param6), param7.c_str(), param8.c_str(), param9.c_str(), reinterpret_cast<const long*>(&param10));
                     gx_->throw_on_error();
                 }
                 static void import_bin(GXDBPtr param1, const gx_string_type& param2, const gx_string_type& param3, const gx_string_type& param4, int32_t param5, double param6)

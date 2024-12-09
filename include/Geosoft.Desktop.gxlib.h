@@ -6967,7 +6967,8 @@ ImportAsegProj_DU(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_STR_PTR,
                   GX_CONST GX_STR_PTR,
-                  GX_CONST GX_STR_PTR);
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ImportAsegProj_DU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_HANDLE_PTR,
@@ -6978,7 +6979,8 @@ Std_ImportAsegProj_DU(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_LONG_PTR,
                       GX_CONST GX_STR_PTR,
                       GX_CONST GX_STR_PTR,
-                      GX_CONST GX_STR_PTR);
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_LONG_PTR);
 
 /*---------------- ImportBIN_DU[_public] ----------------*/
 
