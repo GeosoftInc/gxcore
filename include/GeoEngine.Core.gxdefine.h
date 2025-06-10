@@ -170,6 +170,7 @@
 #define DB_ARRAY_BASETYPE_DEPTHS                   5
 #define DB_ARRAY_BASETYPE_VELOCITIES               6
 #define DB_ARRAY_BASETYPE_DISCRETE_TIME_WINDOWS    7
+#define DB_ARRAY_BASETYPE_ENERGIES                 8
 #define NULLSYMB    -1
 
 
@@ -193,6 +194,9 @@
 
 
 // Class E3DV
+
+
+// Class EVOOBJMETA
 
 
 // Class EXT

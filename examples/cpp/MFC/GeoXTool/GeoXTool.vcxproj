@@ -74,6 +74,7 @@
       <CallingConvention>Cdecl</CallingConvention>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/Oy- /wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -94,7 +95,7 @@
     </Midl>
     <ClCompile>
       <UseFullPaths>true</UseFullPaths>
-      <AdditionalOptions>/Oy- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Oy- /wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;C_MICROSOFT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>

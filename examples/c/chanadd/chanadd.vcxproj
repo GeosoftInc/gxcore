@@ -144,6 +144,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -168,6 +169,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -196,6 +198,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_u.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -220,6 +223,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_u.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -248,6 +252,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_utf8.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -272,6 +277,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx_utf8.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>

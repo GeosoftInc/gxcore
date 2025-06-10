@@ -46,7 +46,6 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalOptions>$(GEO_ANALYZER_COMPILER) %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(GXDEV_INCLUDE_DIR)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>MS_WINDOWS;GEOSOFT;GEOLICENCE;BUILD_DEBUG;_DEBUG;_CRTDBG_MAP_ALLOC;NO_WARN_MBCS_MFC_DEPRECATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -80,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalOptions>$(GEO_ANALYZER_COMPILER) /Oy- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Oy- %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>$(GXDEV_INCLUDE_DIR)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>MS_WINDOWS;GEOSOFT;GEOLICENCE;BUILD_RELEASE;NDEBUG;NO_WARN_MBCS_MFC_DEPRECATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
