@@ -63,6 +63,7 @@
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -88,6 +89,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>

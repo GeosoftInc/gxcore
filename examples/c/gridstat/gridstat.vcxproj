@@ -61,6 +61,7 @@
       <SDLCheck>true</SDLCheck>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -81,6 +82,7 @@
       <SDLCheck>true</SDLCheck>
       <LanguageStandard>$(CPPLanguageStandard)</LanguageStandard>
       <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/wd4947 /wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>geodist.lib;geogx.lib;version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
