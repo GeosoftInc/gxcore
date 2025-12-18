@@ -4455,17 +4455,6 @@ Std_iIsAssociated_DB(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_LONG_PTR,
                      GX_CONST GX_LONG_PTR);
 
-/*---------------- iIsWholeplot_DB[_public] ----------------*/
-
-
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-iIsWholeplot_DB(GX_VAR   GX_OBJECT_PTR,
-                GX_CONST GX_HANDLE_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_iIsWholeplot_DB(GX_VAR   GX_OBJECT_PTR,
-                    GX_CONST GX_HANDLE_PTR);
-
 /*---------------- PutChanVA_DB[_public] ----------------*/
 
 
@@ -4684,6 +4673,17 @@ Std_iGetLength_DB(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_HANDLE_PTR,
                   GX_CONST GX_LONG_PTR,
                   GX_CONST GX_LONG_PTR);
+
+/*---------------- iIsWholeplot_DB[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iIsWholeplot_DB(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iIsWholeplot_DB(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR);
 
 /*---------------- Create_DBREAD[_public] ----------------*/
 
@@ -9075,6 +9075,17 @@ Std_AddWarp_IPJ(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR,
                 GX_CONST GX_HANDLE_PTR);
 
+/*---------------- ApplyLocalDatumTransformsInPJ_IPJ[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ApplyLocalDatumTransformsInPJ_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ApplyLocalDatumTransformsInPJ_IPJ(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR);
+
 /*---------------- ClearCoordinateSystem_IPJ[_public] ----------------*/
 
 
@@ -10596,19 +10607,6 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ReadWKT_IPJ(GX_VAR   GX_OBJECT_PTR,
                 GX_CONST GX_HANDLE_PTR,
                 GX_CONST GX_STR_PTR);
-
-/*---------------- ReadPROJString_IPJ[_public] ----------------*/
-
-
-
-GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
-ReadPROJString_IPJ(GX_VAR   GX_OBJECT_PTR,
-                   GX_CONST GX_HANDLE_PTR,
-                   GX_CONST GX_STR_PTR);
-GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
-Std_ReadPROJString_IPJ(GX_VAR   GX_OBJECT_PTR,
-                       GX_CONST GX_HANDLE_PTR,
-                       GX_CONST GX_STR_PTR);
 
 /*---------------- CompareTo_IPJ[_public] ----------------*/
 
@@ -29821,6 +29819,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iMakeFileWritable_SYS(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_STR_PTR);
 
+/*---------------- IModelessDialogParameterFileName_SYS[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+IModelessDialogParameterFileName_SYS(GX_VAR   GX_OBJECT_PTR,
+                                     GX_VAR   GX_STR_PTR,
+                                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_IModelessDialogParameterFileName_SYS(GX_VAR   GX_OBJECT_PTR,
+                                         GX_VAR   GX_STR_PTR,
+                                         GX_CONST GX_LONG_PTR);
+
 /*---------------- IRelativeFileName_SYS[_public] ----------------*/
 
 
@@ -33366,6 +33377,38 @@ Std_iCheckForRepeating2_VA(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_DOUBLE_PTR,
                            GX_VAR   GX_LONG_PTR,
                            GX_VAR   GX_LONG_PTR);
+
+/*---------------- Decimate_VA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Decimate_VA(GX_VAR   GX_OBJECT_PTR,
+            GX_CONST GX_HANDLE_PTR,
+            GX_CONST GX_LONG_PTR,
+            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Decimate_VA(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_LONG_PTR);
+
+/*---------------- Expand_VA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Expand_VA(GX_VAR   GX_OBJECT_PTR,
+          GX_CONST GX_HANDLE_PTR,
+          GX_CONST GX_LONG_PTR,
+          GX_CONST GX_LONG_PTR,
+          GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Expand_VA(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR,
+              GX_CONST GX_LONG_PTR);
 
 /*---------------- Destroy_VECTOR3D[_public] ----------------*/
 

@@ -3609,6 +3609,17 @@ Std_StringFromToDataLST_DH(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_STR_PTR,
                            GX_CONST GX_HANDLE_PTR);
 
+/*---------------- iIsADrillholeProjectDatabase_DH[_extended] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iIsADrillholeProjectDatabase_DH(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iIsADrillholeProjectDatabase_DH(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR);
+
 /*---------------- _hAssayDB_DH[_extended] ----------------*/
 
 
@@ -21093,6 +21104,174 @@ Std_RescaleYRange_MVG(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_DOUBLE_PTR,
                       GX_CONST GX_DOUBLE_PTR);
 
+/*---------------- Create_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Create_NASVD(GX_VAR   GX_OBJECT_PTR,
+             GX_CONST GX_HANDLE_PTR,
+             GX_CONST GX_STR_PTR,
+             GX_CONST GX_STR_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR,
+             GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Create_NASVD(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_HANDLE_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR,
+                 GX_CONST GX_LONG_PTR);
+
+/*---------------- Destroy_NASVD[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Destroy_NASVD(GX_VAR   GX_OBJECT_PTR,
+              GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Destroy_NASVD(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetNumComponents_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetNumComponents_NASVD(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetNumComponents_NASVD(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetSingularValue_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_DOUBLE GX_WRAPPER_CALL
+GetSingularValue_NASVD(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_DOUBLE GX_STANDARD_CALL
+Std_GetSingularValue_NASVD(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR);
+
+/*---------------- GetEigenVector_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetEigenVector_NASVD(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetEigenVector_NASVD(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetScores_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetScores_NASVD(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_LONG_PTR,
+                GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetScores_NASVD(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_LONG_PTR,
+                    GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetPartitionDetails_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetPartitionDetails_NASVD(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_VAR   GX_LONG_PTR,
+                          GX_VAR   GX_LONG_PTR,
+                          GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetPartitionDetails_NASVD(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_VAR   GX_LONG_PTR,
+                              GX_VAR   GX_LONG_PTR,
+                              GX_VAR   GX_LONG_PTR);
+
+/*---------------- ReconstructSpectrum_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ReconstructSpectrum_NASVD(GX_VAR   GX_OBJECT_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_HANDLE_PTR,
+                          GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ReconstructSpectrum_NASVD(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_STR_PTR);
+
+/*---------------- GetCumulativeEigenvectorContribution_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetCumulativeEigenvectorContribution_NASVD(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetCumulativeEigenvectorContribution_NASVD(GX_VAR   GX_OBJECT_PTR,
+                                               GX_CONST GX_HANDLE_PTR,
+                                               GX_CONST GX_HANDLE_PTR);
+
+/*---------------- GetMaximumElementCount_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GetMaximumElementCount_NASVD(GX_VAR   GX_OBJECT_PTR,
+                             GX_VAR   GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GetMaximumElementCount_NASVD(GX_VAR   GX_OBJECT_PTR,
+                                 GX_VAR   GX_LONG_PTR);
+
+/*---------------- Serialize_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+Serialize_NASVD(GX_VAR   GX_OBJECT_PTR,
+                GX_CONST GX_HANDLE_PTR,
+                GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_Serialize_NASVD(GX_VAR   GX_OBJECT_PTR,
+                    GX_CONST GX_HANDLE_PTR,
+                    GX_CONST GX_STR_PTR);
+
+/*---------------- Deserialize_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_HANDLE GX_WRAPPER_CALL
+Deserialize_NASVD(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
+Std_Deserialize_NASVD(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_STR_PTR);
+
 /*---------------- Render_PDF3D[_public] ----------------*/
 
 
@@ -22301,6 +22480,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_iSaveCloseDocuments_PROJ(GX_VAR   GX_OBJECT_PTR,
                                  GX_CONST GX_STR_PTR);
 
+/*---------------- ExpandDocumentNode_PROJ[_public_app] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_ExpandDocumentNode_PROJ(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_ExpandDocumentNode_PROJ(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR);
+
 /*---------------- IGetName_PROJ[_public_app] ----------------*/
 
 
@@ -22829,6 +23021,626 @@ Std_RunList_RGRD(GX_VAR   GX_OBJECT_PTR,
                  GX_CONST GX_HANDLE_PTR,
                  GX_CONST GX_STR_PTR,
                  GX_CONST GX_STR_PTR);
+
+/*---------------- WindowSpectrumToChannel_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+WindowSpectrumToChannel_RPS(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_WindowSpectrumToChannel_RPS(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_STR_PTR);
+
+/*---------------- FullSpectralAnalysis_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+FullSpectralAnalysis_RPS(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_FullSpectralAnalysis_RPS(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_STR_PTR);
+
+/*---------------- DeadTimeCorrection_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeadTimeCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeadTimeCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_STR_PTR);
+
+/*---------------- LiveTimeCorrection_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LiveTimeCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LiveTimeCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
+
+/*---------------- STPCorrectionFromBarometricAltitude_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+STPCorrectionFromBarometricAltitude_RPS(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_STPCorrectionFromBarometricAltitude_RPS(GX_VAR   GX_OBJECT_PTR,
+                                            GX_CONST GX_HANDLE_PTR,
+                                            GX_CONST GX_LONG_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR);
+
+/*---------------- STPCorrectionFromPressure_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+STPCorrectionFromPressure_RPS(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR,
+                              GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_STPCorrectionFromPressure_RPS(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
+
+/*---------------- AltitudeAttenuation_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+AltitudeAttenuation_RPS(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_DOUBLE_PTR,
+                        GX_CONST GX_DOUBLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_AltitudeAttenuation_RPS(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_DOUBLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
+
+/*---------------- ComptonStripping_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ComptonStripping_RPS(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_DOUBLE_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ComptonStripping_RPS(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_DOUBLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR);
+
+/*---------------- ConvertToElemental_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+ConvertToElemental_RPS(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_ConvertToElemental_RPS(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_DOUBLE_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
+
+/*---------------- RadonBackgroundTable_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonBackgroundTable_RPS(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonBackgroundTable_RPS(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_LONG_PTR);
+
+/*---------------- RadonUpwardRemovalCalculate_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonUpwardRemovalCalculate_RPS(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_DOUBLE_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonUpwardRemovalCalculate_RPS(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_LONG_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_DOUBLE_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR);
+
+/*---------------- RadonUpwardRemovalApply_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonUpwardRemovalApply_RPS(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonUpwardRemovalApply_RPS(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_CONST GX_LONG_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR,
+                                GX_CONST GX_STR_PTR);
+
+/*---------------- RadonOverwaterReferenceChannels_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonOverwaterReferenceChannels_RPS(GX_VAR   GX_OBJECT_PTR,
+                                    GX_CONST GX_HANDLE_PTR,
+                                    GX_CONST GX_LONG_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR,
+                                    GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonOverwaterReferenceChannels_RPS(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_LONG_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR);
+
+/*---------------- RadonOverwaterCreateBackgroundTable_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonOverwaterCreateBackgroundTable_RPS(GX_VAR   GX_OBJECT_PTR,
+                                        GX_CONST GX_HANDLE_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR,
+                                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonOverwaterCreateBackgroundTable_RPS(GX_VAR   GX_OBJECT_PTR,
+                                            GX_CONST GX_HANDLE_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR,
+                                            GX_CONST GX_STR_PTR);
+
+/*---------------- RadonOverwaterBackgroundCorrection_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonOverwaterBackgroundCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonOverwaterBackgroundCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR);
+
+/*---------------- RadonAircraftCosmicCorrection_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadonAircraftCosmicCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_CONST GX_LONG_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_DOUBLE_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR,
+                                  GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadonAircraftCosmicCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
+                                      GX_CONST GX_HANDLE_PTR,
+                                      GX_CONST GX_LONG_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_DOUBLE_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR,
+                                      GX_CONST GX_STR_PTR);
+
+/*---------------- RadioElementBandpassFilter_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadioElementBandpassFilter_RPS(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadioElementBandpassFilter_RPS(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_LONG_PTR);
+
+/*---------------- RadioElementRatios_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadioElementRatios_RPS(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadioElementRatios_RPS(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_LONG_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR,
+                           GX_CONST GX_STR_PTR);
+
+/*---------------- RadioElementMinimumConcentrationFilter_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadioElementMinimumConcentrationFilter_RPS(GX_VAR   GX_OBJECT_PTR,
+                                           GX_CONST GX_HANDLE_PTR,
+                                           GX_CONST GX_LONG_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_STR_PTR,
+                                           GX_CONST GX_DOUBLE_PTR,
+                                           GX_CONST GX_DOUBLE_PTR,
+                                           GX_CONST GX_DOUBLE_PTR,
+                                           GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadioElementMinimumConcentrationFilter_RPS(GX_VAR   GX_OBJECT_PTR,
+                                               GX_CONST GX_HANDLE_PTR,
+                                               GX_CONST GX_LONG_PTR,
+                                               GX_CONST GX_STR_PTR,
+                                               GX_CONST GX_STR_PTR,
+                                               GX_CONST GX_STR_PTR,
+                                               GX_CONST GX_DOUBLE_PTR,
+                                               GX_CONST GX_DOUBLE_PTR,
+                                               GX_CONST GX_DOUBLE_PTR,
+                                               GX_CONST GX_LONG_PTR);
+
+/*---------------- RadioElementGroundExposureRate_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RadioElementGroundExposureRate_RPS(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RadioElementGroundExposureRate_RPS(GX_VAR   GX_OBJECT_PTR,
+                                       GX_CONST GX_HANDLE_PTR,
+                                       GX_CONST GX_LONG_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR,
+                                       GX_CONST GX_STR_PTR);
 
 /*---------------- ApplyFilterToMask_SEMPLOT[_extended] ----------------*/
 

@@ -1282,6 +1282,19 @@
 // Class VA
 #define VA_AVERAGE_ROWS       0
 #define VA_AVERAGE_COLUMNS    1
+#define VA_DECIMATE_SUM        0
+#define VA_DECIMATE_AVERAGE    1
+#define VA_DECIMATE_MEDIAN     2
+#define VA_DECIMATE_FIRST      3
+#define VA_INTERPOLATE_NEAREST    1
+#define VA_INTERPOLATE_LINEAR     2
+#define VA_INTERPOLATE_CUBIC      3
+#define VA_INTERPOLATE_AKIMA      4
+#define VA_INTERPOLATE_PREDICT    5
+#define VA_EXTRAPOLATE_NONE       0
+#define VA_EXTRAPOLATE_SAME       1
+#define VA_EXTRAPOLATE_NEAREST    2
+#define VA_EXTRAPOLATE_LINEAR     3
 #define VA_ROW    0
 #define VA_COL    1
 

@@ -729,6 +729,9 @@
 #define MVG_WRAP_YES    1
 
 
+// Class NASVD
+
+
 // Class PDF3D
 
 
@@ -770,12 +773,19 @@
 #define PROJ_DISPLAY_NO        0
 #define PROJ_DISPLAY_YES       1
 #define PROJ_DISPLAY_ALWAYS    2
+#define PROJ_NODE_COLLAPSE    0
+#define PROJ_NODE_EXPAND      1
 #define PROJ_OMS_NAME_SIZE         32
 #define PROJ_OMS_DATETIME_SIZE     24
 #define PROJ_OMS_PROCESSID_SIZE    16
 
 
 // Class RGRD
+
+
+// Class RPS
+#define RPS_FITMODE_LEAST_SQUARES                 0
+#define RPS_FITMODE_NON_NEGATIVE_LEAST_SQUARES    1
 
 
 // Class SEMPLOT
