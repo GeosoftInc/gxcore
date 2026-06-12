@@ -226,9 +226,10 @@
 #define DU_MASK_INSIDE     0
 #define DU_MASK_OUTSIDE    1
 #define DU_MERGE_APPEND    0
-#define DU_MODFID_INSERT    0
-#define DU_MODFID_DELETE    1
-#define DU_MODFID_APPEND    2
+#define DU_MODFID_INSERT                    0
+#define DU_MODFID_DELETE                    1
+#define DU_MODFID_DELETE_ADJUST_FIDSTART    3
+#define DU_MODFID_APPEND                    2
 #define DU_MOVE_ABSOLUTE    0
 #define DU_MOVE_MINUS       1
 #define DU_MOVE_PLUS        2
@@ -575,6 +576,7 @@
 #define FILE_FILTER_3DSURVEY                   133
 #define FILE_FILTER_ARGIS_LYRX                 134
 #define FILE_FILTER_ARGIS_STYLX                135
+#define FILE_FILTER_MCF                        136
 #define FILE_FORM_OPEN    0
 #define FILE_FORM_SAVE    1
 #define GS_DIRECTORY_NONE                 0

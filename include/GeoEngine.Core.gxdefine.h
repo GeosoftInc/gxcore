@@ -113,7 +113,7 @@
 #define DB_COORDPAIR_NONE    0
 #define DB_COORDPAIR_X       1
 #define DB_COORDPAIR_Y       2
-#define DB_GROUP_CLASS_SIZE    16
+#define DB_GROUP_CLASS_SIZE    256
 #define DB_INFO_BLOBS_MAX         0
 #define DB_INFO_LINES_MAX         1
 #define DB_INFO_CHANS_MAX         2
@@ -281,6 +281,7 @@
 #define FORMAT_GEOGRAPHIC_1     10
 #define FORMAT_GEOGRAPHIC_2     11
 #define FORMAT_GEOGRAPHIC_3     12
+#define FORMAT_HEXADECIMAL      13
 #define GS_BYTE            0
 #define GS_USHORT          1
 #define GS_SHORT           2
@@ -1224,9 +1225,10 @@
 #define SYS_RUN_HOLD_NEVER      0
 #define SYS_RUN_HOLD_ONERROR    512
 #define SYS_RUN_HOLD_ALWAYS     1024
-#define SYS_RUN_TYPE_DOS        1
-#define SYS_RUN_TYPE_EXE        0
-#define SYS_RUN_TYPE_WINDOWS    2
+#define SYS_RUN_TYPE_DOS         1
+#define SYS_RUN_TYPE_EXE         0
+#define SYS_RUN_TYPE_WINDOWS     2
+#define SYS_RUN_TYPE_CMD_LINE    4
 #define SYS_RUN_WIN_NOWAIT    0
 #define SYS_RUN_WIN_WAIT      2048
 #define FIND_LOCAL_GEOSOFT    0

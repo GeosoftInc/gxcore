@@ -6203,18 +6203,12 @@ Std_SurfaceIntersections_DH(GX_VAR   GX_OBJECT_PTR,
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
 GetMXDepositRightsInfo_DH(GX_VAR   GX_OBJECT_PTR,
-                          GX_VAR   GX_LONG_PTR,
-                          GX_VAR   GX_STR_PTR,
-                          GX_VAR   GX_STR_PTR,
                           GX_VAR   GX_STR_PTR,
                           GX_VAR   GX_STR_PTR,
                           GX_VAR   GX_STR_PTR,
                           GX_CONST GX_LONG_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GetMXDepositRightsInfo_DH(GX_VAR   GX_OBJECT_PTR,
-                              GX_VAR   GX_LONG_PTR,
-                              GX_VAR   GX_STR_PTR,
-                              GX_VAR   GX_STR_PTR,
                               GX_VAR   GX_STR_PTR,
                               GX_VAR   GX_STR_PTR,
                               GX_VAR   GX_STR_PTR,
@@ -11176,6 +11170,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_App_iAllChanList_EDB(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_HANDLE_PTR,
                          GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iGetMultiChans_EDB[_public_app] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+App_iGetMultiChans_EDB(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_App_iGetMultiChans_EDB(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_HANDLE_PTR);
 
 /*---------------- iChannels_EDB[_public_app] ----------------*/
 
@@ -18262,7 +18269,7 @@ Std_App_IIPQC_GUI(GX_VAR   GX_OBJECT_PTR,
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.6, Tool is now GX.Net")]] 
+[[deprecated("Deprecated since 9.6.0, Tool is now GX.Net")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -18275,7 +18282,7 @@ Std_iVAViewMultipleToolExists_GUI(GX_VAR   GX_OBJECT_PTR);
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.6, Tool is now GX.Net")]] 
+[[deprecated("Deprecated since 9.6.0, Tool is now GX.Net")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -18298,7 +18305,7 @@ Std_App_LaunchVAViewMultipleTool_GUI(GX_VAR   GX_OBJECT_PTR,
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.5, Tool is now GX.Net")]] 
+[[deprecated("Deprecated since 9.5.0, Tool is now GX.Net")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -20548,6 +20555,19 @@ GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_GotoLine_LMSG(GX_VAR   GX_OBJECT_PTR,
                   GX_CONST GX_STR_PTR);
 
+/*---------------- GotoLineFid_LMSG[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GotoLineFid_LMSG(GX_VAR   GX_OBJECT_PTR,
+                 GX_CONST GX_STR_PTR,
+                 GX_CONST GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GotoLineFid_LMSG(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_DOUBLE_PTR);
+
 /*---------------- GotoPoint_LMSG[_licensed] ----------------*/
 
 
@@ -21216,12 +21236,14 @@ ReconstructSpectrum_NASVD(GX_VAR   GX_OBJECT_PTR,
                           GX_CONST GX_HANDLE_PTR,
                           GX_CONST GX_HANDLE_PTR,
                           GX_CONST GX_LONG_PTR,
+                          GX_CONST GX_STR_PTR,
                           GX_CONST GX_STR_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_ReconstructSpectrum_NASVD(GX_VAR   GX_OBJECT_PTR,
                               GX_CONST GX_HANDLE_PTR,
                               GX_CONST GX_HANDLE_PTR,
                               GX_CONST GX_LONG_PTR,
+                              GX_CONST GX_STR_PTR,
                               GX_CONST GX_STR_PTR);
 
 /*---------------- GetCumulativeEigenvectorContribution_NASVD[_licensed] ----------------*/
@@ -21271,6 +21293,23 @@ Deserialize_NASVD(GX_VAR   GX_OBJECT_PTR,
 GX_STANDARD_FUNC GX_HANDLE GX_STANDARD_CALL
 Std_Deserialize_NASVD(GX_VAR   GX_OBJECT_PTR,
                       GX_CONST GX_STR_PTR);
+
+/*---------------- DeserializeScores_NASVD[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeserializeScores_NASVD(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_STR_PTR,
+                        GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeserializeScores_NASVD(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_STR_PTR,
+                            GX_CONST GX_STR_PTR);
 
 /*---------------- Render_PDF3D[_public] ----------------*/
 
@@ -23056,8 +23095,7 @@ FullSpectralAnalysis_RPS(GX_VAR   GX_OBJECT_PTR,
                          GX_CONST GX_STR_PTR,
                          GX_CONST GX_STR_PTR,
                          GX_CONST GX_STR_PTR,
-                         GX_CONST GX_LONG_PTR,
-                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_STR_PTR,
                          GX_CONST GX_LONG_PTR,
                          GX_CONST GX_STR_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
@@ -23067,8 +23105,7 @@ Std_FullSpectralAnalysis_RPS(GX_VAR   GX_OBJECT_PTR,
                              GX_CONST GX_STR_PTR,
                              GX_CONST GX_STR_PTR,
                              GX_CONST GX_STR_PTR,
-                             GX_CONST GX_LONG_PTR,
-                             GX_CONST GX_LONG_PTR,
+                             GX_CONST GX_STR_PTR,
                              GX_CONST GX_LONG_PTR,
                              GX_CONST GX_STR_PTR);
 
@@ -23093,6 +23130,48 @@ Std_DeadTimeCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_DOUBLE_PTR,
                            GX_CONST GX_STR_PTR);
 
+/*---------------- DeadTimeCorrectionAcqChannel_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeadTimeCorrectionAcqChannel_RPS(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeadTimeCorrectionAcqChannel_RPS(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR);
+
+/*---------------- DeadTimeCorrectionAcqValue_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+DeadTimeCorrectionAcqValue_RPS(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_DeadTimeCorrectionAcqValue_RPS(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_STR_PTR);
+
 /*---------------- LiveTimeCorrection_RPS[_licensed] ----------------*/
 
 
@@ -23111,6 +23190,48 @@ Std_LiveTimeCorrection_RPS(GX_VAR   GX_OBJECT_PTR,
                            GX_CONST GX_STR_PTR,
                            GX_CONST GX_STR_PTR,
                            GX_CONST GX_STR_PTR);
+
+/*---------------- LiveTimeCorrectionAcqChannel_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LiveTimeCorrectionAcqChannel_RPS(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_CONST GX_LONG_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR,
+                                 GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LiveTimeCorrectionAcqChannel_RPS(GX_VAR   GX_OBJECT_PTR,
+                                     GX_CONST GX_HANDLE_PTR,
+                                     GX_CONST GX_LONG_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR,
+                                     GX_CONST GX_STR_PTR);
+
+/*---------------- LiveTimeCorrectionAcqValue_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+LiveTimeCorrectionAcqValue_RPS(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_LONG_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_STR_PTR,
+                               GX_CONST GX_DOUBLE_PTR,
+                               GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_LiveTimeCorrectionAcqValue_RPS(GX_VAR   GX_OBJECT_PTR,
+                                   GX_CONST GX_HANDLE_PTR,
+                                   GX_CONST GX_LONG_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_STR_PTR,
+                                   GX_CONST GX_DOUBLE_PTR,
+                                   GX_CONST GX_STR_PTR);
 
 /*---------------- STPCorrectionFromBarometricAltitude_RPS[_licensed] ----------------*/
 
@@ -23641,6 +23762,44 @@ Std_RadioElementGroundExposureRate_RPS(GX_VAR   GX_OBJECT_PTR,
                                        GX_CONST GX_STR_PTR,
                                        GX_CONST GX_STR_PTR,
                                        GX_CONST GX_STR_PTR);
+
+/*---------------- CompressSpectrum_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+CompressSpectrum_RPS(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_CompressSpectrum_RPS(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR);
+
+/*---------------- StabilizeSpectra_RPS[_licensed] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+StabilizeSpectra_RPS(GX_VAR   GX_OBJECT_PTR,
+                     GX_CONST GX_HANDLE_PTR,
+                     GX_CONST GX_LONG_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR,
+                     GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_StabilizeSpectra_RPS(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_LONG_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR,
+                         GX_CONST GX_STR_PTR);
 
 /*---------------- ApplyFilterToMask_SEMPLOT[_extended] ----------------*/
 

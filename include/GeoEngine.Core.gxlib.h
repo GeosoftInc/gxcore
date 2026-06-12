@@ -5283,6 +5283,21 @@ Std_iGetObjectId_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
                             GX_VAR   GX_STR_PTR,
                             GX_CONST GX_LONG_PTR);
 
+/*---------------- iGetVersionId_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetVersionId_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_VAR   GX_STR_PTR,
+                         GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetVersionId_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_VAR   GX_STR_PTR,
+                             GX_CONST GX_LONG_PTR);
+
 /*---------------- iGetModifiedAt_EVOOBJMETA[_public] ----------------*/
 
 
@@ -5312,6 +5327,103 @@ Std_iGetBoundingBox_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
                                GX_CONST GX_HANDLE_PTR,
                                GX_VAR   GX_STR_PTR,
                                GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetSourceChecksum_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetSourceChecksum_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                              GX_CONST GX_HANDLE_PTR,
+                              GX_VAR   GX_STR_PTR,
+                              GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetSourceChecksum_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                                  GX_CONST GX_HANDLE_PTR,
+                                  GX_VAR   GX_STR_PTR,
+                                  GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetManifestHash_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetManifestHash_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetManifestHash_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                                GX_CONST GX_HANDLE_PTR,
+                                GX_VAR   GX_STR_PTR,
+                                GX_CONST GX_LONG_PTR);
+
+/*---------------- iGetBlobHashCount_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetBlobHashCount_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetBlobHashCount_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR);
+
+/*---------------- iGetBlobHash_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iGetBlobHash_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                        GX_CONST GX_HANDLE_PTR,
+                        GX_CONST GX_LONG_PTR,
+                        GX_VAR   GX_STR_PTR,
+                        GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iGetBlobHash_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                            GX_CONST GX_HANDLE_PTR,
+                            GX_CONST GX_LONG_PTR,
+                            GX_VAR   GX_STR_PTR,
+                            GX_CONST GX_LONG_PTR);
+
+/*---------------- SetSourceChecksum_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetSourceChecksum_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetSourceChecksum_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                                 GX_CONST GX_HANDLE_PTR,
+                                 GX_CONST GX_STR_PTR);
+
+/*---------------- SetManifestHash_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetManifestHash_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                           GX_CONST GX_HANDLE_PTR,
+                           GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetManifestHash_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                               GX_CONST GX_HANDLE_PTR,
+                               GX_CONST GX_STR_PTR);
+
+/*---------------- SetBlobHashes_EVOOBJMETA[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+SetBlobHashes_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                         GX_CONST GX_HANDLE_PTR,
+                         GX_CONST GX_STR_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_SetBlobHashes_EVOOBJMETA(GX_VAR   GX_OBJECT_PTR,
+                             GX_CONST GX_HANDLE_PTR,
+                             GX_CONST GX_STR_PTR);
 
 /*---------------- GetInfo_EXT[_licensed] ----------------*/
 
@@ -8354,6 +8466,31 @@ Std_GridStatExt_IMU(GX_VAR   GX_OBJECT_PTR,
                     GX_VAR   GX_DOUBLE_PTR,
                     GX_VAR   GX_DOUBLE_PTR,
                     GX_VAR   GX_DOUBLE_PTR);
+
+/*---------------- GridStatExt64_IMU[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+GridStatExt64_IMU(GX_VAR   GX_OBJECT_PTR,
+                  GX_CONST GX_STR_PTR,
+                  GX_CONST GX_LONG_PTR,
+                  GX_VAR   GX_LONGLONG_PTR,
+                  GX_VAR   GX_LONGLONG_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR,
+                  GX_VAR   GX_DOUBLE_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_GridStatExt64_IMU(GX_VAR   GX_OBJECT_PTR,
+                      GX_CONST GX_STR_PTR,
+                      GX_CONST GX_LONG_PTR,
+                      GX_VAR   GX_LONGLONG_PTR,
+                      GX_VAR   GX_LONGLONG_PTR,
+                      GX_VAR   GX_DOUBLE_PTR,
+                      GX_VAR   GX_DOUBLE_PTR,
+                      GX_VAR   GX_DOUBLE_PTR,
+                      GX_VAR   GX_DOUBLE_PTR);
 
 /*---------------- GridStatTrend_IMU[_licensed] ----------------*/
 
@@ -12799,6 +12936,35 @@ Std_RenderBitmap_MAP(GX_VAR   GX_OBJECT_PTR,
                      GX_CONST GX_DOUBLE_PTR,
                      GX_CONST GX_STR_PTR,
                      GX_CONST GX_LONG_PTR);
+
+/*---------------- RenderBitmapEx_MAP[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+RenderBitmapEx_MAP(GX_VAR   GX_OBJECT_PTR,
+                   GX_CONST GX_HANDLE_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_DOUBLE_PTR,
+                   GX_CONST GX_STR_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR,
+                   GX_CONST GX_LONG_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_RenderBitmapEx_MAP(GX_VAR   GX_OBJECT_PTR,
+                       GX_CONST GX_HANDLE_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_DOUBLE_PTR,
+                       GX_CONST GX_STR_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR,
+                       GX_CONST GX_LONG_PTR);
 
 /*---------------- RenderViewBitmap_MAP[_public] ----------------*/
 
@@ -26876,7 +27042,7 @@ Std_GetInlineAndCrosslineAzimuths_SEGYREADER(GX_VAR   GX_OBJECT_PTR,
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.7, Use SetGdbOutputName() and/or SetVoxelOutputName() followed by ExportFile() instead.")]] 
+[[deprecated("Deprecated since 9.7.0, Use SetGdbOutputName() and/or SetVoxelOutputName() followed by ExportFile() instead.")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -31429,6 +31595,15 @@ iScript_SYS(GX_VAR   GX_OBJECT_PTR);
 GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
 Std_iScript_SYS(GX_VAR   GX_OBJECT_PTR);
 
+/*---------------- iScriptLevel_SYS[_public] ----------------*/
+
+
+
+GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
+iScriptLevel_SYS(GX_VAR   GX_OBJECT_PTR);
+GX_STANDARD_FUNC GX_LONG GX_STANDARD_CALL
+Std_iScriptLevel_SYS(GX_VAR   GX_OBJECT_PTR);
+
 /*---------------- iScriptRecord_SYS[_public] ----------------*/
 
 
@@ -31569,7 +31744,7 @@ Std_DATListLST_SYS(GX_VAR   GX_OBJECT_PTR,
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.9, Seequent View was discontinued.")]] 
+[[deprecated("Deprecated since 9.9.0, Seequent View was discontinued.")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -31586,7 +31761,7 @@ Std_GetAPIKey_SYS(GX_VAR   GX_OBJECT_PTR,
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.9, Seequent View was discontinued.")]] 
+[[deprecated("Deprecated since 9.9.0, Seequent View was discontinued.")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
@@ -31603,7 +31778,7 @@ Std_GetViewServiceURL_SYS(GX_VAR   GX_OBJECT_PTR,
 
 
 #ifdef __cplusplus
-[[deprecated("Deprecated since 9.9, Seequent View was discontinued.")]] 
+[[deprecated("Deprecated since 9.9.0, Seequent View was discontinued.")]] 
 #endif
 
 GX_WRAPPER_FUNC GX_LONG GX_WRAPPER_CALL
